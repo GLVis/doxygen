@@ -51,6 +51,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -58,7 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">vssolution.cpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="vssolution_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443271. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -77,11 +78,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00017"></a>00017 <span class="preprocessor">#include &lt;X11/keysym.h&gt;</span>
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019 <span class="preprocessor">#include &quot;mfem.hpp&quot;</span>
-<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;visual.hpp&quot;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="code" href="visual_8hpp.html">visual.hpp</a>&quot;</span>
 <a name="l00021"></a>00021 
 <a name="l00022"></a>00022 
-<a name="l00023"></a>00023 <a class="code" href="classVisualizationSceneSolution.html">VisualizationSceneSolution</a> *vssol;
-<a name="l00024"></a>00024 <span class="keyword">extern</span> <a class="code" href="classVisualizationScene.html">VisualizationScene</a>  *locscene;
+<a name="l00023"></a><a class="code" href="vsvector_8cpp.html#adea5c5202e83e193c36be7384ea4366b">00023</a> <a class="code" href="classVisualizationSceneSolution.html">VisualizationSceneSolution</a> *<a class="code" href="vssolution_8cpp.html#adea5c5202e83e193c36be7384ea4366b">vssol</a>;
+<a name="l00024"></a>00024 <span class="keyword">extern</span> <a class="code" href="classVisualizationScene.html">VisualizationScene</a>  *<a class="code" href="aux__vis_8cpp.html#af71e06f4d5eba00469872cd481b1835b">locscene</a>;
 <a name="l00025"></a>00025 
 <a name="l00026"></a>00026 <span class="comment">// Definitions of some more keys</span>
 <a name="l00027"></a>00027 
@@ -159,84 +160,84 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00099"></a>00099 {
 <a name="l00100"></a>00100    <span class="keywordtype">int</span> attr;
 <a name="l00101"></a>00101    Array&lt;int&gt; attr_list(&amp;attr, 1);
-<a name="l00102"></a>00102    <span class="keyword">const</span> Array&lt;int&gt; &amp;all_attr = vssol-&gt;GetMesh()-&gt;attributes;
+<a name="l00102"></a>00102    <span class="keyword">const</span> Array&lt;int&gt; &amp;all_attr = vssol-&gt;<a class="code" href="classVisualizationSceneScalarData.html#a8cdef90877c63bad440c41a543f136c7">GetMesh</a>()-&gt;attributes;
 <a name="l00103"></a>00103 
 <a name="l00104"></a>00104    cout &lt;&lt; <span class="stringliteral">&quot;El attributes ON: &quot;</span>;
 <a name="l00105"></a>00105    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; all_attr.Size(); i++)
-<a name="l00106"></a>00106       <span class="keywordflow">if</span> (vssol-&gt;el_attr_to_show[all_attr[i]-1])
+<a name="l00106"></a>00106       <span class="keywordflow">if</span> (vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a5baa6c391db303eb64ab6a96c2b0fbb8">el_attr_to_show</a>[all_attr[i]-1])
 <a name="l00107"></a>00107          cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; all_attr[i];
 <a name="l00108"></a>00108    cout &lt;&lt; endl;
 <a name="l00109"></a>00109 
 <a name="l00110"></a>00110    cout &lt;&lt; <span class="stringliteral">&quot;El attribute to toggle : &quot;</span> &lt;&lt; flush;
 <a name="l00111"></a>00111    cin &gt;&gt; attr;
-<a name="l00112"></a>00112    vssol-&gt;ToggleAttributes(attr_list);
-<a name="l00113"></a>00113    SendExposeEvent();
+<a name="l00112"></a>00112    vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#af444751418d2a9bcfab1a8a7b75c6384">ToggleAttributes</a>(attr_list);
+<a name="l00113"></a>00113    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00114"></a>00114 }
 <a name="l00115"></a>00115 
 <a name="l00116"></a>00116 <span class="keyword">static</span> <span class="keywordtype">void</span> KeyF9Pressed()
 <a name="l00117"></a>00117 {
-<a name="l00118"></a>00118    <span class="keywordflow">if</span> (vssol-&gt;attr_to_show == -1)
+<a name="l00118"></a>00118    <span class="keywordflow">if</span> (vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#adb51916e54adf0b331ff2f3c2ecab029">attr_to_show</a> == -1)
 <a name="l00119"></a>00119    {
-<a name="l00120"></a>00120       vssol-&gt;el_attr_to_show = 0;
-<a name="l00121"></a>00121       vssol-&gt;attr_to_show = 0;
+<a name="l00120"></a>00120       vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a5baa6c391db303eb64ab6a96c2b0fbb8">el_attr_to_show</a> = 0;
+<a name="l00121"></a>00121       vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#adb51916e54adf0b331ff2f3c2ecab029">attr_to_show</a> = 0;
 <a name="l00122"></a>00122    }
 <a name="l00123"></a>00123    <span class="keywordflow">else</span>
-<a name="l00124"></a>00124       vssol-&gt;el_attr_to_show[vssol-&gt;attr_to_show++] = 0;
+<a name="l00124"></a>00124       vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a5baa6c391db303eb64ab6a96c2b0fbb8">el_attr_to_show</a>[vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#adb51916e54adf0b331ff2f3c2ecab029">attr_to_show</a>++] = 0;
 <a name="l00125"></a>00125 
-<a name="l00126"></a>00126    <span class="keywordflow">if</span> (vssol-&gt;attr_to_show &gt;= vssol-&gt;el_attr_to_show.Size())
-<a name="l00127"></a>00127       vssol-&gt;attr_to_show = 0;
-<a name="l00128"></a>00128    vssol-&gt;el_attr_to_show[vssol-&gt;attr_to_show] = 1;
-<a name="l00129"></a>00129    cout &lt;&lt; <span class="stringliteral">&quot;Showing el attribute &quot;</span> &lt;&lt; vssol-&gt;attr_to_show+1 &lt;&lt; endl;
-<a name="l00130"></a>00130    vssol-&gt;PrepareLines();
-<a name="l00131"></a>00131    vssol-&gt;Prepare();
-<a name="l00132"></a>00132    SendExposeEvent();
+<a name="l00126"></a>00126    <span class="keywordflow">if</span> (vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#adb51916e54adf0b331ff2f3c2ecab029">attr_to_show</a> &gt;= vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a5baa6c391db303eb64ab6a96c2b0fbb8">el_attr_to_show</a>.Size())
+<a name="l00127"></a>00127       vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#adb51916e54adf0b331ff2f3c2ecab029">attr_to_show</a> = 0;
+<a name="l00128"></a>00128    vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a5baa6c391db303eb64ab6a96c2b0fbb8">el_attr_to_show</a>[vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#adb51916e54adf0b331ff2f3c2ecab029">attr_to_show</a>] = 1;
+<a name="l00129"></a>00129    cout &lt;&lt; <span class="stringliteral">&quot;Showing el attribute &quot;</span> &lt;&lt; vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#adb51916e54adf0b331ff2f3c2ecab029">attr_to_show</a>+1 &lt;&lt; endl;
+<a name="l00130"></a>00130    vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a206dd0762ab39de537300b22e62b31b7">PrepareLines</a>();
+<a name="l00131"></a>00131    vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a5b090840a32af79a6175602da4ffee21">Prepare</a>();
+<a name="l00132"></a>00132    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00133"></a>00133 }
 <a name="l00134"></a>00134 
 <a name="l00135"></a>00135 <span class="keyword">static</span> <span class="keywordtype">void</span> KeyF10Pressed()
 <a name="l00136"></a>00136 {
-<a name="l00137"></a>00137    <span class="keywordflow">if</span> (vssol-&gt;attr_to_show == -1)
+<a name="l00137"></a>00137    <span class="keywordflow">if</span> (vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#adb51916e54adf0b331ff2f3c2ecab029">attr_to_show</a> == -1)
 <a name="l00138"></a>00138    {
-<a name="l00139"></a>00139       vssol-&gt;el_attr_to_show = 0;
+<a name="l00139"></a>00139       vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a5baa6c391db303eb64ab6a96c2b0fbb8">el_attr_to_show</a> = 0;
 <a name="l00140"></a>00140    }
 <a name="l00141"></a>00141    <span class="keywordflow">else</span>
-<a name="l00142"></a>00142       vssol-&gt;el_attr_to_show[vssol-&gt;attr_to_show--] = 0;
+<a name="l00142"></a>00142       vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a5baa6c391db303eb64ab6a96c2b0fbb8">el_attr_to_show</a>[vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#adb51916e54adf0b331ff2f3c2ecab029">attr_to_show</a>--] = 0;
 <a name="l00143"></a>00143 
-<a name="l00144"></a>00144    <span class="keywordflow">if</span> (vssol-&gt;attr_to_show &lt; 0)
-<a name="l00145"></a>00145       vssol-&gt;attr_to_show = vssol-&gt;el_attr_to_show.Size()-1;
-<a name="l00146"></a>00146    vssol-&gt;el_attr_to_show[vssol-&gt;attr_to_show] = 1;
-<a name="l00147"></a>00147    cout &lt;&lt; <span class="stringliteral">&quot;Showing el attribute &quot;</span> &lt;&lt; vssol-&gt;attr_to_show+1 &lt;&lt; endl;
-<a name="l00148"></a>00148    vssol-&gt;PrepareLines();
-<a name="l00149"></a>00149    vssol-&gt;Prepare();
-<a name="l00150"></a>00150    SendExposeEvent();
+<a name="l00144"></a>00144    <span class="keywordflow">if</span> (vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#adb51916e54adf0b331ff2f3c2ecab029">attr_to_show</a> &lt; 0)
+<a name="l00145"></a>00145       vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#adb51916e54adf0b331ff2f3c2ecab029">attr_to_show</a> = vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a5baa6c391db303eb64ab6a96c2b0fbb8">el_attr_to_show</a>.Size()-1;
+<a name="l00146"></a>00146    vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a5baa6c391db303eb64ab6a96c2b0fbb8">el_attr_to_show</a>[vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#adb51916e54adf0b331ff2f3c2ecab029">attr_to_show</a>] = 1;
+<a name="l00147"></a>00147    cout &lt;&lt; <span class="stringliteral">&quot;Showing el attribute &quot;</span> &lt;&lt; vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#adb51916e54adf0b331ff2f3c2ecab029">attr_to_show</a>+1 &lt;&lt; endl;
+<a name="l00148"></a>00148    vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a206dd0762ab39de537300b22e62b31b7">PrepareLines</a>();
+<a name="l00149"></a>00149    vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a5b090840a32af79a6175602da4ffee21">Prepare</a>();
+<a name="l00150"></a>00150    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00151"></a>00151 }
 <a name="l00152"></a>00152 
-<a name="l00153"></a>00153 <span class="keyword">static</span> <span class="keywordtype">void</span> KeyBPressed()
+<a name="l00153"></a>00153 <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="vsvector_8cpp.html#aaf097a9e229f763d9eb7d6051ec44643">KeyBPressed</a>()
 <a name="l00154"></a>00154 {
 <a name="l00155"></a>00155    vssol -&gt; ToggleDrawBdr();
-<a name="l00156"></a>00156    SendExposeEvent();
+<a name="l00156"></a>00156    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00157"></a>00157 }
 <a name="l00158"></a>00158 
 <a name="l00159"></a>00159 <span class="keyword">static</span> <span class="keywordtype">void</span> KeyMPressed()
 <a name="l00160"></a>00160 {
 <a name="l00161"></a>00161    vssol -&gt; ToggleDrawMesh();
-<a name="l00162"></a>00162    SendExposeEvent();
+<a name="l00162"></a>00162    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00163"></a>00163 }
 <a name="l00164"></a>00164 
 <a name="l00165"></a>00165 <span class="keyword">static</span> <span class="keywordtype">void</span> KeyEPressed()
 <a name="l00166"></a>00166 {
 <a name="l00167"></a>00167    vssol -&gt; ToggleDrawElems();
-<a name="l00168"></a>00168    SendExposeEvent();
+<a name="l00168"></a>00168    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00169"></a>00169 }
 <a name="l00170"></a>00170 
 <a name="l00171"></a>00171 <span class="keyword">static</span> <span class="keywordtype">void</span> KeyFPressed()
 <a name="l00172"></a>00172 {
 <a name="l00173"></a>00173    vssol -&gt; ToggleShading();
-<a name="l00174"></a>00174    SendExposeEvent();
+<a name="l00174"></a>00174    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00175"></a>00175 }
 <a name="l00176"></a>00176 
-<a name="l00177"></a>00177 <span class="keywordtype">int</span> refine_func = 0;
+<a name="l00177"></a><a class="code" href="vssolution_8cpp.html#a1d2ea95f9f911d4d02c7bdf7cd4162bf">00177</a> <span class="keywordtype">int</span> <a class="code" href="vssolution_8cpp.html#a1d2ea95f9f911d4d02c7bdf7cd4162bf">refine_func</a> = 0;
 <a name="l00178"></a>00178 
-<a name="l00179"></a>00179 <span class="keywordtype">void</span> KeyiPressed()
+<a name="l00179"></a><a class="code" href="vssolution_8cpp.html#a2c393cc44fcbceb251add094ef51d3cb">00179</a> <span class="keywordtype">void</span> <a class="code" href="vssolution_8cpp.html#a2c393cc44fcbceb251add094ef51d3cb">KeyiPressed</a>()
 <a name="l00180"></a>00180 {
 <a name="l00181"></a>00181    <span class="keywordtype">int</span> update = 1;
 <a name="l00182"></a>00182    <span class="keywordflow">switch</span> (refine_func)
@@ -275,13 +276,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00215"></a>00215       vssol -&gt; DefaultLevelLines();
 <a name="l00216"></a>00216       vssol -&gt; PrepareLevelCurves();
 <a name="l00217"></a>00217       vssol -&gt; PrepareCP();
-<a name="l00218"></a>00218       SendExposeEvent();
+<a name="l00218"></a>00218       <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00219"></a>00219    }
 <a name="l00220"></a>00220    cout &lt;&lt; <span class="stringliteral">&quot;Subdivision factors = &quot;</span> &lt;&lt; vssol -&gt; TimesToRefine
 <a name="l00221"></a>00221         &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; vssol -&gt; EdgeRefineFactor &lt;&lt; endl;
 <a name="l00222"></a>00222 }
 <a name="l00223"></a>00223 
-<a name="l00224"></a>00224 <span class="keywordtype">void</span> KeyIPressed()
+<a name="l00224"></a><a class="code" href="vssolution_8cpp.html#ad8b3908f59754195f333bc16d557e9fc">00224</a> <span class="keywordtype">void</span> <a class="code" href="vssolution_8cpp.html#ad8b3908f59754195f333bc16d557e9fc">KeyIPressed</a>()
 <a name="l00225"></a>00225 {
 <a name="l00226"></a>00226    refine_func = (refine_func+1)%4;
 <a name="l00227"></a>00227    cout &lt;&lt; <span class="stringliteral">&quot;Key &#39;i&#39; will: &quot;</span>;
@@ -304,139 +305,139 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00244"></a>00244 
 <a name="l00245"></a>00245 <span class="keyword">static</span> <span class="keywordtype">void</span> KeywPressed()
 <a name="l00246"></a>00246 {
-<a name="l00247"></a>00247    vssol-&gt;ToggleDrawCP();
-<a name="l00248"></a>00248    SendExposeEvent();
+<a name="l00247"></a>00247    vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a536a137b0839c8a04a044ac1d54f7cbf">ToggleDrawCP</a>();
+<a name="l00248"></a>00248    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00249"></a>00249 }
 <a name="l00250"></a>00250 
 <a name="l00251"></a>00251 <span class="keyword">static</span> <span class="keywordtype">void</span> KeyyPressed()
 <a name="l00252"></a>00252 {
-<a name="l00253"></a>00253    vssol-&gt;CuttingPlane-&gt;IncreaseTheta();
-<a name="l00254"></a>00254    vssol-&gt;PrepareCP();
-<a name="l00255"></a>00255    SendExposeEvent();
+<a name="l00253"></a>00253    vssol-&gt;<a class="code" href="classVisualizationSceneScalarData.html#a032f273829f0833e33388f3fc701c0be">CuttingPlane</a>-&gt;<a class="code" href="classPlane.html#a14da415e018251370c9adf6054334702">IncreaseTheta</a>();
+<a name="l00254"></a>00254    vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#aa285a46ac664190f1b182cf0d28e7ba2">PrepareCP</a>();
+<a name="l00255"></a>00255    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00256"></a>00256 }
 <a name="l00257"></a>00257 
 <a name="l00258"></a>00258 <span class="keyword">static</span> <span class="keywordtype">void</span> KeyYPressed()
 <a name="l00259"></a>00259 {
-<a name="l00260"></a>00260    vssol-&gt;CuttingPlane-&gt;DecreaseTheta();
-<a name="l00261"></a>00261    vssol-&gt;PrepareCP();
-<a name="l00262"></a>00262    SendExposeEvent();
+<a name="l00260"></a>00260    vssol-&gt;<a class="code" href="classVisualizationSceneScalarData.html#a032f273829f0833e33388f3fc701c0be">CuttingPlane</a>-&gt;<a class="code" href="classPlane.html#a91e138aeeacdfb89ae8044ef6330f9b5">DecreaseTheta</a>();
+<a name="l00261"></a>00261    vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#aa285a46ac664190f1b182cf0d28e7ba2">PrepareCP</a>();
+<a name="l00262"></a>00262    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00263"></a>00263 }
 <a name="l00264"></a>00264 
 <a name="l00265"></a>00265 <span class="keyword">static</span> <span class="keywordtype">void</span> KeyzPressed()
 <a name="l00266"></a>00266 {
-<a name="l00267"></a>00267    vssol-&gt;CuttingPlane-&gt;IncreaseDistance();
-<a name="l00268"></a>00268    vssol-&gt;PrepareCP();
-<a name="l00269"></a>00269    SendExposeEvent();
+<a name="l00267"></a>00267    vssol-&gt;<a class="code" href="classVisualizationSceneScalarData.html#a032f273829f0833e33388f3fc701c0be">CuttingPlane</a>-&gt;<a class="code" href="classPlane.html#a765ff9ff592a4ffddebd94c79e532578">IncreaseDistance</a>();
+<a name="l00268"></a>00268    vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#aa285a46ac664190f1b182cf0d28e7ba2">PrepareCP</a>();
+<a name="l00269"></a>00269    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00270"></a>00270 }
 <a name="l00271"></a>00271 
 <a name="l00272"></a>00272 <span class="keyword">static</span> <span class="keywordtype">void</span> KeyZPressed()
 <a name="l00273"></a>00273 {
-<a name="l00274"></a>00274    vssol-&gt;CuttingPlane-&gt;DecreaseDistance();
-<a name="l00275"></a>00275    vssol-&gt;PrepareCP();
-<a name="l00276"></a>00276    SendExposeEvent();
+<a name="l00274"></a>00274    vssol-&gt;<a class="code" href="classVisualizationSceneScalarData.html#a032f273829f0833e33388f3fc701c0be">CuttingPlane</a>-&gt;<a class="code" href="classPlane.html#a583c441cd6ff0654c54397e3ce072a9a">DecreaseDistance</a>();
+<a name="l00275"></a>00275    vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#aa285a46ac664190f1b182cf0d28e7ba2">PrepareCP</a>();
+<a name="l00276"></a>00276    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00277"></a>00277 }
 <a name="l00278"></a>00278 
 <a name="l00279"></a>00279 <span class="keyword">static</span> <span class="keywordtype">void</span> KeyF3Pressed()
 <a name="l00280"></a>00280 {
-<a name="l00281"></a>00281    <span class="keywordflow">if</span> (vssol-&gt;shading == 2)
+<a name="l00281"></a>00281    <span class="keywordflow">if</span> (vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#abb46c83f1e814a7874a2b3201082d104">shading</a> == 2)
 <a name="l00282"></a>00282    {
 <a name="l00283"></a>00283       vssol-&gt;<a class="code" href="classVisualizationSceneScalarData.html#aafdfc20e225abe3e02ba42ea422c8444">shrink</a> *= 0.9;
-<a name="l00284"></a>00284       vssol-&gt;Prepare();
-<a name="l00285"></a>00285       vssol-&gt;PrepareLines();
-<a name="l00286"></a>00286       vssol-&gt;PrepareLevelCurves();
-<a name="l00287"></a>00287       SendExposeEvent();
+<a name="l00284"></a>00284       vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a5b090840a32af79a6175602da4ffee21">Prepare</a>();
+<a name="l00285"></a>00285       vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a206dd0762ab39de537300b22e62b31b7">PrepareLines</a>();
+<a name="l00286"></a>00286       vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a5eb21766e40b26ee027131d6604f7ba4">PrepareLevelCurves</a>();
+<a name="l00287"></a>00287       <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00288"></a>00288    }
 <a name="l00289"></a>00289 }
 <a name="l00290"></a>00290 
 <a name="l00291"></a>00291 <span class="keyword">static</span> <span class="keywordtype">void</span> KeyF4Pressed()
 <a name="l00292"></a>00292 {
-<a name="l00293"></a>00293    <span class="keywordflow">if</span> (vssol-&gt;shading == 2)
+<a name="l00293"></a>00293    <span class="keywordflow">if</span> (vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#abb46c83f1e814a7874a2b3201082d104">shading</a> == 2)
 <a name="l00294"></a>00294    {
 <a name="l00295"></a>00295       vssol-&gt;<a class="code" href="classVisualizationSceneScalarData.html#aafdfc20e225abe3e02ba42ea422c8444">shrink</a> *= 1.11111111111111111111111;
-<a name="l00296"></a>00296       vssol-&gt;Prepare();
-<a name="l00297"></a>00297       vssol-&gt;PrepareLines();
-<a name="l00298"></a>00298       vssol-&gt;PrepareLevelCurves();
-<a name="l00299"></a>00299       SendExposeEvent();
+<a name="l00296"></a>00296       vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a5b090840a32af79a6175602da4ffee21">Prepare</a>();
+<a name="l00297"></a>00297       vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a206dd0762ab39de537300b22e62b31b7">PrepareLines</a>();
+<a name="l00298"></a>00298       vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a5eb21766e40b26ee027131d6604f7ba4">PrepareLevelCurves</a>();
+<a name="l00299"></a>00299       <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00300"></a>00300    }
 <a name="l00301"></a>00301 }
 <a name="l00302"></a>00302 
 <a name="l00303"></a>00303 <span class="keyword">static</span> <span class="keywordtype">void</span> KeyF11Pressed()
 <a name="l00304"></a>00304 {
-<a name="l00305"></a>00305    <span class="keywordflow">if</span> (vssol-&gt;shading == 2)
+<a name="l00305"></a>00305    <span class="keywordflow">if</span> (vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#abb46c83f1e814a7874a2b3201082d104">shading</a> == 2)
 <a name="l00306"></a>00306    {
-<a name="l00307"></a>00307       <span class="keywordflow">if</span> (vssol-&gt;matc.Width() == 0)
+<a name="l00307"></a>00307       <span class="keywordflow">if</span> (vssol-&gt;<a class="code" href="classVisualizationSceneScalarData.html#a67573caf910ec2774a5894400466e186">matc</a>.Width() == 0)
 <a name="l00308"></a>00308          vssol-&gt;<a class="code" href="classVisualizationSceneScalarData.html#a5d8ef391820d6dba8d22c52c4366c8d0" title="Compute the center of gravity for each element attribute.">ComputeElemAttrCenter</a>();
 <a name="l00309"></a>00309       vssol-&gt;<a class="code" href="classVisualizationSceneScalarData.html#a189df98d3930547ea308f37a264ada80" title="Shrink factor with respect to the element (material) attributes centers.">shrinkmat</a> *= 0.9;
-<a name="l00310"></a>00310       vssol-&gt;Prepare();
-<a name="l00311"></a>00311       vssol-&gt;PrepareLines();
-<a name="l00312"></a>00312       vssol-&gt;PrepareLevelCurves();
-<a name="l00313"></a>00313       SendExposeEvent();
+<a name="l00310"></a>00310       vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a5b090840a32af79a6175602da4ffee21">Prepare</a>();
+<a name="l00311"></a>00311       vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a206dd0762ab39de537300b22e62b31b7">PrepareLines</a>();
+<a name="l00312"></a>00312       vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a5eb21766e40b26ee027131d6604f7ba4">PrepareLevelCurves</a>();
+<a name="l00313"></a>00313       <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00314"></a>00314    }
 <a name="l00315"></a>00315 }
 <a name="l00316"></a>00316 
 <a name="l00317"></a>00317 <span class="keyword">static</span> <span class="keywordtype">void</span> KeyF12Pressed()
 <a name="l00318"></a>00318 {
-<a name="l00319"></a>00319    <span class="keywordflow">if</span> (vssol-&gt;shading == 2)
+<a name="l00319"></a>00319    <span class="keywordflow">if</span> (vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#abb46c83f1e814a7874a2b3201082d104">shading</a> == 2)
 <a name="l00320"></a>00320    {
-<a name="l00321"></a>00321       <span class="keywordflow">if</span> (vssol-&gt;matc.Width() == 0)
+<a name="l00321"></a>00321       <span class="keywordflow">if</span> (vssol-&gt;<a class="code" href="classVisualizationSceneScalarData.html#a67573caf910ec2774a5894400466e186">matc</a>.Width() == 0)
 <a name="l00322"></a>00322          vssol-&gt;<a class="code" href="classVisualizationSceneScalarData.html#a5d8ef391820d6dba8d22c52c4366c8d0" title="Compute the center of gravity for each element attribute.">ComputeElemAttrCenter</a>();
 <a name="l00323"></a>00323       vssol-&gt;<a class="code" href="classVisualizationSceneScalarData.html#a189df98d3930547ea308f37a264ada80" title="Shrink factor with respect to the element (material) attributes centers.">shrinkmat</a> *= 1.11111111111111111111111;
-<a name="l00324"></a>00324       vssol-&gt;Prepare();
-<a name="l00325"></a>00325       vssol-&gt;PrepareLines();
-<a name="l00326"></a>00326       vssol-&gt;PrepareLevelCurves();
-<a name="l00327"></a>00327       SendExposeEvent();
+<a name="l00324"></a>00324       vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a5b090840a32af79a6175602da4ffee21">Prepare</a>();
+<a name="l00325"></a>00325       vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a206dd0762ab39de537300b22e62b31b7">PrepareLines</a>();
+<a name="l00326"></a>00326       vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a5eb21766e40b26ee027131d6604f7ba4">PrepareLevelCurves</a>();
+<a name="l00327"></a>00327       <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00328"></a>00328    }
 <a name="l00329"></a>00329 }
 <a name="l00330"></a>00330 
-<a name="l00331"></a>00331 VisualizationSceneSolution::VisualizationSceneSolution()
+<a name="l00331"></a><a class="code" href="classVisualizationSceneSolution.html#a1bd81ca9ca99c6ff7bd8dd590ddc1d43">00331</a> <a class="code" href="classVisualizationSceneSolution.html#a1bd81ca9ca99c6ff7bd8dd590ddc1d43">VisualizationSceneSolution::VisualizationSceneSolution</a>()
 <a name="l00332"></a>00332 {}
 <a name="l00333"></a>00333 
-<a name="l00334"></a>00334 VisualizationSceneSolution::VisualizationSceneSolution(Mesh &amp;m, Vector &amp;s)
+<a name="l00334"></a><a class="code" href="classVisualizationSceneSolution.html#a5b1034d03e46b7f345234c00303943c6">00334</a> <a class="code" href="classVisualizationSceneSolution.html#a1bd81ca9ca99c6ff7bd8dd590ddc1d43">VisualizationSceneSolution::VisualizationSceneSolution</a>(Mesh &amp;m, Vector &amp;s)
 <a name="l00335"></a>00335 {
-<a name="l00336"></a>00336    mesh = &amp;m;
-<a name="l00337"></a>00337    sol = &amp;s;
+<a name="l00336"></a>00336    <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> = &amp;m;
+<a name="l00337"></a>00337    <a class="code" href="classVisualizationSceneScalarData.html#a5ce34a0e666012a9034d15124fff746b">sol</a> = &amp;s;
 <a name="l00338"></a>00338 
-<a name="l00339"></a>00339    Init();
+<a name="l00339"></a>00339    <a class="code" href="classVisualizationSceneSolution.html#a0bfbf5949d78a39e36e4e1e42bfc1a41">Init</a>();
 <a name="l00340"></a>00340 
 <a name="l00341"></a>00341    auxKeyFunc (AUX_h, SolutionKeyHPressed);
 <a name="l00342"></a>00342    auxKeyFunc (AUX_H, SolutionKeyHPressed);
 <a name="l00343"></a>00343 }
 <a name="l00344"></a>00344 
-<a name="l00345"></a>00345 <span class="keywordtype">void</span> VisualizationSceneSolution::Init()
+<a name="l00345"></a><a class="code" href="classVisualizationSceneSolution.html#a0bfbf5949d78a39e36e4e1e42bfc1a41">00345</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a0bfbf5949d78a39e36e4e1e42bfc1a41">VisualizationSceneSolution::Init</a>()
 <a name="l00346"></a>00346 {
-<a name="l00347"></a>00347    rsol  = NULL;
+<a name="l00347"></a>00347    <a class="code" href="classVisualizationSceneSolution.html#aca691cbb8ae740098df7df383c59670b">rsol</a>  = NULL;
 <a name="l00348"></a>00348    vssol = <span class="keyword">this</span>;
 <a name="l00349"></a>00349 
-<a name="l00350"></a>00350    drawelems = shading = 1;
-<a name="l00351"></a>00351    drawmesh  = 0;
+<a name="l00350"></a>00350    <a class="code" href="classVisualizationSceneSolution.html#afb89b66af94ab31e817f13614de91446">drawelems</a> = <a class="code" href="classVisualizationSceneSolution.html#abb46c83f1e814a7874a2b3201082d104">shading</a> = 1;
+<a name="l00351"></a>00351    <a class="code" href="classVisualizationSceneSolution.html#aabf8972502ab6ac114b7ed84c13ae636">drawmesh</a>  = 0;
 <a name="l00352"></a>00352 
 <a name="l00353"></a>00353    <a class="code" href="classVisualizationSceneScalarData.html#aafdfc20e225abe3e02ba42ea422c8444">shrink</a> = 1.0;
 <a name="l00354"></a>00354    <a class="code" href="classVisualizationSceneScalarData.html#a189df98d3930547ea308f37a264ada80" title="Shrink factor with respect to the element (material) attributes centers.">shrinkmat</a> = 1.0;
-<a name="l00355"></a>00355    bdrc.SetSize(2,0);
-<a name="l00356"></a>00356    matc.SetSize(2,0);
+<a name="l00355"></a>00355    <a class="code" href="classVisualizationSceneScalarData.html#a24adb5d9797e7669e2a9ff5b5a9692e5">bdrc</a>.SetSize(2,0);
+<a name="l00356"></a>00356    <a class="code" href="classVisualizationSceneScalarData.html#a67573caf910ec2774a5894400466e186">matc</a>.SetSize(2,0);
 <a name="l00357"></a>00357 
-<a name="l00358"></a>00358    TimesToRefine = EdgeRefineFactor = 1;
+<a name="l00358"></a>00358    <a class="code" href="classVisualizationSceneSolution.html#a24e7a7c19d39b6ee192bef2524cbfe33">TimesToRefine</a> = <a class="code" href="classVisualizationSceneSolution.html#a102b456664f6863e6b8d16eb82528f13">EdgeRefineFactor</a> = 1;
 <a name="l00359"></a>00359 
-<a name="l00360"></a>00360    attr_to_show = -1;
-<a name="l00361"></a>00361    el_attr_to_show.SetSize(mesh-&gt;attributes.Max());
-<a name="l00362"></a>00362    el_attr_to_show = 1;
+<a name="l00360"></a>00360    <a class="code" href="classVisualizationSceneSolution.html#adb51916e54adf0b331ff2f3c2ecab029">attr_to_show</a> = -1;
+<a name="l00361"></a>00361    <a class="code" href="classVisualizationSceneSolution.html#a5baa6c391db303eb64ab6a96c2b0fbb8">el_attr_to_show</a>.SetSize(<a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;attributes.Max());
+<a name="l00362"></a>00362    <a class="code" href="classVisualizationSceneSolution.html#a5baa6c391db303eb64ab6a96c2b0fbb8">el_attr_to_show</a> = 1;
 <a name="l00363"></a>00363 
-<a name="l00364"></a>00364    drawbdr = 0;
+<a name="l00364"></a>00364    <a class="code" href="classVisualizationSceneSolution.html#a43439ad3f9f0d64b6db32ddcd6359d1a">drawbdr</a> = 0;
 <a name="l00365"></a>00365 
-<a name="l00366"></a>00366    VisualizationSceneScalarData::Init();  <span class="comment">// Calls FindNewBox() !!!</span>
+<a name="l00366"></a>00366    <a class="code" href="classVisualizationSceneSolution.html#a0bfbf5949d78a39e36e4e1e42bfc1a41">VisualizationSceneScalarData::Init</a>();  <span class="comment">// Calls FindNewBox() !!!</span>
 <a name="l00367"></a>00367 
-<a name="l00368"></a>00368    SetUseTexture(1);
+<a name="l00368"></a>00368    <a class="code" href="aux__vis_8cpp.html#a6ee835cc11f6de1e0f5707cedfc109f2">SetUseTexture</a>(1);
 <a name="l00369"></a>00369 
-<a name="l00370"></a>00370    CuttingPlane = <span class="keyword">new</span> <a class="code" href="classPlane.html">Plane</a>(-1.0,0.0,0.0,0.5*(<a class="code" href="classVisualizationScene.html#a70b0eb870996adb9fa9dc8248703ee33" title="Bounding box.">x</a>[0]+<a class="code" href="classVisualizationScene.html#a70b0eb870996adb9fa9dc8248703ee33" title="Bounding box.">x</a>[1]));
-<a name="l00371"></a>00371    draw_cp = 0;
+<a name="l00370"></a>00370    <a class="code" href="classVisualizationSceneScalarData.html#a032f273829f0833e33388f3fc701c0be">CuttingPlane</a> = <span class="keyword">new</span> <a class="code" href="classPlane.html">Plane</a>(-1.0,0.0,0.0,0.5*(<a class="code" href="classVisualizationScene.html#a70b0eb870996adb9fa9dc8248703ee33" title="Bounding box.">x</a>[0]+<a class="code" href="classVisualizationScene.html#a70b0eb870996adb9fa9dc8248703ee33" title="Bounding box.">x</a>[1]));
+<a name="l00371"></a>00371    <a class="code" href="classVisualizationSceneSolution.html#ae5255ef545e9c162759a46bec3656761">draw_cp</a> = 0;
 <a name="l00372"></a>00372 
 <a name="l00373"></a>00373    <span class="comment">// static int init = 0;</span>
 <a name="l00374"></a>00374    <span class="comment">// if (!init)</span>
 <a name="l00375"></a>00375    {
 <a name="l00376"></a>00376       <span class="comment">// init = 1;</span>
 <a name="l00377"></a>00377 
-<a name="l00378"></a>00378       auxKeyFunc (AUX_b, KeyBPressed);
-<a name="l00379"></a>00379       auxKeyFunc (AUX_B, KeyBPressed);
+<a name="l00378"></a>00378       auxKeyFunc (AUX_b, <a class="code" href="vsvector_8cpp.html#aaf097a9e229f763d9eb7d6051ec44643">KeyBPressed</a>);
+<a name="l00379"></a>00379       auxKeyFunc (AUX_B, <a class="code" href="vsvector_8cpp.html#aaf097a9e229f763d9eb7d6051ec44643">KeyBPressed</a>);
 <a name="l00380"></a>00380 
 <a name="l00381"></a>00381       auxKeyFunc (AUX_m, KeyMPressed);
 <a name="l00382"></a>00382       auxKeyFunc (AUX_M, KeyMPressed);
@@ -447,8 +448,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00387"></a>00387       auxKeyFunc (AUX_f, KeyFPressed);
 <a name="l00388"></a>00388       auxKeyFunc (AUX_F, KeyFPressed);
 <a name="l00389"></a>00389 
-<a name="l00390"></a>00390       auxKeyFunc (AUX_i, KeyiPressed);
-<a name="l00391"></a>00391       auxKeyFunc (AUX_I, KeyIPressed);
+<a name="l00390"></a>00390       auxKeyFunc (AUX_i, <a class="code" href="vssolution_8cpp.html#a2c393cc44fcbceb251add094ef51d3cb">KeyiPressed</a>);
+<a name="l00391"></a>00391       auxKeyFunc (AUX_I, <a class="code" href="vssolution_8cpp.html#ad8b3908f59754195f333bc16d557e9fc">KeyIPressed</a>);
 <a name="l00392"></a>00392 
 <a name="l00393"></a>00393       auxKeyFunc (AUX_w, KeywPressed);
 <a name="l00394"></a>00394       auxKeyFunc (AUX_y, KeyyPressed);
@@ -465,64 +466,64 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00405"></a>00405       auxKeyFunc (XK_F12, KeyF12Pressed);
 <a name="l00406"></a>00406    }
 <a name="l00407"></a>00407 
-<a name="l00408"></a>00408    displlist  = glGenLists (1);
-<a name="l00409"></a>00409    linelist   = glGenLists (1);
-<a name="l00410"></a>00410    lcurvelist = glGenLists (1);
-<a name="l00411"></a>00411    bdrlist    = glGenLists (1);
-<a name="l00412"></a>00412    cp_list    = glGenLists (1);
+<a name="l00408"></a>00408    <a class="code" href="classVisualizationSceneSolution.html#a5b70b9817909cf1c715bee22d1c9199f">displlist</a>  = glGenLists (1);
+<a name="l00409"></a>00409    <a class="code" href="classVisualizationSceneSolution.html#ab7d1b584caffe3592d7857d31e8c240a">linelist</a>   = glGenLists (1);
+<a name="l00410"></a>00410    <a class="code" href="classVisualizationSceneSolution.html#ac57e1347f5bb530d5c952a8250163feb">lcurvelist</a> = glGenLists (1);
+<a name="l00411"></a>00411    <a class="code" href="classVisualizationSceneSolution.html#acfa06c3408939c642fea6590ce368fc6">bdrlist</a>    = glGenLists (1);
+<a name="l00412"></a>00412    <a class="code" href="classVisualizationSceneSolution.html#afad0faadc767764d1fda1c9239c3bc23">cp_list</a>    = glGenLists (1);
 <a name="l00413"></a>00413 
-<a name="l00414"></a>00414    Prepare();
-<a name="l00415"></a>00415    PrepareLines();
-<a name="l00416"></a>00416    DefaultLevelLines();
-<a name="l00417"></a>00417    PrepareLevelCurves();
-<a name="l00418"></a>00418    PrepareBoundary();
+<a name="l00414"></a>00414    <a class="code" href="classVisualizationSceneSolution.html#a5b090840a32af79a6175602da4ffee21">Prepare</a>();
+<a name="l00415"></a>00415    <a class="code" href="classVisualizationSceneSolution.html#a206dd0762ab39de537300b22e62b31b7">PrepareLines</a>();
+<a name="l00416"></a>00416    <a class="code" href="classVisualizationSceneSolution.html#a1753fc6fb741072a5898ff5a0103c0b1">DefaultLevelLines</a>();
+<a name="l00417"></a>00417    <a class="code" href="classVisualizationSceneSolution.html#a5eb21766e40b26ee027131d6604f7ba4">PrepareLevelCurves</a>();
+<a name="l00418"></a>00418    <a class="code" href="classVisualizationSceneSolution.html#a75024bc6a3eb78bce0c27af2668db898">PrepareBoundary</a>();
 <a name="l00419"></a>00419 }
 <a name="l00420"></a>00420 
-<a name="l00421"></a>00421 VisualizationSceneSolution::~VisualizationSceneSolution()
+<a name="l00421"></a><a class="code" href="classVisualizationSceneSolution.html#abff7220333df3f17fa9f927786b3e093">00421</a> <a class="code" href="classVisualizationSceneSolution.html#abff7220333df3f17fa9f927786b3e093">VisualizationSceneSolution::~VisualizationSceneSolution</a>()
 <a name="l00422"></a>00422 {
-<a name="l00423"></a>00423    glDeleteLists (displlist, 1);
-<a name="l00424"></a>00424    glDeleteLists (linelist, 1);
-<a name="l00425"></a>00425    glDeleteLists (lcurvelist, 1);
-<a name="l00426"></a>00426    glDeleteLists (bdrlist, 1);
-<a name="l00427"></a>00427    glDeleteLists (cp_list, 1);
+<a name="l00423"></a>00423    glDeleteLists (<a class="code" href="classVisualizationSceneSolution.html#a5b70b9817909cf1c715bee22d1c9199f">displlist</a>, 1);
+<a name="l00424"></a>00424    glDeleteLists (<a class="code" href="classVisualizationSceneSolution.html#ab7d1b584caffe3592d7857d31e8c240a">linelist</a>, 1);
+<a name="l00425"></a>00425    glDeleteLists (<a class="code" href="classVisualizationSceneSolution.html#ac57e1347f5bb530d5c952a8250163feb">lcurvelist</a>, 1);
+<a name="l00426"></a>00426    glDeleteLists (<a class="code" href="classVisualizationSceneSolution.html#acfa06c3408939c642fea6590ce368fc6">bdrlist</a>, 1);
+<a name="l00427"></a>00427    glDeleteLists (<a class="code" href="classVisualizationSceneSolution.html#afad0faadc767764d1fda1c9239c3bc23">cp_list</a>, 1);
 <a name="l00428"></a>00428 }
 <a name="l00429"></a>00429 
 <a name="l00430"></a>00430 
-<a name="l00431"></a>00431 <span class="keywordtype">void</span> VisualizationSceneSolution::NewMeshAndSolution(
+<a name="l00431"></a><a class="code" href="classVisualizationSceneSolution.html#a867b47b5047dff7bbe1bbef92d0d9721">00431</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a867b47b5047dff7bbe1bbef92d0d9721">VisualizationSceneSolution::NewMeshAndSolution</a>(
 <a name="l00432"></a>00432    Mesh *new_m, Vector *new_sol, GridFunction *new_u, <span class="keywordtype">int</span> rescale)
 <a name="l00433"></a>00433 {
-<a name="l00434"></a>00434    mesh = new_m;
-<a name="l00435"></a>00435    sol = new_sol;
-<a name="l00436"></a>00436    rsol = new_u;
+<a name="l00434"></a>00434    <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> = new_m;
+<a name="l00435"></a>00435    <a class="code" href="classVisualizationSceneScalarData.html#a5ce34a0e666012a9034d15124fff746b">sol</a> = new_sol;
+<a name="l00436"></a>00436    <a class="code" href="classVisualizationSceneSolution.html#aca691cbb8ae740098df7df383c59670b">rsol</a> = new_u;
 <a name="l00437"></a>00437 
 <a name="l00438"></a>00438    <span class="keywordflow">if</span> (rescale == 1)
 <a name="l00439"></a>00439    {
-<a name="l00440"></a>00440       FindNewBox();
-<a name="l00441"></a>00441       PrepareAxes();
+<a name="l00440"></a>00440       <a class="code" href="classVisualizationSceneSolution.html#a19a1479bdadb4676815c9d98d1138ad5">FindNewBox</a>();
+<a name="l00441"></a>00441       <a class="code" href="classVisualizationSceneScalarData.html#aeb82b322234efaae4817098aaa63efc5">PrepareAxes</a>();
 <a name="l00442"></a>00442    }
 <a name="l00443"></a>00443    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rescale == 2)
 <a name="l00444"></a>00444    {
 <a name="l00445"></a>00445       <span class="keywordtype">double</span> rx[2], ry[2], rv[2];
-<a name="l00446"></a>00446       FindNewBox(rx, ry, rv);
-<a name="l00447"></a>00447       minv = rv[0];
-<a name="l00448"></a>00448       maxv = rv[1];
-<a name="l00449"></a>00449       FixValueRange();
-<a name="l00450"></a>00450       NewZRange(minv, maxv);
-<a name="l00451"></a>00451       PrepareAxes();
+<a name="l00446"></a>00446       <a class="code" href="classVisualizationSceneSolution.html#a19a1479bdadb4676815c9d98d1138ad5">FindNewBox</a>(rx, ry, rv);
+<a name="l00447"></a>00447       <a class="code" href="classVisualizationSceneScalarData.html#a220dacc3e7f9911067e4b74fd3a6f574">minv</a> = rv[0];
+<a name="l00448"></a>00448       <a class="code" href="classVisualizationSceneScalarData.html#a35b91f9ab89ee700e6b0017169f2559c">maxv</a> = rv[1];
+<a name="l00449"></a>00449       <a class="code" href="classVisualizationSceneSolution.html#a1cba9d34bbfbb85f9a2295c867da5a63">FixValueRange</a>();
+<a name="l00450"></a>00450       <a class="code" href="classVisualizationSceneSolution.html#a0ed1fd3cbb740bba24a8f18980a118b7">NewZRange</a>(<a class="code" href="classVisualizationSceneScalarData.html#a220dacc3e7f9911067e4b74fd3a6f574">minv</a>, <a class="code" href="classVisualizationSceneScalarData.html#a35b91f9ab89ee700e6b0017169f2559c">maxv</a>);
+<a name="l00451"></a>00451       <a class="code" href="classVisualizationSceneScalarData.html#aeb82b322234efaae4817098aaa63efc5">PrepareAxes</a>();
 <a name="l00452"></a>00452    }
 <a name="l00453"></a>00453 
-<a name="l00454"></a>00454    Prepare();
-<a name="l00455"></a>00455    PrepareLines();
-<a name="l00456"></a>00456    PrepareLevelCurves();
-<a name="l00457"></a>00457    PrepareBoundary();
-<a name="l00458"></a>00458    PrepareCP();
+<a name="l00454"></a>00454    <a class="code" href="classVisualizationSceneSolution.html#a5b090840a32af79a6175602da4ffee21">Prepare</a>();
+<a name="l00455"></a>00455    <a class="code" href="classVisualizationSceneSolution.html#a206dd0762ab39de537300b22e62b31b7">PrepareLines</a>();
+<a name="l00456"></a>00456    <a class="code" href="classVisualizationSceneSolution.html#a5eb21766e40b26ee027131d6604f7ba4">PrepareLevelCurves</a>();
+<a name="l00457"></a>00457    <a class="code" href="classVisualizationSceneSolution.html#a75024bc6a3eb78bce0c27af2668db898">PrepareBoundary</a>();
+<a name="l00458"></a>00458    <a class="code" href="classVisualizationSceneSolution.html#aa285a46ac664190f1b182cf0d28e7ba2">PrepareCP</a>();
 <a name="l00459"></a>00459 }
 <a name="l00460"></a>00460 
 <a name="l00461"></a>00461 
-<a name="l00462"></a>00462 <span class="keywordtype">void</span> VisualizationSceneSolution::GetRefinedDetJ(
+<a name="l00462"></a><a class="code" href="classVisualizationSceneSolution.html#a55c8ac7856cfbe44a62fda913ec162cc">00462</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a55c8ac7856cfbe44a62fda913ec162cc">VisualizationSceneSolution::GetRefinedDetJ</a>(
 <a name="l00463"></a>00463    <span class="keywordtype">int</span> i, <span class="keyword">const</span> IntegrationRule &amp;ir, Vector &amp;vals, DenseMatrix &amp;tr)
 <a name="l00464"></a>00464 {
-<a name="l00465"></a>00465    ElementTransformation *T = mesh-&gt;GetElementTransformation(i);
+<a name="l00465"></a>00465    ElementTransformation *T = <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetElementTransformation(i);
 <a name="l00466"></a>00466 
 <a name="l00467"></a>00467    T-&gt;Transform(ir, tr);
 <a name="l00468"></a>00468 
@@ -533,7 +534,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00473"></a>00473       vals(j) = T-&gt;Weight();
 <a name="l00474"></a>00474    }
 <a name="l00475"></a>00475 
-<a name="l00476"></a>00476    <span class="keywordflow">if</span> (drawelems == 2)
+<a name="l00476"></a>00476    <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneSolution.html#afb89b66af94ab31e817f13614de91446">drawelems</a> == 2)
 <a name="l00477"></a>00477    {
 <a name="l00478"></a>00478       <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; vals.Size(); j++)
 <a name="l00479"></a>00479       {
@@ -547,27 +548,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00487"></a>00487    }
 <a name="l00488"></a>00488 }
 <a name="l00489"></a>00489 
-<a name="l00490"></a>00490 <span class="keywordtype">void</span> VisualizationSceneSolution::GetRefinedValues(
+<a name="l00490"></a><a class="code" href="classVisualizationSceneSolution.html#a7bde28c621790ee7e5e22da1041c8f27">00490</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a7bde28c621790ee7e5e22da1041c8f27">VisualizationSceneSolution::GetRefinedValues</a>(
 <a name="l00491"></a>00491    <span class="keywordtype">int</span> i, <span class="keyword">const</span> IntegrationRule &amp;ir, Vector &amp;vals, DenseMatrix &amp;tr)
 <a name="l00492"></a>00492 {
-<a name="l00493"></a>00493    <span class="keywordflow">if</span> (drawelems &lt; 2)
-<a name="l00494"></a>00494       rsol-&gt;GetValues(i, ir, vals, tr);
+<a name="l00493"></a>00493    <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneSolution.html#afb89b66af94ab31e817f13614de91446">drawelems</a> &lt; 2)
+<a name="l00494"></a>00494       <a class="code" href="classVisualizationSceneSolution.html#aca691cbb8ae740098df7df383c59670b">rsol</a>-&gt;GetValues(i, ir, vals, tr);
 <a name="l00495"></a>00495    <span class="keywordflow">else</span>
-<a name="l00496"></a>00496       GetRefinedDetJ(i, ir, vals, tr);
+<a name="l00496"></a>00496       <a class="code" href="classVisualizationSceneSolution.html#a55c8ac7856cfbe44a62fda913ec162cc">GetRefinedDetJ</a>(i, ir, vals, tr);
 <a name="l00497"></a>00497 
 <a name="l00498"></a>00498    <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneScalarData.html#aafdfc20e225abe3e02ba42ea422c8444">shrink</a> != 1.0 || <a class="code" href="classVisualizationSceneScalarData.html#a189df98d3930547ea308f37a264ada80" title="Shrink factor with respect to the element (material) attributes centers.">shrinkmat</a> != 1.0)
 <a name="l00499"></a>00499       <a class="code" href="classVisualizationSceneScalarData.html#af7f7e22244011fa9ed3cd1bf27eba837" title="Shrink the set of points towards attributes centers of gravity.">ShrinkPoints</a>(tr, i, 0, 0);
 <a name="l00500"></a>00500 }
 <a name="l00501"></a>00501 
-<a name="l00502"></a>00502 <span class="keywordtype">int</span> VisualizationSceneSolution::GetRefinedValuesAndNormals(
+<a name="l00502"></a><a class="code" href="classVisualizationSceneSolution.html#a39225752d1c3afd12882ec55409f4267">00502</a> <span class="keywordtype">int</span> <a class="code" href="classVisualizationSceneSolution.html#a39225752d1c3afd12882ec55409f4267">VisualizationSceneSolution::GetRefinedValuesAndNormals</a>(
 <a name="l00503"></a>00503    <span class="keywordtype">int</span> i, <span class="keyword">const</span> IntegrationRule &amp;ir, Vector &amp;vals, DenseMatrix &amp;tr,
 <a name="l00504"></a>00504    DenseMatrix &amp;normals)
 <a name="l00505"></a>00505 {
 <a name="l00506"></a>00506    <span class="keywordtype">int</span> have_normals = 0;
 <a name="l00507"></a>00507 
-<a name="l00508"></a>00508    <span class="keywordflow">if</span> (drawelems &lt; 2)
+<a name="l00508"></a>00508    <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneSolution.html#afb89b66af94ab31e817f13614de91446">drawelems</a> &lt; 2)
 <a name="l00509"></a>00509    {
-<a name="l00510"></a>00510       rsol-&gt;GetGradients(i, ir, tr);
+<a name="l00510"></a>00510       <a class="code" href="classVisualizationSceneSolution.html#aca691cbb8ae740098df7df383c59670b">rsol</a>-&gt;GetGradients(i, ir, tr);
 <a name="l00511"></a>00511       normals.SetSize(3, tr.Width());
 <a name="l00512"></a>00512       <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; tr.Width(); j++)
 <a name="l00513"></a>00513       {
@@ -576,10 +577,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00516"></a>00516          normals(2, j) = 1.;
 <a name="l00517"></a>00517       }
 <a name="l00518"></a>00518       have_normals = 1;
-<a name="l00519"></a>00519       rsol-&gt;GetValues(i, ir, vals, tr);
+<a name="l00519"></a>00519       <a class="code" href="classVisualizationSceneSolution.html#aca691cbb8ae740098df7df383c59670b">rsol</a>-&gt;GetValues(i, ir, vals, tr);
 <a name="l00520"></a>00520    }
 <a name="l00521"></a>00521    <span class="keywordflow">else</span>
-<a name="l00522"></a>00522       GetRefinedDetJ(i, ir, vals, tr);
+<a name="l00522"></a>00522       <a class="code" href="classVisualizationSceneSolution.html#a55c8ac7856cfbe44a62fda913ec162cc">GetRefinedDetJ</a>(i, ir, vals, tr);
 <a name="l00523"></a>00523 
 <a name="l00524"></a>00524    <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneScalarData.html#aafdfc20e225abe3e02ba42ea422c8444">shrink</a> != 1.0 || <a class="code" href="classVisualizationSceneScalarData.html#a189df98d3930547ea308f37a264ada80" title="Shrink factor with respect to the element (material) attributes centers.">shrinkmat</a> != 1.0)
 <a name="l00525"></a>00525    {
@@ -597,83 +598,83 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00537"></a>00537    <span class="keywordflow">return</span> have_normals;
 <a name="l00538"></a>00538 }
 <a name="l00539"></a>00539 
-<a name="l00540"></a>00540 <span class="keywordtype">void</span> VisualizationSceneSolution::SetShading(<span class="keywordtype">int</span> s)
+<a name="l00540"></a><a class="code" href="classVisualizationSceneSolution.html#a1227ae8942b83155d677dd0930773d3f">00540</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a1227ae8942b83155d677dd0930773d3f">VisualizationSceneSolution::SetShading</a>(<span class="keywordtype">int</span> s)
 <a name="l00541"></a>00541 {
-<a name="l00542"></a>00542    <span class="keywordflow">if</span> (shading == s || s &lt; 0)
+<a name="l00542"></a>00542    <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneSolution.html#abb46c83f1e814a7874a2b3201082d104">shading</a> == s || s &lt; 0)
 <a name="l00543"></a>00543       <span class="keywordflow">return</span>;
 <a name="l00544"></a>00544 
-<a name="l00545"></a>00545    <span class="keywordflow">if</span> (rsol)
+<a name="l00545"></a>00545    <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneSolution.html#aca691cbb8ae740098df7df383c59670b">rsol</a>)
 <a name="l00546"></a>00546    {
 <a name="l00547"></a>00547       <span class="keywordflow">if</span> (s &gt; 2)
 <a name="l00548"></a>00548          <span class="keywordflow">return</span>;
 <a name="l00549"></a>00549 
-<a name="l00550"></a>00550       <span class="keywordflow">if</span> (s == 2 || shading == 2)
+<a name="l00550"></a>00550       <span class="keywordflow">if</span> (s == 2 || <a class="code" href="classVisualizationSceneSolution.html#abb46c83f1e814a7874a2b3201082d104">shading</a> == 2)
 <a name="l00551"></a>00551       {
-<a name="l00552"></a>00552          shading = s;
-<a name="l00553"></a>00553          PrepareLines();
-<a name="l00554"></a>00554          PrepareLevelCurves();
-<a name="l00555"></a>00555          PrepareCP();
+<a name="l00552"></a>00552          <a class="code" href="classVisualizationSceneSolution.html#abb46c83f1e814a7874a2b3201082d104">shading</a> = s;
+<a name="l00553"></a>00553          <a class="code" href="classVisualizationSceneSolution.html#a206dd0762ab39de537300b22e62b31b7">PrepareLines</a>();
+<a name="l00554"></a>00554          <a class="code" href="classVisualizationSceneSolution.html#a5eb21766e40b26ee027131d6604f7ba4">PrepareLevelCurves</a>();
+<a name="l00555"></a>00555          <a class="code" href="classVisualizationSceneSolution.html#aa285a46ac664190f1b182cf0d28e7ba2">PrepareCP</a>();
 <a name="l00556"></a>00556       }
 <a name="l00557"></a>00557       <span class="keywordflow">else</span>
-<a name="l00558"></a>00558          shading = s;
+<a name="l00558"></a>00558          <a class="code" href="classVisualizationSceneSolution.html#abb46c83f1e814a7874a2b3201082d104">shading</a> = s;
 <a name="l00559"></a>00559    }
 <a name="l00560"></a>00560    <span class="keywordflow">else</span>
 <a name="l00561"></a>00561    {
 <a name="l00562"></a>00562       <span class="keywordflow">if</span> (s &gt; 1)
 <a name="l00563"></a>00563          <span class="keywordflow">return</span>;
-<a name="l00564"></a>00564       shading = s;
+<a name="l00564"></a>00564       <a class="code" href="classVisualizationSceneSolution.html#abb46c83f1e814a7874a2b3201082d104">shading</a> = s;
 <a name="l00565"></a>00565    }
 <a name="l00566"></a>00566 
-<a name="l00567"></a>00567    Prepare();
+<a name="l00567"></a>00567    <a class="code" href="classVisualizationSceneSolution.html#a5b090840a32af79a6175602da4ffee21">Prepare</a>();
 <a name="l00568"></a>00568 }
 <a name="l00569"></a>00569 
-<a name="l00570"></a>00570 <span class="keywordtype">void</span> VisualizationSceneSolution::ToggleShading()
+<a name="l00570"></a><a class="code" href="classVisualizationSceneSolution.html#ab89025477007d6ef8a50b1d883bfb8e1">00570</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#ab89025477007d6ef8a50b1d883bfb8e1">VisualizationSceneSolution::ToggleShading</a>()
 <a name="l00571"></a>00571 {
-<a name="l00572"></a>00572    <span class="keywordflow">if</span> (rsol)
+<a name="l00572"></a>00572    <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneSolution.html#aca691cbb8ae740098df7df383c59670b">rsol</a>)
 <a name="l00573"></a>00573    {
-<a name="l00574"></a>00574       shading = (shading + 1) % 3;
-<a name="l00575"></a>00575       <span class="keywordflow">if</span> (shading != 1)
+<a name="l00574"></a>00574       <a class="code" href="classVisualizationSceneSolution.html#abb46c83f1e814a7874a2b3201082d104">shading</a> = (<a class="code" href="classVisualizationSceneSolution.html#abb46c83f1e814a7874a2b3201082d104">shading</a> + 1) % 3;
+<a name="l00575"></a>00575       <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneSolution.html#abb46c83f1e814a7874a2b3201082d104">shading</a> != 1)
 <a name="l00576"></a>00576       {
-<a name="l00577"></a>00577          FindNewBox();
-<a name="l00578"></a>00578          PrepareAxes();
-<a name="l00579"></a>00579          PrepareLines();
-<a name="l00580"></a>00580          PrepareLevelCurves();
-<a name="l00581"></a>00581          PrepareCP();
+<a name="l00577"></a>00577          <a class="code" href="classVisualizationSceneSolution.html#a19a1479bdadb4676815c9d98d1138ad5">FindNewBox</a>();
+<a name="l00578"></a>00578          <a class="code" href="classVisualizationSceneScalarData.html#aeb82b322234efaae4817098aaa63efc5">PrepareAxes</a>();
+<a name="l00579"></a>00579          <a class="code" href="classVisualizationSceneSolution.html#a206dd0762ab39de537300b22e62b31b7">PrepareLines</a>();
+<a name="l00580"></a>00580          <a class="code" href="classVisualizationSceneSolution.html#a5eb21766e40b26ee027131d6604f7ba4">PrepareLevelCurves</a>();
+<a name="l00581"></a>00581          <a class="code" href="classVisualizationSceneSolution.html#aa285a46ac664190f1b182cf0d28e7ba2">PrepareCP</a>();
 <a name="l00582"></a>00582       }
-<a name="l00583"></a>00583       Prepare();
+<a name="l00583"></a>00583       <a class="code" href="classVisualizationSceneSolution.html#a5b090840a32af79a6175602da4ffee21">Prepare</a>();
 <a name="l00584"></a>00584    }
 <a name="l00585"></a>00585    <span class="keywordflow">else</span>
-<a name="l00586"></a>00586       SetShading(1 - shading);
+<a name="l00586"></a>00586       <a class="code" href="classVisualizationSceneSolution.html#a1227ae8942b83155d677dd0930773d3f">SetShading</a>(1 - <a class="code" href="classVisualizationSceneSolution.html#abb46c83f1e814a7874a2b3201082d104">shading</a>);
 <a name="l00587"></a>00587 
 <a name="l00588"></a>00588    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *shading_type[3] =
 <a name="l00589"></a>00589       {<span class="stringliteral">&quot;flat&quot;</span>, <span class="stringliteral">&quot;smooth&quot;</span>, <span class="stringliteral">&quot;non-conforming (with subdivision)&quot;</span>};
-<a name="l00590"></a>00590    cout &lt;&lt; <span class="stringliteral">&quot;Shading type : &quot;</span> &lt;&lt; shading_type[shading] &lt;&lt; endl;
+<a name="l00590"></a>00590    cout &lt;&lt; <span class="stringliteral">&quot;Shading type : &quot;</span> &lt;&lt; shading_type[<a class="code" href="classVisualizationSceneSolution.html#abb46c83f1e814a7874a2b3201082d104">shading</a>] &lt;&lt; endl;
 <a name="l00591"></a>00591 }
 <a name="l00592"></a>00592 
-<a name="l00593"></a>00593 <span class="keywordtype">void</span> VisualizationSceneSolution::SetRefineFactors(<span class="keywordtype">int</span> tot, <span class="keywordtype">int</span> bdr)
+<a name="l00593"></a><a class="code" href="classVisualizationSceneSolution.html#abf3b0b7daf3d915672375c76bdfa8196">00593</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#abf3b0b7daf3d915672375c76bdfa8196">VisualizationSceneSolution::SetRefineFactors</a>(<span class="keywordtype">int</span> tot, <span class="keywordtype">int</span> bdr)
 <a name="l00594"></a>00594 {
-<a name="l00595"></a>00595    <span class="keywordflow">if</span> ((tot == TimesToRefine &amp;&amp; bdr == EdgeRefineFactor) || tot &lt; 1 || bdr &lt; 1)
+<a name="l00595"></a>00595    <span class="keywordflow">if</span> ((tot == <a class="code" href="classVisualizationSceneSolution.html#a24e7a7c19d39b6ee192bef2524cbfe33">TimesToRefine</a> &amp;&amp; bdr == <a class="code" href="classVisualizationSceneSolution.html#a102b456664f6863e6b8d16eb82528f13">EdgeRefineFactor</a>) || tot &lt; 1 || bdr &lt; 1)
 <a name="l00596"></a>00596       <span class="keywordflow">return</span>;
 <a name="l00597"></a>00597 
 <a name="l00598"></a>00598    <span class="keywordflow">if</span> (tot % bdr)
 <a name="l00599"></a>00599       tot += bdr - tot % bdr;
 <a name="l00600"></a>00600 
-<a name="l00601"></a>00601    TimesToRefine = tot;
-<a name="l00602"></a>00602    EdgeRefineFactor = bdr;
+<a name="l00601"></a>00601    <a class="code" href="classVisualizationSceneSolution.html#a24e7a7c19d39b6ee192bef2524cbfe33">TimesToRefine</a> = tot;
+<a name="l00602"></a>00602    <a class="code" href="classVisualizationSceneSolution.html#a102b456664f6863e6b8d16eb82528f13">EdgeRefineFactor</a> = bdr;
 <a name="l00603"></a>00603 
-<a name="l00604"></a>00604    <span class="keywordflow">if</span> (shading == 2)
+<a name="l00604"></a>00604    <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneSolution.html#abb46c83f1e814a7874a2b3201082d104">shading</a> == 2)
 <a name="l00605"></a>00605    {
-<a name="l00606"></a>00606       PrepareAxes();
-<a name="l00607"></a>00607       PrepareLines();
-<a name="l00608"></a>00608       Prepare();
-<a name="l00609"></a>00609       PrepareLevelCurves();
-<a name="l00610"></a>00610       PrepareCP();
+<a name="l00606"></a>00606       <a class="code" href="classVisualizationSceneScalarData.html#aeb82b322234efaae4817098aaa63efc5">PrepareAxes</a>();
+<a name="l00607"></a>00607       <a class="code" href="classVisualizationSceneSolution.html#a206dd0762ab39de537300b22e62b31b7">PrepareLines</a>();
+<a name="l00608"></a>00608       <a class="code" href="classVisualizationSceneSolution.html#a5b090840a32af79a6175602da4ffee21">Prepare</a>();
+<a name="l00609"></a>00609       <a class="code" href="classVisualizationSceneSolution.html#a5eb21766e40b26ee027131d6604f7ba4">PrepareLevelCurves</a>();
+<a name="l00610"></a>00610       <a class="code" href="classVisualizationSceneSolution.html#aa285a46ac664190f1b182cf0d28e7ba2">PrepareCP</a>();
 <a name="l00611"></a>00611    }
 <a name="l00612"></a>00612 }
 <a name="l00613"></a>00613 
-<a name="l00614"></a>00614 <span class="keywordtype">void</span> VisualizationSceneSolution::ToggleAttributes(Array&lt;int&gt; &amp;attr_list)
+<a name="l00614"></a><a class="code" href="classVisualizationSceneSolution.html#af444751418d2a9bcfab1a8a7b75c6384">00614</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#af444751418d2a9bcfab1a8a7b75c6384">VisualizationSceneSolution::ToggleAttributes</a>(Array&lt;int&gt; &amp;attr_list)
 <a name="l00615"></a>00615 {
-<a name="l00616"></a>00616    Array&lt;int&gt; &amp;attr_marker = vssol-&gt;el_attr_to_show;
+<a name="l00616"></a>00616    Array&lt;int&gt; &amp;attr_marker = vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a5baa6c391db303eb64ab6a96c2b0fbb8">el_attr_to_show</a>;
 <a name="l00617"></a>00617 
 <a name="l00618"></a>00618    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; attr_list.Size(); i++)
 <a name="l00619"></a>00619    {
@@ -693,68 +694,68 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00633"></a>00633          attr_marker[attr-1] = !attr_marker[attr-1];
 <a name="l00634"></a>00634       }
 <a name="l00635"></a>00635    }
-<a name="l00636"></a>00636    vssol-&gt;PrepareLines();
-<a name="l00637"></a>00637    vssol-&gt;Prepare();
+<a name="l00636"></a>00636    vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a206dd0762ab39de537300b22e62b31b7">PrepareLines</a>();
+<a name="l00637"></a>00637    vssol-&gt;<a class="code" href="classVisualizationSceneSolution.html#a5b090840a32af79a6175602da4ffee21">Prepare</a>();
 <a name="l00638"></a>00638 }
 <a name="l00639"></a>00639 
-<a name="l00640"></a>00640 <span class="keywordtype">void</span> VisualizationSceneSolution::NewZRange(<span class="keywordtype">double</span> z1, <span class="keywordtype">double</span> z2)
+<a name="l00640"></a><a class="code" href="classVisualizationSceneSolution.html#a0ed1fd3cbb740bba24a8f18980a118b7">00640</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a0ed1fd3cbb740bba24a8f18980a118b7">VisualizationSceneSolution::NewZRange</a>(<span class="keywordtype">double</span> z1, <span class="keywordtype">double</span> z2)
 <a name="l00641"></a>00641 {
 <a name="l00642"></a>00642    <span class="comment">// preserve the current box z-size</span>
-<a name="l00643"></a>00643    zscale *= (z[1]-z[0])/(z2-z1);
-<a name="l00644"></a>00644    z[0] = z1;
-<a name="l00645"></a>00645    z[1] = z2;
+<a name="l00643"></a>00643    <a class="code" href="classVisualizationScene.html#a125bb5805d9480f4e5aec905c9403cd8">zscale</a> *= (<a class="code" href="classVisualizationScene.html#a9444a714a9ea07e08e349ea1f0f57a73">z</a>[1]-<a class="code" href="classVisualizationScene.html#a9444a714a9ea07e08e349ea1f0f57a73">z</a>[0])/(z2-z1);
+<a name="l00644"></a>00644    <a class="code" href="classVisualizationScene.html#a9444a714a9ea07e08e349ea1f0f57a73">z</a>[0] = z1;
+<a name="l00645"></a>00645    <a class="code" href="classVisualizationScene.html#a9444a714a9ea07e08e349ea1f0f57a73">z</a>[1] = z2;
 <a name="l00646"></a>00646 }
 <a name="l00647"></a>00647 
-<a name="l00648"></a>00648 <span class="keywordtype">void</span> VisualizationSceneSolution::SetNewScalingFromBox()
+<a name="l00648"></a><a class="code" href="classVisualizationSceneSolution.html#a477577e19258a46d2b22b337e5a39674">00648</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a477577e19258a46d2b22b337e5a39674">VisualizationSceneSolution::SetNewScalingFromBox</a>()
 <a name="l00649"></a>00649 {
-<a name="l00650"></a>00650    <span class="keywordflow">if</span> (scaling)
-<a name="l00651"></a>00651       VisualizationSceneScalarData::SetNewScalingFromBox();
+<a name="l00650"></a>00650    <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneScalarData.html#adc9c7f878b5a34fb8fbe6f2c3ff0169d">scaling</a>)
+<a name="l00651"></a>00651       <a class="code" href="classVisualizationSceneSolution.html#a477577e19258a46d2b22b337e5a39674">VisualizationSceneScalarData::SetNewScalingFromBox</a>();
 <a name="l00652"></a>00652    <span class="keywordflow">else</span>
 <a name="l00653"></a>00653    {
-<a name="l00654"></a>00654       xscale = <a class="code" href="classVisualizationScene.html#a70b0eb870996adb9fa9dc8248703ee33" title="Bounding box.">x</a>[1]-<a class="code" href="classVisualizationScene.html#a70b0eb870996adb9fa9dc8248703ee33" title="Bounding box.">x</a>[0];
-<a name="l00655"></a>00655       yscale = y[1]-y[0];
-<a name="l00656"></a>00656       zscale = z[1]-z[0];
-<a name="l00657"></a>00657       <span class="keywordflow">if</span> (xscale &lt; yscale)
+<a name="l00654"></a>00654       <a class="code" href="classVisualizationScene.html#aa00ff6e89df9270c39c693a216b5dbae">xscale</a> = <a class="code" href="classVisualizationScene.html#a70b0eb870996adb9fa9dc8248703ee33" title="Bounding box.">x</a>[1]-<a class="code" href="classVisualizationScene.html#a70b0eb870996adb9fa9dc8248703ee33" title="Bounding box.">x</a>[0];
+<a name="l00655"></a>00655       <a class="code" href="classVisualizationScene.html#ac59c227cdfa470b5abb889f8ef9ee642">yscale</a> = <a class="code" href="classVisualizationScene.html#a99bf11a2dfb8e31a017c257cd515d5f8">y</a>[1]-<a class="code" href="classVisualizationScene.html#a99bf11a2dfb8e31a017c257cd515d5f8">y</a>[0];
+<a name="l00656"></a>00656       <a class="code" href="classVisualizationScene.html#a125bb5805d9480f4e5aec905c9403cd8">zscale</a> = <a class="code" href="classVisualizationScene.html#a9444a714a9ea07e08e349ea1f0f57a73">z</a>[1]-<a class="code" href="classVisualizationScene.html#a9444a714a9ea07e08e349ea1f0f57a73">z</a>[0];
+<a name="l00657"></a>00657       <span class="keywordflow">if</span> (<a class="code" href="classVisualizationScene.html#aa00ff6e89df9270c39c693a216b5dbae">xscale</a> &lt; <a class="code" href="classVisualizationScene.html#ac59c227cdfa470b5abb889f8ef9ee642">yscale</a>)
 <a name="l00658"></a>00658       {
-<a name="l00659"></a>00659          <span class="keywordflow">if</span> (xscale &gt; 0.0)
-<a name="l00660"></a>00660             zscale *= (yscale/xscale);
-<a name="l00661"></a>00661          xscale = yscale;
+<a name="l00659"></a>00659          <span class="keywordflow">if</span> (<a class="code" href="classVisualizationScene.html#aa00ff6e89df9270c39c693a216b5dbae">xscale</a> &gt; 0.0)
+<a name="l00660"></a>00660             <a class="code" href="classVisualizationScene.html#a125bb5805d9480f4e5aec905c9403cd8">zscale</a> *= (<a class="code" href="classVisualizationScene.html#ac59c227cdfa470b5abb889f8ef9ee642">yscale</a>/<a class="code" href="classVisualizationScene.html#aa00ff6e89df9270c39c693a216b5dbae">xscale</a>);
+<a name="l00661"></a>00661          <a class="code" href="classVisualizationScene.html#aa00ff6e89df9270c39c693a216b5dbae">xscale</a> = <a class="code" href="classVisualizationScene.html#ac59c227cdfa470b5abb889f8ef9ee642">yscale</a>;
 <a name="l00662"></a>00662       }
 <a name="l00663"></a>00663       <span class="keywordflow">else</span>
 <a name="l00664"></a>00664       {
-<a name="l00665"></a>00665          <span class="keywordflow">if</span> (yscale &gt; 0.0)
-<a name="l00666"></a>00666             zscale *= (xscale/yscale);
+<a name="l00665"></a>00665          <span class="keywordflow">if</span> (<a class="code" href="classVisualizationScene.html#ac59c227cdfa470b5abb889f8ef9ee642">yscale</a> &gt; 0.0)
+<a name="l00666"></a>00666             <a class="code" href="classVisualizationScene.html#a125bb5805d9480f4e5aec905c9403cd8">zscale</a> *= (<a class="code" href="classVisualizationScene.html#aa00ff6e89df9270c39c693a216b5dbae">xscale</a>/<a class="code" href="classVisualizationScene.html#ac59c227cdfa470b5abb889f8ef9ee642">yscale</a>);
 <a name="l00667"></a>00667       }
-<a name="l00668"></a>00668       xscale = (xscale &gt; 0.0) ? ( 1.0 / xscale ) : 1.0;
-<a name="l00669"></a>00669       yscale = xscale;
-<a name="l00670"></a>00670       zscale = (zscale &gt; 0.0) ? ( 1.0 / zscale ) : 1.0;
+<a name="l00668"></a>00668       <a class="code" href="classVisualizationScene.html#aa00ff6e89df9270c39c693a216b5dbae">xscale</a> = (<a class="code" href="classVisualizationScene.html#aa00ff6e89df9270c39c693a216b5dbae">xscale</a> &gt; 0.0) ? ( 1.0 / <a class="code" href="classVisualizationScene.html#aa00ff6e89df9270c39c693a216b5dbae">xscale</a> ) : 1.0;
+<a name="l00669"></a>00669       <a class="code" href="classVisualizationScene.html#ac59c227cdfa470b5abb889f8ef9ee642">yscale</a> = <a class="code" href="classVisualizationScene.html#aa00ff6e89df9270c39c693a216b5dbae">xscale</a>;
+<a name="l00670"></a>00670       <a class="code" href="classVisualizationScene.html#a125bb5805d9480f4e5aec905c9403cd8">zscale</a> = (<a class="code" href="classVisualizationScene.html#a125bb5805d9480f4e5aec905c9403cd8">zscale</a> &gt; 0.0) ? ( 1.0 / <a class="code" href="classVisualizationScene.html#a125bb5805d9480f4e5aec905c9403cd8">zscale</a> ) : 1.0;
 <a name="l00671"></a>00671    }
-<a name="l00672"></a>00672    zscale /= ((1. + sqrt(5.)) / 2.);
+<a name="l00672"></a>00672    <a class="code" href="classVisualizationScene.html#a125bb5805d9480f4e5aec905c9403cd8">zscale</a> /= ((1. + sqrt(5.)) / 2.);
 <a name="l00673"></a>00673 }
 <a name="l00674"></a>00674 
-<a name="l00675"></a>00675 <span class="keywordtype">void</span> VisualizationSceneSolution::FindNewBox(<span class="keywordtype">double</span> rx[], <span class="keywordtype">double</span> ry[],
+<a name="l00675"></a><a class="code" href="classVisualizationSceneSolution.html#a088d9fe4006911484ce12110b07d3734">00675</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a19a1479bdadb4676815c9d98d1138ad5">VisualizationSceneSolution::FindNewBox</a>(<span class="keywordtype">double</span> rx[], <span class="keywordtype">double</span> ry[],
 <a name="l00676"></a>00676                                             <span class="keywordtype">double</span> rval[])
 <a name="l00677"></a>00677 {
 <a name="l00678"></a>00678    <span class="keywordtype">int</span> i, j;
 <a name="l00679"></a>00679 
-<a name="l00680"></a>00680    <span class="keywordflow">if</span> (shading != 2)
+<a name="l00680"></a>00680    <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneSolution.html#abb46c83f1e814a7874a2b3201082d104">shading</a> != 2)
 <a name="l00681"></a>00681    {
-<a name="l00682"></a>00682       <span class="keywordtype">int</span> nv = mesh -&gt; GetNV();
+<a name="l00682"></a>00682       <span class="keywordtype">int</span> nv = <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> -&gt; GetNV();
 <a name="l00683"></a>00683 
-<a name="l00684"></a>00684       <span class="keywordtype">double</span> *coord = mesh-&gt;GetVertex(0);
+<a name="l00684"></a>00684       <span class="keywordtype">double</span> *coord = <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetVertex(0);
 <a name="l00685"></a>00685 
 <a name="l00686"></a>00686       rval[0] = rval[1] = (*sol)(0);
-<a name="l00687"></a>00687       <span class="keywordflow">for</span> (i = 1; i &lt; sol-&gt;Size(); i++)
+<a name="l00687"></a>00687       <span class="keywordflow">for</span> (i = 1; i &lt; <a class="code" href="classVisualizationSceneScalarData.html#a5ce34a0e666012a9034d15124fff746b">sol</a>-&gt;Size(); i++)
 <a name="l00688"></a>00688       {
-<a name="l00689"></a>00689          <span class="keywordflow">if</span> ((*sol)(i) &lt; rval[0]) rval[0] = (*sol)(i);
-<a name="l00690"></a>00690          <span class="keywordflow">if</span> ((*sol)(i) &gt; rval[1]) rval[1] = (*sol)(i);
+<a name="l00689"></a>00689          <span class="keywordflow">if</span> ((*<a class="code" href="classVisualizationSceneScalarData.html#a5ce34a0e666012a9034d15124fff746b">sol</a>)(i) &lt; rval[0]) rval[0] = (*sol)(i);
+<a name="l00690"></a>00690          <span class="keywordflow">if</span> ((*<a class="code" href="classVisualizationSceneScalarData.html#a5ce34a0e666012a9034d15124fff746b">sol</a>)(i) &gt; rval[1]) rval[1] = (*sol)(i);
 <a name="l00691"></a>00691       }
 <a name="l00692"></a>00692       rx[0] = rx[1] = coord[0];
 <a name="l00693"></a>00693       ry[0] = ry[1] = coord[1];
 <a name="l00694"></a>00694 
 <a name="l00695"></a>00695       <span class="keywordflow">for</span>(i = 1; i &lt; nv; i++)
 <a name="l00696"></a>00696       {
-<a name="l00697"></a>00697          coord = mesh-&gt;GetVertex(i);
+<a name="l00697"></a>00697          coord = <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetVertex(i);
 <a name="l00698"></a>00698          <span class="keywordflow">if</span> (coord[0] &lt; rx[0]) rx[0] = coord[0];
 <a name="l00699"></a>00699          <span class="keywordflow">if</span> (coord[1] &lt; ry[0]) ry[0] = coord[1];
 <a name="l00700"></a>00700          <span class="keywordflow">if</span> (coord[0] &gt; rx[1]) rx[1] = coord[0];
@@ -763,16 +764,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00703"></a>00703    }
 <a name="l00704"></a>00704    <span class="keywordflow">else</span>
 <a name="l00705"></a>00705    {
-<a name="l00706"></a>00706       <span class="keywordtype">int</span> ne = mesh -&gt; GetNE();
+<a name="l00706"></a>00706       <span class="keywordtype">int</span> ne = <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> -&gt; GetNE();
 <a name="l00707"></a>00707       DenseMatrix pointmat;
 <a name="l00708"></a>00708       Vector values;
 <a name="l00709"></a>00709       RefinedGeometry *RefG;
 <a name="l00710"></a>00710 
 <a name="l00711"></a>00711       <span class="keywordflow">for</span> (i = 0; i &lt; ne; i++)
 <a name="l00712"></a>00712       {
-<a name="l00713"></a>00713          RefG = GlobGeometryRefiner.Refine (mesh-&gt;GetElementBaseGeometry(i),
-<a name="l00714"></a>00714                                             TimesToRefine, EdgeRefineFactor);
-<a name="l00715"></a>00715          GetRefinedValues (i, RefG-&gt;RefPts, values, pointmat);
+<a name="l00713"></a>00713          RefG = GlobGeometryRefiner.Refine (<a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetElementBaseGeometry(i),
+<a name="l00714"></a>00714                                             <a class="code" href="classVisualizationSceneSolution.html#a24e7a7c19d39b6ee192bef2524cbfe33">TimesToRefine</a>, <a class="code" href="classVisualizationSceneSolution.html#a102b456664f6863e6b8d16eb82528f13">EdgeRefineFactor</a>);
+<a name="l00715"></a>00715          <a class="code" href="classVisualizationSceneSolution.html#a7bde28c621790ee7e5e22da1041c8f27">GetRefinedValues</a> (i, RefG-&gt;RefPts, values, pointmat);
 <a name="l00716"></a>00716          <span class="keywordflow">if</span> (i == 0)
 <a name="l00717"></a>00717          {
 <a name="l00718"></a>00718             rx[0] = rx[1] = pointmat(0,0);
@@ -792,74 +793,74 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00732"></a>00732    }
 <a name="l00733"></a>00733 }
 <a name="l00734"></a>00734 
-<a name="l00735"></a>00735 <span class="keywordtype">void</span> VisualizationSceneSolution::FixValueRange()
+<a name="l00735"></a><a class="code" href="classVisualizationSceneSolution.html#a1cba9d34bbfbb85f9a2295c867da5a63">00735</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a1cba9d34bbfbb85f9a2295c867da5a63">VisualizationSceneSolution::FixValueRange</a>()
 <a name="l00736"></a>00736 {
-<a name="l00737"></a>00737    <span class="keywordtype">double</span> am = fabs(minv);
-<a name="l00738"></a>00738    <span class="keywordflow">if</span> (am &lt; fabs(maxv)) am = fabs(maxv);
+<a name="l00737"></a>00737    <span class="keywordtype">double</span> am = fabs(<a class="code" href="classVisualizationSceneScalarData.html#a220dacc3e7f9911067e4b74fd3a6f574">minv</a>);
+<a name="l00738"></a>00738    <span class="keywordflow">if</span> (am &lt; fabs(<a class="code" href="classVisualizationSceneScalarData.html#a35b91f9ab89ee700e6b0017169f2559c">maxv</a>)) am = fabs(<a class="code" href="classVisualizationSceneScalarData.html#a35b91f9ab89ee700e6b0017169f2559c">maxv</a>);
 <a name="l00739"></a>00739    <span class="keywordflow">if</span> (<span class="keywordtype">float</span>(am) &lt; 100*numeric_limits&lt;float&gt;::min()) am = 1e-3;
-<a name="l00740"></a>00740    <span class="keywordflow">if</span> ((maxv-minv) &lt; 1e-5*am)
+<a name="l00740"></a>00740    <span class="keywordflow">if</span> ((<a class="code" href="classVisualizationSceneScalarData.html#a35b91f9ab89ee700e6b0017169f2559c">maxv</a>-<a class="code" href="classVisualizationSceneScalarData.html#a220dacc3e7f9911067e4b74fd3a6f574">minv</a>) &lt; 1e-5*am)
 <a name="l00741"></a>00741    {
 <a name="l00742"></a>00742       <span class="comment">// Shading quality may be bad since OpenGL uses single precision.</span>
 <a name="l00743"></a>00743       <span class="comment">// We should probably pre-scale the solution before feeding it</span>
 <a name="l00744"></a>00744       <span class="comment">// to OpenGL</span>
 <a name="l00745"></a>00745       <span class="keywordtype">int</span> old_prec = cout.precision(12);
-<a name="l00746"></a>00746       cout &lt;&lt; <span class="stringliteral">&quot;[minv,maxv] = &quot;</span> &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; minv &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; maxv
-<a name="l00747"></a>00747            &lt;&lt; <span class="stringliteral">&quot;] (maxv-minv = &quot;</span> &lt;&lt; maxv-minv &lt;&lt; <span class="stringliteral">&quot;)\n --&gt; &quot;</span>;
+<a name="l00746"></a>00746       cout &lt;&lt; <span class="stringliteral">&quot;[minv,maxv] = &quot;</span> &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; <a class="code" href="classVisualizationSceneScalarData.html#a220dacc3e7f9911067e4b74fd3a6f574">minv</a> &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; <a class="code" href="classVisualizationSceneScalarData.html#a35b91f9ab89ee700e6b0017169f2559c">maxv</a>
+<a name="l00747"></a>00747            &lt;&lt; <span class="stringliteral">&quot;] (maxv-minv = &quot;</span> &lt;&lt; <a class="code" href="classVisualizationSceneScalarData.html#a35b91f9ab89ee700e6b0017169f2559c">maxv</a>-<a class="code" href="classVisualizationSceneScalarData.html#a220dacc3e7f9911067e4b74fd3a6f574">minv</a> &lt;&lt; <span class="stringliteral">&quot;)\n --&gt; &quot;</span>;
 <a name="l00748"></a>00748       minv -= 0.49999e-5*am;
-<a name="l00749"></a>00749       maxv += 0.50001e-5*am;
-<a name="l00750"></a>00750       cout &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; minv &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; maxv &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; endl;
+<a name="l00749"></a>00749       <a class="code" href="classVisualizationSceneScalarData.html#a35b91f9ab89ee700e6b0017169f2559c">maxv</a> += 0.50001e-5*am;
+<a name="l00750"></a>00750       cout &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; minv &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; <a class="code" href="classVisualizationSceneScalarData.html#a35b91f9ab89ee700e6b0017169f2559c">maxv</a> &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; endl;
 <a name="l00751"></a>00751       cout.precision(old_prec);
 <a name="l00752"></a>00752    }
 <a name="l00753"></a>00753 }
 <a name="l00754"></a>00754 
-<a name="l00755"></a>00755 <span class="keywordtype">void</span> VisualizationSceneSolution::FindNewBox()
+<a name="l00755"></a><a class="code" href="classVisualizationSceneSolution.html#a19a1479bdadb4676815c9d98d1138ad5">00755</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a19a1479bdadb4676815c9d98d1138ad5">VisualizationSceneSolution::FindNewBox</a>()
 <a name="l00756"></a>00756 {
-<a name="l00757"></a>00757    FindNewBox(x, y, z);
+<a name="l00757"></a>00757    <a class="code" href="classVisualizationSceneSolution.html#a19a1479bdadb4676815c9d98d1138ad5">FindNewBox</a>(<a class="code" href="classVisualizationScene.html#a70b0eb870996adb9fa9dc8248703ee33" title="Bounding box.">x</a>, <a class="code" href="classVisualizationScene.html#a99bf11a2dfb8e31a017c257cd515d5f8">y</a>, <a class="code" href="classVisualizationScene.html#a9444a714a9ea07e08e349ea1f0f57a73">z</a>);
 <a name="l00758"></a>00758 
-<a name="l00759"></a>00759    minv = z[0];
-<a name="l00760"></a>00760    maxv = z[1];
+<a name="l00759"></a>00759    <a class="code" href="classVisualizationSceneScalarData.html#a220dacc3e7f9911067e4b74fd3a6f574">minv</a> = <a class="code" href="classVisualizationScene.html#a9444a714a9ea07e08e349ea1f0f57a73">z</a>[0];
+<a name="l00760"></a>00760    <a class="code" href="classVisualizationSceneScalarData.html#a35b91f9ab89ee700e6b0017169f2559c">maxv</a> = <a class="code" href="classVisualizationScene.html#a9444a714a9ea07e08e349ea1f0f57a73">z</a>[1];
 <a name="l00761"></a>00761 
-<a name="l00762"></a>00762    FixValueRange();
+<a name="l00762"></a>00762    <a class="code" href="classVisualizationSceneSolution.html#a1cba9d34bbfbb85f9a2295c867da5a63">FixValueRange</a>();
 <a name="l00763"></a>00763 
-<a name="l00764"></a>00764    z[0] = minv;
-<a name="l00765"></a>00765    z[1] = maxv;
+<a name="l00764"></a>00764    <a class="code" href="classVisualizationScene.html#a9444a714a9ea07e08e349ea1f0f57a73">z</a>[0] = <a class="code" href="classVisualizationSceneScalarData.html#a220dacc3e7f9911067e4b74fd3a6f574">minv</a>;
+<a name="l00765"></a>00765    <a class="code" href="classVisualizationScene.html#a9444a714a9ea07e08e349ea1f0f57a73">z</a>[1] = <a class="code" href="classVisualizationSceneScalarData.html#a35b91f9ab89ee700e6b0017169f2559c">maxv</a>;
 <a name="l00766"></a>00766 
-<a name="l00767"></a>00767    SetNewScalingFromBox();
+<a name="l00767"></a>00767    <a class="code" href="classVisualizationSceneSolution.html#a477577e19258a46d2b22b337e5a39674">SetNewScalingFromBox</a>();
 <a name="l00768"></a>00768 }
 <a name="l00769"></a>00769 
-<a name="l00770"></a>00770 <span class="keywordtype">void</span> DrawTriangle(<span class="keyword">const</span> <span class="keywordtype">double</span> pts[][3], <span class="keyword">const</span> <span class="keywordtype">double</span> cv[],
+<a name="l00770"></a><a class="code" href="vssolution_8hpp.html#a583e65647d90c2b1a4332c5b9d7da754">00770</a> <span class="keywordtype">void</span> <a class="code" href="vssolution_8cpp.html#a583e65647d90c2b1a4332c5b9d7da754">DrawTriangle</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> pts[][3], <span class="keyword">const</span> <span class="keywordtype">double</span> cv[],
 <a name="l00771"></a>00771                   <span class="keyword">const</span> <span class="keywordtype">double</span> minv, <span class="keyword">const</span> <span class="keywordtype">double</span> maxv)
 <a name="l00772"></a>00772 {
 <a name="l00773"></a>00773    <span class="keywordtype">double</span> nor[3];
-<a name="l00774"></a>00774    <span class="keywordflow">if</span> (Compute3DUnitNormal(pts[0], pts[1], pts[2], nor))
+<a name="l00774"></a>00774    <span class="keywordflow">if</span> (<a class="code" href="vssolution3d_8cpp.html#a972ff30be8d8e1545a32aba7be6330cd">Compute3DUnitNormal</a>(pts[0], pts[1], pts[2], nor))
 <a name="l00775"></a>00775       <span class="keywordflow">return</span>;
 <a name="l00776"></a>00776    glBegin(GL_TRIANGLES);
 <a name="l00777"></a>00777    glNormal3dv(nor);
 <a name="l00778"></a>00778    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 3; j++)
 <a name="l00779"></a>00779    {
-<a name="l00780"></a>00780       MySetColor(cv[j], minv, maxv);
+<a name="l00780"></a>00780       <a class="code" href="aux__vis_8cpp.html#a3c5a2b6a5e26ac34dbd24e7d2ad670ef">MySetColor</a>(cv[j], minv, maxv);
 <a name="l00781"></a>00781       glVertex3dv(pts[j]);
 <a name="l00782"></a>00782    }
 <a name="l00783"></a>00783    glEnd();
 <a name="l00784"></a>00784 }
 <a name="l00785"></a>00785 
-<a name="l00786"></a>00786 <span class="keywordtype">void</span> DrawQuad(<span class="keyword">const</span> <span class="keywordtype">double</span> pts[][3], <span class="keyword">const</span> <span class="keywordtype">double</span> cv[],
+<a name="l00786"></a><a class="code" href="vssolution_8hpp.html#adbc09430df785da2c9ff185890e1456c">00786</a> <span class="keywordtype">void</span> <a class="code" href="vssolution_8cpp.html#adbc09430df785da2c9ff185890e1456c">DrawQuad</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> pts[][3], <span class="keyword">const</span> <span class="keywordtype">double</span> cv[],
 <a name="l00787"></a>00787               <span class="keyword">const</span> <span class="keywordtype">double</span> minv, <span class="keyword">const</span> <span class="keywordtype">double</span> maxv)
 <a name="l00788"></a>00788 {
 <a name="l00789"></a>00789    <span class="keywordtype">double</span> nor[3];
-<a name="l00790"></a>00790    <span class="keywordflow">if</span> (Compute3DUnitNormal(pts[0], pts[1], pts[2], pts[3], nor))
+<a name="l00790"></a>00790    <span class="keywordflow">if</span> (<a class="code" href="vssolution3d_8cpp.html#a972ff30be8d8e1545a32aba7be6330cd">Compute3DUnitNormal</a>(pts[0], pts[1], pts[2], pts[3], nor))
 <a name="l00791"></a>00791       <span class="keywordflow">return</span>;
 <a name="l00792"></a>00792    glBegin(GL_QUADS);
 <a name="l00793"></a>00793    glNormal3dv(nor);
 <a name="l00794"></a>00794    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 4; j++)
 <a name="l00795"></a>00795    {
-<a name="l00796"></a>00796       MySetColor(cv[j], minv, maxv);
+<a name="l00796"></a>00796       <a class="code" href="aux__vis_8cpp.html#a3c5a2b6a5e26ac34dbd24e7d2ad670ef">MySetColor</a>(cv[j], minv, maxv);
 <a name="l00797"></a>00797       glVertex3dv(pts[j]);
 <a name="l00798"></a>00798    }
 <a name="l00799"></a>00799    glEnd();
 <a name="l00800"></a>00800 }
 <a name="l00801"></a>00801 
-<a name="l00802"></a>00802 <span class="keywordtype">void</span> DrawPatch(<span class="keyword">const</span> DenseMatrix &amp;pts, Vector &amp;vals, DenseMatrix &amp;normals,
+<a name="l00802"></a><a class="code" href="vssolution_8hpp.html#aad067c758f84ac800778d7a52a21c35d">00802</a> <span class="keywordtype">void</span> <a class="code" href="vssolution_8cpp.html#a699b370ee1c73f85424c9b712a600ba3">DrawPatch</a>(<span class="keyword">const</span> DenseMatrix &amp;pts, Vector &amp;vals, DenseMatrix &amp;normals,
 <a name="l00803"></a>00803                <span class="keyword">const</span> <span class="keywordtype">int</span> n, <span class="keyword">const</span> Array&lt;int&gt; &amp;ind, <span class="keyword">const</span> <span class="keywordtype">double</span> minv,
 <a name="l00804"></a>00804                <span class="keyword">const</span> <span class="keywordtype">double</span> maxv, <span class="keyword">const</span> <span class="keywordtype">int</span> normals_opt)
 <a name="l00805"></a>00805 {
@@ -873,10 +874,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00813"></a>00813       {
 <a name="l00814"></a>00814          <span class="keywordtype">int</span> j;
 <a name="l00815"></a>00815          <span class="keywordflow">if</span> (n == 3)
-<a name="l00816"></a>00816             j = Compute3DUnitNormal(&amp;pts(0, ind[i]), &amp;pts(0, ind[i+1]),
+<a name="l00816"></a>00816             j = <a class="code" href="vssolution3d_8cpp.html#a972ff30be8d8e1545a32aba7be6330cd">Compute3DUnitNormal</a>(&amp;pts(0, ind[i]), &amp;pts(0, ind[i+1]),
 <a name="l00817"></a>00817                                     &amp;pts(0, ind[i+2]), na);
 <a name="l00818"></a>00818          <span class="keywordflow">else</span>
-<a name="l00819"></a>00819             j = Compute3DUnitNormal(&amp;pts(0, ind[i]), &amp;pts(0, ind[i+1]),
+<a name="l00819"></a>00819             j = <a class="code" href="vssolution3d_8cpp.html#a972ff30be8d8e1545a32aba7be6330cd">Compute3DUnitNormal</a>(&amp;pts(0, ind[i]), &amp;pts(0, ind[i+1]),
 <a name="l00820"></a>00820                                     &amp;pts(0, ind[i+2]), &amp;pts(0, ind[i+3]), na);
 <a name="l00821"></a>00821          <span class="keywordflow">if</span> (j == 0)
 <a name="l00822"></a>00822             <span class="keywordflow">for</span> ( ; j &lt; n; j++)
@@ -896,7 +897,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00836"></a>00836          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ind.Size(); i++)
 <a name="l00837"></a>00837          {
 <a name="l00838"></a>00838             glNormal3dv(&amp;normals(0, ind[i]));
-<a name="l00839"></a>00839             MySetColor(vals(ind[i]), minv, maxv);
+<a name="l00839"></a>00839             <a class="code" href="aux__vis_8cpp.html#a3c5a2b6a5e26ac34dbd24e7d2ad670ef">MySetColor</a>(vals(ind[i]), minv, maxv);
 <a name="l00840"></a>00840             glVertex3dv(&amp;pts(0, ind[i]));
 <a name="l00841"></a>00841          }
 <a name="l00842"></a>00842       }
@@ -905,7 +906,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00845"></a>00845          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = ind.Size()-1; i &gt;= 0; i--)
 <a name="l00846"></a>00846          {
 <a name="l00847"></a>00847             glNormal3dv(&amp;normals(0, ind[i]));
-<a name="l00848"></a>00848             MySetColor(vals(ind[i]), minv, maxv);
+<a name="l00848"></a>00848             <a class="code" href="aux__vis_8cpp.html#a3c5a2b6a5e26ac34dbd24e7d2ad670ef">MySetColor</a>(vals(ind[i]), minv, maxv);
 <a name="l00849"></a>00849             glVertex3dv(&amp;pts(0, ind[i]));
 <a name="l00850"></a>00850          }
 <a name="l00851"></a>00851       }
@@ -916,10 +917,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00856"></a>00856       {
 <a name="l00857"></a>00857          <span class="keywordtype">int</span> j;
 <a name="l00858"></a>00858          <span class="keywordflow">if</span> (n == 3)
-<a name="l00859"></a>00859             j = Compute3DUnitNormal(&amp;pts(0, ind[i]), &amp;pts(0, ind[i+1]),
+<a name="l00859"></a>00859             j = <a class="code" href="vssolution3d_8cpp.html#a972ff30be8d8e1545a32aba7be6330cd">Compute3DUnitNormal</a>(&amp;pts(0, ind[i]), &amp;pts(0, ind[i+1]),
 <a name="l00860"></a>00860                                     &amp;pts(0, ind[i+2]), na);
 <a name="l00861"></a>00861          <span class="keywordflow">else</span>
-<a name="l00862"></a>00862             j = Compute3DUnitNormal(&amp;pts(0, ind[i]), &amp;pts(0, ind[i+1]),
+<a name="l00862"></a>00862             j = <a class="code" href="vssolution3d_8cpp.html#a972ff30be8d8e1545a32aba7be6330cd">Compute3DUnitNormal</a>(&amp;pts(0, ind[i]), &amp;pts(0, ind[i+1]),
 <a name="l00863"></a>00863                                     &amp;pts(0, ind[i+2]), &amp;pts(0, ind[i+3]), na);
 <a name="l00864"></a>00864          <span class="keywordflow">if</span> (j == 0)
 <a name="l00865"></a>00865          {
@@ -928,7 +929,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00868"></a>00868                glNormal3dv(na);
 <a name="l00869"></a>00869                <span class="keywordflow">for</span> ( ; j &lt; n; j++)
 <a name="l00870"></a>00870                {
-<a name="l00871"></a>00871                   MySetColor(vals(ind[i+j]), minv, maxv);
+<a name="l00871"></a>00871                   <a class="code" href="aux__vis_8cpp.html#a3c5a2b6a5e26ac34dbd24e7d2ad670ef">MySetColor</a>(vals(ind[i+j]), minv, maxv);
 <a name="l00872"></a>00872                   glVertex3dv(&amp;pts(0, ind[i+j]));
 <a name="l00873"></a>00873                }
 <a name="l00874"></a>00874             }
@@ -937,7 +938,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00877"></a>00877                glNormal3d(-na[0], -na[1], -na[2]);
 <a name="l00878"></a>00878                <span class="keywordflow">for</span> (j = n-1; j &gt;= 0; j--)
 <a name="l00879"></a>00879                {
-<a name="l00880"></a>00880                   MySetColor(vals(ind[i+j]), minv, maxv);
+<a name="l00880"></a>00880                   <a class="code" href="aux__vis_8cpp.html#a3c5a2b6a5e26ac34dbd24e7d2ad670ef">MySetColor</a>(vals(ind[i+j]), minv, maxv);
 <a name="l00881"></a>00881                   glVertex3dv(&amp;pts(0, ind[i+j]));
 <a name="l00882"></a>00882                }
 <a name="l00883"></a>00883             }
@@ -947,25 +948,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00887"></a>00887    glEnd();
 <a name="l00888"></a>00888 }
 <a name="l00889"></a>00889 
-<a name="l00890"></a>00890 <span class="keywordtype">void</span> VisualizationSceneSolution::PrepareFlat()
+<a name="l00890"></a><a class="code" href="classVisualizationSceneSolution.html#a9b61315c67b902645078f3f9d3a0d5ad">00890</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a9b61315c67b902645078f3f9d3a0d5ad">VisualizationSceneSolution::PrepareFlat</a>()
 <a name="l00891"></a>00891 {
 <a name="l00892"></a>00892    <span class="keywordtype">int</span> i, j;
 <a name="l00893"></a>00893 
-<a name="l00894"></a>00894    glNewList (displlist, GL_COMPILE);
+<a name="l00894"></a>00894    glNewList (<a class="code" href="classVisualizationSceneSolution.html#a5b70b9817909cf1c715bee22d1c9199f">displlist</a>, GL_COMPILE);
 <a name="l00895"></a>00895 
-<a name="l00896"></a>00896    Set_Material();
+<a name="l00896"></a>00896    <a class="code" href="material_8cpp.html#a724c876e4780d698e7e9ed353709bd79">Set_Material</a>();
 <a name="l00897"></a>00897 
-<a name="l00898"></a>00898    <span class="keywordtype">int</span> ne = mesh -&gt; GetNE();
+<a name="l00898"></a>00898    <span class="keywordtype">int</span> ne = <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> -&gt; GetNE();
 <a name="l00899"></a>00899    DenseMatrix pointmat;
 <a name="l00900"></a>00900    Array&lt;int&gt; vertices;
 <a name="l00901"></a>00901    <span class="keywordtype">double</span> pts[4][3], col[4];
 <a name="l00902"></a>00902 
 <a name="l00903"></a>00903    <span class="keywordflow">for</span> (i = 0; i &lt; ne; i++)
 <a name="l00904"></a>00904    {
-<a name="l00905"></a>00905       <span class="keywordflow">if</span> (!el_attr_to_show[mesh-&gt;GetAttribute(i)-1]) <span class="keywordflow">continue</span>;
+<a name="l00905"></a>00905       <span class="keywordflow">if</span> (!<a class="code" href="classVisualizationSceneSolution.html#a5baa6c391db303eb64ab6a96c2b0fbb8">el_attr_to_show</a>[<a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetAttribute(i)-1]) <span class="keywordflow">continue</span>;
 <a name="l00906"></a>00906 
-<a name="l00907"></a>00907       mesh-&gt;GetPointMatrix (i, pointmat);
-<a name="l00908"></a>00908       mesh-&gt;GetElementVertices (i, vertices);
+<a name="l00907"></a>00907       <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetPointMatrix (i, pointmat);
+<a name="l00908"></a>00908       <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetElementVertices (i, vertices);
 <a name="l00909"></a>00909 
 <a name="l00910"></a>00910       <span class="keywordflow">for</span> (j = 0; j &lt; pointmat.Width(); j++)
 <a name="l00911"></a>00911       {
@@ -974,9 +975,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00914"></a>00914          pts[j][2] = col[j] = (*sol)(vertices[j]);
 <a name="l00915"></a>00915       }
 <a name="l00916"></a>00916       <span class="keywordflow">if</span> (j == 3)
-<a name="l00917"></a>00917          DrawTriangle(pts, col, minv, maxv);
+<a name="l00917"></a>00917          <a class="code" href="vssolution_8cpp.html#a583e65647d90c2b1a4332c5b9d7da754">DrawTriangle</a>(pts, col, <a class="code" href="classVisualizationSceneScalarData.html#a220dacc3e7f9911067e4b74fd3a6f574">minv</a>, <a class="code" href="classVisualizationSceneScalarData.html#a35b91f9ab89ee700e6b0017169f2559c">maxv</a>);
 <a name="l00918"></a>00918       <span class="keywordflow">else</span>
-<a name="l00919"></a>00919          DrawQuad(pts, col, minv, maxv);
+<a name="l00919"></a>00919          <a class="code" href="vssolution_8cpp.html#adbc09430df785da2c9ff185890e1456c">DrawQuad</a>(pts, col, <a class="code" href="classVisualizationSceneScalarData.html#a220dacc3e7f9911067e4b74fd3a6f574">minv</a>, <a class="code" href="classVisualizationSceneScalarData.html#a35b91f9ab89ee700e6b0017169f2559c">maxv</a>);
 <a name="l00920"></a>00920    }
 <a name="l00921"></a>00921 
 <a name="l00922"></a>00922    glEndList();
@@ -987,31 +988,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00927"></a>00927 <span class="comment">// 0 - draw a quad</span>
 <a name="l00928"></a>00928 <span class="comment">// 1 - draw 2 triangles (split using the &#39;0-2&#39; diagonal)</span>
 <a name="l00929"></a>00929 <span class="comment">// 2 - draw 4 triangles (split using both diagonals)</span>
-<a name="l00930"></a>00930 <span class="keyword">const</span> <span class="keywordtype">int</span> split_quads = 0;
+<a name="l00930"></a><a class="code" href="vssolution_8cpp.html#a74281913a5b8da9f250c49fa8131671e">00930</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="vssolution_8cpp.html#a74281913a5b8da9f250c49fa8131671e">split_quads</a> = 0;
 <a name="l00931"></a>00931 
-<a name="l00932"></a>00932 <span class="keywordtype">void</span> VisualizationSceneSolution::PrepareFlat2()
+<a name="l00932"></a><a class="code" href="classVisualizationSceneSolution.html#afd530be471a72e1426f9d7f917c02dd7">00932</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#afd530be471a72e1426f9d7f917c02dd7">VisualizationSceneSolution::PrepareFlat2</a>()
 <a name="l00933"></a>00933 {
 <a name="l00934"></a>00934    <span class="keywordtype">int</span> i, j, k;
 <a name="l00935"></a>00935 
-<a name="l00936"></a>00936    glNewList (displlist, GL_COMPILE);
+<a name="l00936"></a>00936    glNewList (<a class="code" href="classVisualizationSceneSolution.html#a5b70b9817909cf1c715bee22d1c9199f">displlist</a>, GL_COMPILE);
 <a name="l00937"></a>00937 
-<a name="l00938"></a>00938    Set_Material();
+<a name="l00938"></a>00938    <a class="code" href="material_8cpp.html#a724c876e4780d698e7e9ed353709bd79">Set_Material</a>();
 <a name="l00939"></a>00939 
-<a name="l00940"></a>00940    <span class="keywordtype">int</span> ne = mesh -&gt; GetNE();
+<a name="l00940"></a>00940    <span class="keywordtype">int</span> ne = <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> -&gt; GetNE();
 <a name="l00941"></a>00941    DenseMatrix pointmat, pts3d, normals;
 <a name="l00942"></a>00942    Vector values;
 <a name="l00943"></a>00943    RefinedGeometry *RefG;
 <a name="l00944"></a>00944 
 <a name="l00945"></a>00945    <span class="keywordflow">for</span> (i = 0; i &lt; ne; i++)
 <a name="l00946"></a>00946    {
-<a name="l00947"></a>00947       <span class="keywordflow">if</span> (!el_attr_to_show[mesh-&gt;GetAttribute(i)-1]) <span class="keywordflow">continue</span>;
+<a name="l00947"></a>00947       <span class="keywordflow">if</span> (!<a class="code" href="classVisualizationSceneSolution.html#a5baa6c391db303eb64ab6a96c2b0fbb8">el_attr_to_show</a>[<a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetAttribute(i)-1]) <span class="keywordflow">continue</span>;
 <a name="l00948"></a>00948 
-<a name="l00949"></a>00949       RefG = GlobGeometryRefiner.Refine (mesh-&gt;GetElementBaseGeometry(i),
-<a name="l00950"></a>00950                                          TimesToRefine, EdgeRefineFactor);
-<a name="l00951"></a>00951       j = GetRefinedValuesAndNormals(i, RefG-&gt;RefPts, values, pointmat,
+<a name="l00949"></a>00949       RefG = GlobGeometryRefiner.Refine (<a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetElementBaseGeometry(i),
+<a name="l00950"></a>00950                                          <a class="code" href="classVisualizationSceneSolution.html#a24e7a7c19d39b6ee192bef2524cbfe33">TimesToRefine</a>, <a class="code" href="classVisualizationSceneSolution.html#a102b456664f6863e6b8d16eb82528f13">EdgeRefineFactor</a>);
+<a name="l00951"></a>00951       j = <a class="code" href="classVisualizationSceneSolution.html#a39225752d1c3afd12882ec55409f4267">GetRefinedValuesAndNormals</a>(i, RefG-&gt;RefPts, values, pointmat,
 <a name="l00952"></a>00952                                      normals);
 <a name="l00953"></a>00953       Array&lt;int&gt; &amp;RG = RefG-&gt;RefGeoms;
-<a name="l00954"></a>00954       <span class="keywordtype">int</span> sides = mesh-&gt;GetElement(i)-&gt;GetNVertices();
+<a name="l00954"></a>00954       <span class="keywordtype">int</span> sides = <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetElement(i)-&gt;GetNVertices();
 <a name="l00955"></a>00955 
 <a name="l00956"></a>00956 <span class="preprocessor">#if 1</span>
 <a name="l00957"></a>00957 <span class="preprocessor"></span>      pts3d.SetSize(3, pointmat.Width());
@@ -1022,7 +1023,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00962"></a>00962          pts3d(2, k) = values(k);
 <a name="l00963"></a>00963       }
 <a name="l00964"></a>00964       j = (j != 0) ? 2 : 0;
-<a name="l00965"></a>00965       DrawPatch(pts3d, values, normals, sides, RG, minv, maxv, j);
+<a name="l00965"></a>00965       <a class="code" href="vssolution_8cpp.html#a699b370ee1c73f85424c9b712a600ba3">DrawPatch</a>(pts3d, values, normals, sides, RG, <a class="code" href="classVisualizationSceneScalarData.html#a220dacc3e7f9911067e4b74fd3a6f574">minv</a>, <a class="code" href="classVisualizationSceneScalarData.html#a35b91f9ab89ee700e6b0017169f2559c">maxv</a>, j);
 <a name="l00966"></a>00966 <span class="preprocessor">#else</span>
 <a name="l00967"></a>00967 <span class="preprocessor"></span>      <span class="keywordflow">for</span> (k = 0; k &lt; RG.Size()/sides; k++)
 <a name="l00968"></a>00968       {
@@ -1036,9 +1037,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00976"></a>00976                pts[j][2] = col[j] = values(ind[j]);
 <a name="l00977"></a>00977             }
 <a name="l00978"></a>00978             <span class="keywordflow">if</span> (sides == 3)
-<a name="l00979"></a>00979                DrawTriangle(pts, col, minv, maxv);
+<a name="l00979"></a>00979                <a class="code" href="vssolution_8cpp.html#a583e65647d90c2b1a4332c5b9d7da754">DrawTriangle</a>(pts, col, <a class="code" href="classVisualizationSceneScalarData.html#a220dacc3e7f9911067e4b74fd3a6f574">minv</a>, <a class="code" href="classVisualizationSceneScalarData.html#a35b91f9ab89ee700e6b0017169f2559c">maxv</a>);
 <a name="l00980"></a>00980             <span class="keywordflow">else</span>
-<a name="l00981"></a>00981                DrawQuad(pts, col, minv, maxv);
+<a name="l00981"></a>00981                <a class="code" href="vssolution_8cpp.html#adbc09430df785da2c9ff185890e1456c">DrawQuad</a>(pts, col, <a class="code" href="classVisualizationSceneScalarData.html#a220dacc3e7f9911067e4b74fd3a6f574">minv</a>, <a class="code" href="classVisualizationSceneScalarData.html#a35b91f9ab89ee700e6b0017169f2559c">maxv</a>);
 <a name="l00982"></a>00982          }
 <a name="l00983"></a>00983          <span class="keywordflow">else</span> <span class="keywordflow">if</span> (split_quads == 1)
 <a name="l00984"></a>00984          {
@@ -1053,7 +1054,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00993"></a>00993                   pts[j][1] = pointmat(1, ind[vt[it][j]]);
 <a name="l00994"></a>00994                   pts[j][2] = col[j] = values(ind[vt[it][j]]);
 <a name="l00995"></a>00995                }
-<a name="l00996"></a>00996                DrawTriangle(pts, col, minv, maxv);
+<a name="l00996"></a>00996                <a class="code" href="vssolution_8cpp.html#a583e65647d90c2b1a4332c5b9d7da754">DrawTriangle</a>(pts, col, <a class="code" href="classVisualizationSceneScalarData.html#a220dacc3e7f9911067e4b74fd3a6f574">minv</a>, <a class="code" href="classVisualizationSceneScalarData.html#a35b91f9ab89ee700e6b0017169f2559c">maxv</a>);
 <a name="l00997"></a>00997             }
 <a name="l00998"></a>00998          }
 <a name="l00999"></a>00999          <span class="keywordflow">else</span>
@@ -1080,7 +1081,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01020"></a>01020                pts[1][0] = pointmat(0, ind[l]);
 <a name="l01021"></a>01021                pts[1][1] = pointmat(1, ind[l]);
 <a name="l01022"></a>01022                pts[1][2] = col[1] = values(ind[l]);
-<a name="l01023"></a>01023                DrawTriangle(pts, col, minv, maxv);
+<a name="l01023"></a>01023                <a class="code" href="vssolution_8cpp.html#a583e65647d90c2b1a4332c5b9d7da754">DrawTriangle</a>(pts, col, <a class="code" href="classVisualizationSceneScalarData.html#a220dacc3e7f9911067e4b74fd3a6f574">minv</a>, <a class="code" href="classVisualizationSceneScalarData.html#a35b91f9ab89ee700e6b0017169f2559c">maxv</a>);
 <a name="l01024"></a>01024             }
 <a name="l01025"></a>01025          }
 <a name="l01026"></a>01026       }
@@ -1090,15 +1091,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01030"></a>01030    glEndList();
 <a name="l01031"></a>01031 }
 <a name="l01032"></a>01032 
-<a name="l01033"></a>01033 <span class="keywordtype">void</span> VisualizationSceneSolution::Prepare()
+<a name="l01033"></a><a class="code" href="classVisualizationSceneSolution.html#a5b090840a32af79a6175602da4ffee21">01033</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a5b090840a32af79a6175602da4ffee21">VisualizationSceneSolution::Prepare</a>()
 <a name="l01034"></a>01034 {
-<a name="l01035"></a>01035    <span class="keywordflow">switch</span> (shading)
+<a name="l01035"></a>01035    <span class="keywordflow">switch</span> (<a class="code" href="classVisualizationSceneSolution.html#abb46c83f1e814a7874a2b3201082d104">shading</a>)
 <a name="l01036"></a>01036    {
 <a name="l01037"></a>01037    <span class="keywordflow">case</span> 0:
-<a name="l01038"></a>01038       PrepareFlat();
+<a name="l01038"></a>01038       <a class="code" href="classVisualizationSceneSolution.html#a9b61315c67b902645078f3f9d3a0d5ad">PrepareFlat</a>();
 <a name="l01039"></a>01039       <span class="keywordflow">return</span>;
 <a name="l01040"></a>01040    <span class="keywordflow">case</span> 2:
-<a name="l01041"></a>01041       PrepareFlat2();
+<a name="l01041"></a>01041       <a class="code" href="classVisualizationSceneSolution.html#afd530be471a72e1426f9d7f917c02dd7">PrepareFlat2</a>();
 <a name="l01042"></a>01042       <span class="keywordflow">return</span>;
 <a name="l01043"></a>01043    <span class="keywordflow">default</span>:
 <a name="l01044"></a>01044       <span class="keywordflow">break</span>;
@@ -1106,12 +1107,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01046"></a>01046 
 <a name="l01047"></a>01047    <span class="keywordtype">int</span> i, j;
 <a name="l01048"></a>01048 
-<a name="l01049"></a>01049    glNewList (displlist, GL_COMPILE);
+<a name="l01049"></a>01049    glNewList (<a class="code" href="classVisualizationSceneSolution.html#a5b70b9817909cf1c715bee22d1c9199f">displlist</a>, GL_COMPILE);
 <a name="l01050"></a>01050 
-<a name="l01051"></a>01051    Set_Material();
+<a name="l01051"></a>01051    <a class="code" href="material_8cpp.html#a724c876e4780d698e7e9ed353709bd79">Set_Material</a>();
 <a name="l01052"></a>01052 
-<a name="l01053"></a>01053    <span class="keywordtype">int</span> ne = mesh -&gt; GetNE();
-<a name="l01054"></a>01054    <span class="keywordtype">int</span> nv = mesh -&gt; GetNV();
+<a name="l01053"></a>01053    <span class="keywordtype">int</span> ne = <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> -&gt; GetNE();
+<a name="l01054"></a>01054    <span class="keywordtype">int</span> nv = <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> -&gt; GetNV();
 <a name="l01055"></a>01055    DenseMatrix pointmat;
 <a name="l01056"></a>01056    Array&lt;int&gt; vertices;
 <a name="l01057"></a>01057    <span class="keywordtype">double</span> p[4][3], nor[3];
@@ -1120,19 +1121,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01060"></a>01060    Vector ny(nv);
 <a name="l01061"></a>01061    Vector nz(nv);
 <a name="l01062"></a>01062 
-<a name="l01063"></a>01063    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> d = 0; d &lt; mesh -&gt; attributes.Size(); d++)
+<a name="l01063"></a>01063    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> d = 0; d &lt; <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> -&gt; attributes.Size(); d++)
 <a name="l01064"></a>01064    {
-<a name="l01065"></a>01065       <span class="keywordflow">if</span> (!el_attr_to_show[mesh -&gt; attributes[d]-1]) <span class="keywordflow">continue</span>;
+<a name="l01065"></a>01065       <span class="keywordflow">if</span> (!<a class="code" href="classVisualizationSceneSolution.html#a5baa6c391db303eb64ab6a96c2b0fbb8">el_attr_to_show</a>[<a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> -&gt; attributes[d]-1]) <span class="keywordflow">continue</span>;
 <a name="l01066"></a>01066 
 <a name="l01067"></a>01067       nx = 0.;
 <a name="l01068"></a>01068       ny = 0.;
 <a name="l01069"></a>01069       nz = 0.;
 <a name="l01070"></a>01070 
 <a name="l01071"></a>01071       <span class="keywordflow">for</span> (i = 0; i &lt; ne; i++)
-<a name="l01072"></a>01072          <span class="keywordflow">if</span> (mesh -&gt; GetAttribute(i) == mesh -&gt; attributes[d])
+<a name="l01072"></a>01072          <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> -&gt; GetAttribute(i) == <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> -&gt; attributes[d])
 <a name="l01073"></a>01073          {
-<a name="l01074"></a>01074             mesh-&gt;GetPointMatrix (i, pointmat);
-<a name="l01075"></a>01075             mesh-&gt;GetElementVertices (i, vertices);
+<a name="l01074"></a>01074             <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetPointMatrix (i, pointmat);
+<a name="l01075"></a>01075             <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetElementVertices (i, vertices);
 <a name="l01076"></a>01076 
 <a name="l01077"></a>01077             <span class="keywordflow">for</span> (j = 0; j &lt; pointmat.Size(); j++)
 <a name="l01078"></a>01078             {
@@ -1142,9 +1143,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01082"></a>01082             }
 <a name="l01083"></a>01083 
 <a name="l01084"></a>01084             <span class="keywordflow">if</span> (pointmat.Width() == 3)
-<a name="l01085"></a>01085                j = Compute3DUnitNormal(p[0], p[1], p[2], nor);
+<a name="l01085"></a>01085                j = <a class="code" href="vssolution3d_8cpp.html#a972ff30be8d8e1545a32aba7be6330cd">Compute3DUnitNormal</a>(p[0], p[1], p[2], nor);
 <a name="l01086"></a>01086             <span class="keywordflow">else</span>
-<a name="l01087"></a>01087                j = Compute3DUnitNormal(p[0], p[1], p[2], p[3], nor);
+<a name="l01087"></a>01087                j = <a class="code" href="vssolution3d_8cpp.html#a972ff30be8d8e1545a32aba7be6330cd">Compute3DUnitNormal</a>(p[0], p[1], p[2], p[3], nor);
 <a name="l01088"></a>01088 
 <a name="l01089"></a>01089             <span class="keywordflow">if</span> (j == 0)
 <a name="l01090"></a>01090                <span class="keywordflow">for</span> (j = 0; j &lt; pointmat.Size(); j++)
@@ -1156,9 +1157,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01096"></a>01096          }
 <a name="l01097"></a>01097 
 <a name="l01098"></a>01098       <span class="keywordflow">for</span> (i = 0; i &lt; ne; i++)
-<a name="l01099"></a>01099          <span class="keywordflow">if</span> (mesh -&gt; GetAttribute(i) == mesh -&gt; attributes[d])
+<a name="l01099"></a>01099          <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> -&gt; GetAttribute(i) == <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> -&gt; attributes[d])
 <a name="l01100"></a>01100          {
-<a name="l01101"></a>01101             <span class="keywordflow">switch</span> (mesh-&gt;GetElementType(i))
+<a name="l01101"></a>01101             <span class="keywordflow">switch</span> (<a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetElementType(i))
 <a name="l01102"></a>01102             {
 <a name="l01103"></a>01103             <span class="keywordflow">case</span> Element::TRIANGLE:
 <a name="l01104"></a>01104                glBegin (GL_TRIANGLES);
@@ -1168,14 +1169,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01108"></a>01108                glBegin (GL_QUADS);
 <a name="l01109"></a>01109                <span class="keywordflow">break</span>;
 <a name="l01110"></a>01110             }
-<a name="l01111"></a>01111             mesh-&gt;GetPointMatrix (i, pointmat);
-<a name="l01112"></a>01112             mesh-&gt;GetElementVertices (i, vertices);
+<a name="l01111"></a>01111             <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetPointMatrix (i, pointmat);
+<a name="l01112"></a>01112             <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetElementVertices (i, vertices);
 <a name="l01113"></a>01113 
 <a name="l01114"></a>01114             <span class="keywordflow">for</span> (j = 0; j &lt; pointmat.Size(); j++)
 <a name="l01115"></a>01115             {
-<a name="l01116"></a>01116                MySetColor((*sol)(vertices[j]), minv, maxv);
+<a name="l01116"></a>01116                <a class="code" href="aux__vis_8cpp.html#a3c5a2b6a5e26ac34dbd24e7d2ad670ef">MySetColor</a>((*<a class="code" href="classVisualizationSceneScalarData.html#a5ce34a0e666012a9034d15124fff746b">sol</a>)(vertices[j]), <a class="code" href="classVisualizationSceneScalarData.html#a220dacc3e7f9911067e4b74fd3a6f574">minv</a>, <a class="code" href="classVisualizationSceneScalarData.html#a35b91f9ab89ee700e6b0017169f2559c">maxv</a>);
 <a name="l01117"></a>01117                glNormal3d(nx(vertices[j]), ny(vertices[j]), nz(vertices[j]));
-<a name="l01118"></a>01118                glVertex3d(pointmat(0, j), pointmat(1, j), (*sol)(vertices[j]));
+<a name="l01118"></a>01118                glVertex3d(pointmat(0, j), pointmat(1, j), (*<a class="code" href="classVisualizationSceneScalarData.html#a5ce34a0e666012a9034d15124fff746b">sol</a>)(vertices[j]));
 <a name="l01119"></a>01119             }
 <a name="l01120"></a>01120             glEnd();
 <a name="l01121"></a>01121          }
@@ -1184,44 +1185,44 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01124"></a>01124    glEndList();
 <a name="l01125"></a>01125 }
 <a name="l01126"></a>01126 
-<a name="l01127"></a>01127 <span class="keywordtype">void</span> VisualizationSceneSolution::PrepareLevelCurves()
+<a name="l01127"></a><a class="code" href="classVisualizationSceneSolution.html#a5eb21766e40b26ee027131d6604f7ba4">01127</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a5eb21766e40b26ee027131d6604f7ba4">VisualizationSceneSolution::PrepareLevelCurves</a>()
 <a name="l01128"></a>01128 {
-<a name="l01129"></a>01129    <span class="keywordflow">if</span> (shading == 2)
+<a name="l01129"></a>01129    <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneSolution.html#abb46c83f1e814a7874a2b3201082d104">shading</a> == 2)
 <a name="l01130"></a>01130    {
-<a name="l01131"></a>01131       PrepareLevelCurves2();
+<a name="l01131"></a>01131       <a class="code" href="classVisualizationSceneSolution.html#ae7eb57c0384421c4d146accab950774f">PrepareLevelCurves2</a>();
 <a name="l01132"></a>01132       <span class="keywordflow">return</span>;
 <a name="l01133"></a>01133    }
 <a name="l01134"></a>01134 
-<a name="l01135"></a>01135    <span class="keywordtype">int</span> i, j, ne = mesh -&gt; GetNE();
+<a name="l01135"></a>01135    <span class="keywordtype">int</span> i, j, ne = <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> -&gt; GetNE();
 <a name="l01136"></a>01136    Array&lt;int&gt; vertices;
 <a name="l01137"></a>01137    <span class="keywordtype">double</span> point[4][4];
 <a name="l01138"></a>01138 
-<a name="l01139"></a>01139    glNewList(lcurvelist, GL_COMPILE);
+<a name="l01139"></a>01139    glNewList(<a class="code" href="classVisualizationSceneSolution.html#ac57e1347f5bb530d5c952a8250163feb">lcurvelist</a>, GL_COMPILE);
 <a name="l01140"></a>01140 
 <a name="l01141"></a>01141    <span class="keywordflow">for</span> (i = 0; i &lt; ne; i++)
 <a name="l01142"></a>01142    {
-<a name="l01143"></a>01143       mesh -&gt; GetElementVertices (i, vertices);
+<a name="l01143"></a>01143       <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> -&gt; GetElementVertices (i, vertices);
 <a name="l01144"></a>01144 
 <a name="l01145"></a>01145       <span class="keywordflow">for</span> (j = 0; j &lt; vertices.Size(); j++)
 <a name="l01146"></a>01146       {
-<a name="l01147"></a>01147          <span class="keywordtype">double</span> *v = mesh -&gt; GetVertex (vertices[j]);
+<a name="l01147"></a>01147          <span class="keywordtype">double</span> *v = <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> -&gt; GetVertex (vertices[j]);
 <a name="l01148"></a>01148          point[j][0] = v[0];
 <a name="l01149"></a>01149          point[j][1] = v[1];
 <a name="l01150"></a>01150          point[j][2] = point[j][3] = (*sol)(vertices[j]);
 <a name="l01151"></a>01151       }
-<a name="l01152"></a>01152       DrawPolygonLevelLines (point[0], vertices.Size(), level);
+<a name="l01152"></a>01152       <a class="code" href="classVisualizationSceneScalarData.html#a767473ef10665eae5d0115e619d2469c">DrawPolygonLevelLines</a> (point[0], vertices.Size(), <a class="code" href="classVisualizationSceneScalarData.html#ae25309fe0284d32c1623616c27fa658b">level</a>);
 <a name="l01153"></a>01153    }
 <a name="l01154"></a>01154 
 <a name="l01155"></a>01155    glEndList();
 <a name="l01156"></a>01156 }
 <a name="l01157"></a>01157 
-<a name="l01158"></a>01158 <span class="keywordtype">void</span> VisualizationSceneSolution::DrawLevelCurves(
+<a name="l01158"></a><a class="code" href="classVisualizationSceneSolution.html#a0c63da18c31f18f29df52b3cbd90c184">01158</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a0c63da18c31f18f29df52b3cbd90c184">VisualizationSceneSolution::DrawLevelCurves</a>(
 <a name="l01159"></a>01159    Array&lt;int&gt; &amp;RG, DenseMatrix &amp;pointmat, Vector &amp;values,
 <a name="l01160"></a>01160    <span class="keywordtype">int</span> sides, Array&lt;double&gt; &amp;lvl, <span class="keywordtype">int</span> flat)
 <a name="l01161"></a>01161 {
 <a name="l01162"></a>01162    <span class="keywordtype">double</span> point[4][4];
 <a name="l01163"></a>01163    <span class="comment">// double zc = 0.5*(z[0]+z[1]);</span>
-<a name="l01164"></a>01164    <span class="keywordtype">double</span> zc = z[1];
+<a name="l01164"></a>01164    <span class="keywordtype">double</span> zc = <a class="code" href="classVisualizationScene.html#a9444a714a9ea07e08e349ea1f0f57a73">z</a>[1];
 <a name="l01165"></a>01165 
 <a name="l01166"></a>01166    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; RG.Size()/sides; k++)
 <a name="l01167"></a>01167    {
@@ -1235,7 +1236,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01175"></a>01175             point[j][3] = values(vv);
 <a name="l01176"></a>01176             point[j][2] = (flat) ? zc : point[j][3];
 <a name="l01177"></a>01177          }
-<a name="l01178"></a>01178          DrawPolygonLevelLines(point[0], sides, lvl);
+<a name="l01178"></a>01178          <a class="code" href="classVisualizationSceneScalarData.html#a767473ef10665eae5d0115e619d2469c">DrawPolygonLevelLines</a>(point[0], sides, lvl);
 <a name="l01179"></a>01179       }
 <a name="l01180"></a>01180       <span class="keywordflow">else</span> <span class="keywordflow">if</span> (split_quads == 1)
 <a name="l01181"></a>01181       {
@@ -1252,7 +1253,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01192"></a>01192                point[j][3] = values(ind[vt[it][j]]);
 <a name="l01193"></a>01193                point[j][2] = (flat) ? zc : point[j][3];
 <a name="l01194"></a>01194             }
-<a name="l01195"></a>01195             DrawPolygonLevelLines(point[0], 3, lvl);
+<a name="l01195"></a>01195             <a class="code" href="classVisualizationSceneScalarData.html#a767473ef10665eae5d0115e619d2469c">DrawPolygonLevelLines</a>(point[0], 3, lvl);
 <a name="l01196"></a>01196          }
 <a name="l01197"></a>01197       }
 <a name="l01198"></a>01198       <span class="keywordflow">else</span>
@@ -1286,58 +1287,58 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01226"></a>01226             point[1][3] = values(ind[l]);
 <a name="l01227"></a>01227             point[1][2] = (flat) ? zc : point[1][3];
 <a name="l01228"></a>01228 
-<a name="l01229"></a>01229             DrawPolygonLevelLines(point[0], 3, lvl);
+<a name="l01229"></a>01229             <a class="code" href="classVisualizationSceneScalarData.html#a767473ef10665eae5d0115e619d2469c">DrawPolygonLevelLines</a>(point[0], 3, lvl);
 <a name="l01230"></a>01230          }
 <a name="l01231"></a>01231       }
 <a name="l01232"></a>01232    }
 <a name="l01233"></a>01233 }
 <a name="l01234"></a>01234 
-<a name="l01235"></a>01235 <span class="keywordtype">void</span> VisualizationSceneSolution::PrepareLevelCurves2()
+<a name="l01235"></a><a class="code" href="classVisualizationSceneSolution.html#ae7eb57c0384421c4d146accab950774f">01235</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#ae7eb57c0384421c4d146accab950774f">VisualizationSceneSolution::PrepareLevelCurves2</a>()
 <a name="l01236"></a>01236 {
-<a name="l01237"></a>01237    <span class="keywordtype">int</span> i, ne = mesh -&gt; GetNE();
+<a name="l01237"></a>01237    <span class="keywordtype">int</span> i, ne = <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> -&gt; GetNE();
 <a name="l01238"></a>01238    Vector values;
 <a name="l01239"></a>01239    DenseMatrix pointmat;
 <a name="l01240"></a>01240    RefinedGeometry *RefG;
 <a name="l01241"></a>01241 
-<a name="l01242"></a>01242    glNewList(lcurvelist, GL_COMPILE);
+<a name="l01242"></a>01242    glNewList(<a class="code" href="classVisualizationSceneSolution.html#ac57e1347f5bb530d5c952a8250163feb">lcurvelist</a>, GL_COMPILE);
 <a name="l01243"></a>01243 
 <a name="l01244"></a>01244    <span class="keywordflow">for</span> (i = 0; i &lt; ne; i++)
 <a name="l01245"></a>01245    {
-<a name="l01246"></a>01246       RefG = GlobGeometryRefiner.Refine (mesh-&gt;GetElementBaseGeometry(i),
-<a name="l01247"></a>01247                                          TimesToRefine, EdgeRefineFactor);
-<a name="l01248"></a>01248       GetRefinedValues (i, RefG-&gt;RefPts, values, pointmat);
+<a name="l01246"></a>01246       RefG = GlobGeometryRefiner.Refine (<a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetElementBaseGeometry(i),
+<a name="l01247"></a>01247                                          <a class="code" href="classVisualizationSceneSolution.html#a24e7a7c19d39b6ee192bef2524cbfe33">TimesToRefine</a>, <a class="code" href="classVisualizationSceneSolution.html#a102b456664f6863e6b8d16eb82528f13">EdgeRefineFactor</a>);
+<a name="l01248"></a>01248       <a class="code" href="classVisualizationSceneSolution.html#a7bde28c621790ee7e5e22da1041c8f27">GetRefinedValues</a> (i, RefG-&gt;RefPts, values, pointmat);
 <a name="l01249"></a>01249       Array&lt;int&gt; &amp;RG = RefG-&gt;RefGeoms;
-<a name="l01250"></a>01250       <span class="keywordtype">int</span> sides = mesh-&gt;GetElement(i)-&gt;GetNVertices();
+<a name="l01250"></a>01250       <span class="keywordtype">int</span> sides = <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetElement(i)-&gt;GetNVertices();
 <a name="l01251"></a>01251 
-<a name="l01252"></a>01252       DrawLevelCurves(RG, pointmat, values, sides, level);
+<a name="l01252"></a>01252       <a class="code" href="classVisualizationSceneSolution.html#a0c63da18c31f18f29df52b3cbd90c184">DrawLevelCurves</a>(RG, pointmat, values, sides, <a class="code" href="classVisualizationSceneScalarData.html#ae25309fe0284d32c1623616c27fa658b">level</a>);
 <a name="l01253"></a>01253    }
 <a name="l01254"></a>01254 
 <a name="l01255"></a>01255    glEndList();
 <a name="l01256"></a>01256 }
 <a name="l01257"></a>01257 
-<a name="l01258"></a>01258 <span class="keywordtype">void</span> VisualizationSceneSolution::PrepareLines()
+<a name="l01258"></a><a class="code" href="classVisualizationSceneSolution.html#a206dd0762ab39de537300b22e62b31b7">01258</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a206dd0762ab39de537300b22e62b31b7">VisualizationSceneSolution::PrepareLines</a>()
 <a name="l01259"></a>01259 {
-<a name="l01260"></a>01260    <span class="keywordflow">if</span> (shading == 2)
+<a name="l01260"></a>01260    <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneSolution.html#abb46c83f1e814a7874a2b3201082d104">shading</a> == 2)
 <a name="l01261"></a>01261    {
 <a name="l01262"></a>01262       <span class="comment">// PrepareLines2();</span>
-<a name="l01263"></a>01263       PrepareLines3();
+<a name="l01263"></a>01263       <a class="code" href="classVisualizationSceneSolution.html#affec0168efb1a668ef35bd2f3a8100e0">PrepareLines3</a>();
 <a name="l01264"></a>01264       <span class="keywordflow">return</span>;
 <a name="l01265"></a>01265    }
 <a name="l01266"></a>01266 
-<a name="l01267"></a>01267    <span class="keywordtype">int</span> i, j, ne = mesh -&gt; GetNE();
+<a name="l01267"></a>01267    <span class="keywordtype">int</span> i, j, ne = <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> -&gt; GetNE();
 <a name="l01268"></a>01268    DenseMatrix pointmat;
 <a name="l01269"></a>01269    Array&lt;int&gt; vertices;
 <a name="l01270"></a>01270 
-<a name="l01271"></a>01271    glNewList(linelist, GL_COMPILE);
+<a name="l01271"></a>01271    glNewList(<a class="code" href="classVisualizationSceneSolution.html#ab7d1b584caffe3592d7857d31e8c240a">linelist</a>, GL_COMPILE);
 <a name="l01272"></a>01272 
 <a name="l01273"></a>01273    <span class="comment">// Set_Black_Material();</span>
 <a name="l01274"></a>01274    <span class="comment">// glColor3f (0, 0, 0);</span>
 <a name="l01275"></a>01275    glPolygonMode (GL_FRONT_AND_BACK, GL_LINE);
 <a name="l01276"></a>01276 
 <a name="l01277"></a>01277    <span class="keywordflow">for</span> (i = 0; i &lt; ne; i++){
-<a name="l01278"></a>01278       <span class="keywordflow">if</span> (!el_attr_to_show[mesh-&gt;GetAttribute(i)-1]) <span class="keywordflow">continue</span>;
+<a name="l01278"></a>01278       <span class="keywordflow">if</span> (!<a class="code" href="classVisualizationSceneSolution.html#a5baa6c391db303eb64ab6a96c2b0fbb8">el_attr_to_show</a>[<a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetAttribute(i)-1]) <span class="keywordflow">continue</span>;
 <a name="l01279"></a>01279 
-<a name="l01280"></a>01280       <span class="keywordflow">switch</span> (mesh-&gt;GetElementType(i))
+<a name="l01280"></a>01280       <span class="keywordflow">switch</span> (<a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetElementType(i))
 <a name="l01281"></a>01281       {
 <a name="l01282"></a>01282       <span class="keywordflow">case</span> Element::TRIANGLE:
 <a name="l01283"></a>01283          glBegin (GL_TRIANGLES);
@@ -1347,8 +1348,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01287"></a>01287          glBegin (GL_QUADS);
 <a name="l01288"></a>01288          <span class="keywordflow">break</span>;
 <a name="l01289"></a>01289       }
-<a name="l01290"></a>01290       mesh-&gt;GetPointMatrix (i, pointmat);
-<a name="l01291"></a>01291       mesh-&gt;GetElementVertices (i, vertices);
+<a name="l01290"></a>01290       <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetPointMatrix (i, pointmat);
+<a name="l01291"></a>01291       <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetElementVertices (i, vertices);
 <a name="l01292"></a>01292 
 <a name="l01293"></a>01293       <span class="keywordflow">for</span> (j = 0; j &lt; pointmat.Size(); j++)
 <a name="l01294"></a>01294          glVertex3d (pointmat(0, j), pointmat(1, j),
@@ -1359,14 +1360,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01299"></a>01299    glEndList();
 <a name="l01300"></a>01300 }
 <a name="l01301"></a>01301 
-<a name="l01302"></a>01302 <span class="keywordtype">void</span> VisualizationSceneSolution::PrepareLines2()
+<a name="l01302"></a><a class="code" href="classVisualizationSceneSolution.html#a6214dddb83a8107992e09071c4a864ad">01302</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a6214dddb83a8107992e09071c4a864ad">VisualizationSceneSolution::PrepareLines2</a>()
 <a name="l01303"></a>01303 {
-<a name="l01304"></a>01304    <span class="keywordtype">int</span> i, j, k, ne = mesh -&gt; GetNE();
+<a name="l01304"></a>01304    <span class="keywordtype">int</span> i, j, k, ne = <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> -&gt; GetNE();
 <a name="l01305"></a>01305    Vector values;
 <a name="l01306"></a>01306    DenseMatrix pointmat;
 <a name="l01307"></a>01307    RefinedGeometry *RefG;
 <a name="l01308"></a>01308 
-<a name="l01309"></a>01309    glNewList(linelist, GL_COMPILE);
+<a name="l01309"></a>01309    glNewList(<a class="code" href="classVisualizationSceneSolution.html#ab7d1b584caffe3592d7857d31e8c240a">linelist</a>, GL_COMPILE);
 <a name="l01310"></a>01310 
 <a name="l01311"></a>01311    <span class="comment">// Set_Black_Material();</span>
 <a name="l01312"></a>01312    <span class="comment">// glColor3f (0, 0, 0);</span>
@@ -1374,13 +1375,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01314"></a>01314 
 <a name="l01315"></a>01315    <span class="keywordflow">for</span> (i = 0; i &lt; ne; i++)
 <a name="l01316"></a>01316    {
-<a name="l01317"></a>01317       <span class="keywordflow">if</span> (!el_attr_to_show[mesh-&gt;GetAttribute(i)-1]) <span class="keywordflow">continue</span>;
+<a name="l01317"></a>01317       <span class="keywordflow">if</span> (!<a class="code" href="classVisualizationSceneSolution.html#a5baa6c391db303eb64ab6a96c2b0fbb8">el_attr_to_show</a>[<a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetAttribute(i)-1]) <span class="keywordflow">continue</span>;
 <a name="l01318"></a>01318 
-<a name="l01319"></a>01319       RefG = GlobGeometryRefiner.Refine (mesh-&gt;GetElementBaseGeometry(i),
-<a name="l01320"></a>01320                                          TimesToRefine, EdgeRefineFactor);
-<a name="l01321"></a>01321       GetRefinedValues (i, RefG-&gt;RefPts, values, pointmat);
+<a name="l01319"></a>01319       RefG = GlobGeometryRefiner.Refine (<a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetElementBaseGeometry(i),
+<a name="l01320"></a>01320                                          <a class="code" href="classVisualizationSceneSolution.html#a24e7a7c19d39b6ee192bef2524cbfe33">TimesToRefine</a>, <a class="code" href="classVisualizationSceneSolution.html#a102b456664f6863e6b8d16eb82528f13">EdgeRefineFactor</a>);
+<a name="l01321"></a>01321       <a class="code" href="classVisualizationSceneSolution.html#a7bde28c621790ee7e5e22da1041c8f27">GetRefinedValues</a> (i, RefG-&gt;RefPts, values, pointmat);
 <a name="l01322"></a>01322       Array&lt;int&gt; &amp;RG = RefG-&gt;RefGeoms;
-<a name="l01323"></a>01323       <span class="keywordtype">int</span> sides = mesh-&gt;GetElement(i)-&gt;GetNVertices();
+<a name="l01323"></a>01323       <span class="keywordtype">int</span> sides = <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetElement(i)-&gt;GetNVertices();
 <a name="l01324"></a>01324 
 <a name="l01325"></a>01325       <span class="keywordflow">for</span> (k = 0; k &lt; RG.Size()/sides; k++)
 <a name="l01326"></a>01326       {
@@ -1406,14 +1407,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01346"></a>01346    glEndList();
 <a name="l01347"></a>01347 }
 <a name="l01348"></a>01348 
-<a name="l01349"></a>01349 <span class="keywordtype">void</span> VisualizationSceneSolution::PrepareLines3()
+<a name="l01349"></a><a class="code" href="classVisualizationSceneSolution.html#affec0168efb1a668ef35bd2f3a8100e0">01349</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#affec0168efb1a668ef35bd2f3a8100e0">VisualizationSceneSolution::PrepareLines3</a>()
 <a name="l01350"></a>01350 {
-<a name="l01351"></a>01351    <span class="keywordtype">int</span> i, k, ne = mesh -&gt; GetNE();
+<a name="l01351"></a>01351    <span class="keywordtype">int</span> i, k, ne = <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> -&gt; GetNE();
 <a name="l01352"></a>01352    Vector values;
 <a name="l01353"></a>01353    DenseMatrix pointmat;
 <a name="l01354"></a>01354    RefinedGeometry *RefG;
 <a name="l01355"></a>01355 
-<a name="l01356"></a>01356    glNewList(linelist, GL_COMPILE);
+<a name="l01356"></a>01356    glNewList(<a class="code" href="classVisualizationSceneSolution.html#ab7d1b584caffe3592d7857d31e8c240a">linelist</a>, GL_COMPILE);
 <a name="l01357"></a>01357 
 <a name="l01358"></a>01358    <span class="comment">// Set_Black_Material();</span>
 <a name="l01359"></a>01359    <span class="comment">// glColor3f (0, 0, 0);</span>
@@ -1421,10 +1422,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01361"></a>01361 
 <a name="l01362"></a>01362    <span class="keywordflow">for</span> (i = 0; i &lt; ne; i++)
 <a name="l01363"></a>01363    {
-<a name="l01364"></a>01364       <span class="keywordflow">if</span> (!el_attr_to_show[mesh-&gt;GetAttribute(i)-1]) <span class="keywordflow">continue</span>;
-<a name="l01365"></a>01365       RefG = GlobGeometryRefiner.Refine (mesh-&gt;GetElementBaseGeometry(i),
-<a name="l01366"></a>01366                                          TimesToRefine, EdgeRefineFactor);
-<a name="l01367"></a>01367       GetRefinedValues (i, RefG-&gt;RefPts, values, pointmat);
+<a name="l01364"></a>01364       <span class="keywordflow">if</span> (!<a class="code" href="classVisualizationSceneSolution.html#a5baa6c391db303eb64ab6a96c2b0fbb8">el_attr_to_show</a>[<a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetAttribute(i)-1]) <span class="keywordflow">continue</span>;
+<a name="l01365"></a>01365       RefG = GlobGeometryRefiner.Refine (<a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetElementBaseGeometry(i),
+<a name="l01366"></a>01366                                          <a class="code" href="classVisualizationSceneSolution.html#a24e7a7c19d39b6ee192bef2524cbfe33">TimesToRefine</a>, <a class="code" href="classVisualizationSceneSolution.html#a102b456664f6863e6b8d16eb82528f13">EdgeRefineFactor</a>);
+<a name="l01367"></a>01367       <a class="code" href="classVisualizationSceneSolution.html#a7bde28c621790ee7e5e22da1041c8f27">GetRefinedValues</a> (i, RefG-&gt;RefPts, values, pointmat);
 <a name="l01368"></a>01368       Array&lt;int&gt; &amp;RE = RefG-&gt;RefEdges;
 <a name="l01369"></a>01369 
 <a name="l01370"></a>01370       glBegin (GL_LINES);
@@ -1443,28 +1444,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01383"></a>01383    glEndList();
 <a name="l01384"></a>01384 }
 <a name="l01385"></a>01385 
-<a name="l01386"></a>01386 <span class="keywordtype">void</span> VisualizationSceneSolution::UpdateValueRange()
+<a name="l01386"></a><a class="code" href="classVisualizationSceneSolution.html#a6d78563ac9950728b433197036715b35">01386</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a6d78563ac9950728b433197036715b35">VisualizationSceneSolution::UpdateValueRange</a>()
 <a name="l01387"></a>01387 {
-<a name="l01388"></a>01388    SetLevelLines(minv, maxv, nl);
-<a name="l01389"></a>01389    UpdateLevelLines();
-<a name="l01390"></a>01390    NewZRange(minv, maxv);
-<a name="l01391"></a>01391    PrepareAxes();
-<a name="l01392"></a>01392    EventUpdateColors();
+<a name="l01388"></a>01388    <a class="code" href="classVisualizationSceneScalarData.html#a2769538201e6e91b2dee68464cc92916">SetLevelLines</a>(<a class="code" href="classVisualizationSceneScalarData.html#a220dacc3e7f9911067e4b74fd3a6f574">minv</a>, <a class="code" href="classVisualizationSceneScalarData.html#a35b91f9ab89ee700e6b0017169f2559c">maxv</a>, <a class="code" href="classVisualizationSceneScalarData.html#a59f026a0b3de0b8d0cb3367b894c038d">nl</a>);
+<a name="l01389"></a>01389    <a class="code" href="classVisualizationSceneSolution.html#ab504d5ca6fac8d7c41b1dff57190082a">UpdateLevelLines</a>();
+<a name="l01390"></a>01390    <a class="code" href="classVisualizationSceneSolution.html#a0ed1fd3cbb740bba24a8f18980a118b7">NewZRange</a>(<a class="code" href="classVisualizationSceneScalarData.html#a220dacc3e7f9911067e4b74fd3a6f574">minv</a>, <a class="code" href="classVisualizationSceneScalarData.html#a35b91f9ab89ee700e6b0017169f2559c">maxv</a>);
+<a name="l01391"></a>01391    <a class="code" href="classVisualizationSceneScalarData.html#aeb82b322234efaae4817098aaa63efc5">PrepareAxes</a>();
+<a name="l01392"></a>01392    <a class="code" href="classVisualizationSceneScalarData.html#a277f38cb6e7f562080b0b534f205b55c">EventUpdateColors</a>();
 <a name="l01393"></a>01393 }
 <a name="l01394"></a>01394 
-<a name="l01395"></a>01395 <span class="keywordtype">void</span> VisualizationSceneSolution::PrepareBoundary()
+<a name="l01395"></a><a class="code" href="classVisualizationSceneSolution.html#a75024bc6a3eb78bce0c27af2668db898">01395</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a75024bc6a3eb78bce0c27af2668db898">VisualizationSceneSolution::PrepareBoundary</a>()
 <a name="l01396"></a>01396 {
-<a name="l01397"></a>01397    <span class="keywordtype">int</span> i, j, ne = mesh -&gt; GetNBE();
+<a name="l01397"></a>01397    <span class="keywordtype">int</span> i, j, ne = <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> -&gt; GetNBE();
 <a name="l01398"></a>01398    DenseMatrix pointmat;
 <a name="l01399"></a>01399 
-<a name="l01400"></a>01400    glNewList(bdrlist, GL_COMPILE);
+<a name="l01400"></a>01400    glNewList(<a class="code" href="classVisualizationSceneSolution.html#acfa06c3408939c642fea6590ce368fc6">bdrlist</a>, GL_COMPILE);
 <a name="l01401"></a>01401    glPolygonMode (GL_FRONT_AND_BACK, GL_LINE);
 <a name="l01402"></a>01402 
 <a name="l01403"></a>01403    Array&lt;int&gt; vertices;
 <a name="l01404"></a>01404 
 <a name="l01405"></a>01405    <span class="keywordflow">for</span> (i = 0; i &lt; ne; i++){
-<a name="l01406"></a>01406       mesh -&gt; GetBdrElementVertices (i, vertices);
-<a name="l01407"></a>01407       mesh -&gt; GetBdrPointMatrix (i, pointmat);
+<a name="l01406"></a>01406       <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> -&gt; GetBdrElementVertices (i, vertices);
+<a name="l01407"></a>01407       <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a> -&gt; GetBdrPointMatrix (i, pointmat);
 <a name="l01408"></a>01408       glBegin (GL_LINE_LOOP);
 <a name="l01409"></a>01409       <span class="keywordflow">for</span> (j = 0; j &lt; pointmat.Size(); j++)
 <a name="l01410"></a>01410          glVertex3d (pointmat(0, j), pointmat(1, j), (*sol)(vertices[j]));
@@ -1474,30 +1475,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01414"></a>01414    glEndList();
 <a name="l01415"></a>01415 }
 <a name="l01416"></a>01416 
-<a name="l01417"></a>01417 <span class="keywordtype">void</span> VisualizationSceneSolution::PrepareCP()
+<a name="l01417"></a><a class="code" href="classVisualizationSceneSolution.html#aa285a46ac664190f1b182cf0d28e7ba2">01417</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#aa285a46ac664190f1b182cf0d28e7ba2">VisualizationSceneSolution::PrepareCP</a>()
 <a name="l01418"></a>01418 {
 <a name="l01419"></a>01419    Vector values;
 <a name="l01420"></a>01420    DenseMatrix pointmat;
 <a name="l01421"></a>01421    Array&lt;int&gt; ind;
 <a name="l01422"></a>01422 
-<a name="l01423"></a>01423    <span class="keywordflow">if</span> (draw_cp == 0)
+<a name="l01423"></a>01423    <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneSolution.html#ae5255ef545e9c162759a46bec3656761">draw_cp</a> == 0)
 <a name="l01424"></a>01424       <span class="keywordflow">return</span>;
 <a name="l01425"></a>01425 
-<a name="l01426"></a>01426    glNewList(cp_list, GL_COMPILE);
+<a name="l01426"></a>01426    glNewList(<a class="code" href="classVisualizationSceneSolution.html#afad0faadc767764d1fda1c9239c3bc23">cp_list</a>, GL_COMPILE);
 <a name="l01427"></a>01427    glBegin(GL_LINES);
 <a name="l01428"></a>01428 
-<a name="l01429"></a>01429    <span class="keywordflow">if</span> (shading != 2)
+<a name="l01429"></a>01429    <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneSolution.html#abb46c83f1e814a7874a2b3201082d104">shading</a> != 2)
 <a name="l01430"></a>01430    {
 <a name="l01431"></a>01431       Array&lt;int&gt; vertices;
 <a name="l01432"></a>01432 
-<a name="l01433"></a>01433       <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; mesh-&gt;GetNE(); i++)
+<a name="l01433"></a>01433       <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetNE(); i++)
 <a name="l01434"></a>01434       {
-<a name="l01435"></a>01435          mesh-&gt;GetPointMatrix(i, pointmat);
+<a name="l01435"></a>01435          <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetPointMatrix(i, pointmat);
 <a name="l01436"></a>01436          <span class="keywordtype">int</span> n = 0;
 <a name="l01437"></a>01437          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; pointmat.Width(); j++)
 <a name="l01438"></a>01438          {
 <a name="l01439"></a>01439             <span class="keyword">const</span> <span class="keywordtype">double</span> s =
-<a name="l01440"></a>01440                CuttingPlane-&gt;Transform(pointmat(0, j),
+<a name="l01440"></a>01440                <a class="code" href="classVisualizationSceneScalarData.html#a032f273829f0833e33388f3fc701c0be">CuttingPlane</a>-&gt;<a class="code" href="classPlane.html#aec9ee66528261bd83ad62f35aaa67f54">Transform</a>(pointmat(0, j),
 <a name="l01441"></a>01441                                        pointmat(1, j), 0.0);
 <a name="l01442"></a>01442             <span class="keywordflow">if</span> (s &gt;= 0.0)
 <a name="l01443"></a>01443                n++;
@@ -1505,7 +1506,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01445"></a>01445          <span class="keywordflow">if</span> (n == 0 || n == pointmat.Width())
 <a name="l01446"></a>01446             <span class="keywordflow">continue</span>;
 <a name="l01447"></a>01447 
-<a name="l01448"></a>01448          mesh-&gt;GetElementVertices(i, vertices);
+<a name="l01448"></a>01448          <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetElementVertices(i, vertices);
 <a name="l01449"></a>01449          values.SetSize(vertices.Size());
 <a name="l01450"></a>01450          ind.SetSize(vertices.Size());
 <a name="l01451"></a>01451          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; values.Size(); j++)
@@ -1514,20 +1515,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01454"></a>01454             ind[j] = j;
 <a name="l01455"></a>01455          }
 <a name="l01456"></a>01456 
-<a name="l01457"></a>01457          DrawCPLine(pointmat, values, ind);
+<a name="l01457"></a>01457          <a class="code" href="classVisualizationSceneSolution.html#a9036a86058443ae6c6f78ebee65e5e95">DrawCPLine</a>(pointmat, values, ind);
 <a name="l01458"></a>01458       }
 <a name="l01459"></a>01459    }
 <a name="l01460"></a>01460    <span class="keywordflow">else</span>
 <a name="l01461"></a>01461    {
 <a name="l01462"></a>01462       RefinedGeometry *RefG;
 <a name="l01463"></a>01463 
-<a name="l01464"></a>01464       <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; mesh-&gt;GetNE(); i++)
+<a name="l01464"></a>01464       <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetNE(); i++)
 <a name="l01465"></a>01465       {
-<a name="l01466"></a>01466          RefG = GlobGeometryRefiner.Refine (mesh-&gt;GetElementBaseGeometry(i),
-<a name="l01467"></a>01467                                             TimesToRefine, EdgeRefineFactor);
-<a name="l01468"></a>01468          GetRefinedValues (i, RefG-&gt;RefPts, values, pointmat);
+<a name="l01466"></a>01466          RefG = GlobGeometryRefiner.Refine (<a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetElementBaseGeometry(i),
+<a name="l01467"></a>01467                                             <a class="code" href="classVisualizationSceneSolution.html#a24e7a7c19d39b6ee192bef2524cbfe33">TimesToRefine</a>, <a class="code" href="classVisualizationSceneSolution.html#a102b456664f6863e6b8d16eb82528f13">EdgeRefineFactor</a>);
+<a name="l01468"></a>01468          <a class="code" href="classVisualizationSceneSolution.html#a7bde28c621790ee7e5e22da1041c8f27">GetRefinedValues</a> (i, RefG-&gt;RefPts, values, pointmat);
 <a name="l01469"></a>01469          Array&lt;int&gt; &amp;RG = RefG-&gt;RefGeoms;
-<a name="l01470"></a>01470          <span class="keywordtype">int</span> sides = mesh-&gt;GetElement(i)-&gt;GetNVertices();
+<a name="l01470"></a>01470          <span class="keywordtype">int</span> sides = <a class="code" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a>-&gt;GetElement(i)-&gt;GetNVertices();
 <a name="l01471"></a>01471 
 <a name="l01472"></a>01472          ind.SetSize(sides);
 <a name="l01473"></a>01473          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; RG.Size()/sides; k++)
@@ -1539,7 +1540,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01479"></a>01479             <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; sides; j++)
 <a name="l01480"></a>01480             {
 <a name="l01481"></a>01481                <span class="keyword">const</span> <span class="keywordtype">double</span> s =
-<a name="l01482"></a>01482                   CuttingPlane-&gt;Transform(pointmat(0, ind[j]),
+<a name="l01482"></a>01482                   <a class="code" href="classVisualizationSceneScalarData.html#a032f273829f0833e33388f3fc701c0be">CuttingPlane</a>-&gt;<a class="code" href="classPlane.html#aec9ee66528261bd83ad62f35aaa67f54">Transform</a>(pointmat(0, ind[j]),
 <a name="l01483"></a>01483                                           pointmat(1, ind[j]), 0.0);
 <a name="l01484"></a>01484                <span class="keywordflow">if</span> (s &gt;= 0.0)
 <a name="l01485"></a>01485                   n++;
@@ -1547,7 +1548,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01487"></a>01487             <span class="keywordflow">if</span> (n == 0 || n == sides)
 <a name="l01488"></a>01488                <span class="keywordflow">continue</span>;
 <a name="l01489"></a>01489 
-<a name="l01490"></a>01490             DrawCPLine(pointmat, values, ind);
+<a name="l01490"></a>01490             <a class="code" href="classVisualizationSceneSolution.html#a9036a86058443ae6c6f78ebee65e5e95">DrawCPLine</a>(pointmat, values, ind);
 <a name="l01491"></a>01491          }
 <a name="l01492"></a>01492       }
 <a name="l01493"></a>01493    }
@@ -1556,7 +1557,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01496"></a>01496    glEndList();
 <a name="l01497"></a>01497 }
 <a name="l01498"></a>01498 
-<a name="l01499"></a>01499 <span class="keywordtype">void</span> VisualizationSceneSolution::DrawCPLine(
+<a name="l01499"></a><a class="code" href="classVisualizationSceneSolution.html#a9036a86058443ae6c6f78ebee65e5e95">01499</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a9036a86058443ae6c6f78ebee65e5e95">VisualizationSceneSolution::DrawCPLine</a>(
 <a name="l01500"></a>01500    DenseMatrix &amp;pointmat, Vector &amp;values, Array&lt;int&gt; &amp;ind)
 <a name="l01501"></a>01501 {
 <a name="l01502"></a>01502    <span class="keywordtype">int</span> n, js, nv = ind.Size();
@@ -1565,13 +1566,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01505"></a>01505    js = nv-1;
 <a name="l01506"></a>01506    xs = pointmat(0, ind[js]);
 <a name="l01507"></a>01507    ys = pointmat(1, ind[js]);
-<a name="l01508"></a>01508    s = CuttingPlane-&gt;Transform(xs, ys, 0.0);
+<a name="l01508"></a>01508    s = <a class="code" href="classVisualizationSceneScalarData.html#a032f273829f0833e33388f3fc701c0be">CuttingPlane</a>-&gt;<a class="code" href="classPlane.html#aec9ee66528261bd83ad62f35aaa67f54">Transform</a>(xs, ys, 0.0);
 <a name="l01509"></a>01509    n = 0;
 <a name="l01510"></a>01510    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; nv; j++)
 <a name="l01511"></a>01511    {
 <a name="l01512"></a>01512       <span class="keyword">const</span> <span class="keywordtype">double</span> xt = pointmat(0, ind[j]);
 <a name="l01513"></a>01513       <span class="keyword">const</span> <span class="keywordtype">double</span> yt = pointmat(1, ind[j]);
-<a name="l01514"></a>01514       <span class="keyword">const</span> <span class="keywordtype">double</span> t = CuttingPlane-&gt;Transform(xt, yt, 0.0);
+<a name="l01514"></a>01514       <span class="keyword">const</span> <span class="keywordtype">double</span> t = <a class="code" href="classVisualizationSceneScalarData.html#a032f273829f0833e33388f3fc701c0be">CuttingPlane</a>-&gt;<a class="code" href="classPlane.html#aec9ee66528261bd83ad62f35aaa67f54">Transform</a>(xt, yt, 0.0);
 <a name="l01515"></a>01515       <span class="keywordflow">if</span> ((s &gt;= 0.0 &amp;&amp; t &lt; 0.0) || (s &lt; 0.0 &amp;&amp; t &gt;= 0.0))
 <a name="l01516"></a>01516       {
 <a name="l01517"></a>01517          <span class="keywordtype">double</span> a = fabs(s) / (fabs(s) + fabs(t));
@@ -1593,21 +1594,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01533"></a>01533    }
 <a name="l01534"></a>01534 }
 <a name="l01535"></a>01535 
-<a name="l01536"></a>01536 <span class="keywordtype">void</span> VisualizationSceneSolution::Draw()
+<a name="l01536"></a><a class="code" href="classVisualizationSceneSolution.html#a4487514b9ccc5e335e8023c2abe88661">01536</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a4487514b9ccc5e335e8023c2abe88661">VisualizationSceneSolution::Draw</a>()
 <a name="l01537"></a>01537 {
 <a name="l01538"></a>01538    glEnable(GL_DEPTH_TEST);
 <a name="l01539"></a>01539 
-<a name="l01540"></a>01540    Set_Background();
+<a name="l01540"></a>01540    <a class="code" href="material_8cpp.html#a210ac1c393ab50ceba066ebc89fe810f">Set_Background</a>();
 <a name="l01541"></a>01541    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 <a name="l01542"></a>01542 
 <a name="l01543"></a>01543    <span class="comment">// model transformation</span>
 <a name="l01544"></a>01544    glMatrixMode (GL_MODELVIEW);
 <a name="l01545"></a>01545    glLoadIdentity();
 <a name="l01546"></a>01546 
-<a name="l01547"></a>01547    glMultMatrixd (translmat);
-<a name="l01548"></a>01548    glMultMatrixd (rotmat);
-<a name="l01549"></a>01549    glScaled(xscale, yscale, zscale);
-<a name="l01550"></a>01550    glTranslated(-(x[0]+x[1])/2, -(y[0]+y[1])/2, -(z[0]+z[1])/2);
+<a name="l01547"></a>01547    glMultMatrixd (<a class="code" href="classVisualizationScene.html#aecc3d94f6f7eb57ce7135d2b3c310d9b">translmat</a>);
+<a name="l01548"></a>01548    glMultMatrixd (<a class="code" href="classVisualizationScene.html#ab7b20b0d2afceed7bde0521133e6cdcc">rotmat</a>);
+<a name="l01549"></a>01549    glScaled(<a class="code" href="classVisualizationScene.html#aa00ff6e89df9270c39c693a216b5dbae">xscale</a>, <a class="code" href="classVisualizationScene.html#ac59c227cdfa470b5abb889f8ef9ee642">yscale</a>, <a class="code" href="classVisualizationScene.html#a125bb5805d9480f4e5aec905c9403cd8">zscale</a>);
+<a name="l01550"></a>01550    glTranslated(-(<a class="code" href="classVisualizationScene.html#a70b0eb870996adb9fa9dc8248703ee33" title="Bounding box.">x</a>[0]+<a class="code" href="classVisualizationScene.html#a70b0eb870996adb9fa9dc8248703ee33" title="Bounding box.">x</a>[1])/2, -(<a class="code" href="classVisualizationScene.html#a99bf11a2dfb8e31a017c257cd515d5f8">y</a>[0]+<a class="code" href="classVisualizationScene.html#a99bf11a2dfb8e31a017c257cd515d5f8">y</a>[1])/2, -(<a class="code" href="classVisualizationScene.html#a9444a714a9ea07e08e349ea1f0f57a73">z</a>[0]+<a class="code" href="classVisualizationScene.html#a9444a714a9ea07e08e349ea1f0f57a73">z</a>[1])/2);
 <a name="l01551"></a>01551 
 <a name="l01552"></a>01552    glPolygonOffset (1, 1);
 <a name="l01553"></a>01553    glEnable (GL_POLYGON_OFFSET_FILL);
@@ -1616,65 +1617,65 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01556"></a>01556    glDisable(GL_CLIP_PLANE0);
 <a name="l01557"></a>01557    <span class="comment">// draw colorbar</span>
 <a name="l01558"></a>01558    glDisable(GL_LIGHTING);
-<a name="l01559"></a>01559    <span class="keywordflow">if</span> (colorbar)
-<a name="l01560"></a>01560       <span class="keywordflow">if</span> (drawmesh == 2)
-<a name="l01561"></a>01561          DrawColorBar(minv,maxv,&amp;level);
+<a name="l01559"></a>01559    <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneScalarData.html#a2f351c3969d324cee2c2f3297cf5e242">colorbar</a>)
+<a name="l01560"></a>01560       <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneSolution.html#aabf8972502ab6ac114b7ed84c13ae636">drawmesh</a> == 2)
+<a name="l01561"></a>01561          <a class="code" href="classVisualizationSceneScalarData.html#aaffefeb61c2a16ae3cd5920d6cc3f64a">DrawColorBar</a>(<a class="code" href="classVisualizationSceneScalarData.html#a220dacc3e7f9911067e4b74fd3a6f574">minv</a>,<a class="code" href="classVisualizationSceneScalarData.html#a35b91f9ab89ee700e6b0017169f2559c">maxv</a>,&amp;<a class="code" href="classVisualizationSceneScalarData.html#ae25309fe0284d32c1623616c27fa658b">level</a>);
 <a name="l01562"></a>01562       <span class="keywordflow">else</span>
-<a name="l01563"></a>01563          DrawColorBar(minv,maxv);
+<a name="l01563"></a>01563          <a class="code" href="classVisualizationSceneScalarData.html#aaffefeb61c2a16ae3cd5920d6cc3f64a">DrawColorBar</a>(<a class="code" href="classVisualizationSceneScalarData.html#a220dacc3e7f9911067e4b74fd3a6f574">minv</a>,<a class="code" href="classVisualizationSceneScalarData.html#a35b91f9ab89ee700e6b0017169f2559c">maxv</a>);
 <a name="l01564"></a>01564 
-<a name="l01565"></a>01565    Set_Black_Material();
+<a name="l01565"></a>01565    <a class="code" href="material_8cpp.html#a2987eff3b35b8ef824bad012fc2e8c6f">Set_Black_Material</a>();
 <a name="l01566"></a>01566 
 <a name="l01567"></a>01567    <span class="comment">// draw axes</span>
-<a name="l01568"></a>01568    <span class="keywordflow">if</span> (drawaxes)
+<a name="l01568"></a>01568    <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneScalarData.html#a960d3a28924f94ef4e3a7049168f124a">drawaxes</a>)
 <a name="l01569"></a>01569    {
-<a name="l01570"></a>01570       glCallList(axeslist);
-<a name="l01571"></a>01571       DrawCoordinateCross();
+<a name="l01570"></a>01570       glCallList(<a class="code" href="classVisualizationSceneScalarData.html#af95e76b60dbfd3ce083ac2ab297ecde4">axeslist</a>);
+<a name="l01571"></a>01571       <a class="code" href="classVisualizationSceneScalarData.html#aba173432f6b82a549e6c327b58386238">DrawCoordinateCross</a>();
 <a name="l01572"></a>01572    }
 <a name="l01573"></a>01573 
-<a name="l01574"></a>01574    DrawRuler();
+<a name="l01574"></a>01574    <a class="code" href="classVisualizationSceneScalarData.html#a8a29210bfe53784408c2ee70526c6907">DrawRuler</a>();
 <a name="l01575"></a>01575 
-<a name="l01576"></a>01576    <span class="keywordflow">if</span> (draw_cp)
+<a name="l01576"></a>01576    <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneSolution.html#ae5255ef545e9c162759a46bec3656761">draw_cp</a>)
 <a name="l01577"></a>01577    {
-<a name="l01578"></a>01578       glClipPlane (GL_CLIP_PLANE0, CuttingPlane-&gt;Equation());
+<a name="l01578"></a>01578       glClipPlane (GL_CLIP_PLANE0, <a class="code" href="classVisualizationSceneScalarData.html#a032f273829f0833e33388f3fc701c0be">CuttingPlane</a>-&gt;<a class="code" href="classPlane.html#a2b0d8c9adb5f9810ee9920f5deb0a157">Equation</a>());
 <a name="l01579"></a>01579       glDisable(GL_CLIP_PLANE0);
-<a name="l01580"></a>01580       glCallList(cp_list);
+<a name="l01580"></a>01580       glCallList(<a class="code" href="classVisualizationSceneSolution.html#afad0faadc767764d1fda1c9239c3bc23">cp_list</a>);
 <a name="l01581"></a>01581       glEnable(GL_CLIP_PLANE0);
 <a name="l01582"></a>01582    }
 <a name="l01583"></a>01583 
-<a name="l01584"></a>01584    <span class="keywordflow">if</span> (drawbdr)
-<a name="l01585"></a>01585       glCallList(bdrlist);
+<a name="l01584"></a>01584    <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneSolution.html#a43439ad3f9f0d64b6db32ddcd6359d1a">drawbdr</a>)
+<a name="l01585"></a>01585       glCallList(<a class="code" href="classVisualizationSceneSolution.html#acfa06c3408939c642fea6590ce368fc6">bdrlist</a>);
 <a name="l01586"></a>01586 
 <a name="l01587"></a>01587    <span class="comment">// draw lines</span>
-<a name="l01588"></a>01588    <span class="keywordflow">if</span> (drawmesh == 1)
-<a name="l01589"></a>01589       glCallList(linelist);
+<a name="l01588"></a>01588    <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneSolution.html#aabf8972502ab6ac114b7ed84c13ae636">drawmesh</a> == 1)
+<a name="l01589"></a>01589       glCallList(<a class="code" href="classVisualizationSceneSolution.html#ab7d1b584caffe3592d7857d31e8c240a">linelist</a>);
 <a name="l01590"></a>01590    <span class="keywordflow">else</span>
-<a name="l01591"></a>01591       <span class="keywordflow">if</span> (drawmesh == 2)
+<a name="l01591"></a>01591       <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneSolution.html#aabf8972502ab6ac114b7ed84c13ae636">drawmesh</a> == 2)
 <a name="l01592"></a>01592       {
 <a name="l01593"></a>01593          <span class="comment">// glLineWidth(1.0);</span>
-<a name="l01594"></a>01594          glCallList(lcurvelist);
+<a name="l01594"></a>01594          glCallList(<a class="code" href="classVisualizationSceneSolution.html#ac57e1347f5bb530d5c952a8250163feb">lcurvelist</a>);
 <a name="l01595"></a>01595       }
-<a name="l01596"></a>01596    <span class="keywordflow">if</span> (light)
+<a name="l01596"></a>01596    <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneScalarData.html#a3aa3bcd5e0788dced72f08724617687e">light</a>)
 <a name="l01597"></a>01597       glEnable(GL_LIGHTING);
 <a name="l01598"></a>01598 
-<a name="l01599"></a>01599    <span class="keywordflow">if</span> (MatAlpha &lt; 1.0)
-<a name="l01600"></a>01600       Set_Transparency();
+<a name="l01599"></a>01599    <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a72ac4a8827898f543e22495d8be19b86">MatAlpha</a> &lt; 1.0)
+<a name="l01600"></a>01600       <a class="code" href="material_8cpp.html#ae7c1300f17d54bb5f366dd5d611eafa2">Set_Transparency</a>();
 <a name="l01601"></a>01601 
 <a name="l01602"></a>01602    <span class="comment">// draw elements</span>
 <a name="l01603"></a>01603    glPolygonMode (GL_FRONT_AND_BACK, GL_FILL);
-<a name="l01604"></a>01604    <span class="keywordflow">if</span> (drawelems)
+<a name="l01604"></a>01604    <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneSolution.html#afb89b66af94ab31e817f13614de91446">drawelems</a>)
 <a name="l01605"></a>01605    {
-<a name="l01606"></a>01606       <span class="keywordflow">if</span> (GetUseTexture())
+<a name="l01606"></a>01606       <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a50b61b3e9d738825d19528a967f30efd">GetUseTexture</a>())
 <a name="l01607"></a>01607       {
 <a name="l01608"></a>01608          glEnable (GL_TEXTURE_1D);
 <a name="l01609"></a>01609          glColor4d(1, 1, 1, 1);
 <a name="l01610"></a>01610       }
-<a name="l01611"></a>01611       glCallList(displlist);
-<a name="l01612"></a>01612       <span class="keywordflow">if</span> (GetUseTexture())
+<a name="l01611"></a>01611       glCallList(<a class="code" href="classVisualizationSceneSolution.html#a5b70b9817909cf1c715bee22d1c9199f">displlist</a>);
+<a name="l01612"></a>01612       <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a50b61b3e9d738825d19528a967f30efd">GetUseTexture</a>())
 <a name="l01613"></a>01613          glDisable (GL_TEXTURE_1D);
 <a name="l01614"></a>01614    }
 <a name="l01615"></a>01615 
-<a name="l01616"></a>01616    <span class="keywordflow">if</span> (MatAlpha &lt; 1.0)
-<a name="l01617"></a>01617       Remove_Transparency();
+<a name="l01616"></a>01616    <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a72ac4a8827898f543e22495d8be19b86">MatAlpha</a> &lt; 1.0)
+<a name="l01617"></a>01617       <a class="code" href="material_8cpp.html#ac9a97dbc9f7c0d51197406cdd0488028">Remove_Transparency</a>();
 <a name="l01618"></a>01618 
 <a name="l01619"></a>01619    glFlush();
 <a name="l01620"></a>01620    glXSwapBuffers (auxXDisplay(), auxXWindow());
@@ -1686,7 +1687,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -1695,7 +1696,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 15:12:44 for GLVis by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:52:24 for GLVis by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

@@ -51,6 +51,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -58,7 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">material.cpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="material_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443271. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -74,12 +75,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00014"></a>00014 <span class="preprocessor">#include &lt;GL/glx.h&gt;</span>
 <a name="l00015"></a>00015 <span class="preprocessor">#include &lt;string&gt;</span>
 <a name="l00016"></a>00016 
-<a name="l00017"></a>00017 <span class="keywordtype">int</span> Num_Materials = 5;
-<a name="l00018"></a>00018 <span class="keywordtype">int</span> Current_Material = 3;
+<a name="l00017"></a><a class="code" href="material_8cpp.html#ab3e3c43aacddc1c4e4b9e4b0368b69b3">00017</a> <span class="keywordtype">int</span> <a class="code" href="material_8cpp.html#ab3e3c43aacddc1c4e4b9e4b0368b69b3">Num_Materials</a> = 5;
+<a name="l00018"></a><a class="code" href="material_8cpp.html#a035cf998ebacdfc1e38d281e57b8ec13">00018</a> <span class="keywordtype">int</span> <a class="code" href="material_8cpp.html#a035cf998ebacdfc1e38d281e57b8ec13">Current_Material</a> = 3;
 <a name="l00019"></a>00019 
-<a name="l00020"></a>00020 <span class="keywordtype">void</span> Set_Material()
+<a name="l00020"></a><a class="code" href="material_8hpp.html#a724c876e4780d698e7e9ed353709bd79">00020</a> <span class="keywordtype">void</span> <a class="code" href="material_8cpp.html#a724c876e4780d698e7e9ed353709bd79">Set_Material</a>()
 <a name="l00021"></a>00021 {
-<a name="l00022"></a>00022    <span class="keywordflow">switch</span>(Current_Material)
+<a name="l00022"></a>00022    <span class="keywordflow">switch</span>(<a class="code" href="material_8cpp.html#a035cf998ebacdfc1e38d281e57b8ec13">Current_Material</a>)
 <a name="l00023"></a>00023    {
 <a name="l00024"></a>00024    <span class="keywordflow">case</span> 0:
 <a name="l00025"></a>00025    {
@@ -166,11 +167,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00106"></a>00106    glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, memis);
 <a name="l00107"></a>00107 }
 <a name="l00108"></a>00108 
-<a name="l00109"></a>00109 <span class="keywordtype">void</span> Set_Light()
+<a name="l00109"></a><a class="code" href="material_8hpp.html#a57a9b2584097b2eb71a3f1b997b7a6f8">00109</a> <span class="keywordtype">void</span> <a class="code" href="material_8cpp.html#a57a9b2584097b2eb71a3f1b997b7a6f8">Set_Light</a>()
 <a name="l00110"></a>00110 {
 <a name="l00111"></a>00111    glLoadIdentity();
 <a name="l00112"></a>00112 
-<a name="l00113"></a>00113    <span class="keywordflow">switch</span>(Current_Material)
+<a name="l00113"></a>00113    <span class="keywordflow">switch</span>(<a class="code" href="material_8cpp.html#a035cf998ebacdfc1e38d281e57b8ec13">Current_Material</a>)
 <a name="l00114"></a>00114    {
 <a name="l00115"></a>00115    <span class="keywordflow">case</span> 0:
 <a name="l00116"></a>00116    {
@@ -297,28 +298,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00237"></a>00237    glLightModeli (GL_LIGHT_MODEL_COLOR_CONTROL, GL_SEPARATE_SPECULAR_COLOR);
 <a name="l00238"></a>00238 }
 <a name="l00239"></a>00239 
-<a name="l00240"></a>00240 <span class="keywordtype">int</span> Next_Material_And_Light()
+<a name="l00240"></a><a class="code" href="material_8hpp.html#ad23e20147dcc280b7316c85cf0aebadf">00240</a> <span class="keywordtype">int</span> <a class="code" href="material_8cpp.html#ad23e20147dcc280b7316c85cf0aebadf">Next_Material_And_Light</a>()
 <a name="l00241"></a>00241 {
-<a name="l00242"></a>00242    Current_Material = (Current_Material + 1) % Num_Materials;
-<a name="l00243"></a>00243    Set_Material();
-<a name="l00244"></a>00244    Set_Light();
+<a name="l00242"></a>00242    <a class="code" href="material_8cpp.html#a035cf998ebacdfc1e38d281e57b8ec13">Current_Material</a> = (<a class="code" href="material_8cpp.html#a035cf998ebacdfc1e38d281e57b8ec13">Current_Material</a> + 1) % <a class="code" href="material_8cpp.html#ab3e3c43aacddc1c4e4b9e4b0368b69b3">Num_Materials</a>;
+<a name="l00243"></a>00243    <a class="code" href="material_8cpp.html#a724c876e4780d698e7e9ed353709bd79">Set_Material</a>();
+<a name="l00244"></a>00244    <a class="code" href="material_8cpp.html#a57a9b2584097b2eb71a3f1b997b7a6f8">Set_Light</a>();
 <a name="l00245"></a>00245 
-<a name="l00246"></a>00246    <span class="keywordflow">return</span> Current_Material+1;
+<a name="l00246"></a>00246    <span class="keywordflow">return</span> <a class="code" href="material_8cpp.html#a035cf998ebacdfc1e38d281e57b8ec13">Current_Material</a>+1;
 <a name="l00247"></a>00247 }
 <a name="l00248"></a>00248 
-<a name="l00249"></a>00249 <span class="keywordtype">void</span> Set_Material_And_Light (<span class="keywordtype">int</span> m, <span class="keywordtype">int</span> l)
+<a name="l00249"></a><a class="code" href="material_8hpp.html#a5e58d6ad4c1f1c3002a3c654037ab23a">00249</a> <span class="keywordtype">void</span> <a class="code" href="material_8cpp.html#a0e5bdab6aeb0e24f8bdb8237c00f0034">Set_Material_And_Light</a> (<span class="keywordtype">int</span> m, <span class="keywordtype">int</span> l)
 <a name="l00250"></a>00250 {
-<a name="l00251"></a>00251    Current_Material = l;
-<a name="l00252"></a>00252    Set_Light();
-<a name="l00253"></a>00253    Current_Material = m;
-<a name="l00254"></a>00254    Set_Material();
+<a name="l00251"></a>00251    <a class="code" href="material_8cpp.html#a035cf998ebacdfc1e38d281e57b8ec13">Current_Material</a> = l;
+<a name="l00252"></a>00252    <a class="code" href="material_8cpp.html#a57a9b2584097b2eb71a3f1b997b7a6f8">Set_Light</a>();
+<a name="l00253"></a>00253    <a class="code" href="material_8cpp.html#a035cf998ebacdfc1e38d281e57b8ec13">Current_Material</a> = m;
+<a name="l00254"></a>00254    <a class="code" href="material_8cpp.html#a724c876e4780d698e7e9ed353709bd79">Set_Material</a>();
 <a name="l00255"></a>00255 }
 <a name="l00256"></a>00256 
-<a name="l00257"></a>00257 <span class="keywordtype">int</span> Background = 1;
+<a name="l00257"></a><a class="code" href="material_8cpp.html#a96f6bdb1e67a1bba77624b19bef7bfb6">00257</a> <span class="keywordtype">int</span> <a class="code" href="material_8cpp.html#a96f6bdb1e67a1bba77624b19bef7bfb6">Background</a> = 1;
 <a name="l00258"></a>00258 
-<a name="l00259"></a>00259 <span class="keywordtype">void</span> Set_Black_Material()
+<a name="l00259"></a><a class="code" href="material_8hpp.html#a2987eff3b35b8ef824bad012fc2e8c6f">00259</a> <span class="keywordtype">void</span> <a class="code" href="material_8cpp.html#a2987eff3b35b8ef824bad012fc2e8c6f">Set_Black_Material</a>()
 <a name="l00260"></a>00260 {
-<a name="l00261"></a>00261    <span class="keywordflow">switch</span> (Background)
+<a name="l00261"></a>00261    <span class="keywordflow">switch</span> (<a class="code" href="material_8cpp.html#a96f6bdb1e67a1bba77624b19bef7bfb6">Background</a>)
 <a name="l00262"></a>00262    {
 <a name="l00263"></a>00263    <span class="keywordflow">case</span> 0:
 <a name="l00264"></a>00264    {
@@ -356,9 +357,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00296"></a>00296    }
 <a name="l00297"></a>00297 }
 <a name="l00298"></a>00298 
-<a name="l00299"></a>00299 <span class="keywordtype">void</span> Set_Background()
+<a name="l00299"></a><a class="code" href="material_8hpp.html#a210ac1c393ab50ceba066ebc89fe810f">00299</a> <span class="keywordtype">void</span> <a class="code" href="material_8cpp.html#a210ac1c393ab50ceba066ebc89fe810f">Set_Background</a>()
 <a name="l00300"></a>00300 {
-<a name="l00301"></a>00301    <span class="keywordflow">switch</span> (Background)
+<a name="l00301"></a>00301    <span class="keywordflow">switch</span> (<a class="code" href="material_8cpp.html#a96f6bdb1e67a1bba77624b19bef7bfb6">Background</a>)
 <a name="l00302"></a>00302    {
 <a name="l00303"></a>00303    <span class="keywordflow">case</span> 0:
 <a name="l00304"></a>00304       glClearColor (0.0, 0.0, 0.0, 1.0);
@@ -369,25 +370,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00309"></a>00309    }
 <a name="l00310"></a>00310 }
 <a name="l00311"></a>00311 
-<a name="l00312"></a>00312 <span class="keywordtype">void</span> Toggle_Background()
+<a name="l00312"></a><a class="code" href="material_8hpp.html#a2db78682d9322aabcbffb424955676b1">00312</a> <span class="keywordtype">void</span> <a class="code" href="material_8cpp.html#a2db78682d9322aabcbffb424955676b1">Toggle_Background</a>()
 <a name="l00313"></a>00313 {
-<a name="l00314"></a>00314    Background = 1 - Background;
+<a name="l00314"></a>00314    <a class="code" href="material_8cpp.html#a96f6bdb1e67a1bba77624b19bef7bfb6">Background</a> = 1 - <a class="code" href="material_8cpp.html#a96f6bdb1e67a1bba77624b19bef7bfb6">Background</a>;
 <a name="l00315"></a>00315 }
 <a name="l00316"></a>00316 
-<a name="l00317"></a>00317 <span class="keywordtype">void</span> Set_Transparency()
+<a name="l00317"></a><a class="code" href="material_8hpp.html#ae7c1300f17d54bb5f366dd5d611eafa2">00317</a> <span class="keywordtype">void</span> <a class="code" href="material_8cpp.html#ae7c1300f17d54bb5f366dd5d611eafa2">Set_Transparency</a>()
 <a name="l00318"></a>00318 {
 <a name="l00319"></a>00319    glEnable (GL_BLEND);
 <a name="l00320"></a>00320    glDepthMask (GL_FALSE);
 <a name="l00321"></a>00321    glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 <a name="l00322"></a>00322 }
 <a name="l00323"></a>00323 
-<a name="l00324"></a>00324 <span class="keywordtype">void</span> Remove_Transparency()
+<a name="l00324"></a><a class="code" href="material_8hpp.html#ac9a97dbc9f7c0d51197406cdd0488028">00324</a> <span class="keywordtype">void</span> <a class="code" href="material_8cpp.html#ac9a97dbc9f7c0d51197406cdd0488028">Remove_Transparency</a>()
 <a name="l00325"></a>00325 {
 <a name="l00326"></a>00326    glDisable (GL_BLEND);
 <a name="l00327"></a>00327    glDepthMask (GL_TRUE);
 <a name="l00328"></a>00328 }
 <a name="l00329"></a>00329 
-<a name="l00330"></a>00330 <span class="keywordtype">void</span> Set_AntiAliasing()
+<a name="l00330"></a><a class="code" href="material_8hpp.html#acf281556f5f0ae4fc9d65e86d85a7bf2">00330</a> <span class="keywordtype">void</span> <a class="code" href="material_8cpp.html#acf281556f5f0ae4fc9d65e86d85a7bf2">Set_AntiAliasing</a>()
 <a name="l00331"></a>00331 {
 <a name="l00332"></a>00332 <span class="preprocessor">#ifdef GLVIS_MULTISAMPLE</span>
 <a name="l00333"></a>00333 <span class="preprocessor"></span>   glEnable(GL_MULTISAMPLE);
@@ -433,7 +434,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00373"></a>00373 <span class="comment">   */</span>
 <a name="l00374"></a>00374 }
 <a name="l00375"></a>00375 
-<a name="l00376"></a>00376 <span class="keywordtype">void</span> Remove_AntiAliasing()
+<a name="l00376"></a><a class="code" href="material_8hpp.html#ac665ab71499ab2d0aef94b1c4e793877">00376</a> <span class="keywordtype">void</span> <a class="code" href="material_8cpp.html#ac665ab71499ab2d0aef94b1c4e793877">Remove_AntiAliasing</a>()
 <a name="l00377"></a>00377 {
 <a name="l00378"></a>00378    glDisable(GL_POLYGON_SMOOTH);
 <a name="l00379"></a>00379    glDisable(GL_LINE_SMOOTH);
@@ -463,7 +464,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -472,7 +473,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 15:12:44 for GLVis by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:52:23 for GLVis by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

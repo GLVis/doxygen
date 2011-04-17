@@ -51,6 +51,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -58,7 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">vsvector.hpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="vsvector_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443271. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -76,60 +77,60 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00016"></a>00016 {
 <a name="l00017"></a>00017 <span class="keyword">protected</span>:
 <a name="l00018"></a>00018 
-<a name="l00019"></a>00019    Vector *solx, *soly;
-<a name="l00020"></a>00020    <span class="keywordtype">int</span> vectorlist, displinelist, drawdisp, drawvector;
+<a name="l00019"></a><a class="code" href="classVisualizationSceneVector.html#a576d769a1db735cbff9806b3a67ae84c">00019</a>    Vector *<a class="code" href="classVisualizationSceneVector.html#a40440067cbe3203801dfd104cabce0d8">solx</a>, *<a class="code" href="classVisualizationSceneVector.html#a576d769a1db735cbff9806b3a67ae84c">soly</a>;
+<a name="l00020"></a><a class="code" href="classVisualizationSceneVector.html#a98ab54eb9d6696eddbf39ccaaad6273b">00020</a>    <span class="keywordtype">int</span> <a class="code" href="classVisualizationSceneVector.html#a98ab54eb9d6696eddbf39ccaaad6273b">vectorlist</a>, <a class="code" href="classVisualizationSceneVector.html#ac702521b83a3737f377ad95efa20122d">displinelist</a>, <a class="code" href="classVisualizationSceneVector.html#a3ea7816d67b8e13586b2001570a3eb6a">drawdisp</a>, <a class="code" href="classVisualizationSceneVector.html#a9f9ef5a9cb95a4a33beab9a425c5bd76">drawvector</a>;
 <a name="l00021"></a>00021 
-<a name="l00022"></a>00022    GridFunction *VecGridF;
+<a name="l00022"></a><a class="code" href="classVisualizationSceneVector.html#a990eee26b916b4f32d754cb85cbd4f4d">00022</a>    GridFunction *<a class="code" href="classVisualizationSceneVector.html#a990eee26b916b4f32d754cb85cbd4f4d">VecGridF</a>;
 <a name="l00023"></a>00023 
-<a name="l00024"></a>00024    <span class="keywordtype">void</span> Init();
+<a name="l00024"></a>00024    <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneVector.html#a1a4bcec8d680fee862858e8f04dbe70a">Init</a>();
 <a name="l00025"></a>00025 
-<a name="l00026"></a>00026    <span class="keyword">virtual</span> <span class="keywordtype">void</span> GetRefinedValues(<span class="keywordtype">int</span> i, <span class="keyword">const</span> IntegrationRule &amp;ir,
+<a name="l00026"></a>00026    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneVector.html#a61effd7b4616a0598c0e2a60590af936">GetRefinedValues</a>(<span class="keywordtype">int</span> i, <span class="keyword">const</span> IntegrationRule &amp;ir,
 <a name="l00027"></a>00027                                  Vector &amp;vals, DenseMatrix &amp;tr);
-<a name="l00028"></a>00028    <span class="keyword">virtual</span> <span class="keywordtype">int</span> GetRefinedValuesAndNormals(<span class="keywordtype">int</span> i, <span class="keyword">const</span> IntegrationRule &amp;ir,
+<a name="l00028"></a>00028    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classVisualizationSceneVector.html#a0ce28df282c5c21668eb7e09d4a02859">GetRefinedValuesAndNormals</a>(<span class="keywordtype">int</span> i, <span class="keyword">const</span> IntegrationRule &amp;ir,
 <a name="l00029"></a>00029                                           Vector &amp;vals, DenseMatrix &amp;tr,
 <a name="l00030"></a>00030                                           DenseMatrix &amp;normals);
 <a name="l00031"></a>00031 
-<a name="l00032"></a>00032    double (*Vec2Scalar)(double, double);
+<a name="l00032"></a><a class="code" href="classVisualizationSceneVector.html#aa15c1ee7731fd58e20452078a755cb5f">00032</a>    double (*<a class="code" href="classVisualizationSceneVector.html#aa15c1ee7731fd58e20452078a755cb5f">Vec2Scalar</a>)(double, double);
 <a name="l00033"></a>00033 
-<a name="l00034"></a>00034    <span class="keywordtype">void</span> DrawVector(<span class="keywordtype">double</span>, <span class="keywordtype">double</span>, <span class="keywordtype">double</span>, <span class="keywordtype">double</span>, <span class="keywordtype">double</span>);
+<a name="l00034"></a>00034    <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneVector.html#ae0aef19dba0355266d91318f1892584b">DrawVector</a>(<span class="keywordtype">double</span>, <span class="keywordtype">double</span>, <span class="keywordtype">double</span>, <span class="keywordtype">double</span>, <span class="keywordtype">double</span>);
 <a name="l00035"></a>00035 
-<a name="l00036"></a>00036    <span class="keywordtype">double</span> maxlen;
+<a name="l00036"></a><a class="code" href="classVisualizationSceneVector.html#a328f4065fd1d702e9d3e3243a0bb7496">00036</a>    <span class="keywordtype">double</span> <a class="code" href="classVisualizationSceneVector.html#a328f4065fd1d702e9d3e3243a0bb7496">maxlen</a>;
 <a name="l00037"></a>00037 
-<a name="l00038"></a>00038    Vector vc0;
-<a name="l00039"></a>00039    IsoparametricTransformation T0;
+<a name="l00038"></a><a class="code" href="classVisualizationSceneVector.html#a8cfc86b058e8a5570d5bc32bfdf47104">00038</a>    Vector <a class="code" href="classVisualizationSceneVector.html#a8cfc86b058e8a5570d5bc32bfdf47104">vc0</a>;
+<a name="l00039"></a><a class="code" href="classVisualizationSceneVector.html#a83cd1d5b63915a21de42d0c265077de1">00039</a>    IsoparametricTransformation <a class="code" href="classVisualizationSceneVector.html#a83cd1d5b63915a21de42d0c265077de1">T0</a>;
 <a name="l00040"></a>00040 
 <a name="l00041"></a>00041 <span class="keyword">public</span>:
-<a name="l00042"></a>00042    <a class="code" href="classVisualizationSceneVector.html">VisualizationSceneVector</a>(Mesh &amp;m, Vector &amp;sx, Vector &amp;sy);
-<a name="l00043"></a>00043    <a class="code" href="classVisualizationSceneVector.html">VisualizationSceneVector</a>(GridFunction &amp;vgf);
+<a name="l00042"></a>00042    <a class="code" href="classVisualizationSceneVector.html#af92e5d9dfe7a2cdfa25bfd93238f04dd">VisualizationSceneVector</a>(Mesh &amp;m, Vector &amp;sx, Vector &amp;sy);
+<a name="l00043"></a>00043    <a class="code" href="classVisualizationSceneVector.html#af92e5d9dfe7a2cdfa25bfd93238f04dd">VisualizationSceneVector</a>(GridFunction &amp;vgf);
 <a name="l00044"></a>00044 
-<a name="l00045"></a>00045    <span class="keywordtype">void</span> NewMeshAndSolution(GridFunction &amp;vgf, <span class="keywordtype">int</span> rescale = 0);
+<a name="l00045"></a>00045    <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneVector.html#a258844d5d4b88f2bd6a9cd5f60dc1a3b">NewMeshAndSolution</a>(GridFunction &amp;vgf, <span class="keywordtype">int</span> rescale = 0);
 <a name="l00046"></a>00046 
-<a name="l00047"></a>00047    <span class="keyword">virtual</span> ~<a class="code" href="classVisualizationSceneVector.html">VisualizationSceneVector</a>();
+<a name="l00047"></a>00047    <span class="keyword">virtual</span> <a class="code" href="classVisualizationSceneVector.html#ae854f73ec13ae8f1ab552303cf5174a5">~VisualizationSceneVector</a>();
 <a name="l00048"></a>00048 
-<a name="l00049"></a>00049    <span class="keywordtype">void</span> NPressed();
-<a name="l00050"></a>00050    <span class="keywordtype">void</span> PrepareDisplacedMesh();
-<a name="l00051"></a>00051    <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrepareLines()
-<a name="l00052"></a>00052    { VisualizationSceneSolution::PrepareLines(); PrepareDisplacedMesh(); }
+<a name="l00049"></a>00049    <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneVector.html#a584fd48f93acdcc59c7bb6aff9366718">NPressed</a>();
+<a name="l00050"></a>00050    <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneVector.html#a214fccc3ea668afa70321dc99f0f89df">PrepareDisplacedMesh</a>();
+<a name="l00051"></a><a class="code" href="classVisualizationSceneVector.html#a39053e19f7d9acbe99ad70ca3ff8999b">00051</a>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneVector.html#a39053e19f7d9acbe99ad70ca3ff8999b">PrepareLines</a>()
+<a name="l00052"></a>00052    { <a class="code" href="classVisualizationSceneVector.html#a39053e19f7d9acbe99ad70ca3ff8999b">VisualizationSceneSolution::PrepareLines</a>(); <a class="code" href="classVisualizationSceneVector.html#a214fccc3ea668afa70321dc99f0f89df">PrepareDisplacedMesh</a>(); }
 <a name="l00053"></a>00053 
-<a name="l00054"></a>00054    <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrepareVectorField();
-<a name="l00055"></a>00055    <span class="keywordtype">void</span> ToggleVectorField();
+<a name="l00054"></a>00054    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneVector.html#a7c68f6866e0f3599b67eb4fe0d7008d0">PrepareVectorField</a>();
+<a name="l00055"></a>00055    <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneVector.html#ac96f187b9b479e082739cd51c645eca4">ToggleVectorField</a>();
 <a name="l00056"></a>00056 
-<a name="l00057"></a>00057    <span class="keywordtype">void</span> ToggleDisplacements()
+<a name="l00057"></a><a class="code" href="classVisualizationSceneVector.html#a3afc1155ca912eed5c1480fbb8115068">00057</a>    <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneVector.html#a3afc1155ca912eed5c1480fbb8115068">ToggleDisplacements</a>()
 <a name="l00058"></a>00058    {
-<a name="l00059"></a>00059       drawdisp = (drawdisp+1)%4;
-<a name="l00060"></a>00060       <span class="keywordflow">if</span> (drawdisp != 1)
-<a name="l00061"></a>00061          PrepareDisplacedMesh();
+<a name="l00059"></a>00059       <a class="code" href="classVisualizationSceneVector.html#a3ea7816d67b8e13586b2001570a3eb6a">drawdisp</a> = (<a class="code" href="classVisualizationSceneVector.html#a3ea7816d67b8e13586b2001570a3eb6a">drawdisp</a>+1)%4;
+<a name="l00060"></a>00060       <span class="keywordflow">if</span> (<a class="code" href="classVisualizationSceneVector.html#a3ea7816d67b8e13586b2001570a3eb6a">drawdisp</a> != 1)
+<a name="l00061"></a>00061          <a class="code" href="classVisualizationSceneVector.html#a214fccc3ea668afa70321dc99f0f89df">PrepareDisplacedMesh</a>();
 <a name="l00062"></a>00062    }
 <a name="l00063"></a>00063 
-<a name="l00064"></a>00064    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Draw();
+<a name="l00064"></a>00064    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneVector.html#adf981d0ee69a75bde0f910fe8b6ae034">Draw</a>();
 <a name="l00065"></a>00065 
-<a name="l00066"></a>00066    <span class="keyword">virtual</span> <span class="keywordtype">void</span> EventUpdateColors() { Prepare(); PrepareVectorField(); }
+<a name="l00066"></a><a class="code" href="classVisualizationSceneVector.html#ac827e3bb35122e18e9e6df8a3ed735ef">00066</a>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneVector.html#ac827e3bb35122e18e9e6df8a3ed735ef">EventUpdateColors</a>() { <a class="code" href="classVisualizationSceneSolution.html#a5b090840a32af79a6175602da4ffee21">Prepare</a>(); <a class="code" href="classVisualizationSceneVector.html#a7c68f6866e0f3599b67eb4fe0d7008d0">PrepareVectorField</a>(); }
 <a name="l00067"></a>00067 
-<a name="l00068"></a>00068    <span class="keywordtype">int</span> RefineFactor;
+<a name="l00068"></a><a class="code" href="classVisualizationSceneVector.html#a8281d01b5db403f94dd2356512766406">00068</a>    <span class="keywordtype">int</span> <a class="code" href="classVisualizationSceneVector.html#a8281d01b5db403f94dd2356512766406">RefineFactor</a>;
 <a name="l00069"></a>00069 
-<a name="l00070"></a>00070    <span class="keywordtype">double</span> ArrowScale;
+<a name="l00070"></a><a class="code" href="classVisualizationSceneVector.html#a12a2a95450a843750030b45f04981b12">00070</a>    <span class="keywordtype">double</span> <a class="code" href="classVisualizationSceneVector.html#a12a2a95450a843750030b45f04981b12">ArrowScale</a>;
 <a name="l00071"></a>00071 
-<a name="l00072"></a>00072    <span class="keywordtype">void</span> CycleVec2Scalar();
+<a name="l00072"></a>00072    <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneVector.html#ac40f54795f8ac209ce5c2ccbed7d3e28">CycleVec2Scalar</a>();
 <a name="l00073"></a>00073 };
 <a name="l00074"></a>00074 
 <a name="l00075"></a>00075 <span class="preprocessor">#endif</span>
@@ -140,7 +141,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -149,7 +150,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 15:12:44 for GLVis by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:52:24 for GLVis by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

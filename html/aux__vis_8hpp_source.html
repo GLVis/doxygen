@@ -51,6 +51,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -58,7 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">aux_vis.hpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="aux__vis_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443271. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -79,82 +80,82 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00019"></a>00019 <span class="preprocessor">#include &quot;tk.h&quot;</span>
 <a name="l00020"></a>00020 <span class="preprocessor">#include &quot;aux_gl.hpp&quot;</span>
 <a name="l00021"></a>00021 
-<a name="l00022"></a>00022 <span class="preprocessor">#include &quot;openglvis.hpp&quot;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &quot;<a class="code" href="openglvis_8hpp.html">openglvis.hpp</a>&quot;</span>
 <a name="l00023"></a>00023 
-<a name="l00024"></a>00024 <span class="keyword">extern</span> <span class="keywordtype">float</span> MatAlpha;
-<a name="l00025"></a>00025 <span class="keyword">extern</span> <span class="keywordtype">float</span> MatAlphaCenter;
+<a name="l00024"></a>00024 <span class="keyword">extern</span> <span class="keywordtype">float</span> <a class="code" href="aux__vis_8cpp.html#a72ac4a8827898f543e22495d8be19b86">MatAlpha</a>;
+<a name="l00025"></a>00025 <span class="keyword">extern</span> <span class="keywordtype">float</span> <a class="code" href="aux__vis_8cpp.html#a5c7bebb0154ce9c8b21df349cce6386e">MatAlphaCenter</a>;
 <a name="l00026"></a>00026 
-<a name="l00028"></a>00028 <span class="keywordtype">int</span> InitVisualization(<span class="keyword">const</span> <span class="keywordtype">char</span> name[], <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h);
+<a name="l00028"></a>00028 <span class="keywordtype">int</span> <a class="code" href="aux__vis_8cpp.html#a1cb02c2636dea48ecf59bab2c8d3be5c" title="Initializes the visualization and some keys.">InitVisualization</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> name[], <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h);
 <a name="l00029"></a>00029 
-<a name="l00031"></a>00031 <span class="keywordtype">void</span> SetVisualizationScene(<a class="code" href="classVisualizationScene.html">VisualizationScene</a> * scene,
-<a name="l00032"></a>00032                            <span class="keywordtype">int</span> view = 3, <span class="keywordtype">char</span> * keys = NULL);
+<a name="l00031"></a>00031 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a123d870a20286e4b2092338cb960e782" title="Start the infinite visualization loop.">SetVisualizationScene</a>(<a class="code" href="classVisualizationScene.html">VisualizationScene</a> * scene,
+<a name="l00032"></a>00032                            <span class="keywordtype">int</span> view = 3, <span class="keywordtype">char</span> * <a class="code" href="glvis_8cpp.html#a51ba742484f9bdff4502c62248f0ab5b">keys</a> = NULL);
 <a name="l00033"></a>00033 
-<a name="l00034"></a>00034 <span class="keywordtype">void</span> KillVisualization();
+<a name="l00034"></a>00034 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a0b4b010980b49b61990ed57786b88092">KillVisualization</a>();
 <a name="l00035"></a>00035 
-<a name="l00037"></a>00037 <span class="keywordtype">void</span> SendExposeEvent();
+<a name="l00037"></a>00037 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00038"></a>00038 
-<a name="l00039"></a>00039 <span class="keywordtype">void</span> MyExpose();
+<a name="l00039"></a>00039 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a14c66e50f40292c34164e713f845e9c7">MyExpose</a>();
 <a name="l00040"></a>00040 
-<a name="l00041"></a>00041 <span class="keywordtype">void</span> MainLoop();
-<a name="l00042"></a>00042 <span class="keywordtype">void</span> AddIdleFunc(<span class="keywordtype">void</span> (*Func)(<span class="keywordtype">void</span>));
-<a name="l00043"></a>00043 <span class="keywordtype">void</span> RemoveIdleFunc(<span class="keywordtype">void</span> (*Func)(<span class="keywordtype">void</span>));
+<a name="l00041"></a>00041 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a153a5fd8946b6ab9fd9b725759fffe5e">MainLoop</a>();
+<a name="l00042"></a>00042 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a902196002355b22363b8573023eff4bf">AddIdleFunc</a>(<span class="keywordtype">void</span> (*Func)(<span class="keywordtype">void</span>));
+<a name="l00043"></a>00043 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a6a3c865cab4476fb4f52d88a7e0b24a1">RemoveIdleFunc</a>(<span class="keywordtype">void</span> (*Func)(<span class="keywordtype">void</span>));
 <a name="l00044"></a>00044 
-<a name="l00045"></a>00045 <span class="keywordtype">void</span> LeftButtonDown  (AUX_EVENTREC *event);
-<a name="l00046"></a>00046 <span class="keywordtype">void</span> LeftButtonLoc   (AUX_EVENTREC *event);
-<a name="l00047"></a>00047 <span class="keywordtype">void</span> LeftButtonUp    (AUX_EVENTREC *event);
-<a name="l00048"></a>00048 <span class="keywordtype">void</span> MiddleButtonDown(AUX_EVENTREC *event);
-<a name="l00049"></a>00049 <span class="keywordtype">void</span> MiddleButtonLoc (AUX_EVENTREC *event);
-<a name="l00050"></a>00050 <span class="keywordtype">void</span> MiddleButtonUp  (AUX_EVENTREC *event);
-<a name="l00051"></a>00051 <span class="keywordtype">void</span> RightButtonDown (AUX_EVENTREC *event);
-<a name="l00052"></a>00052 <span class="keywordtype">void</span> RightButtonLoc  (AUX_EVENTREC *event);
-<a name="l00053"></a>00053 <span class="keywordtype">void</span> RightButtonUp   (AUX_EVENTREC *event);
+<a name="l00045"></a>00045 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a528988e71455876c1ef00cfe23b6e737">LeftButtonDown</a>  (AUX_EVENTREC *event);
+<a name="l00046"></a>00046 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a1cdada589819ed59e9e150f5a36be2f2">LeftButtonLoc</a>   (AUX_EVENTREC *event);
+<a name="l00047"></a>00047 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a696c27d3bcc99cc4362b246f2afbc387">LeftButtonUp</a>    (AUX_EVENTREC *event);
+<a name="l00048"></a>00048 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#ac0251cb3247e699b4740eb0b4a0a8bc2">MiddleButtonDown</a>(AUX_EVENTREC *event);
+<a name="l00049"></a>00049 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a580f0c8efa6d68b74b092186f32740a7">MiddleButtonLoc</a> (AUX_EVENTREC *event);
+<a name="l00050"></a>00050 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a79fbeb1d57b9e53996d14bfc2ee64f14">MiddleButtonUp</a>  (AUX_EVENTREC *event);
+<a name="l00051"></a>00051 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#aef60366fead3ea929af1f8f5724c25e0">RightButtonDown</a> (AUX_EVENTREC *event);
+<a name="l00052"></a>00052 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a1b716e3410bffb791085d2f05ce6f007">RightButtonLoc</a>  (AUX_EVENTREC *event);
+<a name="l00053"></a>00053 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#aa961abd01554fbe25d4aaec95c23d645">RightButtonUp</a>   (AUX_EVENTREC *event);
 <a name="l00054"></a>00054 
-<a name="l00055"></a>00055 <span class="keywordtype">void</span> KeyP();
-<a name="l00056"></a>00056 <span class="keywordtype">void</span> KeyS();
-<a name="l00057"></a>00057 <span class="keywordtype">void</span> KeyQPressed();
+<a name="l00055"></a>00055 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a6d23442812b3f1b0dabcb9e81d17decf">KeyP</a>();
+<a name="l00056"></a>00056 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#aca1a94943bc1efeeddfc2869306dce37">KeyS</a>();
+<a name="l00057"></a>00057 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#af62a1b1bdb3948832a6252aaa5998215">KeyQPressed</a>();
 <a name="l00058"></a>00058 
-<a name="l00059"></a>00059 <span class="keywordtype">void</span> Key1Pressed();
-<a name="l00060"></a>00060 <span class="keywordtype">void</span> Key2Pressed();
-<a name="l00061"></a>00061 <span class="keywordtype">void</span> Key3Pressed();
-<a name="l00062"></a>00062 <span class="keywordtype">void</span> Key4Pressed();
-<a name="l00063"></a>00063 <span class="keywordtype">void</span> Key5Pressed();
-<a name="l00064"></a>00064 <span class="keywordtype">void</span> Key6Pressed();
-<a name="l00065"></a>00065 <span class="keywordtype">void</span> Key7Pressed();
-<a name="l00066"></a>00066 <span class="keywordtype">void</span> Key8Pressed();
-<a name="l00067"></a>00067 <span class="keywordtype">void</span> Key9Pressed();
+<a name="l00059"></a>00059 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a30412af4a8cc51bc5ea3f2f173075ed5">Key1Pressed</a>();
+<a name="l00060"></a>00060 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a585b32928f7b0f589690de3539aa868a">Key2Pressed</a>();
+<a name="l00061"></a>00061 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a56039a44bb0d82d12155d34a83d8fe6d">Key3Pressed</a>();
+<a name="l00062"></a>00062 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#ac4092a7ac723737de0b927e05d577cc7">Key4Pressed</a>();
+<a name="l00063"></a>00063 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a0c65b84e16e68ef6697ef034f6ee6fc2">Key5Pressed</a>();
+<a name="l00064"></a>00064 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#aa81c59ed41397e7a48996b8e00534be5">Key6Pressed</a>();
+<a name="l00065"></a>00065 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#ae5f8f4f74fad9efc848c9158f19c4b8a">Key7Pressed</a>();
+<a name="l00066"></a>00066 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a76a6832632098024d40fb49e47e548dd">Key8Pressed</a>();
+<a name="l00067"></a>00067 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a1e28e3b42dce42f220dd46cee6423836">Key9Pressed</a>();
 <a name="l00068"></a>00068 
-<a name="l00069"></a>00069 <span class="keywordtype">void</span> Key0Pressed();
-<a name="l00070"></a>00070 <span class="keywordtype">void</span> KeyDeletePressed();
-<a name="l00071"></a>00071 <span class="keywordtype">void</span> KeyEnterPressed();
+<a name="l00069"></a>00069 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#acb06a69e8c70932b41f17ae2f10ebbcd">Key0Pressed</a>();
+<a name="l00070"></a>00070 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#ae72e93c1c35ad87215ade5307d064695">KeyDeletePressed</a>();
+<a name="l00071"></a>00071 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#abeccd54302ad1ec81e2d19fa7e7f1b13">KeyEnterPressed</a>();
 <a name="l00072"></a>00072 
-<a name="l00073"></a>00073 <span class="keywordtype">void</span> KeyLeftPressed();
-<a name="l00074"></a>00074 <span class="keywordtype">void</span> KeyRightPressed();
-<a name="l00075"></a>00075 <span class="keywordtype">void</span> KeyUpPressed();
-<a name="l00076"></a>00076 <span class="keywordtype">void</span> KeyDownPressed();
-<a name="l00077"></a>00077 <span class="keywordtype">void</span> KeyJPressed();
-<a name="l00078"></a>00078 <span class="keywordtype">void</span> KeyMinusPressed();
-<a name="l00079"></a>00079 <span class="keywordtype">void</span> KeyPlusPressed();
+<a name="l00073"></a>00073 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a2821ab890bf34a2a290e9e2f801dc1fc">KeyLeftPressed</a>();
+<a name="l00074"></a>00074 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#ad146c6bc247d82dd73d7705e297c1df2">KeyRightPressed</a>();
+<a name="l00075"></a>00075 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a3e0100457e1af742ed654e2c6f88dc5d">KeyUpPressed</a>();
+<a name="l00076"></a>00076 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a24fe3cabda9bfd7bf4762b57a0e55fb6">KeyDownPressed</a>();
+<a name="l00077"></a>00077 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a858e1709ddaf8cf81fee85daedd4ae98">KeyJPressed</a>();
+<a name="l00078"></a>00078 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#ab0a58e8a2f8245ee902fdc61a7002ce3">KeyMinusPressed</a>();
+<a name="l00079"></a>00079 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a1434f8f7a0899de7e4c2c19b3858d850">KeyPlusPressed</a>();
 <a name="l00080"></a>00080 
-<a name="l00081"></a>00081 <span class="keywordtype">void</span> ZoomIn();
-<a name="l00082"></a>00082 <span class="keywordtype">void</span> ZoomOut();
-<a name="l00083"></a>00083 <span class="keywordtype">void</span> ScaleUp();
-<a name="l00084"></a>00084 <span class="keywordtype">void</span> ScaleDown();
-<a name="l00085"></a>00085 <span class="keywordtype">void</span> LookAt();
-<a name="l00086"></a>00086 <span class="keywordtype">void</span> ShrinkWindow();
-<a name="l00087"></a>00087 <span class="keywordtype">void</span> EnlargeWindow();
-<a name="l00088"></a>00088 <span class="keywordtype">void</span> MoveResizeWindow(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h);
+<a name="l00081"></a>00081 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#acea72e7aff0e351b5c1ef76a3b44033f">ZoomIn</a>();
+<a name="l00082"></a>00082 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#ad40cbfdf9d1ba7a4b95a4100c893f929">ZoomOut</a>();
+<a name="l00083"></a>00083 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a7d9c24d7bcbdac4657e4a49cc096d734">ScaleUp</a>();
+<a name="l00084"></a>00084 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#ae1cc0d5e05878f579f9471a666aa8ac2">ScaleDown</a>();
+<a name="l00085"></a>00085 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#af840fdb915a1a89e976450ea10d05892">LookAt</a>();
+<a name="l00086"></a>00086 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#ae7b3e681c96443d7f466ff291a13cffa">ShrinkWindow</a>();
+<a name="l00087"></a>00087 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a41042651350dde4d8b3eef444bff5b79">EnlargeWindow</a>();
+<a name="l00088"></a>00088 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a7347e880bf1f7ff39f82a33cf687b9a9">MoveResizeWindow</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h);
 <a name="l00089"></a>00089 
-<a name="l00091"></a>00091 <span class="keywordtype">int</span> Screenshot(<span class="keyword">const</span> <span class="keywordtype">char</span> *fname);
+<a name="l00091"></a>00091 <span class="keywordtype">int</span> <a class="code" href="aux__vis_8cpp.html#a90d8baba57f55aec132d98d524df9cc4" title="Take a screenshot using libtiff or xwd.">Screenshot</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fname);
 <a name="l00092"></a>00092 
-<a name="l00094"></a>00094 <span class="keywordtype">void</span> SendKeySequence(<span class="keywordtype">char</span> * seq);
+<a name="l00094"></a>00094 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a205d7b73e3cb28f274cdd783454c067f" title="Send a sequence of keystrokes to the visualization window.">SendKeySequence</a>(<span class="keywordtype">char</span> * seq);
 <a name="l00095"></a>00095 
-<a name="l00096"></a>00096 <span class="keywordtype">void</span> Cone();
+<a name="l00096"></a>00096 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a90b7cb9796054973c891885176cf04f8">Cone</a>();
 <a name="l00097"></a>00097 
-<a name="l00098"></a>00098 <span class="keyword">extern</span> <span class="keywordtype">int</span> MySetColorLogscale;
-<a name="l00099"></a>00099 <span class="keywordtype">void</span> MySetColor(<span class="keywordtype">double</span> val, <span class="keywordtype">double</span> min, <span class="keywordtype">double</span> max);
-<a name="l00100"></a>00100 <span class="keywordtype">void</span> MySetColor(<span class="keywordtype">double</span> val);
-<a name="l00101"></a>00101 <span class="keywordtype">void</span> SetUseTexture(<span class="keywordtype">int</span> ut);
-<a name="l00102"></a>00102 <span class="keywordtype">int</span> GetUseTexture();
+<a name="l00098"></a>00098 <span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="aux__vis_8cpp.html#a68fffc76f729233943c3629de2b308f8">MySetColorLogscale</a>;
+<a name="l00099"></a>00099 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a3c5a2b6a5e26ac34dbd24e7d2ad670ef">MySetColor</a>(<span class="keywordtype">double</span> val, <span class="keywordtype">double</span> min, <span class="keywordtype">double</span> max);
+<a name="l00100"></a>00100 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a3c5a2b6a5e26ac34dbd24e7d2ad670ef">MySetColor</a>(<span class="keywordtype">double</span> val);
+<a name="l00101"></a>00101 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a6ee835cc11f6de1e0f5707cedfc109f2">SetUseTexture</a>(<span class="keywordtype">int</span> ut);
+<a name="l00102"></a>00102 <span class="keywordtype">int</span> <a class="code" href="aux__vis_8cpp.html#a50b61b3e9d738825d19528a967f30efd">GetUseTexture</a>();
 <a name="l00103"></a>00103 
 <a name="l00104"></a>00104 <span class="preprocessor">#endif</span>
 </pre></div></div>
@@ -164,7 +165,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -173,7 +174,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 15:12:44 for GLVis by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:52:23 for GLVis by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

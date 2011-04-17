@@ -51,6 +51,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -58,7 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">palettes.hpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="palettes_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443271. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -78,8 +79,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019 <span class="keyword">using namespace </span>std;
 <a name="l00020"></a>00020 
-<a name="l00021"></a>00021 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_1_Size = 5;
-<a name="l00022"></a>00022 <span class="keywordtype">double</span> RGB_Palette_1[RGB_Palette_1_Size][3] =
+<a name="l00021"></a><a class="code" href="palettes_8hpp.html#ab8db5df7b2dc49fd7159facf8f406002">00021</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#ab8db5df7b2dc49fd7159facf8f406002">RGB_Palette_1_Size</a> = 5;
+<a name="l00022"></a><a class="code" href="palettes_8hpp.html#a8a17d9dbf54eb1df191445297e76acc2">00022</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#a8a17d9dbf54eb1df191445297e76acc2">RGB_Palette_1</a>[<a class="code" href="palettes_8hpp.html#ab8db5df7b2dc49fd7159facf8f406002">RGB_Palette_1_Size</a>][3] =
 <a name="l00023"></a>00023 {
 <a name="l00024"></a>00024    { 0, 0, 1 },
 <a name="l00025"></a>00025    { 0, 1, 1 },
@@ -88,15 +89,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00028"></a>00028    { 1, 0, 0 }
 <a name="l00029"></a>00029 };
 <a name="l00030"></a>00030 
-<a name="l00031"></a>00031 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_2_Size = 2;
-<a name="l00032"></a>00032 <span class="keywordtype">double</span> RGB_Palette_2[RGB_Palette_2_Size][3] =
+<a name="l00031"></a><a class="code" href="palettes_8hpp.html#af2f8d2a5e48c824e4bf6fa70f201cb91">00031</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#af2f8d2a5e48c824e4bf6fa70f201cb91">RGB_Palette_2_Size</a> = 2;
+<a name="l00032"></a><a class="code" href="palettes_8hpp.html#ac653413b61b6fad3fa71280b81fd0989">00032</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#ac653413b61b6fad3fa71280b81fd0989">RGB_Palette_2</a>[<a class="code" href="palettes_8hpp.html#af2f8d2a5e48c824e4bf6fa70f201cb91">RGB_Palette_2_Size</a>][3] =
 <a name="l00033"></a>00033 {
 <a name="l00034"></a>00034    { 1.0, 0.0, 0.0 },
 <a name="l00035"></a>00035    { 1.0, 0.0, 0.0 }
 <a name="l00036"></a>00036 };
 <a name="l00037"></a>00037 
-<a name="l00038"></a>00038 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_3_Size = 65;
-<a name="l00039"></a>00039 <span class="keywordtype">double</span> RGB_Palette_3[RGB_Palette_3_Size][3] =
+<a name="l00038"></a><a class="code" href="palettes_8hpp.html#a03473a032c60c481307d2de168382184">00038</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#a03473a032c60c481307d2de168382184">RGB_Palette_3_Size</a> = 65;
+<a name="l00039"></a><a class="code" href="palettes_8hpp.html#aef1937c7af15ac12d27eef995122d778">00039</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#aef1937c7af15ac12d27eef995122d778">RGB_Palette_3</a>[<a class="code" href="palettes_8hpp.html#a03473a032c60c481307d2de168382184">RGB_Palette_3_Size</a>][3] =
 <a name="l00040"></a>00040 {
 <a name="l00041"></a>00041    {      0,      0, 0.5000 },
 <a name="l00042"></a>00042    {      0,      0, 0.5625 },
@@ -193,15 +194,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00133"></a>00133    { 0.5000,      0,      0 }
 <a name="l00134"></a>00134 };
 <a name="l00135"></a>00135 
-<a name="l00136"></a>00136 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_4_Size = 2;
-<a name="l00137"></a>00137 <span class="keywordtype">double</span> RGB_Palette_4[RGB_Palette_4_Size][3] =
+<a name="l00136"></a><a class="code" href="palettes_8hpp.html#a2e41ada1f5dc7c184b3510a76ac97eee">00136</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#a2e41ada1f5dc7c184b3510a76ac97eee">RGB_Palette_4_Size</a> = 2;
+<a name="l00137"></a><a class="code" href="palettes_8hpp.html#a81e086e861efe9804855b1a1cadd7f39">00137</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#a81e086e861efe9804855b1a1cadd7f39">RGB_Palette_4</a>[<a class="code" href="palettes_8hpp.html#a2e41ada1f5dc7c184b3510a76ac97eee">RGB_Palette_4_Size</a>][3] =
 <a name="l00138"></a>00138 {
 <a name="l00139"></a>00139    { 1.0, 0.8431, 0.0 },
 <a name="l00140"></a>00140    { 1.0, 0.8431, 0.0 }
 <a name="l00141"></a>00141 };
 <a name="l00142"></a>00142 
-<a name="l00143"></a>00143 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_5_Size = 64; <span class="comment">// bone</span>
-<a name="l00144"></a>00144 <span class="keywordtype">double</span> RGB_Palette_5[RGB_Palette_5_Size][3] =
+<a name="l00143"></a><a class="code" href="palettes_8hpp.html#a12e3d4e610f3d201c79c0ff1a461b84c">00143</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#a12e3d4e610f3d201c79c0ff1a461b84c">RGB_Palette_5_Size</a> = 64; <span class="comment">// bone</span>
+<a name="l00144"></a><a class="code" href="palettes_8hpp.html#a6b66d63e5e29b9446ee985cb88f74afd">00144</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#a6b66d63e5e29b9446ee985cb88f74afd">RGB_Palette_5</a>[<a class="code" href="palettes_8hpp.html#a12e3d4e610f3d201c79c0ff1a461b84c">RGB_Palette_5_Size</a>][3] =
 <a name="l00145"></a>00145 {
 <a name="l00146"></a>00146    { 0, 0, 0.0052083333 },
 <a name="l00147"></a>00147    { 0.013888889, 0.013888889, 0.024305556 },
@@ -269,8 +270,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00209"></a>00209    { 1, 1, 1 }
 <a name="l00210"></a>00210 };
 <a name="l00211"></a>00211 
-<a name="l00212"></a>00212 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_6_Size = 64; <span class="comment">// hot</span>
-<a name="l00213"></a>00213 <span class="keywordtype">double</span> RGB_Palette_6[RGB_Palette_6_Size][3] =
+<a name="l00212"></a><a class="code" href="palettes_8hpp.html#a675ee8e4788b8e980a968234d4e06240">00212</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#a675ee8e4788b8e980a968234d4e06240">RGB_Palette_6_Size</a> = 64; <span class="comment">// hot</span>
+<a name="l00213"></a><a class="code" href="palettes_8hpp.html#aa64c6e02ee3a8afc06f23d3262cb1064">00213</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#aa64c6e02ee3a8afc06f23d3262cb1064">RGB_Palette_6</a>[<a class="code" href="palettes_8hpp.html#a675ee8e4788b8e980a968234d4e06240">RGB_Palette_6_Size</a>][3] =
 <a name="l00214"></a>00214 {
 <a name="l00215"></a>00215    { 0.041666667, 0, 0 },
 <a name="l00216"></a>00216    { 0.083333333, 0, 0 },
@@ -338,8 +339,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00278"></a>00278    { 1, 1, 1 }
 <a name="l00279"></a>00279 };
 <a name="l00280"></a>00280 
-<a name="l00281"></a>00281 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_7_Size = 64; <span class="comment">// pink</span>
-<a name="l00282"></a>00282 <span class="keywordtype">double</span> RGB_Palette_7[RGB_Palette_7_Size][3] =
+<a name="l00281"></a><a class="code" href="palettes_8hpp.html#adba49f242c5d1fb4c935064e94ce98a4">00281</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#adba49f242c5d1fb4c935064e94ce98a4">RGB_Palette_7_Size</a> = 64; <span class="comment">// pink</span>
+<a name="l00282"></a><a class="code" href="palettes_8hpp.html#ad37e4ef2c7d55c70a550f056df8e919c">00282</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#ad37e4ef2c7d55c70a550f056df8e919c">RGB_Palette_7</a>[<a class="code" href="palettes_8hpp.html#adba49f242c5d1fb4c935064e94ce98a4">RGB_Palette_7_Size</a>][3] =
 <a name="l00283"></a>00283 {
 <a name="l00284"></a>00284    { 0.11785113, 0, 0 },
 <a name="l00285"></a>00285    { 0.19585655, 0.1028689, 0.1028689 },
@@ -407,8 +408,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00347"></a>00347    { 1, 1, 1 }
 <a name="l00348"></a>00348 };
 <a name="l00349"></a>00349 
-<a name="l00350"></a>00350 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_8_Size = 64; <span class="comment">// cool</span>
-<a name="l00351"></a>00351 <span class="keywordtype">double</span> RGB_Palette_8[RGB_Palette_8_Size][3] =
+<a name="l00350"></a><a class="code" href="palettes_8hpp.html#a4bf8e16713b40260ac7ce64563eef4ad">00350</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#a4bf8e16713b40260ac7ce64563eef4ad">RGB_Palette_8_Size</a> = 64; <span class="comment">// cool</span>
+<a name="l00351"></a><a class="code" href="palettes_8hpp.html#a952d45fa366646af50bf7f2eff391f43">00351</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#a952d45fa366646af50bf7f2eff391f43">RGB_Palette_8</a>[<a class="code" href="palettes_8hpp.html#a4bf8e16713b40260ac7ce64563eef4ad">RGB_Palette_8_Size</a>][3] =
 <a name="l00352"></a>00352 {
 <a name="l00353"></a>00353    { 0, 1, 1 },
 <a name="l00354"></a>00354    { 0.015873016, 0.98412698, 1 },
@@ -476,8 +477,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00416"></a>00416    { 1, 0, 1 }
 <a name="l00417"></a>00417 };
 <a name="l00418"></a>00418 
-<a name="l00419"></a>00419 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_9_Size = 64; <span class="comment">// summer</span>
-<a name="l00420"></a>00420 <span class="keywordtype">double</span> RGB_Palette_9[RGB_Palette_9_Size][3] =
+<a name="l00419"></a><a class="code" href="palettes_8hpp.html#a36a23fc4ada17ee81726ca0a82b93cef">00419</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#a36a23fc4ada17ee81726ca0a82b93cef">RGB_Palette_9_Size</a> = 64; <span class="comment">// summer</span>
+<a name="l00420"></a><a class="code" href="palettes_8hpp.html#a0fc7efb89555cdd34f8b924ec84555cd">00420</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#a0fc7efb89555cdd34f8b924ec84555cd">RGB_Palette_9</a>[<a class="code" href="palettes_8hpp.html#a36a23fc4ada17ee81726ca0a82b93cef">RGB_Palette_9_Size</a>][3] =
 <a name="l00421"></a>00421 {
 <a name="l00422"></a>00422    { 0, 0.5, 0.4 },
 <a name="l00423"></a>00423    { 0.015873016, 0.50793651, 0.4 },
@@ -545,8 +546,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00485"></a>00485    { 1, 1, 0.4 }
 <a name="l00486"></a>00486 };
 <a name="l00487"></a>00487 
-<a name="l00488"></a>00488 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_10_Size = 64; <span class="comment">// hsv</span>
-<a name="l00489"></a>00489 <span class="keywordtype">double</span> RGB_Palette_10[RGB_Palette_10_Size][3] =
+<a name="l00488"></a><a class="code" href="palettes_8hpp.html#a8d22a387e8394a083c1e6eb905e27414">00488</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#a8d22a387e8394a083c1e6eb905e27414">RGB_Palette_10_Size</a> = 64; <span class="comment">// hsv</span>
+<a name="l00489"></a><a class="code" href="palettes_8hpp.html#ab50d7b6393463407d4f878b1717588cf">00489</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#ab50d7b6393463407d4f878b1717588cf">RGB_Palette_10</a>[<a class="code" href="palettes_8hpp.html#a8d22a387e8394a083c1e6eb905e27414">RGB_Palette_10_Size</a>][3] =
 <a name="l00490"></a>00490 {
 <a name="l00491"></a>00491    { 1, 0, 0 },
 <a name="l00492"></a>00492    { 1, 0.09375, 0 },
@@ -614,8 +615,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00554"></a>00554    { 1, 0, 0.09375 }
 <a name="l00555"></a>00555 };
 <a name="l00556"></a>00556 
-<a name="l00557"></a>00557 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_11_Size = 64; <span class="comment">// copper</span>
-<a name="l00558"></a>00558 <span class="keywordtype">double</span> RGB_Palette_11[RGB_Palette_11_Size][3] =
+<a name="l00557"></a><a class="code" href="palettes_8hpp.html#af1e882dd638c53e1f045033c027f9913">00557</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#af1e882dd638c53e1f045033c027f9913">RGB_Palette_11_Size</a> = 64; <span class="comment">// copper</span>
+<a name="l00558"></a><a class="code" href="palettes_8hpp.html#a08bc4438feab5c99c9c1151ec0524dcd">00558</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#a08bc4438feab5c99c9c1151ec0524dcd">RGB_Palette_11</a>[<a class="code" href="palettes_8hpp.html#af1e882dd638c53e1f045033c027f9913">RGB_Palette_11_Size</a>][3] =
 <a name="l00559"></a>00559 {
 <a name="l00560"></a>00560    { 0, 0, 0 },
 <a name="l00561"></a>00561    { 0.01984127, 0.0124, 0.0078968254 },
@@ -683,8 +684,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00623"></a>00623    { 1, 0.7812, 0.4975 }
 <a name="l00624"></a>00624 };
 <a name="l00625"></a>00625 
-<a name="l00626"></a>00626 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_12_Size = 2;
-<a name="l00627"></a>00627 <span class="keywordtype">double</span> RGB_Palette_12[RGB_Palette_12_Size][3] =
+<a name="l00626"></a><a class="code" href="palettes_8hpp.html#a6a2f5b7638cc27c88f1236a79b35f0ae">00626</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#a6a2f5b7638cc27c88f1236a79b35f0ae">RGB_Palette_12_Size</a> = 2;
+<a name="l00627"></a><a class="code" href="palettes_8hpp.html#a51e4960d164b6ee83568fa2ac21f8ad7">00627</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#a51e4960d164b6ee83568fa2ac21f8ad7">RGB_Palette_12</a>[<a class="code" href="palettes_8hpp.html#a6a2f5b7638cc27c88f1236a79b35f0ae">RGB_Palette_12_Size</a>][3] =
 <a name="l00628"></a>00628 {
 <a name="l00629"></a>00629    { 1.0, 1.0, 1.0 },
 <a name="l00630"></a>00630    { 1.0, 1.0, 1.0 }
@@ -737,11 +738,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00677"></a>00677 <span class="comment">  };</span>
 <a name="l00678"></a>00678 <span class="comment">*/</span>
 <a name="l00679"></a>00679 
-<a name="l00680"></a>00680 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_13_Size = (4*16+1); <span class="comment">// vivid</span>
-<a name="l00681"></a>00681 <span class="keywordtype">double</span> RGB_Palette_13[RGB_Palette_13_Size][3];
+<a name="l00680"></a><a class="code" href="palettes_8hpp.html#a1f5b4494f443bebc99b5bade99aee349">00680</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#a1f5b4494f443bebc99b5bade99aee349">RGB_Palette_13_Size</a> = (4*16+1); <span class="comment">// vivid</span>
+<a name="l00681"></a><a class="code" href="palettes_8hpp.html#a0e96f0d7ec4a868d18467f7ddf487efa">00681</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#a0e96f0d7ec4a868d18467f7ddf487efa">RGB_Palette_13</a>[<a class="code" href="palettes_8hpp.html#a1f5b4494f443bebc99b5bade99aee349">RGB_Palette_13_Size</a>][3];
 <a name="l00682"></a>00682 
-<a name="l00683"></a>00683 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_14_Size = 256; <span class="comment">// gimp - BrushedAluminum</span>
-<a name="l00684"></a>00684 <span class="keywordtype">double</span> RGB_Palette_14[RGB_Palette_14_Size][3] =
+<a name="l00683"></a><a class="code" href="palettes_8hpp.html#a110e1734e9ba70b7b7e44d1619a3319a">00683</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#a110e1734e9ba70b7b7e44d1619a3319a">RGB_Palette_14_Size</a> = 256; <span class="comment">// gimp - BrushedAluminum</span>
+<a name="l00684"></a><a class="code" href="palettes_8hpp.html#a6fc13523fb43ef78580ea0a7fae45fca">00684</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#a6fc13523fb43ef78580ea0a7fae45fca">RGB_Palette_14</a>[<a class="code" href="palettes_8hpp.html#a110e1734e9ba70b7b7e44d1619a3319a">RGB_Palette_14_Size</a>][3] =
 <a name="l00685"></a>00685 {
 <a name="l00686"></a>00686    { 0.42968750, 0.44531250, 0.41015625 },
 <a name="l00687"></a>00687    { 0.43750000, 0.44531250, 0.41406250 },
@@ -1001,8 +1002,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00941"></a>00941    { 0.55468750, 0.53515625, 0.54687500 },
 <a name="l00942"></a>00942 };
 <a name="l00943"></a>00943 
-<a name="l00944"></a>00944 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_15_Size = 256; <span class="comment">// gimp - Sunrise</span>
-<a name="l00945"></a>00945 <span class="keywordtype">double</span> RGB_Palette_15[RGB_Palette_15_Size][3] =
+<a name="l00944"></a><a class="code" href="palettes_8hpp.html#a36e036b28da71ee97f00e275185229a8">00944</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#a36e036b28da71ee97f00e275185229a8">RGB_Palette_15_Size</a> = 256; <span class="comment">// gimp - Sunrise</span>
+<a name="l00945"></a><a class="code" href="palettes_8hpp.html#a7834b14b06ad73fb1ba1866c002d9181">00945</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#a7834b14b06ad73fb1ba1866c002d9181">RGB_Palette_15</a>[<a class="code" href="palettes_8hpp.html#a36e036b28da71ee97f00e275185229a8">RGB_Palette_15_Size</a>][3] =
 <a name="l00946"></a>00946 {
 <a name="l00947"></a>00947    { 0.85937500, 0.85937500, 0.85937500 },
 <a name="l00948"></a>00948    { 0.85937500, 0.85937500, 0.85546875 },
@@ -1261,8 +1262,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01201"></a>01201    { 0.83984375, 0.97265625, 0.99218750 },
 <a name="l01202"></a>01202    { 0.84765625, 0.98046875, 0.99218750 },
 <a name="l01203"></a>01203 };
-<a name="l01204"></a>01204 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_16_Size = 256; <span class="comment">// gimp - Horizon</span>
-<a name="l01205"></a>01205 <span class="keywordtype">double</span> RGB_Palette_16[RGB_Palette_16_Size][3] =
+<a name="l01204"></a><a class="code" href="palettes_8hpp.html#a10c98e035f2d261c1727886798c4caa2">01204</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#a10c98e035f2d261c1727886798c4caa2">RGB_Palette_16_Size</a> = 256; <span class="comment">// gimp - Horizon</span>
+<a name="l01205"></a><a class="code" href="palettes_8hpp.html#add9589e22ae6b8d23160a321417c1a26">01205</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#add9589e22ae6b8d23160a321417c1a26">RGB_Palette_16</a>[<a class="code" href="palettes_8hpp.html#a10c98e035f2d261c1727886798c4caa2">RGB_Palette_16_Size</a>][3] =
 <a name="l01206"></a>01206 {
 <a name="l01207"></a>01207    { 0.04687500, 0.35546875, 0.56640625 },
 <a name="l01208"></a>01208    { 0.05468750, 0.36328125, 0.57031250 },
@@ -1522,8 +1523,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01462"></a>01462    { 0.82812500, 0.55078125, 0.40625000 },
 <a name="l01463"></a>01463 };
 <a name="l01464"></a>01464 
-<a name="l01465"></a>01465 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_17_Size = 255; <span class="comment">// gimp - Hilite</span>
-<a name="l01466"></a>01466 <span class="keywordtype">double</span> RGB_Palette_17[RGB_Palette_17_Size][3] =
+<a name="l01465"></a><a class="code" href="palettes_8hpp.html#ac64e49129eccacefa2133c3649fb6d00">01465</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#ac64e49129eccacefa2133c3649fb6d00">RGB_Palette_17_Size</a> = 255; <span class="comment">// gimp - Hilite</span>
+<a name="l01466"></a><a class="code" href="palettes_8hpp.html#ab37f481bcd84fc0d16e5fbcde9f0cea0">01466</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#ab37f481bcd84fc0d16e5fbcde9f0cea0">RGB_Palette_17</a>[<a class="code" href="palettes_8hpp.html#ac64e49129eccacefa2133c3649fb6d00">RGB_Palette_17_Size</a>][3] =
 <a name="l01467"></a>01467 {
 <a name="l01468"></a>01468    { 0.64062500, 0.56250000, 0.70312500 },
 <a name="l01469"></a>01469    { 0.62500000, 0.56250000, 0.70312500 },
@@ -1782,8 +1783,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01722"></a>01722    { 0.60937500, 0.70312500, 0.68750000 },
 <a name="l01723"></a>01723 };
 <a name="l01724"></a>01724 
-<a name="l01725"></a>01725 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_18_Size = 256; <span class="comment">// gimp - DeepSea</span>
-<a name="l01726"></a>01726 <span class="keywordtype">double</span> RGB_Palette_18[RGB_Palette_18_Size][3] =
+<a name="l01725"></a><a class="code" href="palettes_8hpp.html#a957d2cdca329109cceab60ac233272b8">01725</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#a957d2cdca329109cceab60ac233272b8">RGB_Palette_18_Size</a> = 256; <span class="comment">// gimp - DeepSea</span>
+<a name="l01726"></a><a class="code" href="palettes_8hpp.html#aa1fc821ba845a0bdecbf828d6b86c0b9">01726</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#aa1fc821ba845a0bdecbf828d6b86c0b9">RGB_Palette_18</a>[<a class="code" href="palettes_8hpp.html#a957d2cdca329109cceab60ac233272b8">RGB_Palette_18_Size</a>][3] =
 <a name="l01727"></a>01727 {
 <a name="l01728"></a>01728    { 0.00000000, 0.00781250, 0.16406250 },
 <a name="l01729"></a>01729    { 0.00000000, 0.00781250, 0.16796875 },
@@ -2043,8 +2044,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01983"></a>01983    { 0.00000000, 0.96484375, 0.96484375 },
 <a name="l01984"></a>01984 };
 <a name="l01985"></a>01985 
-<a name="l01986"></a>01986 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_19_Size = 256; <span class="comment">// gimp - PastelRainbow</span>
-<a name="l01987"></a>01987 <span class="keywordtype">double</span> RGB_Palette_19[RGB_Palette_19_Size][3] =
+<a name="l01986"></a><a class="code" href="palettes_8hpp.html#a022fad4e7cfb8b07028b62a525914da5">01986</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#a022fad4e7cfb8b07028b62a525914da5">RGB_Palette_19_Size</a> = 256; <span class="comment">// gimp - PastelRainbow</span>
+<a name="l01987"></a><a class="code" href="palettes_8hpp.html#aa45aa26128e47f46815cec6b9e693133">01987</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#aa45aa26128e47f46815cec6b9e693133">RGB_Palette_19</a>[<a class="code" href="palettes_8hpp.html#a022fad4e7cfb8b07028b62a525914da5">RGB_Palette_19_Size</a>][3] =
 <a name="l01988"></a>01988 {
 <a name="l01989"></a>01989    { 0.99609375, 0.74609375, 0.74609375 },
 <a name="l01990"></a>01990    { 0.99609375, 0.75000000, 0.74609375 },
@@ -2304,8 +2305,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l02244"></a>02244    { 0.99609375, 0.74609375, 0.74609375 },
 <a name="l02245"></a>02245 };
 <a name="l02246"></a>02246 
-<a name="l02247"></a>02247 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_20_Size = 256; <span class="comment">// gimp - TropicalColors</span>
-<a name="l02248"></a>02248 <span class="keywordtype">double</span> RGB_Palette_20[RGB_Palette_20_Size][3] =
+<a name="l02247"></a><a class="code" href="palettes_8hpp.html#a84be3cbcdbbdeb2d821e22f833c25e36">02247</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#a84be3cbcdbbdeb2d821e22f833c25e36">RGB_Palette_20_Size</a> = 256; <span class="comment">// gimp - TropicalColors</span>
+<a name="l02248"></a><a class="code" href="palettes_8hpp.html#a0be86e29bf172c4475f6027285c93c31">02248</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#a0be86e29bf172c4475f6027285c93c31">RGB_Palette_20</a>[<a class="code" href="palettes_8hpp.html#a84be3cbcdbbdeb2d821e22f833c25e36">RGB_Palette_20_Size</a>][3] =
 <a name="l02249"></a>02249 {
 <a name="l02250"></a>02250    { 0.03515625, 0.15625000, 0.01171875 },
 <a name="l02251"></a>02251    { 0.03515625, 0.16015625, 0.01171875 },
@@ -2565,8 +2566,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l02505"></a>02505    { 0.35937500, 0.49609375, 0.00000000 },
 <a name="l02506"></a>02506 };
 <a name="l02507"></a>02507 
-<a name="l02508"></a>02508 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_21_Size = 256; <span class="comment">// gimp - Wood2</span>
-<a name="l02509"></a>02509 <span class="keywordtype">double</span> RGB_Palette_21[RGB_Palette_21_Size][3] =
+<a name="l02508"></a><a class="code" href="palettes_8hpp.html#ad0a68f6cf818d0c4545821fdcd601b6f">02508</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#ad0a68f6cf818d0c4545821fdcd601b6f">RGB_Palette_21_Size</a> = 256; <span class="comment">// gimp - Wood2</span>
+<a name="l02509"></a><a class="code" href="palettes_8hpp.html#ae414d756093827d43e6bd06b2c0456ed">02509</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#ae414d756093827d43e6bd06b2c0456ed">RGB_Palette_21</a>[<a class="code" href="palettes_8hpp.html#ad0a68f6cf818d0c4545821fdcd601b6f">RGB_Palette_21_Size</a>][3] =
 <a name="l02510"></a>02510 {
 <a name="l02511"></a>02511    { 0.99609375, 0.69531250, 0.39843750 },
 <a name="l02512"></a>02512    { 0.98046875, 0.67578125, 0.36718750 },
@@ -2826,8 +2827,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l02766"></a>02766    { 0.61718750, 0.38671875, 0.16015625 },
 <a name="l02767"></a>02767 };
 <a name="l02768"></a>02768 
-<a name="l02769"></a>02769 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_22_Size = 151; <span class="comment">// Mars</span>
-<a name="l02770"></a>02770 <span class="keywordtype">double</span> RGB_Palette_22[RGB_Palette_22_Size][3] =
+<a name="l02769"></a><a class="code" href="palettes_8hpp.html#a9efe26514c18750aab65fd4c5b7b156f">02769</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#a9efe26514c18750aab65fd4c5b7b156f">RGB_Palette_22_Size</a> = 151; <span class="comment">// Mars</span>
+<a name="l02770"></a><a class="code" href="palettes_8hpp.html#a5c9ae1877168c710b631859727214942">02770</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#a5c9ae1877168c710b631859727214942">RGB_Palette_22</a>[<a class="code" href="palettes_8hpp.html#a9efe26514c18750aab65fd4c5b7b156f">RGB_Palette_22_Size</a>][3] =
 <a name="l02771"></a>02771 {
 <a name="l02772"></a>02772    {0, 0, 0},
 <a name="l02773"></a>02773    {0, 0, 0},
@@ -2982,11 +2983,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l02922"></a>02922    {.94901960784313725490, .94901960784313725490, .94901960784313725490},
 <a name="l02923"></a>02923 };
 <a name="l02924"></a>02924 
-<a name="l02925"></a>02925 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_23_Size = 6*32+1; <span class="comment">// rainbow</span>
-<a name="l02926"></a>02926 <span class="keywordtype">double</span> RGB_Palette_23[RGB_Palette_23_Size][3];
+<a name="l02925"></a><a class="code" href="palettes_8hpp.html#a9cc19da349d294272c0577c9cabfa32e">02925</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#a9cc19da349d294272c0577c9cabfa32e">RGB_Palette_23_Size</a> = 6*32+1; <span class="comment">// rainbow</span>
+<a name="l02926"></a><a class="code" href="palettes_8hpp.html#a55d11fece6abb77ff24c2521823b77ac">02926</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#a55d11fece6abb77ff24c2521823b77ac">RGB_Palette_23</a>[<a class="code" href="palettes_8hpp.html#a9cc19da349d294272c0577c9cabfa32e">RGB_Palette_23_Size</a>][3];
 <a name="l02927"></a>02927 
-<a name="l02928"></a>02928 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_24_Size = 31; <span class="comment">// CMYK</span>
-<a name="l02929"></a>02929 <span class="keywordtype">double</span> RGB_Palette_24[RGB_Palette_24_Size][3] =
+<a name="l02928"></a><a class="code" href="palettes_8hpp.html#aee25fef4eabfe33c7c289dcedb574082">02928</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#aee25fef4eabfe33c7c289dcedb574082">RGB_Palette_24_Size</a> = 31; <span class="comment">// CMYK</span>
+<a name="l02929"></a><a class="code" href="palettes_8hpp.html#aa0347e56a88067f3ac8c4a73899ff85e">02929</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#aa0347e56a88067f3ac8c4a73899ff85e">RGB_Palette_24</a>[<a class="code" href="palettes_8hpp.html#aee25fef4eabfe33c7c289dcedb574082">RGB_Palette_24_Size</a>][3] =
 <a name="l02930"></a>02930 {
 <a name="l02931"></a>02931    <span class="comment">// 16 colors</span>
 <a name="l02932"></a>02932    <span class="comment">/*</span>
@@ -3018,35 +3019,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l02958"></a>02958    {0.133532, 0.122103, 0.125444}
 <a name="l02959"></a>02959 };
 <a name="l02960"></a>02960 
-<a name="l02961"></a>02961 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palette_25_Size = (4*16+1); <span class="comment">// visit&#39;s calewhite</span>
-<a name="l02962"></a>02962 <span class="keywordtype">double</span> RGB_Palette_25[RGB_Palette_25_Size][3];
+<a name="l02961"></a><a class="code" href="palettes_8hpp.html#a17f185709fa92dfecc8a36af142def30">02961</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#a17f185709fa92dfecc8a36af142def30">RGB_Palette_25_Size</a> = (4*16+1); <span class="comment">// visit&#39;s calewhite</span>
+<a name="l02962"></a><a class="code" href="palettes_8hpp.html#ab168434f3c697ddc969e3f0a660f768c">02962</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#ab168434f3c697ddc969e3f0a660f768c">RGB_Palette_25</a>[<a class="code" href="palettes_8hpp.html#a17f185709fa92dfecc8a36af142def30">RGB_Palette_25_Size</a>][3];
 <a name="l02963"></a>02963 
-<a name="l02964"></a>02964 <span class="keyword">const</span> <span class="keywordtype">int</span> Num_RGB_Palettes = 25;
-<a name="l02965"></a>02965 <span class="keyword">const</span> <span class="keywordtype">int</span> RGB_Palettes_Sizes[Num_RGB_Palettes] =
+<a name="l02964"></a><a class="code" href="palettes_8hpp.html#aa2dc347b16101eea5a04d1f4df2d121a">02964</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#aa2dc347b16101eea5a04d1f4df2d121a">Num_RGB_Palettes</a> = 25;
+<a name="l02965"></a><a class="code" href="palettes_8hpp.html#acf9c5de4d4821428315a7098f67dde4d">02965</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#acf9c5de4d4821428315a7098f67dde4d">RGB_Palettes_Sizes</a>[<a class="code" href="palettes_8hpp.html#aa2dc347b16101eea5a04d1f4df2d121a">Num_RGB_Palettes</a>] =
 <a name="l02966"></a>02966 {
-<a name="l02967"></a>02967    RGB_Palette_1_Size, RGB_Palette_2_Size, RGB_Palette_3_Size,
-<a name="l02968"></a>02968    RGB_Palette_4_Size, RGB_Palette_5_Size, RGB_Palette_6_Size,
-<a name="l02969"></a>02969    RGB_Palette_7_Size, RGB_Palette_8_Size, RGB_Palette_9_Size,
-<a name="l02970"></a>02970    RGB_Palette_10_Size, RGB_Palette_11_Size, RGB_Palette_12_Size,
-<a name="l02971"></a>02971    RGB_Palette_13_Size, RGB_Palette_14_Size, RGB_Palette_15_Size,
-<a name="l02972"></a>02972    RGB_Palette_16_Size, RGB_Palette_17_Size, RGB_Palette_18_Size,
-<a name="l02973"></a>02973    RGB_Palette_19_Size, RGB_Palette_20_Size, RGB_Palette_21_Size,
-<a name="l02974"></a>02974    RGB_Palette_22_Size, RGB_Palette_23_Size, RGB_Palette_24_Size,
-<a name="l02975"></a>02975    RGB_Palette_25_Size
+<a name="l02967"></a>02967    <a class="code" href="palettes_8hpp.html#ab8db5df7b2dc49fd7159facf8f406002">RGB_Palette_1_Size</a>, <a class="code" href="palettes_8hpp.html#af2f8d2a5e48c824e4bf6fa70f201cb91">RGB_Palette_2_Size</a>, <a class="code" href="palettes_8hpp.html#a03473a032c60c481307d2de168382184">RGB_Palette_3_Size</a>,
+<a name="l02968"></a>02968    <a class="code" href="palettes_8hpp.html#a2e41ada1f5dc7c184b3510a76ac97eee">RGB_Palette_4_Size</a>, <a class="code" href="palettes_8hpp.html#a12e3d4e610f3d201c79c0ff1a461b84c">RGB_Palette_5_Size</a>, <a class="code" href="palettes_8hpp.html#a675ee8e4788b8e980a968234d4e06240">RGB_Palette_6_Size</a>,
+<a name="l02969"></a>02969    <a class="code" href="palettes_8hpp.html#adba49f242c5d1fb4c935064e94ce98a4">RGB_Palette_7_Size</a>, <a class="code" href="palettes_8hpp.html#a4bf8e16713b40260ac7ce64563eef4ad">RGB_Palette_8_Size</a>, <a class="code" href="palettes_8hpp.html#a36a23fc4ada17ee81726ca0a82b93cef">RGB_Palette_9_Size</a>,
+<a name="l02970"></a>02970    <a class="code" href="palettes_8hpp.html#a8d22a387e8394a083c1e6eb905e27414">RGB_Palette_10_Size</a>, <a class="code" href="palettes_8hpp.html#af1e882dd638c53e1f045033c027f9913">RGB_Palette_11_Size</a>, <a class="code" href="palettes_8hpp.html#a6a2f5b7638cc27c88f1236a79b35f0ae">RGB_Palette_12_Size</a>,
+<a name="l02971"></a>02971    <a class="code" href="palettes_8hpp.html#a1f5b4494f443bebc99b5bade99aee349">RGB_Palette_13_Size</a>, <a class="code" href="palettes_8hpp.html#a110e1734e9ba70b7b7e44d1619a3319a">RGB_Palette_14_Size</a>, <a class="code" href="palettes_8hpp.html#a36e036b28da71ee97f00e275185229a8">RGB_Palette_15_Size</a>,
+<a name="l02972"></a>02972    <a class="code" href="palettes_8hpp.html#a10c98e035f2d261c1727886798c4caa2">RGB_Palette_16_Size</a>, <a class="code" href="palettes_8hpp.html#ac64e49129eccacefa2133c3649fb6d00">RGB_Palette_17_Size</a>, <a class="code" href="palettes_8hpp.html#a957d2cdca329109cceab60ac233272b8">RGB_Palette_18_Size</a>,
+<a name="l02973"></a>02973    <a class="code" href="palettes_8hpp.html#a022fad4e7cfb8b07028b62a525914da5">RGB_Palette_19_Size</a>, <a class="code" href="palettes_8hpp.html#a84be3cbcdbbdeb2d821e22f833c25e36">RGB_Palette_20_Size</a>, <a class="code" href="palettes_8hpp.html#ad0a68f6cf818d0c4545821fdcd601b6f">RGB_Palette_21_Size</a>,
+<a name="l02974"></a>02974    <a class="code" href="palettes_8hpp.html#a9efe26514c18750aab65fd4c5b7b156f">RGB_Palette_22_Size</a>, <a class="code" href="palettes_8hpp.html#a9cc19da349d294272c0577c9cabfa32e">RGB_Palette_23_Size</a>, <a class="code" href="palettes_8hpp.html#aee25fef4eabfe33c7c289dcedb574082">RGB_Palette_24_Size</a>,
+<a name="l02975"></a>02975    <a class="code" href="palettes_8hpp.html#a17f185709fa92dfecc8a36af142def30">RGB_Palette_25_Size</a>
 <a name="l02976"></a>02976 };
 <a name="l02977"></a>02977 
-<a name="l02978"></a>02978 <span class="keywordtype">double</span> *RGB_Palettes[Num_RGB_Palettes] =
+<a name="l02978"></a><a class="code" href="palettes_8hpp.html#a78b3623b7bee842730243764b06d2dd5">02978</a> <span class="keywordtype">double</span> *<a class="code" href="palettes_8hpp.html#a78b3623b7bee842730243764b06d2dd5">RGB_Palettes</a>[<a class="code" href="palettes_8hpp.html#aa2dc347b16101eea5a04d1f4df2d121a">Num_RGB_Palettes</a>] =
 <a name="l02979"></a>02979 {
-<a name="l02980"></a>02980    *RGB_Palette_1, *RGB_Palette_2, *RGB_Palette_3, *RGB_Palette_4,
-<a name="l02981"></a>02981    *RGB_Palette_5, *RGB_Palette_6, *RGB_Palette_7, *RGB_Palette_8,
-<a name="l02982"></a>02982    *RGB_Palette_9, *RGB_Palette_10, *RGB_Palette_11, *RGB_Palette_12,
-<a name="l02983"></a>02983    *RGB_Palette_13, *RGB_Palette_14, *RGB_Palette_15, *RGB_Palette_16,
-<a name="l02984"></a>02984    *RGB_Palette_17, *RGB_Palette_18, *RGB_Palette_19, *RGB_Palette_20,
-<a name="l02985"></a>02985    *RGB_Palette_21, *RGB_Palette_22, *RGB_Palette_23, *RGB_Palette_24,
-<a name="l02986"></a>02986    *RGB_Palette_25
+<a name="l02980"></a>02980    *<a class="code" href="palettes_8hpp.html#a8a17d9dbf54eb1df191445297e76acc2">RGB_Palette_1</a>, *<a class="code" href="palettes_8hpp.html#ac653413b61b6fad3fa71280b81fd0989">RGB_Palette_2</a>, *<a class="code" href="palettes_8hpp.html#aef1937c7af15ac12d27eef995122d778">RGB_Palette_3</a>, *<a class="code" href="palettes_8hpp.html#a81e086e861efe9804855b1a1cadd7f39">RGB_Palette_4</a>,
+<a name="l02981"></a>02981    *<a class="code" href="palettes_8hpp.html#a6b66d63e5e29b9446ee985cb88f74afd">RGB_Palette_5</a>, *<a class="code" href="palettes_8hpp.html#aa64c6e02ee3a8afc06f23d3262cb1064">RGB_Palette_6</a>, *<a class="code" href="palettes_8hpp.html#ad37e4ef2c7d55c70a550f056df8e919c">RGB_Palette_7</a>, *<a class="code" href="palettes_8hpp.html#a952d45fa366646af50bf7f2eff391f43">RGB_Palette_8</a>,
+<a name="l02982"></a>02982    *<a class="code" href="palettes_8hpp.html#a0fc7efb89555cdd34f8b924ec84555cd">RGB_Palette_9</a>, *<a class="code" href="palettes_8hpp.html#ab50d7b6393463407d4f878b1717588cf">RGB_Palette_10</a>, *<a class="code" href="palettes_8hpp.html#a08bc4438feab5c99c9c1151ec0524dcd">RGB_Palette_11</a>, *<a class="code" href="palettes_8hpp.html#a51e4960d164b6ee83568fa2ac21f8ad7">RGB_Palette_12</a>,
+<a name="l02983"></a>02983    *<a class="code" href="palettes_8hpp.html#a0e96f0d7ec4a868d18467f7ddf487efa">RGB_Palette_13</a>, *<a class="code" href="palettes_8hpp.html#a6fc13523fb43ef78580ea0a7fae45fca">RGB_Palette_14</a>, *<a class="code" href="palettes_8hpp.html#a7834b14b06ad73fb1ba1866c002d9181">RGB_Palette_15</a>, *<a class="code" href="palettes_8hpp.html#add9589e22ae6b8d23160a321417c1a26">RGB_Palette_16</a>,
+<a name="l02984"></a>02984    *<a class="code" href="palettes_8hpp.html#ab37f481bcd84fc0d16e5fbcde9f0cea0">RGB_Palette_17</a>, *<a class="code" href="palettes_8hpp.html#aa1fc821ba845a0bdecbf828d6b86c0b9">RGB_Palette_18</a>, *<a class="code" href="palettes_8hpp.html#aa45aa26128e47f46815cec6b9e693133">RGB_Palette_19</a>, *<a class="code" href="palettes_8hpp.html#a0be86e29bf172c4475f6027285c93c31">RGB_Palette_20</a>,
+<a name="l02985"></a>02985    *<a class="code" href="palettes_8hpp.html#ae414d756093827d43e6bd06b2c0456ed">RGB_Palette_21</a>, *<a class="code" href="palettes_8hpp.html#a5c9ae1877168c710b631859727214942">RGB_Palette_22</a>, *<a class="code" href="palettes_8hpp.html#a55d11fece6abb77ff24c2521823b77ac">RGB_Palette_23</a>, *<a class="code" href="palettes_8hpp.html#aa0347e56a88067f3ac8c4a73899ff85e">RGB_Palette_24</a>,
+<a name="l02986"></a>02986    *<a class="code" href="palettes_8hpp.html#ab168434f3c697ddc969e3f0a660f768c">RGB_Palette_25</a>
 <a name="l02987"></a>02987 };
 <a name="l02988"></a>02988 
-<a name="l02989"></a>02989 <span class="keyword">const</span> <span class="keywordtype">char</span> *RGB_Palettes_Names[Num_RGB_Palettes] =
+<a name="l02989"></a><a class="code" href="palettes_8hpp.html#a2a95723545e6de6e0f3a3f5d98699cd7">02989</a> <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="palettes_8hpp.html#a2a95723545e6de6e0f3a3f5d98699cd7">RGB_Palettes_Names</a>[<a class="code" href="palettes_8hpp.html#aa2dc347b16101eea5a04d1f4df2d121a">Num_RGB_Palettes</a>] =
 <a name="l02990"></a>02990 { <span class="comment">//  0123456789</span>
 <a name="l02991"></a>02991    <span class="stringliteral">&quot;5-color   &quot;</span>, <span class="stringliteral">&quot;red       &quot;</span>, <span class="stringliteral">&quot;jet-like  &quot;</span>, <span class="stringliteral">&quot;golden    &quot;</span>, <span class="stringliteral">&quot;bone      &quot;</span>,
 <a name="l02992"></a>02992    <span class="stringliteral">&quot;hot       &quot;</span>, <span class="stringliteral">&quot;pink      &quot;</span>, <span class="stringliteral">&quot;cool      &quot;</span>, <span class="stringliteral">&quot;summer    &quot;</span>, <span class="stringliteral">&quot;hsv       &quot;</span>,
@@ -3055,17 +3056,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l02995"></a>02995    <span class="stringliteral">&quot;wood      &quot;</span>, <span class="stringliteral">&quot;mars      &quot;</span>, <span class="stringliteral">&quot;rainbow   &quot;</span>, <span class="stringliteral">&quot;cmyk      &quot;</span>, <span class="stringliteral">&quot;calewhite &quot;</span>
 <a name="l02996"></a>02996 };
 <a name="l02997"></a>02997 
-<a name="l02998"></a>02998 <span class="keywordtype">int</span> Default_RGB_Palette = 2;
-<a name="l02999"></a>02999 <span class="keywordtype">int</span> RGB_Palette_Size = RGB_Palettes_Sizes[Default_RGB_Palette];
-<a name="l03000"></a>03000 <span class="keywordtype">double</span> *RGB_Palette = RGB_Palettes[Default_RGB_Palette];
+<a name="l02998"></a><a class="code" href="palettes_8hpp.html#a886a75eb9bd0662fb685b15ace0c0efb">02998</a> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#a886a75eb9bd0662fb685b15ace0c0efb">Default_RGB_Palette</a> = 2;
+<a name="l02999"></a><a class="code" href="palettes_8hpp.html#a542b6b8722cd759b9dcefa0ed98e888d">02999</a> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#a542b6b8722cd759b9dcefa0ed98e888d">RGB_Palette_Size</a> = <a class="code" href="palettes_8hpp.html#acf9c5de4d4821428315a7098f67dde4d">RGB_Palettes_Sizes</a>[<a class="code" href="palettes_8hpp.html#a886a75eb9bd0662fb685b15ace0c0efb">Default_RGB_Palette</a>];
+<a name="l03000"></a><a class="code" href="palettes_8hpp.html#a92a11282122f28620a42ec0ead2b7e8e">03000</a> <span class="keywordtype">double</span> *<a class="code" href="palettes_8hpp.html#a92a11282122f28620a42ec0ead2b7e8e">RGB_Palette</a> = <a class="code" href="palettes_8hpp.html#a78b3623b7bee842730243764b06d2dd5">RGB_Palettes</a>[<a class="code" href="palettes_8hpp.html#a886a75eb9bd0662fb685b15ace0c0efb">Default_RGB_Palette</a>];
 <a name="l03001"></a>03001 
-<a name="l03002"></a>03002 <span class="keywordtype">double</span> corr(<span class="keywordtype">double</span> a, <span class="keywordtype">double</span> x)
+<a name="l03002"></a><a class="code" href="palettes_8hpp.html#ae0785f31f7add778711b93dbc79f604b">03002</a> <span class="keywordtype">double</span> <a class="code" href="palettes_8hpp.html#ae0785f31f7add778711b93dbc79f604b">corr</a>(<span class="keywordtype">double</span> a, <span class="keywordtype">double</span> x)
 <a name="l03003"></a>03003 {
 <a name="l03004"></a>03004    <span class="keywordflow">return</span> x / (1.0 + (a * a - 1.0) * (1.0 - x));
 <a name="l03005"></a>03005 <span class="comment">//   return pow(x, a);</span>
 <a name="l03006"></a>03006 }
 <a name="l03007"></a>03007 
-<a name="l03008"></a>03008 <span class="keywordtype">void</span> Init_Visit_Calewhite_Palette()
+<a name="l03008"></a><a class="code" href="palettes_8hpp.html#af923cf12dd17797db64e98227ad47b90">03008</a> <span class="keywordtype">void</span> <a class="code" href="palettes_8hpp.html#af923cf12dd17797db64e98227ad47b90">Init_Visit_Calewhite_Palette</a>()
 <a name="l03009"></a>03009 {
 <a name="l03010"></a>03010    <span class="keyword">const</span> <span class="keywordtype">int</span> ns = 7;
 <a name="l03011"></a>03011    <span class="keyword">const</span> <span class="keywordtype">double</span> ts[ns] = { 0., 1./6., 2./6., 3./6., 4./6., 5./6., 1. };
@@ -3077,7 +3078,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l03017"></a>03017    <span class="keyword">const</span> <span class="keywordtype">double</span> gc[ns-1] = { 1.0, 1.0, 1.0, 1.0, 1.0, 1.0 };
 <a name="l03018"></a>03018    <span class="keyword">const</span> <span class="keywordtype">double</span> bc[ns-1] = { 1.0, 1.0, 1.0, 1.0, 1.0, 1.0 };
 <a name="l03019"></a>03019 
-<a name="l03020"></a>03020    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; RGB_Palette_25_Size; i++)
+<a name="l03020"></a>03020    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="palettes_8hpp.html#a17f185709fa92dfecc8a36af142def30">RGB_Palette_25_Size</a>; i++)
 <a name="l03021"></a>03021    {
 <a name="l03022"></a>03022       <span class="keywordtype">double</span> t = double(i) / (RGB_Palette_25_Size-1), r, g, b;
 <a name="l03023"></a>03023       <span class="keywordtype">int</span> k;
@@ -3085,19 +3086,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l03025"></a>03025          <span class="keywordflow">if</span> (t &gt;= ts[k-1] &amp;&amp; t &lt;= ts[k])
 <a name="l03026"></a>03026             <span class="keywordflow">break</span>;
 <a name="l03027"></a>03027       t = (t - ts[k-1]) / (ts[k] - ts[k-1]);
-<a name="l03028"></a>03028       r = (1.0 - t) * corr(rc[k-1], rs[k-1]) + t * corr(rc[k-1], rs[k]);
-<a name="l03029"></a>03029       g = (1.0 - t) * corr(gc[k-1], gs[k-1]) + t * corr(gc[k-1], gs[k]);
-<a name="l03030"></a>03030       b = (1.0 - t) * corr(bc[k-1], bs[k-1]) + t * corr(bc[k-1], bs[k]);
-<a name="l03031"></a>03031       RGB_Palette_25[i][0] = corr(1./rc[k-1], r);
-<a name="l03032"></a>03032       RGB_Palette_25[i][1] = corr(1./gc[k-1], g);
-<a name="l03033"></a>03033       RGB_Palette_25[i][2] = corr(1./bc[k-1], b);
+<a name="l03028"></a>03028       r = (1.0 - t) * <a class="code" href="palettes_8hpp.html#ae0785f31f7add778711b93dbc79f604b">corr</a>(rc[k-1], rs[k-1]) + t * <a class="code" href="palettes_8hpp.html#ae0785f31f7add778711b93dbc79f604b">corr</a>(rc[k-1], rs[k]);
+<a name="l03029"></a>03029       g = (1.0 - t) * <a class="code" href="palettes_8hpp.html#ae0785f31f7add778711b93dbc79f604b">corr</a>(gc[k-1], gs[k-1]) + t * <a class="code" href="palettes_8hpp.html#ae0785f31f7add778711b93dbc79f604b">corr</a>(gc[k-1], gs[k]);
+<a name="l03030"></a>03030       b = (1.0 - t) * <a class="code" href="palettes_8hpp.html#ae0785f31f7add778711b93dbc79f604b">corr</a>(bc[k-1], bs[k-1]) + t * <a class="code" href="palettes_8hpp.html#ae0785f31f7add778711b93dbc79f604b">corr</a>(bc[k-1], bs[k]);
+<a name="l03031"></a>03031       <a class="code" href="palettes_8hpp.html#ab168434f3c697ddc969e3f0a660f768c">RGB_Palette_25</a>[i][0] = <a class="code" href="palettes_8hpp.html#ae0785f31f7add778711b93dbc79f604b">corr</a>(1./rc[k-1], r);
+<a name="l03032"></a>03032       <a class="code" href="palettes_8hpp.html#ab168434f3c697ddc969e3f0a660f768c">RGB_Palette_25</a>[i][1] = <a class="code" href="palettes_8hpp.html#ae0785f31f7add778711b93dbc79f604b">corr</a>(1./gc[k-1], g);
+<a name="l03033"></a>03033       <a class="code" href="palettes_8hpp.html#ab168434f3c697ddc969e3f0a660f768c">RGB_Palette_25</a>[i][2] = <a class="code" href="palettes_8hpp.html#ae0785f31f7add778711b93dbc79f604b">corr</a>(1./bc[k-1], b);
 <a name="l03034"></a>03034    }
 <a name="l03035"></a>03035 }
 <a name="l03036"></a>03036 
-<a name="l03037"></a>03037 <span class="keywordtype">void</span> Init_Palettes()
+<a name="l03037"></a><a class="code" href="palettes_8hpp.html#a6602ad9dc02daeacca25f8e463f00878">03037</a> <span class="keywordtype">void</span> <a class="code" href="palettes_8hpp.html#a6602ad9dc02daeacca25f8e463f00878">Init_Palettes</a>()
 <a name="l03038"></a>03038 {
 <a name="l03039"></a>03039    <span class="comment">// init rainbow palette</span>
-<a name="l03040"></a>03040    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; RGB_Palette_23_Size; i++)
+<a name="l03040"></a>03040    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="palettes_8hpp.html#a9cc19da349d294272c0577c9cabfa32e">RGB_Palette_23_Size</a>; i++)
 <a name="l03041"></a>03041    {
 <a name="l03042"></a>03042       <span class="keywordtype">double</span> t = double(i) / (RGB_Palette_23_Size-1), s, r, g, b;
 <a name="l03043"></a>03043       <span class="comment">// t *= 3.0; // red to red</span>
@@ -3147,9 +3148,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l03087"></a>03087          }
 <a name="l03088"></a>03088          g = 0.0;
 <a name="l03089"></a>03089       }
-<a name="l03090"></a>03090       RGB_Palette_23[i][0] = r;
-<a name="l03091"></a>03091       RGB_Palette_23[i][1] = g;
-<a name="l03092"></a>03092       RGB_Palette_23[i][2] = b;
+<a name="l03090"></a>03090       <a class="code" href="palettes_8hpp.html#a55d11fece6abb77ff24c2521823b77ac">RGB_Palette_23</a>[i][0] = r;
+<a name="l03091"></a>03091       <a class="code" href="palettes_8hpp.html#a55d11fece6abb77ff24c2521823b77ac">RGB_Palette_23</a>[i][1] = g;
+<a name="l03092"></a>03092       <a class="code" href="palettes_8hpp.html#a55d11fece6abb77ff24c2521823b77ac">RGB_Palette_23</a>[i][2] = b;
 <a name="l03093"></a>03093    }
 <a name="l03094"></a>03094 
 <a name="l03095"></a>03095    <span class="comment">// init vivid palette</span>
@@ -3163,7 +3164,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l03103"></a>03103    <span class="keyword">const</span> <span class="keywordtype">double</span> gc[ns-1] = { 1.2, 1.0, 1.0, 1.4, 1.0, 1.0 };
 <a name="l03104"></a>03104    <span class="keyword">const</span> <span class="keywordtype">double</span> bc[ns-1] = { 1.0, 1.0, 1.0, 1.0, 1.6, 1.0 };
 <a name="l03105"></a>03105 
-<a name="l03106"></a>03106    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; RGB_Palette_13_Size; i++)
+<a name="l03106"></a>03106    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="palettes_8hpp.html#a1f5b4494f443bebc99b5bade99aee349">RGB_Palette_13_Size</a>; i++)
 <a name="l03107"></a>03107    {
 <a name="l03108"></a>03108       <span class="keywordtype">double</span> t = double(i) / (RGB_Palette_13_Size-1), r, g, b;
 <a name="l03109"></a>03109       <span class="keywordtype">int</span> k;
@@ -3171,46 +3172,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l03111"></a>03111          <span class="keywordflow">if</span> (t &gt;= ts[k-1] &amp;&amp; t &lt;= ts[k])
 <a name="l03112"></a>03112             <span class="keywordflow">break</span>;
 <a name="l03113"></a>03113       t = (t - ts[k-1]) / (ts[k] - ts[k-1]);
-<a name="l03114"></a>03114       r = (1.0 - t) * corr(rc[k-1], rs[k-1]) + t * corr(rc[k-1], rs[k]);
-<a name="l03115"></a>03115       g = (1.0 - t) * corr(gc[k-1], gs[k-1]) + t * corr(gc[k-1], gs[k]);
-<a name="l03116"></a>03116       b = (1.0 - t) * corr(bc[k-1], bs[k-1]) + t * corr(bc[k-1], bs[k]);
-<a name="l03117"></a>03117       RGB_Palette_13[i][0] = corr(1./rc[k-1], r);
-<a name="l03118"></a>03118       RGB_Palette_13[i][1] = corr(1./gc[k-1], g);
-<a name="l03119"></a>03119       RGB_Palette_13[i][2] = corr(1./bc[k-1], b);
+<a name="l03114"></a>03114       r = (1.0 - t) * <a class="code" href="palettes_8hpp.html#ae0785f31f7add778711b93dbc79f604b">corr</a>(rc[k-1], rs[k-1]) + t * <a class="code" href="palettes_8hpp.html#ae0785f31f7add778711b93dbc79f604b">corr</a>(rc[k-1], rs[k]);
+<a name="l03115"></a>03115       g = (1.0 - t) * <a class="code" href="palettes_8hpp.html#ae0785f31f7add778711b93dbc79f604b">corr</a>(gc[k-1], gs[k-1]) + t * <a class="code" href="palettes_8hpp.html#ae0785f31f7add778711b93dbc79f604b">corr</a>(gc[k-1], gs[k]);
+<a name="l03116"></a>03116       b = (1.0 - t) * <a class="code" href="palettes_8hpp.html#ae0785f31f7add778711b93dbc79f604b">corr</a>(bc[k-1], bs[k-1]) + t * <a class="code" href="palettes_8hpp.html#ae0785f31f7add778711b93dbc79f604b">corr</a>(bc[k-1], bs[k]);
+<a name="l03117"></a>03117       <a class="code" href="palettes_8hpp.html#a0e96f0d7ec4a868d18467f7ddf487efa">RGB_Palette_13</a>[i][0] = <a class="code" href="palettes_8hpp.html#ae0785f31f7add778711b93dbc79f604b">corr</a>(1./rc[k-1], r);
+<a name="l03118"></a>03118       <a class="code" href="palettes_8hpp.html#a0e96f0d7ec4a868d18467f7ddf487efa">RGB_Palette_13</a>[i][1] = <a class="code" href="palettes_8hpp.html#ae0785f31f7add778711b93dbc79f604b">corr</a>(1./gc[k-1], g);
+<a name="l03119"></a>03119       <a class="code" href="palettes_8hpp.html#a0e96f0d7ec4a868d18467f7ddf487efa">RGB_Palette_13</a>[i][2] = <a class="code" href="palettes_8hpp.html#ae0785f31f7add778711b93dbc79f604b">corr</a>(1./bc[k-1], b);
 <a name="l03120"></a>03120    }
 <a name="l03121"></a>03121 
-<a name="l03122"></a>03122    Init_Visit_Calewhite_Palette();
+<a name="l03122"></a>03122    <a class="code" href="palettes_8hpp.html#af923cf12dd17797db64e98227ad47b90">Init_Visit_Calewhite_Palette</a>();
 <a name="l03123"></a>03123 }
 <a name="l03124"></a>03124 
-<a name="l03125"></a>03125 <span class="keywordtype">void</span> Set_Texture_Image();
+<a name="l03125"></a>03125 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#aca5ce0b51230c946791448b7fcfa25df">Set_Texture_Image</a>();
 <a name="l03126"></a>03126 
-<a name="l03127"></a>03127 <span class="keywordtype">void</span> Set_Palette (<span class="keywordtype">int</span> num)
+<a name="l03127"></a><a class="code" href="vssolution3d_8cpp.html#a99a4b7a7c6575486b93f03efc4a0100a">03127</a> <span class="keywordtype">void</span> <a class="code" href="glvis_8cpp.html#a99a4b7a7c6575486b93f03efc4a0100a">Set_Palette</a> (<span class="keywordtype">int</span> num)
 <a name="l03128"></a>03128 {
-<a name="l03129"></a>03129    Default_RGB_Palette = num;
-<a name="l03130"></a>03130    RGB_Palette_Size = RGB_Palettes_Sizes[num];
-<a name="l03131"></a>03131    RGB_Palette = RGB_Palettes[num];
+<a name="l03129"></a>03129    <a class="code" href="palettes_8hpp.html#a886a75eb9bd0662fb685b15ace0c0efb">Default_RGB_Palette</a> = num;
+<a name="l03130"></a>03130    <a class="code" href="palettes_8hpp.html#a542b6b8722cd759b9dcefa0ed98e888d">RGB_Palette_Size</a> = <a class="code" href="palettes_8hpp.html#acf9c5de4d4821428315a7098f67dde4d">RGB_Palettes_Sizes</a>[num];
+<a name="l03131"></a>03131    <a class="code" href="palettes_8hpp.html#a92a11282122f28620a42ec0ead2b7e8e">RGB_Palette</a> = <a class="code" href="palettes_8hpp.html#a78b3623b7bee842730243764b06d2dd5">RGB_Palettes</a>[num];
 <a name="l03132"></a>03132 
-<a name="l03133"></a>03133    Set_Texture_Image();
+<a name="l03133"></a>03133    <a class="code" href="aux__vis_8cpp.html#aca5ce0b51230c946791448b7fcfa25df">Set_Texture_Image</a>();
 <a name="l03134"></a>03134 }
 <a name="l03135"></a>03135 
-<a name="l03136"></a>03136 <span class="keywordtype">void</span> Next_RGB_Palette()
+<a name="l03136"></a><a class="code" href="vsdata_8cpp.html#a7d311b6dd6143f863ee350636e41517a">03136</a> <span class="keywordtype">void</span> <a class="code" href="palettes_8hpp.html#a7d311b6dd6143f863ee350636e41517a">Next_RGB_Palette</a>()
 <a name="l03137"></a>03137 {
-<a name="l03138"></a>03138    Set_Palette((Default_RGB_Palette + 1) % Num_RGB_Palettes);
+<a name="l03138"></a>03138    <a class="code" href="glvis_8cpp.html#a99a4b7a7c6575486b93f03efc4a0100a">Set_Palette</a>((<a class="code" href="palettes_8hpp.html#a886a75eb9bd0662fb685b15ace0c0efb">Default_RGB_Palette</a> + 1) % <a class="code" href="palettes_8hpp.html#aa2dc347b16101eea5a04d1f4df2d121a">Num_RGB_Palettes</a>);
 <a name="l03139"></a>03139 }
 <a name="l03140"></a>03140 
-<a name="l03141"></a>03141 <span class="keywordtype">int</span> Select_New_RGB_Palette()
+<a name="l03141"></a><a class="code" href="vsdata_8cpp.html#a4f0b0f9e1fff0e70b0e165cc08010096">03141</a> <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#a4f0b0f9e1fff0e70b0e165cc08010096">Select_New_RGB_Palette</a>()
 <a name="l03142"></a>03142 {
 <a name="l03143"></a>03143    <span class="keyword">const</span> <span class="keywordtype">int</span> buflen = 256;
 <a name="l03144"></a>03144    <span class="keywordtype">char</span> buffer[buflen];
 <a name="l03145"></a>03145    <span class="keywordtype">int</span> pal;
 <a name="l03146"></a>03146    cout &lt;&lt; <span class="stringliteral">&quot;Choose a palette:\n&quot;</span>;
-<a name="l03147"></a>03147    <span class="keywordflow">for</span> (pal = 0; pal &lt; Num_RGB_Palettes; pal++)
+<a name="l03147"></a>03147    <span class="keywordflow">for</span> (pal = 0; pal &lt; <a class="code" href="palettes_8hpp.html#aa2dc347b16101eea5a04d1f4df2d121a">Num_RGB_Palettes</a>; pal++)
 <a name="l03148"></a>03148    {
-<a name="l03149"></a>03149       cout &lt;&lt; setw(4) &lt;&lt; pal+1 &lt;&lt; <span class="stringliteral">&quot;) &quot;</span> &lt;&lt; RGB_Palettes_Names[pal];
+<a name="l03149"></a>03149       cout &lt;&lt; setw(4) &lt;&lt; pal+1 &lt;&lt; <span class="stringliteral">&quot;) &quot;</span> &lt;&lt; <a class="code" href="palettes_8hpp.html#a2a95723545e6de6e0f3a3f5d98699cd7">RGB_Palettes_Names</a>[pal];
 <a name="l03150"></a>03150       <span class="keywordflow">if</span> ((pal+1)%5 == 0)
 <a name="l03151"></a>03151          cout &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;
 <a name="l03152"></a>03152    }
-<a name="l03153"></a>03153    cout &lt;&lt; <span class="stringliteral">&quot;\n ---&gt; [&quot;</span> &lt;&lt; Default_RGB_Palette+1 &lt;&lt; <span class="stringliteral">&quot;] &quot;</span> &lt;&lt; flush;
+<a name="l03153"></a>03153    cout &lt;&lt; <span class="stringliteral">&quot;\n ---&gt; [&quot;</span> &lt;&lt; <a class="code" href="palettes_8hpp.html#a886a75eb9bd0662fb685b15ace0c0efb">Default_RGB_Palette</a>+1 &lt;&lt; <span class="stringliteral">&quot;] &quot;</span> &lt;&lt; flush;
 <a name="l03154"></a>03154 
 <a name="l03155"></a>03155    cin.getline (buffer, buflen);
 <a name="l03156"></a>03156    cin.getline (buffer, buflen);
@@ -3218,14 +3219,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l03158"></a>03158    <span class="keywordflow">if</span> (buffer[0])
 <a name="l03159"></a>03159       sscanf(buffer, <span class="stringliteral">&quot;%i&quot;</span>, &amp;pal);
 <a name="l03160"></a>03160    <span class="keywordflow">else</span>
-<a name="l03161"></a>03161       pal = Default_RGB_Palette+1;
+<a name="l03161"></a>03161       pal = <a class="code" href="palettes_8hpp.html#a886a75eb9bd0662fb685b15ace0c0efb">Default_RGB_Palette</a>+1;
 <a name="l03162"></a>03162 
 <a name="l03163"></a>03163    <span class="keywordflow">if</span> (pal &lt; 1)
 <a name="l03164"></a>03164       pal = 1;
 <a name="l03165"></a>03165    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pal &gt; Num_RGB_Palettes)
-<a name="l03166"></a>03166       pal = Num_RGB_Palettes;
+<a name="l03166"></a>03166       pal = <a class="code" href="palettes_8hpp.html#aa2dc347b16101eea5a04d1f4df2d121a">Num_RGB_Palettes</a>;
 <a name="l03167"></a>03167 
-<a name="l03168"></a>03168    Set_Palette (pal-1);
+<a name="l03168"></a>03168    <a class="code" href="glvis_8cpp.html#a99a4b7a7c6575486b93f03efc4a0100a">Set_Palette</a> (pal-1);
 <a name="l03169"></a>03169 
 <a name="l03170"></a>03170    <span class="keywordflow">return</span> pal-1;
 <a name="l03171"></a>03171 }
@@ -3238,7 +3239,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -3247,7 +3248,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 15:12:44 for GLVis by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:52:23 for GLVis by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

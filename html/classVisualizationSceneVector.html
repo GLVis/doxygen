@@ -66,7 +66,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">VisualizationSceneVector Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="VisualizationSceneVector" --><!-- doxytag: inherits="VisualizationSceneSolution" --><div class="dynheader">
+<!-- doxytag: class="VisualizationSceneVector" --><!-- doxytag: inherits="VisualizationSceneSolution" -->
+<p><code>#include &lt;<a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>&gt;</code></p>
+<div class="dynheader">
 Inheritance diagram for VisualizationSceneVector:</div>
 <div class="dyncontent">
 <div class="center"><img src="classVisualizationSceneVector__inherit__graph.png" border="0" usemap="#VisualizationSceneVector_inherit__map" alt="Inheritance graph"/></div>
@@ -85,75 +87,749 @@ Collaboration diagram for VisualizationSceneVector:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af92e5d9dfe7a2cdfa25bfd93238f04dd"></a><!-- doxytag: member="VisualizationSceneVector::VisualizationSceneVector" ref="af92e5d9dfe7a2cdfa25bfd93238f04dd" args="(Mesh &amp;m, Vector &amp;sx, Vector &amp;sy)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>VisualizationSceneVector</b> (Mesh &amp;m, Vector &amp;sx, Vector &amp;sy)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6fe156718109e8f13759da0d977bf92"></a><!-- doxytag: member="VisualizationSceneVector::VisualizationSceneVector" ref="ab6fe156718109e8f13759da0d977bf92" args="(GridFunction &amp;vgf)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>VisualizationSceneVector</b> (GridFunction &amp;vgf)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a258844d5d4b88f2bd6a9cd5f60dc1a3b"></a><!-- doxytag: member="VisualizationSceneVector::NewMeshAndSolution" ref="a258844d5d4b88f2bd6a9cd5f60dc1a3b" args="(GridFunction &amp;vgf, int rescale=0)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>NewMeshAndSolution</b> (GridFunction &amp;vgf, int rescale=0)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a584fd48f93acdcc59c7bb6aff9366718"></a><!-- doxytag: member="VisualizationSceneVector::NPressed" ref="a584fd48f93acdcc59c7bb6aff9366718" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>NPressed</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a214fccc3ea668afa70321dc99f0f89df"></a><!-- doxytag: member="VisualizationSceneVector::PrepareDisplacedMesh" ref="a214fccc3ea668afa70321dc99f0f89df" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>PrepareDisplacedMesh</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39053e19f7d9acbe99ad70ca3ff8999b"></a><!-- doxytag: member="VisualizationSceneVector::PrepareLines" ref="a39053e19f7d9acbe99ad70ca3ff8999b" args="()" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>PrepareLines</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c68f6866e0f3599b67eb4fe0d7008d0"></a><!-- doxytag: member="VisualizationSceneVector::PrepareVectorField" ref="a7c68f6866e0f3599b67eb4fe0d7008d0" args="()" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>PrepareVectorField</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac96f187b9b479e082739cd51c645eca4"></a><!-- doxytag: member="VisualizationSceneVector::ToggleVectorField" ref="ac96f187b9b479e082739cd51c645eca4" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ToggleVectorField</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3afc1155ca912eed5c1480fbb8115068"></a><!-- doxytag: member="VisualizationSceneVector::ToggleDisplacements" ref="a3afc1155ca912eed5c1480fbb8115068" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ToggleDisplacements</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf981d0ee69a75bde0f910fe8b6ae034"></a><!-- doxytag: member="VisualizationSceneVector::Draw" ref="adf981d0ee69a75bde0f910fe8b6ae034" args="()" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Draw</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac827e3bb35122e18e9e6df8a3ed735ef"></a><!-- doxytag: member="VisualizationSceneVector::EventUpdateColors" ref="ac827e3bb35122e18e9e6df8a3ed735ef" args="()" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>EventUpdateColors</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac40f54795f8ac209ce5c2ccbed7d3e28"></a><!-- doxytag: member="VisualizationSceneVector::CycleVec2Scalar" ref="ac40f54795f8ac209ce5c2ccbed7d3e28" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>CycleVec2Scalar</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#af92e5d9dfe7a2cdfa25bfd93238f04dd">VisualizationSceneVector</a> (Mesh &amp;m, Vector &amp;sx, Vector &amp;sy)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#ab6fe156718109e8f13759da0d977bf92">VisualizationSceneVector</a> (GridFunction &amp;vgf)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#a258844d5d4b88f2bd6a9cd5f60dc1a3b">NewMeshAndSolution</a> (GridFunction &amp;vgf, int rescale=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#ae854f73ec13ae8f1ab552303cf5174a5">~VisualizationSceneVector</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#a584fd48f93acdcc59c7bb6aff9366718">NPressed</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#a214fccc3ea668afa70321dc99f0f89df">PrepareDisplacedMesh</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#a39053e19f7d9acbe99ad70ca3ff8999b">PrepareLines</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#a7c68f6866e0f3599b67eb4fe0d7008d0">PrepareVectorField</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#ac96f187b9b479e082739cd51c645eca4">ToggleVectorField</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#a3afc1155ca912eed5c1480fbb8115068">ToggleDisplacements</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#adf981d0ee69a75bde0f910fe8b6ae034">Draw</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#ac827e3bb35122e18e9e6df8a3ed735ef">EventUpdateColors</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#ac40f54795f8ac209ce5c2ccbed7d3e28">CycleVec2Scalar</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8281d01b5db403f94dd2356512766406"></a><!-- doxytag: member="VisualizationSceneVector::RefineFactor" ref="a8281d01b5db403f94dd2356512766406" args="" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><b>RefineFactor</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12a2a95450a843750030b45f04981b12"></a><!-- doxytag: member="VisualizationSceneVector::ArrowScale" ref="a12a2a95450a843750030b45f04981b12" args="" -->
-double&#160;</td><td class="memItemRight" valign="bottom"><b>ArrowScale</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#a8281d01b5db403f94dd2356512766406">RefineFactor</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#a12a2a95450a843750030b45f04981b12">ArrowScale</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a4bcec8d680fee862858e8f04dbe70a"></a><!-- doxytag: member="VisualizationSceneVector::Init" ref="a1a4bcec8d680fee862858e8f04dbe70a" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61effd7b4616a0598c0e2a60590af936"></a><!-- doxytag: member="VisualizationSceneVector::GetRefinedValues" ref="a61effd7b4616a0598c0e2a60590af936" args="(int i, const IntegrationRule &amp;ir, Vector &amp;vals, DenseMatrix &amp;tr)" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>GetRefinedValues</b> (int i, const IntegrationRule &amp;ir, Vector &amp;vals, DenseMatrix &amp;tr)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ce28df282c5c21668eb7e09d4a02859"></a><!-- doxytag: member="VisualizationSceneVector::GetRefinedValuesAndNormals" ref="a0ce28df282c5c21668eb7e09d4a02859" args="(int i, const IntegrationRule &amp;ir, Vector &amp;vals, DenseMatrix &amp;tr, DenseMatrix &amp;normals)" -->
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetRefinedValuesAndNormals</b> (int i, const IntegrationRule &amp;ir, Vector &amp;vals, DenseMatrix &amp;tr, DenseMatrix &amp;normals)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0aef19dba0355266d91318f1892584b"></a><!-- doxytag: member="VisualizationSceneVector::DrawVector" ref="ae0aef19dba0355266d91318f1892584b" args="(double, double, double, double, double)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawVector</b> (double, double, double, double, double)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#a1a4bcec8d680fee862858e8f04dbe70a">Init</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#a61effd7b4616a0598c0e2a60590af936">GetRefinedValues</a> (int i, const IntegrationRule &amp;ir, Vector &amp;vals, DenseMatrix &amp;tr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#a0ce28df282c5c21668eb7e09d4a02859">GetRefinedValuesAndNormals</a> (int i, const IntegrationRule &amp;ir, Vector &amp;vals, DenseMatrix &amp;tr, DenseMatrix &amp;normals)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#ae0aef19dba0355266d91318f1892584b">DrawVector</a> (double, double, double, double, double)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40440067cbe3203801dfd104cabce0d8"></a><!-- doxytag: member="VisualizationSceneVector::solx" ref="a40440067cbe3203801dfd104cabce0d8" args="" -->
-Vector *&#160;</td><td class="memItemRight" valign="bottom"><b>solx</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a576d769a1db735cbff9806b3a67ae84c"></a><!-- doxytag: member="VisualizationSceneVector::soly" ref="a576d769a1db735cbff9806b3a67ae84c" args="" -->
-Vector *&#160;</td><td class="memItemRight" valign="bottom"><b>soly</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98ab54eb9d6696eddbf39ccaaad6273b"></a><!-- doxytag: member="VisualizationSceneVector::vectorlist" ref="a98ab54eb9d6696eddbf39ccaaad6273b" args="" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><b>vectorlist</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac702521b83a3737f377ad95efa20122d"></a><!-- doxytag: member="VisualizationSceneVector::displinelist" ref="ac702521b83a3737f377ad95efa20122d" args="" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><b>displinelist</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ea7816d67b8e13586b2001570a3eb6a"></a><!-- doxytag: member="VisualizationSceneVector::drawdisp" ref="a3ea7816d67b8e13586b2001570a3eb6a" args="" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><b>drawdisp</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f9ef5a9cb95a4a33beab9a425c5bd76"></a><!-- doxytag: member="VisualizationSceneVector::drawvector" ref="a9f9ef5a9cb95a4a33beab9a425c5bd76" args="" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><b>drawvector</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a990eee26b916b4f32d754cb85cbd4f4d"></a><!-- doxytag: member="VisualizationSceneVector::VecGridF" ref="a990eee26b916b4f32d754cb85cbd4f4d" args="" -->
-GridFunction *&#160;</td><td class="memItemRight" valign="bottom"><b>VecGridF</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa15c1ee7731fd58e20452078a755cb5f"></a><!-- doxytag: member="VisualizationSceneVector::Vec2Scalar" ref="aa15c1ee7731fd58e20452078a755cb5f" args=")(double, double)" -->
-double(*&#160;</td><td class="memItemRight" valign="bottom"><b>Vec2Scalar</b> )(double, double)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a328f4065fd1d702e9d3e3243a0bb7496"></a><!-- doxytag: member="VisualizationSceneVector::maxlen" ref="a328f4065fd1d702e9d3e3243a0bb7496" args="" -->
-double&#160;</td><td class="memItemRight" valign="bottom"><b>maxlen</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8cfc86b058e8a5570d5bc32bfdf47104"></a><!-- doxytag: member="VisualizationSceneVector::vc0" ref="a8cfc86b058e8a5570d5bc32bfdf47104" args="" -->
-Vector&#160;</td><td class="memItemRight" valign="bottom"><b>vc0</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a83cd1d5b63915a21de42d0c265077de1"></a><!-- doxytag: member="VisualizationSceneVector::T0" ref="a83cd1d5b63915a21de42d0c265077de1" args="" -->
-IsoparametricTransformation&#160;</td><td class="memItemRight" valign="bottom"><b>T0</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Vector *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#a40440067cbe3203801dfd104cabce0d8">solx</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Vector *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#a576d769a1db735cbff9806b3a67ae84c">soly</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#a98ab54eb9d6696eddbf39ccaaad6273b">vectorlist</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#ac702521b83a3737f377ad95efa20122d">displinelist</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#a3ea7816d67b8e13586b2001570a3eb6a">drawdisp</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#a9f9ef5a9cb95a4a33beab9a425c5bd76">drawvector</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">GridFunction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#a990eee26b916b4f32d754cb85cbd4f4d">VecGridF</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#aa15c1ee7731fd58e20452078a755cb5f">Vec2Scalar</a> )(double, double)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#a328f4065fd1d702e9d3e3243a0bb7496">maxlen</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#a8cfc86b058e8a5570d5bc32bfdf47104">vc0</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">IsoparametricTransformation&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#a83cd1d5b63915a21de42d0c265077de1">T0</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00015">15</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="af92e5d9dfe7a2cdfa25bfd93238f04dd"></a><!-- doxytag: member="VisualizationSceneVector::VisualizationSceneVector" ref="af92e5d9dfe7a2cdfa25bfd93238f04dd" args="(Mesh &amp;m, Vector &amp;sx, Vector &amp;sy)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VisualizationSceneVector::VisualizationSceneVector </td>
+          <td>(</td>
+          <td class="paramtype">Mesh &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector &amp;&#160;</td>
+          <td class="paramname"><em>sx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector &amp;&#160;</td>
+          <td class="paramname"><em>sy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00212">212</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+
+<p>References <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vsdata_8hpp_source.html#l00053">VisualizationSceneScalarData::sol</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">solx</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">soly</a>, and <a class="el" href="vsvector_8hpp_source.html#l00022">VecGridF</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab6fe156718109e8f13759da0d977bf92"></a><!-- doxytag: member="VisualizationSceneVector::VisualizationSceneVector" ref="ab6fe156718109e8f13759da0d977bf92" args="(GridFunction &amp;vgf)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VisualizationSceneVector::VisualizationSceneVector </td>
+          <td>(</td>
+          <td class="paramtype">GridFunction &amp;&#160;</td>
+          <td class="paramname"><em>vgf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00226">226</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+
+<p>References <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vssolution_8hpp_source.html#l00059">VisualizationSceneSolution::SetGridFunction()</a>, <a class="el" href="vsdata_8hpp_source.html#l00053">VisualizationSceneScalarData::sol</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">solx</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">soly</a>, <a class="el" href="vsvector_8hpp_source.html#l00038">vc0</a>, and <a class="el" href="vsvector_8hpp_source.html#l00022">VecGridF</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae854f73ec13ae8f1ab552303cf5174a5"></a><!-- doxytag: member="VisualizationSceneVector::~VisualizationSceneVector" ref="ae854f73ec13ae8f1ab552303cf5174a5" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VisualizationSceneVector::~VisualizationSceneVector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00422">422</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+
+<p>References <a class="el" href="vsvector_8hpp_source.html#l00020">displinelist</a>, <a class="el" href="vsdata_8hpp_source.html#l00053">VisualizationSceneScalarData::sol</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">solx</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">soly</a>, <a class="el" href="vsvector_8hpp_source.html#l00022">VecGridF</a>, and <a class="el" href="vsvector_8hpp_source.html#l00020">vectorlist</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ac40f54795f8ac209ce5c2ccbed7d3e28"></a><!-- doxytag: member="VisualizationSceneVector::CycleVec2Scalar" ref="ac40f54795f8ac209ce5c2ccbed7d3e28" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualizationSceneVector::CycleVec2Scalar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00299">299</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+
+<p>References <a class="el" href="vssolution_8hpp_source.html#l00080">VisualizationSceneSolution::DefaultLevelLines()</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawvector</a>, <a class="el" href="vssolution_8cpp_source.html#l00755">VisualizationSceneSolution::FindNewBox()</a>, <a class="el" href="vsvector_8hpp_source.html#l00036">maxlen</a>, <a class="el" href="vsdata_8hpp_source.html#l00055">VisualizationSceneScalarData::maxv</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vssolution_8cpp_source.html#l01033">VisualizationSceneSolution::Prepare()</a>, <a class="el" href="vsdata_8cpp_source.html#l01089">VisualizationSceneScalarData::PrepareAxes()</a>, <a class="el" href="vssolution_8cpp_source.html#l01417">VisualizationSceneSolution::PrepareCP()</a>, <a class="el" href="vssolution_8cpp_source.html#l01127">VisualizationSceneSolution::PrepareLevelCurves()</a>, <a class="el" href="vsvector_8hpp_source.html#l00051">PrepareLines()</a>, <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>, <a class="el" href="vsdata_8hpp_source.html#l00053">VisualizationSceneScalarData::sol</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">solx</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">soly</a>, <a class="el" href="vsvector_8hpp_source.html#l00032">Vec2Scalar</a>, and <a class="el" href="vsvector_8cpp_source.html#l00295">Vec2ScalarFunctions</a>.</p>
+
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00145">KeyuPressed()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adf981d0ee69a75bde0f910fe8b6ae034"></a><!-- doxytag: member="VisualizationSceneVector::Draw" ref="adf981d0ee69a75bde0f910fe8b6ae034" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualizationSceneVector::Draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classVisualizationSceneSolution.html#a4487514b9ccc5e335e8023c2abe88661">VisualizationSceneSolution</a>.</p>
+
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00834">834</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+
+<p>References <a class="el" href="vsdata_8hpp_source.html#l00057">VisualizationSceneScalarData::axeslist</a>, <a class="el" href="vsdata_8hpp_source.html#l00057">VisualizationSceneScalarData::colorbar</a>, <a class="el" href="vssolution_8hpp_source.html#l00024">VisualizationSceneSolution::cp_list</a>, <a class="el" href="vsdata_8hpp_source.html#l00070">VisualizationSceneScalarData::CuttingPlane</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">displinelist</a>, <a class="el" href="vssolution_8hpp_source.html#l00023">VisualizationSceneSolution::displlist</a>, <a class="el" href="vssolution_8hpp_source.html#l00024">VisualizationSceneSolution::draw_cp</a>, <a class="el" href="vsdata_8hpp_source.html#l00057">VisualizationSceneScalarData::drawaxes</a>, <a class="el" href="vsdata_8cpp_source.html#l00217">VisualizationSceneScalarData::DrawColorBar()</a>, <a class="el" href="vsdata_8cpp_source.html#l00457">VisualizationSceneScalarData::DrawCoordinateCross()</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawdisp</a>, <a class="el" href="vssolution_8hpp_source.html#l00022">VisualizationSceneSolution::drawelems</a>, <a class="el" href="vssolution_8hpp_source.html#l00022">VisualizationSceneSolution::drawmesh</a>, <a class="el" href="vsdata_8cpp_source.html#l00835">VisualizationSceneScalarData::DrawRuler()</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawvector</a>, <a class="el" href="vsdata_8hpp_source.html#l00034">Plane::Equation()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01238">GetUseTexture()</a>, <a class="el" href="vssolution_8hpp_source.html#l00023">VisualizationSceneSolution::lcurvelist</a>, <a class="el" href="vsdata_8hpp_source.html#l00064">VisualizationSceneScalarData::level</a>, <a class="el" href="vsdata_8hpp_source.html#l00071">VisualizationSceneScalarData::light</a>, <a class="el" href="vssolution_8hpp_source.html#l00023">VisualizationSceneSolution::linelist</a>, <a class="el" href="aux__vis_8cpp_source.html#l00034">MatAlpha</a>, <a class="el" href="vsdata_8hpp_source.html#l00055">VisualizationSceneScalarData::maxv</a>, <a class="el" href="vsdata_8hpp_source.html#l00055">VisualizationSceneScalarData::minv</a>, <a class="el" href="material_8cpp_source.html#l00324">Remove_Transparency()</a>, <a class="el" href="openglvis_8hpp_source.html#l00034">VisualizationScene::rotmat</a>, <a class="el" href="material_8cpp_source.html#l00299">Set_Background()</a>, <a class="el" href="material_8cpp_source.html#l00259">Set_Black_Material()</a>, <a class="el" href="material_8cpp_source.html#l00317">Set_Transparency()</a>, <a class="el" href="openglvis_8hpp_source.html#l00035">VisualizationScene::translmat</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">vectorlist</a>, <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::x</a>, <a class="el" href="openglvis_8hpp_source.html#l00021">VisualizationScene::xscale</a>, <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::y</a>, <a class="el" href="openglvis_8hpp_source.html#l00021">VisualizationScene::yscale</a>, <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::z</a>, and <a class="el" href="openglvis_8hpp_source.html#l00021">VisualizationScene::zscale</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae0aef19dba0355266d91318f1892584b"></a><!-- doxytag: member="VisualizationSceneVector::DrawVector" ref="ae0aef19dba0355266d91318f1892584b" args="(double, double, double, double, double)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualizationSceneVector::DrawVector </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>px</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>py</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>cval</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00733">733</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+
+<p>References <a class="el" href="vsdata_8cpp_source.html#l00111">VisualizationSceneScalarData::Arrow()</a>, <a class="el" href="vsdata_8hpp_source.html#l00061">VisualizationSceneScalarData::arrow_scaling_type</a>, <a class="el" href="vsdata_8hpp_source.html#l00061">VisualizationSceneScalarData::arrow_type</a>, <a class="el" href="vsvector_8hpp_source.html#l00070">ArrowScale</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawvector</a>, <a class="el" href="vsvector_8hpp_source.html#l00036">maxlen</a>, <a class="el" href="vsdata_8hpp_source.html#l00055">VisualizationSceneScalarData::maxv</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vsdata_8hpp_source.html#l00055">VisualizationSceneScalarData::minv</a>, <a class="el" href="aux__vis_8cpp_source.html#l01102">MySetColor()</a>, <a class="el" href="vsvector_8cpp_source.html#l00731">new_maxlen</a>, <a class="el" href="vsvector_8cpp_source.html#l00260">VecLength()</a>, <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::x</a>, <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::y</a>, and <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::z</a>.</p>
+
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac827e3bb35122e18e9e6df8a3ed735ef"></a><!-- doxytag: member="VisualizationSceneVector::EventUpdateColors" ref="ac827e3bb35122e18e9e6df8a3ed735ef" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void VisualizationSceneVector::EventUpdateColors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classVisualizationSceneScalarData.html#a277f38cb6e7f562080b0b534f205b55c">VisualizationSceneScalarData</a>.</p>
+
+<p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00066">66</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
+
+<p>References <a class="el" href="vssolution_8cpp_source.html#l01033">VisualizationSceneSolution::Prepare()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a61effd7b4616a0598c0e2a60590af936"></a><!-- doxytag: member="VisualizationSceneVector::GetRefinedValues" ref="a61effd7b4616a0598c0e2a60590af936" args="(int i, const IntegrationRule &amp;ir, Vector &amp;vals, DenseMatrix &amp;tr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualizationSceneVector::GetRefinedValues </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IntegrationRule &amp;&#160;</td>
+          <td class="paramname"><em>ir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector &amp;&#160;</td>
+          <td class="paramname"><em>vals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DenseMatrix &amp;&#160;</td>
+          <td class="paramname"><em>tr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classVisualizationSceneSolution.html#a7bde28c621790ee7e5e22da1041c8f27">VisualizationSceneSolution</a>.</p>
+
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00436">436</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+
+<p>References <a class="el" href="vssolution_8hpp_source.html#l00022">VisualizationSceneSolution::drawelems</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vsdata_8hpp_source.html#l00075">VisualizationSceneScalarData::shrink</a>, <a class="el" href="vsdata_8cpp_source.html#l01228">VisualizationSceneScalarData::ShrinkPoints()</a>, <a class="el" href="vsvector_8hpp_source.html#l00039">T0</a>, <a class="el" href="vsvector_8hpp_source.html#l00038">vc0</a>, <a class="el" href="vsvector_8hpp_source.html#l00032">Vec2Scalar</a>, <a class="el" href="vsvector_8cpp_source.html#l00290">VecAnisotrSubst()</a>, <a class="el" href="vsvector_8cpp_source.html#l00285">VecCurlSubst()</a>, <a class="el" href="vsvector_8cpp_source.html#l00280">VecDivSubst()</a>, and <a class="el" href="vsvector_8hpp_source.html#l00022">VecGridF</a>.</p>
+
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00525">GetRefinedValuesAndNormals()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0ce28df282c5c21668eb7e09d4a02859"></a><!-- doxytag: member="VisualizationSceneVector::GetRefinedValuesAndNormals" ref="a0ce28df282c5c21668eb7e09d4a02859" args="(int i, const IntegrationRule &amp;ir, Vector &amp;vals, DenseMatrix &amp;tr, DenseMatrix &amp;normals)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int VisualizationSceneVector::GetRefinedValuesAndNormals </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IntegrationRule &amp;&#160;</td>
+          <td class="paramname"><em>ir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector &amp;&#160;</td>
+          <td class="paramname"><em>vals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DenseMatrix &amp;&#160;</td>
+          <td class="paramname"><em>tr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DenseMatrix &amp;&#160;</td>
+          <td class="paramname"><em>normals</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classVisualizationSceneSolution.html#a39225752d1c3afd12882ec55409f4267">VisualizationSceneSolution</a>.</p>
+
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00525">525</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+
+<p>References <a class="el" href="vsvector_8cpp_source.html#l00436">GetRefinedValues()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1a4bcec8d680fee862858e8f04dbe70a"></a><!-- doxytag: member="VisualizationSceneVector::Init" ref="a1a4bcec8d680fee862858e8f04dbe70a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualizationSceneVector::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classVisualizationSceneSolution.html#a0bfbf5949d78a39e36e4e1e42bfc1a41">VisualizationSceneSolution</a>.</p>
+
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00377">377</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+
+<p>References <a class="el" href="vsvector_8hpp_source.html#l00070">ArrowScale</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">displinelist</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawdisp</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawvector</a>, <a class="el" href="vsvector_8cpp_source.html#l00109">KeyBPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00097">KeyDPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00103">KeyNPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00186">KeyUPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00145">KeyuPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00134">KeyVPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00128">KeyvPressed()</a>, <a class="el" href="vsvector_8hpp_source.html#l00036">maxlen</a>, <a class="el" href="vsdata_8hpp_source.html#l00055">VisualizationSceneScalarData::maxv</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>, <a class="el" href="vsvector_8hpp_source.html#l00068">RefineFactor</a>, <a class="el" href="vsdata_8hpp_source.html#l00053">VisualizationSceneScalarData::sol</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">solx</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">soly</a>, <a class="el" href="vsvector_8hpp_source.html#l00032">Vec2Scalar</a>, <a class="el" href="vsvector_8cpp_source.html#l00260">VecLength()</a>, and <a class="el" href="vsvector_8hpp_source.html#l00020">vectorlist</a>.</p>
+
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00212">VisualizationSceneVector()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a258844d5d4b88f2bd6a9cd5f60dc1a3b"></a><!-- doxytag: member="VisualizationSceneVector::NewMeshAndSolution" ref="a258844d5d4b88f2bd6a9cd5f60dc1a3b" args="(GridFunction &amp;vgf, int rescale=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualizationSceneVector::NewMeshAndSolution </td>
+          <td>(</td>
+          <td class="paramtype">GridFunction &amp;&#160;</td>
+          <td class="paramname"><em>vgf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rescale</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00330">330</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+
+<p>References <a class="el" href="vsvector_8hpp_source.html#l00036">maxlen</a>, <a class="el" href="vsdata_8hpp_source.html#l00055">VisualizationSceneScalarData::maxv</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>, <a class="el" href="vsdata_8hpp_source.html#l00053">VisualizationSceneScalarData::sol</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">solx</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">soly</a>, <a class="el" href="vsvector_8hpp_source.html#l00038">vc0</a>, <a class="el" href="vsvector_8hpp_source.html#l00032">Vec2Scalar</a>, <a class="el" href="vsvector_8hpp_source.html#l00022">VecGridF</a>, and <a class="el" href="vsvector_8cpp_source.html#l00260">VecLength()</a>.</p>
+
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a584fd48f93acdcc59c7bb6aff9366718"></a><!-- doxytag: member="VisualizationSceneVector::NPressed" ref="a584fd48f93acdcc59c7bb6aff9366718" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualizationSceneVector::NPressed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00115">115</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+
+<p>References <a class="el" href="vsvector_8hpp_source.html#l00020">drawdisp</a>, <a class="el" href="vsvector_8cpp_source.html#l00536">PrepareDisplacedMesh()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a214fccc3ea668afa70321dc99f0f89df"></a><!-- doxytag: member="VisualizationSceneVector::PrepareDisplacedMesh" ref="a214fccc3ea668afa70321dc99f0f89df" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualizationSceneVector::PrepareDisplacedMesh </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00536">536</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+
+<p>References <a class="el" href="vsvector_8hpp_source.html#l00020">displinelist</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawdisp</a>, <a class="el" href="vssolution_8cpp_source.html#l01158">VisualizationSceneSolution::DrawLevelCurves()</a>, <a class="el" href="vssolution_8hpp_source.html#l00049">VisualizationSceneSolution::EdgeRefineFactor</a>, <a class="el" href="vsdata_8hpp_source.html#l00064">VisualizationSceneScalarData::level</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vssolution_8hpp_source.html#l00049">VisualizationSceneSolution::shading</a>, <a class="el" href="vssolution_8hpp_source.html#l00049">VisualizationSceneSolution::TimesToRefine</a>, <a class="el" href="vsvector_8hpp_source.html#l00022">VecGridF</a>, <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::x</a>, <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::y</a>, and <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::z</a>.</p>
+
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00115">NPressed()</a>, <a class="el" href="vsvector_8hpp_source.html#l00051">PrepareLines()</a>, and <a class="el" href="vsvector_8hpp_source.html#l00057">ToggleDisplacements()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a39053e19f7d9acbe99ad70ca3ff8999b"></a><!-- doxytag: member="VisualizationSceneVector::PrepareLines" ref="a39053e19f7d9acbe99ad70ca3ff8999b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void VisualizationSceneVector::PrepareLines </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classVisualizationSceneSolution.html#a206dd0762ab39de537300b22e62b31b7">VisualizationSceneSolution</a>.</p>
+
+<p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00051">51</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
+
+<p>References <a class="el" href="vsvector_8cpp_source.html#l00536">PrepareDisplacedMesh()</a>.</p>
+
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00299">CycleVec2Scalar()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7c68f6866e0f3599b67eb4fe0d7008d0"></a><!-- doxytag: member="VisualizationSceneVector::PrepareVectorField" ref="a7c68f6866e0f3599b67eb4fe0d7008d0" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualizationSceneVector::PrepareVectorField </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00767">767</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+
+<p>References <a class="el" href="vsvector_8cpp_source.html#l00733">DrawVector()</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawvector</a>, <a class="el" href="vsvector_8hpp_source.html#l00036">maxlen</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vsvector_8cpp_source.html#l00731">new_maxlen</a>, <a class="el" href="vsvector_8hpp_source.html#l00068">RefineFactor</a>, <a class="el" href="vssolution_8hpp_source.html#l00049">VisualizationSceneSolution::shading</a>, <a class="el" href="vsdata_8hpp_source.html#l00053">VisualizationSceneScalarData::sol</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">solx</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">soly</a>, <a class="el" href="vsvector_8hpp_source.html#l00032">Vec2Scalar</a>, <a class="el" href="vsvector_8hpp_source.html#l00022">VecGridF</a>, and <a class="el" href="vsvector_8hpp_source.html#l00020">vectorlist</a>.</p>
+
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00299">CycleVec2Scalar()</a>, <a class="el" href="vsvector_8hpp_source.html#l00066">EventUpdateColors()</a>, <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00145">KeyuPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00330">NewMeshAndSolution()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00206">ToggleVectorField()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3afc1155ca912eed5c1480fbb8115068"></a><!-- doxytag: member="VisualizationSceneVector::ToggleDisplacements" ref="a3afc1155ca912eed5c1480fbb8115068" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualizationSceneVector::ToggleDisplacements </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00057">57</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
+
+<p>References <a class="el" href="vsvector_8hpp_source.html#l00020">drawdisp</a>, and <a class="el" href="vsvector_8cpp_source.html#l00536">PrepareDisplacedMesh()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac96f187b9b479e082739cd51c645eca4"></a><!-- doxytag: member="VisualizationSceneVector::ToggleVectorField" ref="ac96f187b9b479e082739cd51c645eca4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualizationSceneVector::ToggleVectorField </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00206">206</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+
+<p>References <a class="el" href="vsvector_8hpp_source.html#l00020">drawvector</a>, and <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a12a2a95450a843750030b45f04981b12"></a><!-- doxytag: member="VisualizationSceneVector::ArrowScale" ref="a12a2a95450a843750030b45f04981b12" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classVisualizationSceneVector.html#a12a2a95450a843750030b45f04981b12">VisualizationSceneVector::ArrowScale</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00070">70</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00733">DrawVector()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac702521b83a3737f377ad95efa20122d"></a><!-- doxytag: member="VisualizationSceneVector::displinelist" ref="ac702521b83a3737f377ad95efa20122d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classVisualizationSceneVector.html#ac702521b83a3737f377ad95efa20122d">VisualizationSceneVector::displinelist</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00020">20</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00834">Draw()</a>, <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00536">PrepareDisplacedMesh()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00422">~VisualizationSceneVector()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3ea7816d67b8e13586b2001570a3eb6a"></a><!-- doxytag: member="VisualizationSceneVector::drawdisp" ref="a3ea7816d67b8e13586b2001570a3eb6a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classVisualizationSceneVector.html#a3ea7816d67b8e13586b2001570a3eb6a">VisualizationSceneVector::drawdisp</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00020">20</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00834">Draw()</a>, <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00115">NPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00536">PrepareDisplacedMesh()</a>, and <a class="el" href="vsvector_8hpp_source.html#l00057">ToggleDisplacements()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9f9ef5a9cb95a4a33beab9a425c5bd76"></a><!-- doxytag: member="VisualizationSceneVector::drawvector" ref="a9f9ef5a9cb95a4a33beab9a425c5bd76" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classVisualizationSceneVector.html#a9f9ef5a9cb95a4a33beab9a425c5bd76">VisualizationSceneVector::drawvector</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00020">20</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00299">CycleVec2Scalar()</a>, <a class="el" href="vsvector_8cpp_source.html#l00834">Draw()</a>, <a class="el" href="vsvector_8cpp_source.html#l00733">DrawVector()</a>, <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00206">ToggleVectorField()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a328f4065fd1d702e9d3e3243a0bb7496"></a><!-- doxytag: member="VisualizationSceneVector::maxlen" ref="a328f4065fd1d702e9d3e3243a0bb7496" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classVisualizationSceneVector.html#a328f4065fd1d702e9d3e3243a0bb7496">VisualizationSceneVector::maxlen</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00036">36</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00299">CycleVec2Scalar()</a>, <a class="el" href="vsvector_8cpp_source.html#l00733">DrawVector()</a>, <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00330">NewMeshAndSolution()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8281d01b5db403f94dd2356512766406"></a><!-- doxytag: member="VisualizationSceneVector::RefineFactor" ref="a8281d01b5db403f94dd2356512766406" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classVisualizationSceneVector.html#a8281d01b5db403f94dd2356512766406">VisualizationSceneVector::RefineFactor</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00068">68</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00145">KeyuPressed()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a40440067cbe3203801dfd104cabce0d8"></a><!-- doxytag: member="VisualizationSceneVector::solx" ref="a40440067cbe3203801dfd104cabce0d8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector* <a class="el" href="classVisualizationSceneVector.html#a40440067cbe3203801dfd104cabce0d8">VisualizationSceneVector::solx</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00019">19</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00299">CycleVec2Scalar()</a>, <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00330">NewMeshAndSolution()</a>, <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>, <a class="el" href="vsvector_8cpp_source.html#l00212">VisualizationSceneVector()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00422">~VisualizationSceneVector()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a576d769a1db735cbff9806b3a67ae84c"></a><!-- doxytag: member="VisualizationSceneVector::soly" ref="a576d769a1db735cbff9806b3a67ae84c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector * <a class="el" href="classVisualizationSceneVector.html#a576d769a1db735cbff9806b3a67ae84c">VisualizationSceneVector::soly</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00019">19</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00299">CycleVec2Scalar()</a>, <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00330">NewMeshAndSolution()</a>, <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>, <a class="el" href="vsvector_8cpp_source.html#l00212">VisualizationSceneVector()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00422">~VisualizationSceneVector()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a83cd1d5b63915a21de42d0c265077de1"></a><!-- doxytag: member="VisualizationSceneVector::T0" ref="a83cd1d5b63915a21de42d0c265077de1" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IsoparametricTransformation <a class="el" href="classVisualizationSceneVector.html#a83cd1d5b63915a21de42d0c265077de1">VisualizationSceneVector::T0</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00039">39</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00436">GetRefinedValues()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8cfc86b058e8a5570d5bc32bfdf47104"></a><!-- doxytag: member="VisualizationSceneVector::vc0" ref="a8cfc86b058e8a5570d5bc32bfdf47104" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector <a class="el" href="classVisualizationSceneVector.html#a8cfc86b058e8a5570d5bc32bfdf47104">VisualizationSceneVector::vc0</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00038">38</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00436">GetRefinedValues()</a>, <a class="el" href="vsvector_8cpp_source.html#l00330">NewMeshAndSolution()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00226">VisualizationSceneVector()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa15c1ee7731fd58e20452078a755cb5f"></a><!-- doxytag: member="VisualizationSceneVector::Vec2Scalar" ref="aa15c1ee7731fd58e20452078a755cb5f" args=")(double, double)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double(* <a class="el" href="classVisualizationSceneVector.html#aa15c1ee7731fd58e20452078a755cb5f">VisualizationSceneVector::Vec2Scalar</a>)(double, double)<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00032">32</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00299">CycleVec2Scalar()</a>, <a class="el" href="vsvector_8cpp_source.html#l00436">GetRefinedValues()</a>, <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00330">NewMeshAndSolution()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a990eee26b916b4f32d754cb85cbd4f4d"></a><!-- doxytag: member="VisualizationSceneVector::VecGridF" ref="a990eee26b916b4f32d754cb85cbd4f4d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GridFunction* <a class="el" href="classVisualizationSceneVector.html#a990eee26b916b4f32d754cb85cbd4f4d">VisualizationSceneVector::VecGridF</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00022">22</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00436">GetRefinedValues()</a>, <a class="el" href="vsvector_8cpp_source.html#l00330">NewMeshAndSolution()</a>, <a class="el" href="vsvector_8cpp_source.html#l00536">PrepareDisplacedMesh()</a>, <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>, <a class="el" href="vsvector_8cpp_source.html#l00212">VisualizationSceneVector()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00422">~VisualizationSceneVector()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a98ab54eb9d6696eddbf39ccaaad6273b"></a><!-- doxytag: member="VisualizationSceneVector::vectorlist" ref="a98ab54eb9d6696eddbf39ccaaad6273b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classVisualizationSceneVector.html#a98ab54eb9d6696eddbf39ccaaad6273b">VisualizationSceneVector::vectorlist</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00020">20</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00834">Draw()</a>, <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00422">~VisualizationSceneVector()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a></li>
 <li><a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a></li>
 </ul>
@@ -163,7 +839,7 @@ IsoparametricTransformation&#160;</td><td class="memItemRight" valign="bottom"><
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -172,7 +848,7 @@ IsoparametricTransformation&#160;</td><td class="memItemRight" valign="bottom"><
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 15:12:44 for GLVis by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:52:24 for GLVis by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

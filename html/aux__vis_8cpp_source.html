@@ -51,6 +51,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -58,7 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">aux_vis.cpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="aux__vis_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443271. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -75,8 +76,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 <span class="preprocessor">#include &quot;mfem.hpp&quot;</span>
 <a name="l00017"></a>00017 
-<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;palettes.hpp&quot;</span>
-<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;aux_vis.hpp&quot;</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;<a class="code" href="palettes_8hpp.html">palettes.hpp</a>&quot;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="code" href="aux__vis_8hpp.html">aux_vis.hpp</a>&quot;</span>
 <a name="l00020"></a>00020 <span class="preprocessor">#include &quot;gl2ps.h&quot;</span>
 <a name="l00021"></a>00021 <span class="preprocessor">#include &lt;X11/keysym.h&gt;</span>
 <a name="l00022"></a>00022 <span class="preprocessor">#include &lt;time.h&gt;</span>
@@ -85,24 +86,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00025"></a>00025 <span class="preprocessor"></span><span class="preprocessor">#include &quot;tiffio.h&quot;</span>
 <a name="l00026"></a>00026 <span class="preprocessor">#endif</span>
 <a name="l00027"></a>00027 <span class="preprocessor"></span>
-<a name="l00028"></a>00028 <span class="keyword">extern</span> Window window;
+<a name="l00028"></a>00028 <span class="keyword">extern</span> Window <a class="code" href="aux__vis_8cpp.html#ac5b0b3c19d476a314bb68af9bc4a0ee0">window</a>;
 <a name="l00029"></a>00029 
-<a name="l00030"></a>00030 <span class="keywordtype">int</span> fontbase;
-<a name="l00031"></a>00031 <span class="keywordtype">int</span> visualize;
-<a name="l00032"></a>00032 <a class="code" href="classVisualizationScene.html">VisualizationScene</a> * locscene;
+<a name="l00030"></a><a class="code" href="aux__vis_8cpp.html#a2efc891ed1477d4076a461dce341ed0d">00030</a> <span class="keywordtype">int</span> <a class="code" href="aux__vis_8cpp.html#a2efc891ed1477d4076a461dce341ed0d">fontbase</a>;
+<a name="l00031"></a><a class="code" href="aux__vis_8cpp.html#a9e5f6a8d6dda5d991717d80c872e326a">00031</a> <span class="keywordtype">int</span> <a class="code" href="aux__vis_8cpp.html#a9e5f6a8d6dda5d991717d80c872e326a">visualize</a>;
+<a name="l00032"></a><a class="code" href="vsvector3d_8cpp.html#af71e06f4d5eba00469872cd481b1835b">00032</a> <a class="code" href="classVisualizationScene.html">VisualizationScene</a> * <a class="code" href="aux__vis_8cpp.html#af71e06f4d5eba00469872cd481b1835b">locscene</a>;
 <a name="l00033"></a>00033 
-<a name="l00034"></a>00034 <span class="keywordtype">float</span> MatAlpha = 1.0;
-<a name="l00035"></a>00035 <span class="keywordtype">float</span> MatAlphaCenter = 0.5;
+<a name="l00034"></a><a class="code" href="aux__vis_8hpp.html#a72ac4a8827898f543e22495d8be19b86">00034</a> <span class="keywordtype">float</span> <a class="code" href="aux__vis_8cpp.html#a72ac4a8827898f543e22495d8be19b86">MatAlpha</a> = 1.0;
+<a name="l00035"></a><a class="code" href="aux__vis_8hpp.html#a5c7bebb0154ce9c8b21df349cce6386e">00035</a> <span class="keywordtype">float</span> <a class="code" href="aux__vis_8cpp.html#a5c7bebb0154ce9c8b21df349cce6386e">MatAlphaCenter</a> = 0.5;
 <a name="l00036"></a>00036 
-<a name="l00037"></a>00037 <span class="keywordtype">void</span> MyExpose(GLsizei w, GLsizei h);
+<a name="l00037"></a>00037 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a14c66e50f40292c34164e713f845e9c7">MyExpose</a>(GLsizei w, GLsizei h);
 <a name="l00038"></a>00038 
-<a name="l00039"></a>00039 <span class="keywordtype">int</span> InitVisualization (<span class="keyword">const</span> <span class="keywordtype">char</span> name[], <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h)
+<a name="l00039"></a><a class="code" href="aux__vis_8hpp.html#a1cb02c2636dea48ecf59bab2c8d3be5c">00039</a> <span class="keywordtype">int</span> <a class="code" href="aux__vis_8cpp.html#a1cb02c2636dea48ecf59bab2c8d3be5c" title="Initializes the visualization and some keys.">InitVisualization</a> (<span class="keyword">const</span> <span class="keywordtype">char</span> name[], <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h)
 <a name="l00040"></a>00040 {
 <a name="l00041"></a>00041    <span class="keyword">static</span> <span class="keywordtype">int</span> init = 0;
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043    <span class="keywordflow">if</span> (!init)
 <a name="l00044"></a>00044    {
-<a name="l00045"></a>00045       Init_Palettes();
+<a name="l00045"></a>00045       <a class="code" href="palettes_8hpp.html#a6602ad9dc02daeacca25f8e463f00878">Init_Palettes</a>();
 <a name="l00046"></a>00046       init = 1;
 <a name="l00047"></a>00047    }
 <a name="l00048"></a>00048 
@@ -117,7 +118,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00057"></a>00057    <span class="keywordflow">if</span> (auxInitWindow(name) == GL_FALSE)
 <a name="l00058"></a>00058       <span class="keywordflow">return</span> 1;
 <a name="l00059"></a>00059 
-<a name="l00060"></a>00060    Set_Texture_Image();
+<a name="l00060"></a>00060    <a class="code" href="aux__vis_8cpp.html#aca5ce0b51230c946791448b7fcfa25df">Set_Texture_Image</a>();
 <a name="l00061"></a>00061 
 <a name="l00062"></a>00062 <span class="preprocessor">#ifdef GLVIS_DEBUG</span>
 <a name="l00063"></a>00063 <span class="preprocessor"></span>   cout &lt;&lt; <span class="stringliteral">&quot;Window should be up&quot;</span> &lt;&lt; endl;
@@ -128,94 +129,94 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00068"></a>00068    <span class="comment">// &quot;-*-bitstream vera sans-medium-r-normal-*-30-*-*-*-*-*-*-*&quot;;</span>
 <a name="l00069"></a>00069    <span class="comment">// &quot;8x13&quot;;</span>
 <a name="l00070"></a>00070    <span class="comment">// &quot;-adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1&quot;;</span>
-<a name="l00071"></a>00071    fontbase = tkLoadBitmapFont(fontname);
-<a name="l00072"></a>00072    <span class="keywordflow">if</span> (fontbase == 0)
+<a name="l00071"></a>00071    <a class="code" href="aux__vis_8cpp.html#a2efc891ed1477d4076a461dce341ed0d">fontbase</a> = tkLoadBitmapFont(fontname);
+<a name="l00072"></a>00072    <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a2efc891ed1477d4076a461dce341ed0d">fontbase</a> == 0)
 <a name="l00073"></a>00073       cerr &lt;&lt; <span class="stringliteral">&quot;Error loading font &#39;&quot;</span> &lt;&lt; fontname &lt;&lt; <span class="charliteral">&#39;\&#39;&#39;</span> &lt;&lt; endl;
 <a name="l00074"></a>00074 
-<a name="l00075"></a>00075    SetUseTexture(0);
+<a name="l00075"></a>00075    <a class="code" href="aux__vis_8cpp.html#a6ee835cc11f6de1e0f5707cedfc109f2">SetUseTexture</a>(0);
 <a name="l00076"></a>00076 
 <a name="l00077"></a>00077    <span class="comment">// auxReshapeFunc (MyReshape); // not needed, MyExpose calls it</span>
 <a name="l00078"></a>00078    auxReshapeFunc (NULL);
-<a name="l00079"></a>00079    auxExposeFunc (MyExpose);
+<a name="l00079"></a>00079    auxExposeFunc (<a class="code" href="aux__vis_8cpp.html#a14c66e50f40292c34164e713f845e9c7">MyExpose</a>);
 <a name="l00080"></a>00080 
-<a name="l00081"></a>00081    auxMouseFunc (AUX_LEFTBUTTON, AUX_MOUSEDOWN, LeftButtonDown);
-<a name="l00082"></a>00082    auxMouseFunc (AUX_LEFTBUTTON, AUX_MOUSEUP, LeftButtonUp);
-<a name="l00083"></a>00083    auxMouseFunc (AUX_LEFTBUTTON, AUX_MOUSELOC, LeftButtonLoc);
-<a name="l00084"></a>00084    auxMouseFunc (AUX_MIDDLEBUTTON, AUX_MOUSEDOWN, MiddleButtonDown);
-<a name="l00085"></a>00085    auxMouseFunc (AUX_MIDDLEBUTTON, AUX_MOUSEUP, MiddleButtonUp);
-<a name="l00086"></a>00086    auxMouseFunc (AUX_MIDDLEBUTTON, AUX_MOUSELOC, MiddleButtonLoc);
-<a name="l00087"></a>00087    auxMouseFunc (AUX_RIGHTBUTTON, AUX_MOUSEDOWN, RightButtonDown);
-<a name="l00088"></a>00088    auxMouseFunc (AUX_RIGHTBUTTON, AUX_MOUSEUP, RightButtonUp);
-<a name="l00089"></a>00089    auxMouseFunc (AUX_RIGHTBUTTON, AUX_MOUSELOC, RightButtonLoc);
+<a name="l00081"></a>00081    auxMouseFunc (AUX_LEFTBUTTON, AUX_MOUSEDOWN, <a class="code" href="aux__vis_8cpp.html#a528988e71455876c1ef00cfe23b6e737">LeftButtonDown</a>);
+<a name="l00082"></a>00082    auxMouseFunc (AUX_LEFTBUTTON, AUX_MOUSEUP, <a class="code" href="aux__vis_8cpp.html#a696c27d3bcc99cc4362b246f2afbc387">LeftButtonUp</a>);
+<a name="l00083"></a>00083    auxMouseFunc (AUX_LEFTBUTTON, AUX_MOUSELOC, <a class="code" href="aux__vis_8cpp.html#a1cdada589819ed59e9e150f5a36be2f2">LeftButtonLoc</a>);
+<a name="l00084"></a>00084    auxMouseFunc (AUX_MIDDLEBUTTON, AUX_MOUSEDOWN, <a class="code" href="aux__vis_8cpp.html#ac0251cb3247e699b4740eb0b4a0a8bc2">MiddleButtonDown</a>);
+<a name="l00085"></a>00085    auxMouseFunc (AUX_MIDDLEBUTTON, AUX_MOUSEUP, <a class="code" href="aux__vis_8cpp.html#a79fbeb1d57b9e53996d14bfc2ee64f14">MiddleButtonUp</a>);
+<a name="l00086"></a>00086    auxMouseFunc (AUX_MIDDLEBUTTON, AUX_MOUSELOC, <a class="code" href="aux__vis_8cpp.html#a580f0c8efa6d68b74b092186f32740a7">MiddleButtonLoc</a>);
+<a name="l00087"></a>00087    auxMouseFunc (AUX_RIGHTBUTTON, AUX_MOUSEDOWN, <a class="code" href="aux__vis_8cpp.html#aef60366fead3ea929af1f8f5724c25e0">RightButtonDown</a>);
+<a name="l00088"></a>00088    auxMouseFunc (AUX_RIGHTBUTTON, AUX_MOUSEUP, <a class="code" href="aux__vis_8cpp.html#aa961abd01554fbe25d4aaec95c23d645">RightButtonUp</a>);
+<a name="l00089"></a>00089    auxMouseFunc (AUX_RIGHTBUTTON, AUX_MOUSELOC, <a class="code" href="aux__vis_8cpp.html#a1b716e3410bffb791085d2f05ce6f007">RightButtonLoc</a>);
 <a name="l00090"></a>00090 
-<a name="l00091"></a>00091    auxKeyFunc (AUX_P, KeyP);
-<a name="l00092"></a>00092    auxKeyFunc (AUX_S, KeyS);
+<a name="l00091"></a>00091    auxKeyFunc (AUX_P, <a class="code" href="aux__vis_8cpp.html#a6d23442812b3f1b0dabcb9e81d17decf">KeyP</a>);
+<a name="l00092"></a>00092    auxKeyFunc (AUX_S, <a class="code" href="aux__vis_8cpp.html#aca1a94943bc1efeeddfc2869306dce37">KeyS</a>);
 <a name="l00093"></a>00093 
-<a name="l00094"></a>00094    auxKeyFunc (AUX_q, KeyQPressed);
-<a name="l00095"></a>00095    auxKeyFunc (AUX_Q, KeyQPressed);
+<a name="l00094"></a>00094    auxKeyFunc (AUX_q, <a class="code" href="aux__vis_8cpp.html#af62a1b1bdb3948832a6252aaa5998215">KeyQPressed</a>);
+<a name="l00095"></a>00095    auxKeyFunc (AUX_Q, <a class="code" href="aux__vis_8cpp.html#af62a1b1bdb3948832a6252aaa5998215">KeyQPressed</a>);
 <a name="l00096"></a>00096 
-<a name="l00097"></a>00097    auxKeyFunc (AUX_LEFT, KeyLeftPressed);
-<a name="l00098"></a>00098    auxKeyFunc (AUX_RIGHT, KeyRightPressed);
-<a name="l00099"></a>00099    auxKeyFunc (AUX_UP, KeyUpPressed);
-<a name="l00100"></a>00100    auxKeyFunc (AUX_DOWN, KeyDownPressed);
+<a name="l00097"></a>00097    auxKeyFunc (AUX_LEFT, <a class="code" href="aux__vis_8cpp.html#a2821ab890bf34a2a290e9e2f801dc1fc">KeyLeftPressed</a>);
+<a name="l00098"></a>00098    auxKeyFunc (AUX_RIGHT, <a class="code" href="aux__vis_8cpp.html#ad146c6bc247d82dd73d7705e297c1df2">KeyRightPressed</a>);
+<a name="l00099"></a>00099    auxKeyFunc (AUX_UP, <a class="code" href="aux__vis_8cpp.html#a3e0100457e1af742ed654e2c6f88dc5d">KeyUpPressed</a>);
+<a name="l00100"></a>00100    auxKeyFunc (AUX_DOWN, <a class="code" href="aux__vis_8cpp.html#a24fe3cabda9bfd7bf4762b57a0e55fb6">KeyDownPressed</a>);
 <a name="l00101"></a>00101 
-<a name="l00102"></a>00102    auxKeyFunc (XK_KP_0, Key0Pressed);
-<a name="l00103"></a>00103    auxKeyFunc (XK_KP_1, Key1Pressed);
-<a name="l00104"></a>00104    auxKeyFunc (XK_KP_2, Key2Pressed);
-<a name="l00105"></a>00105    auxKeyFunc (XK_KP_3, Key3Pressed);
-<a name="l00106"></a>00106    auxKeyFunc (XK_KP_4, Key4Pressed);
-<a name="l00107"></a>00107    auxKeyFunc (XK_KP_5, Key5Pressed);
-<a name="l00108"></a>00108    auxKeyFunc (XK_KP_6, Key6Pressed);
-<a name="l00109"></a>00109    auxKeyFunc (XK_KP_7, Key7Pressed);
-<a name="l00110"></a>00110    auxKeyFunc (XK_KP_8, Key8Pressed);
-<a name="l00111"></a>00111    auxKeyFunc (XK_KP_9, Key9Pressed);
+<a name="l00102"></a>00102    auxKeyFunc (XK_KP_0, <a class="code" href="aux__vis_8cpp.html#acb06a69e8c70932b41f17ae2f10ebbcd">Key0Pressed</a>);
+<a name="l00103"></a>00103    auxKeyFunc (XK_KP_1, <a class="code" href="aux__vis_8cpp.html#a30412af4a8cc51bc5ea3f2f173075ed5">Key1Pressed</a>);
+<a name="l00104"></a>00104    auxKeyFunc (XK_KP_2, <a class="code" href="aux__vis_8cpp.html#a585b32928f7b0f589690de3539aa868a">Key2Pressed</a>);
+<a name="l00105"></a>00105    auxKeyFunc (XK_KP_3, <a class="code" href="aux__vis_8cpp.html#a56039a44bb0d82d12155d34a83d8fe6d">Key3Pressed</a>);
+<a name="l00106"></a>00106    auxKeyFunc (XK_KP_4, <a class="code" href="aux__vis_8cpp.html#ac4092a7ac723737de0b927e05d577cc7">Key4Pressed</a>);
+<a name="l00107"></a>00107    auxKeyFunc (XK_KP_5, <a class="code" href="aux__vis_8cpp.html#a0c65b84e16e68ef6697ef034f6ee6fc2">Key5Pressed</a>);
+<a name="l00108"></a>00108    auxKeyFunc (XK_KP_6, <a class="code" href="aux__vis_8cpp.html#aa81c59ed41397e7a48996b8e00534be5">Key6Pressed</a>);
+<a name="l00109"></a>00109    auxKeyFunc (XK_KP_7, <a class="code" href="aux__vis_8cpp.html#ae5f8f4f74fad9efc848c9158f19c4b8a">Key7Pressed</a>);
+<a name="l00110"></a>00110    auxKeyFunc (XK_KP_8, <a class="code" href="aux__vis_8cpp.html#a76a6832632098024d40fb49e47e548dd">Key8Pressed</a>);
+<a name="l00111"></a>00111    auxKeyFunc (XK_KP_9, <a class="code" href="aux__vis_8cpp.html#a1e28e3b42dce42f220dd46cee6423836">Key9Pressed</a>);
 <a name="l00112"></a>00112 
-<a name="l00113"></a>00113    auxKeyFunc (XK_KP_Subtract, KeyMinusPressed);
-<a name="l00114"></a>00114    auxKeyFunc (XK_KP_Add, KeyPlusPressed);
+<a name="l00113"></a>00113    auxKeyFunc (XK_KP_Subtract, <a class="code" href="aux__vis_8cpp.html#ab0a58e8a2f8245ee902fdc61a7002ce3">KeyMinusPressed</a>);
+<a name="l00114"></a>00114    auxKeyFunc (XK_KP_Add, <a class="code" href="aux__vis_8cpp.html#a1434f8f7a0899de7e4c2c19b3858d850">KeyPlusPressed</a>);
 <a name="l00115"></a>00115 
-<a name="l00116"></a>00116    auxKeyFunc (XK_KP_Decimal, KeyDeletePressed);
-<a name="l00117"></a>00117    auxKeyFunc (XK_KP_Enter, KeyEnterPressed);
+<a name="l00116"></a>00116    auxKeyFunc (XK_KP_Decimal, <a class="code" href="aux__vis_8cpp.html#ae72e93c1c35ad87215ade5307d064695">KeyDeletePressed</a>);
+<a name="l00117"></a>00117    auxKeyFunc (XK_KP_Enter, <a class="code" href="aux__vis_8cpp.html#abeccd54302ad1ec81e2d19fa7e7f1b13">KeyEnterPressed</a>);
 <a name="l00118"></a>00118 
-<a name="l00119"></a>00119    auxKeyFunc (XK_period, KeyDeletePressed);
-<a name="l00120"></a>00120    auxKeyFunc (TK_RETURN, KeyEnterPressed);
+<a name="l00119"></a>00119    auxKeyFunc (XK_period, <a class="code" href="aux__vis_8cpp.html#ae72e93c1c35ad87215ade5307d064695">KeyDeletePressed</a>);
+<a name="l00120"></a>00120    auxKeyFunc (TK_RETURN, <a class="code" href="aux__vis_8cpp.html#abeccd54302ad1ec81e2d19fa7e7f1b13">KeyEnterPressed</a>);
 <a name="l00121"></a>00121 
-<a name="l00122"></a>00122    auxKeyFunc (XK_0, Key0Pressed);
-<a name="l00123"></a>00123    auxKeyFunc (XK_1, Key1Pressed);
-<a name="l00124"></a>00124    auxKeyFunc (XK_2, Key2Pressed);
-<a name="l00125"></a>00125    auxKeyFunc (XK_3, Key3Pressed);
-<a name="l00126"></a>00126    auxKeyFunc (XK_4, Key4Pressed);
-<a name="l00127"></a>00127    auxKeyFunc (XK_5, Key5Pressed);
-<a name="l00128"></a>00128    auxKeyFunc (XK_6, Key6Pressed);
-<a name="l00129"></a>00129    auxKeyFunc (XK_7, Key7Pressed);
-<a name="l00130"></a>00130    auxKeyFunc (XK_8, Key8Pressed);
-<a name="l00131"></a>00131    auxKeyFunc (XK_9, Key9Pressed);
+<a name="l00122"></a>00122    auxKeyFunc (XK_0, <a class="code" href="aux__vis_8cpp.html#acb06a69e8c70932b41f17ae2f10ebbcd">Key0Pressed</a>);
+<a name="l00123"></a>00123    auxKeyFunc (XK_1, <a class="code" href="aux__vis_8cpp.html#a30412af4a8cc51bc5ea3f2f173075ed5">Key1Pressed</a>);
+<a name="l00124"></a>00124    auxKeyFunc (XK_2, <a class="code" href="aux__vis_8cpp.html#a585b32928f7b0f589690de3539aa868a">Key2Pressed</a>);
+<a name="l00125"></a>00125    auxKeyFunc (XK_3, <a class="code" href="aux__vis_8cpp.html#a56039a44bb0d82d12155d34a83d8fe6d">Key3Pressed</a>);
+<a name="l00126"></a>00126    auxKeyFunc (XK_4, <a class="code" href="aux__vis_8cpp.html#ac4092a7ac723737de0b927e05d577cc7">Key4Pressed</a>);
+<a name="l00127"></a>00127    auxKeyFunc (XK_5, <a class="code" href="aux__vis_8cpp.html#a0c65b84e16e68ef6697ef034f6ee6fc2">Key5Pressed</a>);
+<a name="l00128"></a>00128    auxKeyFunc (XK_6, <a class="code" href="aux__vis_8cpp.html#aa81c59ed41397e7a48996b8e00534be5">Key6Pressed</a>);
+<a name="l00129"></a>00129    auxKeyFunc (XK_7, <a class="code" href="aux__vis_8cpp.html#ae5f8f4f74fad9efc848c9158f19c4b8a">Key7Pressed</a>);
+<a name="l00130"></a>00130    auxKeyFunc (XK_8, <a class="code" href="aux__vis_8cpp.html#a76a6832632098024d40fb49e47e548dd">Key8Pressed</a>);
+<a name="l00131"></a>00131    auxKeyFunc (XK_9, <a class="code" href="aux__vis_8cpp.html#a1e28e3b42dce42f220dd46cee6423836">Key9Pressed</a>);
 <a name="l00132"></a>00132 
-<a name="l00133"></a>00133    auxKeyFunc (XK_minus, KeyMinusPressed);
-<a name="l00134"></a>00134    auxKeyFunc (XK_plus, KeyPlusPressed);
-<a name="l00135"></a>00135    auxKeyFunc (XK_equal, KeyPlusPressed);
+<a name="l00133"></a>00133    auxKeyFunc (XK_minus, <a class="code" href="aux__vis_8cpp.html#ab0a58e8a2f8245ee902fdc61a7002ce3">KeyMinusPressed</a>);
+<a name="l00134"></a>00134    auxKeyFunc (XK_plus, <a class="code" href="aux__vis_8cpp.html#a1434f8f7a0899de7e4c2c19b3858d850">KeyPlusPressed</a>);
+<a name="l00135"></a>00135    auxKeyFunc (XK_equal, <a class="code" href="aux__vis_8cpp.html#a1434f8f7a0899de7e4c2c19b3858d850">KeyPlusPressed</a>);
 <a name="l00136"></a>00136 
-<a name="l00137"></a>00137    auxKeyFunc (AUX_j, KeyJPressed);
-<a name="l00138"></a>00138    auxKeyFunc (AUX_J, KeyJPressed);
+<a name="l00137"></a>00137    auxKeyFunc (AUX_j, <a class="code" href="aux__vis_8cpp.html#a858e1709ddaf8cf81fee85daedd4ae98">KeyJPressed</a>);
+<a name="l00138"></a>00138    auxKeyFunc (AUX_J, <a class="code" href="aux__vis_8cpp.html#a858e1709ddaf8cf81fee85daedd4ae98">KeyJPressed</a>);
 <a name="l00139"></a>00139 
-<a name="l00140"></a>00140    auxKeyFunc (XK_KP_Multiply, ZoomIn);
-<a name="l00141"></a>00141    auxKeyFunc (XK_KP_Divide, ZoomOut);
+<a name="l00140"></a>00140    auxKeyFunc (XK_KP_Multiply, <a class="code" href="aux__vis_8cpp.html#acea72e7aff0e351b5c1ef76a3b44033f">ZoomIn</a>);
+<a name="l00141"></a>00141    auxKeyFunc (XK_KP_Divide, <a class="code" href="aux__vis_8cpp.html#ad40cbfdf9d1ba7a4b95a4100c893f929">ZoomOut</a>);
 <a name="l00142"></a>00142 
-<a name="l00143"></a>00143    auxKeyFunc (XK_asterisk, ZoomIn);
-<a name="l00144"></a>00144    auxKeyFunc (XK_slash, ZoomOut);
+<a name="l00143"></a>00143    auxKeyFunc (XK_asterisk, <a class="code" href="aux__vis_8cpp.html#acea72e7aff0e351b5c1ef76a3b44033f">ZoomIn</a>);
+<a name="l00144"></a>00144    auxKeyFunc (XK_slash, <a class="code" href="aux__vis_8cpp.html#ad40cbfdf9d1ba7a4b95a4100c893f929">ZoomOut</a>);
 <a name="l00145"></a>00145 
-<a name="l00146"></a>00146    auxKeyFunc (XK_bracketleft, ScaleDown);
-<a name="l00147"></a>00147    auxKeyFunc (XK_bracketright, ScaleUp);
-<a name="l00148"></a>00148    auxKeyFunc (XK_at, LookAt);
+<a name="l00146"></a>00146    auxKeyFunc (XK_bracketleft, <a class="code" href="aux__vis_8cpp.html#ae1cc0d5e05878f579f9471a666aa8ac2">ScaleDown</a>);
+<a name="l00147"></a>00147    auxKeyFunc (XK_bracketright, <a class="code" href="aux__vis_8cpp.html#a7d9c24d7bcbdac4657e4a49cc096d734">ScaleUp</a>);
+<a name="l00148"></a>00148    auxKeyFunc (XK_at, <a class="code" href="aux__vis_8cpp.html#af840fdb915a1a89e976450ea10d05892">LookAt</a>);
 <a name="l00149"></a>00149 
-<a name="l00150"></a>00150    auxKeyFunc(XK_parenleft, ShrinkWindow);
-<a name="l00151"></a>00151    auxKeyFunc(XK_parenright, EnlargeWindow);
+<a name="l00150"></a>00150    auxKeyFunc(XK_parenleft, <a class="code" href="aux__vis_8cpp.html#ae7b3e681c96443d7f466ff291a13cffa">ShrinkWindow</a>);
+<a name="l00151"></a>00151    auxKeyFunc(XK_parenright, <a class="code" href="aux__vis_8cpp.html#a41042651350dde4d8b3eef444bff5b79">EnlargeWindow</a>);
 <a name="l00152"></a>00152 
 <a name="l00153"></a>00153    locscene = NULL;
 <a name="l00154"></a>00154 
 <a name="l00155"></a>00155    <span class="keywordflow">return</span> 0;
 <a name="l00156"></a>00156 }
 <a name="l00157"></a>00157 
-<a name="l00158"></a>00158 <span class="keywordtype">void</span> SendKeyEvent (KeySym keysym, <span class="keywordtype">int</span> Shift=0)
+<a name="l00158"></a><a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">00158</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a> (KeySym keysym, <span class="keywordtype">int</span> Shift=0)
 <a name="l00159"></a>00159 {
 <a name="l00160"></a>00160    XKeyEvent  xke;
 <a name="l00161"></a>00161 
@@ -246,7 +247,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00186"></a>00186    }
 <a name="l00187"></a>00187 }
 <a name="l00188"></a>00188 
-<a name="l00189"></a>00189 <span class="keywordtype">void</span> SendKeySequence (<span class="keywordtype">char</span> * seq)
+<a name="l00189"></a><a class="code" href="aux__vis_8hpp.html#a205d7b73e3cb28f274cdd783454c067f">00189</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a205d7b73e3cb28f274cdd783454c067f" title="Send a sequence of keystrokes to the visualization window.">SendKeySequence</a> (<span class="keywordtype">char</span> * seq)
 <a name="l00190"></a>00190 {
 <a name="l00191"></a>00191    <span class="keywordtype">char</span> * key = seq;
 <a name="l00192"></a>00192 
@@ -254,90 +255,90 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00194"></a>00194    {
 <a name="l00195"></a>00195       <span class="keywordflow">if</span> ( ((*key - <span class="charliteral">&#39;0&#39;</span>) &lt; 10) &amp;&amp; ((*key - <span class="charliteral">&#39;0&#39;</span>) &gt;= 0) ) <span class="comment">// (keypad) number</span>
 <a name="l00196"></a>00196       {
-<a name="l00197"></a>00197          SendKeyEvent(XK_0 + (*key) -<span class="charliteral">&#39;0&#39;</span>);
+<a name="l00197"></a>00197          <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a>(XK_0 + (*key) -<span class="charliteral">&#39;0&#39;</span>);
 <a name="l00198"></a>00198          <span class="keywordflow">continue</span>;
 <a name="l00199"></a>00199       }
 <a name="l00200"></a>00200 
 <a name="l00201"></a>00201       <span class="keywordflow">if</span> ( ((*key - <span class="charliteral">&#39;a&#39;</span>) &lt; 26) &amp;&amp; ((*key - <span class="charliteral">&#39;a&#39;</span>) &gt;= 0) ) <span class="comment">// lowercase letter</span>
 <a name="l00202"></a>00202       {
-<a name="l00203"></a>00203          SendKeyEvent(XK_a + (*key) -<span class="charliteral">&#39;a&#39;</span>);
+<a name="l00203"></a>00203          <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a>(XK_a + (*key) -<span class="charliteral">&#39;a&#39;</span>);
 <a name="l00204"></a>00204          <span class="keywordflow">continue</span>;
 <a name="l00205"></a>00205       }
 <a name="l00206"></a>00206 
 <a name="l00207"></a>00207       <span class="keywordflow">if</span> ( ((*key - <span class="charliteral">&#39;A&#39;</span>) &lt; 26) &amp;&amp; ((*key - <span class="charliteral">&#39;A&#39;</span>) &gt;= 0) ) <span class="comment">// uppercase letter</span>
 <a name="l00208"></a>00208       {
-<a name="l00209"></a>00209          SendKeyEvent(XK_A + (*key) -<span class="charliteral">&#39;A&#39;</span>,1);
+<a name="l00209"></a>00209          <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a>(XK_A + (*key) -<span class="charliteral">&#39;A&#39;</span>,1);
 <a name="l00210"></a>00210          <span class="keywordflow">continue</span>;
 <a name="l00211"></a>00211       }
 <a name="l00212"></a>00212 
 <a name="l00213"></a>00213       <span class="keywordflow">switch</span> (*key)
 <a name="l00214"></a>00214       {
 <a name="l00215"></a>00215       <span class="keywordflow">case</span> <span class="charliteral">&#39;+&#39;</span>:
-<a name="l00216"></a>00216          SendKeyEvent(XK_plus);
+<a name="l00216"></a>00216          <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a>(XK_plus);
 <a name="l00217"></a>00217          <span class="keywordflow">continue</span>;
 <a name="l00218"></a>00218       <span class="keywordflow">case</span> <span class="charliteral">&#39;-&#39;</span>:
-<a name="l00219"></a>00219          SendKeyEvent(XK_minus);
+<a name="l00219"></a>00219          <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a>(XK_minus);
 <a name="l00220"></a>00220          <span class="keywordflow">continue</span>;
 <a name="l00221"></a>00221       <span class="keywordflow">case</span> <span class="charliteral">&#39;*&#39;</span>:
-<a name="l00222"></a>00222          SendKeyEvent(XK_KP_Multiply);
+<a name="l00222"></a>00222          <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a>(XK_KP_Multiply);
 <a name="l00223"></a>00223          <span class="keywordflow">continue</span>;
 <a name="l00224"></a>00224       <span class="keywordflow">case</span> <span class="charliteral">&#39;/&#39;</span>:
-<a name="l00225"></a>00225          SendKeyEvent(XK_KP_Divide);
+<a name="l00225"></a>00225          <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a>(XK_KP_Divide);
 <a name="l00226"></a>00226          <span class="keywordflow">continue</span>;
 <a name="l00227"></a>00227       <span class="keywordflow">case</span> <span class="charliteral">&#39;.&#39;</span>:
-<a name="l00228"></a>00228          SendKeyEvent(XK_period);
+<a name="l00228"></a>00228          <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a>(XK_period);
 <a name="l00229"></a>00229          <span class="keywordflow">continue</span>;
 <a name="l00230"></a>00230       <span class="keywordflow">case</span> <span class="charliteral">&#39;[&#39;</span>:
-<a name="l00231"></a>00231          SendKeyEvent(XK_bracketleft);
+<a name="l00231"></a>00231          <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a>(XK_bracketleft);
 <a name="l00232"></a>00232          <span class="keywordflow">continue</span>;
 <a name="l00233"></a>00233       <span class="keywordflow">case</span> <span class="charliteral">&#39;]&#39;</span>:
-<a name="l00234"></a>00234          SendKeyEvent(XK_bracketright);
+<a name="l00234"></a>00234          <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a>(XK_bracketright);
 <a name="l00235"></a>00235          <span class="keywordflow">continue</span>;
 <a name="l00236"></a>00236       <span class="keywordflow">case</span> <span class="charliteral">&#39;(&#39;</span>:
-<a name="l00237"></a>00237          SendKeyEvent(XK_parenleft,1);
+<a name="l00237"></a>00237          <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a>(XK_parenleft,1);
 <a name="l00238"></a>00238          <span class="keywordflow">continue</span>;
 <a name="l00239"></a>00239       <span class="keywordflow">case</span> <span class="charliteral">&#39;)&#39;</span>:
-<a name="l00240"></a>00240          SendKeyEvent(XK_parenright,1);
+<a name="l00240"></a>00240          <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a>(XK_parenright,1);
 <a name="l00241"></a>00241          <span class="keywordflow">continue</span>;
 <a name="l00242"></a>00242       <span class="keywordflow">case</span> <span class="charliteral">&#39;!&#39;</span>:
-<a name="l00243"></a>00243          SendKeyEvent(XK_exclam,1);
+<a name="l00243"></a>00243          <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a>(XK_exclam,1);
 <a name="l00244"></a>00244          <span class="keywordflow">continue</span>;
 <a name="l00245"></a>00245       <span class="keywordflow">case</span> <span class="charliteral">&#39;~&#39;</span>: <span class="comment">// special codes</span>
 <a name="l00246"></a>00246          key++;
 <a name="l00247"></a>00247          <span class="keywordflow">switch</span> (*key)
 <a name="l00248"></a>00248          {
 <a name="l00249"></a>00249          <span class="keywordflow">case</span> <span class="charliteral">&#39;e&#39;</span>: <span class="comment">// expose event</span>
-<a name="l00250"></a>00250             SendExposeEvent();
+<a name="l00250"></a>00250             <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00251"></a>00251             <span class="keywordflow">break</span>;
 <a name="l00252"></a>00252          <span class="keywordflow">case</span> <span class="charliteral">&#39;l&#39;</span>: <span class="comment">// left arrow</span>
-<a name="l00253"></a>00253             SendKeyEvent(XK_Left);
+<a name="l00253"></a>00253             <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a>(XK_Left);
 <a name="l00254"></a>00254             <span class="keywordflow">break</span>;
 <a name="l00255"></a>00255          <span class="keywordflow">case</span> <span class="charliteral">&#39;r&#39;</span>: <span class="comment">// right arrow</span>
-<a name="l00256"></a>00256             SendKeyEvent(XK_Right);
+<a name="l00256"></a>00256             <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a>(XK_Right);
 <a name="l00257"></a>00257             <span class="keywordflow">break</span>;
 <a name="l00258"></a>00258          <span class="keywordflow">case</span> <span class="charliteral">&#39;u&#39;</span>: <span class="comment">// up arrow</span>
-<a name="l00259"></a>00259             SendKeyEvent(XK_Up);
+<a name="l00259"></a>00259             <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a>(XK_Up);
 <a name="l00260"></a>00260             <span class="keywordflow">break</span>;
 <a name="l00261"></a>00261          <span class="keywordflow">case</span> <span class="charliteral">&#39;d&#39;</span>: <span class="comment">// down arrow</span>
-<a name="l00262"></a>00262             SendKeyEvent(XK_Down);
+<a name="l00262"></a>00262             <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a>(XK_Down);
 <a name="l00263"></a>00263             <span class="keywordflow">break</span>;
 <a name="l00264"></a>00264          <span class="keywordflow">case</span> <span class="charliteral">&#39;3&#39;</span>: <span class="comment">// F3</span>
-<a name="l00265"></a>00265             SendKeyEvent(XK_F3);
+<a name="l00265"></a>00265             <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a>(XK_F3);
 <a name="l00266"></a>00266             <span class="keywordflow">break</span>;
 <a name="l00267"></a>00267          <span class="keywordflow">case</span> <span class="charliteral">&#39;5&#39;</span>: <span class="comment">// F5</span>
-<a name="l00268"></a>00268             SendKeyEvent(XK_F5);
+<a name="l00268"></a>00268             <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a>(XK_F5);
 <a name="l00269"></a>00269             <span class="keywordflow">break</span>;
 <a name="l00270"></a>00270          <span class="keywordflow">case</span> <span class="charliteral">&#39;6&#39;</span>: <span class="comment">// F6</span>
-<a name="l00271"></a>00271             SendKeyEvent(XK_F6);
+<a name="l00271"></a>00271             <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a>(XK_F6);
 <a name="l00272"></a>00272             <span class="keywordflow">break</span>;
 <a name="l00273"></a>00273          <span class="keywordflow">case</span> <span class="charliteral">&#39;7&#39;</span>: <span class="comment">// F7</span>
-<a name="l00274"></a>00274             SendKeyEvent(XK_F7);
+<a name="l00274"></a>00274             <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a>(XK_F7);
 <a name="l00275"></a>00275             <span class="keywordflow">break</span>;
 <a name="l00276"></a>00276          <span class="keywordflow">case</span> <span class="charliteral">&#39;.&#39;</span>: <span class="comment">// Keypad ./Del</span>
-<a name="l00277"></a>00277             SendKeyEvent(XK_period);
+<a name="l00277"></a>00277             <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a>(XK_period);
 <a name="l00278"></a>00278             <span class="keywordflow">break</span>;
 <a name="l00279"></a>00279          <span class="keywordflow">case</span> <span class="charliteral">&#39;E&#39;</span>: <span class="comment">// Keypad Enter</span>
-<a name="l00280"></a>00280             SendKeyEvent(XK_Return);
+<a name="l00280"></a>00280             <a class="code" href="aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96">SendKeyEvent</a>(XK_Return);
 <a name="l00281"></a>00281             <span class="keywordflow">break</span>;
 <a name="l00282"></a>00282          }
 <a name="l00283"></a>00283          <span class="keywordflow">continue</span>;
@@ -345,9 +346,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00285"></a>00285    }
 <a name="l00286"></a>00286 }
 <a name="l00287"></a>00287 
-<a name="l00288"></a>00288 <span class="keywordtype">void</span> InitIdleFuncs();
+<a name="l00288"></a>00288 <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a8f1a99abb937e78c6b36e9954ef88902">InitIdleFuncs</a>();
 <a name="l00289"></a>00289 
-<a name="l00290"></a>00290 <span class="keywordtype">void</span> SetVisualizationScene(<a class="code" href="classVisualizationScene.html">VisualizationScene</a> * scene, <span class="keywordtype">int</span> view, <span class="keywordtype">char</span> * keys)
+<a name="l00290"></a><a class="code" href="aux__vis_8hpp.html#a807590a64f791d3a0161c20e6c9442be">00290</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a123d870a20286e4b2092338cb960e782" title="Start the infinite visualization loop.">SetVisualizationScene</a>(<a class="code" href="classVisualizationScene.html">VisualizationScene</a> * scene, <span class="keywordtype">int</span> view, <span class="keywordtype">char</span> * <a class="code" href="glvis_8cpp.html#a51ba742484f9bdff4502c62248f0ab5b">keys</a>)
 <a name="l00291"></a>00291 {
 <a name="l00292"></a>00292    locscene = scene;
 <a name="l00293"></a>00293 
@@ -357,30 +358,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00297"></a>00297    <span class="keywordflow">else</span>
 <a name="l00298"></a>00298       scene -&gt; CenterObject();
 <a name="l00299"></a>00299 
-<a name="l00300"></a>00300    InitIdleFuncs();
+<a name="l00300"></a>00300    <a class="code" href="aux__vis_8cpp.html#a8f1a99abb937e78c6b36e9954ef88902">InitIdleFuncs</a>();
 <a name="l00301"></a>00301    <span class="keywordflow">if</span> (scene -&gt; spinning)
-<a name="l00302"></a>00302       AddIdleFunc(MainLoop);
+<a name="l00302"></a>00302       <a class="code" href="aux__vis_8cpp.html#a902196002355b22363b8573023eff4bf">AddIdleFunc</a>(<a class="code" href="aux__vis_8cpp.html#a153a5fd8946b6ab9fd9b725759fffe5e">MainLoop</a>);
 <a name="l00303"></a>00303 
 <a name="l00304"></a>00304    <span class="keywordflow">if</span> (keys)
-<a name="l00305"></a>00305       SendKeySequence(keys);
+<a name="l00305"></a>00305       <a class="code" href="aux__vis_8cpp.html#a205d7b73e3cb28f274cdd783454c067f" title="Send a sequence of keystrokes to the visualization window.">SendKeySequence</a>(keys);
 <a name="l00306"></a>00306 
 <a name="l00307"></a>00307    auxMainLoop(NULL);
 <a name="l00308"></a>00308 
-<a name="l00309"></a>00309    InitIdleFuncs();
+<a name="l00309"></a>00309    <a class="code" href="aux__vis_8cpp.html#a8f1a99abb937e78c6b36e9954ef88902">InitIdleFuncs</a>();
 <a name="l00310"></a>00310 }
 <a name="l00311"></a>00311 
-<a name="l00312"></a>00312 <span class="keywordtype">void</span> KillVisualization()
+<a name="l00312"></a><a class="code" href="aux__vis_8hpp.html#a0b4b010980b49b61990ed57786b88092">00312</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a0b4b010980b49b61990ed57786b88092">KillVisualization</a>()
 <a name="l00313"></a>00313 {
-<a name="l00314"></a>00314    <span class="keyword">delete</span> locscene;
-<a name="l00315"></a>00315    <span class="keywordflow">if</span> (fontbase)
+<a name="l00314"></a>00314    <span class="keyword">delete</span> <a class="code" href="aux__vis_8cpp.html#af71e06f4d5eba00469872cd481b1835b">locscene</a>;
+<a name="l00315"></a>00315    <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a2efc891ed1477d4076a461dce341ed0d">fontbase</a>)
 <a name="l00316"></a>00316    {
-<a name="l00317"></a>00317       tkUnloadBitmapFont(fontbase);
-<a name="l00318"></a>00318       fontbase = 0;
+<a name="l00317"></a>00317       tkUnloadBitmapFont(<a class="code" href="aux__vis_8cpp.html#a2efc891ed1477d4076a461dce341ed0d">fontbase</a>);
+<a name="l00318"></a>00318       <a class="code" href="aux__vis_8cpp.html#a2efc891ed1477d4076a461dce341ed0d">fontbase</a> = 0;
 <a name="l00319"></a>00319    }
 <a name="l00320"></a>00320    auxCloseWindow();
 <a name="l00321"></a>00321 }
 <a name="l00322"></a>00322 
-<a name="l00323"></a>00323 <span class="keywordtype">void</span> SendExposeEvent()
+<a name="l00323"></a><a class="code" href="aux__vis_8hpp.html#ab3307317ba81a565a7b6ff959e5dbb47">00323</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>()
 <a name="l00324"></a>00324 {
 <a name="l00325"></a>00325    XExposeEvent ev;
 <a name="l00326"></a>00326    ev.type = Expose;
@@ -392,19 +393,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00332"></a>00332    XSendEvent (auxXDisplay(), auxXWindow(), 1, Expose, (XEvent*)&amp;ev);
 <a name="l00333"></a>00333 }
 <a name="l00334"></a>00334 
-<a name="l00335"></a>00335 <span class="keywordtype">void</span> MyReshape(GLsizei w, GLsizei h)
+<a name="l00335"></a><a class="code" href="aux__vis_8cpp.html#a9114a5ca17e2ee942055a70163dc4632">00335</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a9114a5ca17e2ee942055a70163dc4632">MyReshape</a>(GLsizei w, GLsizei h)
 <a name="l00336"></a>00336 {
 <a name="l00337"></a>00337    glViewport (0, 0, w, h);
 <a name="l00338"></a>00338 
 <a name="l00339"></a>00339    glMatrixMode (GL_PROJECTION);
 <a name="l00340"></a>00340    glLoadIdentity();
 <a name="l00341"></a>00341 
-<a name="l00342"></a>00342    <span class="keywordtype">double</span> ViewCenterX = locscene-&gt;ViewCenterX;
-<a name="l00343"></a>00343    <span class="keywordtype">double</span> ViewCenterY = locscene-&gt;ViewCenterY;
+<a name="l00342"></a>00342    <span class="keywordtype">double</span> ViewCenterX = locscene-&gt;<a class="code" href="classVisualizationScene.html#a6dd849cc503967f63c871bfe7e7aefa1">ViewCenterX</a>;
+<a name="l00343"></a>00343    <span class="keywordtype">double</span> ViewCenterY = locscene-&gt;<a class="code" href="classVisualizationScene.html#a777f84671db75531c4f7ceda0653dc28">ViewCenterY</a>;
 <a name="l00344"></a>00344 
-<a name="l00345"></a>00345    <span class="keywordflow">if</span> (locscene-&gt;OrthogonalProjection)
+<a name="l00345"></a>00345    <span class="keywordflow">if</span> (locscene-&gt;<a class="code" href="classVisualizationScene.html#a260ebcb0c24e3883a7ce5d5daa1b5bff">OrthogonalProjection</a>)
 <a name="l00346"></a>00346    {
-<a name="l00347"></a>00347       <span class="keywordtype">double</span> scale = locscene-&gt;ViewScale;
+<a name="l00347"></a>00347       <span class="keywordtype">double</span> scale = locscene-&gt;<a class="code" href="classVisualizationScene.html#a95b0195ea9bf1ea5583068f76a36e804">ViewScale</a>;
 <a name="l00348"></a>00348       <span class="keywordflow">if</span> (w &lt;= h)
 <a name="l00349"></a>00349          glOrtho (-1.0, 1.0, -<span class="keywordtype">double</span>(h)/w, <span class="keywordtype">double</span>(h)/w, -10, 10);
 <a name="l00350"></a>00350       <span class="keywordflow">else</span>
@@ -414,7 +415,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00354"></a>00354    }
 <a name="l00355"></a>00355    <span class="keywordflow">else</span>
 <a name="l00356"></a>00356    {
-<a name="l00357"></a>00357       <span class="keywordtype">double</span> ViewAngle = locscene-&gt;ViewAngle;
+<a name="l00357"></a>00357       <span class="keywordtype">double</span> ViewAngle = locscene-&gt;<a class="code" href="classVisualizationScene.html#a225b14fc68e5c353f5b184092cd505c3">ViewAngle</a>;
 <a name="l00358"></a>00358       <span class="keywordtype">double</span> Distance  = 2.5;
 <a name="l00359"></a>00359 
 <a name="l00360"></a>00360       <span class="keywordflow">if</span> (w &lt; h)
@@ -426,60 +427,60 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00366"></a>00366    }
 <a name="l00367"></a>00367 }
 <a name="l00368"></a>00368 
-<a name="l00369"></a>00369 <span class="keywordtype">void</span> MyExpose(GLsizei w, GLsizei h)
+<a name="l00369"></a><a class="code" href="aux__vis_8cpp.html#a14c66e50f40292c34164e713f845e9c7">00369</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a14c66e50f40292c34164e713f845e9c7">MyExpose</a>(GLsizei w, GLsizei h)
 <a name="l00370"></a>00370 {
-<a name="l00371"></a>00371    MyReshape (w, h);
+<a name="l00371"></a>00371    <a class="code" href="aux__vis_8cpp.html#a9114a5ca17e2ee942055a70163dc4632">MyReshape</a> (w, h);
 <a name="l00372"></a>00372    locscene -&gt; Draw();
 <a name="l00373"></a>00373 }
 <a name="l00374"></a>00374 
-<a name="l00375"></a>00375 <span class="keywordtype">void</span> MyExpose()
+<a name="l00375"></a><a class="code" href="aux__vis_8hpp.html#a0f313763ddb4fa577646de682b28ae70">00375</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a14c66e50f40292c34164e713f845e9c7">MyExpose</a>()
 <a name="l00376"></a>00376 {
 <a name="l00377"></a>00377    XWindowAttributes wa;
 <a name="l00378"></a>00378 
 <a name="l00379"></a>00379    XGetWindowAttributes(auxXDisplay(), auxXWindow(), &amp;wa);
-<a name="l00380"></a>00380    MyExpose(wa.width, wa.height);
+<a name="l00380"></a>00380    <a class="code" href="aux__vis_8cpp.html#a14c66e50f40292c34164e713f845e9c7">MyExpose</a>(wa.width, wa.height);
 <a name="l00381"></a>00381 }
 <a name="l00382"></a>00382 
 <a name="l00383"></a>00383 
-<a name="l00384"></a>00384 Array&lt;void (*)()&gt; IdleFuncs;
-<a name="l00385"></a>00385 <span class="keywordtype">int</span> LastIdleFunc;
+<a name="l00384"></a><a class="code" href="aux__vis_8cpp.html#a4bde49260a00e4ab384b86cf7616324d">00384</a> Array&lt;void (*)()&gt; <a class="code" href="aux__vis_8cpp.html#a4bde49260a00e4ab384b86cf7616324d">IdleFuncs</a>;
+<a name="l00385"></a><a class="code" href="aux__vis_8cpp.html#a205cb59e8468965ec714359159606824">00385</a> <span class="keywordtype">int</span> <a class="code" href="aux__vis_8cpp.html#a205cb59e8468965ec714359159606824">LastIdleFunc</a>;
 <a name="l00386"></a>00386 
-<a name="l00387"></a>00387 <span class="keywordtype">void</span> InitIdleFuncs()
+<a name="l00387"></a><a class="code" href="aux__vis_8cpp.html#a8f1a99abb937e78c6b36e9954ef88902">00387</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a8f1a99abb937e78c6b36e9954ef88902">InitIdleFuncs</a>()
 <a name="l00388"></a>00388 {
-<a name="l00389"></a>00389    IdleFuncs.SetSize(0);
-<a name="l00390"></a>00390    LastIdleFunc = 0;
+<a name="l00389"></a>00389    <a class="code" href="aux__vis_8cpp.html#a4bde49260a00e4ab384b86cf7616324d">IdleFuncs</a>.SetSize(0);
+<a name="l00390"></a>00390    <a class="code" href="aux__vis_8cpp.html#a205cb59e8468965ec714359159606824">LastIdleFunc</a> = 0;
 <a name="l00391"></a>00391    auxIdleFunc(NULL);
 <a name="l00392"></a>00392 }
 <a name="l00393"></a>00393 
-<a name="l00394"></a>00394 <span class="keywordtype">void</span> MainIdleFunc()
+<a name="l00394"></a><a class="code" href="aux__vis_8cpp.html#ae760001b4670e7d5b861ca830ffa857b">00394</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#ae760001b4670e7d5b861ca830ffa857b">MainIdleFunc</a>()
 <a name="l00395"></a>00395 {
-<a name="l00396"></a>00396    LastIdleFunc = (LastIdleFunc + 1) % IdleFuncs.Size();
-<a name="l00397"></a>00397    <span class="keywordflow">if</span> (IdleFuncs[LastIdleFunc])
-<a name="l00398"></a>00398       (*IdleFuncs[LastIdleFunc])();
+<a name="l00396"></a>00396    <a class="code" href="aux__vis_8cpp.html#a205cb59e8468965ec714359159606824">LastIdleFunc</a> = (<a class="code" href="aux__vis_8cpp.html#a205cb59e8468965ec714359159606824">LastIdleFunc</a> + 1) % <a class="code" href="aux__vis_8cpp.html#a4bde49260a00e4ab384b86cf7616324d">IdleFuncs</a>.Size();
+<a name="l00397"></a>00397    <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a4bde49260a00e4ab384b86cf7616324d">IdleFuncs</a>[<a class="code" href="aux__vis_8cpp.html#a205cb59e8468965ec714359159606824">LastIdleFunc</a>])
+<a name="l00398"></a>00398       (*<a class="code" href="aux__vis_8cpp.html#a4bde49260a00e4ab384b86cf7616324d">IdleFuncs</a>[<a class="code" href="aux__vis_8cpp.html#a205cb59e8468965ec714359159606824">LastIdleFunc</a>])();
 <a name="l00399"></a>00399 }
 <a name="l00400"></a>00400 
-<a name="l00401"></a>00401 <span class="keywordtype">void</span> AddIdleFunc(<span class="keywordtype">void</span> (*Func)(<span class="keywordtype">void</span>))
+<a name="l00401"></a><a class="code" href="aux__vis_8hpp.html#a902196002355b22363b8573023eff4bf">00401</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a902196002355b22363b8573023eff4bf">AddIdleFunc</a>(<span class="keywordtype">void</span> (*Func)(<span class="keywordtype">void</span>))
 <a name="l00402"></a>00402 {
-<a name="l00403"></a>00403    IdleFuncs.Union(Func);
-<a name="l00404"></a>00404    auxIdleFunc(MainIdleFunc);
+<a name="l00403"></a>00403    <a class="code" href="aux__vis_8cpp.html#a4bde49260a00e4ab384b86cf7616324d">IdleFuncs</a>.Union(Func);
+<a name="l00404"></a>00404    auxIdleFunc(<a class="code" href="aux__vis_8cpp.html#ae760001b4670e7d5b861ca830ffa857b">MainIdleFunc</a>);
 <a name="l00405"></a>00405 }
 <a name="l00406"></a>00406 
-<a name="l00407"></a>00407 <span class="keywordtype">void</span> RemoveIdleFunc(<span class="keywordtype">void</span> (*Func)(<span class="keywordtype">void</span>))
+<a name="l00407"></a><a class="code" href="aux__vis_8hpp.html#a6a3c865cab4476fb4f52d88a7e0b24a1">00407</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a6a3c865cab4476fb4f52d88a7e0b24a1">RemoveIdleFunc</a>(<span class="keywordtype">void</span> (*Func)(<span class="keywordtype">void</span>))
 <a name="l00408"></a>00408 {
-<a name="l00409"></a>00409    IdleFuncs.DeleteFirst(Func);
-<a name="l00410"></a>00410    <span class="keywordflow">if</span> (IdleFuncs.Size() == 0)
+<a name="l00409"></a>00409    <a class="code" href="aux__vis_8cpp.html#a4bde49260a00e4ab384b86cf7616324d">IdleFuncs</a>.DeleteFirst(Func);
+<a name="l00410"></a>00410    <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a4bde49260a00e4ab384b86cf7616324d">IdleFuncs</a>.Size() == 0)
 <a name="l00411"></a>00411       auxIdleFunc(NULL);
 <a name="l00412"></a>00412 }
 <a name="l00413"></a>00413 
 <a name="l00414"></a>00414 
-<a name="l00415"></a>00415 <span class="keywordtype">double</span> xang, yang;
-<a name="l00416"></a>00416 <span class="keywordtype">double</span> srot[16], sph_t, sph_u;
-<a name="l00417"></a>00417 <span class="keyword">static</span> GLint oldx, oldy, startx, starty;
+<a name="l00415"></a><a class="code" href="aux__vis_8cpp.html#ad0b090310ad5686a38b897ad253e5c27">00415</a> <span class="keywordtype">double</span> <a class="code" href="aux__vis_8cpp.html#a100fe41709b3d02edcbf380dd8a4681e">xang</a>, <a class="code" href="aux__vis_8cpp.html#ad0b090310ad5686a38b897ad253e5c27">yang</a>;
+<a name="l00416"></a><a class="code" href="aux__vis_8cpp.html#a61411234ee39fb9c6eaf29d24cb37bbb">00416</a> <span class="keywordtype">double</span> <a class="code" href="aux__vis_8cpp.html#a61411234ee39fb9c6eaf29d24cb37bbb">srot</a>[16], <a class="code" href="aux__vis_8cpp.html#af10a9ad2742d18da11c3166473f1f7ea">sph_t</a>, <a class="code" href="aux__vis_8cpp.html#a7806ebf8688758ca4afd46a1b3b1e124">sph_u</a>;
+<a name="l00417"></a><a class="code" href="aux__vis_8cpp.html#a17eb8dfb7298fb4dc7bd6b4994014cd4">00417</a> <span class="keyword">static</span> GLint oldx, <a class="code" href="aux__vis_8cpp.html#aec1f6a0413019b44872cbd64fd2e3e1d">oldy</a>, <a class="code" href="aux__vis_8cpp.html#ae2ae34333494c1f3d2196f5144484b28">startx</a>, <a class="code" href="aux__vis_8cpp.html#a17eb8dfb7298fb4dc7bd6b4994014cd4">starty</a>;
 <a name="l00418"></a>00418 
-<a name="l00419"></a>00419 <span class="keywordtype">int</span> constrained_spinning = 0;
+<a name="l00419"></a><a class="code" href="aux__vis_8cpp.html#a1ae5757666296ef3b99ec5ef89defa5b">00419</a> <span class="keywordtype">int</span> <a class="code" href="aux__vis_8cpp.html#a1ae5757666296ef3b99ec5ef89defa5b">constrained_spinning</a> = 0;
 <a name="l00420"></a>00420 
 <a name="l00421"></a>00421 
-<a name="l00422"></a>00422 <span class="keywordtype">void</span> MainLoop()
+<a name="l00422"></a><a class="code" href="aux__vis_8hpp.html#a153a5fd8946b6ab9fd9b725759fffe5e">00422</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a153a5fd8946b6ab9fd9b725759fffe5e">MainLoop</a>()
 <a name="l00423"></a>00423 {
 <a name="l00424"></a>00424    <span class="keyword">static</span> <span class="keywordtype">int</span> p = 1;
 <a name="l00425"></a>00425    <span class="keyword">struct </span>timespec req;
@@ -511,18 +512,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00451"></a>00451    {
 <a name="l00452"></a>00452       <span class="keywordtype">char</span> fname[20];
 <a name="l00453"></a>00453       sprintf(fname, <span class="stringliteral">&quot;GLVis_m%04d&quot;</span>, p++);
-<a name="l00454"></a>00454       Screenshot(fname);
+<a name="l00454"></a>00454       <a class="code" href="aux__vis_8cpp.html#a90d8baba57f55aec132d98d524df9cc4" title="Take a screenshot using libtiff or xwd.">Screenshot</a>(fname);
 <a name="l00455"></a>00455    }
 <a name="l00456"></a>00456 }
 <a name="l00457"></a>00457 
 <a name="l00458"></a>00458 <span class="comment">// Pressed mouse buttons events</span>
 <a name="l00459"></a>00459 
-<a name="l00460"></a>00460 <span class="keyword">inline</span> <span class="keywordtype">double</span> sqr(<span class="keywordtype">double</span> t)
+<a name="l00460"></a><a class="code" href="aux__vis_8cpp.html#a9bec4f7fa775570de64e29192889442a">00460</a> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="aux__vis_8cpp.html#a9bec4f7fa775570de64e29192889442a">sqr</a>(<span class="keywordtype">double</span> t)
 <a name="l00461"></a>00461 {
 <a name="l00462"></a>00462    <span class="keywordflow">return</span> t*t;
 <a name="l00463"></a>00463 }
 <a name="l00464"></a>00464 
-<a name="l00465"></a>00465 <span class="keyword">inline</span> <span class="keywordtype">void</span> ComputeSphereAngles(<span class="keywordtype">int</span> &amp;newx, <span class="keywordtype">int</span> &amp;newy,
+<a name="l00465"></a><a class="code" href="aux__vis_8cpp.html#a19c9995fe584a2272df3108809569da5">00465</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a19c9995fe584a2272df3108809569da5">ComputeSphereAngles</a>(<span class="keywordtype">int</span> &amp;newx, <span class="keywordtype">int</span> &amp;newy,
 <a name="l00466"></a>00466                                 <span class="keywordtype">double</span> &amp;new_sph_u, <span class="keywordtype">double</span> &amp;new_sph_t)
 <a name="l00467"></a>00467 {
 <a name="l00468"></a>00468    GLint viewport[4];
@@ -530,7 +531,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00470"></a>00470    <span class="keyword">const</span> <span class="keywordtype">double</span> maxr = 0.996194698091745532295;
 <a name="l00471"></a>00471 
 <a name="l00472"></a>00472    glGetIntegerv(GL_VIEWPORT, viewport);
-<a name="l00473"></a>00473    r = sqrt(sqr(viewport[2])+sqr(viewport[3]))*M_SQRT1_2;
+<a name="l00473"></a>00473    r = sqrt(<a class="code" href="aux__vis_8cpp.html#a9bec4f7fa775570de64e29192889442a">sqr</a>(viewport[2])+<a class="code" href="aux__vis_8cpp.html#a9bec4f7fa775570de64e29192889442a">sqr</a>(viewport[3]))*M_SQRT1_2;
 <a name="l00474"></a>00474 
 <a name="l00475"></a>00475    x = double(newx-viewport[0]-viewport[2]/2) / r;
 <a name="l00476"></a>00476    y = double(-newy+viewport[1]+viewport[3]/2) / r;
@@ -543,24 +544,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00483"></a>00483    new_sph_t = atan2(y, x);
 <a name="l00484"></a>00484 }
 <a name="l00485"></a>00485 
-<a name="l00486"></a>00486 <span class="keywordtype">void</span> LeftButtonDown (AUX_EVENTREC *event)
+<a name="l00486"></a><a class="code" href="aux__vis_8hpp.html#a528988e71455876c1ef00cfe23b6e737">00486</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a528988e71455876c1ef00cfe23b6e737">LeftButtonDown</a> (AUX_EVENTREC *event)
 <a name="l00487"></a>00487 {
 <a name="l00488"></a>00488    locscene -&gt; spinning = 0;
-<a name="l00489"></a>00489    RemoveIdleFunc(MainLoop);
+<a name="l00489"></a>00489    <a class="code" href="aux__vis_8cpp.html#a6a3c865cab4476fb4f52d88a7e0b24a1">RemoveIdleFunc</a>(<a class="code" href="aux__vis_8cpp.html#a153a5fd8946b6ab9fd9b725759fffe5e">MainLoop</a>);
 <a name="l00490"></a>00490 
 <a name="l00491"></a>00491    oldx = <span class="keyword">event</span>-&gt;data[AUX_MOUSEX];
 <a name="l00492"></a>00492    oldy = <span class="keyword">event</span>-&gt;data[AUX_MOUSEY];
 <a name="l00493"></a>00493 
-<a name="l00494"></a>00494    ComputeSphereAngles(oldx, oldy, sph_u, sph_t);
-<a name="l00495"></a>00495    <span class="keywordtype">double</span> *rot = locscene-&gt;rotmat;
+<a name="l00494"></a>00494    <a class="code" href="aux__vis_8cpp.html#a19c9995fe584a2272df3108809569da5">ComputeSphereAngles</a>(oldx, oldy, sph_u, sph_t);
+<a name="l00495"></a>00495    <span class="keywordtype">double</span> *rot = locscene-&gt;<a class="code" href="classVisualizationScene.html#ab7b20b0d2afceed7bde0521133e6cdcc">rotmat</a>;
 <a name="l00496"></a>00496    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 16; i++)
 <a name="l00497"></a>00497       srot[i] = rot[i];
 <a name="l00498"></a>00498 
 <a name="l00499"></a>00499    startx = oldx;
-<a name="l00500"></a>00500    starty = oldy;
+<a name="l00500"></a>00500    starty = <a class="code" href="aux__vis_8cpp.html#aec1f6a0413019b44872cbd64fd2e3e1d">oldy</a>;
 <a name="l00501"></a>00501 }
 <a name="l00502"></a>00502 
-<a name="l00503"></a>00503 <span class="keywordtype">void</span> LeftButtonLoc (AUX_EVENTREC *event)
+<a name="l00503"></a><a class="code" href="aux__vis_8hpp.html#a1cdada589819ed59e9e150f5a36be2f2">00503</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a1cdada589819ed59e9e150f5a36be2f2">LeftButtonLoc</a> (AUX_EVENTREC *event)
 <a name="l00504"></a>00504 {
 <a name="l00505"></a>00505    GLint newx = <span class="keyword">event</span>-&gt;data[AUX_MOUSEX];
 <a name="l00506"></a>00506    GLint newy = <span class="keyword">event</span>-&gt;data[AUX_MOUSEY];
@@ -579,7 +580,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00519"></a>00519       {
 <a name="l00520"></a>00520          <span class="keywordtype">double</span> new_sph_u, new_sph_t;
 <a name="l00521"></a>00521 
-<a name="l00522"></a>00522          ComputeSphereAngles(newx, newy, new_sph_u, new_sph_t);
+<a name="l00522"></a>00522          <a class="code" href="aux__vis_8cpp.html#a19c9995fe584a2272df3108809569da5">ComputeSphereAngles</a>(newx, newy, new_sph_u, new_sph_t);
 <a name="l00523"></a>00523 
 <a name="l00524"></a>00524          glMatrixMode (GL_MODELVIEW);
 <a name="l00525"></a>00525          glLoadIdentity();
@@ -597,7 +598,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00537"></a>00537 
 <a name="l00538"></a>00538          glRotated(inprod*(180.0/M_PI), cross[0], cross[1], cross[2]);
 <a name="l00539"></a>00539          glMultMatrixd(srot);
-<a name="l00540"></a>00540          glGetDoublev (GL_MODELVIEW_MATRIX, locscene-&gt;rotmat);
+<a name="l00540"></a>00540          glGetDoublev (GL_MODELVIEW_MATRIX, locscene-&gt;<a class="code" href="classVisualizationScene.html#ab7b20b0d2afceed7bde0521133e6cdcc">rotmat</a>);
 <a name="l00541"></a>00541       }
 <a name="l00542"></a>00542    }
 <a name="l00543"></a>00543    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (event-&gt;data[2] &amp; Mod1Mask)
@@ -606,8 +607,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00546"></a>00546       glLoadIdentity();
 <a name="l00547"></a>00547 
 <a name="l00548"></a>00548       glRotated(<span class="keywordtype">double</span> (newx-oldx) / 2, 0.0, 0.0, 1.0);
-<a name="l00549"></a>00549       glMultMatrixd(locscene-&gt;rotmat);
-<a name="l00550"></a>00550       glGetDoublev (GL_MODELVIEW_MATRIX, locscene-&gt;rotmat);
+<a name="l00549"></a>00549       glMultMatrixd(locscene-&gt;<a class="code" href="classVisualizationScene.html#ab7b20b0d2afceed7bde0521133e6cdcc">rotmat</a>);
+<a name="l00550"></a>00550       glGetDoublev (GL_MODELVIEW_MATRIX, locscene-&gt;<a class="code" href="classVisualizationScene.html#ab7b20b0d2afceed7bde0521133e6cdcc">rotmat</a>);
 <a name="l00551"></a>00551    }
 <a name="l00552"></a>00552    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (event-&gt;data[2] &amp; ShiftMask)
 <a name="l00553"></a>00553    {
@@ -628,21 +629,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00568"></a>00568    oldy = newy;
 <a name="l00569"></a>00569 
 <a name="l00570"></a>00570    <span class="keywordflow">if</span> (sendexpose)
-<a name="l00571"></a>00571       SendExposeEvent();
+<a name="l00571"></a>00571       <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00572"></a>00572 }
 <a name="l00573"></a>00573 
-<a name="l00574"></a>00574 <span class="keywordtype">void</span> LeftButtonUp (AUX_EVENTREC *event)
+<a name="l00574"></a><a class="code" href="aux__vis_8hpp.html#a696c27d3bcc99cc4362b246f2afbc387">00574</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a696c27d3bcc99cc4362b246f2afbc387">LeftButtonUp</a> (AUX_EVENTREC *event)
 <a name="l00575"></a>00575 {
 <a name="l00576"></a>00576    GLint newx = <span class="keyword">event</span>-&gt;data[AUX_MOUSEX];
 <a name="l00577"></a>00577    GLint newy = <span class="keyword">event</span>-&gt;data[AUX_MOUSEY];
 <a name="l00578"></a>00578 
-<a name="l00579"></a>00579    xang = (newx-startx)/5.0;
-<a name="l00580"></a>00580    yang = (newy-starty)/5.0;
+<a name="l00579"></a>00579    xang = (newx-<a class="code" href="aux__vis_8cpp.html#ae2ae34333494c1f3d2196f5144484b28">startx</a>)/5.0;
+<a name="l00580"></a>00580    yang = (newy-<a class="code" href="aux__vis_8cpp.html#a17eb8dfb7298fb4dc7bd6b4994014cd4">starty</a>)/5.0;
 <a name="l00581"></a>00581 
 <a name="l00582"></a>00582    <span class="keywordflow">if</span> ( (event-&gt;data[2] &amp; ShiftMask) &amp;&amp; (xang != 0.0 || yang != 0.0) )
 <a name="l00583"></a>00583    {
 <a name="l00584"></a>00584       locscene -&gt; spinning = 1;
-<a name="l00585"></a>00585       AddIdleFunc(MainLoop);
+<a name="l00585"></a>00585       <a class="code" href="aux__vis_8cpp.html#a902196002355b22363b8573023eff4bf">AddIdleFunc</a>(<a class="code" href="aux__vis_8cpp.html#a153a5fd8946b6ab9fd9b725759fffe5e">MainLoop</a>);
 <a name="l00586"></a>00586       <span class="keywordflow">if</span> (xang &gt; 20) xang = 20; <span class="keywordflow">if</span> (xang &lt; -20) xang = -20;
 <a name="l00587"></a>00587       <span class="keywordflow">if</span> (yang &gt; 20) yang = 20; <span class="keywordflow">if</span> (yang &lt; -20) yang = -20;
 <a name="l00588"></a>00588 
@@ -653,13 +654,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00593"></a>00593    }
 <a name="l00594"></a>00594 }
 <a name="l00595"></a>00595 
-<a name="l00596"></a>00596 <span class="keywordtype">void</span> MiddleButtonDown (AUX_EVENTREC *event)
+<a name="l00596"></a><a class="code" href="aux__vis_8hpp.html#ac0251cb3247e699b4740eb0b4a0a8bc2">00596</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#ac0251cb3247e699b4740eb0b4a0a8bc2">MiddleButtonDown</a> (AUX_EVENTREC *event)
 <a name="l00597"></a>00597 {
 <a name="l00598"></a>00598    startx = oldx = <span class="keyword">event</span>-&gt;data[AUX_MOUSEX];
 <a name="l00599"></a>00599    starty = oldy = <span class="keyword">event</span>-&gt;data[AUX_MOUSEY];
 <a name="l00600"></a>00600 }
 <a name="l00601"></a>00601 
-<a name="l00602"></a>00602 <span class="keywordtype">void</span> MiddleButtonLoc (AUX_EVENTREC *event)
+<a name="l00602"></a><a class="code" href="aux__vis_8hpp.html#a580f0c8efa6d68b74b092186f32740a7">00602</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a580f0c8efa6d68b74b092186f32740a7">MiddleButtonLoc</a> (AUX_EVENTREC *event)
 <a name="l00603"></a>00603 {
 <a name="l00604"></a>00604    GLint newx = <span class="keyword">event</span>-&gt;data[AUX_MOUSEX];
 <a name="l00605"></a>00605    GLint newy = <span class="keyword">event</span>-&gt;data[AUX_MOUSEY];
@@ -669,10 +670,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00609"></a>00609       GLint vp[4];
 <a name="l00610"></a>00610       <span class="keywordtype">double</span> TrX, TrY, scale;
 <a name="l00611"></a>00611 
-<a name="l00612"></a>00612       <span class="keywordflow">if</span> (locscene-&gt;OrthogonalProjection)
-<a name="l00613"></a>00613          scale = locscene-&gt;ViewScale;
+<a name="l00612"></a>00612       <span class="keywordflow">if</span> (locscene-&gt;<a class="code" href="classVisualizationScene.html#a260ebcb0c24e3883a7ce5d5daa1b5bff">OrthogonalProjection</a>)
+<a name="l00613"></a>00613          scale = locscene-&gt;<a class="code" href="classVisualizationScene.html#a95b0195ea9bf1ea5583068f76a36e804">ViewScale</a>;
 <a name="l00614"></a>00614       <span class="keywordflow">else</span>
-<a name="l00615"></a>00615          scale = 0.4142135623730950488/tan(locscene-&gt;ViewAngle*(M_PI/360));
+<a name="l00615"></a>00615          scale = 0.4142135623730950488/tan(locscene-&gt;<a class="code" href="classVisualizationScene.html#a225b14fc68e5c353f5b184092cd505c3">ViewAngle</a>*(M_PI/360));
 <a name="l00616"></a>00616       glGetIntegerv(GL_VIEWPORT, vp);
 <a name="l00617"></a>00617       <span class="keywordflow">if</span> (vp[2] &lt; vp[3])
 <a name="l00618"></a>00618          scale *= vp[2];
@@ -680,28 +681,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00620"></a>00620          scale *= vp[3];
 <a name="l00621"></a>00621       TrX = 2.0*double(oldx-newx)/scale;
 <a name="l00622"></a>00622       TrY = 2.0*double(newy-oldy)/scale;
-<a name="l00623"></a>00623       locscene-&gt;ViewCenterX += TrX;
-<a name="l00624"></a>00624       locscene-&gt;ViewCenterY += TrY;
+<a name="l00623"></a>00623       locscene-&gt;<a class="code" href="classVisualizationScene.html#a6dd849cc503967f63c871bfe7e7aefa1">ViewCenterX</a> += TrX;
+<a name="l00624"></a>00624       locscene-&gt;<a class="code" href="classVisualizationScene.html#a777f84671db75531c4f7ceda0653dc28">ViewCenterY</a> += TrY;
 <a name="l00625"></a>00625    }
 <a name="l00626"></a>00626    <span class="keywordflow">else</span>
 <a name="l00627"></a>00627       locscene -&gt; Translate ((<span class="keywordtype">double</span>)(newx-oldx)/200,(<span class="keywordtype">double</span>)(newy-oldy)/200);
 <a name="l00628"></a>00628 
-<a name="l00629"></a>00629    SendExposeEvent();
+<a name="l00629"></a>00629    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00630"></a>00630 
 <a name="l00631"></a>00631    oldx = newx;
 <a name="l00632"></a>00632    oldy = newy;
 <a name="l00633"></a>00633 }
 <a name="l00634"></a>00634 
-<a name="l00635"></a>00635 <span class="keywordtype">void</span> MiddleButtonUp (AUX_EVENTREC *event)
+<a name="l00635"></a><a class="code" href="aux__vis_8hpp.html#a79fbeb1d57b9e53996d14bfc2ee64f14">00635</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a79fbeb1d57b9e53996d14bfc2ee64f14">MiddleButtonUp</a> (AUX_EVENTREC *event)
 <a name="l00636"></a>00636 {}
 <a name="l00637"></a>00637 
-<a name="l00638"></a>00638 <span class="keywordtype">void</span> RightButtonDown (AUX_EVENTREC *event)
+<a name="l00638"></a><a class="code" href="aux__vis_8hpp.html#aef60366fead3ea929af1f8f5724c25e0">00638</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#aef60366fead3ea929af1f8f5724c25e0">RightButtonDown</a> (AUX_EVENTREC *event)
 <a name="l00639"></a>00639 {
 <a name="l00640"></a>00640    startx = oldx = <span class="keyword">event</span>-&gt;data[AUX_MOUSEX];
 <a name="l00641"></a>00641    starty = oldy = <span class="keyword">event</span>-&gt;data[AUX_MOUSEY];
 <a name="l00642"></a>00642 }
 <a name="l00643"></a>00643 
-<a name="l00644"></a>00644 <span class="keywordtype">void</span> RightButtonLoc (AUX_EVENTREC *event)
+<a name="l00644"></a><a class="code" href="aux__vis_8hpp.html#a1b716e3410bffb791085d2f05ce6f007">00644</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a1b716e3410bffb791085d2f05ce6f007">RightButtonLoc</a> (AUX_EVENTREC *event)
 <a name="l00645"></a>00645 {
 <a name="l00646"></a>00646    GLint newx = <span class="keyword">event</span>-&gt;data[AUX_MOUSEX];
 <a name="l00647"></a>00647    GLint newy = <span class="keyword">event</span>-&gt;data[AUX_MOUSEY];
@@ -710,8 +711,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00650"></a>00650    {
 <a name="l00651"></a>00651       glLoadIdentity();
 <a name="l00652"></a>00652       <span class="comment">// GLfloat light[] = {newx,-newy, sqrt((float)(newx*newx+newy*newy)), 0.0 };</span>
-<a name="l00653"></a>00653       newx -= startx;
-<a name="l00654"></a>00654       newy -= starty;
+<a name="l00653"></a>00653       newx -= <a class="code" href="aux__vis_8cpp.html#ae2ae34333494c1f3d2196f5144484b28">startx</a>;
+<a name="l00654"></a>00654       newy -= <a class="code" href="aux__vis_8cpp.html#a17eb8dfb7298fb4dc7bd6b4994014cd4">starty</a>;
 <a name="l00655"></a>00655       <span class="keywordtype">double</span> l, x, y, z;
 <a name="l00656"></a>00656       x =  (double)newx / 300;
 <a name="l00657"></a>00657       y = -(double)newy / 300;
@@ -738,16 +739,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00678"></a>00678    <span class="keywordflow">else</span>
 <a name="l00679"></a>00679       locscene -&gt; Scale ( exp ( <span class="keywordtype">double</span> (oldy-newy) / 50 ) );
 <a name="l00680"></a>00680 
-<a name="l00681"></a>00681    SendExposeEvent();
+<a name="l00681"></a>00681    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00682"></a>00682 
 <a name="l00683"></a>00683    oldx = newx;
 <a name="l00684"></a>00684    oldy = newy;
 <a name="l00685"></a>00685 }
 <a name="l00686"></a>00686 
-<a name="l00687"></a>00687 <span class="keywordtype">void</span> RightButtonUp (AUX_EVENTREC *event)
+<a name="l00687"></a><a class="code" href="aux__vis_8hpp.html#aa961abd01554fbe25d4aaec95c23d645">00687</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#aa961abd01554fbe25d4aaec95c23d645">RightButtonUp</a> (AUX_EVENTREC *event)
 <a name="l00688"></a>00688 {}
 <a name="l00689"></a>00689 
-<a name="l00690"></a>00690 <span class="keywordtype">int</span> Screenshot(<span class="keyword">const</span> <span class="keywordtype">char</span> *fname)
+<a name="l00690"></a><a class="code" href="aux__vis_8hpp.html#a90d8baba57f55aec132d98d524df9cc4">00690</a> <span class="keywordtype">int</span> <a class="code" href="aux__vis_8cpp.html#a90d8baba57f55aec132d98d524df9cc4" title="Take a screenshot using libtiff or xwd.">Screenshot</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fname)
 <a name="l00691"></a>00691 {
 <a name="l00692"></a>00692 <span class="preprocessor">#ifdef GLVIS_DEBUG</span>
 <a name="l00693"></a>00693 <span class="preprocessor"></span>   cout &lt;&lt; <span class="stringliteral">&quot;Screenshot: glXWaitX() ... &quot;</span> &lt;&lt; flush;
@@ -818,14 +819,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00758"></a>00758 <span class="preprocessor"></span>   <span class="comment">// Use the external X Window Dump (xwd) tool.</span>
 <a name="l00759"></a>00759    <span class="comment">// Note that xwd does not work on OS X!</span>
 <a name="l00760"></a>00760    ostringstream cmd;
-<a name="l00761"></a>00761    cmd &lt;&lt; <span class="stringliteral">&quot;xwd -silent -out &quot;</span> &lt;&lt; fname &lt;&lt; <span class="stringliteral">&quot;.xwd -nobdrs -id &quot;</span> &lt;&lt; window;
+<a name="l00761"></a>00761    cmd &lt;&lt; <span class="stringliteral">&quot;xwd -silent -out &quot;</span> &lt;&lt; fname &lt;&lt; <span class="stringliteral">&quot;.xwd -nobdrs -id &quot;</span> &lt;&lt; <a class="code" href="aux__vis_8cpp.html#ac5b0b3c19d476a314bb68af9bc4a0ee0">window</a>;
 <a name="l00762"></a>00762    <span class="keywordflow">return</span> system(cmd.str().c_str());
 <a name="l00763"></a>00763    <span class="comment">// View with xwud -in GLVis_s*.xwd, or use convert GLVis_s*.xwd</span>
 <a name="l00764"></a>00764    <span class="comment">// GLVis_s*.{jpg,gif}</span>
 <a name="l00765"></a>00765 <span class="preprocessor">#endif</span>
 <a name="l00766"></a>00766 <span class="preprocessor"></span>}
 <a name="l00767"></a>00767 
-<a name="l00768"></a>00768 <span class="keywordtype">void</span> KeyS()
+<a name="l00768"></a><a class="code" href="aux__vis_8hpp.html#aca1a94943bc1efeeddfc2869306dce37">00768</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#aca1a94943bc1efeeddfc2869306dce37">KeyS</a>()
 <a name="l00769"></a>00769 {
 <a name="l00770"></a>00770    <span class="keyword">static</span> <span class="keywordtype">int</span> p = 1;
 <a name="l00771"></a>00771 
@@ -843,12 +844,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00783"></a>00783       cout &lt;&lt; <span class="stringliteral">&quot;Taking snapshot number &quot;</span> &lt;&lt; p &lt;&lt; <span class="stringliteral">&quot;... &quot;</span>;
 <a name="l00784"></a>00784       <span class="keywordtype">char</span> fname[20];
 <a name="l00785"></a>00785       sprintf(fname, <span class="stringliteral">&quot;GLVis_s%02d&quot;</span>, p++);
-<a name="l00786"></a>00786       Screenshot(fname);
+<a name="l00786"></a>00786       <a class="code" href="aux__vis_8cpp.html#a90d8baba57f55aec132d98d524df9cc4" title="Take a screenshot using libtiff or xwd.">Screenshot</a>(fname);
 <a name="l00787"></a>00787       cout &lt;&lt; <span class="stringliteral">&quot;done&quot;</span> &lt;&lt; endl;
 <a name="l00788"></a>00788    }
 <a name="l00789"></a>00789 }
 <a name="l00790"></a>00790 
-<a name="l00791"></a>00791 <span class="keywordtype">void</span> KeyP()
+<a name="l00791"></a><a class="code" href="aux__vis_8hpp.html#a6d23442812b3f1b0dabcb9e81d17decf">00791</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a6d23442812b3f1b0dabcb9e81d17decf">KeyP</a>()
 <a name="l00792"></a>00792 {
 <a name="l00793"></a>00793    <span class="keywordtype">int</span> state, buffsize;
 <a name="l00794"></a>00794    FILE * fp;
@@ -891,210 +892,210 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00831"></a>00831    locscene -&gt; Draw();
 <a name="l00832"></a>00832 }
 <a name="l00833"></a>00833 
-<a name="l00834"></a>00834 <span class="keywordtype">void</span> KeyQPressed()
+<a name="l00834"></a><a class="code" href="aux__vis_8hpp.html#af62a1b1bdb3948832a6252aaa5998215">00834</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#af62a1b1bdb3948832a6252aaa5998215">KeyQPressed</a>()
 <a name="l00835"></a>00835 {
-<a name="l00836"></a>00836    visualize = 0;
+<a name="l00836"></a>00836    <a class="code" href="aux__vis_8cpp.html#a9e5f6a8d6dda5d991717d80c872e326a">visualize</a> = 0;
 <a name="l00837"></a>00837 }
 <a name="l00838"></a>00838 
-<a name="l00839"></a>00839 <span class="keywordtype">void</span> CheckSpin()
+<a name="l00839"></a><a class="code" href="aux__vis_8cpp.html#a599b2e55f2eca11bc1c94fdc2b11ba7c">00839</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a599b2e55f2eca11bc1c94fdc2b11ba7c">CheckSpin</a>()
 <a name="l00840"></a>00840 {
 <a name="l00841"></a>00841    <span class="keywordflow">if</span> (fabs(xang) &lt; 1.e-2)
 <a name="l00842"></a>00842       xang = 0.;
 <a name="l00843"></a>00843    <span class="keywordflow">if</span> (xang != 0. || yang != 0.)
 <a name="l00844"></a>00844    {
-<a name="l00845"></a>00845       locscene-&gt;spinning = 1;
-<a name="l00846"></a>00846       AddIdleFunc(MainLoop);
+<a name="l00845"></a>00845       locscene-&gt;<a class="code" href="classVisualizationScene.html#a3394476ae781c4f4fb1eff77100a5210">spinning</a> = 1;
+<a name="l00846"></a>00846       <a class="code" href="aux__vis_8cpp.html#a902196002355b22363b8573023eff4bf">AddIdleFunc</a>(<a class="code" href="aux__vis_8cpp.html#a153a5fd8946b6ab9fd9b725759fffe5e">MainLoop</a>);
 <a name="l00847"></a>00847    }
 <a name="l00848"></a>00848    <span class="keywordflow">else</span>
 <a name="l00849"></a>00849    {
-<a name="l00850"></a>00850       locscene-&gt;spinning = 0;
-<a name="l00851"></a>00851       RemoveIdleFunc(MainLoop);
+<a name="l00850"></a>00850       locscene-&gt;<a class="code" href="classVisualizationScene.html#a3394476ae781c4f4fb1eff77100a5210">spinning</a> = 0;
+<a name="l00851"></a>00851       <a class="code" href="aux__vis_8cpp.html#a6a3c865cab4476fb4f52d88a7e0b24a1">RemoveIdleFunc</a>(<a class="code" href="aux__vis_8cpp.html#a153a5fd8946b6ab9fd9b725759fffe5e">MainLoop</a>);
 <a name="l00852"></a>00852    }
 <a name="l00853"></a>00853 }
 <a name="l00854"></a>00854 
-<a name="l00855"></a>00855 <span class="keywordtype">void</span> Key0Pressed()
+<a name="l00855"></a><a class="code" href="aux__vis_8hpp.html#acb06a69e8c70932b41f17ae2f10ebbcd">00855</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#acb06a69e8c70932b41f17ae2f10ebbcd">Key0Pressed</a>()
 <a name="l00856"></a>00856 {
 <a name="l00857"></a>00857    xang--;
-<a name="l00858"></a>00858    CheckSpin();
+<a name="l00858"></a>00858    <a class="code" href="aux__vis_8cpp.html#a599b2e55f2eca11bc1c94fdc2b11ba7c">CheckSpin</a>();
 <a name="l00859"></a>00859 }
 <a name="l00860"></a>00860 
-<a name="l00861"></a>00861 <span class="keywordtype">void</span> KeyDeletePressed()
+<a name="l00861"></a><a class="code" href="aux__vis_8hpp.html#ae72e93c1c35ad87215ade5307d064695">00861</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#ae72e93c1c35ad87215ade5307d064695">KeyDeletePressed</a>()
 <a name="l00862"></a>00862 {
 <a name="l00863"></a>00863    <span class="keywordflow">if</span> (locscene -&gt; spinning)
 <a name="l00864"></a>00864    {
 <a name="l00865"></a>00865       xang = yang = 0.;
 <a name="l00866"></a>00866       locscene -&gt; spinning = 0;
-<a name="l00867"></a>00867       RemoveIdleFunc(MainLoop);
+<a name="l00867"></a>00867       <a class="code" href="aux__vis_8cpp.html#a6a3c865cab4476fb4f52d88a7e0b24a1">RemoveIdleFunc</a>(<a class="code" href="aux__vis_8cpp.html#a153a5fd8946b6ab9fd9b725759fffe5e">MainLoop</a>);
 <a name="l00868"></a>00868    }
 <a name="l00869"></a>00869    <span class="keywordflow">else</span>
 <a name="l00870"></a>00870    {
 <a name="l00871"></a>00871       xang = 1.;
 <a name="l00872"></a>00872       locscene -&gt; spinning = 1;
-<a name="l00873"></a>00873       AddIdleFunc(MainLoop);
+<a name="l00873"></a>00873       <a class="code" href="aux__vis_8cpp.html#a902196002355b22363b8573023eff4bf">AddIdleFunc</a>(<a class="code" href="aux__vis_8cpp.html#a153a5fd8946b6ab9fd9b725759fffe5e">MainLoop</a>);
 <a name="l00874"></a>00874       constrained_spinning = 1;
 <a name="l00875"></a>00875    }
 <a name="l00876"></a>00876 }
 <a name="l00877"></a>00877 
-<a name="l00878"></a>00878 <span class="keywordtype">void</span> KeyEnterPressed()
+<a name="l00878"></a><a class="code" href="aux__vis_8hpp.html#abeccd54302ad1ec81e2d19fa7e7f1b13">00878</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#abeccd54302ad1ec81e2d19fa7e7f1b13">KeyEnterPressed</a>()
 <a name="l00879"></a>00879 {
 <a name="l00880"></a>00880    xang++;
-<a name="l00881"></a>00881    CheckSpin();
+<a name="l00881"></a>00881    <a class="code" href="aux__vis_8cpp.html#a599b2e55f2eca11bc1c94fdc2b11ba7c">CheckSpin</a>();
 <a name="l00882"></a>00882 }
 <a name="l00883"></a>00883 
-<a name="l00884"></a>00884 <span class="keywordtype">void</span> Key7Pressed()
+<a name="l00884"></a><a class="code" href="aux__vis_8hpp.html#ae5f8f4f74fad9efc848c9158f19c4b8a">00884</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#ae5f8f4f74fad9efc848c9158f19c4b8a">Key7Pressed</a>()
 <a name="l00885"></a>00885 {
 <a name="l00886"></a>00886    glMatrixMode (GL_MODELVIEW);
 <a name="l00887"></a>00887    glLoadMatrixd (locscene -&gt; rotmat);
 <a name="l00888"></a>00888    glRotated ( 1.0, 0.0, -1.0, 0.0 );
 <a name="l00889"></a>00889    glGetDoublev (GL_MODELVIEW_MATRIX, locscene -&gt; rotmat);
-<a name="l00890"></a>00890    SendExposeEvent();
+<a name="l00890"></a>00890    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00891"></a>00891 }
 <a name="l00892"></a>00892 
-<a name="l00893"></a>00893 <span class="keywordtype">void</span> Key8Pressed()
+<a name="l00893"></a><a class="code" href="aux__vis_8hpp.html#a76a6832632098024d40fb49e47e548dd">00893</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a76a6832632098024d40fb49e47e548dd">Key8Pressed</a>()
 <a name="l00894"></a>00894 {
 <a name="l00895"></a>00895    locscene -&gt; Rotate (0,-1);
-<a name="l00896"></a>00896    SendExposeEvent();
+<a name="l00896"></a>00896    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00897"></a>00897 }
 <a name="l00898"></a>00898 
-<a name="l00899"></a>00899 <span class="keywordtype">void</span> Key9Pressed()
+<a name="l00899"></a><a class="code" href="aux__vis_8hpp.html#a1e28e3b42dce42f220dd46cee6423836">00899</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a1e28e3b42dce42f220dd46cee6423836">Key9Pressed</a>()
 <a name="l00900"></a>00900 {
 <a name="l00901"></a>00901    glMatrixMode (GL_MODELVIEW);
 <a name="l00902"></a>00902    glLoadMatrixd (locscene -&gt; rotmat);
 <a name="l00903"></a>00903    glRotated ( -1.0, 1.0, 0.0, 0.0 );
 <a name="l00904"></a>00904    glGetDoublev (GL_MODELVIEW_MATRIX, locscene -&gt; rotmat);
-<a name="l00905"></a>00905    SendExposeEvent();
+<a name="l00905"></a>00905    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00906"></a>00906 }
 <a name="l00907"></a>00907 
-<a name="l00908"></a>00908 <span class="keywordtype">void</span> Key4Pressed()
+<a name="l00908"></a><a class="code" href="aux__vis_8hpp.html#ac4092a7ac723737de0b927e05d577cc7">00908</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#ac4092a7ac723737de0b927e05d577cc7">Key4Pressed</a>()
 <a name="l00909"></a>00909 {
 <a name="l00910"></a>00910    glMatrixMode (GL_MODELVIEW);
 <a name="l00911"></a>00911    glLoadMatrixd (locscene -&gt; rotmat);
 <a name="l00912"></a>00912    glRotated ( -1.0, 0.0, 0.0, 1.0 );
 <a name="l00913"></a>00913    glGetDoublev (GL_MODELVIEW_MATRIX, locscene -&gt; rotmat);
-<a name="l00914"></a>00914    SendExposeEvent();
+<a name="l00914"></a>00914    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00915"></a>00915 }
 <a name="l00916"></a>00916 
-<a name="l00917"></a>00917 <span class="keywordtype">void</span> Key5Pressed()
+<a name="l00917"></a><a class="code" href="aux__vis_8hpp.html#a0c65b84e16e68ef6697ef034f6ee6fc2">00917</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a0c65b84e16e68ef6697ef034f6ee6fc2">Key5Pressed</a>()
 <a name="l00918"></a>00918 {
 <a name="l00919"></a>00919    <span class="keywordflow">if</span> (locscene -&gt; view == 2)
 <a name="l00920"></a>00920       locscene -&gt; CenterObject2D();
 <a name="l00921"></a>00921    <span class="keywordflow">else</span>
 <a name="l00922"></a>00922       locscene -&gt; CenterObject();
-<a name="l00923"></a>00923    SendExposeEvent();
+<a name="l00923"></a>00923    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00924"></a>00924 }
 <a name="l00925"></a>00925 
-<a name="l00926"></a>00926 <span class="keywordtype">void</span> Key6Pressed()
+<a name="l00926"></a><a class="code" href="aux__vis_8hpp.html#aa81c59ed41397e7a48996b8e00534be5">00926</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#aa81c59ed41397e7a48996b8e00534be5">Key6Pressed</a>()
 <a name="l00927"></a>00927 {
 <a name="l00928"></a>00928    glMatrixMode (GL_MODELVIEW);
 <a name="l00929"></a>00929    glLoadMatrixd (locscene -&gt; rotmat);
 <a name="l00930"></a>00930    glRotated ( 1.0, 0.0, 0.0, 1.0 );
 <a name="l00931"></a>00931    glGetDoublev (GL_MODELVIEW_MATRIX, locscene -&gt; rotmat);
-<a name="l00932"></a>00932    SendExposeEvent();
+<a name="l00932"></a>00932    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00933"></a>00933 }
 <a name="l00934"></a>00934 
-<a name="l00935"></a>00935 <span class="keywordtype">void</span> Key1Pressed()
+<a name="l00935"></a><a class="code" href="aux__vis_8hpp.html#a30412af4a8cc51bc5ea3f2f173075ed5">00935</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a30412af4a8cc51bc5ea3f2f173075ed5">Key1Pressed</a>()
 <a name="l00936"></a>00936 {
 <a name="l00937"></a>00937    glMatrixMode (GL_MODELVIEW);
 <a name="l00938"></a>00938    glLoadMatrixd (locscene -&gt; rotmat);
 <a name="l00939"></a>00939    glRotated ( 1.0, 1.0, 0.0, 0.0 );
 <a name="l00940"></a>00940    glGetDoublev (GL_MODELVIEW_MATRIX, locscene -&gt; rotmat);
-<a name="l00941"></a>00941    SendExposeEvent();
+<a name="l00941"></a>00941    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00942"></a>00942 }
 <a name="l00943"></a>00943 
-<a name="l00944"></a>00944 <span class="keywordtype">void</span> Key2Pressed()
+<a name="l00944"></a><a class="code" href="aux__vis_8hpp.html#a585b32928f7b0f589690de3539aa868a">00944</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a585b32928f7b0f589690de3539aa868a">Key2Pressed</a>()
 <a name="l00945"></a>00945 {
 <a name="l00946"></a>00946    locscene -&gt; Rotate (0,1);
-<a name="l00947"></a>00947    SendExposeEvent();
+<a name="l00947"></a>00947    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00948"></a>00948 }
 <a name="l00949"></a>00949 
-<a name="l00950"></a>00950 <span class="keywordtype">void</span> Key3Pressed()
+<a name="l00950"></a><a class="code" href="aux__vis_8hpp.html#a56039a44bb0d82d12155d34a83d8fe6d">00950</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a56039a44bb0d82d12155d34a83d8fe6d">Key3Pressed</a>()
 <a name="l00951"></a>00951 {
 <a name="l00952"></a>00952    glMatrixMode (GL_MODELVIEW);
 <a name="l00953"></a>00953    glLoadMatrixd (locscene -&gt; rotmat);
 <a name="l00954"></a>00954    glRotated ( 1.0, 0.0, 1.0, 0.0 );
 <a name="l00955"></a>00955    glGetDoublev (GL_MODELVIEW_MATRIX, locscene -&gt; rotmat);
-<a name="l00956"></a>00956    SendExposeEvent();
+<a name="l00956"></a>00956    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00957"></a>00957 }
 <a name="l00958"></a>00958 
-<a name="l00959"></a>00959 <span class="keywordtype">void</span> KeyLeftPressed()
+<a name="l00959"></a><a class="code" href="aux__vis_8hpp.html#a2821ab890bf34a2a290e9e2f801dc1fc">00959</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a2821ab890bf34a2a290e9e2f801dc1fc">KeyLeftPressed</a>()
 <a name="l00960"></a>00960 {
 <a name="l00961"></a>00961    locscene -&gt; Rotate (-5,0);
-<a name="l00962"></a>00962    SendExposeEvent();
+<a name="l00962"></a>00962    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00963"></a>00963 }
 <a name="l00964"></a>00964 
-<a name="l00965"></a>00965 <span class="keywordtype">void</span> KeyRightPressed()
+<a name="l00965"></a><a class="code" href="aux__vis_8hpp.html#ad146c6bc247d82dd73d7705e297c1df2">00965</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#ad146c6bc247d82dd73d7705e297c1df2">KeyRightPressed</a>()
 <a name="l00966"></a>00966 {
 <a name="l00967"></a>00967    locscene -&gt; Rotate (5,0);
-<a name="l00968"></a>00968    SendExposeEvent();
+<a name="l00968"></a>00968    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00969"></a>00969 }
 <a name="l00970"></a>00970 
-<a name="l00971"></a>00971 <span class="keywordtype">void</span> KeyUpPressed()
+<a name="l00971"></a><a class="code" href="aux__vis_8hpp.html#a3e0100457e1af742ed654e2c6f88dc5d">00971</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a3e0100457e1af742ed654e2c6f88dc5d">KeyUpPressed</a>()
 <a name="l00972"></a>00972 {
 <a name="l00973"></a>00973    locscene -&gt; Rotate (0,-5);
-<a name="l00974"></a>00974    SendExposeEvent();
+<a name="l00974"></a>00974    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00975"></a>00975 }
 <a name="l00976"></a>00976 
-<a name="l00977"></a>00977 <span class="keywordtype">void</span> KeyDownPressed()
+<a name="l00977"></a><a class="code" href="aux__vis_8hpp.html#a24fe3cabda9bfd7bf4762b57a0e55fb6">00977</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a24fe3cabda9bfd7bf4762b57a0e55fb6">KeyDownPressed</a>()
 <a name="l00978"></a>00978 {
 <a name="l00979"></a>00979    locscene -&gt; Rotate (0,5);
-<a name="l00980"></a>00980    SendExposeEvent();
+<a name="l00980"></a>00980    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00981"></a>00981 }
 <a name="l00982"></a>00982 
-<a name="l00983"></a>00983 <span class="keywordtype">void</span> KeyJPressed()
+<a name="l00983"></a><a class="code" href="aux__vis_8hpp.html#a858e1709ddaf8cf81fee85daedd4ae98">00983</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a858e1709ddaf8cf81fee85daedd4ae98">KeyJPressed</a>()
 <a name="l00984"></a>00984 {
 <a name="l00985"></a>00985    locscene -&gt; OrthogonalProjection = !(locscene -&gt; OrthogonalProjection);
-<a name="l00986"></a>00986    SendExposeEvent();
+<a name="l00986"></a>00986    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00987"></a>00987 }
 <a name="l00988"></a>00988 
-<a name="l00989"></a>00989 <span class="keywordtype">void</span> KeyMinusPressed()
+<a name="l00989"></a><a class="code" href="aux__vis_8hpp.html#ab0a58e8a2f8245ee902fdc61a7002ce3">00989</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#ab0a58e8a2f8245ee902fdc61a7002ce3">KeyMinusPressed</a>()
 <a name="l00990"></a>00990 {
 <a name="l00991"></a>00991    locscene -&gt; Scale(1., 1., 1./1.1);
-<a name="l00992"></a>00992    SendExposeEvent();
+<a name="l00992"></a>00992    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00993"></a>00993 }
 <a name="l00994"></a>00994 
-<a name="l00995"></a>00995 <span class="keywordtype">void</span> KeyPlusPressed()
+<a name="l00995"></a><a class="code" href="aux__vis_8hpp.html#a1434f8f7a0899de7e4c2c19b3858d850">00995</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a1434f8f7a0899de7e4c2c19b3858d850">KeyPlusPressed</a>()
 <a name="l00996"></a>00996 {
 <a name="l00997"></a>00997    locscene -&gt; Scale(1., 1., 1.1);
-<a name="l00998"></a>00998    SendExposeEvent();
+<a name="l00998"></a>00998    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00999"></a>00999 }
 <a name="l01000"></a>01000 
-<a name="l01001"></a>01001 <span class="keywordtype">void</span> ZoomIn()
+<a name="l01001"></a><a class="code" href="aux__vis_8hpp.html#acea72e7aff0e351b5c1ef76a3b44033f">01001</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#acea72e7aff0e351b5c1ef76a3b44033f">ZoomIn</a>()
 <a name="l01002"></a>01002 {
-<a name="l01003"></a>01003    locscene-&gt;Zoom(exp (0.05));
-<a name="l01004"></a>01004    SendExposeEvent();
+<a name="l01003"></a>01003    locscene-&gt;<a class="code" href="classVisualizationScene.html#a8fae552e673d1855a23397c1582d7d4b">Zoom</a>(exp (0.05));
+<a name="l01004"></a>01004    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l01005"></a>01005 }
 <a name="l01006"></a>01006 
-<a name="l01007"></a>01007 <span class="keywordtype">void</span> ZoomOut()
+<a name="l01007"></a><a class="code" href="aux__vis_8hpp.html#ad40cbfdf9d1ba7a4b95a4100c893f929">01007</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#ad40cbfdf9d1ba7a4b95a4100c893f929">ZoomOut</a>()
 <a name="l01008"></a>01008 {
-<a name="l01009"></a>01009    locscene-&gt;Zoom(exp (-0.05));
-<a name="l01010"></a>01010    SendExposeEvent();
+<a name="l01009"></a>01009    locscene-&gt;<a class="code" href="classVisualizationScene.html#a8fae552e673d1855a23397c1582d7d4b">Zoom</a>(exp (-0.05));
+<a name="l01010"></a>01010    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l01011"></a>01011 }
 <a name="l01012"></a>01012 
-<a name="l01013"></a>01013 <span class="keywordtype">void</span> ScaleUp()
+<a name="l01013"></a><a class="code" href="aux__vis_8hpp.html#a7d9c24d7bcbdac4657e4a49cc096d734">01013</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a7d9c24d7bcbdac4657e4a49cc096d734">ScaleUp</a>()
 <a name="l01014"></a>01014 {
-<a name="l01015"></a>01015    locscene-&gt;Scale(1.025);
-<a name="l01016"></a>01016    SendExposeEvent();
+<a name="l01015"></a>01015    locscene-&gt;<a class="code" href="classVisualizationScene.html#aa4b64e283f031b78449343f97b3c4981">Scale</a>(1.025);
+<a name="l01016"></a>01016    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l01017"></a>01017 }
 <a name="l01018"></a>01018 
-<a name="l01019"></a>01019 <span class="keywordtype">void</span> ScaleDown()
+<a name="l01019"></a><a class="code" href="aux__vis_8hpp.html#ae1cc0d5e05878f579f9471a666aa8ac2">01019</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#ae1cc0d5e05878f579f9471a666aa8ac2">ScaleDown</a>()
 <a name="l01020"></a>01020 {
-<a name="l01021"></a>01021    locscene-&gt;Scale(1.0/1.025);
-<a name="l01022"></a>01022    SendExposeEvent();
+<a name="l01021"></a>01021    locscene-&gt;<a class="code" href="classVisualizationScene.html#aa4b64e283f031b78449343f97b3c4981">Scale</a>(1.0/1.025);
+<a name="l01022"></a>01022    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l01023"></a>01023 }
 <a name="l01024"></a>01024 
-<a name="l01025"></a>01025 <span class="keywordtype">void</span> LookAt()
+<a name="l01025"></a><a class="code" href="aux__vis_8hpp.html#af840fdb915a1a89e976450ea10d05892">01025</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#af840fdb915a1a89e976450ea10d05892">LookAt</a>()
 <a name="l01026"></a>01026 {
-<a name="l01027"></a>01027    cout &lt;&lt; <span class="stringliteral">&quot;ViewCenter = (&quot;</span> &lt;&lt; locscene-&gt;ViewCenterX &lt;&lt; <span class="charliteral">&#39;,&#39;</span>
-<a name="l01028"></a>01028         &lt;&lt; locscene-&gt;ViewCenterY &lt;&lt; <span class="stringliteral">&quot;)\nNew x = &quot;</span> &lt;&lt; flush;
-<a name="l01029"></a>01029    cin &gt;&gt; locscene-&gt;ViewCenterX;
+<a name="l01027"></a>01027    cout &lt;&lt; <span class="stringliteral">&quot;ViewCenter = (&quot;</span> &lt;&lt; locscene-&gt;<a class="code" href="classVisualizationScene.html#a6dd849cc503967f63c871bfe7e7aefa1">ViewCenterX</a> &lt;&lt; <span class="charliteral">&#39;,&#39;</span>
+<a name="l01028"></a>01028         &lt;&lt; locscene-&gt;<a class="code" href="classVisualizationScene.html#a777f84671db75531c4f7ceda0653dc28">ViewCenterY</a> &lt;&lt; <span class="stringliteral">&quot;)\nNew x = &quot;</span> &lt;&lt; flush;
+<a name="l01029"></a>01029    cin &gt;&gt; locscene-&gt;<a class="code" href="classVisualizationScene.html#a6dd849cc503967f63c871bfe7e7aefa1">ViewCenterX</a>;
 <a name="l01030"></a>01030    cout &lt;&lt; <span class="stringliteral">&quot;New y = &quot;</span> &lt;&lt; flush;
-<a name="l01031"></a>01031    cin &gt;&gt; locscene-&gt;ViewCenterY;
-<a name="l01032"></a>01032    SendExposeEvent();
+<a name="l01031"></a>01031    cin &gt;&gt; locscene-&gt;<a class="code" href="classVisualizationScene.html#a777f84671db75531c4f7ceda0653dc28">ViewCenterY</a>;
+<a name="l01032"></a>01032    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l01033"></a>01033 }
 <a name="l01034"></a>01034 
-<a name="l01035"></a>01035 <span class="keyword">const</span> <span class="keywordtype">double</span> window_scale_factor = 1.1;
+<a name="l01035"></a><a class="code" href="aux__vis_8cpp.html#ac10566a4609a854b37ed5b273007fbde">01035</a> <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="aux__vis_8cpp.html#ac10566a4609a854b37ed5b273007fbde">window_scale_factor</a> = 1.1;
 <a name="l01036"></a>01036 
-<a name="l01037"></a>01037 <span class="keywordtype">void</span> ShrinkWindow()
+<a name="l01037"></a><a class="code" href="aux__vis_8hpp.html#ae7b3e681c96443d7f466ff291a13cffa">01037</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#ae7b3e681c96443d7f466ff291a13cffa">ShrinkWindow</a>()
 <a name="l01038"></a>01038 {
 <a name="l01039"></a>01039    GLint viewport[4];
 <a name="l01040"></a>01040 
@@ -1108,7 +1109,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01048"></a>01048    XResizeWindow(auxXDisplay(), auxXWindow(), w, h);
 <a name="l01049"></a>01049 }
 <a name="l01050"></a>01050 
-<a name="l01051"></a>01051 <span class="keywordtype">void</span> EnlargeWindow()
+<a name="l01051"></a><a class="code" href="aux__vis_8hpp.html#a41042651350dde4d8b3eef444bff5b79">01051</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a41042651350dde4d8b3eef444bff5b79">EnlargeWindow</a>()
 <a name="l01052"></a>01052 {
 <a name="l01053"></a>01053    GLint viewport[4];
 <a name="l01054"></a>01054 
@@ -1122,14 +1123,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01062"></a>01062    XResizeWindow(auxXDisplay(), auxXWindow(), w, h);
 <a name="l01063"></a>01063 }
 <a name="l01064"></a>01064 
-<a name="l01065"></a>01065 <span class="keywordtype">void</span> MoveResizeWindow(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h)
+<a name="l01065"></a><a class="code" href="aux__vis_8hpp.html#a7347e880bf1f7ff39f82a33cf687b9a9">01065</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a7347e880bf1f7ff39f82a33cf687b9a9">MoveResizeWindow</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h)
 <a name="l01066"></a>01066 {
 <a name="l01067"></a>01067    XMoveResizeWindow(auxXDisplay(), auxXWindow(), x, y, w, h);
 <a name="l01068"></a>01068 }
 <a name="l01069"></a>01069 
 <a name="l01070"></a>01070 
 <a name="l01071"></a>01071 <span class="comment">// Draw a cone of radius 1 with base in the x-y plane and center at (0,0,2)</span>
-<a name="l01072"></a>01072 <span class="keywordtype">void</span> Cone()
+<a name="l01072"></a><a class="code" href="aux__vis_8hpp.html#a90b7cb9796054973c891885176cf04f8">01072</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a90b7cb9796054973c891885176cf04f8">Cone</a>()
 <a name="l01073"></a>01073 {
 <a name="l01074"></a>01074    <span class="keyword">const</span> <span class="keywordtype">int</span> n = 8;
 <a name="l01075"></a>01075    <span class="keyword">const</span> <span class="keywordtype">double</span> step = 2*M_PI/n;
@@ -1155,11 +1156,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01095"></a>01095 }
 <a name="l01096"></a>01096 
 <a name="l01097"></a>01097 
-<a name="l01098"></a>01098 <span class="keywordtype">int</span> MySetColorLogscale = 0;
-<a name="l01099"></a>01099 <span class="keywordtype">int</span> RepeatPaletteTimes = 1;
-<a name="l01100"></a>01100 <span class="keywordtype">int</span> UseTexture         = 0;
+<a name="l01098"></a><a class="code" href="aux__vis_8hpp.html#a68fffc76f729233943c3629de2b308f8">01098</a> <span class="keywordtype">int</span> <a class="code" href="aux__vis_8cpp.html#a68fffc76f729233943c3629de2b308f8">MySetColorLogscale</a> = 0;
+<a name="l01099"></a><a class="code" href="vsdata_8cpp.html#a84655ff6f466904d5cb4a8427ecf10f8">01099</a> <span class="keywordtype">int</span> <a class="code" href="aux__vis_8cpp.html#a84655ff6f466904d5cb4a8427ecf10f8">RepeatPaletteTimes</a> = 1;
+<a name="l01100"></a><a class="code" href="aux__vis_8cpp.html#a8ae6215a8144cc6ffba4c463d3cf4f4b">01100</a> <span class="keywordtype">int</span> <a class="code" href="aux__vis_8cpp.html#a8ae6215a8144cc6ffba4c463d3cf4f4b">UseTexture</a>         = 0;
 <a name="l01101"></a>01101 
-<a name="l01102"></a>01102 <span class="keywordtype">void</span> MySetColor (<span class="keywordtype">double</span> val, <span class="keywordtype">double</span> min, <span class="keywordtype">double</span> max)
+<a name="l01102"></a><a class="code" href="aux__vis_8hpp.html#a3c5a2b6a5e26ac34dbd24e7d2ad670ef">01102</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a3c5a2b6a5e26ac34dbd24e7d2ad670ef">MySetColor</a> (<span class="keywordtype">double</span> val, <span class="keywordtype">double</span> min, <span class="keywordtype">double</span> max)
 <a name="l01103"></a>01103 {
 <a name="l01104"></a>01104    <span class="keyword">static</span> <span class="keywordtype">double</span> eps = 1e-24;
 <a name="l01105"></a>01105    <span class="keywordflow">if</span> (MySetColorLogscale)
@@ -1168,13 +1169,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01108"></a>01108          val = min;
 <a name="l01109"></a>01109       <span class="keywordflow">if</span> (val &gt; max)
 <a name="l01110"></a>01110          val = max;
-<a name="l01111"></a>01111       MySetColor (log(fabs(val/(min+eps))) / (log(fabs(max/(min+eps)))+eps));
+<a name="l01111"></a>01111       <a class="code" href="aux__vis_8cpp.html#a3c5a2b6a5e26ac34dbd24e7d2ad670ef">MySetColor</a> (log(fabs(val/(min+eps))) / (log(fabs(max/(min+eps)))+eps));
 <a name="l01112"></a>01112    }
 <a name="l01113"></a>01113    <span class="keywordflow">else</span>
-<a name="l01114"></a>01114       MySetColor ((val-min)/(max-min));
+<a name="l01114"></a>01114       <a class="code" href="aux__vis_8cpp.html#a3c5a2b6a5e26ac34dbd24e7d2ad670ef">MySetColor</a> ((val-min)/(max-min));
 <a name="l01115"></a>01115 }
 <a name="l01116"></a>01116 
-<a name="l01117"></a>01117 <span class="keywordtype">void</span> MySetColor (<span class="keywordtype">double</span> val)
+<a name="l01117"></a><a class="code" href="aux__vis_8hpp.html#a6cc166362feb4423007e3717b3331ed6">01117</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a3c5a2b6a5e26ac34dbd24e7d2ad670ef">MySetColor</a> (<span class="keywordtype">double</span> val)
 <a name="l01118"></a>01118 {
 <a name="l01119"></a>01119    <span class="keywordtype">int</span> i;
 <a name="l01120"></a>01120    <span class="keywordtype">double</span> t, r, g, b, *pal;
@@ -1188,24 +1189,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01128"></a>01128    <span class="keywordflow">if</span> (val &lt; 0.0) val = 0.0;
 <a name="l01129"></a>01129    <span class="keywordflow">if</span> (val &gt; 1.0) val = 1.0;
 <a name="l01130"></a>01130 
-<a name="l01131"></a>01131    <span class="keywordtype">double</span> malpha = MatAlpha;
-<a name="l01132"></a>01132    <span class="keywordflow">if</span> (MatAlphaCenter &gt; 1.0)
-<a name="l01133"></a>01133       malpha *= exp(-(MatAlphaCenter)*fabs(val-1.0));
-<a name="l01134"></a>01134    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (MatAlphaCenter &lt; 0.0)
-<a name="l01135"></a>01135       malpha *= exp((MatAlphaCenter-1.0)*fabs(val-0.0));
+<a name="l01131"></a>01131    <span class="keywordtype">double</span> malpha = <a class="code" href="aux__vis_8cpp.html#a72ac4a8827898f543e22495d8be19b86">MatAlpha</a>;
+<a name="l01132"></a>01132    <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a5c7bebb0154ce9c8b21df349cce6386e">MatAlphaCenter</a> &gt; 1.0)
+<a name="l01133"></a>01133       malpha *= exp(-(<a class="code" href="aux__vis_8cpp.html#a5c7bebb0154ce9c8b21df349cce6386e">MatAlphaCenter</a>)*fabs(val-1.0));
+<a name="l01134"></a>01134    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a5c7bebb0154ce9c8b21df349cce6386e">MatAlphaCenter</a> &lt; 0.0)
+<a name="l01135"></a>01135       malpha *= exp((<a class="code" href="aux__vis_8cpp.html#a5c7bebb0154ce9c8b21df349cce6386e">MatAlphaCenter</a>-1.0)*fabs(val-0.0));
 <a name="l01136"></a>01136    <span class="keywordflow">else</span>
-<a name="l01137"></a>01137       malpha *= exp(-fabs(val-MatAlphaCenter));
+<a name="l01137"></a>01137       malpha *= exp(-fabs(val-<a class="code" href="aux__vis_8cpp.html#a5c7bebb0154ce9c8b21df349cce6386e">MatAlphaCenter</a>));
 <a name="l01138"></a>01138 
-<a name="l01139"></a>01139    val *= 0.999999999 * ( RGB_Palette_Size - 1 ) * RepeatPaletteTimes;
+<a name="l01139"></a>01139    val *= 0.999999999 * ( <a class="code" href="palettes_8hpp.html#a542b6b8722cd759b9dcefa0ed98e888d">RGB_Palette_Size</a> - 1 ) * RepeatPaletteTimes;
 <a name="l01140"></a>01140    i = (int) floor( val );
 <a name="l01141"></a>01141    t = val - i;
 <a name="l01142"></a>01142 
-<a name="l01143"></a>01143    <span class="keywordflow">if</span> ((i / (RGB_Palette_Size-1)) % 2 == 0)
-<a name="l01144"></a>01144       pal = RGB_Palette + 3 * ( i % (RGB_Palette_Size-1) );
+<a name="l01143"></a>01143    <span class="keywordflow">if</span> ((i / (<a class="code" href="palettes_8hpp.html#a542b6b8722cd759b9dcefa0ed98e888d">RGB_Palette_Size</a>-1)) % 2 == 0)
+<a name="l01144"></a>01144       pal = <a class="code" href="palettes_8hpp.html#a92a11282122f28620a42ec0ead2b7e8e">RGB_Palette</a> + 3 * ( i % (<a class="code" href="palettes_8hpp.html#a542b6b8722cd759b9dcefa0ed98e888d">RGB_Palette_Size</a>-1) );
 <a name="l01145"></a>01145    <span class="keywordflow">else</span>
 <a name="l01146"></a>01146    {
-<a name="l01147"></a>01147       pal = RGB_Palette + 3 * ( (RGB_Palette_Size-2) -
-<a name="l01148"></a>01148                                 i % (RGB_Palette_Size-1) );
+<a name="l01147"></a>01147       pal = <a class="code" href="palettes_8hpp.html#a92a11282122f28620a42ec0ead2b7e8e">RGB_Palette</a> + 3 * ( (<a class="code" href="palettes_8hpp.html#a542b6b8722cd759b9dcefa0ed98e888d">RGB_Palette_Size</a>-2) -
+<a name="l01148"></a>01148                                 i % (<a class="code" href="palettes_8hpp.html#a542b6b8722cd759b9dcefa0ed98e888d">RGB_Palette_Size</a>-1) );
 <a name="l01149"></a>01149       t = 1.0 - t;
 <a name="l01150"></a>01150    }
 <a name="l01151"></a>01151 
@@ -1213,36 +1214,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01153"></a>01153    g = (1.0 - t) * pal[1] + t * pal[4];
 <a name="l01154"></a>01154    b = (1.0 - t) * pal[2] + t * pal[5];
 <a name="l01155"></a>01155 
-<a name="l01156"></a>01156    <span class="keywordflow">if</span> (MatAlpha &lt; 1.0)
+<a name="l01156"></a>01156    <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a72ac4a8827898f543e22495d8be19b86">MatAlpha</a> &lt; 1.0)
 <a name="l01157"></a>01157       glColor4f ( r, g, b, malpha );
 <a name="l01158"></a>01158    <span class="keywordflow">else</span>
 <a name="l01159"></a>01159       glColor3f ( r, g, b );
 <a name="l01160"></a>01160 }
 <a name="l01161"></a>01161 
-<a name="l01162"></a>01162 <span class="keyword">const</span> <span class="keywordtype">int</span> Max_Texture_Size = 512;
-<a name="l01163"></a>01163 <span class="keywordtype">int</span> Texture_Size;
-<a name="l01164"></a>01164 GLfloat Texture_Image[3*Max_Texture_Size];
+<a name="l01162"></a><a class="code" href="aux__vis_8cpp.html#af3e49e7bc28edca58cdd1a7f752e951c">01162</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="aux__vis_8cpp.html#af3e49e7bc28edca58cdd1a7f752e951c">Max_Texture_Size</a> = 512;
+<a name="l01163"></a><a class="code" href="aux__vis_8cpp.html#a9ecd726614a97a21b52926552f9a72fa">01163</a> <span class="keywordtype">int</span> <a class="code" href="aux__vis_8cpp.html#a9ecd726614a97a21b52926552f9a72fa">Texture_Size</a>;
+<a name="l01164"></a><a class="code" href="aux__vis_8cpp.html#ad77897d4292c299a27ce891b6b88258c">01164</a> GLfloat <a class="code" href="aux__vis_8cpp.html#ad77897d4292c299a27ce891b6b88258c">Texture_Image</a>[3*<a class="code" href="aux__vis_8cpp.html#af3e49e7bc28edca58cdd1a7f752e951c">Max_Texture_Size</a>];
 <a name="l01165"></a>01165 
-<a name="l01166"></a>01166 <span class="keywordtype">void</span> Make_Texture_From_Palette()
+<a name="l01166"></a><a class="code" href="aux__vis_8cpp.html#a77af87a0ba98e817eff0d56c11fc420c">01166</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a77af87a0ba98e817eff0d56c11fc420c">Make_Texture_From_Palette</a>()
 <a name="l01167"></a>01167 {
 <a name="l01168"></a>01168    <span class="keywordtype">int</span> i, j;
 <a name="l01169"></a>01169    <span class="keywordtype">double</span> t, *pal;
 <a name="l01170"></a>01170 
-<a name="l01171"></a>01171    Texture_Size = Max_Texture_Size;
+<a name="l01171"></a>01171    Texture_Size = <a class="code" href="aux__vis_8cpp.html#af3e49e7bc28edca58cdd1a7f752e951c">Max_Texture_Size</a>;
 <a name="l01172"></a>01172 
-<a name="l01173"></a>01173    <span class="keywordflow">for</span> (i = 0; i &lt; Texture_Size; i++)
+<a name="l01173"></a>01173    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="aux__vis_8cpp.html#a9ecd726614a97a21b52926552f9a72fa">Texture_Size</a>; i++)
 <a name="l01174"></a>01174    {
 <a name="l01175"></a>01175       t = double(i) / (Texture_Size - 1);
-<a name="l01176"></a>01176       t *= 0.999999999 * ( RGB_Palette_Size - 1 ) * RepeatPaletteTimes;
+<a name="l01176"></a>01176       t *= 0.999999999 * ( <a class="code" href="palettes_8hpp.html#a542b6b8722cd759b9dcefa0ed98e888d">RGB_Palette_Size</a> - 1 ) * RepeatPaletteTimes;
 <a name="l01177"></a>01177       j = (int) floor(t);
 <a name="l01178"></a>01178       t -= j;
 <a name="l01179"></a>01179 
-<a name="l01180"></a>01180       <span class="keywordflow">if</span> ((j / (RGB_Palette_Size-1)) % 2 == 0)
-<a name="l01181"></a>01181          pal = RGB_Palette + 3 * ( j % (RGB_Palette_Size-1) );
+<a name="l01180"></a>01180       <span class="keywordflow">if</span> ((j / (<a class="code" href="palettes_8hpp.html#a542b6b8722cd759b9dcefa0ed98e888d">RGB_Palette_Size</a>-1)) % 2 == 0)
+<a name="l01181"></a>01181          pal = <a class="code" href="palettes_8hpp.html#a92a11282122f28620a42ec0ead2b7e8e">RGB_Palette</a> + 3 * ( j % (<a class="code" href="palettes_8hpp.html#a542b6b8722cd759b9dcefa0ed98e888d">RGB_Palette_Size</a>-1) );
 <a name="l01182"></a>01182       <span class="keywordflow">else</span>
 <a name="l01183"></a>01183       {
-<a name="l01184"></a>01184          pal = RGB_Palette + 3 * ( (RGB_Palette_Size-2) -
-<a name="l01185"></a>01185                                    j % (RGB_Palette_Size-1) );
+<a name="l01184"></a>01184          pal = <a class="code" href="palettes_8hpp.html#a92a11282122f28620a42ec0ead2b7e8e">RGB_Palette</a> + 3 * ( (<a class="code" href="palettes_8hpp.html#a542b6b8722cd759b9dcefa0ed98e888d">RGB_Palette_Size</a>-2) -
+<a name="l01185"></a>01185                                    j % (<a class="code" href="palettes_8hpp.html#a542b6b8722cd759b9dcefa0ed98e888d">RGB_Palette_Size</a>-1) );
 <a name="l01186"></a>01186          t = 1.0 - t;
 <a name="l01187"></a>01187       }
 <a name="l01188"></a>01188 
@@ -1252,25 +1253,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01192"></a>01192    }
 <a name="l01193"></a>01193 }
 <a name="l01194"></a>01194 
-<a name="l01195"></a>01195 <span class="keywordtype">void</span> Make_Texture_From_Palette_2()
+<a name="l01195"></a><a class="code" href="aux__vis_8cpp.html#aadbc90650e9f8a6b6e5fcd2a643bff6a">01195</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#aadbc90650e9f8a6b6e5fcd2a643bff6a">Make_Texture_From_Palette_2</a>()
 <a name="l01196"></a>01196 {
-<a name="l01197"></a>01197    <span class="keywordflow">if</span> (RGB_Palette_Size &gt; Max_Texture_Size)
-<a name="l01198"></a>01198       Texture_Size = Max_Texture_Size;
+<a name="l01197"></a>01197    <span class="keywordflow">if</span> (<a class="code" href="palettes_8hpp.html#a542b6b8722cd759b9dcefa0ed98e888d">RGB_Palette_Size</a> &gt; Max_Texture_Size)
+<a name="l01198"></a>01198       Texture_Size = <a class="code" href="aux__vis_8cpp.html#af3e49e7bc28edca58cdd1a7f752e951c">Max_Texture_Size</a>;
 <a name="l01199"></a>01199    <span class="keywordflow">else</span>
-<a name="l01200"></a>01200       Texture_Size = RGB_Palette_Size;
+<a name="l01200"></a>01200       Texture_Size = <a class="code" href="palettes_8hpp.html#a542b6b8722cd759b9dcefa0ed98e888d">RGB_Palette_Size</a>;
 <a name="l01201"></a>01201 
-<a name="l01202"></a>01202    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3*Texture_Size; i++)
+<a name="l01202"></a>01202    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3*<a class="code" href="aux__vis_8cpp.html#a9ecd726614a97a21b52926552f9a72fa">Texture_Size</a>; i++)
 <a name="l01203"></a>01203    {
-<a name="l01204"></a>01204       Texture_Image[i] = RGB_Palette[i];
+<a name="l01204"></a>01204       Texture_Image[i] = <a class="code" href="palettes_8hpp.html#a92a11282122f28620a42ec0ead2b7e8e">RGB_Palette</a>[i];
 <a name="l01205"></a>01205    }
 <a name="l01206"></a>01206 }
 <a name="l01207"></a>01207 
-<a name="l01208"></a>01208 <span class="keywordtype">void</span> Set_Texture_Image()
+<a name="l01208"></a><a class="code" href="palettes_8hpp.html#aca5ce0b51230c946791448b7fcfa25df">01208</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#aca5ce0b51230c946791448b7fcfa25df">Set_Texture_Image</a>()
 <a name="l01209"></a>01209 {
 <a name="l01210"></a>01210    <span class="keywordflow">if</span> (UseTexture == 1)
-<a name="l01211"></a>01211       Make_Texture_From_Palette_2();
+<a name="l01211"></a>01211       <a class="code" href="aux__vis_8cpp.html#aadbc90650e9f8a6b6e5fcd2a643bff6a">Make_Texture_From_Palette_2</a>();
 <a name="l01212"></a>01212    <span class="keywordflow">else</span>
-<a name="l01213"></a>01213       Make_Texture_From_Palette();
+<a name="l01213"></a>01213       <a class="code" href="aux__vis_8cpp.html#a77af87a0ba98e817eff0d56c11fc420c">Make_Texture_From_Palette</a>();
 <a name="l01214"></a>01214 
 <a name="l01215"></a>01215    glTexImage1D(GL_TEXTURE_1D, <span class="comment">// GLenum target,</span>
 <a name="l01216"></a>01216                 0,             <span class="comment">// GLint level,</span>
@@ -1295,17 +1296,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01235"></a>01235    glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
 <a name="l01236"></a>01236 }
 <a name="l01237"></a>01237 
-<a name="l01238"></a>01238 <span class="keywordtype">int</span> GetUseTexture()
+<a name="l01238"></a><a class="code" href="aux__vis_8hpp.html#a50b61b3e9d738825d19528a967f30efd">01238</a> <span class="keywordtype">int</span> <a class="code" href="aux__vis_8cpp.html#a50b61b3e9d738825d19528a967f30efd">GetUseTexture</a>()
 <a name="l01239"></a>01239 {
-<a name="l01240"></a>01240    <span class="keywordflow">return</span> UseTexture;
+<a name="l01240"></a>01240    <span class="keywordflow">return</span> <a class="code" href="aux__vis_8cpp.html#a8ae6215a8144cc6ffba4c463d3cf4f4b">UseTexture</a>;
 <a name="l01241"></a>01241 }
 <a name="l01242"></a>01242 
-<a name="l01243"></a>01243 <span class="keywordtype">void</span> SetUseTexture(<span class="keywordtype">int</span> ut)
+<a name="l01243"></a><a class="code" href="aux__vis_8hpp.html#a6ee835cc11f6de1e0f5707cedfc109f2">01243</a> <span class="keywordtype">void</span> <a class="code" href="aux__vis_8cpp.html#a6ee835cc11f6de1e0f5707cedfc109f2">SetUseTexture</a>(<span class="keywordtype">int</span> ut)
 <a name="l01244"></a>01244 {
 <a name="l01245"></a>01245    <span class="keywordflow">if</span> (UseTexture != ut)
 <a name="l01246"></a>01246    {
 <a name="l01247"></a>01247       UseTexture = ut;
-<a name="l01248"></a>01248       Set_Texture_Image();
+<a name="l01248"></a>01248       <a class="code" href="aux__vis_8cpp.html#aca5ce0b51230c946791448b7fcfa25df">Set_Texture_Image</a>();
 <a name="l01249"></a>01249    }
 <a name="l01250"></a>01250 }
 </pre></div></div>
@@ -1315,7 +1316,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -1324,7 +1325,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 15:12:44 for GLVis by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:52:23 for GLVis by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

@@ -51,6 +51,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div class="header">
@@ -58,7 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">vsdata.cpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
+<a href="vsdata_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span>
 <a name="l00002"></a>00002 <span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443271. All Rights</span>
 <a name="l00003"></a>00003 <span class="comment">// reserved. See file COPYRIGHT for details.</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -76,16 +77,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00016"></a>00016 <span class="preprocessor">#include &lt;sstream&gt;</span>
 <a name="l00017"></a>00017 <span class="keyword">using namespace </span>std;
 <a name="l00018"></a>00018 
-<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;vsdata.hpp&quot;</span>
-<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;aux_vis.hpp&quot;</span>
-<a name="l00021"></a>00021 <span class="preprocessor">#include &quot;material.hpp&quot;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="code" href="vsdata_8hpp.html">vsdata.hpp</a>&quot;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="code" href="aux__vis_8hpp.html">aux_vis.hpp</a>&quot;</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &quot;<a class="code" href="material_8hpp.html">material.hpp</a>&quot;</span>
 <a name="l00022"></a>00022 
 <a name="l00023"></a>00023 <span class="preprocessor">#include &quot;gl2ps.h&quot;</span>
 <a name="l00024"></a>00024 
 <a name="l00025"></a>00025 
 <a name="l00026"></a>00026 <span class="comment">// Draw an arrow starting at point (px, py, pz) with orientation (vx, vy, vz)</span>
 <a name="l00027"></a>00027 <span class="comment">// and length &quot;length&quot;.</span>
-<a name="l00028"></a>00028 <span class="keywordtype">void</span> VisualizationSceneScalarData::Arrow3(<span class="keywordtype">double</span> px, <span class="keywordtype">double</span> py, <span class="keywordtype">double</span> pz,
+<a name="l00028"></a><a class="code" href="classVisualizationSceneScalarData.html#a572589a2803877b69e11142eff7dbdf6">00028</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneScalarData.html#a572589a2803877b69e11142eff7dbdf6">VisualizationSceneScalarData::Arrow3</a>(<span class="keywordtype">double</span> px, <span class="keywordtype">double</span> py, <span class="keywordtype">double</span> pz,
 <a name="l00029"></a>00029                                           <span class="keywordtype">double</span> vx, <span class="keywordtype">double</span> vy, <span class="keywordtype">double</span> vz,
 <a name="l00030"></a>00030                                           <span class="keywordtype">double</span> length,
 <a name="l00031"></a>00031                                           <span class="keywordtype">double</span> cone_scale)
@@ -132,12 +133,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00072"></a>00072    glTranslated (0, 0, 1);
 <a name="l00073"></a>00073    glScaled (cone_scale, cone_scale, cone_scale);
 <a name="l00074"></a>00074 
-<a name="l00075"></a>00075    Cone();
+<a name="l00075"></a>00075    <a class="code" href="aux__vis_8cpp.html#a90b7cb9796054973c891885176cf04f8">Cone</a>();
 <a name="l00076"></a>00076 
 <a name="l00077"></a>00077    glPopMatrix();
 <a name="l00078"></a>00078 }
 <a name="l00079"></a>00079 
-<a name="l00080"></a>00080 <span class="keywordtype">void</span> VisualizationSceneScalarData::Arrow2(<span class="keywordtype">double</span> px, <span class="keywordtype">double</span> py, <span class="keywordtype">double</span> pz,
+<a name="l00080"></a><a class="code" href="classVisualizationSceneScalarData.html#a301086bfc44f22e17cf37b584bbdcf0f">00080</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneScalarData.html#a301086bfc44f22e17cf37b584bbdcf0f">VisualizationSceneScalarData::Arrow2</a>(<span class="keywordtype">double</span> px, <span class="keywordtype">double</span> py, <span class="keywordtype">double</span> pz,
 <a name="l00081"></a>00081                                           <span class="keywordtype">double</span> vx, <span class="keywordtype">double</span> vy, <span class="keywordtype">double</span> vz,
 <a name="l00082"></a>00082                                           <span class="keywordtype">double</span> length,
 <a name="l00083"></a>00083                                           <span class="keywordtype">double</span> cone_scale)
@@ -163,12 +164,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00103"></a>00103    glTranslated (0, 0, 1);
 <a name="l00104"></a>00104    glScaled (cone_scale, cone_scale, cone_scale);
 <a name="l00105"></a>00105 
-<a name="l00106"></a>00106    Cone();
+<a name="l00106"></a>00106    <a class="code" href="aux__vis_8cpp.html#a90b7cb9796054973c891885176cf04f8">Cone</a>();
 <a name="l00107"></a>00107 
 <a name="l00108"></a>00108    glPopMatrix();
 <a name="l00109"></a>00109 }
 <a name="l00110"></a>00110 
-<a name="l00111"></a>00111 <span class="keywordtype">void</span> VisualizationSceneScalarData::Arrow(<span class="keywordtype">double</span> px, <span class="keywordtype">double</span> py, <span class="keywordtype">double</span> pz,
+<a name="l00111"></a><a class="code" href="classVisualizationSceneScalarData.html#ace1a75094cc3040b5c0be9b4f57171f4">00111</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneScalarData.html#ace1a75094cc3040b5c0be9b4f57171f4">VisualizationSceneScalarData::Arrow</a>(<span class="keywordtype">double</span> px, <span class="keywordtype">double</span> py, <span class="keywordtype">double</span> pz,
 <a name="l00112"></a>00112                                          <span class="keywordtype">double</span> vx, <span class="keywordtype">double</span> vy, <span class="keywordtype">double</span> vz,
 <a name="l00113"></a>00113                                          <span class="keywordtype">double</span> length,
 <a name="l00114"></a>00114                                          <span class="keywordtype">double</span> cone_scale)
@@ -274,7 +275,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00214"></a>00214    glEnd();
 <a name="l00215"></a>00215 }
 <a name="l00216"></a>00216 
-<a name="l00217"></a>00217 <span class="keywordtype">void</span> VisualizationSceneScalarData::DrawColorBar (<span class="keywordtype">double</span> minval, <span class="keywordtype">double</span> maxval,
+<a name="l00217"></a><a class="code" href="classVisualizationSceneScalarData.html#aaffefeb61c2a16ae3cd5920d6cc3f64a">00217</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneScalarData.html#aaffefeb61c2a16ae3cd5920d6cc3f64a">VisualizationSceneScalarData::DrawColorBar</a> (<span class="keywordtype">double</span> minval, <span class="keywordtype">double</span> maxval,
 <a name="l00218"></a>00218                                                  Array&lt;double&gt; *level,
 <a name="l00219"></a>00219                                                  Array&lt;double&gt; *levels)
 <a name="l00220"></a>00220 {
@@ -310,11 +311,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00250"></a>00250    <span class="comment">// glEnable (GL_COLOR_MATERIAL);</span>
 <a name="l00251"></a>00251    glNormal3d (0, 0, 1);
 <a name="l00252"></a>00252 
-<a name="l00253"></a>00253    Set_Material();
+<a name="l00253"></a>00253    <a class="code" href="material_8cpp.html#a724c876e4780d698e7e9ed353709bd79">Set_Material</a>();
 <a name="l00254"></a>00254 
 <a name="l00255"></a>00255    <span class="keywordtype">double</span> eps = 1e-24;
 <a name="l00256"></a>00256 
-<a name="l00257"></a>00257    <span class="keywordflow">if</span> (GetUseTexture())
+<a name="l00257"></a>00257    <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a50b61b3e9d738825d19528a967f30efd">GetUseTexture</a>())
 <a name="l00258"></a>00258    {
 <a name="l00259"></a>00259       glEnable (GL_TEXTURE_1D);
 <a name="l00260"></a>00260       glColor4d(1, 1, 1, 1);
@@ -336,25 +337,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00276"></a>00276       {
 <a name="l00277"></a>00277          <span class="keyword">const</span> <span class="keywordtype">double</span> a = double(i) / nquads;
 <a name="l00278"></a>00278          Y = (1.0 - a) * miny + a * maxy;
-<a name="l00279"></a>00279          <span class="keywordflow">if</span> (MySetColorLogscale)
+<a name="l00279"></a>00279          <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a68fffc76f729233943c3629de2b308f8">MySetColorLogscale</a>)
 <a name="l00280"></a>00280          {
-<a name="l00281"></a>00281             MySetColorLogscale = 0;
-<a name="l00282"></a>00282             MySetColor (Y,miny,maxy);
-<a name="l00283"></a>00283             MySetColorLogscale = 1;
+<a name="l00281"></a>00281             <a class="code" href="aux__vis_8cpp.html#a68fffc76f729233943c3629de2b308f8">MySetColorLogscale</a> = 0;
+<a name="l00282"></a>00282             <a class="code" href="aux__vis_8cpp.html#a3c5a2b6a5e26ac34dbd24e7d2ad670ef">MySetColor</a> (Y,miny,maxy);
+<a name="l00283"></a>00283             <a class="code" href="aux__vis_8cpp.html#a68fffc76f729233943c3629de2b308f8">MySetColorLogscale</a> = 1;
 <a name="l00284"></a>00284          }
 <a name="l00285"></a>00285          <span class="keywordflow">else</span>
-<a name="l00286"></a>00286             MySetColor (Y,miny,maxy);
+<a name="l00286"></a>00286             <a class="code" href="aux__vis_8cpp.html#a3c5a2b6a5e26ac34dbd24e7d2ad670ef">MySetColor</a> (Y,miny,maxy);
 <a name="l00287"></a>00287          glVertex3d (minx,Y,posz);
 <a name="l00288"></a>00288          glVertex3d (maxx,Y,posz);
 <a name="l00289"></a>00289       }
 <a name="l00290"></a>00290       glEnd();
 <a name="l00291"></a>00291    }
 <a name="l00292"></a>00292 
-<a name="l00293"></a>00293    Set_Black_Material();
+<a name="l00293"></a>00293    <a class="code" href="material_8cpp.html#a2987eff3b35b8ef824bad012fc2e8c6f">Set_Black_Material</a>();
 <a name="l00294"></a>00294    glBegin(GL_LINES);
 <a name="l00295"></a>00295    <span class="keywordflow">if</span> (levels) {
 <a name="l00296"></a>00296       <span class="keywordflow">for</span> (i = 0; i &lt; levels-&gt;Size(); i++) {
-<a name="l00297"></a>00297          <span class="keywordflow">if</span> (MySetColorLogscale)
+<a name="l00297"></a>00297          <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a68fffc76f729233943c3629de2b308f8">MySetColorLogscale</a>)
 <a name="l00298"></a>00298             Y = miny + (maxy - miny) *
 <a name="l00299"></a>00299                log(fabs((*levels)[i]/(minv+eps)))/(log(fabs(maxv/(minv+eps)))+eps);
 <a name="l00300"></a>00300          <span class="keywordflow">else</span>
@@ -365,7 +366,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00305"></a>00305    }
 <a name="l00306"></a>00306    <span class="keywordflow">if</span> (level) {
 <a name="l00307"></a>00307       <span class="keywordflow">for</span> (i = 0; i &lt; level-&gt;Size(); i++) {
-<a name="l00308"></a>00308          <span class="keywordflow">if</span> (MySetColorLogscale)
+<a name="l00308"></a>00308          <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a68fffc76f729233943c3629de2b308f8">MySetColorLogscale</a>)
 <a name="l00309"></a>00309             Y = miny + (maxy - miny)* log(fabs((*level)[i]/(minv+eps))) /
 <a name="l00310"></a>00310                (log(fabs(maxv/(minv+eps)))+eps);
 <a name="l00311"></a>00311          <span class="keywordflow">else</span>
@@ -380,7 +381,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00320"></a>00320    <span class="comment">// glColor3fv (textcol);</span>
 <a name="l00321"></a>00321 
 <a name="l00322"></a>00322    glPushAttrib (GL_LIST_BIT);
-<a name="l00323"></a>00323    <span class="keyword">extern</span> GLuint fontbase;
+<a name="l00323"></a>00323    <span class="keyword">extern</span> GLuint <a class="code" href="aux__vis_8cpp.html#a2efc891ed1477d4076a461dce341ed0d">fontbase</a>;
 <a name="l00324"></a>00324    glListBase (fontbase);
 <a name="l00325"></a>00325 
 <a name="l00326"></a>00326    <span class="keywordtype">double</span> val;
@@ -393,7 +394,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00333"></a>00333          Y = miny + i * (maxy-miny) / 4;
 <a name="l00334"></a>00334          glRasterPos3d (maxx+0.02,Y,posz);
 <a name="l00335"></a>00335 
-<a name="l00336"></a>00336          <span class="keywordflow">if</span> (MySetColorLogscale)
+<a name="l00336"></a>00336          <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a68fffc76f729233943c3629de2b308f8">MySetColorLogscale</a>)
 <a name="l00337"></a>00337             val = minval * pow (maxval / minval, i / 4.0);
 <a name="l00338"></a>00338          <span class="keywordflow">else</span>
 <a name="l00339"></a>00339             val = minval + i * (maxval-minval) / 4;
@@ -408,7 +409,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00348"></a>00348    {
 <a name="l00349"></a>00349       <span class="keywordflow">for</span> (i = 0; i &lt; level-&gt;Size(); i++)
 <a name="l00350"></a>00350       {
-<a name="l00351"></a>00351          <span class="keywordflow">if</span> (MySetColorLogscale)
+<a name="l00351"></a>00351          <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a68fffc76f729233943c3629de2b308f8">MySetColorLogscale</a>)
 <a name="l00352"></a>00352             Y = miny + (maxy - miny)* log(fabs((*level)[i]/(minv+eps))) /
 <a name="l00353"></a>00353                (log(fabs(maxv/(minv+eps)))+eps);
 <a name="l00354"></a>00354          <span class="keywordflow">else</span>
@@ -428,7 +429,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00368"></a>00368    {
 <a name="l00369"></a>00369       <span class="keywordflow">for</span> (i = 0; i &lt; levels-&gt;Size(); i++)
 <a name="l00370"></a>00370       {
-<a name="l00371"></a>00371          <span class="keywordflow">if</span> (MySetColorLogscale)
+<a name="l00371"></a>00371          <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a68fffc76f729233943c3629de2b308f8">MySetColorLogscale</a>)
 <a name="l00372"></a>00372             Y = miny + (maxy - miny)* log(fabs((*levels)[i]/(minv+eps))) /
 <a name="l00373"></a>00373                (log(fabs(maxv/(minv+eps)))+eps);
 <a name="l00374"></a>00374          <span class="keywordflow">else</span>
@@ -455,7 +456,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00395"></a>00395             Y = miny + i * (maxy-miny) / 4;
 <a name="l00396"></a>00396             glRasterPos3d (maxx+0.02,Y,posz);
 <a name="l00397"></a>00397 
-<a name="l00398"></a>00398             <span class="keywordflow">if</span> (MySetColorLogscale)
+<a name="l00398"></a>00398             <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a68fffc76f729233943c3629de2b308f8">MySetColorLogscale</a>)
 <a name="l00399"></a>00399                val = minval * pow (maxval / minval, i / 4.0);
 <a name="l00400"></a>00400             <span class="keywordflow">else</span>
 <a name="l00401"></a>00401                val = minval + i * (maxval-minval) / 4;
@@ -470,7 +471,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00410"></a>00410       {
 <a name="l00411"></a>00411          <span class="keywordflow">for</span> (i = 0; i &lt; level-&gt;Size(); i++)
 <a name="l00412"></a>00412          {
-<a name="l00413"></a>00413             <span class="keywordflow">if</span> (MySetColorLogscale)
+<a name="l00413"></a>00413             <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a68fffc76f729233943c3629de2b308f8">MySetColorLogscale</a>)
 <a name="l00414"></a>00414                Y = miny + (maxy - miny)* log(fabs((*level)[i]/(minv+eps))) /
 <a name="l00415"></a>00415                   (log(fabs(maxv/(minv+eps)))+eps);
 <a name="l00416"></a>00416             <span class="keywordflow">else</span>
@@ -491,7 +492,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00431"></a>00431       {
 <a name="l00432"></a>00432          <span class="keywordflow">for</span> (i = 0; i &lt; levels-&gt;Size(); i++)
 <a name="l00433"></a>00433          {
-<a name="l00434"></a>00434             <span class="keywordflow">if</span> (MySetColorLogscale)
+<a name="l00434"></a>00434             <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a68fffc76f729233943c3629de2b308f8">MySetColorLogscale</a>)
 <a name="l00435"></a>00435                Y = miny + (maxy - miny)* log(fabs((*levels)[i]/(minv+eps))) /
 <a name="l00436"></a>00436                   (log(fabs(maxv/(minv+eps)))+eps);
 <a name="l00437"></a>00437             <span class="keywordflow">else</span>
@@ -514,7 +515,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00454"></a>00454    glPopMatrix();
 <a name="l00455"></a>00455 }
 <a name="l00456"></a>00456 
-<a name="l00457"></a>00457 <span class="keywordtype">void</span> VisualizationSceneScalarData::DrawCoordinateCross()
+<a name="l00457"></a><a class="code" href="classVisualizationSceneScalarData.html#aba173432f6b82a549e6c327b58386238">00457</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneScalarData.html#aba173432f6b82a549e6c327b58386238">VisualizationSceneScalarData::DrawCoordinateCross</a>()
 <a name="l00458"></a>00458 {
 <a name="l00459"></a>00459    glMatrixMode (GL_PROJECTION);
 <a name="l00460"></a>00460    glPushMatrix();
@@ -545,7 +546,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00485"></a>00485    Arrow2(0,0,0,0,0,1, 0.9);
 <a name="l00486"></a>00486 
 <a name="l00487"></a>00487    glPushAttrib (GL_LIST_BIT);
-<a name="l00488"></a>00488    <span class="keyword">extern</span> GLuint fontbase;
+<a name="l00488"></a>00488    <span class="keyword">extern</span> GLuint <a class="code" href="aux__vis_8cpp.html#a2efc891ed1477d4076a461dce341ed0d">fontbase</a>;
 <a name="l00489"></a>00489    glListBase (fontbase);
 <a name="l00490"></a>00490 
 <a name="l00491"></a>00491    <span class="keyword">const</span> <span class="keywordtype">char</span> *a_labels[] = {<span class="stringliteral">&quot;x&quot;</span>, <span class="stringliteral">&quot;y&quot;</span>, <span class="stringliteral">&quot;z&quot;</span>};
@@ -582,68 +583,68 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00522"></a>00522    }
 <a name="l00523"></a>00523 }
 <a name="l00524"></a>00524 
-<a name="l00525"></a>00525 <a class="code" href="classVisualizationSceneScalarData.html">VisualizationSceneScalarData</a> * vsdata;
-<a name="l00526"></a>00526 <span class="keyword">extern</span> <a class="code" href="classVisualizationScene.html">VisualizationScene</a>  * locscene;
+<a name="l00525"></a><a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">00525</a> <a class="code" href="classVisualizationSceneScalarData.html">VisualizationSceneScalarData</a> * <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a>;
+<a name="l00526"></a>00526 <span class="keyword">extern</span> <a class="code" href="classVisualizationScene.html">VisualizationScene</a>  * <a class="code" href="aux__vis_8cpp.html#af71e06f4d5eba00469872cd481b1835b">locscene</a>;
 <a name="l00527"></a>00527 
-<a name="l00528"></a>00528 <span class="keywordtype">void</span> KeyCPressed()
+<a name="l00528"></a><a class="code" href="vsdata_8cpp.html#a137f0ac1c7dfb280b37f8e5bf133f439">00528</a> <span class="keywordtype">void</span> <a class="code" href="vsdata_8cpp.html#a137f0ac1c7dfb280b37f8e5bf133f439">KeyCPressed</a>()
 <a name="l00529"></a>00529 {
-<a name="l00530"></a>00530    vsdata -&gt; ToggleDrawColorbar();
-<a name="l00531"></a>00531    SendExposeEvent();
+<a name="l00530"></a>00530    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; ToggleDrawColorbar();
+<a name="l00531"></a>00531    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00532"></a>00532 }
 <a name="l00533"></a>00533 
-<a name="l00534"></a>00534 <span class="keywordtype">void</span> KeySPressed()
+<a name="l00534"></a><a class="code" href="vsdata_8cpp.html#ab7e1ab14bd9d7ac3ec274841422ea648">00534</a> <span class="keywordtype">void</span> <a class="code" href="vsdata_8cpp.html#ab7e1ab14bd9d7ac3ec274841422ea648">KeySPressed</a>()
 <a name="l00535"></a>00535 {
-<a name="l00536"></a>00536    vsdata -&gt; ToggleScaling();
-<a name="l00537"></a>00537    SendExposeEvent();
+<a name="l00536"></a>00536    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; ToggleScaling();
+<a name="l00537"></a>00537    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00538"></a>00538 }
 <a name="l00539"></a>00539 
-<a name="l00540"></a>00540 <span class="keywordtype">void</span> KeyaPressed()
+<a name="l00540"></a><a class="code" href="vsdata_8cpp.html#a79530ffb003de88a056d6264dde734ce">00540</a> <span class="keywordtype">void</span> <a class="code" href="vsdata_8cpp.html#a79530ffb003de88a056d6264dde734ce">KeyaPressed</a>()
 <a name="l00541"></a>00541 {
-<a name="l00542"></a>00542    vsdata -&gt; ToggleDrawAxes();
-<a name="l00543"></a>00543    SendExposeEvent();
+<a name="l00542"></a>00542    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; ToggleDrawAxes();
+<a name="l00543"></a>00543    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00544"></a>00544 }
 <a name="l00545"></a>00545 
-<a name="l00546"></a>00546 <span class="keywordtype">void</span> KeylPressed()
+<a name="l00546"></a><a class="code" href="vsdata_8cpp.html#ab018c4ed8f503240acd6d85bec5cb63a">00546</a> <span class="keywordtype">void</span> <a class="code" href="vsdata_8cpp.html#ab018c4ed8f503240acd6d85bec5cb63a">KeylPressed</a>()
 <a name="l00547"></a>00547 {
-<a name="l00548"></a>00548    vsdata -&gt; ToggleLight();
-<a name="l00549"></a>00549    <span class="keywordflow">if</span> (! vsdata -&gt; light)
+<a name="l00548"></a>00548    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; ToggleLight();
+<a name="l00549"></a>00549    <span class="keywordflow">if</span> (! <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; light)
 <a name="l00550"></a>00550       glDisable(GL_LIGHTING);
 <a name="l00551"></a>00551    <span class="keywordflow">else</span>
 <a name="l00552"></a>00552       glEnable(GL_LIGHTING);
-<a name="l00553"></a>00553    SendExposeEvent();
+<a name="l00553"></a>00553    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00554"></a>00554 }
 <a name="l00555"></a>00555 
-<a name="l00556"></a>00556 <span class="keywordtype">void</span> KeyLPressed()
+<a name="l00556"></a><a class="code" href="vsdata_8cpp.html#a8a54ca8f26c5cff5e18536bf3633c31a">00556</a> <span class="keywordtype">void</span> <a class="code" href="vsdata_8cpp.html#a8a54ca8f26c5cff5e18536bf3633c31a">KeyLPressed</a>()
 <a name="l00557"></a>00557 {
-<a name="l00558"></a>00558    MySetColorLogscale = !MySetColorLogscale;
-<a name="l00559"></a>00559    vsdata -&gt; EventUpdateColors();
-<a name="l00560"></a>00560    SendExposeEvent();
+<a name="l00558"></a>00558    <a class="code" href="aux__vis_8cpp.html#a68fffc76f729233943c3629de2b308f8">MySetColorLogscale</a> = !<a class="code" href="aux__vis_8cpp.html#a68fffc76f729233943c3629de2b308f8">MySetColorLogscale</a>;
+<a name="l00559"></a>00559    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; EventUpdateColors();
+<a name="l00560"></a>00560    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00561"></a>00561 }
 <a name="l00562"></a>00562 
-<a name="l00563"></a>00563 <span class="keywordtype">void</span> KeyrPressed()
+<a name="l00563"></a><a class="code" href="vsdata_8cpp.html#ac8f435ef90d7e017abf1e298a97ebf89">00563</a> <span class="keywordtype">void</span> <a class="code" href="vsdata_8cpp.html#ac8f435ef90d7e017abf1e298a97ebf89">KeyrPressed</a>()
 <a name="l00564"></a>00564 {
-<a name="l00565"></a>00565    locscene -&gt; spinning = 0;
-<a name="l00566"></a>00566    RemoveIdleFunc(MainLoop);
-<a name="l00567"></a>00567    vsdata -&gt; CenterObject();
+<a name="l00565"></a>00565    <a class="code" href="aux__vis_8cpp.html#af71e06f4d5eba00469872cd481b1835b">locscene</a> -&gt; spinning = 0;
+<a name="l00566"></a>00566    <a class="code" href="aux__vis_8cpp.html#a6a3c865cab4476fb4f52d88a7e0b24a1">RemoveIdleFunc</a>(<a class="code" href="aux__vis_8cpp.html#a153a5fd8946b6ab9fd9b725759fffe5e">MainLoop</a>);
+<a name="l00567"></a>00567    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; CenterObject();
 <a name="l00568"></a>00568 
-<a name="l00569"></a>00569    locscene -&gt; ViewAngle = 45.0;
-<a name="l00570"></a>00570    locscene -&gt; ViewScale = 1.0;
-<a name="l00571"></a>00571    locscene -&gt; ViewCenterX = 0.0;
-<a name="l00572"></a>00572    locscene -&gt; ViewCenterY = 0.0;
-<a name="l00573"></a>00573    vsdata -&gt; key_r_state = 0;
-<a name="l00574"></a>00574    SendExposeEvent();
+<a name="l00569"></a>00569    <a class="code" href="aux__vis_8cpp.html#af71e06f4d5eba00469872cd481b1835b">locscene</a> -&gt; ViewAngle = 45.0;
+<a name="l00570"></a>00570    <a class="code" href="aux__vis_8cpp.html#af71e06f4d5eba00469872cd481b1835b">locscene</a> -&gt; ViewScale = 1.0;
+<a name="l00571"></a>00571    <a class="code" href="aux__vis_8cpp.html#af71e06f4d5eba00469872cd481b1835b">locscene</a> -&gt; ViewCenterX = 0.0;
+<a name="l00572"></a>00572    <a class="code" href="aux__vis_8cpp.html#af71e06f4d5eba00469872cd481b1835b">locscene</a> -&gt; ViewCenterY = 0.0;
+<a name="l00573"></a>00573    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; key_r_state = 0;
+<a name="l00574"></a>00574    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00575"></a>00575 }
 <a name="l00576"></a>00576 
-<a name="l00577"></a>00577 <span class="keywordtype">void</span> KeyRPressed()
+<a name="l00577"></a><a class="code" href="vsdata_8cpp.html#a77d1a657c99247fcf752c18dda747905">00577</a> <span class="keywordtype">void</span> <a class="code" href="vsdata_8cpp.html#a77d1a657c99247fcf752c18dda747905">KeyRPressed</a>()
 <a name="l00578"></a>00578 {
-<a name="l00579"></a>00579    locscene -&gt; spinning = 0;
-<a name="l00580"></a>00580    RemoveIdleFunc(MainLoop);
+<a name="l00579"></a>00579    <a class="code" href="aux__vis_8cpp.html#af71e06f4d5eba00469872cd481b1835b">locscene</a> -&gt; spinning = 0;
+<a name="l00580"></a>00580    <a class="code" href="aux__vis_8cpp.html#a6a3c865cab4476fb4f52d88a7e0b24a1">RemoveIdleFunc</a>(<a class="code" href="aux__vis_8cpp.html#a153a5fd8946b6ab9fd9b725759fffe5e">MainLoop</a>);
 <a name="l00581"></a>00581    glMatrixMode (GL_MODELVIEW);
 <a name="l00582"></a>00582    glLoadIdentity();
-<a name="l00583"></a>00583    glGetDoublev (GL_MODELVIEW_MATRIX,   locscene -&gt; translmat);
-<a name="l00584"></a>00584    Set_Light();
+<a name="l00583"></a>00583    glGetDoublev (GL_MODELVIEW_MATRIX,   <a class="code" href="aux__vis_8cpp.html#af71e06f4d5eba00469872cd481b1835b">locscene</a> -&gt; translmat);
+<a name="l00584"></a>00584    <a class="code" href="material_8cpp.html#a57a9b2584097b2eb71a3f1b997b7a6f8">Set_Light</a>();
 <a name="l00585"></a>00585 
-<a name="l00586"></a>00586    <span class="keywordflow">switch</span> (vsdata -&gt; key_r_state)
+<a name="l00586"></a>00586    <span class="keywordflow">switch</span> (<a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; key_r_state)
 <a name="l00587"></a>00587    {
 <a name="l00588"></a>00588    <span class="keywordflow">case</span> 0:
 <a name="l00589"></a>00589       <span class="keywordflow">break</span>;
@@ -673,21 +674,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00613"></a>00613    }
 <a name="l00614"></a>00614 
 <a name="l00615"></a>00615    <span class="comment">// if (locscene -&gt; view != 2) // make &#39;R&#39; work the same in 2D and 3D</span>
-<a name="l00616"></a>00616    vsdata -&gt; key_r_state = (vsdata -&gt; key_r_state+1)%6;
+<a name="l00616"></a>00616    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; key_r_state = (<a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; key_r_state+1)%6;
 <a name="l00617"></a>00617 
-<a name="l00618"></a>00618    glGetDoublev (GL_MODELVIEW_MATRIX,   locscene -&gt; rotmat);
-<a name="l00619"></a>00619    SendExposeEvent();
+<a name="l00618"></a>00618    glGetDoublev (GL_MODELVIEW_MATRIX,   <a class="code" href="aux__vis_8cpp.html#af71e06f4d5eba00469872cd481b1835b">locscene</a> -&gt; rotmat);
+<a name="l00619"></a>00619    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00620"></a>00620 }
 <a name="l00621"></a>00621 
-<a name="l00622"></a>00622 <span class="keywordtype">void</span> Next_RGB_Palette();
-<a name="l00623"></a>00623 <span class="keywordtype">int</span> Select_New_RGB_Palette();
+<a name="l00622"></a>00622 <span class="keywordtype">void</span> <a class="code" href="palettes_8hpp.html#a7d311b6dd6143f863ee350636e41517a">Next_RGB_Palette</a>();
+<a name="l00623"></a>00623 <span class="keywordtype">int</span> <a class="code" href="palettes_8hpp.html#a4f0b0f9e1fff0e70b0e165cc08010096">Select_New_RGB_Palette</a>();
 <a name="l00624"></a>00624 
-<a name="l00625"></a>00625 <span class="keywordtype">void</span> KeyPPressed()
+<a name="l00625"></a><a class="code" href="vsdata_8cpp.html#a6693c68fada1be299a6c11bc839c3cac">00625</a> <span class="keywordtype">void</span> <a class="code" href="vsdata_8cpp.html#a6693c68fada1be299a6c11bc839c3cac">KeyPPressed</a>()
 <a name="l00626"></a>00626 {
-<a name="l00627"></a>00627    Next_RGB_Palette();
-<a name="l00628"></a>00628    <span class="keywordflow">if</span> (!GetUseTexture())
-<a name="l00629"></a>00629       vsdata-&gt;EventUpdateColors();
-<a name="l00630"></a>00630    SendExposeEvent();
+<a name="l00627"></a>00627    <a class="code" href="palettes_8hpp.html#a7d311b6dd6143f863ee350636e41517a">Next_RGB_Palette</a>();
+<a name="l00628"></a>00628    <span class="keywordflow">if</span> (!<a class="code" href="aux__vis_8cpp.html#a50b61b3e9d738825d19528a967f30efd">GetUseTexture</a>())
+<a name="l00629"></a>00629       <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a>-&gt;<a class="code" href="classVisualizationSceneScalarData.html#a277f38cb6e7f562080b0b534f205b55c">EventUpdateColors</a>();
+<a name="l00630"></a>00630    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00631"></a>00631 }
 <a name="l00632"></a>00632 
 <a name="l00633"></a>00633 <span class="keyword">static</span> <span class="keywordtype">void</span> KeyF5Pressed()
@@ -702,18 +703,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00642"></a>00642    cout &lt;&lt; <span class="stringliteral">&quot;Enter n : &quot;</span> &lt;&lt; flush;
 <a name="l00643"></a>00643    cin &gt;&gt; n;
 <a name="l00644"></a>00644 
-<a name="l00645"></a>00645    vsdata -&gt; SetLevelLines (min, max, n, 0);
+<a name="l00645"></a>00645    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; SetLevelLines (min, max, n, 0);
 <a name="l00646"></a>00646 
-<a name="l00647"></a>00647    vsdata -&gt; UpdateLevelLines();
-<a name="l00648"></a>00648    SendExposeEvent();
+<a name="l00647"></a>00647    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; UpdateLevelLines();
+<a name="l00648"></a>00648    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00649"></a>00649 }
 <a name="l00650"></a>00650 
-<a name="l00651"></a>00651 <span class="keyword">extern</span> <span class="keywordtype">int</span> RepeatPaletteTimes;
-<a name="l00652"></a>00652 <span class="keywordtype">void</span> KeyF6Pressed()
+<a name="l00651"></a>00651 <span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="aux__vis_8cpp.html#a84655ff6f466904d5cb4a8427ecf10f8">RepeatPaletteTimes</a>;
+<a name="l00652"></a><a class="code" href="vsdata_8cpp.html#a8f0fdcdcda8e33eac56487136a2dc4ee">00652</a> <span class="keywordtype">void</span> <a class="code" href="vsdata_8cpp.html#a8f0fdcdcda8e33eac56487136a2dc4ee">KeyF6Pressed</a>()
 <a name="l00653"></a>00653 {
-<a name="l00654"></a>00654    cout &lt;&lt; <span class="stringliteral">&quot;Palette is repeated &quot;</span> &lt;&lt; RepeatPaletteTimes &lt;&lt; <span class="stringliteral">&quot; times.\n&quot;</span>
+<a name="l00654"></a>00654    cout &lt;&lt; <span class="stringliteral">&quot;Palette is repeated &quot;</span> &lt;&lt; <a class="code" href="aux__vis_8cpp.html#a84655ff6f466904d5cb4a8427ecf10f8">RepeatPaletteTimes</a> &lt;&lt; <span class="stringliteral">&quot; times.\n&quot;</span>
 <a name="l00655"></a>00655         &lt;&lt; <span class="stringliteral">&quot;New value: &quot;</span> &lt;&lt; flush;
-<a name="l00656"></a>00656    cin &gt;&gt; RepeatPaletteTimes;
+<a name="l00656"></a>00656    cin &gt;&gt; <a class="code" href="aux__vis_8cpp.html#a84655ff6f466904d5cb4a8427ecf10f8">RepeatPaletteTimes</a>;
 <a name="l00657"></a>00657    <span class="keywordflow">if</span> (RepeatPaletteTimes &lt; 1)
 <a name="l00658"></a>00658       RepeatPaletteTimes = 1;
 <a name="l00659"></a>00659    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (RepeatPaletteTimes &gt; 32)
@@ -721,27 +722,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00661"></a>00661    cout &lt;&lt; <span class="stringliteral">&quot;Palette will be repeated &quot;</span> &lt;&lt; RepeatPaletteTimes
 <a name="l00662"></a>00662         &lt;&lt; <span class="stringliteral">&quot; times now.&quot;</span> &lt;&lt; endl;
 <a name="l00663"></a>00663 
-<a name="l00664"></a>00664    Select_New_RGB_Palette();
+<a name="l00664"></a>00664    <a class="code" href="palettes_8hpp.html#a4f0b0f9e1fff0e70b0e165cc08010096">Select_New_RGB_Palette</a>();
 <a name="l00665"></a>00665 
-<a name="l00666"></a>00666    <span class="keywordflow">if</span> (!GetUseTexture())
-<a name="l00667"></a>00667       vsdata-&gt;EventUpdateColors();
-<a name="l00668"></a>00668    SendExposeEvent();
+<a name="l00666"></a>00666    <span class="keywordflow">if</span> (!<a class="code" href="aux__vis_8cpp.html#a50b61b3e9d738825d19528a967f30efd">GetUseTexture</a>())
+<a name="l00667"></a>00667       <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a>-&gt;<a class="code" href="classVisualizationSceneScalarData.html#a277f38cb6e7f562080b0b534f205b55c">EventUpdateColors</a>();
+<a name="l00668"></a>00668    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00669"></a>00669 }
 <a name="l00670"></a>00670 
-<a name="l00671"></a>00671 <span class="keywordtype">void</span> KeyF7Pressed()
+<a name="l00671"></a><a class="code" href="vsdata_8cpp.html#a7235aa6f2b186cba365effba15fa653a">00671</a> <span class="keywordtype">void</span> <a class="code" href="vsdata_8cpp.html#a7235aa6f2b186cba365effba15fa653a">KeyF7Pressed</a>()
 <a name="l00672"></a>00672 {
-<a name="l00673"></a>00673    cout &lt;&lt; <span class="stringliteral">&quot;[minv,maxv] = [&quot;</span> &lt;&lt; vsdata-&gt;GetMinV() &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; vsdata-&gt;GetMaxV()
-<a name="l00674"></a>00674         &lt;&lt; <span class="stringliteral">&quot;]  maxv-minv = &quot;</span> &lt;&lt; vsdata-&gt;GetMaxV()-vsdata-&gt;GetMinV() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>
+<a name="l00673"></a>00673    cout &lt;&lt; <span class="stringliteral">&quot;[minv,maxv] = [&quot;</span> &lt;&lt; <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a>-&gt;<a class="code" href="classVisualizationSceneScalarData.html#ab1c7e2ffecd77fd87037ad9468f4a9d3">GetMinV</a>() &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a>-&gt;<a class="code" href="classVisualizationSceneScalarData.html#aa88e2a87be31eaccb8a631b9080847bb">GetMaxV</a>()
+<a name="l00674"></a>00674         &lt;&lt; <span class="stringliteral">&quot;]  maxv-minv = &quot;</span> &lt;&lt; <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a>-&gt;<a class="code" href="classVisualizationSceneScalarData.html#aa88e2a87be31eaccb8a631b9080847bb">GetMaxV</a>()-<a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a>-&gt;<a class="code" href="classVisualizationSceneScalarData.html#ab1c7e2ffecd77fd87037ad9468f4a9d3">GetMinV</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>
 <a name="l00675"></a>00675         &lt;&lt; <span class="stringliteral">&quot;New value for minv: &quot;</span> &lt;&lt; flush;
-<a name="l00676"></a>00676    cin &gt;&gt; vsdata-&gt;GetMinV();
+<a name="l00676"></a>00676    cin &gt;&gt; <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a>-&gt;<a class="code" href="classVisualizationSceneScalarData.html#ab1c7e2ffecd77fd87037ad9468f4a9d3">GetMinV</a>();
 <a name="l00677"></a>00677    cout &lt;&lt; <span class="stringliteral">&quot;New value for maxv: &quot;</span> &lt;&lt; flush;
-<a name="l00678"></a>00678    cin &gt;&gt; vsdata-&gt;GetMaxV();
-<a name="l00679"></a>00679    vsdata -&gt; UpdateValueRange();
-<a name="l00680"></a>00680    vsdata -&gt; EventUpdateColors();
-<a name="l00681"></a>00681    SendExposeEvent();
+<a name="l00678"></a>00678    cin &gt;&gt; <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a>-&gt;<a class="code" href="classVisualizationSceneScalarData.html#aa88e2a87be31eaccb8a631b9080847bb">GetMaxV</a>();
+<a name="l00679"></a>00679    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; UpdateValueRange();
+<a name="l00680"></a>00680    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; EventUpdateColors();
+<a name="l00681"></a>00681    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00682"></a>00682 }
 <a name="l00683"></a>00683 
-<a name="l00684"></a>00684 <span class="keywordtype">void</span> KeyBackslashPressed()
+<a name="l00684"></a><a class="code" href="vsdata_8cpp.html#ade38cc706d78d7efc1ebfa3819502851">00684</a> <span class="keywordtype">void</span> <a class="code" href="vsdata_8cpp.html#ade38cc706d78d7efc1ebfa3819502851">KeyBackslashPressed</a>()
 <a name="l00685"></a>00685 {
 <a name="l00686"></a>00686    <span class="keywordtype">double</span> x, y, z, w;
 <a name="l00687"></a>00687 
@@ -761,115 +762,115 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00701"></a>00701    GLfloat light[] = { x, y, z, w };
 <a name="l00702"></a>00702    <span class="comment">// load modelview matrix before calling glLightfv?</span>
 <a name="l00703"></a>00703    glLightfv(GL_LIGHT0, GL_POSITION, light);
-<a name="l00704"></a>00704    SendExposeEvent();
+<a name="l00704"></a>00704    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00705"></a>00705 }
 <a name="l00706"></a>00706 
-<a name="l00707"></a>00707 <span class="keywordtype">void</span> KeyTPressed()
+<a name="l00707"></a><a class="code" href="vsdata_8cpp.html#ad88d3d4c7ddade159470b1539225b79a">00707</a> <span class="keywordtype">void</span> <a class="code" href="vsdata_8cpp.html#ad88d3d4c7ddade159470b1539225b79a">KeyTPressed</a>()
 <a name="l00708"></a>00708 {
 <a name="l00709"></a>00709    <span class="keywordtype">int</span> ml;
 <a name="l00710"></a>00710 
-<a name="l00711"></a>00711    ml = Next_Material_And_Light();
-<a name="l00712"></a>00712    vsdata -&gt; EventUpdateColors();
-<a name="l00713"></a>00713    SendExposeEvent();
+<a name="l00711"></a>00711    ml = <a class="code" href="material_8cpp.html#ad23e20147dcc280b7316c85cf0aebadf">Next_Material_And_Light</a>();
+<a name="l00712"></a>00712    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; EventUpdateColors();
+<a name="l00713"></a>00713    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00714"></a>00714    cout &lt;&lt; <span class="stringliteral">&quot;New material/light : &quot;</span> &lt;&lt; ml &lt;&lt; endl;
 <a name="l00715"></a>00715 }
 <a name="l00716"></a>00716 
-<a name="l00717"></a>00717 <span class="keywordtype">void</span> KeyGPressed()
+<a name="l00717"></a><a class="code" href="vsdata_8cpp.html#ad10133cd27cf22d86dcf6829c39195f0">00717</a> <span class="keywordtype">void</span> <a class="code" href="vsdata_8cpp.html#ad10133cd27cf22d86dcf6829c39195f0">KeyGPressed</a>()
 <a name="l00718"></a>00718 {
-<a name="l00719"></a>00719    Toggle_Background();
-<a name="l00720"></a>00720    SendExposeEvent();
+<a name="l00719"></a>00719    <a class="code" href="material_8cpp.html#a2db78682d9322aabcbffb424955676b1">Toggle_Background</a>();
+<a name="l00720"></a>00720    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00721"></a>00721 }
 <a name="l00722"></a>00722 
-<a name="l00723"></a>00723 <span class="keywordtype">void</span> KeyF1Pressed()
+<a name="l00723"></a><a class="code" href="vsdata_8cpp.html#a3e9521339d5c156be1e0a2ec774c9686">00723</a> <span class="keywordtype">void</span> <a class="code" href="vsdata_8cpp.html#a3e9521339d5c156be1e0a2ec774c9686">KeyF1Pressed</a>()
 <a name="l00724"></a>00724 {
-<a name="l00725"></a>00725    vsdata-&gt;PrintState();
+<a name="l00725"></a>00725    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a>-&gt;<a class="code" href="classVisualizationSceneScalarData.html#a3610df4566d8785ecbf49946e9c633f6">PrintState</a>();
 <a name="l00726"></a>00726 }
 <a name="l00727"></a>00727 
-<a name="l00728"></a>00728 <span class="keywordtype">void</span> KeyF2Pressed()
+<a name="l00728"></a><a class="code" href="vsdata_8cpp.html#ad536c404c057507365e5b73c311ac033">00728</a> <span class="keywordtype">void</span> <a class="code" href="vsdata_8cpp.html#ad536c404c057507365e5b73c311ac033">KeyF2Pressed</a>()
 <a name="l00729"></a>00729 {
-<a name="l00730"></a>00730    vsdata -&gt; EventUpdateColors();
-<a name="l00731"></a>00731    vsdata -&gt; PrepareLines();
+<a name="l00730"></a>00730    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; EventUpdateColors();
+<a name="l00731"></a>00731    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; PrepareLines();
 <a name="l00732"></a>00732    <span class="comment">// vsdata-&gt;CPPrepare();</span>
-<a name="l00733"></a>00733    SendExposeEvent();
+<a name="l00733"></a>00733    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00734"></a>00734 }
 <a name="l00735"></a>00735 
-<a name="l00736"></a>00736 <span class="keywordtype">void</span> KeykPressed()
+<a name="l00736"></a><a class="code" href="vsdata_8cpp.html#ab946f74d7a7f51a48f7a1e0209d5ca36">00736</a> <span class="keywordtype">void</span> <a class="code" href="vsdata_8cpp.html#ab946f74d7a7f51a48f7a1e0209d5ca36">KeykPressed</a>()
 <a name="l00737"></a>00737 {
-<a name="l00738"></a>00738    MatAlpha -= 0.05;
-<a name="l00739"></a>00739    <span class="keywordflow">if</span> (MatAlpha &lt; 0.0)
-<a name="l00740"></a>00740       MatAlpha = 0.0;
-<a name="l00741"></a>00741    vsdata -&gt; EventUpdateColors();
-<a name="l00742"></a>00742    SendExposeEvent();
+<a name="l00738"></a>00738    <a class="code" href="aux__vis_8cpp.html#a72ac4a8827898f543e22495d8be19b86">MatAlpha</a> -= 0.05;
+<a name="l00739"></a>00739    <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a72ac4a8827898f543e22495d8be19b86">MatAlpha</a> &lt; 0.0)
+<a name="l00740"></a>00740       <a class="code" href="aux__vis_8cpp.html#a72ac4a8827898f543e22495d8be19b86">MatAlpha</a> = 0.0;
+<a name="l00741"></a>00741    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; EventUpdateColors();
+<a name="l00742"></a>00742    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00743"></a>00743 }
 <a name="l00744"></a>00744 
-<a name="l00745"></a>00745 <span class="keywordtype">void</span> KeyKPressed()
+<a name="l00745"></a><a class="code" href="vsdata_8cpp.html#aa81231759a00bb3a28cdb34767eaef20">00745</a> <span class="keywordtype">void</span> <a class="code" href="vsdata_8cpp.html#aa81231759a00bb3a28cdb34767eaef20">KeyKPressed</a>()
 <a name="l00746"></a>00746 {
-<a name="l00747"></a>00747    MatAlpha += 0.05;
-<a name="l00748"></a>00748    <span class="keywordflow">if</span> (MatAlpha &gt; 1.0)
-<a name="l00749"></a>00749       MatAlpha = 1.0;
-<a name="l00750"></a>00750    vsdata -&gt; EventUpdateColors();
-<a name="l00751"></a>00751    SendExposeEvent();
+<a name="l00747"></a>00747    <a class="code" href="aux__vis_8cpp.html#a72ac4a8827898f543e22495d8be19b86">MatAlpha</a> += 0.05;
+<a name="l00748"></a>00748    <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a72ac4a8827898f543e22495d8be19b86">MatAlpha</a> &gt; 1.0)
+<a name="l00749"></a>00749       <a class="code" href="aux__vis_8cpp.html#a72ac4a8827898f543e22495d8be19b86">MatAlpha</a> = 1.0;
+<a name="l00750"></a>00750    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; EventUpdateColors();
+<a name="l00751"></a>00751    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00752"></a>00752 }
 <a name="l00753"></a>00753 
-<a name="l00754"></a>00754 <span class="keywordtype">void</span> KeyAPressed()
+<a name="l00754"></a><a class="code" href="vsdata_8cpp.html#a8182b3f635805200f4d35a15b1ab53af">00754</a> <span class="keywordtype">void</span> <a class="code" href="vsdata_8cpp.html#a8182b3f635805200f4d35a15b1ab53af">KeyAPressed</a>()
 <a name="l00755"></a>00755 {
 <a name="l00756"></a>00756    <span class="keyword">static</span> <span class="keywordtype">int</span> a = 0;
 <a name="l00757"></a>00757 
 <a name="l00758"></a>00758    a = 1-a;
 <a name="l00759"></a>00759 
 <a name="l00760"></a>00760    <span class="keywordflow">if</span> (a)
-<a name="l00761"></a>00761       Set_AntiAliasing();
+<a name="l00761"></a>00761       <a class="code" href="material_8cpp.html#acf281556f5f0ae4fc9d65e86d85a7bf2">Set_AntiAliasing</a>();
 <a name="l00762"></a>00762    <span class="keywordflow">else</span>
-<a name="l00763"></a>00763       Remove_AntiAliasing();
+<a name="l00763"></a>00763       <a class="code" href="material_8cpp.html#ac665ab71499ab2d0aef94b1c4e793877">Remove_AntiAliasing</a>();
 <a name="l00764"></a>00764 
-<a name="l00765"></a>00765    vsdata -&gt; EventUpdateColors();
-<a name="l00766"></a>00766    SendExposeEvent();
+<a name="l00765"></a>00765    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; EventUpdateColors();
+<a name="l00766"></a>00766    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00767"></a>00767 }
 <a name="l00768"></a>00768 
-<a name="l00769"></a>00769 <span class="keywordtype">void</span> KeyCommaPressed()
+<a name="l00769"></a><a class="code" href="vsdata_8cpp.html#a6a7643b496b73835e091503f0bd2832a">00769</a> <span class="keywordtype">void</span> <a class="code" href="vsdata_8cpp.html#a6a7643b496b73835e091503f0bd2832a">KeyCommaPressed</a>()
 <a name="l00770"></a>00770 {
-<a name="l00771"></a>00771    MatAlphaCenter -= 0.25;
-<a name="l00772"></a>00772    vsdata -&gt; EventUpdateColors();
-<a name="l00773"></a>00773    SendExposeEvent();
+<a name="l00771"></a>00771    <a class="code" href="aux__vis_8cpp.html#a5c7bebb0154ce9c8b21df349cce6386e">MatAlphaCenter</a> -= 0.25;
+<a name="l00772"></a>00772    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; EventUpdateColors();
+<a name="l00773"></a>00773    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00774"></a>00774 <span class="preprocessor">#ifdef GLVIS_DEBUG</span>
-<a name="l00775"></a>00775 <span class="preprocessor"></span>   cout &lt;&lt; <span class="stringliteral">&quot;MatAlphaCenter = &quot;</span> &lt;&lt; MatAlphaCenter &lt;&lt; endl;
+<a name="l00775"></a>00775 <span class="preprocessor"></span>   cout &lt;&lt; <span class="stringliteral">&quot;MatAlphaCenter = &quot;</span> &lt;&lt; <a class="code" href="aux__vis_8cpp.html#a5c7bebb0154ce9c8b21df349cce6386e">MatAlphaCenter</a> &lt;&lt; endl;
 <a name="l00776"></a>00776 <span class="preprocessor">#endif</span>
 <a name="l00777"></a>00777 <span class="preprocessor"></span>}
 <a name="l00778"></a>00778 
-<a name="l00779"></a>00779 <span class="keywordtype">void</span> KeyLessPressed()
+<a name="l00779"></a><a class="code" href="vsdata_8cpp.html#aefc12e3f89c6b94bedbee2a27acc90a5">00779</a> <span class="keywordtype">void</span> <a class="code" href="vsdata_8cpp.html#aefc12e3f89c6b94bedbee2a27acc90a5">KeyLessPressed</a>()
 <a name="l00780"></a>00780 {
-<a name="l00781"></a>00781    MatAlphaCenter += 0.25;
-<a name="l00782"></a>00782    vsdata -&gt; EventUpdateColors();
-<a name="l00783"></a>00783    SendExposeEvent();
+<a name="l00781"></a>00781    <a class="code" href="aux__vis_8cpp.html#a5c7bebb0154ce9c8b21df349cce6386e">MatAlphaCenter</a> += 0.25;
+<a name="l00782"></a>00782    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; EventUpdateColors();
+<a name="l00783"></a>00783    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00784"></a>00784 <span class="preprocessor">#ifdef GLVIS_DEBUG</span>
-<a name="l00785"></a>00785 <span class="preprocessor"></span>   cout &lt;&lt; <span class="stringliteral">&quot;MatAlphaCenter = &quot;</span> &lt;&lt; MatAlphaCenter &lt;&lt; endl;
+<a name="l00785"></a>00785 <span class="preprocessor"></span>   cout &lt;&lt; <span class="stringliteral">&quot;MatAlphaCenter = &quot;</span> &lt;&lt; <a class="code" href="aux__vis_8cpp.html#a5c7bebb0154ce9c8b21df349cce6386e">MatAlphaCenter</a> &lt;&lt; endl;
 <a name="l00786"></a>00786 <span class="preprocessor">#endif</span>
 <a name="l00787"></a>00787 <span class="preprocessor"></span>}
 <a name="l00788"></a>00788 
-<a name="l00789"></a>00789 <span class="keywordtype">void</span> KeyGravePressed()
+<a name="l00789"></a><a class="code" href="vsdata_8cpp.html#afbf1e8a83b264b80b12f5cdcff32cacb">00789</a> <span class="keywordtype">void</span> <a class="code" href="vsdata_8cpp.html#afbf1e8a83b264b80b12f5cdcff32cacb">KeyGravePressed</a>()
 <a name="l00790"></a>00790 {
-<a name="l00791"></a>00791    vsdata-&gt;ToggleRuler();
-<a name="l00792"></a>00792    SendExposeEvent();
+<a name="l00791"></a>00791    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a>-&gt;<a class="code" href="classVisualizationSceneScalarData.html#a8ab6c0cb2ec26cf976f76fff57817aad">ToggleRuler</a>();
+<a name="l00792"></a>00792    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00793"></a>00793 }
 <a name="l00794"></a>00794 
-<a name="l00795"></a>00795 <span class="keywordtype">void</span> KeyTildePressed()
+<a name="l00795"></a><a class="code" href="vsdata_8cpp.html#a978600fcf8801add39fd2ac38498c1bd">00795</a> <span class="keywordtype">void</span> <a class="code" href="vsdata_8cpp.html#a978600fcf8801add39fd2ac38498c1bd">KeyTildePressed</a>()
 <a name="l00796"></a>00796 {
-<a name="l00797"></a>00797    vsdata-&gt;RulerPosition();
-<a name="l00798"></a>00798    SendExposeEvent();
+<a name="l00797"></a>00797    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a>-&gt;<a class="code" href="classVisualizationSceneScalarData.html#a5838a35eacc78a7c5adc6e40f4587bae">RulerPosition</a>();
+<a name="l00798"></a>00798    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00799"></a>00799 }
 <a name="l00800"></a>00800 
-<a name="l00801"></a>00801 <span class="keywordtype">void</span> KeyToggleTexture()
+<a name="l00801"></a><a class="code" href="vsdata_8cpp.html#afe5f4406041df64158957416346a2b6f">00801</a> <span class="keywordtype">void</span> <a class="code" href="vsdata_8cpp.html#afe5f4406041df64158957416346a2b6f">KeyToggleTexture</a>()
 <a name="l00802"></a>00802 {
-<a name="l00803"></a>00803    vsdata-&gt;ToggleTexture();
-<a name="l00804"></a>00804    SendExposeEvent();
+<a name="l00803"></a>00803    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a>-&gt;<a class="code" href="classVisualizationSceneScalarData.html#aca67b30cbfae8b66021751e8331602ab">ToggleTexture</a>();
+<a name="l00804"></a>00804    <a class="code" href="aux__vis_8cpp.html#ab3307317ba81a565a7b6ff959e5dbb47" title="Send expose event. In our case MyReshape is executed and Draw after it.">SendExposeEvent</a>();
 <a name="l00805"></a>00805 }
 <a name="l00806"></a>00806 
-<a name="l00807"></a>00807 <span class="keywordtype">void</span> VisualizationSceneScalarData::ToggleRuler()
+<a name="l00807"></a><a class="code" href="classVisualizationSceneScalarData.html#a8ab6c0cb2ec26cf976f76fff57817aad">00807</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneScalarData.html#a8ab6c0cb2ec26cf976f76fff57817aad">VisualizationSceneScalarData::ToggleRuler</a>()
 <a name="l00808"></a>00808 {
 <a name="l00809"></a>00809    ruler_on = (ruler_on + 1) % 3;
 <a name="l00810"></a>00810 }
 <a name="l00811"></a>00811 
-<a name="l00812"></a>00812 <span class="keywordtype">void</span> VisualizationSceneScalarData::RulerPosition()
+<a name="l00812"></a><a class="code" href="classVisualizationSceneScalarData.html#a5838a35eacc78a7c5adc6e40f4587bae">00812</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneScalarData.html#a5838a35eacc78a7c5adc6e40f4587bae">VisualizationSceneScalarData::RulerPosition</a>()
 <a name="l00813"></a>00813 {
 <a name="l00814"></a>00814    cout &lt;&lt; <span class="stringliteral">&quot;Current ruler position: (&quot;</span> &lt;&lt; ruler_x &lt;&lt; <span class="charliteral">&#39;,&#39;</span>
 <a name="l00815"></a>00815         &lt;&lt; ruler_y &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; ruler_z &lt;&lt; <span class="stringliteral">&quot;)\n&quot;</span>;
@@ -892,7 +893,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00832"></a>00832         &lt;&lt; ruler_y &lt;&lt; <span class="charliteral">&#39;,&#39;</span> &lt;&lt; ruler_z &lt;&lt; <span class="stringliteral">&quot;)&quot;</span> &lt;&lt; endl;
 <a name="l00833"></a>00833 }
 <a name="l00834"></a>00834 
-<a name="l00835"></a>00835 <span class="keywordtype">void</span> VisualizationSceneScalarData::DrawRuler()
+<a name="l00835"></a><a class="code" href="classVisualizationSceneScalarData.html#a8a29210bfe53784408c2ee70526c6907">00835</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneScalarData.html#a8a29210bfe53784408c2ee70526c6907">VisualizationSceneScalarData::DrawRuler</a>()
 <a name="l00836"></a>00836 {
 <a name="l00837"></a>00837    <span class="keywordflow">if</span> (ruler_on)
 <a name="l00838"></a>00838    {
@@ -928,7 +929,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00868"></a>00868          glVertex3d(ruler_x, y[0], z[1]);
 <a name="l00869"></a>00869          glEnd();
 <a name="l00870"></a>00870 
-<a name="l00871"></a>00871          Set_Material();
+<a name="l00871"></a>00871          <a class="code" href="material_8cpp.html#a724c876e4780d698e7e9ed353709bd79">Set_Material</a>();
 <a name="l00872"></a>00872          <span class="keywordflow">if</span> (light)
 <a name="l00873"></a>00873             glEnable(GL_LIGHTING);
 <a name="l00874"></a>00874          glBegin(GL_QUADS);
@@ -955,30 +956,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00895"></a>00895          glVertex3d(ruler_x, y[0], z[1]);
 <a name="l00896"></a>00896          glEnd();
 <a name="l00897"></a>00897          glDisable(GL_LIGHTING);
-<a name="l00898"></a>00898          Set_Black_Material();
+<a name="l00898"></a>00898          <a class="code" href="material_8cpp.html#a2987eff3b35b8ef824bad012fc2e8c6f">Set_Black_Material</a>();
 <a name="l00899"></a>00899       }
 <a name="l00900"></a>00900    }
 <a name="l00901"></a>00901 }
 <a name="l00902"></a>00902 
-<a name="l00903"></a>00903 <span class="keywordtype">void</span> VisualizationSceneScalarData::ToggleTexture()
+<a name="l00903"></a><a class="code" href="classVisualizationSceneScalarData.html#aca67b30cbfae8b66021751e8331602ab">00903</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneScalarData.html#aca67b30cbfae8b66021751e8331602ab">VisualizationSceneScalarData::ToggleTexture</a>()
 <a name="l00904"></a>00904 {
-<a name="l00905"></a>00905    SetUseTexture((GetUseTexture()+1)%3);
-<a name="l00906"></a>00906    <span class="keywordflow">if</span> (GetUseTexture() != 2)
+<a name="l00905"></a>00905    <a class="code" href="aux__vis_8cpp.html#a6ee835cc11f6de1e0f5707cedfc109f2">SetUseTexture</a>((<a class="code" href="aux__vis_8cpp.html#a50b61b3e9d738825d19528a967f30efd">GetUseTexture</a>()+1)%3);
+<a name="l00906"></a>00906    <span class="keywordflow">if</span> (<a class="code" href="aux__vis_8cpp.html#a50b61b3e9d738825d19528a967f30efd">GetUseTexture</a>() != 2)
 <a name="l00907"></a>00907       EventUpdateColors();
 <a name="l00908"></a>00908 }
 <a name="l00909"></a>00909 
-<a name="l00910"></a>00910 VisualizationSceneScalarData::VisualizationSceneScalarData(
+<a name="l00910"></a><a class="code" href="classVisualizationSceneScalarData.html#a66aa536fb0453f337dca2e21071b08cf">00910</a> <a class="code" href="classVisualizationSceneScalarData.html#a6f4a8f0c754486a088c5f9a080f995f7">VisualizationSceneScalarData::VisualizationSceneScalarData</a>(
 <a name="l00911"></a>00911    Mesh &amp; m, Vector &amp; s)
 <a name="l00912"></a>00912 {
-<a name="l00913"></a>00913    mesh = &amp;m;
-<a name="l00914"></a>00914    sol  = &amp;s;
+<a name="l00913"></a>00913    <a class="code" href="glvis_8cpp.html#a6e08f89b32254fb4b129720418e7c6ea">mesh</a> = &amp;m;
+<a name="l00914"></a>00914    <a class="code" href="glvis_8cpp.html#abdff2ecf770abe7e9e10d3ac91efecc2">sol</a>  = &amp;s;
 <a name="l00915"></a>00915 
 <a name="l00916"></a>00916    Init();
 <a name="l00917"></a>00917 }
 <a name="l00918"></a>00918 
-<a name="l00919"></a>00919 <span class="keywordtype">void</span> VisualizationSceneScalarData::Init()
+<a name="l00919"></a><a class="code" href="classVisualizationSceneScalarData.html#a66507b37651627ac26a283b68c0508a2">00919</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneScalarData.html#a66507b37651627ac26a283b68c0508a2">VisualizationSceneScalarData::Init</a>()
 <a name="l00920"></a>00920 {
-<a name="l00921"></a>00921    vsdata = <span class="keyword">this</span>;
+<a name="l00921"></a>00921    <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> = <span class="keyword">this</span>;
 <a name="l00922"></a>00922 
 <a name="l00923"></a>00923    arrow_type = arrow_scaling_type = 0;
 <a name="l00924"></a>00924    scaling = 0;
@@ -994,48 +995,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00934"></a>00934    {
 <a name="l00935"></a>00935       <span class="comment">// init = 1;</span>
 <a name="l00936"></a>00936 
-<a name="l00937"></a>00937       auxKeyFunc (AUX_l, KeylPressed);
-<a name="l00938"></a>00938       auxKeyFunc (AUX_L, KeyLPressed);
+<a name="l00937"></a>00937       auxKeyFunc (AUX_l, <a class="code" href="vsdata_8cpp.html#ab018c4ed8f503240acd6d85bec5cb63a">KeylPressed</a>);
+<a name="l00938"></a>00938       auxKeyFunc (AUX_L, <a class="code" href="vsdata_8cpp.html#a8a54ca8f26c5cff5e18536bf3633c31a">KeyLPressed</a>);
 <a name="l00939"></a>00939 
-<a name="l00940"></a>00940       auxKeyFunc (AUX_s, KeySPressed);
+<a name="l00940"></a>00940       auxKeyFunc (AUX_s, <a class="code" href="vsdata_8cpp.html#ab7e1ab14bd9d7ac3ec274841422ea648">KeySPressed</a>);
 <a name="l00941"></a>00941 
-<a name="l00942"></a>00942       auxKeyFunc (AUX_a, KeyaPressed);
-<a name="l00943"></a>00943       auxKeyFunc (AUX_A, KeyAPressed);
+<a name="l00942"></a>00942       auxKeyFunc (AUX_a, <a class="code" href="vsdata_8cpp.html#a79530ffb003de88a056d6264dde734ce">KeyaPressed</a>);
+<a name="l00943"></a>00943       auxKeyFunc (AUX_A, <a class="code" href="vsdata_8cpp.html#a8182b3f635805200f4d35a15b1ab53af">KeyAPressed</a>);
 <a name="l00944"></a>00944 
-<a name="l00945"></a>00945       auxKeyFunc (AUX_r, KeyrPressed);
-<a name="l00946"></a>00946       auxKeyFunc (AUX_R, KeyRPressed);
+<a name="l00945"></a>00945       auxKeyFunc (AUX_r, <a class="code" href="vsdata_8cpp.html#ac8f435ef90d7e017abf1e298a97ebf89">KeyrPressed</a>);
+<a name="l00946"></a>00946       auxKeyFunc (AUX_R, <a class="code" href="vsdata_8cpp.html#a77d1a657c99247fcf752c18dda747905">KeyRPressed</a>);
 <a name="l00947"></a>00947 
-<a name="l00948"></a>00948       auxKeyFunc (AUX_p, KeyPPressed);
+<a name="l00948"></a>00948       auxKeyFunc (AUX_p, <a class="code" href="vsdata_8cpp.html#a6693c68fada1be299a6c11bc839c3cac">KeyPPressed</a>);
 <a name="l00949"></a>00949 
 <a name="l00950"></a>00950       auxKeyFunc (XK_F5, KeyF5Pressed);
-<a name="l00951"></a>00951       auxKeyFunc (XK_F6, KeyF6Pressed);
-<a name="l00952"></a>00952       auxKeyFunc (XK_F7, KeyF7Pressed);
+<a name="l00951"></a>00951       auxKeyFunc (XK_F6, <a class="code" href="vsdata_8cpp.html#a8f0fdcdcda8e33eac56487136a2dc4ee">KeyF6Pressed</a>);
+<a name="l00952"></a>00952       auxKeyFunc (XK_F7, <a class="code" href="vsdata_8cpp.html#a7235aa6f2b186cba365effba15fa653a">KeyF7Pressed</a>);
 <a name="l00953"></a>00953 
-<a name="l00954"></a>00954       auxKeyFunc (XK_backslash, KeyBackslashPressed);
-<a name="l00955"></a>00955       auxKeyFunc (AUX_t, KeyTPressed);
-<a name="l00956"></a>00956       auxKeyFunc (AUX_T, KeyTPressed);
+<a name="l00954"></a>00954       auxKeyFunc (XK_backslash, <a class="code" href="vsdata_8cpp.html#ade38cc706d78d7efc1ebfa3819502851">KeyBackslashPressed</a>);
+<a name="l00955"></a>00955       auxKeyFunc (AUX_t, <a class="code" href="vsdata_8cpp.html#ad88d3d4c7ddade159470b1539225b79a">KeyTPressed</a>);
+<a name="l00956"></a>00956       auxKeyFunc (AUX_T, <a class="code" href="vsdata_8cpp.html#ad88d3d4c7ddade159470b1539225b79a">KeyTPressed</a>);
 <a name="l00957"></a>00957 
-<a name="l00958"></a>00958       auxKeyFunc (AUX_g, KeyGPressed);
-<a name="l00959"></a>00959       auxKeyFunc (AUX_G, KeyGPressed);
+<a name="l00958"></a>00958       auxKeyFunc (AUX_g, <a class="code" href="vsdata_8cpp.html#ad10133cd27cf22d86dcf6829c39195f0">KeyGPressed</a>);
+<a name="l00959"></a>00959       auxKeyFunc (AUX_G, <a class="code" href="vsdata_8cpp.html#ad10133cd27cf22d86dcf6829c39195f0">KeyGPressed</a>);
 <a name="l00960"></a>00960 
-<a name="l00961"></a>00961       auxKeyFunc (AUX_c, KeyCPressed);
-<a name="l00962"></a>00962       auxKeyFunc (AUX_C, KeyCPressed);
+<a name="l00961"></a>00961       auxKeyFunc (AUX_c, <a class="code" href="vsdata_8cpp.html#a137f0ac1c7dfb280b37f8e5bf133f439">KeyCPressed</a>);
+<a name="l00962"></a>00962       auxKeyFunc (AUX_C, <a class="code" href="vsdata_8cpp.html#a137f0ac1c7dfb280b37f8e5bf133f439">KeyCPressed</a>);
 <a name="l00963"></a>00963 
-<a name="l00964"></a>00964       auxKeyFunc (AUX_k, KeykPressed);
-<a name="l00965"></a>00965       auxKeyFunc (AUX_K, KeyKPressed);
+<a name="l00964"></a>00964       auxKeyFunc (AUX_k, <a class="code" href="vsdata_8cpp.html#ab946f74d7a7f51a48f7a1e0209d5ca36">KeykPressed</a>);
+<a name="l00965"></a>00965       auxKeyFunc (AUX_K, <a class="code" href="vsdata_8cpp.html#aa81231759a00bb3a28cdb34767eaef20">KeyKPressed</a>);
 <a name="l00966"></a>00966 
-<a name="l00967"></a>00967       auxKeyFunc (XK_F1, KeyF1Pressed);
-<a name="l00968"></a>00968       auxKeyFunc (XK_F2, KeyF2Pressed);
+<a name="l00967"></a>00967       auxKeyFunc (XK_F1, <a class="code" href="vsdata_8cpp.html#a3e9521339d5c156be1e0a2ec774c9686">KeyF1Pressed</a>);
+<a name="l00968"></a>00968       auxKeyFunc (XK_F2, <a class="code" href="vsdata_8cpp.html#ad536c404c057507365e5b73c311ac033">KeyF2Pressed</a>);
 <a name="l00969"></a>00969 
-<a name="l00970"></a>00970       auxKeyFunc (XK_comma, KeyCommaPressed);
-<a name="l00971"></a>00971       auxKeyFunc (XK_less, KeyLessPressed);
-<a name="l00972"></a>00972       auxKeyFunc (XK_grave, KeyGravePressed);
-<a name="l00973"></a>00973       auxKeyFunc (XK_asciitilde, KeyTildePressed);
+<a name="l00970"></a>00970       auxKeyFunc (XK_comma, <a class="code" href="vsdata_8cpp.html#a6a7643b496b73835e091503f0bd2832a">KeyCommaPressed</a>);
+<a name="l00971"></a>00971       auxKeyFunc (XK_less, <a class="code" href="vsdata_8cpp.html#aefc12e3f89c6b94bedbee2a27acc90a5">KeyLessPressed</a>);
+<a name="l00972"></a>00972       auxKeyFunc (XK_grave, <a class="code" href="vsdata_8cpp.html#afbf1e8a83b264b80b12f5cdcff32cacb">KeyGravePressed</a>);
+<a name="l00973"></a>00973       auxKeyFunc (XK_asciitilde, <a class="code" href="vsdata_8cpp.html#a978600fcf8801add39fd2ac38498c1bd">KeyTildePressed</a>);
 <a name="l00974"></a>00974 
-<a name="l00975"></a>00975       auxKeyFunc (XK_exclam, KeyToggleTexture);
+<a name="l00975"></a>00975       auxKeyFunc (XK_exclam, <a class="code" href="vsdata_8cpp.html#afe5f4406041df64158957416346a2b6f">KeyToggleTexture</a>);
 <a name="l00976"></a>00976    }
 <a name="l00977"></a>00977 
-<a name="l00978"></a>00978    Set_Light();
+<a name="l00978"></a>00978    <a class="code" href="material_8cpp.html#a57a9b2584097b2eb71a3f1b997b7a6f8">Set_Light</a>();
 <a name="l00979"></a>00979 
 <a name="l00980"></a>00980    glEnable (GL_COLOR_MATERIAL);
 <a name="l00981"></a>00981    glShadeModel (GL_SMOOTH);
@@ -1066,13 +1067,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01006"></a>01006    PrepareAxes();
 <a name="l01007"></a>01007 }
 <a name="l01008"></a>01008 
-<a name="l01009"></a>01009 VisualizationSceneScalarData::~VisualizationSceneScalarData()
+<a name="l01009"></a><a class="code" href="classVisualizationSceneScalarData.html#a9494feec91ba6f65cc56eeb3ca176db2">01009</a> <a class="code" href="classVisualizationSceneScalarData.html#a9494feec91ba6f65cc56eeb3ca176db2">VisualizationSceneScalarData::~VisualizationSceneScalarData</a>()
 <a name="l01010"></a>01010 {
 <a name="l01011"></a>01011    glDeleteLists (axeslist, 1);
 <a name="l01012"></a>01012    <span class="keyword">delete</span> CuttingPlane;
 <a name="l01013"></a>01013 }
 <a name="l01014"></a>01014 
-<a name="l01015"></a>01015 <span class="keywordtype">void</span> VisualizationSceneScalarData::SetNewScalingFromBox()
+<a name="l01015"></a><a class="code" href="classVisualizationSceneScalarData.html#a274bcef737b60b8b2de6bd00a3679e64">01015</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneScalarData.html#a274bcef737b60b8b2de6bd00a3679e64">VisualizationSceneScalarData::SetNewScalingFromBox</a>()
 <a name="l01016"></a>01016 {
 <a name="l01017"></a>01017    <span class="comment">// double eps = 1e-12;</span>
 <a name="l01018"></a>01018    <span class="keywordtype">double</span> eps = 0.0;
@@ -1104,7 +1105,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01044"></a>01044 }
 <a name="l01045"></a>01045 
 <a name="l01046"></a>01046 
-<a name="l01047"></a>01047 <span class="keywordtype">void</span> VisualizationSceneScalarData::SetValueRange(<span class="keywordtype">double</span> min, <span class="keywordtype">double</span> max)
+<a name="l01047"></a><a class="code" href="classVisualizationSceneScalarData.html#a03d6de1181434b04da9183920a2eb232">01047</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneScalarData.html#a03d6de1181434b04da9183920a2eb232">VisualizationSceneScalarData::SetValueRange</a>(<span class="keywordtype">double</span> min, <span class="keywordtype">double</span> max)
 <a name="l01048"></a>01048 {
 <a name="l01049"></a>01049    <span class="comment">// if (max &lt; min)</span>
 <a name="l01050"></a>01050    <span class="comment">//   return;</span>
@@ -1116,18 +1117,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01056"></a>01056    <span class="comment">// EventUpdateColors();</span>
 <a name="l01057"></a>01057 }
 <a name="l01058"></a>01058 
-<a name="l01059"></a>01059 <span class="keywordtype">void</span> VisualizationSceneScalarData::ResetScaling()
+<a name="l01059"></a><a class="code" href="classVisualizationSceneScalarData.html#a17e7ea7b3d428614c5fb753f12272431">01059</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneScalarData.html#a17e7ea7b3d428614c5fb753f12272431">VisualizationSceneScalarData::ResetScaling</a>()
 <a name="l01060"></a>01060 {
 <a name="l01061"></a>01061    SetNewScalingFromBox();
 <a name="l01062"></a>01062 }
 <a name="l01063"></a>01063 
-<a name="l01064"></a>01064 <span class="keywordtype">void</span> VisualizationSceneScalarData::CenterObject()
+<a name="l01064"></a><a class="code" href="classVisualizationSceneScalarData.html#a22ee8f7aeb3703de60a68c56bc8d7b4c">01064</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneScalarData.html#a22ee8f7aeb3703de60a68c56bc8d7b4c">VisualizationSceneScalarData::CenterObject</a>()
 <a name="l01065"></a>01065 {
 <a name="l01066"></a>01066    glMatrixMode (GL_MODELVIEW);
 <a name="l01067"></a>01067    glLoadIdentity();
 <a name="l01068"></a>01068    glGetDoublev (GL_MODELVIEW_MATRIX, translmat);
 <a name="l01069"></a>01069 
-<a name="l01070"></a>01070    Set_Light();
+<a name="l01070"></a>01070    <a class="code" href="material_8cpp.html#a57a9b2584097b2eb71a3f1b997b7a6f8">Set_Light</a>();
 <a name="l01071"></a>01071 
 <a name="l01072"></a>01072    <span class="comment">// scaling = 1;</span>
 <a name="l01073"></a>01073    <span class="comment">// SetNewScalingFromBox();</span>
@@ -1137,16 +1138,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01077"></a>01077    glGetDoublev (GL_MODELVIEW_MATRIX, rotmat);
 <a name="l01078"></a>01078 }
 <a name="l01079"></a>01079 
-<a name="l01080"></a>01080 <span class="keywordtype">void</span> VisualizationSceneScalarData::CenterObject2D()
+<a name="l01080"></a><a class="code" href="classVisualizationSceneScalarData.html#a52913130e465ec83241efdad835d6e33">01080</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneScalarData.html#a52913130e465ec83241efdad835d6e33">VisualizationSceneScalarData::CenterObject2D</a>()
 <a name="l01081"></a>01081 {
 <a name="l01082"></a>01082    glMatrixMode (GL_MODELVIEW);
 <a name="l01083"></a>01083    glLoadIdentity();
 <a name="l01084"></a>01084    glGetDoublev (GL_MODELVIEW_MATRIX, translmat);
-<a name="l01085"></a>01085    Set_Light();
+<a name="l01085"></a>01085    <a class="code" href="material_8cpp.html#a57a9b2584097b2eb71a3f1b997b7a6f8">Set_Light</a>();
 <a name="l01086"></a>01086    glGetDoublev (GL_MODELVIEW_MATRIX, rotmat);
 <a name="l01087"></a>01087 }
 <a name="l01088"></a>01088 
-<a name="l01089"></a>01089 <span class="keywordtype">void</span> VisualizationSceneScalarData::PrepareAxes()
+<a name="l01089"></a><a class="code" href="classVisualizationSceneScalarData.html#aeb82b322234efaae4817098aaa63efc5">01089</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneScalarData.html#aeb82b322234efaae4817098aaa63efc5">VisualizationSceneScalarData::PrepareAxes</a>()
 <a name="l01090"></a>01090 {
 <a name="l01091"></a>01091    glNewList (axeslist, GL_COMPILE);
 <a name="l01092"></a>01092 
@@ -1185,7 +1186,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01125"></a>01125    <span class="keywordflow">if</span> (drawaxes == 1)
 <a name="l01126"></a>01126    {
 <a name="l01127"></a>01127       glPushAttrib (GL_LIST_BIT);
-<a name="l01128"></a>01128       <span class="keyword">extern</span> GLuint fontbase;
+<a name="l01128"></a>01128       <span class="keyword">extern</span> GLuint <a class="code" href="aux__vis_8cpp.html#a2efc891ed1477d4076a461dce341ed0d">fontbase</a>;
 <a name="l01129"></a>01129       glListBase (fontbase);
 <a name="l01130"></a>01130 
 <a name="l01131"></a>01131       ostringstream buf;
@@ -1204,7 +1205,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01144"></a>01144    glEndList();
 <a name="l01145"></a>01145 }
 <a name="l01146"></a>01146 
-<a name="l01147"></a>01147 <span class="keywordtype">void</span> VisualizationSceneScalarData::DrawPolygonLevelLines(
+<a name="l01147"></a><a class="code" href="classVisualizationSceneScalarData.html#a767473ef10665eae5d0115e619d2469c">01147</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneScalarData.html#a767473ef10665eae5d0115e619d2469c">VisualizationSceneScalarData::DrawPolygonLevelLines</a>(
 <a name="l01148"></a>01148    <span class="keywordtype">double</span> * point, <span class="keywordtype">int</span> n, Array&lt;double&gt; &amp; level)
 <a name="l01149"></a>01149 {
 <a name="l01150"></a>01150    <span class="keywordtype">int</span> l,k,k1;
@@ -1239,7 +1240,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01179"></a>01179    }
 <a name="l01180"></a>01180 }
 <a name="l01181"></a>01181 
-<a name="l01182"></a>01182 <span class="keywordtype">void</span> VisualizationSceneScalarData::SetLevelLines (
+<a name="l01182"></a><a class="code" href="classVisualizationSceneScalarData.html#a2769538201e6e91b2dee68464cc92916">01182</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneScalarData.html#a2769538201e6e91b2dee68464cc92916">VisualizationSceneScalarData::SetLevelLines</a> (
 <a name="l01183"></a>01183    <span class="keywordtype">double</span> min, <span class="keywordtype">double</span> max, <span class="keywordtype">int</span> n, <span class="keywordtype">int</span> adj)
 <a name="l01184"></a>01184 {
 <a name="l01185"></a>01185    <span class="keywordtype">int</span> i;
@@ -1272,12 +1273,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01212"></a>01212    }
 <a name="l01213"></a>01213 }
 <a name="l01214"></a>01214 
-<a name="l01215"></a>01215 <span class="keyword">const</span> <span class="keywordtype">char</span> *strings_on_off[] = { <span class="stringliteral">&quot;off&quot;</span>, <span class="stringliteral">&quot;on&quot;</span> };
+<a name="l01215"></a><a class="code" href="vsdata_8cpp.html#a30aac49eff7f2974c2f10911fb38d032">01215</a> <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="vsdata_8cpp.html#a30aac49eff7f2974c2f10911fb38d032">strings_on_off</a>[] = { <span class="stringliteral">&quot;off&quot;</span>, <span class="stringliteral">&quot;on&quot;</span> };
 <a name="l01216"></a>01216 
-<a name="l01217"></a>01217 <span class="keywordtype">void</span> VisualizationSceneScalarData::PrintState()
+<a name="l01217"></a><a class="code" href="classVisualizationSceneScalarData.html#a3610df4566d8785ecbf49946e9c633f6">01217</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneScalarData.html#a3610df4566d8785ecbf49946e9c633f6">VisualizationSceneScalarData::PrintState</a>()
 <a name="l01218"></a>01218 {
-<a name="l01219"></a>01219    cout &lt;&lt; <span class="stringliteral">&quot;\nlight &quot;</span> &lt;&lt; strings_on_off[light ? 1 : 0]
-<a name="l01220"></a>01220         &lt;&lt; <span class="stringliteral">&quot;\nperspective &quot;</span> &lt;&lt; strings_on_off[OrthogonalProjection ? 0 : 1]
+<a name="l01219"></a>01219    cout &lt;&lt; <span class="stringliteral">&quot;\nlight &quot;</span> &lt;&lt; <a class="code" href="vsdata_8cpp.html#a30aac49eff7f2974c2f10911fb38d032">strings_on_off</a>[light ? 1 : 0]
+<a name="l01220"></a>01220         &lt;&lt; <span class="stringliteral">&quot;\nperspective &quot;</span> &lt;&lt; <a class="code" href="vsdata_8cpp.html#a30aac49eff7f2974c2f10911fb38d032">strings_on_off</a>[OrthogonalProjection ? 0 : 1]
 <a name="l01221"></a>01221         &lt;&lt; <span class="stringliteral">&quot;\nviewcenter &quot;</span> &lt;&lt; ViewCenterX &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; ViewCenterY
 <a name="l01222"></a>01222         &lt;&lt; <span class="stringliteral">&quot;\nzoom &quot;</span> &lt;&lt; (OrthogonalProjection ? ViewScale :
 <a name="l01223"></a>01223                          tan(M_PI / 8.) / tan(ViewAngle * (M_PI / 360.0)))
@@ -1288,7 +1289,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01228"></a><a class="code" href="classVisualizationSceneScalarData.html#af7f7e22244011fa9ed3cd1bf27eba837">01228</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneScalarData.html#af7f7e22244011fa9ed3cd1bf27eba837" title="Shrink the set of points towards attributes centers of gravity.">VisualizationSceneScalarData::ShrinkPoints</a>(DenseMatrix &amp;pointmat,
 <a name="l01229"></a>01229                                                 <span class="keywordtype">int</span> i, <span class="keywordtype">int</span> fn, <span class="keywordtype">int</span> fo)
 <a name="l01230"></a>01230 {
-<a name="l01231"></a>01231    <span class="keywordtype">int</span> dim = mesh-&gt;Dimension();
+<a name="l01231"></a>01231    <span class="keywordtype">int</span> dim = <a class="code" href="glvis_8cpp.html#a6e08f89b32254fb4b129720418e7c6ea">mesh</a>-&gt;Dimension();
 <a name="l01232"></a>01232 
 <a name="l01233"></a>01233    <span class="keywordflow">if</span> (shrink != 1.0)
 <a name="l01234"></a>01234    {
@@ -1313,7 +1314,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01253"></a>01253       }
 <a name="l01254"></a>01254       <span class="keywordflow">else</span>
 <a name="l01255"></a>01255       {
-<a name="l01256"></a>01256          <span class="keywordtype">int</span> attr = mesh-&gt;GetBdrAttribute(i);
+<a name="l01256"></a>01256          <span class="keywordtype">int</span> attr = <a class="code" href="glvis_8cpp.html#a6e08f89b32254fb4b129720418e7c6ea">mesh</a>-&gt;GetBdrAttribute(i);
 <a name="l01257"></a>01257          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; pointmat.Width(); k++)
 <a name="l01258"></a>01258             <span class="keywordflow">for</span> (<span class="keywordtype">int</span> d = 0; d &lt; dim; d++)
 <a name="l01259"></a>01259                pointmat(d,k) = shrink*pointmat(d,k) + (1-shrink)*bdrc(d,attr-1);
@@ -1324,14 +1325,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01264"></a>01264    {
 <a name="l01265"></a>01265       <span class="keywordtype">int</span> attr, elem1, elem2;
 <a name="l01266"></a>01266       <span class="keywordflow">if</span> (dim == 2)
-<a name="l01267"></a>01267          attr = mesh-&gt;GetAttribute(i);
+<a name="l01267"></a>01267          attr = <a class="code" href="glvis_8cpp.html#a6e08f89b32254fb4b129720418e7c6ea">mesh</a>-&gt;GetAttribute(i);
 <a name="l01268"></a>01268       <span class="keywordflow">else</span>
 <a name="l01269"></a>01269       {
-<a name="l01270"></a>01270          mesh-&gt;GetFaceElements(fn, &amp;elem1, &amp;elem2);
+<a name="l01270"></a>01270          <a class="code" href="glvis_8cpp.html#a6e08f89b32254fb4b129720418e7c6ea">mesh</a>-&gt;GetFaceElements(fn, &amp;elem1, &amp;elem2);
 <a name="l01271"></a>01271          <span class="keywordflow">if</span> (fo % 2 == 0)
-<a name="l01272"></a>01272             attr = mesh-&gt;GetAttribute(elem1);
+<a name="l01272"></a>01272             attr = <a class="code" href="glvis_8cpp.html#a6e08f89b32254fb4b129720418e7c6ea">mesh</a>-&gt;GetAttribute(elem1);
 <a name="l01273"></a>01273          <span class="keywordflow">else</span>
-<a name="l01274"></a>01274             attr = mesh-&gt;GetAttribute(elem2);
+<a name="l01274"></a>01274             attr = <a class="code" href="glvis_8cpp.html#a6e08f89b32254fb4b129720418e7c6ea">mesh</a>-&gt;GetAttribute(elem2);
 <a name="l01275"></a>01275       }
 <a name="l01276"></a>01276 
 <a name="l01277"></a>01277       <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; pointmat.Width(); k++)
@@ -1343,23 +1344,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01283"></a><a class="code" href="classVisualizationSceneScalarData.html#a530300c777cef2be5cbc4e5eb194a8dd">01283</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneScalarData.html#a530300c777cef2be5cbc4e5eb194a8dd" title="Compute the center of gravity for each boundary attribute.">VisualizationSceneScalarData::ComputeBdrAttrCenter</a>()
 <a name="l01284"></a>01284 {
 <a name="l01285"></a>01285    DenseMatrix pointmat;
-<a name="l01286"></a>01286    Vector nbdrc(mesh-&gt;bdr_attributes.Max());
-<a name="l01287"></a>01287    <span class="keywordtype">int</span> dim = mesh-&gt;Dimension();
+<a name="l01286"></a>01286    Vector nbdrc(<a class="code" href="glvis_8cpp.html#a6e08f89b32254fb4b129720418e7c6ea">mesh</a>-&gt;bdr_attributes.Max());
+<a name="l01287"></a>01287    <span class="keywordtype">int</span> dim = <a class="code" href="glvis_8cpp.html#a6e08f89b32254fb4b129720418e7c6ea">mesh</a>-&gt;Dimension();
 <a name="l01288"></a>01288 
-<a name="l01289"></a>01289    bdrc.SetSize(dim,mesh-&gt;bdr_attributes.Max());
+<a name="l01289"></a>01289    bdrc.SetSize(dim,<a class="code" href="glvis_8cpp.html#a6e08f89b32254fb4b129720418e7c6ea">mesh</a>-&gt;bdr_attributes.Max());
 <a name="l01290"></a>01290    bdrc = 0.0;
 <a name="l01291"></a>01291    nbdrc = 0.0;
 <a name="l01292"></a>01292 
-<a name="l01293"></a>01293    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; mesh -&gt; GetNBE(); i++)
+<a name="l01293"></a>01293    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="glvis_8cpp.html#a6e08f89b32254fb4b129720418e7c6ea">mesh</a> -&gt; GetNBE(); i++)
 <a name="l01294"></a>01294    {
-<a name="l01295"></a>01295       mesh-&gt;GetBdrPointMatrix(i, pointmat);
-<a name="l01296"></a>01296       nbdrc(mesh-&gt;GetBdrAttribute(i)-1) += pointmat.Width();
+<a name="l01295"></a>01295       <a class="code" href="glvis_8cpp.html#a6e08f89b32254fb4b129720418e7c6ea">mesh</a>-&gt;GetBdrPointMatrix(i, pointmat);
+<a name="l01296"></a>01296       nbdrc(<a class="code" href="glvis_8cpp.html#a6e08f89b32254fb4b129720418e7c6ea">mesh</a>-&gt;GetBdrAttribute(i)-1) += pointmat.Width();
 <a name="l01297"></a>01297       <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; pointmat.Width(); k++)
 <a name="l01298"></a>01298          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> d = 0; d &lt; dim; d++)
-<a name="l01299"></a>01299             bdrc(d,mesh-&gt;GetBdrAttribute(i)-1) += pointmat(d,k);
+<a name="l01299"></a>01299             bdrc(d,<a class="code" href="glvis_8cpp.html#a6e08f89b32254fb4b129720418e7c6ea">mesh</a>-&gt;GetBdrAttribute(i)-1) += pointmat(d,k);
 <a name="l01300"></a>01300    }
 <a name="l01301"></a>01301 
-<a name="l01302"></a>01302    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; mesh-&gt;bdr_attributes.Max(); i++)
+<a name="l01302"></a>01302    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="glvis_8cpp.html#a6e08f89b32254fb4b129720418e7c6ea">mesh</a>-&gt;bdr_attributes.Max(); i++)
 <a name="l01303"></a>01303       <span class="keywordflow">if</span> (nbdrc(i) != 0)
 <a name="l01304"></a>01304          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> d = 0; d &lt; dim; d++)
 <a name="l01305"></a>01305             bdrc(d,i) /= nbdrc(i);
@@ -1368,30 +1369,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01308"></a><a class="code" href="classVisualizationSceneScalarData.html#a5d8ef391820d6dba8d22c52c4366c8d0">01308</a> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneScalarData.html#a5d8ef391820d6dba8d22c52c4366c8d0" title="Compute the center of gravity for each element attribute.">VisualizationSceneScalarData::ComputeElemAttrCenter</a>()
 <a name="l01309"></a>01309 {
 <a name="l01310"></a>01310    DenseMatrix pointmat;
-<a name="l01311"></a>01311    Vector nmatc(mesh-&gt;attributes.Max());
-<a name="l01312"></a>01312    <span class="keywordtype">int</span> dim = mesh-&gt;Dimension();
+<a name="l01311"></a>01311    Vector nmatc(<a class="code" href="glvis_8cpp.html#a6e08f89b32254fb4b129720418e7c6ea">mesh</a>-&gt;attributes.Max());
+<a name="l01312"></a>01312    <span class="keywordtype">int</span> dim = <a class="code" href="glvis_8cpp.html#a6e08f89b32254fb4b129720418e7c6ea">mesh</a>-&gt;Dimension();
 <a name="l01313"></a>01313 
-<a name="l01314"></a>01314    matc.SetSize(dim,mesh-&gt;attributes.Max());
+<a name="l01314"></a>01314    matc.SetSize(dim,<a class="code" href="glvis_8cpp.html#a6e08f89b32254fb4b129720418e7c6ea">mesh</a>-&gt;attributes.Max());
 <a name="l01315"></a>01315    matc = 0.0;
 <a name="l01316"></a>01316    nmatc = 0.0;
 <a name="l01317"></a>01317 
-<a name="l01318"></a>01318    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; mesh -&gt; GetNE(); i++)
+<a name="l01318"></a>01318    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="glvis_8cpp.html#a6e08f89b32254fb4b129720418e7c6ea">mesh</a> -&gt; GetNE(); i++)
 <a name="l01319"></a>01319    {
-<a name="l01320"></a>01320       mesh-&gt;GetPointMatrix(i, pointmat);
-<a name="l01321"></a>01321       nmatc(mesh-&gt;GetAttribute(i)-1) += pointmat.Width();
+<a name="l01320"></a>01320       <a class="code" href="glvis_8cpp.html#a6e08f89b32254fb4b129720418e7c6ea">mesh</a>-&gt;GetPointMatrix(i, pointmat);
+<a name="l01321"></a>01321       nmatc(<a class="code" href="glvis_8cpp.html#a6e08f89b32254fb4b129720418e7c6ea">mesh</a>-&gt;GetAttribute(i)-1) += pointmat.Width();
 <a name="l01322"></a>01322       <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; pointmat.Width(); k++)
 <a name="l01323"></a>01323          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> d = 0; d &lt; dim; d++)
-<a name="l01324"></a>01324             matc(d,mesh-&gt;GetAttribute(i)-1) += pointmat(d,k);
+<a name="l01324"></a>01324             matc(d,<a class="code" href="glvis_8cpp.html#a6e08f89b32254fb4b129720418e7c6ea">mesh</a>-&gt;GetAttribute(i)-1) += pointmat(d,k);
 <a name="l01325"></a>01325    }
 <a name="l01326"></a>01326 
-<a name="l01327"></a>01327    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; mesh-&gt;attributes.Max(); i++)
+<a name="l01327"></a>01327    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="glvis_8cpp.html#a6e08f89b32254fb4b129720418e7c6ea">mesh</a>-&gt;attributes.Max(); i++)
 <a name="l01328"></a>01328       <span class="keywordflow">if</span> (nmatc(i) != 0)
 <a name="l01329"></a>01329          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> d = 0; d &lt; dim; d++)
 <a name="l01330"></a>01330             matc(d,i) /= nmatc(i);
 <a name="l01331"></a>01331 }
 <a name="l01332"></a>01332 
 <a name="l01333"></a>01333 
-<a name="l01334"></a>01334 Plane::Plane(<span class="keywordtype">double</span> A,<span class="keywordtype">double</span> B,<span class="keywordtype">double</span> C,<span class="keywordtype">double</span> D)
+<a name="l01334"></a><a class="code" href="classPlane.html#a51de01245b9c2881e232b1114d91f0b9">01334</a> <a class="code" href="classPlane.html#a51de01245b9c2881e232b1114d91f0b9">Plane::Plane</a>(<span class="keywordtype">double</span> A,<span class="keywordtype">double</span> B,<span class="keywordtype">double</span> C,<span class="keywordtype">double</span> D)
 <a name="l01335"></a>01335 {
 <a name="l01336"></a>01336    eqn[0] = A;
 <a name="l01337"></a>01337    eqn[1] = B;
@@ -1400,9 +1401,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01340"></a>01340 
 <a name="l01341"></a>01341    CartesianToSpherical();
 <a name="l01342"></a>01342 
-<a name="l01343"></a>01343    <span class="keywordtype">double</span> x[2] = {vsdata -&gt; x[0], vsdata -&gt; x[1]};
-<a name="l01344"></a>01344    <span class="keywordtype">double</span> y[2] = {vsdata -&gt; y[0], vsdata -&gt; y[1]};
-<a name="l01345"></a>01345    <span class="keywordtype">double</span> z[2] = {vsdata -&gt; z[0], vsdata -&gt; z[1]};
+<a name="l01343"></a>01343    <span class="keywordtype">double</span> x[2] = {<a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; x[0], <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; x[1]};
+<a name="l01344"></a>01344    <span class="keywordtype">double</span> y[2] = {<a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; y[0], <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; y[1]};
+<a name="l01345"></a>01345    <span class="keywordtype">double</span> z[2] = {<a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; z[0], <a class="code" href="vsdata_8cpp.html#abe872503b3650a5399ead67d3fb16389">vsdata</a> -&gt; z[1]};
 <a name="l01346"></a>01346    bbox_diam = sqrt ( (x[1]-x[0])*(x[1]-x[0]) +
 <a name="l01347"></a>01347                       (y[1]-y[0])*(y[1]-y[0]) +
 <a name="l01348"></a>01348                       (z[1]-z[0])*(z[1]-z[0]) );
@@ -1416,14 +1417,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01356"></a>01356    rho_step = bbox_diam / 200;
 <a name="l01357"></a>01357 }
 <a name="l01358"></a>01358 
-<a name="l01359"></a>01359 <span class="keywordtype">void</span> Plane::CartesianToSpherical()
+<a name="l01359"></a><a class="code" href="classPlane.html#aa0945afd882e042ff6161b81f73265b8">01359</a> <span class="keywordtype">void</span> <a class="code" href="classPlane.html#aa0945afd882e042ff6161b81f73265b8">Plane::CartesianToSpherical</a>()
 <a name="l01360"></a>01360 {
 <a name="l01361"></a>01361    rho = sqrt(eqn[0]*eqn[0]+eqn[1]*eqn[1]+eqn[2]*eqn[2]);
 <a name="l01362"></a>01362    phi = asin(eqn[2]/rho);
 <a name="l01363"></a>01363    theta = atan2(eqn[1], eqn[0]);
 <a name="l01364"></a>01364 }
 <a name="l01365"></a>01365 
-<a name="l01366"></a>01366 <span class="keywordtype">void</span> Plane::SphericalToCartesian()
+<a name="l01366"></a><a class="code" href="classPlane.html#ac11a22c57c6d2e70e9b5d981e4d54183">01366</a> <span class="keywordtype">void</span> <a class="code" href="classPlane.html#ac11a22c57c6d2e70e9b5d981e4d54183">Plane::SphericalToCartesian</a>()
 <a name="l01367"></a>01367 {
 <a name="l01368"></a>01368    eqn[0] = rho * cos(phi) * cos(theta);
 <a name="l01369"></a>01369    eqn[1] = rho * cos(phi) * sin(theta);
@@ -1431,31 +1432,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01371"></a>01371    eqn[3] = - (eqn[0] * x0 + eqn[1] * y0 + eqn[2] * z0);
 <a name="l01372"></a>01372 }
 <a name="l01373"></a>01373 
-<a name="l01374"></a>01374 <span class="keywordtype">void</span> Plane::IncreasePhi()
+<a name="l01374"></a><a class="code" href="classPlane.html#ac383bde3bc0c35b69be12d282e66c82c">01374</a> <span class="keywordtype">void</span> <a class="code" href="classPlane.html#ac383bde3bc0c35b69be12d282e66c82c">Plane::IncreasePhi</a>()
 <a name="l01375"></a>01375 {
 <a name="l01376"></a>01376    phi += phi_step;
 <a name="l01377"></a>01377    SphericalToCartesian();
 <a name="l01378"></a>01378 }
 <a name="l01379"></a>01379 
-<a name="l01380"></a>01380 <span class="keywordtype">void</span> Plane::DecreasePhi()
+<a name="l01380"></a><a class="code" href="classPlane.html#a6d3e07f6a417be64fdab339152ac6f41">01380</a> <span class="keywordtype">void</span> <a class="code" href="classPlane.html#a6d3e07f6a417be64fdab339152ac6f41">Plane::DecreasePhi</a>()
 <a name="l01381"></a>01381 {
 <a name="l01382"></a>01382    phi -= phi_step;
 <a name="l01383"></a>01383    SphericalToCartesian();
 <a name="l01384"></a>01384 }
 <a name="l01385"></a>01385 
-<a name="l01386"></a>01386 <span class="keywordtype">void</span> Plane::IncreaseTheta()
+<a name="l01386"></a><a class="code" href="classPlane.html#a14da415e018251370c9adf6054334702">01386</a> <span class="keywordtype">void</span> <a class="code" href="classPlane.html#a14da415e018251370c9adf6054334702">Plane::IncreaseTheta</a>()
 <a name="l01387"></a>01387 {
 <a name="l01388"></a>01388    theta += theta_step;
 <a name="l01389"></a>01389    SphericalToCartesian();
 <a name="l01390"></a>01390 }
 <a name="l01391"></a>01391 
-<a name="l01392"></a>01392 <span class="keywordtype">void</span> Plane::DecreaseTheta()
+<a name="l01392"></a><a class="code" href="classPlane.html#a91e138aeeacdfb89ae8044ef6330f9b5">01392</a> <span class="keywordtype">void</span> <a class="code" href="classPlane.html#a91e138aeeacdfb89ae8044ef6330f9b5">Plane::DecreaseTheta</a>()
 <a name="l01393"></a>01393 {
 <a name="l01394"></a>01394    theta -= theta_step;
 <a name="l01395"></a>01395    SphericalToCartesian();
 <a name="l01396"></a>01396 }
 <a name="l01397"></a>01397 
-<a name="l01398"></a>01398 <span class="keywordtype">void</span> Plane::IncreaseDistance()
+<a name="l01398"></a><a class="code" href="classPlane.html#a765ff9ff592a4ffddebd94c79e532578">01398</a> <span class="keywordtype">void</span> <a class="code" href="classPlane.html#a765ff9ff592a4ffddebd94c79e532578">Plane::IncreaseDistance</a>()
 <a name="l01399"></a>01399 {
 <a name="l01400"></a>01400    <span class="keywordtype">double</span> k = (rho_step) / (rho*rho);
 <a name="l01401"></a>01401    x0 -= eqn[0] * k;
@@ -1465,7 +1466,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l01405"></a>01405    CartesianToSpherical();
 <a name="l01406"></a>01406 }
 <a name="l01407"></a>01407 
-<a name="l01408"></a>01408 <span class="keywordtype">void</span> Plane::DecreaseDistance()
+<a name="l01408"></a><a class="code" href="classPlane.html#a583c441cd6ff0654c54397e3ce072a9a">01408</a> <span class="keywordtype">void</span> <a class="code" href="classPlane.html#a583c441cd6ff0654c54397e3ce072a9a">Plane::DecreaseDistance</a>()
 <a name="l01409"></a>01409 {
 <a name="l01410"></a>01410    <span class="keywordtype">double</span> k = (rho_step) / (rho*rho);
 <a name="l01411"></a>01411    x0 += eqn[0] * k;
@@ -1481,7 +1482,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -1490,7 +1491,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Tue Apr 12 2011 15:12:44 for GLVis by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:52:24 for GLVis by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>
