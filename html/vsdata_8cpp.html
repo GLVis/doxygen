@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">GLVis&#160;<span id="projectnumber">v1.2</span></div>
+   <div id="projectname">GLVis&#160;<span id="projectnumber">v2.0</span></div>
   </td>
  </tr>
  </tbody>
@@ -66,6 +66,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br/>
 <code>#include &lt;math.h&gt;</code><br/>
 <code>#include &lt;X11/keysym.h&gt;</code><br/>
+<code>#include &lt;iomanip&gt;</code><br/>
 <code>#include &lt;sstream&gt;</code><br/>
 <code>#include &quot;<a class="el" href="vsdata_8hpp_source.html">vsdata.hpp</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="aux__vis_8hpp_source.html">aux_vis.hpp</a>&quot;</code><br/>
@@ -76,7 +77,7 @@ Include dependency graph for vsdata.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="vsdata_8cpp__incl.png" border="0" usemap="#vsdata_8cpp" alt=""/></div>
 <map name="vsdata_8cpp" id="vsdata_8cpp">
-<area shape="rect" id="node11" href="vsdata_8hpp.html" title="vsdata.hpp" alt="" coords="400,80,488,107"/><area shape="rect" id="node17" href="aux__vis_8hpp.html" title="aux_vis.hpp" alt="" coords="512,80,603,107"/><area shape="rect" id="node30" href="material_8hpp.html" title="material.hpp" alt="" coords="627,80,723,107"/><area shape="rect" id="node13" href="openglvis_8hpp.html" title="openglvis.hpp" alt="" coords="348,155,452,181"/></map>
+<area shape="rect" id="node13" href="vsdata_8hpp.html" title="vsdata.hpp" alt="" coords="491,80,579,107"/><area shape="rect" id="node19" href="aux__vis_8hpp.html" title="aux_vis.hpp" alt="" coords="603,80,693,107"/><area shape="rect" id="node32" href="material_8hpp.html" title="material.hpp" alt="" coords="717,80,813,107"/><area shape="rect" id="node15" href="openglvis_8hpp.html" title="openglvis.hpp" alt="" coords="439,155,543,181"/></map>
 </div>
 </div>
 <p><a href="vsdata_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -130,11 +131,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00540">540</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00544">544</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00525">vsdata</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00529">vsdata</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>.</p>
 
 </div>
 </div>
@@ -152,11 +153,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00754">754</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00758">758</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>References <a class="el" href="material_8cpp_source.html#l00376">Remove_AntiAliasing()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, <a class="el" href="material_8cpp_source.html#l00330">Set_AntiAliasing()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00525">vsdata</a>.</p>
+<p>References <a class="el" href="material_8cpp_source.html#l00380">Remove_AntiAliasing()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, <a class="el" href="material_8cpp_source.html#l00330">Set_AntiAliasing()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00529">vsdata</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>.</p>
 
 </div>
 </div>
@@ -174,11 +175,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00684">684</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00687">687</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>.</p>
 
 </div>
 </div>
@@ -196,11 +197,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00769">769</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00773">773</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00035">MatAlphaCenter</a>, <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00525">vsdata</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00033">MatAlphaCenter</a>, <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00529">vsdata</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>.</p>
 
 </div>
 </div>
@@ -218,11 +219,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00528">528</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00532">532</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00525">vsdata</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00529">vsdata</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>.</p>
 
 </div>
 </div>
@@ -240,11 +241,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00723">723</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00727">727</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>References <a class="el" href="vsdata_8cpp_source.html#l01217">VisualizationSceneScalarData::PrintState()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00525">vsdata</a>.</p>
+<p>References <a class="el" href="vsdata_8cpp_source.html#l01263">VisualizationSceneScalarData::PrintState()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00529">vsdata</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>.</p>
 
 </div>
 </div>
@@ -262,11 +263,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00728">728</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00732">732</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00525">vsdata</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00529">vsdata</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>.</p>
 
 </div>
 </div>
@@ -284,11 +285,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00652">652</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00656">656</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>References <a class="el" href="vsdata_8hpp_source.html#l00094">VisualizationSceneScalarData::EventUpdateColors()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01238">GetUseTexture()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01099">RepeatPaletteTimes</a>, <a class="el" href="palettes_8hpp_source.html#l03141">Select_New_RGB_Palette()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00525">vsdata</a>.</p>
+<p>References <a class="el" href="vsdata_8hpp_source.html#l00094">VisualizationSceneScalarData::EventUpdateColors()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01302">GetUseTexture()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01151">RepeatPaletteTimes</a>, <a class="el" href="palettes_8hpp_source.html#l03141">Select_New_RGB_Palette()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00529">vsdata</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>.</p>
 
 </div>
 </div>
@@ -306,11 +307,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00671">671</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00674">674</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>References <a class="el" href="vsdata_8hpp_source.html#l00113">VisualizationSceneScalarData::GetMaxV()</a>, <a class="el" href="vsdata_8hpp_source.html#l00112">VisualizationSceneScalarData::GetMinV()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00525">vsdata</a>.</p>
+<p>References <a class="el" href="vsdata_8hpp_source.html#l00113">VisualizationSceneScalarData::GetMaxV()</a>, <a class="el" href="vsdata_8hpp_source.html#l00112">VisualizationSceneScalarData::GetMinV()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00529">vsdata</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>.</p>
 
 </div>
 </div>
@@ -328,11 +329,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00717">717</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00720">720</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, and <a class="el" href="material_8cpp_source.html#l00312">Toggle_Background()</a>.</p>
+<p>References <a class="el" href="vsdata_8cpp_source.html#l01093">VisualizationSceneScalarData::PrepareAxes()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, <a class="el" href="material_8cpp_source.html#l00312">Toggle_Background()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00529">vsdata</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>.</p>
 
 </div>
 </div>
@@ -350,11 +351,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00789">789</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00793">793</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, <a class="el" href="vsdata_8cpp_source.html#l00807">VisualizationSceneScalarData::ToggleRuler()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00525">vsdata</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, <a class="el" href="vsdata_8cpp_source.html#l00811">VisualizationSceneScalarData::ToggleRuler()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00529">vsdata</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>.</p>
 
 </div>
 </div>
@@ -372,11 +373,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00736">736</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00740">740</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00034">MatAlpha</a>, <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00525">vsdata</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00032">MatAlpha</a>, <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00529">vsdata</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>.</p>
 
 </div>
 </div>
@@ -394,11 +395,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00745">745</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00749">749</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00034">MatAlpha</a>, <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00525">vsdata</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00032">MatAlpha</a>, <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00529">vsdata</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>.</p>
 
 </div>
 </div>
@@ -416,11 +417,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00779">779</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00783">783</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00035">MatAlphaCenter</a>, <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00525">vsdata</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00033">MatAlphaCenter</a>, <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00529">vsdata</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>.</p>
 
 </div>
 </div>
@@ -438,11 +439,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00556">556</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00560">560</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l01098">MySetColorLogscale</a>, <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00525">vsdata</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l01150">MySetColorLogscale</a>, <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00529">vsdata</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>.</p>
 
 </div>
 </div>
@@ -460,11 +461,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00546">546</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00550">550</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00525">vsdata</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00529">vsdata</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>.</p>
 
 </div>
 </div>
@@ -482,11 +483,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00625">625</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00629">629</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>References <a class="el" href="vsdata_8hpp_source.html#l00094">VisualizationSceneScalarData::EventUpdateColors()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01238">GetUseTexture()</a>, <a class="el" href="palettes_8hpp_source.html#l03136">Next_RGB_Palette()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00525">vsdata</a>.</p>
+<p>References <a class="el" href="vsdata_8hpp_source.html#l00094">VisualizationSceneScalarData::EventUpdateColors()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01302">GetUseTexture()</a>, <a class="el" href="palettes_8hpp_source.html#l03136">Next_RGB_Palette()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00529">vsdata</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>.</p>
 
 </div>
 </div>
@@ -504,11 +505,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00563">563</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00567">567</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00032">locscene</a>, <a class="el" href="aux__vis_8cpp_source.html#l00422">MainLoop()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00407">RemoveIdleFunc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00525">vsdata</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00030">locscene</a>, <a class="el" href="aux__vis_8cpp_source.html#l00420">MainLoop()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00405">RemoveIdleFunc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00529">vsdata</a>.</p>
 
-<p>Referenced by <a class="el" href="vsvector3d_8cpp_source.html#l00361">VisualizationSceneVector3d::Init()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsvector3d_8cpp_source.html#l00358">VisualizationSceneVector3d::Init()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>.</p>
 
 </div>
 </div>
@@ -526,11 +527,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00577">577</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00581">581</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00032">locscene</a>, <a class="el" href="aux__vis_8cpp_source.html#l00422">MainLoop()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00407">RemoveIdleFunc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, <a class="el" href="material_8cpp_source.html#l00109">Set_Light()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00525">vsdata</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00030">locscene</a>, <a class="el" href="aux__vis_8cpp_source.html#l00420">MainLoop()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00405">RemoveIdleFunc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, <a class="el" href="material_8cpp_source.html#l00109">Set_Light()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00529">vsdata</a>.</p>
 
-<p>Referenced by <a class="el" href="vsvector3d_8cpp_source.html#l00361">VisualizationSceneVector3d::Init()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsvector3d_8cpp_source.html#l00358">VisualizationSceneVector3d::Init()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>.</p>
 
 </div>
 </div>
@@ -548,11 +549,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00534">534</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00538">538</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00525">vsdata</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00529">vsdata</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>.</p>
 
 </div>
 </div>
@@ -570,11 +571,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00795">795</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00799">799</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>References <a class="el" href="vsdata_8cpp_source.html#l00812">VisualizationSceneScalarData::RulerPosition()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00525">vsdata</a>.</p>
+<p>References <a class="el" href="vsdata_8cpp_source.html#l00816">VisualizationSceneScalarData::RulerPosition()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00529">vsdata</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>.</p>
 
 </div>
 </div>
@@ -592,11 +593,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00801">801</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00805">805</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, <a class="el" href="vsdata_8cpp_source.html#l00903">VisualizationSceneScalarData::ToggleTexture()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00525">vsdata</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, <a class="el" href="vsdata_8cpp_source.html#l00907">VisualizationSceneScalarData::ToggleTexture()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00529">vsdata</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>.</p>
 
 </div>
 </div>
@@ -614,11 +615,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00707">707</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00710">710</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>References <a class="el" href="material_8cpp_source.html#l00240">Next_Material_And_Light()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00525">vsdata</a>.</p>
+<p>References <a class="el" href="material_8cpp_source.html#l00240">Next_Material_And_Light()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00529">vsdata</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>.</p>
 
 </div>
 </div>
@@ -640,7 +641,7 @@ Variables</h2></td></tr>
 
 <p>References <a class="el" href="palettes_8hpp_source.html#l02998">Default_RGB_Palette</a>, <a class="el" href="palettes_8hpp_source.html#l02964">Num_RGB_Palettes</a>, and <a class="el" href="palettes_8hpp_source.html#l03127">Set_Palette()</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00625">KeyPPressed()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00629">KeyPPressed()</a>.</p>
 
 </div>
 </div>
@@ -662,7 +663,7 @@ Variables</h2></td></tr>
 
 <p>References <a class="el" href="palettes_8hpp_source.html#l02998">Default_RGB_Palette</a>, <a class="el" href="palettes_8hpp_source.html#l02964">Num_RGB_Palettes</a>, <a class="el" href="palettes_8hpp_source.html#l02989">RGB_Palettes_Names</a>, and <a class="el" href="palettes_8hpp_source.html#l03127">Set_Palette()</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00652">KeyF6Pressed()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00656">KeyF6Pressed()</a>.</p>
 
 </div>
 </div>
@@ -678,7 +679,7 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00032">32</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00030">30</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -693,9 +694,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01099">1099</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01151">1151</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00652">KeyF6Pressed()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00656">KeyF6Pressed()</a>.</p>
 
 </div>
 </div>
@@ -710,9 +711,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l01215">1215</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l01261">1261</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l01217">VisualizationSceneScalarData::PrintState()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l01263">VisualizationSceneScalarData::PrintState()</a>.</p>
 
 </div>
 </div>
@@ -727,9 +728,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00525">525</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsdata_8cpp_source.html#l00529">529</a> of file <a class="el" href="vsdata_8cpp_source.html">vsdata.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00919">VisualizationSceneScalarData::Init()</a>, <a class="el" href="vsdata_8cpp_source.html#l00754">KeyAPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00540">KeyaPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00769">KeyCommaPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00528">KeyCPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00723">KeyF1Pressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00728">KeyF2Pressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00652">KeyF6Pressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00671">KeyF7Pressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00789">KeyGravePressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00745">KeyKPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00736">KeykPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00779">KeyLessPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00556">KeyLPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00546">KeylPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00625">KeyPPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00577">KeyRPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00563">KeyrPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00534">KeySPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00795">KeyTildePressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00801">KeyToggleTexture()</a>, <a class="el" href="vsdata_8cpp_source.html#l00707">KeyTPressed()</a>, and <a class="el" href="vsdata_8cpp_source.html#l01334">Plane::Plane()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00923">VisualizationSceneScalarData::Init()</a>, <a class="el" href="vsdata_8cpp_source.html#l00758">KeyAPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00544">KeyaPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00773">KeyCommaPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00532">KeyCPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00727">KeyF1Pressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00732">KeyF2Pressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00656">KeyF6Pressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00674">KeyF7Pressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00720">KeyGPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00793">KeyGravePressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00749">KeyKPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00740">KeykPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00783">KeyLessPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00560">KeyLPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00550">KeylPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00629">KeyPPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00581">KeyRPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00567">KeyrPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00538">KeySPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00799">KeyTildePressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00805">KeyToggleTexture()</a>, <a class="el" href="vsdata_8cpp_source.html#l00710">KeyTPressed()</a>, and <a class="el" href="vsdata_8cpp_source.html#l01388">Plane::Plane()</a>.</p>
 
 </div>
 </div>
@@ -739,7 +740,7 @@ Variables</h2></td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -748,7 +749,7 @@ Variables</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:52:24 for GLVis by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 12:13:53 for GLVis by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">GLVis&#160;<span id="projectnumber">v1.2</span></div>
+   <div id="projectname">GLVis&#160;<span id="projectnumber">v2.0</span></div>
   </td>
  </tr>
  </tbody>
@@ -99,7 +99,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#a3afc1155ca912eed5c1480fbb8115068">ToggleDisplacements</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#adf981d0ee69a75bde0f910fe8b6ae034">Draw</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#ac827e3bb35122e18e9e6df8a3ed735ef">EventUpdateColors</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#ac40f54795f8ac209ce5c2ccbed7d3e28">CycleVec2Scalar</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#acf777f26c0b22fac899faf4401783130">CycleVec2Scalar</a> (int <a class="el" href="classVisualizationScene.html#a2c3a0ff6659f69878f5272113597cfa8">print</a>=0)</td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneVector.html#a8281d01b5db403f94dd2356512766406">RefineFactor</a></td></tr>
@@ -161,7 +161,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00212">212</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
 
-<p>References <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vsdata_8hpp_source.html#l00053">VisualizationSceneScalarData::sol</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">solx</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">soly</a>, and <a class="el" href="vsvector_8hpp_source.html#l00022">VecGridF</a>.</p>
+<p>References <a class="el" href="vsvector_8cpp_source.html#l00389">Init()</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vsdata_8hpp_source.html#l00053">VisualizationSceneScalarData::sol</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">solx</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">soly</a>, and <a class="el" href="vsvector_8hpp_source.html#l00022">VecGridF</a>.</p>
 
 </div>
 </div>
@@ -182,7 +182,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00226">226</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
 
-<p>References <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vssolution_8hpp_source.html#l00059">VisualizationSceneSolution::SetGridFunction()</a>, <a class="el" href="vsdata_8hpp_source.html#l00053">VisualizationSceneScalarData::sol</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">solx</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">soly</a>, <a class="el" href="vsvector_8hpp_source.html#l00038">vc0</a>, and <a class="el" href="vsvector_8hpp_source.html#l00022">VecGridF</a>.</p>
+<p>References <a class="el" href="vsvector_8cpp_source.html#l00389">Init()</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vssolution_8hpp_source.html#l00059">VisualizationSceneSolution::SetGridFunction()</a>, <a class="el" href="vsdata_8hpp_source.html#l00053">VisualizationSceneScalarData::sol</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">solx</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">soly</a>, <a class="el" href="vsvector_8hpp_source.html#l00038">vc0</a>, and <a class="el" href="vsvector_8hpp_source.html#l00022">VecGridF</a>.</p>
 
 </div>
 </div>
@@ -200,30 +200,31 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00422">422</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00434">434</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
 
 <p>References <a class="el" href="vsvector_8hpp_source.html#l00020">displinelist</a>, <a class="el" href="vsdata_8hpp_source.html#l00053">VisualizationSceneScalarData::sol</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">solx</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">soly</a>, <a class="el" href="vsvector_8hpp_source.html#l00022">VecGridF</a>, and <a class="el" href="vsvector_8hpp_source.html#l00020">vectorlist</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ac40f54795f8ac209ce5c2ccbed7d3e28"></a><!-- doxytag: member="VisualizationSceneVector::CycleVec2Scalar" ref="ac40f54795f8ac209ce5c2ccbed7d3e28" args="()" -->
+<a class="anchor" id="acf777f26c0b22fac899faf4401783130"></a><!-- doxytag: member="VisualizationSceneVector::CycleVec2Scalar" ref="acf777f26c0b22fac899faf4401783130" args="(int print=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void VisualizationSceneVector::CycleVec2Scalar </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>print</em> = <code>0</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00299">299</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00303">303</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
 
-<p>References <a class="el" href="vssolution_8hpp_source.html#l00080">VisualizationSceneSolution::DefaultLevelLines()</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawvector</a>, <a class="el" href="vssolution_8cpp_source.html#l00755">VisualizationSceneSolution::FindNewBox()</a>, <a class="el" href="vsvector_8hpp_source.html#l00036">maxlen</a>, <a class="el" href="vsdata_8hpp_source.html#l00055">VisualizationSceneScalarData::maxv</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vssolution_8cpp_source.html#l01033">VisualizationSceneSolution::Prepare()</a>, <a class="el" href="vsdata_8cpp_source.html#l01089">VisualizationSceneScalarData::PrepareAxes()</a>, <a class="el" href="vssolution_8cpp_source.html#l01417">VisualizationSceneSolution::PrepareCP()</a>, <a class="el" href="vssolution_8cpp_source.html#l01127">VisualizationSceneSolution::PrepareLevelCurves()</a>, <a class="el" href="vsvector_8hpp_source.html#l00051">PrepareLines()</a>, <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>, <a class="el" href="vsdata_8hpp_source.html#l00053">VisualizationSceneScalarData::sol</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">solx</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">soly</a>, <a class="el" href="vsvector_8hpp_source.html#l00032">Vec2Scalar</a>, and <a class="el" href="vsvector_8cpp_source.html#l00295">Vec2ScalarFunctions</a>.</p>
+<p>References <a class="el" href="vssolution_8hpp_source.html#l00080">VisualizationSceneSolution::DefaultLevelLines()</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawvector</a>, <a class="el" href="vssolution_8cpp_source.html#l00761">VisualizationSceneSolution::FindNewBox()</a>, <a class="el" href="vsvector_8hpp_source.html#l00036">maxlen</a>, <a class="el" href="vsdata_8hpp_source.html#l00055">VisualizationSceneScalarData::maxv</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vssolution_8cpp_source.html#l01039">VisualizationSceneSolution::Prepare()</a>, <a class="el" href="vsdata_8cpp_source.html#l01093">VisualizationSceneScalarData::PrepareAxes()</a>, <a class="el" href="vssolution_8cpp_source.html#l01462">VisualizationSceneSolution::PrepareCP()</a>, <a class="el" href="vssolution_8cpp_source.html#l01133">VisualizationSceneSolution::PrepareLevelCurves()</a>, <a class="el" href="vsvector_8hpp_source.html#l00051">PrepareLines()</a>, <a class="el" href="vsvector_8cpp_source.html#l00785">PrepareVectorField()</a>, <a class="el" href="vsdata_8hpp_source.html#l00053">VisualizationSceneScalarData::sol</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">solx</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">soly</a>, <a class="el" href="vsvector_8hpp_source.html#l00032">Vec2Scalar</a>, <a class="el" href="vsvector_8cpp_source.html#l00295">Vec2ScalarFunctions</a>, <a class="el" href="vsvector_8cpp_source.html#l00299">Vec2ScalarNames</a>, and <a class="el" href="vsvector_8hpp_source.html#l00022">VecGridF</a>.</p>
 
 <p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00145">KeyuPressed()</a>.</p>
 
@@ -245,9 +246,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classVisualizationSceneSolution.html#a4487514b9ccc5e335e8023c2abe88661">VisualizationSceneSolution</a>.</p>
 
-<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00834">834</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00852">852</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
 
-<p>References <a class="el" href="vsdata_8hpp_source.html#l00057">VisualizationSceneScalarData::axeslist</a>, <a class="el" href="vsdata_8hpp_source.html#l00057">VisualizationSceneScalarData::colorbar</a>, <a class="el" href="vssolution_8hpp_source.html#l00024">VisualizationSceneSolution::cp_list</a>, <a class="el" href="vsdata_8hpp_source.html#l00070">VisualizationSceneScalarData::CuttingPlane</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">displinelist</a>, <a class="el" href="vssolution_8hpp_source.html#l00023">VisualizationSceneSolution::displlist</a>, <a class="el" href="vssolution_8hpp_source.html#l00024">VisualizationSceneSolution::draw_cp</a>, <a class="el" href="vsdata_8hpp_source.html#l00057">VisualizationSceneScalarData::drawaxes</a>, <a class="el" href="vsdata_8cpp_source.html#l00217">VisualizationSceneScalarData::DrawColorBar()</a>, <a class="el" href="vsdata_8cpp_source.html#l00457">VisualizationSceneScalarData::DrawCoordinateCross()</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawdisp</a>, <a class="el" href="vssolution_8hpp_source.html#l00022">VisualizationSceneSolution::drawelems</a>, <a class="el" href="vssolution_8hpp_source.html#l00022">VisualizationSceneSolution::drawmesh</a>, <a class="el" href="vsdata_8cpp_source.html#l00835">VisualizationSceneScalarData::DrawRuler()</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawvector</a>, <a class="el" href="vsdata_8hpp_source.html#l00034">Plane::Equation()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01238">GetUseTexture()</a>, <a class="el" href="vssolution_8hpp_source.html#l00023">VisualizationSceneSolution::lcurvelist</a>, <a class="el" href="vsdata_8hpp_source.html#l00064">VisualizationSceneScalarData::level</a>, <a class="el" href="vsdata_8hpp_source.html#l00071">VisualizationSceneScalarData::light</a>, <a class="el" href="vssolution_8hpp_source.html#l00023">VisualizationSceneSolution::linelist</a>, <a class="el" href="aux__vis_8cpp_source.html#l00034">MatAlpha</a>, <a class="el" href="vsdata_8hpp_source.html#l00055">VisualizationSceneScalarData::maxv</a>, <a class="el" href="vsdata_8hpp_source.html#l00055">VisualizationSceneScalarData::minv</a>, <a class="el" href="material_8cpp_source.html#l00324">Remove_Transparency()</a>, <a class="el" href="openglvis_8hpp_source.html#l00034">VisualizationScene::rotmat</a>, <a class="el" href="material_8cpp_source.html#l00299">Set_Background()</a>, <a class="el" href="material_8cpp_source.html#l00259">Set_Black_Material()</a>, <a class="el" href="material_8cpp_source.html#l00317">Set_Transparency()</a>, <a class="el" href="openglvis_8hpp_source.html#l00035">VisualizationScene::translmat</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">vectorlist</a>, <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::x</a>, <a class="el" href="openglvis_8hpp_source.html#l00021">VisualizationScene::xscale</a>, <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::y</a>, <a class="el" href="openglvis_8hpp_source.html#l00021">VisualizationScene::yscale</a>, <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::z</a>, and <a class="el" href="openglvis_8hpp_source.html#l00021">VisualizationScene::zscale</a>.</p>
+<p>References <a class="el" href="vsdata_8hpp_source.html#l00057">VisualizationSceneScalarData::axeslist</a>, <a class="el" href="vsdata_8hpp_source.html#l00057">VisualizationSceneScalarData::colorbar</a>, <a class="el" href="vssolution_8hpp_source.html#l00024">VisualizationSceneSolution::cp_list</a>, <a class="el" href="vsdata_8hpp_source.html#l00070">VisualizationSceneScalarData::CuttingPlane</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">displinelist</a>, <a class="el" href="vssolution_8hpp_source.html#l00023">VisualizationSceneSolution::displlist</a>, <a class="el" href="vssolution_8hpp_source.html#l00024">VisualizationSceneSolution::draw_cp</a>, <a class="el" href="vsdata_8hpp_source.html#l00057">VisualizationSceneScalarData::drawaxes</a>, <a class="el" href="vsdata_8cpp_source.html#l00218">VisualizationSceneScalarData::DrawColorBar()</a>, <a class="el" href="vsdata_8cpp_source.html#l00458">VisualizationSceneScalarData::DrawCoordinateCross()</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawdisp</a>, <a class="el" href="vssolution_8hpp_source.html#l00022">VisualizationSceneSolution::drawelems</a>, <a class="el" href="vssolution_8hpp_source.html#l00022">VisualizationSceneSolution::drawmesh</a>, <a class="el" href="vsdata_8cpp_source.html#l00839">VisualizationSceneScalarData::DrawRuler()</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawvector</a>, <a class="el" href="vsdata_8hpp_source.html#l00034">Plane::Equation()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01302">GetUseTexture()</a>, <a class="el" href="vssolution_8hpp_source.html#l00023">VisualizationSceneSolution::lcurvelist</a>, <a class="el" href="vsdata_8hpp_source.html#l00064">VisualizationSceneScalarData::level</a>, <a class="el" href="vsdata_8hpp_source.html#l00071">VisualizationSceneScalarData::light</a>, <a class="el" href="vssolution_8hpp_source.html#l00023">VisualizationSceneSolution::linelist</a>, <a class="el" href="aux__vis_8cpp_source.html#l00032">MatAlpha</a>, <a class="el" href="vsdata_8hpp_source.html#l00055">VisualizationSceneScalarData::maxv</a>, <a class="el" href="vsdata_8hpp_source.html#l00055">VisualizationSceneScalarData::minv</a>, <a class="el" href="material_8cpp_source.html#l00324">Remove_Transparency()</a>, <a class="el" href="openglvis_8hpp_source.html#l00034">VisualizationScene::rotmat</a>, <a class="el" href="material_8cpp_source.html#l00299">Set_Background()</a>, <a class="el" href="material_8cpp_source.html#l00259">Set_Black_Material()</a>, <a class="el" href="material_8cpp_source.html#l00317">Set_Transparency()</a>, <a class="el" href="openglvis_8hpp_source.html#l00035">VisualizationScene::translmat</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">vectorlist</a>, <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::x</a>, <a class="el" href="openglvis_8hpp_source.html#l00021">VisualizationScene::xscale</a>, <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::y</a>, <a class="el" href="openglvis_8hpp_source.html#l00021">VisualizationScene::yscale</a>, <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::z</a>, and <a class="el" href="openglvis_8hpp_source.html#l00021">VisualizationScene::zscale</a>.</p>
 
 </div>
 </div>
@@ -294,11 +295,11 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00733">733</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00751">751</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
 
-<p>References <a class="el" href="vsdata_8cpp_source.html#l00111">VisualizationSceneScalarData::Arrow()</a>, <a class="el" href="vsdata_8hpp_source.html#l00061">VisualizationSceneScalarData::arrow_scaling_type</a>, <a class="el" href="vsdata_8hpp_source.html#l00061">VisualizationSceneScalarData::arrow_type</a>, <a class="el" href="vsvector_8hpp_source.html#l00070">ArrowScale</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawvector</a>, <a class="el" href="vsvector_8hpp_source.html#l00036">maxlen</a>, <a class="el" href="vsdata_8hpp_source.html#l00055">VisualizationSceneScalarData::maxv</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vsdata_8hpp_source.html#l00055">VisualizationSceneScalarData::minv</a>, <a class="el" href="aux__vis_8cpp_source.html#l01102">MySetColor()</a>, <a class="el" href="vsvector_8cpp_source.html#l00731">new_maxlen</a>, <a class="el" href="vsvector_8cpp_source.html#l00260">VecLength()</a>, <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::x</a>, <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::y</a>, and <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::z</a>.</p>
+<p>References <a class="el" href="vsdata_8cpp_source.html#l00112">VisualizationSceneScalarData::Arrow()</a>, <a class="el" href="vsdata_8hpp_source.html#l00061">VisualizationSceneScalarData::arrow_scaling_type</a>, <a class="el" href="vsdata_8hpp_source.html#l00061">VisualizationSceneScalarData::arrow_type</a>, <a class="el" href="vsvector_8hpp_source.html#l00070">ArrowScale</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawvector</a>, <a class="el" href="vsvector_8hpp_source.html#l00036">maxlen</a>, <a class="el" href="vsdata_8hpp_source.html#l00055">VisualizationSceneScalarData::maxv</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vsdata_8hpp_source.html#l00055">VisualizationSceneScalarData::minv</a>, <a class="el" href="aux__vis_8cpp_source.html#l01154">MySetColor()</a>, <a class="el" href="vsvector_8cpp_source.html#l00749">new_maxlen</a>, <a class="el" href="vsvector_8cpp_source.html#l00260">VecLength()</a>, <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::x</a>, <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::y</a>, and <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::z</a>.</p>
 
-<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>.</p>
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00785">PrepareVectorField()</a>.</p>
 
 </div>
 </div>
@@ -320,7 +321,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00066">66</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
 
-<p>References <a class="el" href="vssolution_8cpp_source.html#l01033">VisualizationSceneSolution::Prepare()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>.</p>
+<p>References <a class="el" href="vssolution_8cpp_source.html#l01039">VisualizationSceneSolution::Prepare()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00785">PrepareVectorField()</a>.</p>
 
 </div>
 </div>
@@ -363,11 +364,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classVisualizationSceneSolution.html#a7bde28c621790ee7e5e22da1041c8f27">VisualizationSceneSolution</a>.</p>
 
-<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00436">436</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00448">448</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
 
-<p>References <a class="el" href="vssolution_8hpp_source.html#l00022">VisualizationSceneSolution::drawelems</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vsdata_8hpp_source.html#l00075">VisualizationSceneScalarData::shrink</a>, <a class="el" href="vsdata_8cpp_source.html#l01228">VisualizationSceneScalarData::ShrinkPoints()</a>, <a class="el" href="vsvector_8hpp_source.html#l00039">T0</a>, <a class="el" href="vsvector_8hpp_source.html#l00038">vc0</a>, <a class="el" href="vsvector_8hpp_source.html#l00032">Vec2Scalar</a>, <a class="el" href="vsvector_8cpp_source.html#l00290">VecAnisotrSubst()</a>, <a class="el" href="vsvector_8cpp_source.html#l00285">VecCurlSubst()</a>, <a class="el" href="vsvector_8cpp_source.html#l00280">VecDivSubst()</a>, and <a class="el" href="vsvector_8hpp_source.html#l00022">VecGridF</a>.</p>
+<p>References <a class="el" href="vssolution_8hpp_source.html#l00022">VisualizationSceneSolution::drawelems</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vsdata_8hpp_source.html#l00075">VisualizationSceneScalarData::shrink</a>, <a class="el" href="vsdata_8hpp_source.html#l00077">VisualizationSceneScalarData::shrinkmat</a>, <a class="el" href="vsdata_8cpp_source.html#l01282">VisualizationSceneScalarData::ShrinkPoints()</a>, <a class="el" href="vsvector_8hpp_source.html#l00039">T0</a>, <a class="el" href="vsvector_8hpp_source.html#l00038">vc0</a>, <a class="el" href="vsvector_8hpp_source.html#l00032">Vec2Scalar</a>, <a class="el" href="vsvector_8cpp_source.html#l00290">VecAnisotrSubst()</a>, <a class="el" href="vsvector_8cpp_source.html#l00285">VecCurlSubst()</a>, <a class="el" href="vsvector_8cpp_source.html#l00280">VecDivSubst()</a>, and <a class="el" href="vsvector_8hpp_source.html#l00022">VecGridF</a>.</p>
 
-<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00525">GetRefinedValuesAndNormals()</a>.</p>
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00543">GetRefinedValuesAndNormals()</a>.</p>
 
 </div>
 </div>
@@ -416,9 +417,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classVisualizationSceneSolution.html#a39225752d1c3afd12882ec55409f4267">VisualizationSceneSolution</a>.</p>
 
-<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00525">525</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00543">543</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
 
-<p>References <a class="el" href="vsvector_8cpp_source.html#l00436">GetRefinedValues()</a>.</p>
+<p>References <a class="el" href="vsvector_8cpp_source.html#l00448">GetRefinedValues()</a>.</p>
 
 </div>
 </div>
@@ -438,9 +439,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classVisualizationSceneSolution.html#a0bfbf5949d78a39e36e4e1e42bfc1a41">VisualizationSceneSolution</a>.</p>
 
-<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00377">377</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00389">389</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
 
-<p>References <a class="el" href="vsvector_8hpp_source.html#l00070">ArrowScale</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">displinelist</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawdisp</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawvector</a>, <a class="el" href="vsvector_8cpp_source.html#l00109">KeyBPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00097">KeyDPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00103">KeyNPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00186">KeyUPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00145">KeyuPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00134">KeyVPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00128">KeyvPressed()</a>, <a class="el" href="vsvector_8hpp_source.html#l00036">maxlen</a>, <a class="el" href="vsdata_8hpp_source.html#l00055">VisualizationSceneScalarData::maxv</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>, <a class="el" href="vsvector_8hpp_source.html#l00068">RefineFactor</a>, <a class="el" href="vsdata_8hpp_source.html#l00053">VisualizationSceneScalarData::sol</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">solx</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">soly</a>, <a class="el" href="vsvector_8hpp_source.html#l00032">Vec2Scalar</a>, <a class="el" href="vsvector_8cpp_source.html#l00260">VecLength()</a>, and <a class="el" href="vsvector_8hpp_source.html#l00020">vectorlist</a>.</p>
+<p>References <a class="el" href="vsvector_8hpp_source.html#l00070">ArrowScale</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">displinelist</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawdisp</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawvector</a>, <a class="el" href="vsvector_8cpp_source.html#l00109">KeyBPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00097">KeyDPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00103">KeyNPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00186">KeyUPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00145">KeyuPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00134">KeyVPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00128">KeyvPressed()</a>, <a class="el" href="vsvector_8hpp_source.html#l00036">maxlen</a>, <a class="el" href="vsdata_8hpp_source.html#l00055">VisualizationSceneScalarData::maxv</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vsvector_8cpp_source.html#l00785">PrepareVectorField()</a>, <a class="el" href="vsvector_8hpp_source.html#l00068">RefineFactor</a>, <a class="el" href="vsdata_8hpp_source.html#l00053">VisualizationSceneScalarData::sol</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">solx</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">soly</a>, <a class="el" href="vsvector_8hpp_source.html#l00032">Vec2Scalar</a>, <a class="el" href="vsvector_8cpp_source.html#l00260">VecLength()</a>, and <a class="el" href="vsvector_8hpp_source.html#l00020">vectorlist</a>.</p>
 
 <p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00212">VisualizationSceneVector()</a>.</p>
 
@@ -471,11 +472,11 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00330">330</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00340">340</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
 
-<p>References <a class="el" href="vsvector_8hpp_source.html#l00036">maxlen</a>, <a class="el" href="vsdata_8hpp_source.html#l00055">VisualizationSceneScalarData::maxv</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>, <a class="el" href="vsdata_8hpp_source.html#l00053">VisualizationSceneScalarData::sol</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">solx</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">soly</a>, <a class="el" href="vsvector_8hpp_source.html#l00038">vc0</a>, <a class="el" href="vsvector_8hpp_source.html#l00032">Vec2Scalar</a>, <a class="el" href="vsvector_8hpp_source.html#l00022">VecGridF</a>, and <a class="el" href="vsvector_8cpp_source.html#l00260">VecLength()</a>.</p>
+<p>References <a class="el" href="vsvector_8hpp_source.html#l00036">maxlen</a>, <a class="el" href="vsdata_8hpp_source.html#l00055">VisualizationSceneScalarData::maxv</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vsvector_8cpp_source.html#l00785">PrepareVectorField()</a>, <a class="el" href="vsdata_8hpp_source.html#l00053">VisualizationSceneScalarData::sol</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">solx</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">soly</a>, <a class="el" href="vsvector_8hpp_source.html#l00038">vc0</a>, <a class="el" href="vsvector_8hpp_source.html#l00032">Vec2Scalar</a>, <a class="el" href="vsvector_8hpp_source.html#l00022">VecGridF</a>, and <a class="el" href="vsvector_8cpp_source.html#l00260">VecLength()</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>.</p>
+<p>Referenced by <a class="el" href="threads_8cpp_source.html#l00102">GLVisCommand::Execute()</a>, and <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>.</p>
 
 </div>
 </div>
@@ -495,7 +496,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00115">115</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
 
-<p>References <a class="el" href="vsvector_8hpp_source.html#l00020">drawdisp</a>, <a class="el" href="vsvector_8cpp_source.html#l00536">PrepareDisplacedMesh()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>.</p>
+<p>References <a class="el" href="vsvector_8hpp_source.html#l00020">drawdisp</a>, <a class="el" href="vsvector_8cpp_source.html#l00554">PrepareDisplacedMesh()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>.</p>
 
 </div>
 </div>
@@ -513,9 +514,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00536">536</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00554">554</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
 
-<p>References <a class="el" href="vsvector_8hpp_source.html#l00020">displinelist</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawdisp</a>, <a class="el" href="vssolution_8cpp_source.html#l01158">VisualizationSceneSolution::DrawLevelCurves()</a>, <a class="el" href="vssolution_8hpp_source.html#l00049">VisualizationSceneSolution::EdgeRefineFactor</a>, <a class="el" href="vsdata_8hpp_source.html#l00064">VisualizationSceneScalarData::level</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vssolution_8hpp_source.html#l00049">VisualizationSceneSolution::shading</a>, <a class="el" href="vssolution_8hpp_source.html#l00049">VisualizationSceneSolution::TimesToRefine</a>, <a class="el" href="vsvector_8hpp_source.html#l00022">VecGridF</a>, <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::x</a>, <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::y</a>, and <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::z</a>.</p>
+<p>References <a class="el" href="vsvector_8hpp_source.html#l00020">displinelist</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawdisp</a>, <a class="el" href="vssolution_8cpp_source.html#l01164">VisualizationSceneSolution::DrawLevelCurves()</a>, <a class="el" href="vssolution_8hpp_source.html#l00049">VisualizationSceneSolution::EdgeRefineFactor</a>, <a class="el" href="vsdata_8hpp_source.html#l00064">VisualizationSceneScalarData::level</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vssolution_8hpp_source.html#l00049">VisualizationSceneSolution::shading</a>, <a class="el" href="vssolution_8hpp_source.html#l00049">VisualizationSceneSolution::TimesToRefine</a>, <a class="el" href="vsvector_8hpp_source.html#l00022">VecGridF</a>, <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::x</a>, <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::y</a>, and <a class="el" href="openglvis_8hpp_source.html#l00032">VisualizationScene::z</a>.</p>
 
 <p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00115">NPressed()</a>, <a class="el" href="vsvector_8hpp_source.html#l00051">PrepareLines()</a>, and <a class="el" href="vsvector_8hpp_source.html#l00057">ToggleDisplacements()</a>.</p>
 
@@ -539,9 +540,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00051">51</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
 
-<p>References <a class="el" href="vsvector_8cpp_source.html#l00536">PrepareDisplacedMesh()</a>.</p>
+<p>References <a class="el" href="vsvector_8cpp_source.html#l00554">PrepareDisplacedMesh()</a>.</p>
 
-<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00299">CycleVec2Scalar()</a>.</p>
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00303">CycleVec2Scalar()</a>.</p>
 
 </div>
 </div>
@@ -559,11 +560,11 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00767">767</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00785">785</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
 
-<p>References <a class="el" href="vsvector_8cpp_source.html#l00733">DrawVector()</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawvector</a>, <a class="el" href="vsvector_8hpp_source.html#l00036">maxlen</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vsvector_8cpp_source.html#l00731">new_maxlen</a>, <a class="el" href="vsvector_8hpp_source.html#l00068">RefineFactor</a>, <a class="el" href="vssolution_8hpp_source.html#l00049">VisualizationSceneSolution::shading</a>, <a class="el" href="vsdata_8hpp_source.html#l00053">VisualizationSceneScalarData::sol</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">solx</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">soly</a>, <a class="el" href="vsvector_8hpp_source.html#l00032">Vec2Scalar</a>, <a class="el" href="vsvector_8hpp_source.html#l00022">VecGridF</a>, and <a class="el" href="vsvector_8hpp_source.html#l00020">vectorlist</a>.</p>
+<p>References <a class="el" href="vsvector_8cpp_source.html#l00751">DrawVector()</a>, <a class="el" href="vsvector_8hpp_source.html#l00020">drawvector</a>, <a class="el" href="vsvector_8hpp_source.html#l00036">maxlen</a>, <a class="el" href="vsdata_8hpp_source.html#l00052">VisualizationSceneScalarData::mesh</a>, <a class="el" href="vsvector_8cpp_source.html#l00749">new_maxlen</a>, <a class="el" href="vsvector_8hpp_source.html#l00068">RefineFactor</a>, <a class="el" href="vssolution_8hpp_source.html#l00049">VisualizationSceneSolution::shading</a>, <a class="el" href="vsdata_8hpp_source.html#l00053">VisualizationSceneScalarData::sol</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">solx</a>, <a class="el" href="vsvector_8hpp_source.html#l00019">soly</a>, <a class="el" href="vsvector_8hpp_source.html#l00032">Vec2Scalar</a>, <a class="el" href="vsvector_8hpp_source.html#l00022">VecGridF</a>, and <a class="el" href="vsvector_8hpp_source.html#l00020">vectorlist</a>.</p>
 
-<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00299">CycleVec2Scalar()</a>, <a class="el" href="vsvector_8hpp_source.html#l00066">EventUpdateColors()</a>, <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00145">KeyuPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00330">NewMeshAndSolution()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00206">ToggleVectorField()</a>.</p>
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00303">CycleVec2Scalar()</a>, <a class="el" href="vsvector_8hpp_source.html#l00066">EventUpdateColors()</a>, <a class="el" href="vsvector_8cpp_source.html#l00389">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00145">KeyuPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00340">NewMeshAndSolution()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00206">ToggleVectorField()</a>.</p>
 
 </div>
 </div>
@@ -583,7 +584,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00057">57</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
 
-<p>References <a class="el" href="vsvector_8hpp_source.html#l00020">drawdisp</a>, and <a class="el" href="vsvector_8cpp_source.html#l00536">PrepareDisplacedMesh()</a>.</p>
+<p>References <a class="el" href="vsvector_8hpp_source.html#l00020">drawdisp</a>, and <a class="el" href="vsvector_8cpp_source.html#l00554">PrepareDisplacedMesh()</a>.</p>
 
 </div>
 </div>
@@ -603,7 +604,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="vsvector_8cpp_source.html#l00206">206</a> of file <a class="el" href="vsvector_8cpp_source.html">vsvector.cpp</a>.</p>
 
-<p>References <a class="el" href="vsvector_8hpp_source.html#l00020">drawvector</a>, and <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>.</p>
+<p>References <a class="el" href="vsvector_8hpp_source.html#l00020">drawvector</a>, and <a class="el" href="vsvector_8cpp_source.html#l00785">PrepareVectorField()</a>.</p>
 
 </div>
 </div>
@@ -621,7 +622,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00070">70</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00733">DrawVector()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>.</p>
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00751">DrawVector()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00389">Init()</a>.</p>
 
 </div>
 </div>
@@ -638,7 +639,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00020">20</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00834">Draw()</a>, <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00536">PrepareDisplacedMesh()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00422">~VisualizationSceneVector()</a>.</p>
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00852">Draw()</a>, <a class="el" href="vsvector_8cpp_source.html#l00389">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00554">PrepareDisplacedMesh()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00434">~VisualizationSceneVector()</a>.</p>
 
 </div>
 </div>
@@ -655,7 +656,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00020">20</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00834">Draw()</a>, <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00115">NPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00536">PrepareDisplacedMesh()</a>, and <a class="el" href="vsvector_8hpp_source.html#l00057">ToggleDisplacements()</a>.</p>
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00852">Draw()</a>, <a class="el" href="vsvector_8cpp_source.html#l00389">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00115">NPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00554">PrepareDisplacedMesh()</a>, and <a class="el" href="vsvector_8hpp_source.html#l00057">ToggleDisplacements()</a>.</p>
 
 </div>
 </div>
@@ -672,7 +673,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00020">20</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00299">CycleVec2Scalar()</a>, <a class="el" href="vsvector_8cpp_source.html#l00834">Draw()</a>, <a class="el" href="vsvector_8cpp_source.html#l00733">DrawVector()</a>, <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00206">ToggleVectorField()</a>.</p>
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00303">CycleVec2Scalar()</a>, <a class="el" href="vsvector_8cpp_source.html#l00852">Draw()</a>, <a class="el" href="vsvector_8cpp_source.html#l00751">DrawVector()</a>, <a class="el" href="vsvector_8cpp_source.html#l00389">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00785">PrepareVectorField()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00206">ToggleVectorField()</a>.</p>
 
 </div>
 </div>
@@ -689,7 +690,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00036">36</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00299">CycleVec2Scalar()</a>, <a class="el" href="vsvector_8cpp_source.html#l00733">DrawVector()</a>, <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00330">NewMeshAndSolution()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>.</p>
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00303">CycleVec2Scalar()</a>, <a class="el" href="vsvector_8cpp_source.html#l00751">DrawVector()</a>, <a class="el" href="vsvector_8cpp_source.html#l00389">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00340">NewMeshAndSolution()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00785">PrepareVectorField()</a>.</p>
 
 </div>
 </div>
@@ -706,7 +707,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00068">68</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00145">KeyuPressed()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>.</p>
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00389">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00145">KeyuPressed()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00785">PrepareVectorField()</a>.</p>
 
 </div>
 </div>
@@ -723,7 +724,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00019">19</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00299">CycleVec2Scalar()</a>, <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00330">NewMeshAndSolution()</a>, <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>, <a class="el" href="vsvector_8cpp_source.html#l00212">VisualizationSceneVector()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00422">~VisualizationSceneVector()</a>.</p>
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00303">CycleVec2Scalar()</a>, <a class="el" href="vsvector_8cpp_source.html#l00389">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00340">NewMeshAndSolution()</a>, <a class="el" href="vsvector_8cpp_source.html#l00785">PrepareVectorField()</a>, <a class="el" href="vsvector_8cpp_source.html#l00212">VisualizationSceneVector()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00434">~VisualizationSceneVector()</a>.</p>
 
 </div>
 </div>
@@ -740,7 +741,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00019">19</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00299">CycleVec2Scalar()</a>, <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00330">NewMeshAndSolution()</a>, <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>, <a class="el" href="vsvector_8cpp_source.html#l00212">VisualizationSceneVector()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00422">~VisualizationSceneVector()</a>.</p>
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00303">CycleVec2Scalar()</a>, <a class="el" href="vsvector_8cpp_source.html#l00389">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00340">NewMeshAndSolution()</a>, <a class="el" href="vsvector_8cpp_source.html#l00785">PrepareVectorField()</a>, <a class="el" href="vsvector_8cpp_source.html#l00212">VisualizationSceneVector()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00434">~VisualizationSceneVector()</a>.</p>
 
 </div>
 </div>
@@ -757,7 +758,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00039">39</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00436">GetRefinedValues()</a>.</p>
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00448">GetRefinedValues()</a>.</p>
 
 </div>
 </div>
@@ -774,7 +775,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00038">38</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00436">GetRefinedValues()</a>, <a class="el" href="vsvector_8cpp_source.html#l00330">NewMeshAndSolution()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00226">VisualizationSceneVector()</a>.</p>
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00448">GetRefinedValues()</a>, <a class="el" href="vsvector_8cpp_source.html#l00340">NewMeshAndSolution()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00226">VisualizationSceneVector()</a>.</p>
 
 </div>
 </div>
@@ -791,7 +792,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00032">32</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00299">CycleVec2Scalar()</a>, <a class="el" href="vsvector_8cpp_source.html#l00436">GetRefinedValues()</a>, <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00330">NewMeshAndSolution()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>.</p>
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00303">CycleVec2Scalar()</a>, <a class="el" href="vsvector_8cpp_source.html#l00448">GetRefinedValues()</a>, <a class="el" href="vsvector_8cpp_source.html#l00389">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00340">NewMeshAndSolution()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00785">PrepareVectorField()</a>.</p>
 
 </div>
 </div>
@@ -808,7 +809,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00022">22</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00436">GetRefinedValues()</a>, <a class="el" href="vsvector_8cpp_source.html#l00330">NewMeshAndSolution()</a>, <a class="el" href="vsvector_8cpp_source.html#l00536">PrepareDisplacedMesh()</a>, <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>, <a class="el" href="vsvector_8cpp_source.html#l00212">VisualizationSceneVector()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00422">~VisualizationSceneVector()</a>.</p>
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00303">CycleVec2Scalar()</a>, <a class="el" href="vsvector_8cpp_source.html#l00448">GetRefinedValues()</a>, <a class="el" href="vsvector_8cpp_source.html#l00340">NewMeshAndSolution()</a>, <a class="el" href="vsvector_8cpp_source.html#l00554">PrepareDisplacedMesh()</a>, <a class="el" href="vsvector_8cpp_source.html#l00785">PrepareVectorField()</a>, <a class="el" href="vsvector_8cpp_source.html#l00212">VisualizationSceneVector()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00434">~VisualizationSceneVector()</a>.</p>
 
 </div>
 </div>
@@ -825,7 +826,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="vsvector_8hpp_source.html#l00020">20</a> of file <a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00834">Draw()</a>, <a class="el" href="vsvector_8cpp_source.html#l00377">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00767">PrepareVectorField()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00422">~VisualizationSceneVector()</a>.</p>
+<p>Referenced by <a class="el" href="vsvector_8cpp_source.html#l00852">Draw()</a>, <a class="el" href="vsvector_8cpp_source.html#l00389">Init()</a>, <a class="el" href="vsvector_8cpp_source.html#l00785">PrepareVectorField()</a>, and <a class="el" href="vsvector_8cpp_source.html#l00434">~VisualizationSceneVector()</a>.</p>
 
 </div>
 </div>
@@ -839,7 +840,7 @@ Protected Attributes</h2></td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -848,7 +849,7 @@ Protected Attributes</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:52:24 for GLVis by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 12:13:53 for GLVis by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

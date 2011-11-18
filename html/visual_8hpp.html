@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">GLVis&#160;<span id="projectnumber">v1.2</span></div>
+   <div id="projectname">GLVis&#160;<span id="projectnumber">v2.0</span></div>
   </td>
  </tr>
  </tbody>
@@ -68,19 +68,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &quot;<a class="el" href="vssolution3d_8hpp_source.html">vssolution3d.hpp</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="vsvector_8hpp_source.html">vsvector.hpp</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="vsvector3d_8hpp_source.html">vsvector3d.hpp</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="threads_8hpp_source.html">threads.hpp</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for visual.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="visual_8hpp__incl.png" border="0" usemap="#visual_8hpp" alt=""/></div>
 <map name="visual_8hpp" id="visual_8hpp">
-<area shape="rect" id="node3" href="material_8hpp.html" title="material.hpp" alt="" coords="160,80,256,107"/><area shape="rect" id="node5" href="aux__vis_8hpp.html" title="aux_vis.hpp" alt="" coords="280,80,371,107"/><area shape="rect" id="node17" href="openglvis_8hpp.html" title="openglvis.hpp" alt="" coords="459,155,563,181"/><area shape="rect" id="node20" href="vsdata_8hpp.html" title="vsdata.hpp" alt="" coords="467,80,555,107"/><area shape="rect" id="node25" href="vssolution_8hpp.html" title="vssolution.hpp" alt="" coords="579,80,685,107"/><area shape="rect" id="node27" href="vssolution3d_8hpp.html" title="vssolution3d.hpp" alt="" coords="709,80,832,107"/><area shape="rect" id="node29" href="vsvector_8hpp.html" title="vsvector.hpp" alt="" coords="856,80,952,107"/><area shape="rect" id="node31" href="vsvector3d_8hpp.html" title="vsvector3d.hpp" alt="" coords="976,80,1088,107"/></map>
+<area shape="rect" id="node3" href="material_8hpp.html" title="material.hpp" alt="" coords="160,80,256,107"/><area shape="rect" id="node5" href="aux__vis_8hpp.html" title="aux_vis.hpp" alt="" coords="280,80,371,107"/><area shape="rect" id="node17" href="openglvis_8hpp.html" title="openglvis.hpp" alt="" coords="459,155,563,181"/><area shape="rect" id="node20" href="vsdata_8hpp.html" title="vsdata.hpp" alt="" coords="467,80,555,107"/><area shape="rect" id="node25" href="vssolution_8hpp.html" title="vssolution.hpp" alt="" coords="579,80,685,107"/><area shape="rect" id="node27" href="vssolution3d_8hpp.html" title="vssolution3d.hpp" alt="" coords="709,80,832,107"/><area shape="rect" id="node29" href="vsvector_8hpp.html" title="vsvector.hpp" alt="" coords="856,80,952,107"/><area shape="rect" id="node31" href="vsvector3d_8hpp.html" title="vsvector3d.hpp" alt="" coords="976,80,1088,107"/><area shape="rect" id="node33" href="threads_8hpp.html" title="threads.hpp" alt="" coords="1112,80,1203,107"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="visual_8hpp__dep__incl.png" border="0" usemap="#visual_8hppdep" alt=""/></div>
 <map name="visual_8hppdep" id="visual_8hppdep">
-<area shape="rect" id="node3" href="glvis_8cpp.html" title="glvis.cpp" alt="" coords="5,80,77,107"/><area shape="rect" id="node5" href="vssolution_8cpp.html" title="vssolution.cpp" alt="" coords="101,80,208,107"/><area shape="rect" id="node7" href="vssolution3d_8cpp.html" title="vssolution3d.cpp" alt="" coords="232,80,355,107"/><area shape="rect" id="node9" href="vsvector_8cpp.html" title="vsvector.cpp" alt="" coords="379,80,475,107"/><area shape="rect" id="node11" href="vsvector3d_8cpp.html" title="vsvector3d.cpp" alt="" coords="499,80,611,107"/></map>
+<area shape="rect" id="node3" href="glvis_8cpp.html" title="glvis.cpp" alt="" coords="5,80,77,107"/><area shape="rect" id="node5" href="aux__vis_8cpp.html" title="aux_vis.cpp" alt="" coords="101,80,192,107"/><area shape="rect" id="node7" href="threads_8cpp.html" title="threads.cpp" alt="" coords="216,80,307,107"/><area shape="rect" id="node9" href="vssolution_8cpp.html" title="vssolution.cpp" alt="" coords="331,80,437,107"/><area shape="rect" id="node11" href="vssolution3d_8cpp.html" title="vssolution3d.cpp" alt="" coords="461,80,584,107"/><area shape="rect" id="node13" href="vsvector_8cpp.html" title="vsvector.cpp" alt="" coords="608,80,704,107"/><area shape="rect" id="node15" href="vsvector3d_8cpp.html" title="vsvector3d.cpp" alt="" coords="728,80,840,107"/></map>
 </div>
 </div>
 <p><a href="visual_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -92,7 +93,7 @@ This graph shows which files directly or indirectly include this file:</div>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -101,7 +102,7 @@ This graph shows which files directly or indirectly include this file:</div>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:52:24 for GLVis by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 12:13:53 for GLVis by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

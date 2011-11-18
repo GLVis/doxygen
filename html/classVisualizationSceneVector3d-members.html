@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">GLVis&#160;<span id="projectnumber">v1.2</span></div>
+   <div id="projectname">GLVis&#160;<span id="projectnumber">v2.0</span></div>
   </td>
  </tr>
  </tbody>
@@ -131,7 +131,8 @@ This is the complete list of members for <a class="el" href="classVisualizationS
   <tr class="memlist"><td><a class="el" href="classVisualizationSceneScalarData.html#a220dacc3e7f9911067e4b74fd3a6f574">minv</a></td><td><a class="el" href="classVisualizationSceneScalarData.html">VisualizationSceneScalarData</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classVisualizationSceneSolution3d.html#a19c31fbc0dce100f6f7401df1b6dd11c">MoveLevelSurf</a>(int)</td><td><a class="el" href="classVisualizationSceneSolution3d.html">VisualizationSceneSolution3d</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classVisualizationScene.html#a628f2449f785d6bf8f35ea370ed82133">movie</a></td><td><a class="el" href="classVisualizationScene.html">VisualizationScene</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classVisualizationSceneSolution3d.html#a0a73c9008a7ac5d89377b4a77485b5cc">NewMeshAndSolution</a>(Mesh *new_m, Vector *new_sol, GridFunction *new_u=NULL, int rescale=0)</td><td><a class="el" href="classVisualizationSceneSolution3d.html">VisualizationSceneSolution3d</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classVisualizationSceneVector3d.html#ae5c0cbcaaa0e29d9f6a5f786954f12a1">NewMeshAndSolution</a>(Mesh *new_m, GridFunction *new_v, int rescale=0)</td><td><a class="el" href="classVisualizationSceneVector3d.html">VisualizationSceneVector3d</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classVisualizationSceneSolution3d.html#a0a73c9008a7ac5d89377b4a77485b5cc">VisualizationSceneSolution3d::NewMeshAndSolution</a>(Mesh *new_m, Vector *new_sol, GridFunction *new_u=NULL, int rescale=0)</td><td><a class="el" href="classVisualizationSceneSolution3d.html">VisualizationSceneSolution3d</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classVisualizationSceneScalarData.html#a59f026a0b3de0b8d0cb3367b894c038d">nl</a></td><td><a class="el" href="classVisualizationSceneScalarData.html">VisualizationSceneScalarData</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classVisualizationSceneSolution3d.html#a794941e568f30e54b4ae261e12a5bf19">nlevels</a></td><td><a class="el" href="classVisualizationSceneSolution3d.html">VisualizationSceneSolution3d</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classVisualizationSceneSolution3d.html#a6cd253369ab7bb496b6e4c28cf278e67">node_pos</a></td><td><a class="el" href="classVisualizationSceneSolution3d.html">VisualizationSceneSolution3d</a></td><td><code> [protected]</code></td></tr>
@@ -238,7 +239,7 @@ This is the complete list of members for <a class="el" href="classVisualizationS
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -247,7 +248,7 @@ This is the complete list of members for <a class="el" href="classVisualizationS
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:52:24 for GLVis by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 12:13:53 for GLVis by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">GLVis&#160;<span id="projectnumber">v1.2</span></div>
+   <div id="projectname">GLVis&#160;<span id="projectnumber">v2.0</span></div>
   </td>
  </tr>
  </tbody>
@@ -69,6 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;stdio.h&gt;</code><br/>
 <code>#include &lt;string.h&gt;</code><br/>
 <code>#include &lt;time.h&gt;</code><br/>
+<code>#include &lt;signal.h&gt;</code><br/>
 <code>#include &quot;mfem.hpp&quot;</code><br/>
 <code>#include &quot;<a class="el" href="visual_8hpp_source.html">lib/visual.hpp</a>&quot;</code><br/>
 <code>#include &lt;X11/keysym.h&gt;</code><br/>
@@ -78,7 +79,7 @@ Include dependency graph for glvis.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="glvis_8cpp__incl.png" border="0" usemap="#glvis_8cpp" alt=""/></div>
 <map name="glvis_8cpp" id="glvis_8cpp">
-<area shape="rect" id="node17" href="visual_8hpp.html" title="lib/visual.hpp" alt="" coords="732,80,831,107"/><area shape="rect" id="node19" href="material_8hpp.html" title="material.hpp" alt="" coords="851,155,947,181"/><area shape="rect" id="node21" href="aux__vis_8hpp.html" title="aux_vis.hpp" alt="" coords="736,155,827,181"/><area shape="rect" id="node33" href="openglvis_8hpp.html" title="openglvis.hpp" alt="" coords="583,229,687,256"/><area shape="rect" id="node36" href="vsdata_8hpp.html" title="vsdata.hpp" alt="" coords="573,155,661,181"/><area shape="rect" id="node40" href="vssolution_8hpp.html" title="vssolution.hpp" alt="" coords="971,155,1077,181"/><area shape="rect" id="node42" href="vssolution3d_8hpp.html" title="vssolution3d.hpp" alt="" coords="1101,155,1224,181"/><area shape="rect" id="node44" href="vsvector_8hpp.html" title="vsvector.hpp" alt="" coords="1248,155,1344,181"/><area shape="rect" id="node46" href="vsvector3d_8hpp.html" title="vsvector3d.hpp" alt="" coords="1368,155,1480,181"/></map>
+<area shape="rect" id="node19" href="visual_8hpp.html" title="lib/visual.hpp" alt="" coords="884,80,983,107"/><area shape="rect" id="node21" href="material_8hpp.html" title="material.hpp" alt="" coords="1589,155,1685,181"/><area shape="rect" id="node23" href="aux__vis_8hpp.html" title="aux_vis.hpp" alt="" coords="827,155,917,181"/><area shape="rect" id="node35" href="openglvis_8hpp.html" title="openglvis.hpp" alt="" coords="673,229,777,256"/><area shape="rect" id="node38" href="vsdata_8hpp.html" title="vsdata.hpp" alt="" coords="664,155,752,181"/><area shape="rect" id="node42" href="vssolution_8hpp.html" title="vssolution.hpp" alt="" coords="941,155,1048,181"/><area shape="rect" id="node44" href="vssolution3d_8hpp.html" title="vssolution3d.hpp" alt="" coords="1072,155,1195,181"/><area shape="rect" id="node46" href="vsvector_8hpp.html" title="vsvector.hpp" alt="" coords="1219,155,1315,181"/><area shape="rect" id="node48" href="vsvector3d_8hpp.html" title="vsvector3d.hpp" alt="" coords="1339,155,1451,181"/><area shape="rect" id="node50" href="threads_8hpp.html" title="threads.hpp" alt="" coords="1475,155,1565,181"/></map>
 </div>
 </div>
 <p><a href="glvis_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -87,10 +88,18 @@ Include dependency graph for glvis.cpp:</div>
 Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#a99a4b7a7c6575486b93f03efc4a0100a">Set_Palette</a> (int)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#ae95873a146942467b3b5334fb87ae1c7">ReadSerial</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#aa80beae8f5d17fe6ac7719d87b351d80">SetGridFunction</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#ada5cc7ec76358b212f1392319df3842f">SetMeshSolution</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#ab6dbf6bd93cd8e385c10e3b8613a0685">ReadParallel</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#a65939dc852215a33a00f041a3da0e002">ReadParMeshAndGridFunction</a> (int <a class="el" href="glvis_8cpp.html#a928495140935d9d6ce0a100550473140">np</a>, const char *mesh_prefix, const char *sol_prefix, Mesh **mesh_p, GridFunction **sol_p, int <a class="el" href="glvis_8cpp.html#a1e4ea49673edb5f51d13e36b86dc19df">keep_attr</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#a06c61d2d84e2290656e667142033d735">ReadInputStreams</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#a494be29b95e3ab4477be0a2786fa0a8e">CloseInputStreams</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">GridFunction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#a88dfe68223b173c6fcc098f71bdf3bc4">ProjectVectorFEGridFunction</a> (GridFunction *)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#a88c57f62b7c0e56e2a97afc652519659">ReadStream</a> (istream &amp;is, const char data_type[])</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#ab318e333a53a4c136b8008ebf482b8b8">InitVis</a> (int t)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#af94f1bc876c02a9c075cd150a676fbd9">VisStream</a> (istream *iss, char *data_type)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#ac3e48b2dc64d514de6092b9f69277fe7">StartVisualization</a> (int field_type)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#a7338b117485f5eb4d304888a33049e31">ScriptReadSolution</a> (istream &amp;scr, Mesh **mp, GridFunction **sp)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#a8ec6fe13b6bca83eb47214026b2cd9cb">ScriptReadParSolution</a> (istream &amp;scr, Mesh **mp, GridFunction **sp)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#a882a2a898bd3baae6acdc76051c56227">ScriptReadDisplMesh</a> (istream &amp;scr, Mesh **mp, GridFunction **sp)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#a599c7479747f6bcd66d9462aaae275d3">ExecuteScriptCommand</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#a24d99f34f0427dd99ee37bc356e8973a">ScriptControl</a> ()</td></tr>
@@ -112,13 +121,13 @@ Variables</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#ad5f3d37af3d7cf7c7bb37557d671277d">solu</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#a84f9b469e4c4f34f5ec4f988bf0462f6">solv</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#ad1c82108bcbb85f7ee42a74277a45f8f">solw</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">Vector *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#a1014d99d63c917d8bc76907ed803be21">data</a> [3] = {NULL, NULL, NULL}</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#a0714f6a875376bdae0e5afc025374521">is_gf</a> = 0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#acdd941cdcf1e0ea2f8232cf335455427">gf_component</a> = -1</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">GridFunction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#a25f770a09ffb9eedb1bd5cea6429b871">grid_f</a> = NULL</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#a4b2065dfde212b686b1f4b5c2e176aae">mac</a> = 0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#aa1b4446661b06b47fd9210f5c0790b6f">viscount</a> = 0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#acff48e064c2a8bd9e14f5215c7af4042">save_coloring</a> = 0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#a1e4ea49673edb5f51d13e36b86dc19df">keep_attr</a> = 0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#a9ce11c4941669bb54ef502b68af07ec4">window_x</a> = 0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#a62627cc91e2bb07cf1033188a9863bfc">window_y</a> = 0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#a59f74fee0c8a623650109c9fb35d4fae">window_w</a> = 400</td></tr>
@@ -131,8 +140,31 @@ Variables</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Vector *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#a6541d4ec47f9c1b3cd475b2e1ed73262">init_nodes</a> = NULL</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#a595e4cfb0d88ad5063879cfd71fee1d3">scr_min_val</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#af3b4b81d02c5ed6da83ef0f3a3c62669">scr_max_val</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Array&lt; istream * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="glvis_8cpp.html#a9d62f9664bbd5739f2fa08478900cfe2">input_streams</a></td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
+<a class="anchor" id="a494be29b95e3ab4477be0a2786fa0a8e"></a><!-- doxytag: member="glvis.cpp::CloseInputStreams" ref="a494be29b95e3ab4477be0a2786fa0a8e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CloseInputStreams </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l01415">1415</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+
+<p>References <a class="el" href="glvis_8cpp_source.html#l00060">input_streams</a>.</p>
+
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a599c7479747f6bcd66d9462aaae275d3"></a><!-- doxytag: member="glvis.cpp::ExecuteScriptCommand" ref="a599c7479747f6bcd66d9462aaae275d3" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -147,11 +179,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00317">317</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00376">376</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>References <a class="el" href="openglvis_8cpp_source.html#l00081">VisualizationScene::Draw()</a>, <a class="el" href="vsdata_8hpp_source.html#l00094">VisualizationSceneScalarData::EventUpdateColors()</a>, <a class="el" href="vsdata_8hpp_source.html#l00113">VisualizationSceneScalarData::GetMaxV()</a>, <a class="el" href="vsdata_8hpp_source.html#l00112">VisualizationSceneScalarData::GetMinV()</a>, <a class="el" href="glvis_8cpp_source.html#l00040">grid_f</a>, <a class="el" href="glvis_8cpp_source.html#l00036">keys</a>, <a class="el" href="vsdata_8hpp_source.html#l00071">VisualizationSceneScalarData::light</a>, <a class="el" href="glvis_8cpp_source.html#l00037">mesh</a>, <a class="el" href="aux__vis_8cpp_source.html#l01065">MoveResizeWindow()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00369">MyExpose()</a>, <a class="el" href="vssolution3d_8cpp_source.html#l00633">VisualizationSceneSolution3d::NewMeshAndSolution()</a>, <a class="el" href="vsvector_8cpp_source.html#l00330">VisualizationSceneVector::NewMeshAndSolution()</a>, <a class="el" href="vssolution_8cpp_source.html#l00431">VisualizationSceneSolution::NewMeshAndSolution()</a>, <a class="el" href="openglvis_8hpp_source.html#l00027">VisualizationScene::OrthogonalProjection</a>, <a class="el" href="glvis_8cpp_source.html#l00054">scr_level</a>, <a class="el" href="glvis_8cpp_source.html#l00056">scr_max_val</a>, <a class="el" href="glvis_8cpp_source.html#l00056">scr_min_val</a>, <a class="el" href="glvis_8cpp_source.html#l00052">scr_sol_autoscale</a>, <a class="el" href="aux__vis_8cpp_source.html#l00690">Screenshot()</a>, <a class="el" href="glvis_8cpp_source.html#l00051">script</a>, <a class="el" href="glvis_8cpp_source.html#l00260">ScriptReadDisplMesh()</a>, <a class="el" href="glvis_8cpp_source.html#l00225">ScriptReadSolution()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00189">SendKeySequence()</a>, <a class="el" href="palettes_8hpp_source.html#l03127">Set_Palette()</a>, <a class="el" href="classVisualizationSceneScalarData.html#a5091aaaead0699771bac466b2082943d">VisualizationSceneScalarData::SetRefineFactors()</a>, <a class="el" href="classVisualizationSceneScalarData.html#a5c8540d22e1ccf3deb3cd35e8a6317f0">VisualizationSceneScalarData::SetShading()</a>, <a class="el" href="vsdata_8cpp_source.html#l01047">VisualizationSceneScalarData::SetValueRange()</a>, <a class="el" href="openglvis_8cpp_source.html#l00083">VisualizationScene::SetView()</a>, <a class="el" href="glvis_8cpp_source.html#l00038">sol</a>, <a class="el" href="classVisualizationSceneScalarData.html#a526a599d70883aa38d47fb2195da5aa0">VisualizationSceneScalarData::ToggleAttributes()</a>, <a class="el" href="openglvis_8hpp_source.html#l00029">VisualizationScene::ViewCenterX</a>, <a class="el" href="openglvis_8hpp_source.html#l00029">VisualizationScene::ViewCenterY</a>, <a class="el" href="glvis_8cpp_source.html#l00033">vs</a>, <a class="el" href="glvis_8cpp_source.html#l00048">window_h</a>, <a class="el" href="glvis_8cpp_source.html#l00047">window_w</a>, <a class="el" href="glvis_8cpp_source.html#l00045">window_x</a>, <a class="el" href="glvis_8cpp_source.html#l00046">window_y</a>, and <a class="el" href="openglvis_8cpp_source.html#l00094">VisualizationScene::Zoom()</a>.</p>
+<p>References <a class="el" href="openglvis_8cpp_source.html#l00081">VisualizationScene::Draw()</a>, <a class="el" href="vsdata_8hpp_source.html#l00094">VisualizationSceneScalarData::EventUpdateColors()</a>, <a class="el" href="vsdata_8hpp_source.html#l00113">VisualizationSceneScalarData::GetMaxV()</a>, <a class="el" href="vsdata_8hpp_source.html#l00112">VisualizationSceneScalarData::GetMinV()</a>, <a class="el" href="glvis_8cpp_source.html#l00041">grid_f</a>, <a class="el" href="glvis_8cpp_source.html#l00037">keys</a>, <a class="el" href="vsdata_8hpp_source.html#l00071">VisualizationSceneScalarData::light</a>, <a class="el" href="glvis_8cpp_source.html#l00038">mesh</a>, <a class="el" href="aux__vis_8cpp_source.html#l01117">MoveResizeWindow()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00367">MyExpose()</a>, <a class="el" href="vsvector3d_8cpp_source.html#l00434">VisualizationSceneVector3d::NewMeshAndSolution()</a>, <a class="el" href="vssolution3d_8cpp_source.html#l00633">VisualizationSceneSolution3d::NewMeshAndSolution()</a>, <a class="el" href="vsvector_8cpp_source.html#l00340">VisualizationSceneVector::NewMeshAndSolution()</a>, <a class="el" href="vssolution_8cpp_source.html#l00434">VisualizationSceneSolution::NewMeshAndSolution()</a>, <a class="el" href="openglvis_8hpp_source.html#l00027">VisualizationScene::OrthogonalProjection</a>, <a class="el" href="glvis_8cpp_source.html#l01425">ProjectVectorFEGridFunction()</a>, <a class="el" href="openglvis_8hpp_source.html#l00034">VisualizationScene::rotmat</a>, <a class="el" href="glvis_8cpp_source.html#l00056">scr_level</a>, <a class="el" href="glvis_8cpp_source.html#l00058">scr_max_val</a>, <a class="el" href="glvis_8cpp_source.html#l00058">scr_min_val</a>, <a class="el" href="glvis_8cpp_source.html#l00054">scr_sol_autoscale</a>, <a class="el" href="aux__vis_8cpp_source.html#l00688">Screenshot()</a>, <a class="el" href="glvis_8cpp_source.html#l00053">script</a>, <a class="el" href="glvis_8cpp_source.html#l00319">ScriptReadDisplMesh()</a>, <a class="el" href="glvis_8cpp_source.html#l00294">ScriptReadParSolution()</a>, <a class="el" href="glvis_8cpp_source.html#l00259">ScriptReadSolution()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00187">SendKeySequence()</a>, <a class="el" href="palettes_8hpp_source.html#l03127">Set_Palette()</a>, <a class="el" href="classVisualizationSceneScalarData.html#a5091aaaead0699771bac466b2082943d">VisualizationSceneScalarData::SetRefineFactors()</a>, <a class="el" href="classVisualizationSceneScalarData.html#a5c8540d22e1ccf3deb3cd35e8a6317f0">VisualizationSceneScalarData::SetShading()</a>, <a class="el" href="vsdata_8cpp_source.html#l01051">VisualizationSceneScalarData::SetValueRange()</a>, <a class="el" href="openglvis_8cpp_source.html#l00083">VisualizationScene::SetView()</a>, <a class="el" href="glvis_8cpp_source.html#l00039">sol</a>, <a class="el" href="classVisualizationSceneScalarData.html#a526a599d70883aa38d47fb2195da5aa0">VisualizationSceneScalarData::ToggleAttributes()</a>, <a class="el" href="openglvis_8hpp_source.html#l00029">VisualizationScene::ViewCenterX</a>, <a class="el" href="openglvis_8hpp_source.html#l00029">VisualizationScene::ViewCenterY</a>, <a class="el" href="glvis_8cpp_source.html#l00034">vs</a>, <a class="el" href="glvis_8cpp_source.html#l00050">window_h</a>, <a class="el" href="glvis_8cpp_source.html#l00049">window_w</a>, <a class="el" href="glvis_8cpp_source.html#l00047">window_x</a>, <a class="el" href="glvis_8cpp_source.html#l00048">window_y</a>, and <a class="el" href="openglvis_8cpp_source.html#l00094">VisualizationScene::Zoom()</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00643">ScriptIdleFunc()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00724">ScriptIdleFunc()</a>.</p>
 
 </div>
 </div>
@@ -170,11 +202,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00064">64</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00173">173</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>, <a class="el" href="glvis_8cpp_source.html#l00048">window_h</a>, <a class="el" href="glvis_8cpp_source.html#l00049">window_titles</a>, <a class="el" href="glvis_8cpp_source.html#l00047">window_w</a>, <a class="el" href="glvis_8cpp_source.html#l00045">window_x</a>, and <a class="el" href="glvis_8cpp_source.html#l00046">window_y</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>, <a class="el" href="glvis_8cpp_source.html#l00050">window_h</a>, <a class="el" href="glvis_8cpp_source.html#l00051">window_titles</a>, <a class="el" href="glvis_8cpp_source.html#l00049">window_w</a>, <a class="el" href="glvis_8cpp_source.html#l00047">window_x</a>, and <a class="el" href="glvis_8cpp_source.html#l00048">window_y</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>, <a class="el" href="glvis_8cpp_source.html#l00664">PlayScript()</a>, and <a class="el" href="glvis_8cpp_source.html#l00071">VisStream()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>, and <a class="el" href="glvis_8cpp_source.html#l00180">StartVisualization()</a>.</p>
 
 </div>
 </div>
@@ -203,9 +235,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00770">770</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00816">816</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>References <a class="el" href="glvis_8cpp_source.html#l00038">data</a>, <a class="el" href="glvis_8cpp.html#aa006daaf11f1e2e45a6ababaf463212b">environ</a>, <a class="el" href="glvis_8cpp_source.html#l00039">gf_component</a>, <a class="el" href="glvis_8cpp_source.html#l00040">grid_f</a>, <a class="el" href="glvis_8cpp_source.html#l00064">InitVis()</a>, <a class="el" href="glvis_8cpp_source.html#l00035">input</a>, <a class="el" href="glvis_8cpp_source.html#l00039">is_gf</a>, <a class="el" href="glvis_8cpp_source.html#l00036">keys</a>, <a class="el" href="aux__vis_8cpp_source.html#l00312">KillVisualization()</a>, <a class="el" href="vsdata_8hpp_source.html#l00071">VisualizationSceneScalarData::light</a>, <a class="el" href="glvis_8cpp_source.html#l00041">mac</a>, <a class="el" href="glvis_8cpp_source.html#l00037">mesh</a>, <a class="el" href="glvis_8cpp_source.html#l00036">mesh_file</a>, <a class="el" href="glvis_8cpp_source.html#l00035">np</a>, <a class="el" href="openglvis_8hpp_source.html#l00027">VisualizationScene::OrthogonalProjection</a>, <a class="el" href="glvis_8cpp_source.html#l00664">PlayScript()</a>, <a class="el" href="glvis_8cpp_source.html#l00035">portnum</a>, <a class="el" href="vssolution3d_8cpp_source.html#l01226">VisualizationSceneSolution3d::Prepare()</a>, <a class="el" href="glvis_8cpp_source.html#l01231">ReadParallel()</a>, <a class="el" href="glvis_8cpp_source.html#l01116">ReadSerial()</a>, <a class="el" href="glvis_8cpp_source.html#l00043">save_coloring</a>, <a class="el" href="material_8cpp_source.html#l00249">Set_Material_And_Light()</a>, <a class="el" href="palettes_8hpp_source.html#l03127">Set_Palette()</a>, <a class="el" href="vssolution3d_8hpp_source.html#l00057">VisualizationSceneSolution3d::SetGridFunction()</a>, <a class="el" href="vssolution_8hpp_source.html#l00059">VisualizationSceneSolution::SetGridFunction()</a>, <a class="el" href="classVisualizationSceneScalarData.html#a5091aaaead0699771bac466b2082943d">VisualizationSceneScalarData::SetRefineFactors()</a>, <a class="el" href="vsdata_8cpp_source.html#l01047">VisualizationSceneScalarData::SetValueRange()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00290">SetVisualizationScene()</a>, <a class="el" href="glvis_8cpp_source.html#l00038">sol</a>, <a class="el" href="glvis_8cpp_source.html#l00036">sol_file</a>, <a class="el" href="glvis_8cpp_source.html#l00038">solu</a>, <a class="el" href="glvis_8cpp_source.html#l00038">solv</a>, <a class="el" href="glvis_8cpp_source.html#l00038">solw</a>, <a class="el" href="vsdata_8hpp_source.html#l00137">VisualizationSceneScalarData::ToggleDrawAxes()</a>, <a class="el" href="vssolution3d_8cpp_source.html#l00767">VisualizationSceneSolution3d::ToggleDrawMesh()</a>, <a class="el" href="vssolution3d_8cpp_source.html#l00684">VisualizationSceneSolution3d::ToggleShading()</a>, <a class="el" href="vssolution_8cpp_source.html#l00570">VisualizationSceneSolution::ToggleShading()</a>, <a class="el" href="glvis_8cpp_source.html#l00042">viscount</a>, <a class="el" href="glvis_8cpp_source.html#l00071">VisStream()</a>, and <a class="el" href="openglvis_8cpp_source.html#l00094">VisualizationScene::Zoom()</a>.</p>
+<p>References <a class="el" href="glvis_8cpp_source.html#l01415">CloseInputStreams()</a>, <a class="el" href="glvis_8cpp.html#aa006daaf11f1e2e45a6ababaf463212b">environ</a>, <a class="el" href="glvis_8cpp_source.html#l00040">gf_component</a>, <a class="el" href="glvis_8cpp_source.html#l00041">grid_f</a>, <a class="el" href="glvis_8cpp_source.html#l00173">InitVis()</a>, <a class="el" href="glvis_8cpp_source.html#l00036">input</a>, <a class="el" href="glvis_8cpp_source.html#l00060">input_streams</a>, <a class="el" href="glvis_8cpp_source.html#l00040">is_gf</a>, <a class="el" href="glvis_8cpp_source.html#l00045">keep_attr</a>, <a class="el" href="glvis_8cpp_source.html#l00037">keys</a>, <a class="el" href="aux__vis_8cpp_source.html#l00310">KillVisualization()</a>, <a class="el" href="vsdata_8hpp_source.html#l00071">VisualizationSceneScalarData::light</a>, <a class="el" href="glvis_8cpp_source.html#l00042">mac</a>, <a class="el" href="glvis_8cpp_source.html#l00038">mesh</a>, <a class="el" href="glvis_8cpp_source.html#l00037">mesh_file</a>, <a class="el" href="glvis_8cpp_source.html#l00036">np</a>, <a class="el" href="openglvis_8hpp_source.html#l00027">VisualizationScene::OrthogonalProjection</a>, <a class="el" href="glvis_8cpp_source.html#l00745">PlayScript()</a>, <a class="el" href="glvis_8cpp_source.html#l00036">portnum</a>, <a class="el" href="vssolution3d_8cpp_source.html#l01227">VisualizationSceneSolution3d::Prepare()</a>, <a class="el" href="glvis_8cpp_source.html#l01425">ProjectVectorFEGridFunction()</a>, <a class="el" href="glvis_8cpp_source.html#l01381">ReadInputStreams()</a>, <a class="el" href="glvis_8cpp_source.html#l01288">ReadParallel()</a>, <a class="el" href="glvis_8cpp_source.html#l01163">ReadSerial()</a>, <a class="el" href="glvis_8cpp_source.html#l00085">ReadStream()</a>, <a class="el" href="glvis_8cpp_source.html#l00044">save_coloring</a>, <a class="el" href="material_8cpp_source.html#l00249">Set_Material_And_Light()</a>, <a class="el" href="palettes_8hpp_source.html#l03127">Set_Palette()</a>, <a class="el" href="vssolution3d_8hpp_source.html#l00057">VisualizationSceneSolution3d::SetGridFunction()</a>, <a class="el" href="vssolution_8hpp_source.html#l00059">VisualizationSceneSolution::SetGridFunction()</a>, <a class="el" href="classVisualizationSceneScalarData.html#a5091aaaead0699771bac466b2082943d">VisualizationSceneScalarData::SetRefineFactors()</a>, <a class="el" href="vsdata_8cpp_source.html#l01051">VisualizationSceneScalarData::SetValueRange()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00288">SetVisualizationScene()</a>, <a class="el" href="glvis_8cpp_source.html#l00039">sol</a>, <a class="el" href="glvis_8cpp_source.html#l00037">sol_file</a>, <a class="el" href="glvis_8cpp_source.html#l00039">solu</a>, <a class="el" href="glvis_8cpp_source.html#l00039">solv</a>, <a class="el" href="glvis_8cpp_source.html#l00039">solw</a>, <a class="el" href="glvis_8cpp_source.html#l00180">StartVisualization()</a>, <a class="el" href="vsdata_8hpp_source.html#l00137">VisualizationSceneScalarData::ToggleDrawAxes()</a>, <a class="el" href="vssolution3d_8cpp_source.html#l00767">VisualizationSceneSolution3d::ToggleDrawMesh()</a>, <a class="el" href="vssolution3d_8cpp_source.html#l00684">VisualizationSceneSolution3d::ToggleShading()</a>, <a class="el" href="vssolution_8cpp_source.html#l00574">VisualizationSceneSolution::ToggleShading()</a>, <a class="el" href="glvis_8cpp_source.html#l00043">viscount</a>, and <a class="el" href="openglvis_8cpp_source.html#l00094">VisualizationScene::Zoom()</a>.</p>
 
 </div>
 </div>
@@ -224,11 +256,56 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00664">664</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00745">745</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>References <a class="el" href="glvis_8cpp_source.html#l00040">grid_f</a>, <a class="el" href="glvis_8cpp_source.html#l00055">init_nodes</a>, <a class="el" href="glvis_8cpp_source.html#l00064">InitVis()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00312">KillVisualization()</a>, <a class="el" href="glvis_8cpp_source.html#l00037">mesh</a>, <a class="el" href="glvis_8cpp_source.html#l00054">scr_level</a>, <a class="el" href="glvis_8cpp_source.html#l00056">scr_max_val</a>, <a class="el" href="glvis_8cpp_source.html#l00056">scr_min_val</a>, <a class="el" href="glvis_8cpp_source.html#l00053">scr_running</a>, <a class="el" href="glvis_8cpp_source.html#l00051">script</a>, <a class="el" href="glvis_8cpp_source.html#l00650">ScriptControl()</a>, <a class="el" href="glvis_8cpp_source.html#l00260">ScriptReadDisplMesh()</a>, <a class="el" href="glvis_8cpp_source.html#l00225">ScriptReadSolution()</a>, <a class="el" href="vssolution3d_8hpp_source.html#l00057">VisualizationSceneSolution3d::SetGridFunction()</a>, <a class="el" href="vssolution_8hpp_source.html#l00059">VisualizationSceneSolution::SetGridFunction()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00290">SetVisualizationScene()</a>, <a class="el" href="glvis_8cpp_source.html#l00038">sol</a>, <a class="el" href="glvis_8cpp_source.html#l00048">window_h</a>, <a class="el" href="glvis_8cpp_source.html#l00047">window_w</a>, <a class="el" href="glvis_8cpp_source.html#l00045">window_x</a>, and <a class="el" href="glvis_8cpp_source.html#l00046">window_y</a>.</p>
+<p>References <a class="el" href="glvis_8cpp_source.html#l00041">grid_f</a>, <a class="el" href="glvis_8cpp_source.html#l00057">init_nodes</a>, <a class="el" href="glvis_8cpp_source.html#l00037">keys</a>, <a class="el" href="glvis_8cpp_source.html#l00038">mesh</a>, <a class="el" href="glvis_8cpp_source.html#l00056">scr_level</a>, <a class="el" href="glvis_8cpp_source.html#l00058">scr_max_val</a>, <a class="el" href="glvis_8cpp_source.html#l00058">scr_min_val</a>, <a class="el" href="glvis_8cpp_source.html#l00055">scr_running</a>, <a class="el" href="glvis_8cpp_source.html#l00053">script</a>, <a class="el" href="glvis_8cpp_source.html#l00731">ScriptControl()</a>, <a class="el" href="glvis_8cpp_source.html#l00319">ScriptReadDisplMesh()</a>, <a class="el" href="glvis_8cpp_source.html#l00294">ScriptReadParSolution()</a>, <a class="el" href="glvis_8cpp_source.html#l00259">ScriptReadSolution()</a>, <a class="el" href="glvis_8cpp_source.html#l00180">StartVisualization()</a>, <a class="el" href="glvis_8cpp_source.html#l00050">window_h</a>, <a class="el" href="glvis_8cpp_source.html#l00049">window_w</a>, <a class="el" href="glvis_8cpp_source.html#l00047">window_x</a>, and <a class="el" href="glvis_8cpp_source.html#l00048">window_y</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a88dfe68223b173c6fcc098f71bdf3bc4"></a><!-- doxytag: member="glvis.cpp::ProjectVectorFEGridFunction" ref="a88dfe68223b173c6fcc098f71bdf3bc4" args="(GridFunction *)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GridFunction * ProjectVectorFEGridFunction </td>
+          <td>(</td>
+          <td class="paramtype">GridFunction *&#160;</td>
+          <td class="paramname"><em>gf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l01425">1425</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+
+<p>References <a class="el" href="glvis_8cpp_source.html#l00038">mesh</a>.</p>
+
+<p>Referenced by <a class="el" href="threads_8cpp_source.html#l00102">GLVisCommand::Execute()</a>, <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>, <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>, and <a class="el" href="glvis_8cpp_source.html#l00180">StartVisualization()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a06c61d2d84e2290656e667142033d735"></a><!-- doxytag: member="glvis.cpp::ReadInputStreams" ref="a06c61d2d84e2290656e667142033d735" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ReadInputStreams </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l01381">1381</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+
+<p>References <a class="el" href="glvis_8cpp_source.html#l00041">grid_f</a>, <a class="el" href="glvis_8cpp_source.html#l00060">input_streams</a>, <a class="el" href="glvis_8cpp_source.html#l00045">keep_attr</a>, and <a class="el" href="glvis_8cpp_source.html#l00038">mesh</a>.</p>
+
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>.</p>
 
 </div>
 </div>
@@ -246,11 +323,68 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l01231">1231</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l01288">1288</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>References <a class="el" href="glvis_8cpp_source.html#l00035">input</a>, <a class="el" href="glvis_8cpp_source.html#l00037">mesh</a>, <a class="el" href="glvis_8cpp_source.html#l00036">mesh_file</a>, <a class="el" href="glvis_8cpp_source.html#l00035">np</a>, <a class="el" href="glvis_8cpp_source.html#l00038">sol</a>, <a class="el" href="glvis_8cpp_source.html#l00036">sol_file</a>, <a class="el" href="glvis_8cpp_source.html#l00038">solu</a>, <a class="el" href="glvis_8cpp_source.html#l00038">solv</a>, and <a class="el" href="glvis_8cpp_source.html#l00038">solw</a>.</p>
+<p>References <a class="el" href="glvis_8cpp_source.html#l00041">grid_f</a>, <a class="el" href="glvis_8cpp_source.html#l00040">is_gf</a>, <a class="el" href="glvis_8cpp_source.html#l00045">keep_attr</a>, <a class="el" href="glvis_8cpp_source.html#l00038">mesh</a>, <a class="el" href="glvis_8cpp_source.html#l00037">mesh_file</a>, <a class="el" href="glvis_8cpp_source.html#l00036">np</a>, <a class="el" href="glvis_8cpp_source.html#l01311">ReadParMeshAndGridFunction()</a>, <a class="el" href="glvis_8cpp_source.html#l01214">SetGridFunction()</a>, <a class="el" href="glvis_8cpp_source.html#l01246">SetMeshSolution()</a>, and <a class="el" href="glvis_8cpp_source.html#l00037">sol_file</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a65939dc852215a33a00f041a3da0e002"></a><!-- doxytag: member="glvis.cpp::ReadParMeshAndGridFunction" ref="a65939dc852215a33a00f041a3da0e002" args="(int np, const char *mesh_prefix, const char *sol_prefix, Mesh **mesh_p, GridFunction **sol_p, int keep_attr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ReadParMeshAndGridFunction </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>np</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>mesh_prefix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>sol_prefix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Mesh **&#160;</td>
+          <td class="paramname"><em>mesh_p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GridFunction **&#160;</td>
+          <td class="paramname"><em>sol_p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>keep_attr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l01311">1311</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+
+<p>References <a class="el" href="glvis_8cpp_source.html#l00036">np</a>.</p>
+
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l01288">ReadParallel()</a>, and <a class="el" href="glvis_8cpp_source.html#l00294">ScriptReadParSolution()</a>.</p>
 
 </div>
 </div>
@@ -268,11 +402,44 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l01116">1116</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l01163">1163</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>References <a class="el" href="glvis_8cpp_source.html#l00039">gf_component</a>, <a class="el" href="glvis_8cpp_source.html#l00040">grid_f</a>, <a class="el" href="glvis_8cpp_source.html#l00035">input</a>, <a class="el" href="glvis_8cpp_source.html#l00039">is_gf</a>, <a class="el" href="glvis_8cpp_source.html#l00037">mesh</a>, <a class="el" href="glvis_8cpp_source.html#l00036">mesh_file</a>, <a class="el" href="glvis_8cpp_source.html#l00043">save_coloring</a>, <a class="el" href="glvis_8cpp_source.html#l00038">sol</a>, <a class="el" href="glvis_8cpp_source.html#l00036">sol_file</a>, <a class="el" href="glvis_8cpp_source.html#l00038">solu</a>, <a class="el" href="glvis_8cpp_source.html#l00038">solv</a>, and <a class="el" href="glvis_8cpp_source.html#l00038">solw</a>.</p>
+<p>References <a class="el" href="glvis_8cpp_source.html#l00041">grid_f</a>, <a class="el" href="glvis_8cpp_source.html#l00036">input</a>, <a class="el" href="glvis_8cpp_source.html#l00040">is_gf</a>, <a class="el" href="glvis_8cpp_source.html#l00038">mesh</a>, <a class="el" href="glvis_8cpp_source.html#l00037">mesh_file</a>, <a class="el" href="glvis_8cpp_source.html#l01214">SetGridFunction()</a>, <a class="el" href="glvis_8cpp_source.html#l01246">SetMeshSolution()</a>, <a class="el" href="glvis_8cpp_source.html#l00039">sol</a>, <a class="el" href="glvis_8cpp_source.html#l00037">sol_file</a>, <a class="el" href="glvis_8cpp_source.html#l00039">solu</a>, <a class="el" href="glvis_8cpp_source.html#l00039">solv</a>, and <a class="el" href="glvis_8cpp_source.html#l00039">solw</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a88c57f62b7c0e56e2a97afc652519659"></a><!-- doxytag: member="glvis.cpp::ReadStream" ref="a88c57f62b7c0e56e2a97afc652519659" args="(istream &amp;is, const char data_type[])" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ReadStream </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>is</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>data_type</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00085">85</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+
+<p>References <a class="el" href="glvis_8cpp_source.html#l00041">grid_f</a>, <a class="el" href="glvis_8cpp_source.html#l00037">keys</a>, <a class="el" href="glvis_8cpp_source.html#l00038">mesh</a>, <a class="el" href="glvis_8cpp_source.html#l00039">sol</a>, <a class="el" href="glvis_8cpp_source.html#l00039">solu</a>, <a class="el" href="glvis_8cpp_source.html#l00039">solv</a>, and <a class="el" href="glvis_8cpp_source.html#l00039">solw</a>.</p>
+
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>.</p>
 
 </div>
 </div>
@@ -290,11 +457,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00650">650</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00731">731</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00401">AddIdleFunc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00407">RemoveIdleFunc()</a>, <a class="el" href="glvis_8cpp_source.html#l00053">scr_running</a>, and <a class="el" href="glvis_8cpp_source.html#l00643">ScriptIdleFunc()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00399">AddIdleFunc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00405">RemoveIdleFunc()</a>, <a class="el" href="glvis_8cpp_source.html#l00055">scr_running</a>, and <a class="el" href="glvis_8cpp_source.html#l00724">ScriptIdleFunc()</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00664">PlayScript()</a>, and <a class="el" href="glvis_8cpp_source.html#l00643">ScriptIdleFunc()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00745">PlayScript()</a>, and <a class="el" href="glvis_8cpp_source.html#l00724">ScriptIdleFunc()</a>.</p>
 
 </div>
 </div>
@@ -312,11 +479,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00643">643</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00724">724</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>References <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>, <a class="el" href="glvis_8cpp_source.html#l00054">scr_level</a>, and <a class="el" href="glvis_8cpp_source.html#l00650">ScriptControl()</a>.</p>
+<p>References <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>, <a class="el" href="glvis_8cpp_source.html#l00056">scr_level</a>, and <a class="el" href="glvis_8cpp_source.html#l00731">ScriptControl()</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00650">ScriptControl()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00731">ScriptControl()</a>.</p>
 
 </div>
 </div>
@@ -351,11 +518,50 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00260">260</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00319">319</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>References <a class="el" href="glvis_8cpp_source.html#l00055">init_nodes</a>, and <a class="el" href="glvis_8cpp_source.html#l00037">mesh</a>.</p>
+<p>References <a class="el" href="glvis_8cpp_source.html#l00057">init_nodes</a>, and <a class="el" href="glvis_8cpp_source.html#l00038">mesh</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>, and <a class="el" href="glvis_8cpp_source.html#l00664">PlayScript()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>, and <a class="el" href="glvis_8cpp_source.html#l00745">PlayScript()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8ec6fe13b6bca83eb47214026b2cd9cb"></a><!-- doxytag: member="glvis.cpp::ScriptReadParSolution" ref="a8ec6fe13b6bca83eb47214026b2cd9cb" args="(istream &amp;scr, Mesh **mp, GridFunction **sp)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ScriptReadParSolution </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>scr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Mesh **&#160;</td>
+          <td class="paramname"><em>mp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GridFunction **&#160;</td>
+          <td class="paramname"><em>sp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00294">294</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+
+<p>References <a class="el" href="glvis_8cpp_source.html#l00045">keep_attr</a>, <a class="el" href="glvis_8cpp_source.html#l00036">np</a>, and <a class="el" href="glvis_8cpp_source.html#l01311">ReadParMeshAndGridFunction()</a>.</p>
+
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>, and <a class="el" href="glvis_8cpp_source.html#l00745">PlayScript()</a>.</p>
 
 </div>
 </div>
@@ -390,9 +596,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00225">225</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00259">259</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>, and <a class="el" href="glvis_8cpp_source.html#l00664">PlayScript()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>, and <a class="el" href="glvis_8cpp_source.html#l00745">PlayScript()</a>.</p>
 
 </div>
 </div>
@@ -413,61 +619,78 @@ Variables</h2></td></tr>
 
 <p>Definition at line <a class="el" href="palettes_8hpp_source.html#l03127">3127</a> of file <a class="el" href="palettes_8hpp_source.html">palettes.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>, <a class="el" href="vssolution3d_8cpp_source.html#l00506">VisualizationSceneSolution3d::Init()</a>, <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>, <a class="el" href="palettes_8hpp_source.html#l03136">Next_RGB_Palette()</a>, and <a class="el" href="palettes_8hpp_source.html#l03141">Select_New_RGB_Palette()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>, <a class="el" href="vssolution3d_8cpp_source.html#l00506">VisualizationSceneSolution3d::Init()</a>, <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>, <a class="el" href="palettes_8hpp_source.html#l03136">Next_RGB_Palette()</a>, and <a class="el" href="palettes_8hpp_source.html#l03141">Select_New_RGB_Palette()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af94f1bc876c02a9c075cd150a676fbd9"></a><!-- doxytag: member="glvis.cpp::VisStream" ref="af94f1bc876c02a9c075cd150a676fbd9" args="(istream *iss, char *data_type)" -->
+<a class="anchor" id="aa80beae8f5d17fe6ac7719d87b351d80"></a><!-- doxytag: member="glvis.cpp::SetGridFunction" ref="aa80beae8f5d17fe6ac7719d87b351d80" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void VisStream </td>
+          <td class="memname">void SetGridFunction </td>
           <td>(</td>
-          <td class="paramtype">istream *&#160;</td>
-          <td class="paramname"><em>iss</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>data_type</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00071">71</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l01214">1214</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>References <a class="el" href="glvis_8cpp_source.html#l00038">data</a>, <a class="el" href="glvis_8cpp_source.html#l00040">grid_f</a>, <a class="el" href="glvis_8cpp_source.html#l00064">InitVis()</a>, <a class="el" href="glvis_8cpp_source.html#l00036">keys</a>, <a class="el" href="aux__vis_8cpp_source.html#l00312">KillVisualization()</a>, <a class="el" href="glvis_8cpp_source.html#l00037">mesh</a>, <a class="el" href="aux__vis_8cpp_source.html#l00290">SetVisualizationScene()</a>, <a class="el" href="glvis_8cpp_source.html#l00038">sol</a>, <a class="el" href="glvis_8cpp_source.html#l00038">solu</a>, <a class="el" href="glvis_8cpp_source.html#l00038">solv</a>, and <a class="el" href="glvis_8cpp_source.html#l00038">solw</a>.</p>
+<p>References <a class="el" href="glvis_8cpp_source.html#l00040">gf_component</a>, <a class="el" href="glvis_8cpp_source.html#l00041">grid_f</a>, <a class="el" href="glvis_8cpp_source.html#l00036">input</a>, <a class="el" href="glvis_8cpp_source.html#l00038">mesh</a>, and <a class="el" href="glvis_8cpp_source.html#l00039">sol</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l01288">ReadParallel()</a>, and <a class="el" href="glvis_8cpp_source.html#l01163">ReadSerial()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ada5cc7ec76358b212f1392319df3842f"></a><!-- doxytag: member="glvis.cpp::SetMeshSolution" ref="ada5cc7ec76358b212f1392319df3842f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetMeshSolution </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l01246">1246</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+
+<p>References <a class="el" href="glvis_8cpp_source.html#l00041">grid_f</a>, <a class="el" href="glvis_8cpp_source.html#l00040">is_gf</a>, <a class="el" href="glvis_8cpp_source.html#l00038">mesh</a>, <a class="el" href="glvis_8cpp_source.html#l00044">save_coloring</a>, and <a class="el" href="glvis_8cpp_source.html#l00039">sol</a>.</p>
+
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l01288">ReadParallel()</a>, and <a class="el" href="glvis_8cpp_source.html#l01163">ReadSerial()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac3e48b2dc64d514de6092b9f69277fe7"></a><!-- doxytag: member="glvis.cpp::StartVisualization" ref="ac3e48b2dc64d514de6092b9f69277fe7" args="(int field_type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StartVisualization </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>field_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00180">180</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+
+<p>References <a class="el" href="threads_8cpp_source.html#l00018">glvis_command</a>, <a class="el" href="glvis_8cpp_source.html#l00041">grid_f</a>, <a class="el" href="glvis_8cpp_source.html#l00173">InitVis()</a>, <a class="el" href="glvis_8cpp_source.html#l00060">input_streams</a>, <a class="el" href="glvis_8cpp_source.html#l00045">keep_attr</a>, <a class="el" href="glvis_8cpp_source.html#l00037">keys</a>, <a class="el" href="aux__vis_8cpp_source.html#l00310">KillVisualization()</a>, <a class="el" href="glvis_8cpp_source.html#l00038">mesh</a>, <a class="el" href="glvis_8cpp_source.html#l01425">ProjectVectorFEGridFunction()</a>, <a class="el" href="glvis_8cpp_source.html#l00054">scr_sol_autoscale</a>, <a class="el" href="vssolution3d_8hpp_source.html#l00057">VisualizationSceneSolution3d::SetGridFunction()</a>, <a class="el" href="vssolution_8hpp_source.html#l00059">VisualizationSceneSolution::SetGridFunction()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00288">SetVisualizationScene()</a>, <a class="el" href="glvis_8cpp_source.html#l00039">sol</a>, <a class="el" href="glvis_8cpp_source.html#l00039">solu</a>, <a class="el" href="glvis_8cpp_source.html#l00039">solv</a>, <a class="el" href="glvis_8cpp_source.html#l00039">solw</a>, <a class="el" href="threads_8cpp_source.html#l00175">GLVisCommand::Terminate()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00837">ToggleThreads()</a>.</p>
+
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>, and <a class="el" href="glvis_8cpp_source.html#l00745">PlayScript()</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Variable Documentation</h2>
-<a class="anchor" id="a1014d99d63c917d8bc76907ed803be21"></a><!-- doxytag: member="glvis.cpp::data" ref="a1014d99d63c917d8bc76907ed803be21" args="[3]" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Vector * <a class="el" href="glvis_8cpp.html#a1014d99d63c917d8bc76907ed803be21">data</a>[3] = {NULL, NULL, NULL}</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00038">38</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
-
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>, and <a class="el" href="glvis_8cpp_source.html#l00071">VisStream()</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="aa006daaf11f1e2e45a6ababaf463212b"></a><!-- doxytag: member="glvis.cpp::environ" ref="aa006daaf11f1e2e45a6ababaf463212b" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -479,7 +702,7 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>.</p>
 
 </div>
 </div>
@@ -494,9 +717,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00039">39</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00040">40</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>, and <a class="el" href="glvis_8cpp_source.html#l01116">ReadSerial()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>, and <a class="el" href="glvis_8cpp_source.html#l01214">SetGridFunction()</a>.</p>
 
 </div>
 </div>
@@ -511,9 +734,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00040">40</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00041">41</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>, <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>, <a class="el" href="glvis_8cpp_source.html#l00664">PlayScript()</a>, <a class="el" href="glvis_8cpp_source.html#l01116">ReadSerial()</a>, and <a class="el" href="glvis_8cpp_source.html#l00071">VisStream()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>, <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>, <a class="el" href="glvis_8cpp_source.html#l00745">PlayScript()</a>, <a class="el" href="glvis_8cpp_source.html#l01381">ReadInputStreams()</a>, <a class="el" href="glvis_8cpp_source.html#l01288">ReadParallel()</a>, <a class="el" href="glvis_8cpp_source.html#l01163">ReadSerial()</a>, <a class="el" href="glvis_8cpp_source.html#l00085">ReadStream()</a>, <a class="el" href="glvis_8cpp_source.html#l01214">SetGridFunction()</a>, <a class="el" href="glvis_8cpp_source.html#l01246">SetMeshSolution()</a>, and <a class="el" href="glvis_8cpp_source.html#l00180">StartVisualization()</a>.</p>
 
 </div>
 </div>
@@ -528,9 +751,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00055">55</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00057">57</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00664">PlayScript()</a>, and <a class="el" href="glvis_8cpp_source.html#l00260">ScriptReadDisplMesh()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00745">PlayScript()</a>, and <a class="el" href="glvis_8cpp_source.html#l00319">ScriptReadDisplMesh()</a>.</p>
 
 </div>
 </div>
@@ -545,9 +768,26 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00035">35</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00036">36</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>, <a class="el" href="glvis_8cpp_source.html#l01231">ReadParallel()</a>, and <a class="el" href="glvis_8cpp_source.html#l01116">ReadSerial()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>, <a class="el" href="glvis_8cpp_source.html#l01163">ReadSerial()</a>, and <a class="el" href="glvis_8cpp_source.html#l01214">SetGridFunction()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9d62f9664bbd5739f2fa08478900cfe2"></a><!-- doxytag: member="glvis.cpp::input_streams" ref="a9d62f9664bbd5739f2fa08478900cfe2" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Array&lt;istream *&gt; <a class="el" href="glvis_8cpp.html#a9d62f9664bbd5739f2fa08478900cfe2">input_streams</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00060">60</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l01415">CloseInputStreams()</a>, <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>, <a class="el" href="glvis_8cpp_source.html#l01381">ReadInputStreams()</a>, and <a class="el" href="glvis_8cpp_source.html#l00180">StartVisualization()</a>.</p>
 
 </div>
 </div>
@@ -562,9 +802,26 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00039">39</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00040">40</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>, and <a class="el" href="glvis_8cpp_source.html#l01116">ReadSerial()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>, <a class="el" href="glvis_8cpp_source.html#l01288">ReadParallel()</a>, <a class="el" href="glvis_8cpp_source.html#l01163">ReadSerial()</a>, and <a class="el" href="glvis_8cpp_source.html#l01246">SetMeshSolution()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1e4ea49673edb5f51d13e36b86dc19df"></a><!-- doxytag: member="glvis.cpp::keep_attr" ref="a1e4ea49673edb5f51d13e36b86dc19df" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="glvis_8cpp.html#a1e4ea49673edb5f51d13e36b86dc19df">keep_attr</a> = 0</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00045">45</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="threads_8cpp_source.html#l00233">communication_thread::execute()</a>, <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>, <a class="el" href="glvis_8cpp_source.html#l01381">ReadInputStreams()</a>, <a class="el" href="glvis_8cpp_source.html#l01288">ReadParallel()</a>, <a class="el" href="glvis_8cpp_source.html#l00294">ScriptReadParSolution()</a>, and <a class="el" href="glvis_8cpp_source.html#l00180">StartVisualization()</a>.</p>
 
 </div>
 </div>
@@ -579,9 +836,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00036">36</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00037">37</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>, <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>, and <a class="el" href="glvis_8cpp_source.html#l00071">VisStream()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>, <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>, <a class="el" href="glvis_8cpp_source.html#l00745">PlayScript()</a>, <a class="el" href="glvis_8cpp_source.html#l00085">ReadStream()</a>, and <a class="el" href="glvis_8cpp_source.html#l00180">StartVisualization()</a>.</p>
 
 </div>
 </div>
@@ -596,9 +853,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00041">41</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00042">42</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>.</p>
 
 </div>
 </div>
@@ -613,9 +870,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00037">37</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00038">38</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l01283">VisualizationSceneScalarData::ComputeBdrAttrCenter()</a>, <a class="el" href="vsdata_8cpp_source.html#l01308">VisualizationSceneScalarData::ComputeElemAttrCenter()</a>, <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>, <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>, <a class="el" href="glvis_8cpp_source.html#l00664">PlayScript()</a>, <a class="el" href="glvis_8cpp_source.html#l01231">ReadParallel()</a>, <a class="el" href="glvis_8cpp_source.html#l01116">ReadSerial()</a>, <a class="el" href="glvis_8cpp_source.html#l00260">ScriptReadDisplMesh()</a>, <a class="el" href="vsdata_8cpp_source.html#l01228">VisualizationSceneScalarData::ShrinkPoints()</a>, <a class="el" href="glvis_8cpp_source.html#l00071">VisStream()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00910">VisualizationSceneScalarData::VisualizationSceneScalarData()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l01337">VisualizationSceneScalarData::ComputeBdrAttrCenter()</a>, <a class="el" href="vsdata_8cpp_source.html#l01362">VisualizationSceneScalarData::ComputeElemAttrCenter()</a>, <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>, <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>, <a class="el" href="glvis_8cpp_source.html#l00745">PlayScript()</a>, <a class="el" href="glvis_8cpp_source.html#l01425">ProjectVectorFEGridFunction()</a>, <a class="el" href="glvis_8cpp_source.html#l01381">ReadInputStreams()</a>, <a class="el" href="glvis_8cpp_source.html#l01288">ReadParallel()</a>, <a class="el" href="glvis_8cpp_source.html#l01163">ReadSerial()</a>, <a class="el" href="glvis_8cpp_source.html#l00085">ReadStream()</a>, <a class="el" href="glvis_8cpp_source.html#l00319">ScriptReadDisplMesh()</a>, <a class="el" href="glvis_8cpp_source.html#l01214">SetGridFunction()</a>, <a class="el" href="glvis_8cpp_source.html#l01246">SetMeshSolution()</a>, <a class="el" href="vsdata_8cpp_source.html#l01282">VisualizationSceneScalarData::ShrinkPoints()</a>, <a class="el" href="glvis_8cpp_source.html#l00180">StartVisualization()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00914">VisualizationSceneScalarData::VisualizationSceneScalarData()</a>.</p>
 
 </div>
 </div>
@@ -630,9 +887,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00036">36</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00037">37</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>, <a class="el" href="glvis_8cpp_source.html#l01231">ReadParallel()</a>, and <a class="el" href="glvis_8cpp_source.html#l01116">ReadSerial()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>, <a class="el" href="glvis_8cpp_source.html#l01288">ReadParallel()</a>, and <a class="el" href="glvis_8cpp_source.html#l01163">ReadSerial()</a>.</p>
 
 </div>
 </div>
@@ -647,9 +904,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00035">35</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00036">36</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>, and <a class="el" href="glvis_8cpp_source.html#l01231">ReadParallel()</a>.</p>
+<p>Referenced by <a class="el" href="threads_8cpp_source.html#l00233">communication_thread::execute()</a>, <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>, <a class="el" href="glvis_8cpp_source.html#l01288">ReadParallel()</a>, <a class="el" href="glvis_8cpp_source.html#l01311">ReadParMeshAndGridFunction()</a>, and <a class="el" href="glvis_8cpp_source.html#l00294">ScriptReadParSolution()</a>.</p>
 
 </div>
 </div>
@@ -664,9 +921,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00035">35</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00036">36</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>.</p>
 
 </div>
 </div>
@@ -681,9 +938,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00043">43</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00044">44</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>, and <a class="el" href="glvis_8cpp_source.html#l01116">ReadSerial()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>, and <a class="el" href="glvis_8cpp_source.html#l01246">SetMeshSolution()</a>.</p>
 
 </div>
 </div>
@@ -698,9 +955,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00054">54</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00056">56</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>, <a class="el" href="glvis_8cpp_source.html#l00664">PlayScript()</a>, and <a class="el" href="glvis_8cpp_source.html#l00643">ScriptIdleFunc()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>, <a class="el" href="glvis_8cpp_source.html#l00745">PlayScript()</a>, and <a class="el" href="glvis_8cpp_source.html#l00724">ScriptIdleFunc()</a>.</p>
 
 </div>
 </div>
@@ -715,9 +972,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00056">56</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00058">58</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>, and <a class="el" href="glvis_8cpp_source.html#l00664">PlayScript()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>, and <a class="el" href="glvis_8cpp_source.html#l00745">PlayScript()</a>.</p>
 
 </div>
 </div>
@@ -732,9 +989,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00056">56</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00058">58</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>, and <a class="el" href="glvis_8cpp_source.html#l00664">PlayScript()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>, and <a class="el" href="glvis_8cpp_source.html#l00745">PlayScript()</a>.</p>
 
 </div>
 </div>
@@ -749,9 +1006,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00053">53</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00055">55</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00664">PlayScript()</a>, and <a class="el" href="glvis_8cpp_source.html#l00650">ScriptControl()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00745">PlayScript()</a>, and <a class="el" href="glvis_8cpp_source.html#l00731">ScriptControl()</a>.</p>
 
 </div>
 </div>
@@ -766,9 +1023,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00052">52</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00054">54</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>, and <a class="el" href="glvis_8cpp_source.html#l00180">StartVisualization()</a>.</p>
 
 </div>
 </div>
@@ -783,9 +1040,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00051">51</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00053">53</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>, and <a class="el" href="glvis_8cpp_source.html#l00664">PlayScript()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>, and <a class="el" href="glvis_8cpp_source.html#l00745">PlayScript()</a>.</p>
 
 </div>
 </div>
@@ -800,9 +1057,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00038">38</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00039">39</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsvector3d_8cpp_source.html#l00921">ArrowsDrawOrNot()</a>, <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>, <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>, <a class="el" href="glvis_8cpp_source.html#l00664">PlayScript()</a>, <a class="el" href="glvis_8cpp_source.html#l01231">ReadParallel()</a>, <a class="el" href="glvis_8cpp_source.html#l01116">ReadSerial()</a>, <a class="el" href="glvis_8cpp_source.html#l00071">VisStream()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00910">VisualizationSceneScalarData::VisualizationSceneScalarData()</a>.</p>
+<p>Referenced by <a class="el" href="vsvector3d_8cpp_source.html#l01005">ArrowsDrawOrNot()</a>, <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>, <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>, <a class="el" href="glvis_8cpp_source.html#l01163">ReadSerial()</a>, <a class="el" href="glvis_8cpp_source.html#l00085">ReadStream()</a>, <a class="el" href="glvis_8cpp_source.html#l01214">SetGridFunction()</a>, <a class="el" href="glvis_8cpp_source.html#l01246">SetMeshSolution()</a>, <a class="el" href="glvis_8cpp_source.html#l00180">StartVisualization()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00914">VisualizationSceneScalarData::VisualizationSceneScalarData()</a>.</p>
 
 </div>
 </div>
@@ -817,9 +1074,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00036">36</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00037">37</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>, <a class="el" href="glvis_8cpp_source.html#l01231">ReadParallel()</a>, and <a class="el" href="glvis_8cpp_source.html#l01116">ReadSerial()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>, <a class="el" href="glvis_8cpp_source.html#l01288">ReadParallel()</a>, and <a class="el" href="glvis_8cpp_source.html#l01163">ReadSerial()</a>.</p>
 
 </div>
 </div>
@@ -834,9 +1091,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00038">38</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00039">39</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>, <a class="el" href="glvis_8cpp_source.html#l01231">ReadParallel()</a>, <a class="el" href="glvis_8cpp_source.html#l01116">ReadSerial()</a>, and <a class="el" href="glvis_8cpp_source.html#l00071">VisStream()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>, <a class="el" href="glvis_8cpp_source.html#l01163">ReadSerial()</a>, <a class="el" href="glvis_8cpp_source.html#l00085">ReadStream()</a>, and <a class="el" href="glvis_8cpp_source.html#l00180">StartVisualization()</a>.</p>
 
 </div>
 </div>
@@ -851,9 +1108,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00038">38</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00039">39</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>, <a class="el" href="glvis_8cpp_source.html#l01231">ReadParallel()</a>, <a class="el" href="glvis_8cpp_source.html#l01116">ReadSerial()</a>, and <a class="el" href="glvis_8cpp_source.html#l00071">VisStream()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>, <a class="el" href="glvis_8cpp_source.html#l01163">ReadSerial()</a>, <a class="el" href="glvis_8cpp_source.html#l00085">ReadStream()</a>, and <a class="el" href="glvis_8cpp_source.html#l00180">StartVisualization()</a>.</p>
 
 </div>
 </div>
@@ -868,9 +1125,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00038">38</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00039">39</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>, <a class="el" href="glvis_8cpp_source.html#l01231">ReadParallel()</a>, <a class="el" href="glvis_8cpp_source.html#l01116">ReadSerial()</a>, and <a class="el" href="glvis_8cpp_source.html#l00071">VisStream()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>, <a class="el" href="glvis_8cpp_source.html#l01163">ReadSerial()</a>, <a class="el" href="glvis_8cpp_source.html#l00085">ReadStream()</a>, and <a class="el" href="glvis_8cpp_source.html#l00180">StartVisualization()</a>.</p>
 
 </div>
 </div>
@@ -885,9 +1142,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00042">42</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00043">43</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>.</p>
 
 </div>
 </div>
@@ -902,9 +1159,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00033">33</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00034">34</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>.</p>
 
 </div>
 </div>
@@ -919,9 +1176,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00048">48</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00050">50</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>, <a class="el" href="glvis_8cpp_source.html#l00064">InitVis()</a>, and <a class="el" href="glvis_8cpp_source.html#l00664">PlayScript()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>, <a class="el" href="glvis_8cpp_source.html#l00173">InitVis()</a>, and <a class="el" href="glvis_8cpp_source.html#l00745">PlayScript()</a>.</p>
 
 </div>
 </div>
@@ -938,9 +1195,9 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><pre class="fragment">{ <span class="stringliteral">&quot;GLVis [scalar data]&quot;</span>,
                                 <span class="stringliteral">&quot;GLVis [vector data]&quot;</span> }
 </pre></div>
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00049">49</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00051">51</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00064">InitVis()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00173">InitVis()</a>.</p>
 
 </div>
 </div>
@@ -955,9 +1212,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00047">47</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00049">49</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>, <a class="el" href="glvis_8cpp_source.html#l00064">InitVis()</a>, and <a class="el" href="glvis_8cpp_source.html#l00664">PlayScript()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>, <a class="el" href="glvis_8cpp_source.html#l00173">InitVis()</a>, and <a class="el" href="glvis_8cpp_source.html#l00745">PlayScript()</a>.</p>
 
 </div>
 </div>
@@ -972,9 +1229,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00045">45</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00047">47</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>, <a class="el" href="glvis_8cpp_source.html#l00064">InitVis()</a>, and <a class="el" href="glvis_8cpp_source.html#l00664">PlayScript()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>, <a class="el" href="glvis_8cpp_source.html#l00173">InitVis()</a>, and <a class="el" href="glvis_8cpp_source.html#l00745">PlayScript()</a>.</p>
 
 </div>
 </div>
@@ -989,9 +1246,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00046">46</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="glvis_8cpp_source.html#l00048">48</a> of file <a class="el" href="glvis_8cpp_source.html">glvis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>, <a class="el" href="glvis_8cpp_source.html#l00064">InitVis()</a>, and <a class="el" href="glvis_8cpp_source.html#l00664">PlayScript()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>, <a class="el" href="glvis_8cpp_source.html#l00173">InitVis()</a>, and <a class="el" href="glvis_8cpp_source.html#l00745">PlayScript()</a>.</p>
 
 </div>
 </div>
@@ -1001,7 +1258,7 @@ Variables</h2></td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -1010,7 +1267,7 @@ Variables</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:52:24 for GLVis by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 12:13:53 for GLVis by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

@@ -1,8 +1,3 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$classVisualizationScene.html" title="VisualizationScene" alt="" coords="5,31,139,57"/>
-<area shape="rect" id="node3" href="$classVisualizationSceneScalarData.html" title="VisualizationSceneScalarData" alt="" coords="187,31,387,57"/>
-<area shape="rect" id="node5" href="$classVisualizationSceneSolution.html" title="VisualizationSceneSolution" alt="" coords="443,5,624,32"/>
-<area shape="rect" id="node9" href="$classVisualizationSceneSolution3d.html" title="VisualizationSceneSolution3d" alt="" coords="436,56,631,83"/>
-<area shape="rect" id="node7" href="$classVisualizationSceneVector.html" title="VisualizationSceneVector" alt="" coords="688,5,859,32"/>
-<area shape="rect" id="node11" href="$classVisualizationSceneVector3d.html" title="VisualizationSceneVector3d" alt="" coords="680,56,867,83"/>
+<area shape="rect" id="node1" href="$classGLVisCommand.html" title="GLVisCommand" alt="" coords="7,5,124,32"/>
 </map>

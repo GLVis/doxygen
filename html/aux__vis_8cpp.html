@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">GLVis&#160;<span id="projectnumber">v1.2</span></div>
+   <div id="projectname">GLVis&#160;<span id="projectnumber">v2.0</span></div>
   </td>
  </tr>
  </tbody>
@@ -66,18 +66,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br/>
 <code>#include &lt;sstream&gt;</code><br/>
 <code>#include &lt;math.h&gt;</code><br/>
+<code>#include &lt;time.h&gt;</code><br/>
+<code>#include &lt;X11/keysym.h&gt;</code><br/>
 <code>#include &quot;mfem.hpp&quot;</code><br/>
 <code>#include &quot;<a class="el" href="palettes_8hpp_source.html">palettes.hpp</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="aux__vis_8hpp_source.html">aux_vis.hpp</a>&quot;</code><br/>
 <code>#include &quot;gl2ps.h&quot;</code><br/>
-<code>#include &lt;X11/keysym.h&gt;</code><br/>
-<code>#include &lt;time.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="visual_8hpp_source.html">visual.hpp</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for aux_vis.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="aux__vis_8cpp__incl.png" border="0" usemap="#aux__vis_8cpp" alt=""/></div>
 <map name="aux__vis_8cpp" id="aux__vis_8cpp">
-<area shape="rect" id="node11" href="palettes_8hpp.html" title="palettes.hpp" alt="" coords="307,80,401,107"/><area shape="rect" id="node18" href="aux__vis_8hpp.html" title="aux_vis.hpp" alt="" coords="425,80,515,107"/><area shape="rect" id="node30" href="openglvis_8hpp.html" title="openglvis.hpp" alt="" coords="751,155,855,181"/></map>
+<area shape="rect" id="node15" href="palettes_8hpp.html" title="palettes.hpp" alt="" coords="83,80,176,107"/><area shape="rect" id="node24" href="visual_8hpp.html" title="visual.hpp" alt="" coords="924,80,1007,107"/><area shape="rect" id="node26" href="material_8hpp.html" title="material.hpp" alt="" coords="917,155,1013,181"/><area shape="rect" id="node28" href="aux__vis_8hpp.html" title="aux_vis.hpp" alt="" coords="803,155,893,181"/><area shape="rect" id="node40" href="openglvis_8hpp.html" title="openglvis.hpp" alt="" coords="649,229,753,256"/><area shape="rect" id="node43" href="vsdata_8hpp.html" title="vsdata.hpp" alt="" coords="640,155,728,181"/><area shape="rect" id="node47" href="vssolution_8hpp.html" title="vssolution.hpp" alt="" coords="1037,155,1144,181"/><area shape="rect" id="node49" href="vssolution3d_8hpp.html" title="vssolution3d.hpp" alt="" coords="1168,155,1291,181"/><area shape="rect" id="node51" href="vsvector_8hpp.html" title="vsvector.hpp" alt="" coords="1315,155,1411,181"/><area shape="rect" id="node53" href="vsvector3d_8hpp.html" title="vsvector3d.hpp" alt="" coords="1435,155,1547,181"/><area shape="rect" id="node55" href="threads_8hpp.html" title="threads.hpp" alt="" coords="1571,155,1661,181"/></map>
 </div>
 </div>
 <p><a href="aux__vis_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -118,6 +118,7 @@ Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#aca1a94943bc1efeeddfc2869306dce37">KeyS</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a6d23442812b3f1b0dabcb9e81d17decf">KeyP</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#af62a1b1bdb3948832a6252aaa5998215">KeyQPressed</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#acce7ed2c360b303690a5d926e9bbe40c">ToggleThreads</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a599b2e55f2eca11bc1c94fdc2b11ba7c">CheckSpin</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#acb06a69e8c70932b41f17ae2f10ebbcd">Key0Pressed</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#ae72e93c1c35ad87215ade5307d064695">KeyDeletePressed</a> ()</td></tr>
@@ -131,10 +132,11 @@ Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a30412af4a8cc51bc5ea3f2f173075ed5">Key1Pressed</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a585b32928f7b0f589690de3539aa868a">Key2Pressed</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a56039a44bb0d82d12155d34a83d8fe6d">Key3Pressed</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a2821ab890bf34a2a290e9e2f801dc1fc">KeyLeftPressed</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#ad146c6bc247d82dd73d7705e297c1df2">KeyRightPressed</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a3e0100457e1af742ed654e2c6f88dc5d">KeyUpPressed</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a24fe3cabda9bfd7bf4762b57a0e55fb6">KeyDownPressed</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a09beb3007f5cf7d6b63ed832085782aa">ShiftView</a> (double dx, double dy)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a3d7de674b9191abb203d147b265ff3f6">KeyLeftPressed</a> (GLenum state)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#ad85101dd14bca8fd6ead948c6bc96250">KeyRightPressed</a> (GLenum state)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a782d2eb2d9d1940a462fd95b124769db">KeyUpPressed</a> (GLenum state)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#ad84496a08342b773524c1368626ef23e">KeyDownPressed</a> (GLenum state)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a858e1709ddaf8cf81fee85daedd4ae98">KeyJPressed</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#ab0a58e8a2f8245ee902fdc61a7002ce3">KeyMinusPressed</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a1434f8f7a0899de7e4c2c19b3858d850">KeyPlusPressed</a> ()</td></tr>
@@ -156,16 +158,15 @@ Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a6ee835cc11f6de1e0f5707cedfc109f2">SetUseTexture</a> (int ut)</td></tr>
 <tr><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">Window&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#ac5b0b3c19d476a314bb68af9bc4a0ee0">window</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a2efc891ed1477d4076a461dce341ed0d">fontbase</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a9e5f6a8d6dda5d991717d80c872e326a">visualize</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a9e5f6a8d6dda5d991717d80c872e326a">visualize</a> = 0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVisualizationScene.html">VisualizationScene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#af71e06f4d5eba00469872cd481b1835b">locscene</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a72ac4a8827898f543e22495d8be19b86">MatAlpha</a> = 1.0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a5c7bebb0154ce9c8b21df349cce6386e">MatAlphaCenter</a> = 0.5</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Array&lt; void(*)()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a4bde49260a00e4ab384b86cf7616324d">IdleFuncs</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a205cb59e8468965ec714359159606824">LastIdleFunc</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a100fe41709b3d02edcbf380dd8a4681e">xang</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#ad0b090310ad5686a38b897ad253e5c27">yang</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a100fe41709b3d02edcbf380dd8a4681e">xang</a> = 0.</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#ad0b090310ad5686a38b897ad253e5c27">yang</a> = 0.</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a61411234ee39fb9c6eaf29d24cb37bbb">srot</a> [16]</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#af10a9ad2742d18da11c3166473f1f7ea">sph_t</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8cpp.html#a7806ebf8688758ca4afd46a1b3b1e124">sph_u</a></td></tr>
@@ -197,11 +198,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00401">401</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00399">399</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00384">IdleFuncs</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00394">MainIdleFunc()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00382">IdleFuncs</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00392">MainIdleFunc()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00839">CheckSpin()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00861">KeyDeletePressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00574">LeftButtonUp()</a>, <a class="el" href="glvis_8cpp_source.html#l00650">ScriptControl()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00290">SetVisualizationScene()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00847">CheckSpin()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00871">KeyDeletePressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00572">LeftButtonUp()</a>, <a class="el" href="glvis_8cpp_source.html#l00731">ScriptControl()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00288">SetVisualizationScene()</a>.</p>
 
 </div>
 </div>
@@ -219,11 +220,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00839">839</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00847">847</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00401">AddIdleFunc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00422">MainLoop()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00407">RemoveIdleFunc()</a>, and <a class="el" href="openglvis_8hpp_source.html#l00027">VisualizationScene::spinning</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00399">AddIdleFunc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00420">MainLoop()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00405">RemoveIdleFunc()</a>, <a class="el" href="openglvis_8hpp_source.html#l00027">VisualizationScene::spinning</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00413">yang</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00855">Key0Pressed()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00878">KeyEnterPressed()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00863">Key0Pressed()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00889">KeyEnterPressed()</a>.</p>
 
 </div>
 </div>
@@ -264,11 +265,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00465">465</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00463">463</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00460">sqr()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00458">sqr()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00486">LeftButtonDown()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00503">LeftButtonLoc()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00484">LeftButtonDown()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00501">LeftButtonLoc()</a>.</p>
 
 </div>
 </div>
@@ -286,9 +287,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01072">1072</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01124">1124</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00080">VisualizationSceneScalarData::Arrow2()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00028">VisualizationSceneScalarData::Arrow3()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00081">VisualizationSceneScalarData::Arrow2()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00029">VisualizationSceneScalarData::Arrow3()</a>.</p>
 
 </div>
 </div>
@@ -306,9 +307,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01051">1051</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01103">1103</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -326,11 +327,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01238">1238</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01302">1302</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l01100">UseTexture</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l01152">UseTexture</a>.</p>
 
-<p>Referenced by <a class="el" href="vsvector3d_8cpp_source.html#l01251">VisualizationSceneVector3d::Draw()</a>, <a class="el" href="vsvector_8cpp_source.html#l00834">VisualizationSceneVector::Draw()</a>, <a class="el" href="vssolution3d_8cpp_source.html#l02071">VisualizationSceneSolution3d::Draw()</a>, <a class="el" href="vssolution_8cpp_source.html#l01536">VisualizationSceneSolution::Draw()</a>, <a class="el" href="vsdata_8cpp_source.html#l00217">VisualizationSceneScalarData::DrawColorBar()</a>, <a class="el" href="vsdata_8cpp_source.html#l00652">KeyF6Pressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00625">KeyPPressed()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00903">VisualizationSceneScalarData::ToggleTexture()</a>.</p>
+<p>Referenced by <a class="el" href="vsvector3d_8cpp_source.html#l01336">VisualizationSceneVector3d::Draw()</a>, <a class="el" href="vsvector_8cpp_source.html#l00852">VisualizationSceneVector::Draw()</a>, <a class="el" href="vssolution3d_8cpp_source.html#l02074">VisualizationSceneSolution3d::Draw()</a>, <a class="el" href="vssolution_8cpp_source.html#l01581">VisualizationSceneSolution::Draw()</a>, <a class="el" href="vsdata_8cpp_source.html#l00218">VisualizationSceneScalarData::DrawColorBar()</a>, <a class="el" href="vsdata_8cpp_source.html#l00656">KeyF6Pressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00629">KeyPPressed()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00907">VisualizationSceneScalarData::ToggleTexture()</a>.</p>
 
 </div>
 </div>
@@ -348,11 +349,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00387">387</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00385">385</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00384">IdleFuncs</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00385">LastIdleFunc</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00382">IdleFuncs</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00383">LastIdleFunc</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00290">SetVisualizationScene()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00288">SetVisualizationScene()</a>.</p>
 
 </div>
 </div>
@@ -401,11 +402,11 @@ Variables</h2></td></tr>
 
 <p>Initializes the visualization and some keys. </p>
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00039">39</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00037">37</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l01051">EnlargeWindow()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00030">fontbase</a>, <a class="el" href="palettes_8hpp_source.html#l03037">Init_Palettes()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00855">Key0Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00935">Key1Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00944">Key2Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00950">Key3Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00908">Key4Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00917">Key5Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00926">Key6Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00884">Key7Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00893">Key8Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00899">Key9Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00861">KeyDeletePressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00977">KeyDownPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00878">KeyEnterPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00983">KeyJPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00959">KeyLeftPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00989">KeyMinusPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00791">KeyP()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00995">KeyPlusPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00834">KeyQPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00965">KeyRightPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00768">KeyS()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00971">KeyUpPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00486">LeftButtonDown()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00503">LeftButtonLoc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00574">LeftButtonUp()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01025">LookAt()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00596">MiddleButtonDown()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00602">MiddleButtonLoc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00635">MiddleButtonUp()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00369">MyExpose()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00638">RightButtonDown()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00644">RightButtonLoc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00687">RightButtonUp()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01019">ScaleDown()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01013">ScaleUp()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01208">Set_Texture_Image()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01243">SetUseTexture()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01037">ShrinkWindow()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01001">ZoomIn()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l01007">ZoomOut()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l01103">EnlargeWindow()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00028">fontbase</a>, <a class="el" href="palettes_8hpp_source.html#l03037">Init_Palettes()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00863">Key0Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00948">Key1Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00957">Key2Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00963">Key3Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00921">Key4Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00930">Key5Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00939">Key6Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00897">Key7Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00906">Key8Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00912">Key9Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00871">KeyDeletePressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01022">KeyDownPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00889">KeyEnterPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01035">KeyJPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00983">KeyLeftPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01041">KeyMinusPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00789">KeyP()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01047">KeyPlusPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00832">KeyQPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00996">KeyRightPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00766">KeyS()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01009">KeyUpPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00484">LeftButtonDown()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00501">LeftButtonLoc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00572">LeftButtonUp()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01077">LookAt()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00594">MiddleButtonDown()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00600">MiddleButtonLoc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00633">MiddleButtonUp()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00367">MyExpose()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00636">RightButtonDown()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00642">RightButtonLoc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00685">RightButtonUp()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01071">ScaleDown()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01065">ScaleUp()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01272">Set_Texture_Image()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01307">SetUseTexture()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01089">ShrinkWindow()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01053">ZoomIn()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l01059">ZoomOut()</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00064">InitVis()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00173">InitVis()</a>.</p>
 
 </div>
 </div>
@@ -423,11 +424,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00855">855</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00863">863</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00839">CheckSpin()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00847">CheckSpin()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -445,11 +446,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00935">935</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00948">948</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -467,11 +468,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00944">944</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00957">957</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -489,11 +490,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00950">950</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00963">963</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -511,11 +512,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00908">908</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00921">921</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -533,11 +534,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00917">917</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00930">930</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -555,11 +556,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00926">926</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00939">939</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -577,11 +578,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00884">884</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00897">897</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -599,11 +600,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00893">893</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00906">906</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -621,11 +622,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00899">899</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00912">912</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -643,33 +644,34 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00861">861</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00871">871</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00401">AddIdleFunc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00422">MainLoop()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00407">RemoveIdleFunc()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00399">AddIdleFunc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00420">MainLoop()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00405">RemoveIdleFunc()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00413">yang</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a24fe3cabda9bfd7bf4762b57a0e55fb6"></a><!-- doxytag: member="aux_vis.cpp::KeyDownPressed" ref="a24fe3cabda9bfd7bf4762b57a0e55fb6" args="()" -->
+<a class="anchor" id="ad84496a08342b773524c1368626ef23e"></a><!-- doxytag: member="aux_vis.cpp::KeyDownPressed" ref="ad84496a08342b773524c1368626ef23e" args="(GLenum state)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void KeyDownPressed </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">GLenum&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00977">977</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01022">1022</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>.</p>
+<p>References <a class="el" href="openglvis_8cpp_source.html#l00035">VisualizationScene::Rotate()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00972">ShiftView()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -687,11 +689,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00878">878</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00889">889</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00839">CheckSpin()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00847">CheckSpin()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -709,33 +711,34 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00983">983</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01035">1035</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a2821ab890bf34a2a290e9e2f801dc1fc"></a><!-- doxytag: member="aux_vis.cpp::KeyLeftPressed" ref="a2821ab890bf34a2a290e9e2f801dc1fc" args="()" -->
+<a class="anchor" id="a3d7de674b9191abb203d147b265ff3f6"></a><!-- doxytag: member="aux_vis.cpp::KeyLeftPressed" ref="a3d7de674b9191abb203d147b265ff3f6" args="(GLenum state)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void KeyLeftPressed </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">GLenum&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00959">959</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00983">983</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>.</p>
+<p>References <a class="el" href="openglvis_8cpp_source.html#l00035">VisualizationScene::Rotate()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00972">ShiftView()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -753,11 +756,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00989">989</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01041">1041</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -775,9 +778,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00791">791</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00789">789</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -795,11 +798,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00995">995</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01047">1047</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -817,33 +820,34 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00834">834</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00832">832</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00031">visualize</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00029">visualize</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad146c6bc247d82dd73d7705e297c1df2"></a><!-- doxytag: member="aux_vis.cpp::KeyRightPressed" ref="ad146c6bc247d82dd73d7705e297c1df2" args="()" -->
+<a class="anchor" id="ad85101dd14bca8fd6ead948c6bc96250"></a><!-- doxytag: member="aux_vis.cpp::KeyRightPressed" ref="ad85101dd14bca8fd6ead948c6bc96250" args="(GLenum state)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void KeyRightPressed </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">GLenum&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00965">965</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00996">996</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>.</p>
+<p>References <a class="el" href="openglvis_8cpp_source.html#l00035">VisualizationScene::Rotate()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00972">ShiftView()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -861,33 +865,34 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00768">768</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00766">766</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00690">Screenshot()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00688">Screenshot()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3e0100457e1af742ed654e2c6f88dc5d"></a><!-- doxytag: member="aux_vis.cpp::KeyUpPressed" ref="a3e0100457e1af742ed654e2c6f88dc5d" args="()" -->
+<a class="anchor" id="a782d2eb2d9d1940a462fd95b124769db"></a><!-- doxytag: member="aux_vis.cpp::KeyUpPressed" ref="a782d2eb2d9d1940a462fd95b124769db" args="(GLenum state)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void KeyUpPressed </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">GLenum&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00971">971</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01009">1009</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>.</p>
+<p>References <a class="el" href="openglvis_8cpp_source.html#l00035">VisualizationScene::Rotate()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00972">ShiftView()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -905,11 +910,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00312">312</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00310">310</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00030">fontbase</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00032">locscene</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00028">fontbase</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00030">locscene</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>, <a class="el" href="glvis_8cpp_source.html#l00664">PlayScript()</a>, and <a class="el" href="glvis_8cpp_source.html#l00071">VisStream()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>, and <a class="el" href="glvis_8cpp_source.html#l00180">StartVisualization()</a>.</p>
 
 </div>
 </div>
@@ -928,11 +933,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00486">486</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00484">484</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00465">ComputeSphereAngles()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00422">MainLoop()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00417">oldy</a>, <a class="el" href="aux__vis_8cpp_source.html#l00407">RemoveIdleFunc()</a>, and <a class="el" href="openglvis_8hpp_source.html#l00034">VisualizationScene::rotmat</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00463">ComputeSphereAngles()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00420">MainLoop()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00415">oldy</a>, <a class="el" href="aux__vis_8cpp_source.html#l00405">RemoveIdleFunc()</a>, and <a class="el" href="openglvis_8hpp_source.html#l00034">VisualizationScene::rotmat</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -951,11 +956,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00503">503</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00501">501</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00465">ComputeSphereAngles()</a>, <a class="el" href="openglvis_8hpp_source.html#l00034">VisualizationScene::rotmat</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00463">ComputeSphereAngles()</a>, <a class="el" href="openglvis_8hpp_source.html#l00034">VisualizationScene::rotmat</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -974,11 +979,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00574">574</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00572">572</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00401">AddIdleFunc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00422">MainLoop()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00417">startx</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00417">starty</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00399">AddIdleFunc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00420">MainLoop()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00415">startx</a>, <a class="el" href="aux__vis_8cpp_source.html#l00415">starty</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00413">yang</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -996,11 +1001,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01025">1025</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01077">1077</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, <a class="el" href="openglvis_8hpp_source.html#l00029">VisualizationScene::ViewCenterX</a>, and <a class="el" href="openglvis_8hpp_source.html#l00029">VisualizationScene::ViewCenterY</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, <a class="el" href="openglvis_8hpp_source.html#l00029">VisualizationScene::ViewCenterX</a>, and <a class="el" href="openglvis_8hpp_source.html#l00029">VisualizationScene::ViewCenterY</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -1018,11 +1023,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00394">394</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00392">392</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00384">IdleFuncs</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00385">LastIdleFunc</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00382">IdleFuncs</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00383">LastIdleFunc</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00401">AddIdleFunc()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00399">AddIdleFunc()</a>.</p>
 
 </div>
 </div>
@@ -1040,11 +1045,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00422">422</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00420">420</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00690">Screenshot()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00688">Screenshot()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00413">yang</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00839">CheckSpin()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00861">KeyDeletePressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00577">KeyRPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00563">KeyrPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00486">LeftButtonDown()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00574">LeftButtonUp()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00290">SetVisualizationScene()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00847">CheckSpin()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00871">KeyDeletePressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00581">KeyRPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00567">KeyrPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00484">LeftButtonDown()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00572">LeftButtonUp()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00288">SetVisualizationScene()</a>.</p>
 
 </div>
 </div>
@@ -1062,11 +1067,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01166">1166</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01219">1219</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l01162">Max_Texture_Size</a>, <a class="el" href="palettes_8hpp_source.html#l03000">RGB_Palette</a>, <a class="el" href="palettes_8hpp_source.html#l02999">RGB_Palette_Size</a>, and <a class="el" href="aux__vis_8cpp_source.html#l01163">Texture_Size</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l01215">Max_Texture_Size</a>, <a class="el" href="palettes_8hpp_source.html#l03000">RGB_Palette</a>, <a class="el" href="palettes_8hpp_source.html#l02999">RGB_Palette_Size</a>, and <a class="el" href="aux__vis_8cpp_source.html#l01216">Texture_Size</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l01208">Set_Texture_Image()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l01272">Set_Texture_Image()</a>.</p>
 
 </div>
 </div>
@@ -1084,11 +1089,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01195">1195</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01249">1249</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l01162">Max_Texture_Size</a>, <a class="el" href="palettes_8hpp_source.html#l03000">RGB_Palette</a>, <a class="el" href="palettes_8hpp_source.html#l02999">RGB_Palette_Size</a>, and <a class="el" href="aux__vis_8cpp_source.html#l01163">Texture_Size</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l01215">Max_Texture_Size</a>, <a class="el" href="palettes_8hpp_source.html#l03000">RGB_Palette</a>, <a class="el" href="palettes_8hpp_source.html#l02999">RGB_Palette_Size</a>, and <a class="el" href="aux__vis_8cpp_source.html#l01216">Texture_Size</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l01208">Set_Texture_Image()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l01272">Set_Texture_Image()</a>.</p>
 
 </div>
 </div>
@@ -1107,9 +1112,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00596">596</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00594">594</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -1128,11 +1133,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00602">602</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00600">600</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="openglvis_8hpp_source.html#l00027">VisualizationScene::OrthogonalProjection</a>, <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, <a class="el" href="openglvis_8hpp_source.html#l00028">VisualizationScene::ViewAngle</a>, <a class="el" href="openglvis_8hpp_source.html#l00029">VisualizationScene::ViewCenterX</a>, <a class="el" href="openglvis_8hpp_source.html#l00029">VisualizationScene::ViewCenterY</a>, and <a class="el" href="openglvis_8hpp_source.html#l00028">VisualizationScene::ViewScale</a>.</p>
+<p>References <a class="el" href="openglvis_8hpp_source.html#l00027">VisualizationScene::OrthogonalProjection</a>, <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, <a class="el" href="openglvis_8hpp_source.html#l00028">VisualizationScene::ViewAngle</a>, <a class="el" href="openglvis_8hpp_source.html#l00029">VisualizationScene::ViewCenterX</a>, <a class="el" href="openglvis_8hpp_source.html#l00029">VisualizationScene::ViewCenterY</a>, and <a class="el" href="openglvis_8hpp_source.html#l00028">VisualizationScene::ViewScale</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -1151,9 +1156,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00635">635</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00633">633</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -1194,9 +1199,29 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01065">1065</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01117">1117</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0f313763ddb4fa577646de682b28ae70"></a><!-- doxytag: member="aux_vis.cpp::MyExpose" ref="a0f313763ddb4fa577646de682b28ae70" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MyExpose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00373">373</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00367">MyExpose()</a>.</p>
 
 </div>
 </div>
@@ -1225,31 +1250,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00369">369</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00367">367</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00335">MyReshape()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00333">MyReshape()</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00375">MyExpose()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a0f313763ddb4fa577646de682b28ae70"></a><!-- doxytag: member="aux_vis.cpp::MyExpose" ref="a0f313763ddb4fa577646de682b28ae70" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MyExpose </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00375">375</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
-
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00369">MyExpose()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00373">MyExpose()</a>.</p>
 
 </div>
 </div>
@@ -1278,32 +1283,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00335">335</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00333">333</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 <p>References <a class="el" href="openglvis_8hpp_source.html#l00027">VisualizationScene::OrthogonalProjection</a>, <a class="el" href="openglvis_8hpp_source.html#l00028">VisualizationScene::ViewAngle</a>, <a class="el" href="openglvis_8hpp_source.html#l00029">VisualizationScene::ViewCenterX</a>, <a class="el" href="openglvis_8hpp_source.html#l00029">VisualizationScene::ViewCenterY</a>, and <a class="el" href="openglvis_8hpp_source.html#l00028">VisualizationScene::ViewScale</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00369">MyExpose()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a6cc166362feb4423007e3717b3331ed6"></a><!-- doxytag: member="aux_vis.cpp::MySetColor" ref="a6cc166362feb4423007e3717b3331ed6" args="(double val)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MySetColor </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>val</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01117">1117</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
-
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00034">MatAlpha</a>, <a class="el" href="aux__vis_8cpp_source.html#l00035">MatAlphaCenter</a>, <a class="el" href="palettes_8hpp_source.html#l03000">RGB_Palette</a>, and <a class="el" href="palettes_8hpp_source.html#l02999">RGB_Palette_Size</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00367">MyExpose()</a>.</p>
 
 </div>
 </div>
@@ -1338,11 +1322,32 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01102">1102</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01154">1154</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l01102">MySetColor()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l01154">MySetColor()</a>.</p>
 
-<p>Referenced by <a class="el" href="vssolution3d_8cpp_source.html#l01517">VisualizationSceneSolution3d::CuttingPlaneFunc()</a>, <a class="el" href="vsdata_8cpp_source.html#l00217">VisualizationSceneScalarData::DrawColorBar()</a>, <a class="el" href="vssolution_8cpp_source.html#l00802">DrawPatch()</a>, <a class="el" href="vssolution_8cpp_source.html#l00786">DrawQuad()</a>, <a class="el" href="vssolution3d_8cpp_source.html#l00988">VisualizationSceneSolution3d::DrawRefinedSurf()</a>, <a class="el" href="vssolution_8cpp_source.html#l00770">DrawTriangle()</a>, <a class="el" href="vsvector3d_8cpp_source.html#l00969">VisualizationSceneVector3d::DrawVector()</a>, <a class="el" href="vsvector_8cpp_source.html#l00733">VisualizationSceneVector::DrawVector()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01102">MySetColor()</a>, <a class="el" href="vsvector3d_8cpp_source.html#l00595">VisualizationSceneVector3d::Prepare()</a>, <a class="el" href="vssolution3d_8cpp_source.html#l01226">VisualizationSceneSolution3d::Prepare()</a>, <a class="el" href="vssolution_8cpp_source.html#l01033">VisualizationSceneSolution::Prepare()</a>, <a class="el" href="vsvector3d_8cpp_source.html#l01118">VisualizationSceneVector3d::PrepareCuttingPlane()</a>, and <a class="el" href="vssolution3d_8cpp_source.html#l01931">VisualizationSceneSolution3d::PrepareLevelSurf()</a>.</p>
+<p>Referenced by <a class="el" href="vssolution3d_8cpp_source.html#l01518">VisualizationSceneSolution3d::CuttingPlaneFunc()</a>, <a class="el" href="vsdata_8cpp_source.html#l00218">VisualizationSceneScalarData::DrawColorBar()</a>, <a class="el" href="vssolution_8cpp_source.html#l00808">DrawPatch()</a>, <a class="el" href="vssolution_8cpp_source.html#l00792">DrawQuad()</a>, <a class="el" href="vssolution3d_8cpp_source.html#l00989">VisualizationSceneSolution3d::DrawRefinedSurf()</a>, <a class="el" href="vssolution_8cpp_source.html#l00776">DrawTriangle()</a>, <a class="el" href="vsvector3d_8cpp_source.html#l01053">VisualizationSceneVector3d::DrawVector()</a>, <a class="el" href="vsvector_8cpp_source.html#l00751">VisualizationSceneVector::DrawVector()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01154">MySetColor()</a>, <a class="el" href="vsvector3d_8cpp_source.html#l00652">VisualizationSceneVector3d::Prepare()</a>, <a class="el" href="vssolution3d_8cpp_source.html#l01227">VisualizationSceneSolution3d::Prepare()</a>, <a class="el" href="vssolution_8cpp_source.html#l01039">VisualizationSceneSolution::Prepare()</a>, <a class="el" href="vsvector3d_8cpp_source.html#l01203">VisualizationSceneVector3d::PrepareCuttingPlane()</a>, and <a class="el" href="vssolution3d_8cpp_source.html#l01934">VisualizationSceneSolution3d::PrepareLevelSurf()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6cc166362feb4423007e3717b3331ed6"></a><!-- doxytag: member="aux_vis.cpp::MySetColor" ref="a6cc166362feb4423007e3717b3331ed6" args="(double val)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MySetColor </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01169">1169</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00032">MatAlpha</a>, <a class="el" href="aux__vis_8cpp_source.html#l00033">MatAlphaCenter</a>, <a class="el" href="palettes_8hpp_source.html#l03000">RGB_Palette</a>, and <a class="el" href="palettes_8hpp_source.html#l02999">RGB_Palette_Size</a>.</p>
 
 </div>
 </div>
@@ -1361,11 +1366,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00407">407</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00405">405</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00384">IdleFuncs</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00382">IdleFuncs</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00839">CheckSpin()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00861">KeyDeletePressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00577">KeyRPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00563">KeyrPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00486">LeftButtonDown()</a>, and <a class="el" href="glvis_8cpp_source.html#l00650">ScriptControl()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00847">CheckSpin()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00871">KeyDeletePressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00581">KeyRPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00567">KeyrPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00484">LeftButtonDown()</a>, and <a class="el" href="glvis_8cpp_source.html#l00731">ScriptControl()</a>.</p>
 
 </div>
 </div>
@@ -1384,9 +1389,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00638">638</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00636">636</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -1405,11 +1410,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00644">644</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00642">642</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00417">startx</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00417">starty</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00415">startx</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00415">starty</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -1428,9 +1433,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00687">687</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00685">685</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -1448,11 +1453,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01019">1019</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01071">1071</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="openglvis_8cpp_source.html#l00054">VisualizationScene::Scale()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>.</p>
+<p>References <a class="el" href="openglvis_8cpp_source.html#l00054">VisualizationScene::Scale()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -1470,11 +1475,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01013">1013</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01065">1065</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="openglvis_8cpp_source.html#l00054">VisualizationScene::Scale()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>.</p>
+<p>References <a class="el" href="openglvis_8cpp_source.html#l00054">VisualizationScene::Scale()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -1495,11 +1500,9 @@ Variables</h2></td></tr>
 
 <p>Take a screenshot using libtiff or xwd. </p>
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00690">690</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00688">688</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp.html#ac5b0b3c19d476a314bb68af9bc4a0ee0">window</a>.</p>
-
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00768">KeyS()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00422">MainLoop()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00766">KeyS()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00420">MainLoop()</a>.</p>
 
 </div>
 </div>
@@ -1519,9 +1522,9 @@ Variables</h2></td></tr>
 
 <p>Send expose event. In our case MyReshape is executed and Draw after it. </p>
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00323">323</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00321">321</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00935">Key1Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00944">Key2Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00950">Key3Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00908">Key4Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00917">Key5Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00926">Key6Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00884">Key7Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00893">Key8Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00899">Key9Pressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00754">KeyAPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00540">KeyaPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00684">KeyBackslashPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00769">KeyCommaPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00528">KeyCPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00977">KeyDownPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00097">KeyDPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00728">KeyF2Pressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00652">KeyF6Pressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00671">KeyF7Pressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00717">KeyGPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00789">KeyGravePressed()</a>, <a class="el" href="vssolution_8cpp_source.html#l00179">KeyiPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00983">KeyJPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00745">KeyKPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00736">KeykPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00959">KeyLeftPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00779">KeyLessPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00556">KeyLPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00546">KeylPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00989">KeyMinusPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00995">KeyPlusPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00625">KeyPPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00965">KeyRightPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00577">KeyRPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00563">KeyrPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00534">KeySPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00795">KeyTildePressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00801">KeyToggleTexture()</a>, <a class="el" href="vsdata_8cpp_source.html#l00707">KeyTPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00971">KeyUpPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00145">KeyuPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00134">KeyVPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00128">KeyvPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00503">LeftButtonLoc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01025">LookAt()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00602">MiddleButtonLoc()</a>, <a class="el" href="vsvector3d_8cpp_source.html#l00154">VisualizationSceneVector3d::NPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00115">VisualizationSceneVector::NPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00644">RightButtonLoc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01019">ScaleDown()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01013">ScaleUp()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00189">SendKeySequence()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01001">ZoomIn()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l01007">ZoomOut()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00948">Key1Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00957">Key2Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00963">Key3Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00921">Key4Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00930">Key5Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00939">Key6Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00897">Key7Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00906">Key8Pressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00912">Key9Pressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00758">KeyAPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00544">KeyaPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00687">KeyBackslashPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00773">KeyCommaPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00532">KeyCPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01022">KeyDownPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00097">KeyDPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00732">KeyF2Pressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00656">KeyF6Pressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00674">KeyF7Pressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00720">KeyGPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00793">KeyGravePressed()</a>, <a class="el" href="vssolution_8cpp_source.html#l00179">KeyiPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01035">KeyJPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00749">KeyKPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00740">KeykPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00983">KeyLeftPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00783">KeyLessPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00560">KeyLPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00550">KeylPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01041">KeyMinusPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01047">KeyPlusPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00629">KeyPPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00996">KeyRightPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00581">KeyRPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00567">KeyrPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00538">KeySPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00799">KeyTildePressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00805">KeyToggleTexture()</a>, <a class="el" href="vsdata_8cpp_source.html#l00710">KeyTPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01009">KeyUpPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00145">KeyuPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00134">KeyVPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00128">KeyvPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00501">LeftButtonLoc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01077">LookAt()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00600">MiddleButtonLoc()</a>, <a class="el" href="vsvector3d_8cpp_source.html#l00154">VisualizationSceneVector3d::NPressed()</a>, <a class="el" href="vsvector_8cpp_source.html#l00115">VisualizationSceneVector::NPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00642">RightButtonLoc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01071">ScaleDown()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01065">ScaleUp()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00187">SendKeySequence()</a>, <a class="el" href="aux__vis_8cpp_source.html#l01053">ZoomIn()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l01059">ZoomOut()</a>.</p>
 
 </div>
 </div>
@@ -1550,9 +1553,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00158">158</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00156">156</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00189">SendKeySequence()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00187">SendKeySequence()</a>.</p>
 
 </div>
 </div>
@@ -1573,11 +1576,11 @@ Variables</h2></td></tr>
 
 <p>Send a sequence of keystrokes to the visualization window. </p>
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00189">189</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00187">187</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00158">SendKeyEvent()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00156">SendKeyEvent()</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00317">ExecuteScriptCommand()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00290">SetVisualizationScene()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00376">ExecuteScriptCommand()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00288">SetVisualizationScene()</a>.</p>
 
 </div>
 </div>
@@ -1595,11 +1598,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01208">1208</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01272">1272</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l01166">Make_Texture_From_Palette()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l01195">Make_Texture_From_Palette_2()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l01219">Make_Texture_From_Palette()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l01249">Make_Texture_From_Palette_2()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>, <a class="el" href="palettes_8hpp_source.html#l03127">Set_Palette()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l01243">SetUseTexture()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>, <a class="el" href="palettes_8hpp_source.html#l03127">Set_Palette()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l01307">SetUseTexture()</a>.</p>
 
 </div>
 </div>
@@ -1618,11 +1621,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01243">1243</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01307">1307</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l01208">Set_Texture_Image()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l01272">Set_Texture_Image()</a>.</p>
 
-<p>Referenced by <a class="el" href="vssolution3d_8cpp_source.html#l00506">VisualizationSceneSolution3d::Init()</a>, <a class="el" href="vssolution_8cpp_source.html#l00345">VisualizationSceneSolution::Init()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00903">VisualizationSceneScalarData::ToggleTexture()</a>.</p>
+<p>Referenced by <a class="el" href="vssolution3d_8cpp_source.html#l00506">VisualizationSceneSolution3d::Init()</a>, <a class="el" href="vssolution_8cpp_source.html#l00348">VisualizationSceneSolution::Init()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00907">VisualizationSceneScalarData::ToggleTexture()</a>.</p>
 
 </div>
 </div>
@@ -1659,11 +1662,44 @@ Variables</h2></td></tr>
 
 <p>Start the infinite visualization loop. </p>
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00290">290</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00288">288</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00401">AddIdleFunc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00387">InitIdleFuncs()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00422">MainLoop()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00189">SendKeySequence()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00399">AddIdleFunc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00385">InitIdleFuncs()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00420">MainLoop()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00187">SendKeySequence()</a>.</p>
 
-<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00770">main()</a>, <a class="el" href="glvis_8cpp_source.html#l00664">PlayScript()</a>, and <a class="el" href="glvis_8cpp_source.html#l00071">VisStream()</a>.</p>
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00816">main()</a>, and <a class="el" href="glvis_8cpp_source.html#l00180">StartVisualization()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a09beb3007f5cf7d6b63ed832085782aa"></a><!-- doxytag: member="aux_vis.cpp::ShiftView" ref="a09beb3007f5cf7d6b63ed832085782aa" args="(double dx, double dy)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShiftView </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00972">972</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+
+<p>References <a class="el" href="openglvis_8hpp_source.html#l00027">VisualizationScene::OrthogonalProjection</a>, <a class="el" href="openglvis_8hpp_source.html#l00028">VisualizationScene::ViewAngle</a>, <a class="el" href="openglvis_8hpp_source.html#l00029">VisualizationScene::ViewCenterX</a>, <a class="el" href="openglvis_8hpp_source.html#l00029">VisualizationScene::ViewCenterY</a>, and <a class="el" href="openglvis_8hpp_source.html#l00028">VisualizationScene::ViewScale</a>.</p>
+
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l01022">KeyDownPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00983">KeyLeftPressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00996">KeyRightPressed()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l01009">KeyUpPressed()</a>.</p>
 
 </div>
 </div>
@@ -1681,9 +1717,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01037">1037</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01089">1089</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -1702,9 +1738,31 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00460">460</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00458">458</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00465">ComputeSphereAngles()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00463">ComputeSphereAngles()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acce7ed2c360b303690a5d926e9bbe40c"></a><!-- doxytag: member="aux_vis.cpp::ToggleThreads" ref="acce7ed2c360b303690a5d926e9bbe40c" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ToggleThreads </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00837">837</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00029">visualize</a>.</p>
+
+<p>Referenced by <a class="el" href="glvis_8cpp_source.html#l00180">StartVisualization()</a>.</p>
 
 </div>
 </div>
@@ -1722,11 +1780,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01001">1001</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01053">1053</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, and <a class="el" href="openglvis_8cpp_source.html#l00094">VisualizationScene::Zoom()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, and <a class="el" href="openglvis_8cpp_source.html#l00094">VisualizationScene::Zoom()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -1744,11 +1802,11 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01007">1007</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01059">1059</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>References <a class="el" href="aux__vis_8cpp_source.html#l00323">SendExposeEvent()</a>, and <a class="el" href="openglvis_8cpp_source.html#l00094">VisualizationScene::Zoom()</a>.</p>
+<p>References <a class="el" href="aux__vis_8cpp_source.html#l00321">SendExposeEvent()</a>, and <a class="el" href="openglvis_8cpp_source.html#l00094">VisualizationScene::Zoom()</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>.</p>
 
 </div>
 </div>
@@ -1764,7 +1822,7 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00419">419</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00417">417</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1779,9 +1837,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00030">30</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00028">28</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00217">VisualizationSceneScalarData::DrawColorBar()</a>, <a class="el" href="vsdata_8cpp_source.html#l00457">VisualizationSceneScalarData::DrawCoordinateCross()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00039">InitVisualization()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00312">KillVisualization()</a>, and <a class="el" href="vsdata_8cpp_source.html#l01089">VisualizationSceneScalarData::PrepareAxes()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00218">VisualizationSceneScalarData::DrawColorBar()</a>, <a class="el" href="vsdata_8cpp_source.html#l00458">VisualizationSceneScalarData::DrawCoordinateCross()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00037">InitVisualization()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00310">KillVisualization()</a>, and <a class="el" href="vsdata_8cpp_source.html#l01093">VisualizationSceneScalarData::PrepareAxes()</a>.</p>
 
 </div>
 </div>
@@ -1796,9 +1854,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00384">384</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00382">382</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00401">AddIdleFunc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00387">InitIdleFuncs()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00394">MainIdleFunc()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00407">RemoveIdleFunc()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00399">AddIdleFunc()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00385">InitIdleFuncs()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00392">MainIdleFunc()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00405">RemoveIdleFunc()</a>.</p>
 
 </div>
 </div>
@@ -1813,9 +1871,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00385">385</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00383">383</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00387">InitIdleFuncs()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00394">MainIdleFunc()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00385">InitIdleFuncs()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00392">MainIdleFunc()</a>.</p>
 
 </div>
 </div>
@@ -1830,9 +1888,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00032">32</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00030">30</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00577">KeyRPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00563">KeyrPressed()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00312">KillVisualization()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00581">KeyRPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00567">KeyrPressed()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00310">KillVisualization()</a>.</p>
 
 </div>
 </div>
@@ -1847,9 +1905,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00034">34</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00032">32</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsvector3d_8cpp_source.html#l01251">VisualizationSceneVector3d::Draw()</a>, <a class="el" href="vsvector_8cpp_source.html#l00834">VisualizationSceneVector::Draw()</a>, <a class="el" href="vssolution3d_8cpp_source.html#l02071">VisualizationSceneSolution3d::Draw()</a>, <a class="el" href="vssolution_8cpp_source.html#l01536">VisualizationSceneSolution::Draw()</a>, <a class="el" href="vsdata_8cpp_source.html#l00745">KeyKPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00736">KeykPressed()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l01117">MySetColor()</a>.</p>
+<p>Referenced by <a class="el" href="vsvector3d_8cpp_source.html#l01336">VisualizationSceneVector3d::Draw()</a>, <a class="el" href="vsvector_8cpp_source.html#l00852">VisualizationSceneVector::Draw()</a>, <a class="el" href="vssolution3d_8cpp_source.html#l02074">VisualizationSceneSolution3d::Draw()</a>, <a class="el" href="vssolution_8cpp_source.html#l01581">VisualizationSceneSolution::Draw()</a>, <a class="el" href="vsdata_8cpp_source.html#l00749">KeyKPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00740">KeykPressed()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l01169">MySetColor()</a>.</p>
 
 </div>
 </div>
@@ -1864,9 +1922,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00035">35</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00033">33</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00769">KeyCommaPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00779">KeyLessPressed()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l01117">MySetColor()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00773">KeyCommaPressed()</a>, <a class="el" href="vsdata_8cpp_source.html#l00783">KeyLessPressed()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l01169">MySetColor()</a>.</p>
 
 </div>
 </div>
@@ -1881,9 +1939,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01162">1162</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01215">1215</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l01166">Make_Texture_From_Palette()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l01195">Make_Texture_From_Palette_2()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l01219">Make_Texture_From_Palette()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l01249">Make_Texture_From_Palette_2()</a>.</p>
 
 </div>
 </div>
@@ -1898,9 +1956,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01098">1098</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01150">1150</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00217">VisualizationSceneScalarData::DrawColorBar()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00556">KeyLPressed()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00218">VisualizationSceneScalarData::DrawColorBar()</a>, and <a class="el" href="vsdata_8cpp_source.html#l00560">KeyLPressed()</a>.</p>
 
 </div>
 </div>
@@ -1915,9 +1973,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00417">417</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00415">415</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00486">LeftButtonDown()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00484">LeftButtonDown()</a>.</p>
 
 </div>
 </div>
@@ -1932,9 +1990,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01099">1099</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01151">1151</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00652">KeyF6Pressed()</a>.</p>
+<p>Referenced by <a class="el" href="vsdata_8cpp_source.html#l00656">KeyF6Pressed()</a>.</p>
 
 </div>
 </div>
@@ -1949,7 +2007,7 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00416">416</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00414">414</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1964,7 +2022,7 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00416">416</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00414">414</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1979,7 +2037,7 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00416">416</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00414">414</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1994,9 +2052,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00417">417</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00415">415</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00574">LeftButtonUp()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00644">RightButtonLoc()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00572">LeftButtonUp()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00642">RightButtonLoc()</a>.</p>
 
 </div>
 </div>
@@ -2011,9 +2069,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00417">417</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00415">415</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00574">LeftButtonUp()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00644">RightButtonLoc()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00572">LeftButtonUp()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00642">RightButtonLoc()</a>.</p>
 
 </div>
 </div>
@@ -2028,7 +2086,7 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01164">1164</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01217">1217</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -2043,9 +2101,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01163">1163</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01216">1216</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l01166">Make_Texture_From_Palette()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l01195">Make_Texture_From_Palette_2()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l01219">Make_Texture_From_Palette()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l01249">Make_Texture_From_Palette_2()</a>.</p>
 
 </div>
 </div>
@@ -2060,9 +2118,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01100">1100</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01152">1152</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l01238">GetUseTexture()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l01302">GetUseTexture()</a>.</p>
 
 </div>
 </div>
@@ -2071,30 +2129,15 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="aux__vis_8cpp.html#a9e5f6a8d6dda5d991717d80c872e326a">visualize</a></td>
+          <td class="memname">int <a class="el" href="aux__vis_8cpp.html#a9e5f6a8d6dda5d991717d80c872e326a">visualize</a> = 0</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00031">31</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00029">29</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00834">KeyQPressed()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ac5b0b3c19d476a314bb68af9bc4a0ee0"></a><!-- doxytag: member="aux_vis.cpp::window" ref="ac5b0b3c19d476a314bb68af9bc4a0ee0" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Window <a class="el" href="aux__vis_8cpp.html#ac5b0b3c19d476a314bb68af9bc4a0ee0">window</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00690">Screenshot()</a>.</p>
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00832">KeyQPressed()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00837">ToggleThreads()</a>.</p>
 
 </div>
 </div>
@@ -2109,7 +2152,7 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01035">1035</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01087">1087</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -2118,13 +2161,13 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double <a class="el" href="aux__vis_8cpp.html#a100fe41709b3d02edcbf380dd8a4681e">xang</a></td>
+          <td class="memname">double <a class="el" href="aux__vis_8cpp.html#a100fe41709b3d02edcbf380dd8a4681e">xang</a> = 0.</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00415">415</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00413">413</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -2133,13 +2176,15 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double <a class="el" href="aux__vis_8cpp.html#ad0b090310ad5686a38b897ad253e5c27">yang</a></td>
+          <td class="memname">double <a class="el" href="aux__vis_8cpp.html#ad0b090310ad5686a38b897ad253e5c27">yang</a> = 0.</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00415">415</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00413">413</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="aux__vis_8cpp_source.html#l00847">CheckSpin()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00871">KeyDeletePressed()</a>, <a class="el" href="aux__vis_8cpp_source.html#l00572">LeftButtonUp()</a>, and <a class="el" href="aux__vis_8cpp_source.html#l00420">MainLoop()</a>.</p>
 
 </div>
 </div>
@@ -2149,7 +2194,7 @@ Variables</h2></td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -2158,7 +2203,7 @@ Variables</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:52:24 for GLVis by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 12:13:53 for GLVis by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

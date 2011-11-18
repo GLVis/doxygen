@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">GLVis&#160;<span id="projectnumber">v1.2</span></div>
+   <div id="projectname">GLVis&#160;<span id="projectnumber">v2.0</span></div>
   </td>
  </tr>
  </tbody>
@@ -157,36 +157,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00096"></a>00096          <a class="code" href="classVisualizationSceneSolution.html#a19a1479bdadb4676815c9d98d1138ad5">FindNewBox</a>();
 <a name="l00097"></a>00097          <a class="code" href="classVisualizationSceneScalarData.html#aeb82b322234efaae4817098aaa63efc5">PrepareAxes</a>();
 <a name="l00098"></a>00098          <a class="code" href="classVisualizationSceneSolution.html#a206dd0762ab39de537300b22e62b31b7">PrepareLines</a>();
-<a name="l00099"></a>00099          <a class="code" href="classVisualizationSceneSolution.html#a5b090840a32af79a6175602da4ffee21">Prepare</a>();
-<a name="l00100"></a>00100          <a class="code" href="classVisualizationSceneSolution.html#a1753fc6fb741072a5898ff5a0103c0b1">DefaultLevelLines</a>();
-<a name="l00101"></a>00101          <a class="code" href="classVisualizationSceneSolution.html#a5eb21766e40b26ee027131d6604f7ba4">PrepareLevelCurves</a>();
-<a name="l00102"></a>00102          <a class="code" href="classVisualizationSceneSolution.html#aa285a46ac664190f1b182cf0d28e7ba2">PrepareCP</a>();
-<a name="l00103"></a>00103       }
-<a name="l00104"></a>00104    }
-<a name="l00105"></a>00105 
-<a name="l00106"></a><a class="code" href="classVisualizationSceneSolution.html#aff4cf55304189e93fc0b1e955f549790">00106</a>    <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#aff4cf55304189e93fc0b1e955f549790">ToggleDrawMesh</a>() { <a class="code" href="classVisualizationSceneSolution.html#aabf8972502ab6ac114b7ed84c13ae636">drawmesh</a> = (<a class="code" href="classVisualizationSceneSolution.html#aabf8972502ab6ac114b7ed84c13ae636">drawmesh</a>+1)%3; }
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a1227ae8942b83155d677dd0930773d3f">SetShading</a>(<span class="keywordtype">int</span>);
-<a name="l00109"></a>00109    <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#ab89025477007d6ef8a50b1d883bfb8e1">ToggleShading</a>();
-<a name="l00110"></a>00110 
-<a name="l00111"></a><a class="code" href="classVisualizationSceneSolution.html#a536a137b0839c8a04a044ac1d54f7cbf">00111</a>    <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a536a137b0839c8a04a044ac1d54f7cbf">ToggleDrawCP</a>() { <a class="code" href="classVisualizationSceneSolution.html#ae5255ef545e9c162759a46bec3656761">draw_cp</a> = !<a class="code" href="classVisualizationSceneSolution.html#ae5255ef545e9c162759a46bec3656761">draw_cp</a>; <a class="code" href="classVisualizationSceneSolution.html#aa285a46ac664190f1b182cf0d28e7ba2">PrepareCP</a>(); }
-<a name="l00112"></a>00112 
-<a name="l00113"></a>00113    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#abf3b0b7daf3d915672375c76bdfa8196">SetRefineFactors</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>);
-<a name="l00114"></a>00114    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#af444751418d2a9bcfab1a8a7b75c6384">ToggleAttributes</a>(Array&lt;int&gt; &amp;attr_list);
-<a name="l00115"></a>00115 };
-<a name="l00116"></a>00116 
+<a name="l00099"></a>00099          <a class="code" href="classVisualizationSceneSolution.html#a75024bc6a3eb78bce0c27af2668db898">PrepareBoundary</a>();
+<a name="l00100"></a>00100          <a class="code" href="classVisualizationSceneSolution.html#a5b090840a32af79a6175602da4ffee21">Prepare</a>();
+<a name="l00101"></a>00101          <a class="code" href="classVisualizationSceneSolution.html#a1753fc6fb741072a5898ff5a0103c0b1">DefaultLevelLines</a>();
+<a name="l00102"></a>00102          <a class="code" href="classVisualizationSceneSolution.html#a5eb21766e40b26ee027131d6604f7ba4">PrepareLevelCurves</a>();
+<a name="l00103"></a>00103          <a class="code" href="classVisualizationSceneSolution.html#aa285a46ac664190f1b182cf0d28e7ba2">PrepareCP</a>();
+<a name="l00104"></a>00104       }
+<a name="l00105"></a>00105    }
+<a name="l00106"></a>00106 
+<a name="l00107"></a><a class="code" href="classVisualizationSceneSolution.html#aff4cf55304189e93fc0b1e955f549790">00107</a>    <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#aff4cf55304189e93fc0b1e955f549790">ToggleDrawMesh</a>() { <a class="code" href="classVisualizationSceneSolution.html#aabf8972502ab6ac114b7ed84c13ae636">drawmesh</a> = (<a class="code" href="classVisualizationSceneSolution.html#aabf8972502ab6ac114b7ed84c13ae636">drawmesh</a>+1)%3; }
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a1227ae8942b83155d677dd0930773d3f">SetShading</a>(<span class="keywordtype">int</span>);
+<a name="l00110"></a>00110    <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#ab89025477007d6ef8a50b1d883bfb8e1">ToggleShading</a>();
+<a name="l00111"></a>00111 
+<a name="l00112"></a><a class="code" href="classVisualizationSceneSolution.html#a536a137b0839c8a04a044ac1d54f7cbf">00112</a>    <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#a536a137b0839c8a04a044ac1d54f7cbf">ToggleDrawCP</a>() { <a class="code" href="classVisualizationSceneSolution.html#ae5255ef545e9c162759a46bec3656761">draw_cp</a> = !<a class="code" href="classVisualizationSceneSolution.html#ae5255ef545e9c162759a46bec3656761">draw_cp</a>; <a class="code" href="classVisualizationSceneSolution.html#aa285a46ac664190f1b182cf0d28e7ba2">PrepareCP</a>(); }
+<a name="l00113"></a>00113 
+<a name="l00114"></a>00114    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#abf3b0b7daf3d915672375c76bdfa8196">SetRefineFactors</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>);
+<a name="l00115"></a>00115    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution.html#af444751418d2a9bcfab1a8a7b75c6384">ToggleAttributes</a>(Array&lt;int&gt; &amp;attr_list);
+<a name="l00116"></a>00116 };
 <a name="l00117"></a>00117 
-<a name="l00118"></a>00118 <span class="keywordtype">void</span> <a class="code" href="vssolution_8cpp.html#a583e65647d90c2b1a4332c5b9d7da754">DrawTriangle</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> pts[][3], <span class="keyword">const</span> <span class="keywordtype">double</span> cv[],
-<a name="l00119"></a>00119                   <span class="keyword">const</span> <span class="keywordtype">double</span> minv, <span class="keyword">const</span> <span class="keywordtype">double</span> maxv);
-<a name="l00120"></a>00120 
-<a name="l00121"></a>00121 <span class="keywordtype">void</span> <a class="code" href="vssolution_8cpp.html#adbc09430df785da2c9ff185890e1456c">DrawQuad</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> pts[][3], <span class="keyword">const</span> <span class="keywordtype">double</span> cv[],
-<a name="l00122"></a>00122               <span class="keyword">const</span> <span class="keywordtype">double</span> minv, <span class="keyword">const</span> <span class="keywordtype">double</span> maxv);
-<a name="l00123"></a>00123 
-<a name="l00124"></a>00124 <span class="keywordtype">void</span> <a class="code" href="vssolution_8cpp.html#a699b370ee1c73f85424c9b712a600ba3">DrawPatch</a>(<span class="keyword">const</span> DenseMatrix &amp;pts, Vector &amp;vals, DenseMatrix &amp;normals,
-<a name="l00125"></a>00125                <span class="keyword">const</span> <span class="keywordtype">int</span> n, <span class="keyword">const</span> Array&lt;int&gt; &amp;ind, <span class="keyword">const</span> <span class="keywordtype">double</span> minv,
-<a name="l00126"></a>00126                <span class="keyword">const</span> <span class="keywordtype">double</span> maxv, <span class="keyword">const</span> <span class="keywordtype">int</span> normals_opt = 0);
-<a name="l00127"></a>00127 
-<a name="l00128"></a>00128 <span class="preprocessor">#endif</span>
+<a name="l00118"></a>00118 
+<a name="l00119"></a>00119 <span class="keywordtype">void</span> <a class="code" href="vssolution_8cpp.html#a583e65647d90c2b1a4332c5b9d7da754">DrawTriangle</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> pts[][3], <span class="keyword">const</span> <span class="keywordtype">double</span> cv[],
+<a name="l00120"></a>00120                   <span class="keyword">const</span> <span class="keywordtype">double</span> minv, <span class="keyword">const</span> <span class="keywordtype">double</span> maxv);
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122 <span class="keywordtype">void</span> <a class="code" href="vssolution_8cpp.html#adbc09430df785da2c9ff185890e1456c">DrawQuad</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> pts[][3], <span class="keyword">const</span> <span class="keywordtype">double</span> cv[],
+<a name="l00123"></a>00123               <span class="keyword">const</span> <span class="keywordtype">double</span> minv, <span class="keyword">const</span> <span class="keywordtype">double</span> maxv);
+<a name="l00124"></a>00124 
+<a name="l00125"></a>00125 <span class="keywordtype">void</span> <a class="code" href="vssolution_8cpp.html#a699b370ee1c73f85424c9b712a600ba3">DrawPatch</a>(<span class="keyword">const</span> DenseMatrix &amp;pts, Vector &amp;vals, DenseMatrix &amp;normals,
+<a name="l00126"></a>00126                <span class="keyword">const</span> <span class="keywordtype">int</span> n, <span class="keyword">const</span> Array&lt;int&gt; &amp;ind, <span class="keyword">const</span> <span class="keywordtype">double</span> minv,
+<a name="l00127"></a>00127                <span class="keyword">const</span> <span class="keywordtype">double</span> maxv, <span class="keyword">const</span> <span class="keywordtype">int</span> normals_opt = 0);
+<a name="l00128"></a>00128 
+<a name="l00129"></a>00129 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!-- window showing the filter options -->
@@ -194,7 +195,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -203,7 +204,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 17 2011 15:52:24 for GLVis by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Fri Nov 18 2011 12:13:52 for GLVis by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

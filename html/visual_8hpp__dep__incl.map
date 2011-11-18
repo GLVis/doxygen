@@ -1,7 +1,9 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$glvis_8cpp.html" title="glvis.cpp" alt="" coords="5,80,77,107"/>
-<area shape="rect" id="node5" href="$vssolution_8cpp.html" title="vssolution.cpp" alt="" coords="101,80,208,107"/>
-<area shape="rect" id="node7" href="$vssolution3d_8cpp.html" title="vssolution3d.cpp" alt="" coords="232,80,355,107"/>
-<area shape="rect" id="node9" href="$vsvector_8cpp.html" title="vsvector.cpp" alt="" coords="379,80,475,107"/>
-<area shape="rect" id="node11" href="$vsvector3d_8cpp.html" title="vsvector3d.cpp" alt="" coords="499,80,611,107"/>
+<area shape="rect" id="node5" href="$aux__vis_8cpp.html" title="aux_vis.cpp" alt="" coords="101,80,192,107"/>
+<area shape="rect" id="node7" href="$threads_8cpp.html" title="threads.cpp" alt="" coords="216,80,307,107"/>
+<area shape="rect" id="node9" href="$vssolution_8cpp.html" title="vssolution.cpp" alt="" coords="331,80,437,107"/>
+<area shape="rect" id="node11" href="$vssolution3d_8cpp.html" title="vssolution3d.cpp" alt="" coords="461,80,584,107"/>
+<area shape="rect" id="node13" href="$vsvector_8cpp.html" title="vsvector.cpp" alt="" coords="608,80,704,107"/>
+<area shape="rect" id="node15" href="$vsvector3d_8cpp.html" title="vsvector3d.cpp" alt="" coords="728,80,840,107"/>
 </map>
