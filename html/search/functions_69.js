@@ -9,5 +9,6 @@ var searchData=
   ['initidlefuncs',['InitIdleFuncs',['../aux__vis_8cpp.html#a8f1a99abb937e78c6b36e9954ef88902',1,'aux_vis.cpp']]],
   ['initvis',['InitVis',['../glvis_8cpp.html#ab318e333a53a4c136b8008ebf482b8b8',1,'glvis.cpp']]],
   ['initvisualization',['InitVisualization',['../aux__vis_8cpp.html#a1cb02c2636dea48ecf59bab2c8d3be5c',1,'InitVisualization(const char name[], int x, int y, int w, int h):&#160;aux_vis.cpp'],['../aux__vis_8hpp.html#a1cb02c2636dea48ecf59bab2c8d3be5c',1,'InitVisualization(const char name[], int x, int y, int w, int h):&#160;aux_vis.cpp']]],
-  ['innerprod',['InnerProd',['../vssolution3d_8hpp.html#a4ad02dcf39033db086de0a505166f45d',1,'vssolution3d.hpp']]]
+  ['innerprod',['InnerProd',['../openglvis_8hpp.html#a1c87f47ef837339de388d7e0aae7299f',1,'openglvis.hpp']]],
+  ['isfinite',['isfinite',['../vssolution_8cpp.html#a472e92533bdba4fc9b375d5e42690701',1,'vssolution.cpp']]]
 ];

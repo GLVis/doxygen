@@ -3,7 +3,6 @@ var searchData=
   ['ianim',['ianim',['../classVisualizationSceneVector3d.html#a10baf550f5c093546da733e3394fe87b',1,'VisualizationSceneVector3d']]],
   ['ianimd',['ianimd',['../classVisualizationSceneVector3d.html#a0ee71b75785d8dff067a8cba6da1e7a4',1,'VisualizationSceneVector3d']]],
   ['ianimmax',['ianimmax',['../classVisualizationSceneVector3d.html#a688ea55ce633bda9473451d69d2d03f0',1,'VisualizationSceneVector3d']]],
-  ['ident',['ident',['../classcommunication__thread.html#a276baa7edd577d852edcfea9a9826070',1,'communication_thread']]],
   ['idlefuncs',['IdleFuncs',['../aux__vis_8cpp.html#a4bde49260a00e4ab384b86cf7616324d',1,'aux_vis.cpp']]],
   ['increasedistance',['IncreaseDistance',['../classPlane.html#a765ff9ff592a4ffddebd94c79e532578',1,'Plane']]],
   ['increasephi',['IncreasePhi',['../classPlane.html#ac383bde3bc0c35b69be12d282e66c82c',1,'Plane']]],
@@ -15,9 +14,10 @@ var searchData=
   ['initidlefuncs',['InitIdleFuncs',['../aux__vis_8cpp.html#a8f1a99abb937e78c6b36e9954ef88902',1,'aux_vis.cpp']]],
   ['initvis',['InitVis',['../glvis_8cpp.html#ab318e333a53a4c136b8008ebf482b8b8',1,'glvis.cpp']]],
   ['initvisualization',['InitVisualization',['../aux__vis_8cpp.html#a1cb02c2636dea48ecf59bab2c8d3be5c',1,'InitVisualization(const char name[], int x, int y, int w, int h):&#160;aux_vis.cpp'],['../aux__vis_8hpp.html#a1cb02c2636dea48ecf59bab2c8d3be5c',1,'InitVisualization(const char name[], int x, int y, int w, int h):&#160;aux_vis.cpp']]],
-  ['innerprod',['InnerProd',['../vssolution3d_8hpp.html#a4ad02dcf39033db086de0a505166f45d',1,'vssolution3d.hpp']]],
+  ['innerprod',['InnerProd',['../openglvis_8hpp.html#a1c87f47ef837339de388d7e0aae7299f',1,'openglvis.hpp']]],
   ['input',['input',['../glvis_8cpp.html#adfab4eebf850cff6c1c1c4b8aa408293',1,'glvis.cpp']]],
   ['input_5fstreams',['input_streams',['../glvis_8cpp.html#a9d62f9664bbd5739f2fa08478900cfe2',1,'glvis.cpp']]],
-  ['is',['is',['../classcommunication__thread.html#a583f53750a0f1d1336b031092afd3b19',1,'communication_thread']]],
-  ['is_5fgf',['is_gf',['../glvis_8cpp.html#a0714f6a875376bdae0e5afc025374521',1,'glvis.cpp']]]
+  ['is_5f1d',['is_1d',['../glvis_8cpp.html#aaa4b9551e0b657e0ca4586db12e5639c',1,'glvis.cpp']]],
+  ['is_5fgf',['is_gf',['../glvis_8cpp.html#a0714f6a875376bdae0e5afc025374521',1,'glvis.cpp']]],
+  ['isfinite',['isfinite',['../vssolution_8cpp.html#a472e92533bdba4fc9b375d5e42690701',1,'vssolution.cpp']]]
 ];

@@ -1,20 +1,20 @@
 var searchData=
 [
-  ['save_5fcoloring',['save_coloring',['../glvis_8cpp.html#acff48e064c2a8bd9e14f5215c7af4042',1,'glvis.cpp']]],
+  ['save_5fcoloring',['save_coloring',['../glvis_8cpp.html#abc99c8f747a46e659e96c1927eb9661a',1,'glvis.cpp']]],
   ['scal_5ffunc',['scal_func',['../classVisualizationSceneVector3d.html#a52f71538ff00c7360738186c435214bd',1,'VisualizationSceneVector3d']]],
   ['scaling',['scaling',['../classVisualizationSceneScalarData.html#adc9c7f878b5a34fb8fbe6f2c3ff0169d',1,'VisualizationSceneScalarData']]],
+  ['scaling_5f1d',['scaling_1d',['../classVisualizationSceneSolution.html#a2e1ef0cd372b9742b27f9819bec91fa0',1,'VisualizationSceneSolution']]],
   ['scr_5flevel',['scr_level',['../glvis_8cpp.html#abf425bbc686fbedef7e537b5a3743788',1,'glvis.cpp']]],
   ['scr_5fmax_5fval',['scr_max_val',['../glvis_8cpp.html#af3b4b81d02c5ed6da83ef0f3a3c62669',1,'glvis.cpp']]],
   ['scr_5fmin_5fval',['scr_min_val',['../glvis_8cpp.html#a595e4cfb0d88ad5063879cfd71fee1d3',1,'glvis.cpp']]],
   ['scr_5frunning',['scr_running',['../glvis_8cpp.html#ac9a204cfe1cf4cf44eb62b5833fb7a59',1,'glvis.cpp']]],
-  ['scr_5fsol_5fautoscale',['scr_sol_autoscale',['../glvis_8cpp.html#af4af2b70781b30ab9adbc5050d80e996',1,'glvis.cpp']]],
   ['script',['script',['../glvis_8cpp.html#ac2e15ab8707cf0b5252fea4a2b413de5',1,'glvis.cpp']]],
   ['sfes',['sfes',['../classVisualizationSceneVector3d.html#aa470aa099210d1e8b50e56ea75e69d84',1,'VisualizationSceneVector3d']]],
   ['shading',['shading',['../classVisualizationSceneSolution.html#abb46c83f1e814a7874a2b3201082d104',1,'VisualizationSceneSolution::shading()'],['../classVisualizationSceneSolution3d.html#a4156db5ab5eb69b2372d18787fcac5ac',1,'VisualizationSceneSolution3d::shading()']]],
   ['shrink',['shrink',['../classVisualizationSceneScalarData.html#aafdfc20e225abe3e02ba42ea422c8444',1,'VisualizationSceneScalarData']]],
   ['shrinkmat',['shrinkmat',['../classVisualizationSceneScalarData.html#a189df98d3930547ea308f37a264ada80',1,'VisualizationSceneScalarData']]],
-  ['sol',['sol',['../classGLVisCommand.html#ae68f9b3af59f16905fe021905c09ba77',1,'GLVisCommand::sol()'],['../classVisualizationSceneScalarData.html#a5ce34a0e666012a9034d15124fff746b',1,'VisualizationSceneScalarData::sol()'],['../glvis_8cpp.html#abdff2ecf770abe7e9e10d3ac91efecc2',1,'sol():&#160;glvis.cpp']]],
-  ['sol_5ffile',['sol_file',['../glvis_8cpp.html#a8c44e7f0b97e72d22bb9ceb8dfa14a73',1,'glvis.cpp']]],
+  ['sol',['sol',['../classVisualizationSceneScalarData.html#a5ce34a0e666012a9034d15124fff746b',1,'VisualizationSceneScalarData::sol()'],['../glvis_8cpp.html#abdff2ecf770abe7e9e10d3ac91efecc2',1,'sol():&#160;glvis.cpp']]],
+  ['sol_5ffile',['sol_file',['../glvis_8cpp.html#ae48547db7a86676969158a6bdcf25582',1,'glvis.cpp']]],
   ['solu',['solu',['../glvis_8cpp.html#ad5f3d37af3d7cf7c7bb37557d671277d',1,'glvis.cpp']]],
   ['solv',['solv',['../glvis_8cpp.html#a84f9b469e4c4f34f5ec4f988bf0462f6',1,'glvis.cpp']]],
   ['solw',['solw',['../glvis_8cpp.html#ad1c82108bcbb85f7ee42a74277a45f8f',1,'glvis.cpp']]],
@@ -26,5 +26,7 @@ var searchData=
   ['spinning',['spinning',['../classVisualizationScene.html#a3394476ae781c4f4fb1eff77100a5210',1,'VisualizationScene']]],
   ['split_5fquads',['split_quads',['../vssolution_8cpp.html#a74281913a5b8da9f250c49fa8131671e',1,'vssolution.cpp']]],
   ['srot',['srot',['../aux__vis_8cpp.html#a61411234ee39fb9c6eaf29d24cb37bbb',1,'aux_vis.cpp']]],
-  ['strings_5fon_5foff',['strings_on_off',['../vsdata_8cpp.html#a30aac49eff7f2974c2f10911fb38d032',1,'vsdata.cpp']]]
+  ['string_5fdefault',['string_default',['../glvis_8cpp.html#a067a1b2f9041f6f881f8f77718769603',1,'glvis.cpp']]],
+  ['string_5fnone',['string_none',['../glvis_8cpp.html#a5e600c6df4060c21b016452224d6bd91',1,'glvis.cpp']]],
+  ['strings_5foff_5fon',['strings_off_on',['../threads_8cpp.html#aed2e0f2721fb1c7fefbff525bded0bfd',1,'strings_off_on():&#160;vsdata.cpp'],['../vsdata_8cpp.html#aed2e0f2721fb1c7fefbff525bded0bfd',1,'strings_off_on():&#160;vsdata.cpp']]]
 ];

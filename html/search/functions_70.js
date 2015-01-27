@@ -1,9 +1,11 @@
 var searchData=
 [
+  ['palette',['Palette',['../classGLVisCommand.html#a513254f49aa8eb966ea3a56590fbbf8f',1,'GLVisCommand']]],
+  ['pause',['Pause',['../classGLVisCommand.html#aca90f62455f7f7d7fd105da58cfb17b7',1,'GLVisCommand']]],
   ['plane',['Plane',['../classPlane.html#a51de01245b9c2881e232b1114d91f0b9',1,'Plane']]],
   ['playscript',['PlayScript',['../glvis_8cpp.html#a79ac0aed09c13aac298ae36c4bd303a0',1,'glvis.cpp']]],
-  ['prepare',['Prepare',['../classVisualizationScene.html#aacfdbb606ff41dce8ffbeac3452c393f',1,'VisualizationScene::Prepare()'],['../classVisualizationSceneSolution.html#a5b090840a32af79a6175602da4ffee21',1,'VisualizationSceneSolution::Prepare()'],['../classVisualizationSceneSolution3d.html#ac7d7f156c3e0a567ba90ad2e770f992a',1,'VisualizationSceneSolution3d::Prepare()'],['../classVisualizationSceneVector3d.html#aa6a161e2e282209ef72867d485e5753f',1,'VisualizationSceneVector3d::Prepare()']]],
-  ['prepareaxes',['PrepareAxes',['../classVisualizationScene.html#a7ffcb86d2a35ae138ebb8550accc8565',1,'VisualizationScene::PrepareAxes()'],['../classVisualizationSceneScalarData.html#aeb82b322234efaae4817098aaa63efc5',1,'VisualizationSceneScalarData::PrepareAxes()']]],
+  ['prepare',['Prepare',['../classVisualizationSceneScalarData.html#a73e165ee073cff99b07d8f16817d3ab6',1,'VisualizationSceneScalarData::Prepare()'],['../classVisualizationSceneSolution.html#a5b090840a32af79a6175602da4ffee21',1,'VisualizationSceneSolution::Prepare()'],['../classVisualizationSceneSolution3d.html#ac7d7f156c3e0a567ba90ad2e770f992a',1,'VisualizationSceneSolution3d::Prepare()'],['../classVisualizationSceneVector3d.html#aa6a161e2e282209ef72867d485e5753f',1,'VisualizationSceneVector3d::Prepare()']]],
+  ['prepareaxes',['PrepareAxes',['../classVisualizationSceneScalarData.html#aeb82b322234efaae4817098aaa63efc5',1,'VisualizationSceneScalarData']]],
   ['prepareboundary',['PrepareBoundary',['../classVisualizationSceneSolution.html#a75024bc6a3eb78bce0c27af2668db898',1,'VisualizationSceneSolution']]],
   ['preparecp',['PrepareCP',['../classVisualizationSceneSolution.html#aa285a46ac664190f1b182cf0d28e7ba2',1,'VisualizationSceneSolution']]],
   ['preparecuttingplane',['PrepareCuttingPlane',['../classVisualizationSceneSolution3d.html#a4cda32eb355c8993a443937e570a2988',1,'VisualizationSceneSolution3d::PrepareCuttingPlane()'],['../classVisualizationSceneVector3d.html#a796313104e18f606dedf495ca51465b6',1,'VisualizationSceneVector3d::PrepareCuttingPlane()']]],
@@ -20,6 +22,12 @@ var searchData=
   ['preparelines2',['PrepareLines2',['../classVisualizationSceneSolution.html#a6214dddb83a8107992e09071c4a864ad',1,'VisualizationSceneSolution::PrepareLines2()'],['../classVisualizationSceneSolution3d.html#a403fffe87c5aa01404700e1e0d3a7538',1,'VisualizationSceneSolution3d::PrepareLines2()'],['../classVisualizationSceneVector3d.html#afe31c2ec0381dd2a7ec67d373ee4e3f5',1,'VisualizationSceneVector3d::PrepareLines2()']]],
   ['preparelines3',['PrepareLines3',['../classVisualizationSceneSolution.html#affec0168efb1a668ef35bd2f3a8100e0',1,'VisualizationSceneSolution']]],
   ['preparevectorfield',['PrepareVectorField',['../classVisualizationSceneVector.html#a7c68f6866e0f3599b67eb4fe0d7008d0',1,'VisualizationSceneVector::PrepareVectorField()'],['../classVisualizationSceneVector3d.html#a1a39d6cf8b199180ac85e0c8f5eb3baf',1,'VisualizationSceneVector3d::PrepareVectorField()']]],
+  ['preparewithnormals',['PrepareWithNormals',['../classVisualizationSceneSolution.html#a1209e60d25e1f15a88fef24f1e82de02',1,'VisualizationSceneSolution']]],
+  ['prerotate',['PreRotate',['../classVisualizationScene.html#a597c8297a6c6a22b38b39e816e6aa525',1,'VisualizationScene']]],
+  ['print',['Print',['../classCamera.html#ab0ccefa5794e3a2faff26504de6942e9',1,'Camera']]],
+  ['printlogscale',['PrintLogscale',['../classVisualizationSceneScalarData.html#a777be9fed0b608a37f08d27432ea27aa',1,'VisualizationSceneScalarData']]],
+  ['printsampleusage',['PrintSampleUsage',['../glvis_8cpp.html#a16dd209e0db496e5b4f95d5f6f1ff4b7',1,'glvis.cpp']]],
   ['printstate',['PrintState',['../classVisualizationSceneScalarData.html#a3610df4566d8785ecbf49946e9c633f6',1,'VisualizationSceneScalarData']]],
+  ['projectvector',['ProjectVector',['../openglvis_8hpp.html#a998a962b0264a28a09755dfdbbe06d86',1,'openglvis.hpp']]],
   ['projectvectorfegridfunction',['ProjectVectorFEGridFunction',['../glvis_8cpp.html#a88dfe68223b173c6fcc098f71bdf3bc4',1,'ProjectVectorFEGridFunction(GridFunction *):&#160;glvis.cpp'],['../threads_8cpp.html#a18588ac5a8dd8ce730d69e0fd9cdc757',1,'ProjectVectorFEGridFunction(GridFunction *):&#160;glvis.cpp']]]
 ];

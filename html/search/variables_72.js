@@ -58,8 +58,6 @@ var searchData=
   ['rgb_5fpalettes',['RGB_Palettes',['../palettes_8hpp.html#a78b3623b7bee842730243764b06d2dd5',1,'palettes.hpp']]],
   ['rgb_5fpalettes_5fnames',['RGB_Palettes_Names',['../palettes_8hpp.html#a2a95723545e6de6e0f3a3f5d98699cd7',1,'palettes.hpp']]],
   ['rgb_5fpalettes_5fsizes',['RGB_Palettes_Sizes',['../palettes_8hpp.html#acf9c5de4d4821428315a7098f67dde4d',1,'palettes.hpp']]],
-  ['rho',['rho',['../classPlane.html#a1e85675c0c881eac4f1f76696bf054f2',1,'Plane']]],
-  ['rho_5fstep',['rho_step',['../classPlane.html#a27e3fd0beb2844233ff6e24bf79e64cc',1,'Plane']]],
   ['rotmat',['rotmat',['../classVisualizationScene.html#ab7b20b0d2afceed7bde0521133e6cdcc',1,'VisualizationScene']]],
   ['rsol',['rsol',['../classVisualizationSceneSolution.html#aca691cbb8ae740098df7df383c59670b',1,'VisualizationSceneSolution']]],
   ['ruler_5fon',['ruler_on',['../classVisualizationSceneScalarData.html#abcbcb4deb45c9e386434ad3d57ce5841',1,'VisualizationSceneScalarData']]],

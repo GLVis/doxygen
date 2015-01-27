@@ -1,6 +1,7 @@
-<map id="G" name="G">
-<area shape="rect" id="node2" href="$classVisualizationSceneSolution3d.html" title="VisualizationSceneSolution3d" alt="" coords="33,173,228,200"/>
-<area shape="rect" id="node4" href="$classVisualizationSceneScalarData.html" title="VisualizationSceneScalarData" alt="" coords="31,96,231,123"/>
-<area shape="rect" id="node6" href="$classVisualizationScene.html" title="VisualizationScene" alt="" coords="5,5,139,32"/>
-<area shape="rect" id="node8" href="$classPlane.html" title="Plane" alt="" coords="163,5,219,32"/>
+<map id="VisualizationSceneVector3d" name="VisualizationSceneVector3d">
+<area shape="rect" id="node2" href="$classVisualizationSceneSolution3d.html" title="VisualizationSceneSolution3d" alt="" coords="72,299,339,333"/>
+<area shape="rect" id="node4" href="$classVisualizationSceneScalarData.html" title="VisualizationSceneScalarData" alt="" coords="71,214,340,247"/>
+<area shape="rect" id="node6" href="$classVisualizationScene.html" title="VisualizationScene" alt="" coords="5,110,184,143"/>
+<area shape="rect" id="node8" href="$classCamera.html" title="Camera" alt="" coords="51,6,139,39"/>
+<area shape="rect" id="node10" href="$classPlane.html" title="Plane" alt="" coords="208,110,277,143"/>
 </map>
