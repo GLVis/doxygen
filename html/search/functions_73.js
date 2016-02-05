@@ -14,7 +14,6 @@ var searchData=
   ['sendkeyevent',['SendKeyEvent',['../aux__vis_8cpp.html#ac92f1e31a4cd39cd654e20cf6b8cdf96',1,'aux_vis.cpp']]],
   ['sendkeysequence',['SendKeySequence',['../aux__vis_8cpp.html#ae6aed8461ba7346b747c45fdfd2c4b95',1,'SendKeySequence(const char *seq):&#160;aux_vis.cpp'],['../aux__vis_8hpp.html#ae6aed8461ba7346b747c45fdfd2c4b95',1,'SendKeySequence(const char *seq):&#160;aux_vis.cpp']]],
   ['set',['Set',['../classCamera.html#ad719447511ba70a12af00caa18a2efe9',1,'Camera']]],
-  ['set1dscaling',['Set1DScaling',['../classVisualizationSceneSolution.html#a0684b5ab6efe7dbcd12d0a7ac4500512',1,'VisualizationSceneSolution']]],
   ['set_5fantialiasing',['Set_AntiAliasing',['../material_8cpp.html#acf281556f5f0ae4fc9d65e86d85a7bf2',1,'Set_AntiAliasing():&#160;material.cpp'],['../material_8hpp.html#acf281556f5f0ae4fc9d65e86d85a7bf2',1,'Set_AntiAliasing():&#160;material.cpp']]],
   ['set_5fbackground',['Set_Background',['../material_8cpp.html#a210ac1c393ab50ceba066ebc89fe810f',1,'Set_Background():&#160;material.cpp'],['../material_8hpp.html#a210ac1c393ab50ceba066ebc89fe810f',1,'Set_Background():&#160;material.cpp']]],
   ['set_5fblack_5fmaterial',['Set_Black_Material',['../material_8cpp.html#a2987eff3b35b8ef824bad012fc2e8c6f',1,'Set_Black_Material():&#160;material.cpp'],['../material_8hpp.html#a2987eff3b35b8ef824bad012fc2e8c6f',1,'Set_Black_Material():&#160;material.cpp']]],

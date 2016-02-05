@@ -23,8 +23,9 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">GLVis
-   &#160;<span id="projectnumber">v3.0</span>
+   &#160;<span id="projectnumber">v3.1</span>
    </div>
+   <div id="projectbrief">Accurate and flexible finite element visualization</div>
   </td>
  </tr>
  </tbody>
@@ -93,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// reserved. See file COPYRIGHT for details.</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// This file is part of the GLVis visualization tool and library. For more</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// information and source code availability see http://glvis.googlecode.com.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// information and source code availability see http://glvis.org.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// GLVis is free software; you can redistribute it and/or modify it under the</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// terms of the GNU Lesser General Public License (as published by the Free</span></div>
@@ -153,41 +154,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   {</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      drawdisp = (drawdisp+1)%4;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordflow">if</span> (drawdisp != 1)</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;         PrepareDisplacedMesh();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> Draw();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;         PrepareDisplacedMesh();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;   }</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector.html#ac827e3bb35122e18e9e6df8a3ed735ef">   71</a></span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneVector.html#ac827e3bb35122e18e9e6df8a3ed735ef">EventUpdateColors</a>() { Prepare(); PrepareVectorField(); }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> Draw();</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;   <span class="comment">// refinement factor for the vectors</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector.html#a8281d01b5db403f94dd2356512766406">   74</a></span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classVisualizationSceneVector.html#a8281d01b5db403f94dd2356512766406">RefineFactor</a>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector.html#a12a2a95450a843750030b45f04981b12">   76</a></span>&#160;   <span class="keywordtype">double</span> <a class="code" href="classVisualizationSceneVector.html#a12a2a95450a843750030b45f04981b12">ArrowScale</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector.html#ac827e3bb35122e18e9e6df8a3ed735ef">   73</a></span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneVector.html#ac827e3bb35122e18e9e6df8a3ed735ef">EventUpdateColors</a>() { Prepare(); PrepareVectorField(); }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;   <span class="comment">// refinement factor for the vectors</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector.html#a8281d01b5db403f94dd2356512766406">   76</a></span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classVisualizationSceneVector.html#a8281d01b5db403f94dd2356512766406">RefineFactor</a>;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;   <span class="keywordtype">void</span> CycleVec2Scalar(<span class="keywordtype">int</span> print = 0);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector.html#a12a2a95450a843750030b45f04981b12">   78</a></span>&#160;   <span class="keywordtype">double</span> <a class="code" href="classVisualizationSceneVector.html#a12a2a95450a843750030b45f04981b12">ArrowScale</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;   <span class="keywordtype">void</span> CycleVec2Scalar(<span class="keywordtype">int</span> print = 0);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classVisualizationSceneVector_html_a990eee26b916b4f32d754cb85cbd4f4d"><div class="ttname"><a href="classVisualizationSceneVector.html#a990eee26b916b4f32d754cb85cbd4f4d">VisualizationSceneVector::VecGridF</a></div><div class="ttdeci">GridFunction * VecGridF</div><div class="ttdef"><b>Definition:</b> <a href="vsvector_8hpp_source.html#l00025">vsvector.hpp:25</a></div></div>
 <div class="ttc" id="classVisualizationSceneVector_html_a328f4065fd1d702e9d3e3243a0bb7496"><div class="ttname"><a href="classVisualizationSceneVector.html#a328f4065fd1d702e9d3e3243a0bb7496">VisualizationSceneVector::maxlen</a></div><div class="ttdeci">double maxlen</div><div class="ttdef"><b>Definition:</b> <a href="vsvector_8hpp_source.html#l00039">vsvector.hpp:39</a></div></div>
 <div class="ttc" id="classVisualizationSceneVector_html_a83cd1d5b63915a21de42d0c265077de1"><div class="ttname"><a href="classVisualizationSceneVector.html#a83cd1d5b63915a21de42d0c265077de1">VisualizationSceneVector::T0</a></div><div class="ttdeci">IsoparametricTransformation T0</div><div class="ttdef"><b>Definition:</b> <a href="vsvector_8hpp_source.html#l00042">vsvector.hpp:42</a></div></div>
-<div class="ttc" id="classVisualizationSceneSolution_html_a206dd0762ab39de537300b22e62b31b7"><div class="ttname"><a href="classVisualizationSceneSolution.html#a206dd0762ab39de537300b22e62b31b7">VisualizationSceneSolution::PrepareLines</a></div><div class="ttdeci">virtual void PrepareLines()</div><div class="ttdef"><b>Definition:</b> <a href="vssolution_8cpp_source.html#l01446">vssolution.cpp:1446</a></div></div>
+<div class="ttc" id="classVisualizationSceneSolution_html_a206dd0762ab39de537300b22e62b31b7"><div class="ttname"><a href="classVisualizationSceneSolution.html#a206dd0762ab39de537300b22e62b31b7">VisualizationSceneSolution::PrepareLines</a></div><div class="ttdeci">virtual void PrepareLines()</div><div class="ttdef"><b>Definition:</b> <a href="vssolution_8cpp_source.html#l01565">vssolution.cpp:1565</a></div></div>
 <div class="ttc" id="classVisualizationSceneVector_html_a39053e19f7d9acbe99ad70ca3ff8999b"><div class="ttname"><a href="classVisualizationSceneVector.html#a39053e19f7d9acbe99ad70ca3ff8999b">VisualizationSceneVector::PrepareLines</a></div><div class="ttdeci">virtual void PrepareLines()</div><div class="ttdef"><b>Definition:</b> <a href="vsvector_8hpp_source.html#l00054">vsvector.hpp:54</a></div></div>
-<div class="ttc" id="classVisualizationSceneVector_html_a8281d01b5db403f94dd2356512766406"><div class="ttname"><a href="classVisualizationSceneVector.html#a8281d01b5db403f94dd2356512766406">VisualizationSceneVector::RefineFactor</a></div><div class="ttdeci">int RefineFactor</div><div class="ttdef"><b>Definition:</b> <a href="vsvector_8hpp_source.html#l00074">vsvector.hpp:74</a></div></div>
-<div class="ttc" id="glvis_8cpp_html_aaa39e96e6b8d194393382fd246961034"><div class="ttname"><a href="glvis_8cpp.html#aaa39e96e6b8d194393382fd246961034">normals</a></div><div class="ttdeci">Vector normals</div><div class="ttdef"><b>Definition:</b> <a href="glvis_8cpp_source.html#l00056">glvis.cpp:56</a></div></div>
-<div class="ttc" id="classVisualizationSceneVector_html_a12a2a95450a843750030b45f04981b12"><div class="ttname"><a href="classVisualizationSceneVector.html#a12a2a95450a843750030b45f04981b12">VisualizationSceneVector::ArrowScale</a></div><div class="ttdeci">double ArrowScale</div><div class="ttdef"><b>Definition:</b> <a href="vsvector_8hpp_source.html#l00076">vsvector.hpp:76</a></div></div>
+<div class="ttc" id="classVisualizationSceneVector_html_a8281d01b5db403f94dd2356512766406"><div class="ttname"><a href="classVisualizationSceneVector.html#a8281d01b5db403f94dd2356512766406">VisualizationSceneVector::RefineFactor</a></div><div class="ttdeci">int RefineFactor</div><div class="ttdef"><b>Definition:</b> <a href="vsvector_8hpp_source.html#l00076">vsvector.hpp:76</a></div></div>
+<div class="ttc" id="glvis_8cpp_html_aaa39e96e6b8d194393382fd246961034"><div class="ttname"><a href="glvis_8cpp.html#aaa39e96e6b8d194393382fd246961034">normals</a></div><div class="ttdeci">Vector normals</div><div class="ttdef"><b>Definition:</b> <a href="glvis_8cpp_source.html#l00057">glvis.cpp:57</a></div></div>
+<div class="ttc" id="classVisualizationSceneVector_html_a12a2a95450a843750030b45f04981b12"><div class="ttname"><a href="classVisualizationSceneVector.html#a12a2a95450a843750030b45f04981b12">VisualizationSceneVector::ArrowScale</a></div><div class="ttdeci">double ArrowScale</div><div class="ttdef"><b>Definition:</b> <a href="vsvector_8hpp_source.html#l00078">vsvector.hpp:78</a></div></div>
 <div class="ttc" id="classVisualizationSceneVector_html_a98ab54eb9d6696eddbf39ccaaad6273b"><div class="ttname"><a href="classVisualizationSceneVector.html#a98ab54eb9d6696eddbf39ccaaad6273b">VisualizationSceneVector::vectorlist</a></div><div class="ttdeci">int vectorlist</div><div class="ttdef"><b>Definition:</b> <a href="vsvector_8hpp_source.html#l00023">vsvector.hpp:23</a></div></div>
 <div class="ttc" id="classVisualizationSceneVector_html_a3afc1155ca912eed5c1480fbb8115068"><div class="ttname"><a href="classVisualizationSceneVector.html#a3afc1155ca912eed5c1480fbb8115068">VisualizationSceneVector::ToggleDisplacements</a></div><div class="ttdeci">void ToggleDisplacements()</div><div class="ttdef"><b>Definition:</b> <a href="vsvector_8hpp_source.html#l00062">vsvector.hpp:62</a></div></div>
 <div class="ttc" id="classVisualizationSceneVector_html"><div class="ttname"><a href="classVisualizationSceneVector.html">VisualizationSceneVector</a></div><div class="ttdef"><b>Definition:</b> <a href="vsvector_8hpp_source.html#l00018">vsvector.hpp:18</a></div></div>
 <div class="ttc" id="classVisualizationSceneVector_html_a8cfc86b058e8a5570d5bc32bfdf47104"><div class="ttname"><a href="classVisualizationSceneVector.html#a8cfc86b058e8a5570d5bc32bfdf47104">VisualizationSceneVector::vc0</a></div><div class="ttdeci">Vector vc0</div><div class="ttdef"><b>Definition:</b> <a href="vsvector_8hpp_source.html#l00041">vsvector.hpp:41</a></div></div>
 <div class="ttc" id="classVisualizationSceneVector_html_a576d769a1db735cbff9806b3a67ae84c"><div class="ttname"><a href="classVisualizationSceneVector.html#a576d769a1db735cbff9806b3a67ae84c">VisualizationSceneVector::soly</a></div><div class="ttdeci">Vector * soly</div><div class="ttdef"><b>Definition:</b> <a href="vsvector_8hpp_source.html#l00022">vsvector.hpp:22</a></div></div>
-<div class="ttc" id="classVisualizationSceneVector_html_ac827e3bb35122e18e9e6df8a3ed735ef"><div class="ttname"><a href="classVisualizationSceneVector.html#ac827e3bb35122e18e9e6df8a3ed735ef">VisualizationSceneVector::EventUpdateColors</a></div><div class="ttdeci">virtual void EventUpdateColors()</div><div class="ttdef"><b>Definition:</b> <a href="vsvector_8hpp_source.html#l00071">vsvector.hpp:71</a></div></div>
+<div class="ttc" id="classVisualizationSceneVector_html_ac827e3bb35122e18e9e6df8a3ed735ef"><div class="ttname"><a href="classVisualizationSceneVector.html#ac827e3bb35122e18e9e6df8a3ed735ef">VisualizationSceneVector::EventUpdateColors</a></div><div class="ttdeci">virtual void EventUpdateColors()</div><div class="ttdef"><b>Definition:</b> <a href="vsvector_8hpp_source.html#l00073">vsvector.hpp:73</a></div></div>
 <div class="ttc" id="classVisualizationSceneSolution_html"><div class="ttname"><a href="classVisualizationSceneSolution.html">VisualizationSceneSolution</a></div><div class="ttdef"><b>Definition:</b> <a href="vssolution_8hpp_source.html#l00020">vssolution.hpp:20</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 26 2015 16:42:57 for GLVis by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:25:36 for GLVis by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

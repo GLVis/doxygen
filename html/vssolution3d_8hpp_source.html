@@ -23,8 +23,9 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">GLVis
-   &#160;<span id="projectnumber">v3.0</span>
+   &#160;<span id="projectnumber">v3.1</span>
    </div>
+   <div id="projectbrief">Accurate and flexible finite element visualization</div>
   </td>
  </tr>
  </tbody>
@@ -93,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// reserved. See file COPYRIGHT for details.</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// This file is part of the GLVis visualization tool and library. For more</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// information and source code availability see http://glvis.googlecode.com.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// information and source code availability see http://glvis.org.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// GLVis is free software; you can redistribute it and/or modify it under the</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// terms of the GNU Lesser General Public License (as published by the Free</span></div>
@@ -143,98 +144,109 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;   <span class="keywordtype">int</span> GetAutoRefineFactor();</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classVisualizationSceneSolution3d.html#ab9fe6f0e0a51d1c27f93a5f16e175a9e">   57</a></span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classVisualizationSceneSolution3d.html#ab9fe6f0e0a51d1c27f93a5f16e175a9e">TimesToRefine</a>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classVisualizationSceneSolution3d.html#ae3c18acdf34dd861d433484514f232a0">   58</a></span>&#160;   <span class="keywordtype">double</span> <a class="code" href="classVisualizationSceneSolution3d.html#ae3c18acdf34dd861d433484514f232a0">FaceShiftScale</a>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classVisualizationSceneSolution3d.html#ab9114236040a43c55e42f607a9d49160">   60</a></span>&#160;   Array&lt;int&gt; <a class="code" href="classVisualizationSceneSolution3d.html#ab9114236040a43c55e42f607a9d49160">bdr_attr_to_show</a>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;   <a class="code" href="classVisualizationSceneSolution3d.html">VisualizationSceneSolution3d</a>();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   <a class="code" href="classVisualizationSceneSolution3d.html">VisualizationSceneSolution3d</a>(Mesh &amp; m, Vector &amp; s);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classVisualizationSceneSolution3d.html#a036290b8240d8850695b297d823a591f">   65</a></span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution3d.html#a036290b8240d8850695b297d823a591f">SetGridFunction</a> (GridFunction *gf) { GridF = gf; };</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   <span class="keywordtype">void</span> NewMeshAndSolution(Mesh *new_m, Vector *new_sol,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                           GridFunction *new_u = NULL);</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classVisualizationSceneSolution3d.html#af0b16e2981b4e143658c5ded5e2bab63">   56</a></span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classVisualizationSceneSolution3d.html#af0b16e2981b4e143658c5ded5e2bab63">CheckPositions</a>(Array&lt;int&gt; &amp;vertices)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">   </span>{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keywordtype">int</span> n = 0;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; vertices.Size(); j++)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;         <span class="keywordflow">if</span> (node_pos[vertices[j]] &gt;= 0.0) { n++; }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="keywordflow">return</span> (n &lt; vertices.Size());</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classVisualizationSceneSolution3d.html#ab9fe6f0e0a51d1c27f93a5f16e175a9e">   67</a></span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classVisualizationSceneSolution3d.html#ab9fe6f0e0a51d1c27f93a5f16e175a9e">TimesToRefine</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classVisualizationSceneSolution3d.html#ae3c18acdf34dd861d433484514f232a0">   68</a></span>&#160;   <span class="keywordtype">double</span> <a class="code" href="classVisualizationSceneSolution3d.html#ae3c18acdf34dd861d433484514f232a0">FaceShiftScale</a>;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;   <span class="keyword">virtual</span> ~<a class="code" href="classVisualizationSceneSolution3d.html">VisualizationSceneSolution3d</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classVisualizationSceneSolution3d.html#ab9114236040a43c55e42f607a9d49160">   70</a></span>&#160;   Array&lt;int&gt; <a class="code" href="classVisualizationSceneSolution3d.html#ab9114236040a43c55e42f607a9d49160">bdr_attr_to_show</a>;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> FindNewBox(<span class="keywordtype">bool</span> prepare);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> FindNewValueRange(<span class="keywordtype">bool</span> prepare);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;   <a class="code" href="classVisualizationSceneSolution3d.html">VisualizationSceneSolution3d</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;   <a class="code" href="classVisualizationSceneSolution3d.html">VisualizationSceneSolution3d</a>(Mesh &amp; m, Vector &amp; s);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrepareFlat();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrepareLines();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> Prepare();</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> Draw();</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classVisualizationSceneSolution3d.html#a036290b8240d8850695b297d823a591f">   75</a></span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution3d.html#a036290b8240d8850695b297d823a591f">SetGridFunction</a> (GridFunction *gf) { GridF = gf; }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;   <span class="keywordtype">void</span> NewMeshAndSolution(Mesh *new_m, Vector *new_sol,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                           GridFunction *new_u = NULL);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classVisualizationSceneSolution3d.html#a533218bc947b0863bb867352fd4d31ef">   80</a></span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution3d.html#a533218bc947b0863bb867352fd4d31ef">ToggleDrawElems</a>()</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;   { drawelems = !drawelems; Prepare(); }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;   <span class="keywordtype">void</span> ToggleDrawMesh();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;   <span class="keyword">virtual</span> ~<a class="code" href="classVisualizationSceneSolution3d.html">VisualizationSceneSolution3d</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> FindNewBox(<span class="keywordtype">bool</span> prepare);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> FindNewValueRange(<span class="keywordtype">bool</span> prepare);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;   <span class="keywordtype">void</span> ToggleShading();</div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classVisualizationSceneSolution3d.html#aa8b9ae46f95a94e48fe51a782f20917a">   86</a></span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classVisualizationSceneSolution3d.html#aa8b9ae46f95a94e48fe51a782f20917a">GetShading</a>() { <span class="keywordflow">return</span> shading; };</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> SetShading(<span class="keywordtype">int</span>, <span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> SetRefineFactors(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> AutoRefine();</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> ToggleAttributes(Array&lt;int&gt; &amp;attr_list);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;   <span class="keywordtype">void</span> FindNodePos();</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;   <span class="keywordtype">void</span> CuttingPlaneFunc (<span class="keywordtype">int</span> type);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;   <span class="keywordtype">void</span> CPPrepare();</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;   <span class="keywordtype">void</span> CPMoved();</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;   <span class="keywordtype">void</span> PrepareFlat2();</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;   <span class="keywordtype">void</span> PrepareLines2();</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrepareCuttingPlane();</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;   <span class="keywordtype">void</span> PrepareCuttingPlane2();</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;   <span class="keywordtype">void</span> PrepareCuttingPlaneLines();</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;   <span class="keywordtype">void</span> PrepareCuttingPlaneLines2();</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;   <span class="keywordtype">void</span> PrepareLevelSurf();</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;   <span class="keywordtype">void</span> ToggleCuttingPlane();</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;   <span class="keywordtype">void</span> ToggleCPDrawElems();</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;   <span class="keywordtype">void</span> ToggleCPDrawMesh();</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;   <span class="keywordtype">void</span> MoveLevelSurf(<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;   <span class="keywordtype">void</span> NumberOfLevelSurf(<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> EventUpdateColors();</div>
-<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classVisualizationSceneSolution3d.html#a8a7f44beb98d339418276d3e432030e3">  110</a></span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution3d.html#a8a7f44beb98d339418276d3e432030e3">UpdateLevelLines</a>()</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;   { PrepareLines(); PrepareCuttingPlaneLines(); }</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> UpdateValueRange(<span class="keywordtype">bool</span> prepare);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;};</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keywordtype">int</span> <a class="code" href="openglvis_8hpp.html#a653c31a94e698ff4251c295166f4cb99">Normalize</a>(DenseMatrix &amp;<a class="code" href="glvis_8cpp.html#aaa39e96e6b8d194393382fd246961034">normals</a>);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keywordtype">int</span> <a class="code" href="vssolution3d_8cpp.html#a972ff30be8d8e1545a32aba7be6330cd">Compute3DUnitNormal</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> p1[], <span class="keyword">const</span> <span class="keywordtype">double</span> p2[],</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                        <span class="keyword">const</span> <span class="keywordtype">double</span> p3[], <span class="keywordtype">double</span> nor[]);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keywordtype">int</span> <a class="code" href="vssolution3d_8cpp.html#a972ff30be8d8e1545a32aba7be6330cd">Compute3DUnitNormal</a> (<span class="keyword">const</span> <span class="keywordtype">double</span> p1[], <span class="keyword">const</span> <span class="keywordtype">double</span> p2[],</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                         <span class="keyword">const</span> <span class="keywordtype">double</span> p3[], <span class="keyword">const</span> <span class="keywordtype">double</span> p4[], <span class="keywordtype">double</span> nor[]);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classVisualizationSceneSolution3d_html_aa8b9ae46f95a94e48fe51a782f20917a"><div class="ttname"><a href="classVisualizationSceneSolution3d.html#aa8b9ae46f95a94e48fe51a782f20917a">VisualizationSceneSolution3d::GetShading</a></div><div class="ttdeci">int GetShading()</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00086">vssolution3d.hpp:86</a></div></div>
-<div class="ttc" id="classVisualizationSceneSolution3d_html_ab9114236040a43c55e42f607a9d49160"><div class="ttname"><a href="classVisualizationSceneSolution3d.html#ab9114236040a43c55e42f607a9d49160">VisualizationSceneSolution3d::bdr_attr_to_show</a></div><div class="ttdeci">Array&lt; int &gt; bdr_attr_to_show</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00060">vssolution3d.hpp:60</a></div></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrepareFlat();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrepareLines();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> Prepare();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> Draw();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classVisualizationSceneSolution3d.html#a533218bc947b0863bb867352fd4d31ef">   90</a></span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution3d.html#a533218bc947b0863bb867352fd4d31ef">ToggleDrawElems</a>()</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;   { drawelems = !drawelems; Prepare(); }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;   <span class="keywordtype">void</span> ToggleDrawMesh();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;   <span class="keywordtype">void</span> ToggleShading();</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classVisualizationSceneSolution3d.html#aa8b9ae46f95a94e48fe51a782f20917a">   96</a></span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classVisualizationSceneSolution3d.html#aa8b9ae46f95a94e48fe51a782f20917a">GetShading</a>() { <span class="keywordflow">return</span> shading; };</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> SetShading(<span class="keywordtype">int</span>, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> SetRefineFactors(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> AutoRefine();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> ToggleAttributes(Array&lt;int&gt; &amp;attr_list);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;   <span class="keywordtype">void</span> FindNodePos();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;   <span class="keywordtype">void</span> CuttingPlaneFunc (<span class="keywordtype">int</span> type);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;   <span class="keywordtype">void</span> CPPrepare();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;   <span class="keywordtype">void</span> CPMoved();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;   <span class="keywordtype">void</span> PrepareFlat2();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;   <span class="keywordtype">void</span> PrepareLines2();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrepareCuttingPlane();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;   <span class="keywordtype">void</span> PrepareCuttingPlane2();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;   <span class="keywordtype">void</span> PrepareCuttingPlaneLines();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;   <span class="keywordtype">void</span> PrepareCuttingPlaneLines2();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;   <span class="keywordtype">void</span> PrepareLevelSurf();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;   <span class="keywordtype">void</span> ToggleCuttingPlane();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;   <span class="keywordtype">void</span> ToggleCPDrawElems();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;   <span class="keywordtype">void</span> ToggleCPDrawMesh();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;   <span class="keywordtype">void</span> MoveLevelSurf(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;   <span class="keywordtype">void</span> NumberOfLevelSurf(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> EventUpdateColors();</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="classVisualizationSceneSolution3d.html#a8a7f44beb98d339418276d3e432030e3">  120</a></span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneSolution3d.html#a8a7f44beb98d339418276d3e432030e3">UpdateLevelLines</a>()</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;   { PrepareLines(); PrepareCuttingPlaneLines(); }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> UpdateValueRange(<span class="keywordtype">bool</span> prepare);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;};</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keywordtype">int</span> <a class="code" href="openglvis_8hpp.html#a653c31a94e698ff4251c295166f4cb99">Normalize</a>(DenseMatrix &amp;<a class="code" href="glvis_8cpp.html#aaa39e96e6b8d194393382fd246961034">normals</a>);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keywordtype">int</span> <a class="code" href="vssolution3d_8cpp.html#a972ff30be8d8e1545a32aba7be6330cd">Compute3DUnitNormal</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> p1[], <span class="keyword">const</span> <span class="keywordtype">double</span> p2[],</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                        <span class="keyword">const</span> <span class="keywordtype">double</span> p3[], <span class="keywordtype">double</span> nor[]);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="keywordtype">int</span> <a class="code" href="vssolution3d_8cpp.html#a972ff30be8d8e1545a32aba7be6330cd">Compute3DUnitNormal</a> (<span class="keyword">const</span> <span class="keywordtype">double</span> p1[], <span class="keyword">const</span> <span class="keywordtype">double</span> p2[],</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                         <span class="keyword">const</span> <span class="keywordtype">double</span> p3[], <span class="keyword">const</span> <span class="keywordtype">double</span> p4[], <span class="keywordtype">double</span> nor[]);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classVisualizationSceneSolution3d_html_aa8b9ae46f95a94e48fe51a782f20917a"><div class="ttname"><a href="classVisualizationSceneSolution3d.html#aa8b9ae46f95a94e48fe51a782f20917a">VisualizationSceneSolution3d::GetShading</a></div><div class="ttdeci">int GetShading()</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00096">vssolution3d.hpp:96</a></div></div>
+<div class="ttc" id="classVisualizationSceneSolution3d_html_ab9114236040a43c55e42f607a9d49160"><div class="ttname"><a href="classVisualizationSceneSolution3d.html#ab9114236040a43c55e42f607a9d49160">VisualizationSceneSolution3d::bdr_attr_to_show</a></div><div class="ttdeci">Array&lt; int &gt; bdr_attr_to_show</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00070">vssolution3d.hpp:70</a></div></div>
 <div class="ttc" id="classVisualizationSceneScalarData_html"><div class="ttname"><a href="classVisualizationSceneScalarData.html">VisualizationSceneScalarData</a></div><div class="ttdef"><b>Definition:</b> <a href="vsdata_8hpp_source.html#l00050">vsdata.hpp:50</a></div></div>
-<div class="ttc" id="classVisualizationSceneSolution3d_html_ae3c18acdf34dd861d433484514f232a0"><div class="ttname"><a href="classVisualizationSceneSolution3d.html#ae3c18acdf34dd861d433484514f232a0">VisualizationSceneSolution3d::FaceShiftScale</a></div><div class="ttdeci">double FaceShiftScale</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00058">vssolution3d.hpp:58</a></div></div>
+<div class="ttc" id="classVisualizationSceneSolution3d_html_ae3c18acdf34dd861d433484514f232a0"><div class="ttname"><a href="classVisualizationSceneSolution3d.html#ae3c18acdf34dd861d433484514f232a0">VisualizationSceneSolution3d::FaceShiftScale</a></div><div class="ttdeci">double FaceShiftScale</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00068">vssolution3d.hpp:68</a></div></div>
 <div class="ttc" id="classVisualizationSceneSolution3d_html_af93797bf5d9d9e2fa50db317b5730cdb"><div class="ttname"><a href="classVisualizationSceneSolution3d.html#af93797bf5d9d9e2fa50db317b5730cdb">VisualizationSceneSolution3d::lsurflist</a></div><div class="ttdeci">int lsurflist</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00024">vssolution3d.hpp:24</a></div></div>
-<div class="ttc" id="glvis_8cpp_html_aaa39e96e6b8d194393382fd246961034"><div class="ttname"><a href="glvis_8cpp.html#aaa39e96e6b8d194393382fd246961034">normals</a></div><div class="ttdeci">Vector normals</div><div class="ttdef"><b>Definition:</b> <a href="glvis_8cpp_source.html#l00056">glvis.cpp:56</a></div></div>
+<div class="ttc" id="glvis_8cpp_html_aaa39e96e6b8d194393382fd246961034"><div class="ttname"><a href="glvis_8cpp.html#aaa39e96e6b8d194393382fd246961034">normals</a></div><div class="ttdeci">Vector normals</div><div class="ttdef"><b>Definition:</b> <a href="glvis_8cpp_source.html#l00057">glvis.cpp:57</a></div></div>
 <div class="ttc" id="classVisualizationSceneSolution3d_html_a6cd253369ab7bb496b6e4c28cf278e67"><div class="ttname"><a href="classVisualizationSceneSolution3d.html#a6cd253369ab7bb496b6e4c28cf278e67">VisualizationSceneSolution3d::node_pos</a></div><div class="ttdeci">double * node_pos</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00027">vssolution3d.hpp:27</a></div></div>
 <div class="ttc" id="classVisualizationSceneSolution3d_html_adab85227db3bb142b2b48efdb76f9d42"><div class="ttname"><a href="classVisualizationSceneSolution3d.html#adab85227db3bb142b2b48efdb76f9d42">VisualizationSceneSolution3d::levels</a></div><div class="ttdeci">Array&lt; double &gt; levels</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00030">vssolution3d.hpp:30</a></div></div>
 <div class="ttc" id="classVisualizationSceneSolution3d_html_a4156db5ab5eb69b2372d18787fcac5ac"><div class="ttname"><a href="classVisualizationSceneSolution3d.html#a4156db5ab5eb69b2372d18787fcac5ac">VisualizationSceneSolution3d::shading</a></div><div class="ttdeci">int shading</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00022">vssolution3d.hpp:22</a></div></div>
 <div class="ttc" id="openglvis_8hpp_html_a653c31a94e698ff4251c295166f4cb99"><div class="ttname"><a href="openglvis_8hpp.html#a653c31a94e698ff4251c295166f4cb99">Normalize</a></div><div class="ttdeci">int Normalize(double v[])</div><div class="ttdef"><b>Definition:</b> <a href="openglvis_8hpp_source.html#l00041">openglvis.hpp:41</a></div></div>
 <div class="ttc" id="classVisualizationSceneSolution3d_html_a971a8af223fa7f014d617a080e655c77"><div class="ttname"><a href="classVisualizationSceneSolution3d.html#a971a8af223fa7f014d617a080e655c77">VisualizationSceneSolution3d::drawlsurf</a></div><div class="ttdeci">int drawlsurf</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00025">vssolution3d.hpp:25</a></div></div>
 <div class="ttc" id="classVisualizationSceneSolution3d_html_a794941e568f30e54b4ae261e12a5bf19"><div class="ttname"><a href="classVisualizationSceneSolution3d.html#a794941e568f30e54b4ae261e12a5bf19">VisualizationSceneSolution3d::nlevels</a></div><div class="ttdeci">int nlevels</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00029">vssolution3d.hpp:29</a></div></div>
-<div class="ttc" id="classVisualizationSceneSolution3d_html_a533218bc947b0863bb867352fd4d31ef"><div class="ttname"><a href="classVisualizationSceneSolution3d.html#a533218bc947b0863bb867352fd4d31ef">VisualizationSceneSolution3d::ToggleDrawElems</a></div><div class="ttdeci">void ToggleDrawElems()</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00080">vssolution3d.hpp:80</a></div></div>
-<div class="ttc" id="classVisualizationSceneSolution3d_html_a8a7f44beb98d339418276d3e432030e3"><div class="ttname"><a href="classVisualizationSceneSolution3d.html#a8a7f44beb98d339418276d3e432030e3">VisualizationSceneSolution3d::UpdateLevelLines</a></div><div class="ttdeci">virtual void UpdateLevelLines()</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00110">vssolution3d.hpp:110</a></div></div>
+<div class="ttc" id="classVisualizationSceneSolution3d_html_a533218bc947b0863bb867352fd4d31ef"><div class="ttname"><a href="classVisualizationSceneSolution3d.html#a533218bc947b0863bb867352fd4d31ef">VisualizationSceneSolution3d::ToggleDrawElems</a></div><div class="ttdeci">void ToggleDrawElems()</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00090">vssolution3d.hpp:90</a></div></div>
+<div class="ttc" id="classVisualizationSceneSolution3d_html_a8a7f44beb98d339418276d3e432030e3"><div class="ttname"><a href="classVisualizationSceneSolution3d.html#a8a7f44beb98d339418276d3e432030e3">VisualizationSceneSolution3d::UpdateLevelLines</a></div><div class="ttdeci">virtual void UpdateLevelLines()</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00120">vssolution3d.hpp:120</a></div></div>
 <div class="ttc" id="classVisualizationSceneSolution3d_html_a1dba64ed05cdabfdfb89f17d83b09d08"><div class="ttname"><a href="classVisualizationSceneSolution3d.html#a1dba64ed05cdabfdfb89f17d83b09d08">VisualizationSceneSolution3d::linelist</a></div><div class="ttdeci">int linelist</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00023">vssolution3d.hpp:23</a></div></div>
 <div class="ttc" id="classVisualizationSceneSolution3d_html_ac9cede730e535efa041f11c722c2e962"><div class="ttname"><a href="classVisualizationSceneSolution3d.html#ac9cede730e535efa041f11c722c2e962">VisualizationSceneSolution3d::GridF</a></div><div class="ttdeci">GridFunction * GridF</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00032">vssolution3d.hpp:32</a></div></div>
-<div class="ttc" id="classVisualizationSceneSolution3d_html_ab9fe6f0e0a51d1c27f93a5f16e175a9e"><div class="ttname"><a href="classVisualizationSceneSolution3d.html#ab9fe6f0e0a51d1c27f93a5f16e175a9e">VisualizationSceneSolution3d::TimesToRefine</a></div><div class="ttdeci">int TimesToRefine</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00057">vssolution3d.hpp:57</a></div></div>
-<div class="ttc" id="vssolution3d_8cpp_html_a972ff30be8d8e1545a32aba7be6330cd"><div class="ttname"><a href="vssolution3d_8cpp.html#a972ff30be8d8e1545a32aba7be6330cd">Compute3DUnitNormal</a></div><div class="ttdeci">int Compute3DUnitNormal(const double p1[], const double p2[], const double p3[], double nor[])</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8cpp_source.html#l00465">vssolution3d.cpp:465</a></div></div>
+<div class="ttc" id="classVisualizationSceneSolution3d_html_ab9fe6f0e0a51d1c27f93a5f16e175a9e"><div class="ttname"><a href="classVisualizationSceneSolution3d.html#ab9fe6f0e0a51d1c27f93a5f16e175a9e">VisualizationSceneSolution3d::TimesToRefine</a></div><div class="ttdeci">int TimesToRefine</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00067">vssolution3d.hpp:67</a></div></div>
+<div class="ttc" id="vssolution3d_8cpp_html_a972ff30be8d8e1545a32aba7be6330cd"><div class="ttname"><a href="vssolution3d_8cpp.html#a972ff30be8d8e1545a32aba7be6330cd">Compute3DUnitNormal</a></div><div class="ttdeci">int Compute3DUnitNormal(const double p1[], const double p2[], const double p3[], double nor[])</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8cpp_source.html#l00520">vssolution3d.cpp:520</a></div></div>
 <div class="ttc" id="classVisualizationSceneSolution3d_html"><div class="ttname"><a href="classVisualizationSceneSolution3d.html">VisualizationSceneSolution3d</a></div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00018">vssolution3d.hpp:18</a></div></div>
-<div class="ttc" id="classVisualizationSceneSolution3d_html_a036290b8240d8850695b297d823a591f"><div class="ttname"><a href="classVisualizationSceneSolution3d.html#a036290b8240d8850695b297d823a591f">VisualizationSceneSolution3d::SetGridFunction</a></div><div class="ttdeci">void SetGridFunction(GridFunction *gf)</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00065">vssolution3d.hpp:65</a></div></div>
+<div class="ttc" id="classVisualizationSceneSolution3d_html_a036290b8240d8850695b297d823a591f"><div class="ttname"><a href="classVisualizationSceneSolution3d.html#a036290b8240d8850695b297d823a591f">VisualizationSceneSolution3d::SetGridFunction</a></div><div class="ttdeci">void SetGridFunction(GridFunction *gf)</div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00075">vssolution3d.hpp:75</a></div></div>
+<div class="ttc" id="classVisualizationSceneSolution3d_html_af0b16e2981b4e143658c5ded5e2bab63"><div class="ttname"><a href="classVisualizationSceneSolution3d.html#af0b16e2981b4e143658c5ded5e2bab63">VisualizationSceneSolution3d::CheckPositions</a></div><div class="ttdeci">bool CheckPositions(Array&lt; int &gt; &amp;vertices) const </div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00056">vssolution3d.hpp:56</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 26 2015 16:42:57 for GLVis by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:25:36 for GLVis by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

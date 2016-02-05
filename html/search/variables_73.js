@@ -3,7 +3,6 @@ var searchData=
   ['save_5fcoloring',['save_coloring',['../glvis_8cpp.html#abc99c8f747a46e659e96c1927eb9661a',1,'glvis.cpp']]],
   ['scal_5ffunc',['scal_func',['../classVisualizationSceneVector3d.html#a52f71538ff00c7360738186c435214bd',1,'VisualizationSceneVector3d']]],
   ['scaling',['scaling',['../classVisualizationSceneScalarData.html#adc9c7f878b5a34fb8fbe6f2c3ff0169d',1,'VisualizationSceneScalarData']]],
-  ['scaling_5f1d',['scaling_1d',['../classVisualizationSceneSolution.html#a2e1ef0cd372b9742b27f9819bec91fa0',1,'VisualizationSceneSolution']]],
   ['scr_5flevel',['scr_level',['../glvis_8cpp.html#abf425bbc686fbedef7e537b5a3743788',1,'glvis.cpp']]],
   ['scr_5fmax_5fval',['scr_max_val',['../glvis_8cpp.html#af3b4b81d02c5ed6da83ef0f3a3c62669',1,'glvis.cpp']]],
   ['scr_5fmin_5fval',['scr_min_val',['../glvis_8cpp.html#a595e4cfb0d88ad5063879cfd71fee1d3',1,'glvis.cpp']]],

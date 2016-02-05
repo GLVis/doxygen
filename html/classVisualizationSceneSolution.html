@@ -23,8 +23,9 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">GLVis
-   &#160;<span id="projectnumber">v3.0</span>
+   &#160;<span id="projectnumber">v3.1</span>
    </div>
+   <div id="projectbrief">Accurate and flexible finite element visualization</div>
   </td>
  </tr>
  </tbody>
@@ -177,8 +178,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae3dede0eaaed1b67d469df1d817a0e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af444751418d2a9bcfab1a8a7b75c6384"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneSolution.html#af444751418d2a9bcfab1a8a7b75c6384">ToggleAttributes</a> (Array&lt; int &gt; &amp;attr_list)</td></tr>
 <tr class="separator:af444751418d2a9bcfab1a8a7b75c6384"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0684b5ab6efe7dbcd12d0a7ac4500512"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneSolution.html#a0684b5ab6efe7dbcd12d0a7ac4500512">Set1DScaling</a> ()</td></tr>
-<tr class="separator:a0684b5ab6efe7dbcd12d0a7ac4500512"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classVisualizationSceneScalarData"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classVisualizationSceneScalarData')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classVisualizationSceneScalarData.html">VisualizationSceneScalarData</a></td></tr>
 <tr class="memitem:a6f4a8f0c754486a088c5f9a080f995f7 inherit pub_methods_classVisualizationSceneScalarData"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneScalarData.html#a6f4a8f0c754486a088c5f9a080f995f7">VisualizationSceneScalarData</a> ()</td></tr>
 <tr class="separator:a6f4a8f0c754486a088c5f9a080f995f7 inherit pub_methods_classVisualizationSceneScalarData"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -289,8 +288,12 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a102b456664f6863e6b8d16eb82528f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb51916e54adf0b331ff2f3c2ecab029"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneSolution.html#adb51916e54adf0b331ff2f3c2ecab029">attr_to_show</a></td></tr>
 <tr class="separator:adb51916e54adf0b331ff2f3c2ecab029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5598e4c9857707c29554debdbe7286ec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneSolution.html#a5598e4c9857707c29554debdbe7286ec">bdr_attr_to_show</a></td></tr>
+<tr class="separator:a5598e4c9857707c29554debdbe7286ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5baa6c391db303eb64ab6a96c2b0fbb8"><td class="memItemLeft" align="right" valign="top">Array&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneSolution.html#a5baa6c391db303eb64ab6a96c2b0fbb8">el_attr_to_show</a></td></tr>
 <tr class="separator:a5baa6c391db303eb64ab6a96c2b0fbb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c526297073319b017171bc2690f3b06"><td class="memItemLeft" align="right" valign="top">Array&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneSolution.html#a4c526297073319b017171bc2690f3b06">bdr_el_attr_to_show</a></td></tr>
+<tr class="separator:a4c526297073319b017171bc2690f3b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classVisualizationSceneScalarData"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classVisualizationSceneScalarData')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classVisualizationSceneScalarData.html">VisualizationSceneScalarData</a></td></tr>
 <tr class="memitem:a032f273829f0833e33388f3fc701c0be inherit pub_attribs_classVisualizationSceneScalarData"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPlane.html">Plane</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneScalarData.html#a032f273829f0833e33388f3fc701c0be">CuttingPlane</a></td></tr>
 <tr class="separator:a032f273829f0833e33388f3fc701c0be inherit pub_attribs_classVisualizationSceneScalarData"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -409,8 +412,6 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ae5255ef545e9c162759a46bec3656761"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afad0faadc767764d1fda1c9239c3bc23"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneSolution.html#afad0faadc767764d1fda1c9239c3bc23">cp_list</a></td></tr>
 <tr class="separator:afad0faadc767764d1fda1c9239c3bc23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e1ef0cd372b9742b27f9819bec91fa0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneSolution.html#a2e1ef0cd372b9742b27f9819bec91fa0">scaling_1d</a></td></tr>
-<tr class="separator:a2e1ef0cd372b9742b27f9819bec91fa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classVisualizationSceneScalarData"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classVisualizationSceneScalarData')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classVisualizationSceneScalarData.html">VisualizationSceneScalarData</a></td></tr>
 <tr class="memitem:a63e34367f586d084f6ace1cef5d5507e inherit pro_attribs_classVisualizationSceneScalarData"><td class="memItemLeft" align="right" valign="top">Mesh *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationSceneScalarData.html#a63e34367f586d084f6ace1cef5d5507e">mesh</a></td></tr>
 <tr class="separator:a63e34367f586d084f6ace1cef5d5507e inherit pro_attribs_classVisualizationSceneScalarData"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -481,7 +482,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00350">350</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00405">405</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -515,7 +516,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00355">355</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00410">410</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -540,7 +541,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00444">444</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00502">502</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -568,7 +569,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classVisualizationSceneScalarData.html#a7ee8b9c621ce04867402346142d5fb2e">VisualizationSceneScalarData</a>.</p>
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00692">692</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00788">788</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -597,7 +598,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classVisualizationSceneVector.html#adf981d0ee69a75bde0f910fe8b6ae034">VisualizationSceneVector</a>.</p>
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01750">1750</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01887">1887</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -639,7 +640,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01713">1713</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01850">1850</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -699,7 +700,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01346">1346</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01463">1463</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -727,7 +728,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classVisualizationSceneScalarData.html#af90532e7e1d8761cd11129786c3c14f5">VisualizationSceneScalarData</a>.</p>
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00856">856</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00939">939</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -769,7 +770,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00759">759</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00842">842</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -797,7 +798,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classVisualizationSceneScalarData.html#a5401bdb35c1b8675c3d855cd83550f4a">VisualizationSceneScalarData</a>.</p>
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00827">827</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00910">910</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -825,7 +826,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classVisualizationSceneScalarData.html#a0cbd3f6f8d628e12683acb4fa16a060d">VisualizationSceneScalarData</a>.</p>
 
-<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00072">72</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00071">71</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
 
 </div>
 </div>
@@ -853,7 +854,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classVisualizationSceneScalarData.html#a4cc674a62cd50355520239867dec1283">VisualizationSceneScalarData</a>.</p>
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00843">843</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00926">926</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -878,7 +879,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00682">682</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00776">776</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -926,7 +927,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00502">502</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00560">560</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -976,7 +977,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classVisualizationSceneVector.html#a61effd7b4616a0598c0e2a60590af936">VisualizationSceneVector</a>.</p>
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00549">549</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00613">613</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -1032,7 +1033,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classVisualizationSceneVector.html#a0ce28df282c5c21668eb7e09d4a02859">VisualizationSceneVector</a>.</p>
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00565">565</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00637">637</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -1057,7 +1058,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00368">368</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00423">423</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -1091,7 +1092,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00473">473</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00531">531</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -1118,7 +1119,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classVisualizationSceneScalarData.html#a73e165ee073cff99b07d8f16817d3ab6">VisualizationSceneScalarData</a>.</p>
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01216">1216</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01327">1327</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -1135,7 +1136,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01569">1569</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01688">1688</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -1152,7 +1153,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01631">1631</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01756">1756</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -1169,7 +1170,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01075">1075</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01178">1178</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -1186,7 +1187,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01115">1115</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01222">1222</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -1203,7 +1204,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01316">1316</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01431">1431</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -1220,7 +1221,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01423">1423</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01542">1542</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -1249,7 +1250,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classVisualizationSceneVector.html#a39053e19f7d9acbe99ad70ca3ff8999b">VisualizationSceneVector</a>.</p>
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01446">1446</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01565">1565</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -1266,7 +1267,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01478">1478</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01597">1597</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -1283,7 +1284,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01512">1512</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01631">1631</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -1300,32 +1301,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01034">1034</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a0684b5ab6efe7dbcd12d0a7ac4500512"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void VisualizationSceneSolution::Set1DScaling </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00114">114</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01133">1133</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -1351,7 +1327,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00064">64</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00063">63</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
 
 </div>
 </div>
@@ -1378,7 +1354,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classVisualizationSceneScalarData.html#a274bcef737b60b8b2de6bd00a3679e64">VisualizationSceneScalarData</a>.</p>
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00727">727</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00823">823</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -1416,7 +1392,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classVisualizationSceneScalarData.html#a5091aaaead0699771bac466b2082943d">VisualizationSceneScalarData</a>.</p>
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00660">660</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00750">750</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -1454,7 +1430,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classVisualizationSceneScalarData.html#a5e0ab734f0be533bbe54e06e669ba671">VisualizationSceneScalarData</a>.</p>
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00616">616</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00692">692</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -1482,7 +1458,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classVisualizationSceneScalarData.html#a526a599d70883aa38d47fb2195da5aa0">VisualizationSceneScalarData</a>.</p>
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00701">701</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00797">797</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -1507,7 +1483,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00098">98</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00097">97</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
 
 </div>
 </div>
@@ -1532,7 +1508,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00108">108</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00107">107</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
 
 </div>
 </div>
@@ -1559,7 +1535,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classVisualizationSceneVector.html#a360e1e6a62156b3e28538a089f2c9d55">VisualizationSceneVector</a>.</p>
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00453">453</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00511">511</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -1584,7 +1560,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00103">103</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00102">102</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
 
 </div>
 </div>
@@ -1612,7 +1588,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classVisualizationSceneScalarData.html#aaa75ec39f7161fed93ef2adcae41bc7e">VisualizationSceneScalarData</a>.</p>
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00865">865</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00948">948</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -1629,7 +1605,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00652">652</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l00738">738</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -1656,7 +1632,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classVisualizationSceneScalarData.html#a75f4a0c7f7016030ecfee43f27b3b28f">VisualizationSceneScalarData</a>.</p>
 
-<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00077">77</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00076">76</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
 
 </div>
 </div>
@@ -1684,7 +1660,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classVisualizationSceneScalarData.html#acba7b5435b52913a11bd142456537055">VisualizationSceneScalarData</a>.</p>
 
-<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01545">1545</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8cpp_source.html#l01664">1664</a> of file <a class="el" href="vssolution_8cpp_source.html">vssolution.cpp</a>.</p>
 
 </div>
 </div>
@@ -1695,6 +1671,34 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">int VisualizationSceneSolution::attr_to_show</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00055">55</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5598e4c9857707c29554debdbe7286ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int VisualizationSceneSolution::bdr_attr_to_show</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00055">55</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4c526297073319b017171bc2690f3b06"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Array&lt;int&gt; VisualizationSceneSolution::bdr_el_attr_to_show</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1867,7 +1871,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00054">54</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00053">53</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
 
 </div>
 </div>
@@ -1881,7 +1885,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00057">57</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00056">56</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
 
 </div>
 </div>
@@ -1951,28 +1955,6 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2e1ef0cd372b9742b27f9819bec91fa0"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int VisualizationSceneSolution::scaling_1d</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00029">29</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="abb46c83f1e814a7874a2b3201082d104"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1983,7 +1965,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00054">54</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00053">53</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
 
 </div>
 </div>
@@ -1997,7 +1979,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00054">54</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
+<p>Definition at line <a class="el" href="vssolution_8hpp_source.html#l00053">53</a> of file <a class="el" href="vssolution_8hpp_source.html">vssolution.hpp</a>.</p>
 
 </div>
 </div>
@@ -2030,7 +2012,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 26 2015 16:42:57 for GLVis by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:25:36 for GLVis by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

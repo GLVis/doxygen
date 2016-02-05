@@ -29,6 +29,7 @@ var searchData=
   ['glvis_5ffont',['glvis_font',['../aux__vis_8cpp.html#a5bdbabdac00cb5bd18c5e679810bb1dd',1,'aux_vis.cpp']]],
   ['glvis_5fscreenshot_5fext',['glvis_screenshot_ext',['../aux__vis_8cpp.html#a9ee59fd7e86605eba63d4411be14f8c1',1,'aux_vis.cpp']]],
   ['glviscommand',['GLVisCommand',['../classGLVisCommand.html',1,'GLVisCommand'],['../classGLVisCommand.html#aee9bf66eb091a37591eb04974eed8b75',1,'GLVisCommand::GLVisCommand()']]],
+  ['glvisgeometryrefiner',['GLVisGeometryRefiner',['../glvis_8cpp.html#a4aa58dfdcfce2ad117b00f2c118868cc',1,'GLVisGeometryRefiner():&#160;glvis.cpp'],['../vssolution_8cpp.html#a4aa58dfdcfce2ad117b00f2c118868cc',1,'GLVisGeometryRefiner():&#160;glvis.cpp'],['../vssolution3d_8cpp.html#a4aa58dfdcfce2ad117b00f2c118868cc',1,'GLVisGeometryRefiner():&#160;glvis.cpp'],['../vsvector_8cpp.html#a4aa58dfdcfce2ad117b00f2c118868cc',1,'GLVisGeometryRefiner():&#160;glvis.cpp'],['../vsvector3d_8cpp.html#a4aa58dfdcfce2ad117b00f2c118868cc',1,'GLVisGeometryRefiner():&#160;glvis.cpp']]],
   ['grid_5ff',['grid_f',['../glvis_8cpp.html#a25f770a09ffb9eedb1bd5cea6429b871',1,'glvis.cpp']]],
   ['gridf',['GridF',['../classVisualizationSceneSolution3d.html#ac9cede730e535efa041f11c722c2e962',1,'VisualizationSceneSolution3d']]]
 ];

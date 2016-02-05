@@ -17,7 +17,6 @@ var searchData=
   ['innerprod',['InnerProd',['../openglvis_8hpp.html#a1c87f47ef837339de388d7e0aae7299f',1,'openglvis.hpp']]],
   ['input',['input',['../glvis_8cpp.html#adfab4eebf850cff6c1c1c4b8aa408293',1,'glvis.cpp']]],
   ['input_5fstreams',['input_streams',['../glvis_8cpp.html#a9d62f9664bbd5739f2fa08478900cfe2',1,'glvis.cpp']]],
-  ['is_5f1d',['is_1d',['../glvis_8cpp.html#aaa4b9551e0b657e0ca4586db12e5639c',1,'glvis.cpp']]],
   ['is_5fgf',['is_gf',['../glvis_8cpp.html#a0714f6a875376bdae0e5afc025374521',1,'glvis.cpp']]],
   ['isfinite',['isfinite',['../vssolution_8cpp.html#a472e92533bdba4fc9b375d5e42690701',1,'vssolution.cpp']]]
 ];

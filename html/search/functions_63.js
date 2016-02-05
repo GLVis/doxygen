@@ -3,6 +3,7 @@ var searchData=
   ['camera',['Camera',['../classCamera.html#a01f94c3543f56ede7af49dc778f19331',1,'Camera::Camera()'],['../classGLVisCommand.html#a8d16bcbbfd9d79597f6e716f366bdd11',1,'GLVisCommand::Camera()']]],
   ['centerobject',['CenterObject',['../classVisualizationScene.html#ab4c196082c1c0c1cf286da570928934c',1,'VisualizationScene']]],
   ['centerobject2d',['CenterObject2D',['../classVisualizationScene.html#a9f7396c2af7000ce70e91e872d8e8598',1,'VisualizationScene']]],
+  ['checkpositions',['CheckPositions',['../classVisualizationSceneSolution3d.html#af0b16e2981b4e143658c5ded5e2bab63',1,'VisualizationSceneSolution3d']]],
   ['checkspin',['CheckSpin',['../aux__vis_8cpp.html#a599b2e55f2eca11bc1c94fdc2b11ba7c',1,'aux_vis.cpp']]],
   ['closeinputstreams',['CloseInputStreams',['../glvis_8cpp.html#a494be29b95e3ab4477be0a2786fa0a8e',1,'glvis.cpp']]],
   ['communication_5fthread',['communication_thread',['../classcommunication__thread.html#aea0f8ab62924c9204f9f5e3f8ed7d8b3',1,'communication_thread']]],
