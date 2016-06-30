@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">GLVis
-   &#160;<span id="projectnumber">v3.1</span>
+   &#160;<span id="projectnumber">v3.2</span>
    </div>
    <div id="projectbrief">Accurate and flexible finite element visualization</div>
   </td>
@@ -141,153 +141,157 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      PALETTE = 14,</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      CAMERA = 15,</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      AUTOPAUSE = 16,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      WINDOW_GEOMETRY = 17</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;   };</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   <span class="comment">// command to be executed</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;   <span class="keywordtype">int</span> command;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   <span class="comment">// command arguments</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   Mesh         *new_m;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;   GridFunction *new_g;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;   std::string   screenshot_filename;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   std::string   key_commands;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   <span class="keywordtype">int</span>           window_x, window_y;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;   <span class="keywordtype">int</span>           window_w, window_h;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   std::string   window_title;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   <span class="keywordtype">double</span>        view_ang_theta, view_ang_phi;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;   <span class="keywordtype">double</span>        zoom_factor;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;   <span class="keywordtype">int</span>           subdiv_tot, subdiv_bdr;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;   <span class="keywordtype">double</span>        val_min, val_max;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;   std::string   shading;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;   <span class="keywordtype">double</span>        view_center_x, view_center_y;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;   std::string   autoscale_mode;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;   <span class="keywordtype">int</span>           palette;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;   <span class="keywordtype">double</span>        camera[9];</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;   std::string   autopause_mode;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;   <span class="comment">// internal variables</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;   <span class="keywordtype">int</span> autopause;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;   <span class="keywordtype">int</span> lock();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;   <span class="keywordtype">int</span> signal();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;   <span class="keywordtype">void</span> unlock();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;   <span class="comment">// called by the main execution thread</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;   <a class="code" href="classGLVisCommand.html#aee9bf66eb091a37591eb04974eed8b75">GLVisCommand</a>(<a class="code" href="classVisualizationSceneScalarData.html">VisualizationSceneScalarData</a> **_vs, Mesh **_mesh,</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                GridFunction **_grid_f, Vector *_sol, <span class="keywordtype">bool</span> *_keep_attr,</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <span class="keywordtype">bool</span> *_fix_elem_orient);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;   <span class="comment">// to be used by the main execution (visualization) thread</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classGLVisCommand.html#a05ac23d7834445219e8804c01272ddd1">   92</a></span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a05ac23d7834445219e8804c01272ddd1">ReadFD</a>() { <span class="keywordflow">return</span> pfd[0]; }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;   <span class="comment">// to be used worker threads</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classGLVisCommand.html#affa87527a4d6b0982b826ba4f215c153">   95</a></span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classGLVisCommand.html#affa87527a4d6b0982b826ba4f215c153">KeepAttrib</a>() { <span class="keywordflow">return</span> *keep_attr; } <span class="comment">// may need to sync this</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classGLVisCommand.html#a4db7617adb2e36340ba8aa1816312ff1">   96</a></span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classGLVisCommand.html#a4db7617adb2e36340ba8aa1816312ff1">FixElementOrientations</a>() { <span class="keywordflow">return</span> *fix_elem_orient; }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;   <span class="comment">// called by worker threads</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#ab841b181ab9934632032970b05a9f086">NewMeshAndSolution</a>(Mesh *_new_m, GridFunction *_new_g);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#ad648c80e7f81dc4a090e062b95bd1f7b">Screenshot</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#abdfba3a81dfaa05d6925639e1909f9a8">KeyCommands</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="glvis_8cpp.html#a7ffdea4ad81f2867c4d1fdbcbe938bf7">keys</a>);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a3d81435b9026909a28633acdb595dadc">WindowSize</a>(<span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a724b2acaa0a3632f610583f0aaf66e5c">WindowGeometry</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#af68d599fb2f2f412aaf7dbbc1416d080">WindowTitle</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *title);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#aca90f62455f7f7d7fd105da58cfb17b7">Pause</a>();</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a28cd39812555217c1473c8252e1058b3">ViewAngles</a>(<span class="keywordtype">double</span> theta, <span class="keywordtype">double</span> phi);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a793e0c90f17079b864e0a3971b4708d8">Zoom</a>(<span class="keywordtype">double</span> factor);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a4b6744ed4dda20ebf8992fd92fd26950">Subdivisions</a>(<span class="keywordtype">int</span> tot, <span class="keywordtype">int</span> bdr);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a09e6b8f3374943bc613555e630aa391a">ValueRange</a>(<span class="keywordtype">double</span> minv, <span class="keywordtype">double</span> maxv);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a0ecdb042f5790d787878de66f21f2414">SetShading</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *shd);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a0017ef26faf24ef034c5bd370c4776d2">ViewCenter</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a1c7aa4ee5e613901551928912e8390d4">Autoscale</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *mode);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a513254f49aa8eb966ea3a56590fbbf8f">Palette</a>(<span class="keywordtype">int</span> pal);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a8d16bcbbfd9d79597f6e716f366bdd11">Camera</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> cam[]);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#aa3e2f9830f272a1e6c61cedda92451a6">Autopause</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *mode);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;   <span class="comment">// called by the main execution thread</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a186222729324f82ae67189fe31dcace7">Execute</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      WINDOW_GEOMETRY = 17,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      PLOT_CAPTION = 18</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;   };</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;   <span class="comment">// command to be executed</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   <span class="keywordtype">int</span> command;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   <span class="comment">// command arguments</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;   Mesh         *new_m;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;   GridFunction *new_g;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   std::string   screenshot_filename;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   std::string   key_commands;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;   <span class="keywordtype">int</span>           window_x, window_y;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   <span class="keywordtype">int</span>           window_w, window_h;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   std::string   window_title;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;   std::string   plot_caption;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;   <span class="keywordtype">double</span>        view_ang_theta, view_ang_phi;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;   <span class="keywordtype">double</span>        zoom_factor;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;   <span class="keywordtype">int</span>           subdiv_tot, subdiv_bdr;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;   <span class="keywordtype">double</span>        val_min, val_max;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;   std::string   shading;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;   <span class="keywordtype">double</span>        view_center_x, view_center_y;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;   std::string   autoscale_mode;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;   <span class="keywordtype">int</span>           palette;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;   <span class="keywordtype">double</span>        camera[9];</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;   std::string   autopause_mode;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;   <span class="comment">// internal variables</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;   <span class="keywordtype">int</span> autopause;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;   <span class="keywordtype">int</span> lock();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;   <span class="keywordtype">int</span> signal();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;   <span class="keywordtype">void</span> unlock();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;   <span class="comment">// called by the main execution thread</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;   <a class="code" href="classGLVisCommand.html#aee9bf66eb091a37591eb04974eed8b75">GLVisCommand</a>(<a class="code" href="classVisualizationSceneScalarData.html">VisualizationSceneScalarData</a> **_vs, Mesh **_mesh,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                GridFunction **_grid_f, Vector *_sol, <span class="keywordtype">bool</span> *_keep_attr,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keywordtype">bool</span> *_fix_elem_orient);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;   <span class="comment">// to be used by the main execution (visualization) thread</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classGLVisCommand.html#a05ac23d7834445219e8804c01272ddd1">   94</a></span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a05ac23d7834445219e8804c01272ddd1">ReadFD</a>() { <span class="keywordflow">return</span> pfd[0]; }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;   <span class="comment">// to be used worker threads</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classGLVisCommand.html#affa87527a4d6b0982b826ba4f215c153">   97</a></span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classGLVisCommand.html#affa87527a4d6b0982b826ba4f215c153">KeepAttrib</a>() { <span class="keywordflow">return</span> *keep_attr; } <span class="comment">// may need to sync this</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classGLVisCommand.html#a4db7617adb2e36340ba8aa1816312ff1">   98</a></span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classGLVisCommand.html#a4db7617adb2e36340ba8aa1816312ff1">FixElementOrientations</a>() { <span class="keywordflow">return</span> *fix_elem_orient; }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;   <span class="comment">// called by worker threads</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#ab841b181ab9934632032970b05a9f086">NewMeshAndSolution</a>(Mesh *_new_m, GridFunction *_new_g);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#ad648c80e7f81dc4a090e062b95bd1f7b">Screenshot</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#abdfba3a81dfaa05d6925639e1909f9a8">KeyCommands</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="glvis_8cpp.html#a7ffdea4ad81f2867c4d1fdbcbe938bf7">keys</a>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a3d81435b9026909a28633acdb595dadc">WindowSize</a>(<span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a724b2acaa0a3632f610583f0aaf66e5c">WindowGeometry</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#af68d599fb2f2f412aaf7dbbc1416d080">WindowTitle</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *title);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a0324e40dd19f6bad226771281dd5c2f5">PlotCaption</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *caption);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#aca90f62455f7f7d7fd105da58cfb17b7">Pause</a>();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a28cd39812555217c1473c8252e1058b3">ViewAngles</a>(<span class="keywordtype">double</span> theta, <span class="keywordtype">double</span> phi);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a793e0c90f17079b864e0a3971b4708d8">Zoom</a>(<span class="keywordtype">double</span> factor);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a4b6744ed4dda20ebf8992fd92fd26950">Subdivisions</a>(<span class="keywordtype">int</span> tot, <span class="keywordtype">int</span> bdr);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a09e6b8f3374943bc613555e630aa391a">ValueRange</a>(<span class="keywordtype">double</span> minv, <span class="keywordtype">double</span> maxv);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a0ecdb042f5790d787878de66f21f2414">SetShading</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *shd);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a0017ef26faf24ef034c5bd370c4776d2">ViewCenter</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a1c7aa4ee5e613901551928912e8390d4">Autoscale</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *mode);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a513254f49aa8eb966ea3a56590fbbf8f">Palette</a>(<span class="keywordtype">int</span> pal);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a8d16bcbbfd9d79597f6e716f366bdd11">Camera</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> cam[]);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#aa3e2f9830f272a1e6c61cedda92451a6">Autopause</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *mode);</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;   <span class="comment">// called by the main execution thread</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classGLVisCommand.html#a62c1c824baf8bc259d7e35b000ab9861">Terminate</a>();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classGLVisCommand.html#a186222729324f82ae67189fe31dcace7">Execute</a>();</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classGLVisCommand.html#a1dcc53170eeb8ca3b3e0ff1152b9014f">ToggleAutopause</a>();</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;   <span class="comment">// called by the main execution thread</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;   <a class="code" href="classGLVisCommand.html#afb48ee45eb09df86811b361f8a9e2159">~GLVisCommand</a>();</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;};</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword">extern</span> <a class="code" href="classGLVisCommand.html">GLVisCommand</a> *<a class="code" href="threads_8cpp.html#ada175b0a66328b0d0a3cefac1f36c7be">glvis_command</a>;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classcommunication__thread.html">  131</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcommunication__thread.html">communication_thread</a></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;{</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;   <span class="comment">// streams to read data from</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;   Array&lt;std::istream *&gt; &amp;is;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;   <span class="comment">// data that may be dynamically allocated by the thread</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;   Mesh *new_m;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;   GridFunction *new_g;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;   std::string ident;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;   <span class="comment">// thread id</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;   pthread_t tid;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;   <span class="comment">// called by the main execution thread</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classGLVisCommand.html#a62c1c824baf8bc259d7e35b000ab9861">Terminate</a>();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classGLVisCommand.html#a1dcc53170eeb8ca3b3e0ff1152b9014f">ToggleAutopause</a>();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;   <span class="comment">// called by the main execution thread</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;   <a class="code" href="classGLVisCommand.html#afb48ee45eb09df86811b361f8a9e2159">~GLVisCommand</a>();</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;};</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keyword">extern</span> <a class="code" href="classGLVisCommand.html">GLVisCommand</a> *<a class="code" href="threads_8cpp.html#ada175b0a66328b0d0a3cefac1f36c7be">glvis_command</a>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classcommunication__thread.html">  134</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcommunication__thread.html">communication_thread</a></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;{</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;   <span class="comment">// streams to read data from</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;   Array&lt;std::istream *&gt; &amp;is;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;   <span class="comment">// data that may be dynamically allocated by the thread</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;   Mesh *new_m;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;   GridFunction *new_g;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;   std::string ident;</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">void</span> cancel_off()</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;   {</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      pthread_setcancelstate(PTHREAD_CANCEL_DISABLE, NULL);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;   }</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">void</span> cancel_on()</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;   {</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;   }</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">void</span> *execute(<span class="keywordtype">void</span> *);</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;   <a class="code" href="classcommunication__thread.html#aea0f8ab62924c9204f9f5e3f8ed7d8b3">communication_thread</a>(Array&lt;std::istream *&gt; &amp;_is);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;   <span class="comment">// thread id</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;   pthread_t tid;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">void</span> cancel_off()</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;   {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      pthread_setcancelstate(PTHREAD_CANCEL_DISABLE, NULL);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;   }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">void</span> cancel_on()</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;   {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;      pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;   }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">void</span> *execute(<span class="keywordtype">void</span> *);</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;   <a class="code" href="classcommunication__thread.html#aab5e88cc429399d7aab793a6aab87b34">~communication_thread</a>();</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;};</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;   <a class="code" href="classcommunication__thread.html#aea0f8ab62924c9204f9f5e3f8ed7d8b3">communication_thread</a>(Array&lt;std::istream *&gt; &amp;_is);</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classGLVisCommand_html_a62c1c824baf8bc259d7e35b000ab9861"><div class="ttname"><a href="classGLVisCommand.html#a62c1c824baf8bc259d7e35b000ab9861">GLVisCommand::Terminate</a></div><div class="ttdeci">void Terminate()</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00662">threads.cpp:662</a></div></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;   <a class="code" href="classcommunication__thread.html#aab5e88cc429399d7aab793a6aab87b34">~communication_thread</a>();</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;};</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classGLVisCommand_html_a62c1c824baf8bc259d7e35b000ab9861"><div class="ttname"><a href="classGLVisCommand.html#a62c1c824baf8bc259d7e35b000ab9861">GLVisCommand::Terminate</a></div><div class="ttdeci">void Terminate()</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00688">threads.cpp:688</a></div></div>
 <div class="ttc" id="threads_8cpp_html_ada175b0a66328b0d0a3cefac1f36c7be"><div class="ttname"><a href="threads_8cpp.html#ada175b0a66328b0d0a3cefac1f36c7be">glvis_command</a></div><div class="ttdeci">GLVisCommand * glvis_command</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00024">threads.cpp:24</a></div></div>
-<div class="ttc" id="classGLVisCommand_html_a09e6b8f3374943bc613555e630aa391a"><div class="ttname"><a href="classGLVisCommand.html#a09e6b8f3374943bc613555e630aa391a">GLVisCommand::ValueRange</a></div><div class="ttdeci">int ValueRange(double minv, double maxv)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00256">threads.cpp:256</a></div></div>
-<div class="ttc" id="classGLVisCommand_html_a513254f49aa8eb966ea3a56590fbbf8f"><div class="ttname"><a href="classGLVisCommand.html#a513254f49aa8eb966ea3a56590fbbf8f">GLVisCommand::Palette</a></div><div class="ttdeci">int Palette(int pal)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00318">threads.cpp:318</a></div></div>
+<div class="ttc" id="classGLVisCommand_html_a09e6b8f3374943bc613555e630aa391a"><div class="ttname"><a href="classGLVisCommand.html#a09e6b8f3374943bc613555e630aa391a">GLVisCommand::ValueRange</a></div><div class="ttdeci">int ValueRange(double minv, double maxv)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00271">threads.cpp:271</a></div></div>
+<div class="ttc" id="classGLVisCommand_html_a513254f49aa8eb966ea3a56590fbbf8f"><div class="ttname"><a href="classGLVisCommand.html#a513254f49aa8eb966ea3a56590fbbf8f">GLVisCommand::Palette</a></div><div class="ttdeci">int Palette(int pal)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00333">threads.cpp:333</a></div></div>
 <div class="ttc" id="classGLVisCommand_html"><div class="ttname"><a href="classGLVisCommand.html">GLVisCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="threads_8hpp_source.html#l00017">threads.hpp:17</a></div></div>
-<div class="ttc" id="classGLVisCommand_html_a4db7617adb2e36340ba8aa1816312ff1"><div class="ttname"><a href="classGLVisCommand.html#a4db7617adb2e36340ba8aa1816312ff1">GLVisCommand::FixElementOrientations</a></div><div class="ttdeci">bool FixElementOrientations()</div><div class="ttdef"><b>Definition:</b> <a href="threads_8hpp_source.html#l00096">threads.hpp:96</a></div></div>
+<div class="ttc" id="classGLVisCommand_html_a4db7617adb2e36340ba8aa1816312ff1"><div class="ttname"><a href="classGLVisCommand.html#a4db7617adb2e36340ba8aa1816312ff1">GLVisCommand::FixElementOrientations</a></div><div class="ttdeci">bool FixElementOrientations()</div><div class="ttdef"><b>Definition:</b> <a href="threads_8hpp_source.html#l00098">threads.hpp:98</a></div></div>
 <div class="ttc" id="classGLVisCommand_html_af68d599fb2f2f412aaf7dbbc1416d080"><div class="ttname"><a href="classGLVisCommand.html#af68d599fb2f2f412aaf7dbbc1416d080">GLVisCommand::WindowTitle</a></div><div class="ttdeci">int WindowTitle(const char *title)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00180">threads.cpp:180</a></div></div>
-<div class="ttc" id="classVisualizationSceneScalarData_html"><div class="ttname"><a href="classVisualizationSceneScalarData.html">VisualizationSceneScalarData</a></div><div class="ttdef"><b>Definition:</b> <a href="vsdata_8hpp_source.html#l00050">vsdata.hpp:50</a></div></div>
-<div class="ttc" id="classGLVisCommand_html_afb48ee45eb09df86811b361f8a9e2159"><div class="ttname"><a href="classGLVisCommand.html#afb48ee45eb09df86811b361f8a9e2159">GLVisCommand::~GLVisCommand</a></div><div class="ttdeci">~GLVisCommand()</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00703">threads.cpp:703</a></div></div>
+<div class="ttc" id="classVisualizationSceneScalarData_html"><div class="ttname"><a href="classVisualizationSceneScalarData.html">VisualizationSceneScalarData</a></div><div class="ttdef"><b>Definition:</b> <a href="vsdata_8hpp_source.html#l00052">vsdata.hpp:52</a></div></div>
+<div class="ttc" id="classGLVisCommand_html_afb48ee45eb09df86811b361f8a9e2159"><div class="ttname"><a href="classGLVisCommand.html#afb48ee45eb09df86811b361f8a9e2159">GLVisCommand::~GLVisCommand</a></div><div class="ttdeci">~GLVisCommand()</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00729">threads.cpp:729</a></div></div>
 <div class="ttc" id="classGLVisCommand_html_a724b2acaa0a3632f610583f0aaf66e5c"><div class="ttname"><a href="classGLVisCommand.html#a724b2acaa0a3632f610583f0aaf66e5c">GLVisCommand::WindowGeometry</a></div><div class="ttdeci">int WindowGeometry(int x, int y, int w, int h)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00162">threads.cpp:162</a></div></div>
-<div class="ttc" id="classGLVisCommand_html_a0ecdb042f5790d787878de66f21f2414"><div class="ttname"><a href="classGLVisCommand.html#a0ecdb042f5790d787878de66f21f2414">GLVisCommand::SetShading</a></div><div class="ttdeci">int SetShading(const char *shd)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00272">threads.cpp:272</a></div></div>
-<div class="ttc" id="glvis_8cpp_html_a7ffdea4ad81f2867c4d1fdbcbe938bf7"><div class="ttname"><a href="glvis_8cpp.html#a7ffdea4ad81f2867c4d1fdbcbe938bf7">keys</a></div><div class="ttdeci">string keys</div><div class="ttdef"><b>Definition:</b> <a href="glvis_8cpp_source.html#l00060">glvis.cpp:60</a></div></div>
+<div class="ttc" id="classGLVisCommand_html_a0ecdb042f5790d787878de66f21f2414"><div class="ttname"><a href="classGLVisCommand.html#a0ecdb042f5790d787878de66f21f2414">GLVisCommand::SetShading</a></div><div class="ttdeci">int SetShading(const char *shd)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00287">threads.cpp:287</a></div></div>
+<div class="ttc" id="glvis_8cpp_html_a7ffdea4ad81f2867c4d1fdbcbe938bf7"><div class="ttname"><a href="glvis_8cpp.html#a7ffdea4ad81f2867c4d1fdbcbe938bf7">keys</a></div><div class="ttdeci">string keys</div><div class="ttdef"><b>Definition:</b> <a href="glvis_8cpp_source.html#l00063">glvis.cpp:63</a></div></div>
 <div class="ttc" id="classGLVisCommand_html_aee9bf66eb091a37591eb04974eed8b75"><div class="ttname"><a href="classGLVisCommand.html#aee9bf66eb091a37591eb04974eed8b75">GLVisCommand::GLVisCommand</a></div><div class="ttdeci">GLVisCommand(VisualizationSceneScalarData **_vs, Mesh **_mesh, GridFunction **_grid_f, Vector *_sol, bool *_keep_attr, bool *_fix_elem_orient)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00026">threads.cpp:26</a></div></div>
-<div class="ttc" id="classcommunication__thread_html_aea0f8ab62924c9204f9f5e3f8ed7d8b3"><div class="ttname"><a href="classcommunication__thread.html#aea0f8ab62924c9204f9f5e3f8ed7d8b3">communication_thread::communication_thread</a></div><div class="ttdeci">communication_thread(Array&lt; std::istream * &gt; &amp;_is)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00714">threads.cpp:714</a></div></div>
-<div class="ttc" id="classGLVisCommand_html_affa87527a4d6b0982b826ba4f215c153"><div class="ttname"><a href="classGLVisCommand.html#affa87527a4d6b0982b826ba4f215c153">GLVisCommand::KeepAttrib</a></div><div class="ttdeci">bool KeepAttrib()</div><div class="ttdef"><b>Definition:</b> <a href="threads_8hpp_source.html#l00095">threads.hpp:95</a></div></div>
-<div class="ttc" id="classGLVisCommand_html_a186222729324f82ae67189fe31dcace7"><div class="ttname"><a href="classGLVisCommand.html#a186222729324f82ae67189fe31dcace7">GLVisCommand::Execute</a></div><div class="ttdeci">int Execute()</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00368">threads.cpp:368</a></div></div>
-<div class="ttc" id="classcommunication__thread_html"><div class="ttname"><a href="classcommunication__thread.html">communication_thread</a></div><div class="ttdef"><b>Definition:</b> <a href="threads_8hpp_source.html#l00131">threads.hpp:131</a></div></div>
-<div class="ttc" id="classGLVisCommand_html_a1dcc53170eeb8ca3b3e0ff1152b9014f"><div class="ttname"><a href="classGLVisCommand.html#a1dcc53170eeb8ca3b3e0ff1152b9014f">GLVisCommand::ToggleAutopause</a></div><div class="ttdeci">void ToggleAutopause()</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00689">threads.cpp:689</a></div></div>
+<div class="ttc" id="classcommunication__thread_html_aea0f8ab62924c9204f9f5e3f8ed7d8b3"><div class="ttname"><a href="classcommunication__thread.html#aea0f8ab62924c9204f9f5e3f8ed7d8b3">communication_thread::communication_thread</a></div><div class="ttdeci">communication_thread(Array&lt; std::istream * &gt; &amp;_is)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00740">threads.cpp:740</a></div></div>
+<div class="ttc" id="classGLVisCommand_html_affa87527a4d6b0982b826ba4f215c153"><div class="ttname"><a href="classGLVisCommand.html#affa87527a4d6b0982b826ba4f215c153">GLVisCommand::KeepAttrib</a></div><div class="ttdeci">bool KeepAttrib()</div><div class="ttdef"><b>Definition:</b> <a href="threads_8hpp_source.html#l00097">threads.hpp:97</a></div></div>
+<div class="ttc" id="classGLVisCommand_html_a0324e40dd19f6bad226771281dd5c2f5"><div class="ttname"><a href="classGLVisCommand.html#a0324e40dd19f6bad226771281dd5c2f5">GLVisCommand::PlotCaption</a></div><div class="ttdeci">int PlotCaption(const char *caption)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00195">threads.cpp:195</a></div></div>
+<div class="ttc" id="classGLVisCommand_html_a186222729324f82ae67189fe31dcace7"><div class="ttname"><a href="classGLVisCommand.html#a186222729324f82ae67189fe31dcace7">GLVisCommand::Execute</a></div><div class="ttdeci">int Execute()</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00383">threads.cpp:383</a></div></div>
+<div class="ttc" id="classcommunication__thread_html"><div class="ttname"><a href="classcommunication__thread.html">communication_thread</a></div><div class="ttdef"><b>Definition:</b> <a href="threads_8hpp_source.html#l00134">threads.hpp:134</a></div></div>
+<div class="ttc" id="classGLVisCommand_html_a1dcc53170eeb8ca3b3e0ff1152b9014f"><div class="ttname"><a href="classGLVisCommand.html#a1dcc53170eeb8ca3b3e0ff1152b9014f">GLVisCommand::ToggleAutopause</a></div><div class="ttdeci">void ToggleAutopause()</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00715">threads.cpp:715</a></div></div>
 <div class="ttc" id="classGLVisCommand_html_abdfba3a81dfaa05d6925639e1909f9a8"><div class="ttname"><a href="classGLVisCommand.html#abdfba3a81dfaa05d6925639e1909f9a8">GLVisCommand::KeyCommands</a></div><div class="ttdeci">int KeyCommands(const char *keys)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00131">threads.cpp:131</a></div></div>
 <div class="ttc" id="classGLVisCommand_html_a3d81435b9026909a28633acdb595dadc"><div class="ttname"><a href="classGLVisCommand.html#a3d81435b9026909a28633acdb595dadc">GLVisCommand::WindowSize</a></div><div class="ttdeci">int WindowSize(int w, int h)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00146">threads.cpp:146</a></div></div>
-<div class="ttc" id="classGLVisCommand_html_a793e0c90f17079b864e0a3971b4708d8"><div class="ttname"><a href="classGLVisCommand.html#a793e0c90f17079b864e0a3971b4708d8">GLVisCommand::Zoom</a></div><div class="ttdeci">int Zoom(double factor)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00225">threads.cpp:225</a></div></div>
-<div class="ttc" id="classGLVisCommand_html_a1c7aa4ee5e613901551928912e8390d4"><div class="ttname"><a href="classGLVisCommand.html#a1c7aa4ee5e613901551928912e8390d4">GLVisCommand::Autoscale</a></div><div class="ttdeci">int Autoscale(const char *mode)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00303">threads.cpp:303</a></div></div>
-<div class="ttc" id="classGLVisCommand_html_a4b6744ed4dda20ebf8992fd92fd26950"><div class="ttname"><a href="classGLVisCommand.html#a4b6744ed4dda20ebf8992fd92fd26950">GLVisCommand::Subdivisions</a></div><div class="ttdeci">int Subdivisions(int tot, int bdr)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00240">threads.cpp:240</a></div></div>
-<div class="ttc" id="classGLVisCommand_html_aca90f62455f7f7d7fd105da58cfb17b7"><div class="ttname"><a href="classGLVisCommand.html#aca90f62455f7f7d7fd105da58cfb17b7">GLVisCommand::Pause</a></div><div class="ttdeci">int Pause()</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00195">threads.cpp:195</a></div></div>
+<div class="ttc" id="classGLVisCommand_html_a793e0c90f17079b864e0a3971b4708d8"><div class="ttname"><a href="classGLVisCommand.html#a793e0c90f17079b864e0a3971b4708d8">GLVisCommand::Zoom</a></div><div class="ttdeci">int Zoom(double factor)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00240">threads.cpp:240</a></div></div>
+<div class="ttc" id="classGLVisCommand_html_a1c7aa4ee5e613901551928912e8390d4"><div class="ttname"><a href="classGLVisCommand.html#a1c7aa4ee5e613901551928912e8390d4">GLVisCommand::Autoscale</a></div><div class="ttdeci">int Autoscale(const char *mode)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00318">threads.cpp:318</a></div></div>
+<div class="ttc" id="classGLVisCommand_html_a4b6744ed4dda20ebf8992fd92fd26950"><div class="ttname"><a href="classGLVisCommand.html#a4b6744ed4dda20ebf8992fd92fd26950">GLVisCommand::Subdivisions</a></div><div class="ttdeci">int Subdivisions(int tot, int bdr)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00255">threads.cpp:255</a></div></div>
+<div class="ttc" id="classGLVisCommand_html_aca90f62455f7f7d7fd105da58cfb17b7"><div class="ttname"><a href="classGLVisCommand.html#aca90f62455f7f7d7fd105da58cfb17b7">GLVisCommand::Pause</a></div><div class="ttdeci">int Pause()</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00210">threads.cpp:210</a></div></div>
 <div class="ttc" id="classGLVisCommand_html_ad648c80e7f81dc4a090e062b95bd1f7b"><div class="ttname"><a href="classGLVisCommand.html#ad648c80e7f81dc4a090e062b95bd1f7b">GLVisCommand::Screenshot</a></div><div class="ttdeci">int Screenshot(const char *filename)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00116">threads.cpp:116</a></div></div>
-<div class="ttc" id="classGLVisCommand_html_aa3e2f9830f272a1e6c61cedda92451a6"><div class="ttname"><a href="classGLVisCommand.html#aa3e2f9830f272a1e6c61cedda92451a6">GLVisCommand::Autopause</a></div><div class="ttdeci">int Autopause(const char *mode)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00351">threads.cpp:351</a></div></div>
-<div class="ttc" id="classGLVisCommand_html_a05ac23d7834445219e8804c01272ddd1"><div class="ttname"><a href="classGLVisCommand.html#a05ac23d7834445219e8804c01272ddd1">GLVisCommand::ReadFD</a></div><div class="ttdeci">int ReadFD()</div><div class="ttdef"><b>Definition:</b> <a href="threads_8hpp_source.html#l00092">threads.hpp:92</a></div></div>
+<div class="ttc" id="classGLVisCommand_html_aa3e2f9830f272a1e6c61cedda92451a6"><div class="ttname"><a href="classGLVisCommand.html#aa3e2f9830f272a1e6c61cedda92451a6">GLVisCommand::Autopause</a></div><div class="ttdeci">int Autopause(const char *mode)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00366">threads.cpp:366</a></div></div>
+<div class="ttc" id="classGLVisCommand_html_a05ac23d7834445219e8804c01272ddd1"><div class="ttname"><a href="classGLVisCommand.html#a05ac23d7834445219e8804c01272ddd1">GLVisCommand::ReadFD</a></div><div class="ttdeci">int ReadFD()</div><div class="ttdef"><b>Definition:</b> <a href="threads_8hpp_source.html#l00094">threads.hpp:94</a></div></div>
 <div class="ttc" id="classGLVisCommand_html_ab841b181ab9934632032970b05a9f086"><div class="ttname"><a href="classGLVisCommand.html#ab841b181ab9934632032970b05a9f086">GLVisCommand::NewMeshAndSolution</a></div><div class="ttdeci">int NewMeshAndSolution(Mesh *_new_m, GridFunction *_new_g)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00100">threads.cpp:100</a></div></div>
-<div class="ttc" id="classcommunication__thread_html_aab5e88cc429399d7aab793a6aab87b34"><div class="ttname"><a href="classcommunication__thread.html#aab5e88cc429399d7aab793a6aab87b34">communication_thread::~communication_thread</a></div><div class="ttdeci">~communication_thread()</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00726">threads.cpp:726</a></div></div>
-<div class="ttc" id="classGLVisCommand_html_a0017ef26faf24ef034c5bd370c4776d2"><div class="ttname"><a href="classGLVisCommand.html#a0017ef26faf24ef034c5bd370c4776d2">GLVisCommand::ViewCenter</a></div><div class="ttdeci">int ViewCenter(double x, double y)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00287">threads.cpp:287</a></div></div>
-<div class="ttc" id="classGLVisCommand_html_a28cd39812555217c1473c8252e1058b3"><div class="ttname"><a href="classGLVisCommand.html#a28cd39812555217c1473c8252e1058b3">GLVisCommand::ViewAngles</a></div><div class="ttdeci">int ViewAngles(double theta, double phi)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00209">threads.cpp:209</a></div></div>
-<div class="ttc" id="classGLVisCommand_html_a8d16bcbbfd9d79597f6e716f366bdd11"><div class="ttname"><a href="classGLVisCommand.html#a8d16bcbbfd9d79597f6e716f366bdd11">GLVisCommand::Camera</a></div><div class="ttdeci">int Camera(const double cam[])</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00333">threads.cpp:333</a></div></div>
+<div class="ttc" id="classcommunication__thread_html_aab5e88cc429399d7aab793a6aab87b34"><div class="ttname"><a href="classcommunication__thread.html#aab5e88cc429399d7aab793a6aab87b34">communication_thread::~communication_thread</a></div><div class="ttdeci">~communication_thread()</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00752">threads.cpp:752</a></div></div>
+<div class="ttc" id="classGLVisCommand_html_a0017ef26faf24ef034c5bd370c4776d2"><div class="ttname"><a href="classGLVisCommand.html#a0017ef26faf24ef034c5bd370c4776d2">GLVisCommand::ViewCenter</a></div><div class="ttdeci">int ViewCenter(double x, double y)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00302">threads.cpp:302</a></div></div>
+<div class="ttc" id="classGLVisCommand_html_a28cd39812555217c1473c8252e1058b3"><div class="ttname"><a href="classGLVisCommand.html#a28cd39812555217c1473c8252e1058b3">GLVisCommand::ViewAngles</a></div><div class="ttdeci">int ViewAngles(double theta, double phi)</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00224">threads.cpp:224</a></div></div>
+<div class="ttc" id="classGLVisCommand_html_a8d16bcbbfd9d79597f6e716f366bdd11"><div class="ttname"><a href="classGLVisCommand.html#a8d16bcbbfd9d79597f6e716f366bdd11">GLVisCommand::Camera</a></div><div class="ttdeci">int Camera(const double cam[])</div><div class="ttdef"><b>Definition:</b> <a href="threads_8cpp_source.html#l00348">threads.cpp:348</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:25:36 for GLVis by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 30 2016 14:21:48 for GLVis by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

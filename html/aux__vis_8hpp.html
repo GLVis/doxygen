@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">GLVis
-   &#160;<span id="projectnumber">v3.1</span>
+   &#160;<span id="projectnumber">v3.2</span>
    </div>
    <div id="projectbrief">Accurate and flexible finite element visualization</div>
   </td>
@@ -212,6 +212,8 @@ Functions</h2></td></tr>
 <tr class="memitem:ae6aed8461ba7346b747c45fdfd2c4b95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8hpp.html#ae6aed8461ba7346b747c45fdfd2c4b95">SendKeySequence</a> (const char *seq)</td></tr>
 <tr class="memdesc:ae6aed8461ba7346b747c45fdfd2c4b95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a sequence of keystrokes to the visualization window.  <a href="#ae6aed8461ba7346b747c45fdfd2c4b95">More...</a><br/></td></tr>
 <tr class="separator:ae6aed8461ba7346b747c45fdfd2c4b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8a19e9ddebb23f668b1a4b5958df555"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8hpp.html#ad8a19e9ddebb23f668b1a4b5958df555">CallKeySequence</a> (const char *seq)</td></tr>
+<tr class="separator:ad8a19e9ddebb23f668b1a4b5958df555"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90b7cb9796054973c891885176cf04f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8hpp.html#a90b7cb9796054973c891885176cf04f8">Cone</a> ()</td></tr>
 <tr class="separator:a90b7cb9796054973c891885176cf04f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c5a2b6a5e26ac34dbd24e7d2ad670ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8hpp.html#a3c5a2b6a5e26ac34dbd24e7d2ad670ef">MySetColor</a> (double val, double min, double max)</td></tr>
@@ -226,6 +228,10 @@ Functions</h2></td></tr>
 <tr class="separator:af33c09f76b23f9ce78ca8a96c4f8f04e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4265c20c667b1c24583d48e04c1eb041"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8hpp.html#a4265c20c667b1c24583d48e04c1eb041">SetMultisample</a> (int m)</td></tr>
 <tr class="separator:a4265c20c667b1c24583d48e04c1eb041"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae979705e80545d9f09a12b48f989c0e8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8hpp.html#ae979705e80545d9f09a12b48f989c0e8">RenderBitmapText</a> (const char *text, int &amp;width, int &amp;heigth)</td></tr>
+<tr class="separator:ae979705e80545d9f09a12b48f989c0e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade2b08068751ea925c1978a7bd4deb2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8hpp.html#ade2b08068751ea925c1978a7bd4deb2c">DrawBitmapText</a> ()</td></tr>
+<tr class="separator:ade2b08068751ea925c1978a7bd4deb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab148bf1707f7f5fe9b720b986adc6ec9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8hpp.html#ab148bf1707f7f5fe9b720b986adc6ec9">DrawBitmapText</a> (const char *text)</td></tr>
 <tr class="separator:ab148bf1707f7f5fe9b720b986adc6ec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abad021f22e1e74710abcc54ea3f32970"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aux__vis_8hpp.html#abad021f22e1e74710abcc54ea3f32970">SetFontFile</a> (const char *font_file, int height)</td></tr>
@@ -259,7 +265,25 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00441">441</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00495">495</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad8a19e9ddebb23f668b1a4b5958df555"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CallKeySequence </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>seq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00315">315</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -276,7 +300,24 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01341">1341</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01395">1395</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ade2b08068751ea925c1978a7bd4deb2c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawBitmapText </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l02152">2152</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -294,7 +335,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l02057">2057</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l02172">2172</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -311,7 +352,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01309">1309</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01363">1363</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -328,7 +369,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01584">1584</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01638">1638</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -345,7 +386,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01570">1570</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01624">1624</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -410,7 +451,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01075">1075</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01129">1129</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -427,7 +468,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01156">1156</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01210">1210</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -444,7 +485,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01162">1162</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01216">1216</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -461,7 +502,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01168">1168</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01222">1222</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -478,7 +519,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01131">1131</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01185">1185</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -495,7 +536,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01137">1137</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01191">1191</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -512,7 +553,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01150">1150</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01204">1204</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -529,7 +570,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01113">1113</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01167">1167</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -546,7 +587,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01119">1119</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01173">1173</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -563,7 +604,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01125">1125</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01179">1179</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -580,7 +621,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01085">1085</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01139">1139</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -598,7 +639,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01228">1228</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01282">1282</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -615,7 +656,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01103">1103</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01157">1157</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -632,7 +673,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01241">1241</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01295">1295</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -650,7 +691,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01189">1189</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01243">1243</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -667,7 +708,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01247">1247</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01301">1301</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -684,7 +725,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00975">975</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01029">1029</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -701,7 +742,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01253">1253</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01307">1307</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -718,7 +759,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01014">1014</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01068">1068</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -736,7 +777,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01202">1202</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01256">1256</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -753,7 +794,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00948">948</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01002">1002</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -771,7 +812,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01215">1215</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01269">1269</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -788,7 +829,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00346">346</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00399">399</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -806,7 +847,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00522">522</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00576">576</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -824,7 +865,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00543">543</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00597">597</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -842,7 +883,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00601">601</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00655">655</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -859,7 +900,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01283">1283</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01337">1337</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -876,7 +917,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00464">464</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00518">518</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -894,7 +935,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00627">627</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00681">681</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -912,7 +953,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00633">633</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00687">687</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -930,7 +971,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00701">701</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00755">755</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -970,7 +1011,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01323">1323</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01377">1377</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -987,7 +1028,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00413">413</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00467">467</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1021,7 +1062,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01370">1370</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01424">1424</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1039,7 +1080,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01392">1392</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01446">1446</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1057,7 +1098,41 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00447">447</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00501">501</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae979705e80545d9f09a12b48f989c0e8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RenderBitmapText </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>heigth</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l02111">2111</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1085,7 +1160,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01328">1328</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01382">1382</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1103,7 +1178,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00704">704</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00758">758</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1121,7 +1196,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00710">710</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00764">764</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1139,7 +1214,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00759">759</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00813">813</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1156,7 +1231,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01277">1277</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01331">1331</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1173,7 +1248,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01271">1271</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01325">1325</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1203,7 +1278,7 @@ Variables</h2></td></tr>
 
 <p>Take a screenshot using libtiff, libpng or xwd. </p>
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00770">770</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00824">824</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1222,7 +1297,7 @@ Variables</h2></td></tr>
 
 <p>Send expose event. In our case MyReshape is executed and Draw after it. </p>
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00359">359</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00412">412</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1276,7 +1351,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l02106">2106</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l02187">2187</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1294,7 +1369,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l02113">2113</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l02194">2194</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1322,7 +1397,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l02101">2101</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l02182">2182</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1340,7 +1415,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01589">1589</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01643">1643</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1358,7 +1433,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01575">1575</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01629">1629</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1394,7 +1469,7 @@ Variables</h2></td></tr>
 
 <p>Start the infinite visualization loop. </p>
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00315">315</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l00368">368</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1412,7 +1487,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01333">1333</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01387">1387</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1429,7 +1504,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01295">1295</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01349">1349</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1447,7 +1522,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01029">1029</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01083">1083</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1464,7 +1539,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01049">1049</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01103">1103</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1481,7 +1556,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01041">1041</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01095">1095</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1498,7 +1573,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01019">1019</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01073">1073</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1515,7 +1590,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01259">1259</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01313">1313</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1532,7 +1607,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01265">1265</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01319">1319</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
@@ -1575,14 +1650,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01366">1366</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="aux__vis_8cpp_source.html#l01420">1420</a> of file <a class="el" href="aux__vis_8cpp_source.html">aux_vis.cpp</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:25:36 for GLVis by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 30 2016 14:21:48 for GLVis by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

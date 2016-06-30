@@ -1,12 +1,14 @@
 var searchData=
 [
+  ['c_5fplot_5fcaption',['c_plot_caption',['../glvis_8cpp.html#a017214d1c260b6f9debcdb214b9c7a1e',1,'glvis.cpp']]],
+  ['callkeysequence',['CallKeySequence',['../aux__vis_8cpp.html#ad8a19e9ddebb23f668b1a4b5958df555',1,'CallKeySequence(const char *seq):&#160;aux_vis.cpp'],['../aux__vis_8hpp.html#ad8a19e9ddebb23f668b1a4b5958df555',1,'CallKeySequence(const char *seq):&#160;aux_vis.cpp']]],
   ['cam',['cam',['../classVisualizationScene.html#a6ca0b083e9055c80006c8c5b4a3cdeb2',1,'VisualizationScene']]],
   ['camera',['Camera',['../classCamera.html',1,'Camera'],['../classCamera.html#a01f94c3543f56ede7af49dc778f19331',1,'Camera::Camera()'],['../classGLVisCommand.html#a8d16bcbbfd9d79597f6e716f366bdd11',1,'GLVisCommand::Camera()']]],
   ['centerobject',['CenterObject',['../classVisualizationScene.html#ab4c196082c1c0c1cf286da570928934c',1,'VisualizationScene']]],
   ['centerobject2d',['CenterObject2D',['../classVisualizationScene.html#a9f7396c2af7000ce70e91e872d8e8598',1,'VisualizationScene']]],
   ['checkpositions',['CheckPositions',['../classVisualizationSceneSolution3d.html#af0b16e2981b4e143658c5ded5e2bab63',1,'VisualizationSceneSolution3d']]],
   ['checkspin',['CheckSpin',['../aux__vis_8cpp.html#a599b2e55f2eca11bc1c94fdc2b11ba7c',1,'aux_vis.cpp']]],
-  ['closeinputstreams',['CloseInputStreams',['../glvis_8cpp.html#a494be29b95e3ab4477be0a2786fa0a8e',1,'glvis.cpp']]],
+  ['closeinputstreams',['CloseInputStreams',['../glvis_8cpp.html#ad8ac227582e9422c26bfd7e874747e5b',1,'glvis.cpp']]],
   ['colorbar',['colorbar',['../classVisualizationSceneScalarData.html#a2f351c3969d324cee2c2f3297cf5e242',1,'VisualizationSceneScalarData']]],
   ['communication_5fthread',['communication_thread',['../classcommunication__thread.html',1,'communication_thread'],['../classcommunication__thread.html#aea0f8ab62924c9204f9f5e3f8ed7d8b3',1,'communication_thread::communication_thread()']]],
   ['compute3dunitnormal',['Compute3DUnitNormal',['../vssolution3d_8cpp.html#a972ff30be8d8e1545a32aba7be6330cd',1,'Compute3DUnitNormal(const double p1[], const double p2[], const double p3[], double nor[]):&#160;vssolution3d.cpp'],['../vssolution3d_8cpp.html#a8d6932beb19ed8ed09275ecde83b0d2a',1,'Compute3DUnitNormal(const double p1[], const double p2[], const double p3[], const double p4[], double nor[]):&#160;vssolution3d.cpp'],['../vssolution3d_8hpp.html#a972ff30be8d8e1545a32aba7be6330cd',1,'Compute3DUnitNormal(const double p1[], const double p2[], const double p3[], double nor[]):&#160;vssolution3d.cpp'],['../vssolution3d_8hpp.html#a8d6932beb19ed8ed09275ecde83b0d2a',1,'Compute3DUnitNormal(const double p1[], const double p2[], const double p3[], const double p4[], double nor[]):&#160;vssolution3d.cpp']]],

@@ -4,6 +4,7 @@ var searchData=
   ['pause',['Pause',['../classGLVisCommand.html#aca90f62455f7f7d7fd105da58cfb17b7',1,'GLVisCommand']]],
   ['plane',['Plane',['../classPlane.html#a51de01245b9c2881e232b1114d91f0b9',1,'Plane']]],
   ['playscript',['PlayScript',['../glvis_8cpp.html#a79ac0aed09c13aac298ae36c4bd303a0',1,'glvis.cpp']]],
+  ['plotcaption',['PlotCaption',['../classGLVisCommand.html#a0324e40dd19f6bad226771281dd5c2f5',1,'GLVisCommand']]],
   ['prepare',['Prepare',['../classVisualizationSceneScalarData.html#a73e165ee073cff99b07d8f16817d3ab6',1,'VisualizationSceneScalarData::Prepare()'],['../classVisualizationSceneSolution.html#a5b090840a32af79a6175602da4ffee21',1,'VisualizationSceneSolution::Prepare()'],['../classVisualizationSceneSolution3d.html#ac7d7f156c3e0a567ba90ad2e770f992a',1,'VisualizationSceneSolution3d::Prepare()'],['../classVisualizationSceneVector3d.html#aa6a161e2e282209ef72867d485e5753f',1,'VisualizationSceneVector3d::Prepare()']]],
   ['prepareaxes',['PrepareAxes',['../classVisualizationSceneScalarData.html#aeb82b322234efaae4817098aaa63efc5',1,'VisualizationSceneScalarData']]],
   ['prepareboundary',['PrepareBoundary',['../classVisualizationSceneSolution.html#a75024bc6a3eb78bce0c27af2668db898',1,'VisualizationSceneSolution']]],

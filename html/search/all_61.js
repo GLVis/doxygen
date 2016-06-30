@@ -17,7 +17,7 @@ var searchData=
   ['auto_5fref_5fmax_5fsurf_5felem',['auto_ref_max_surf_elem',['../classVisualizationSceneScalarData.html#affffc3b81f787042444af112a29ff0aa',1,'VisualizationSceneScalarData']]],
   ['autopause',['Autopause',['../classGLVisCommand.html#aa3e2f9830f272a1e6c61cedda92451a6',1,'GLVisCommand']]],
   ['autorefine',['AutoRefine',['../classVisualizationSceneScalarData.html#a7ee8b9c621ce04867402346142d5fb2e',1,'VisualizationSceneScalarData::AutoRefine()'],['../classVisualizationSceneSolution.html#ae3dede0eaaed1b67d469df1d817a0e6d',1,'VisualizationSceneSolution::AutoRefine()'],['../classVisualizationSceneSolution3d.html#afd08c7ca1c8f20d5560878c8281d0f8b',1,'VisualizationSceneSolution3d::AutoRefine()']]],
-  ['autoscale',['Autoscale',['../classGLVisCommand.html#a1c7aa4ee5e613901551928912e8390d4',1,'GLVisCommand::Autoscale()'],['../classVisualizationSceneScalarData.html#a8885ff07f35b5cc0f2c43592e51ea8ec',1,'VisualizationSceneScalarData::autoscale()']]],
+  ['autoscale',['autoscale',['../classVisualizationSceneScalarData.html#a8885ff07f35b5cc0f2c43592e51ea8ec',1,'VisualizationSceneScalarData::autoscale()'],['../classGLVisCommand.html#a1c7aa4ee5e613901551928912e8390d4',1,'GLVisCommand::Autoscale()']]],
   ['aux_5fvis_2ecpp',['aux_vis.cpp',['../aux__vis_8cpp.html',1,'']]],
   ['aux_5fvis_2ehpp',['aux_vis.hpp',['../aux__vis_8hpp.html',1,'']]],
   ['axeslist',['axeslist',['../classVisualizationSceneScalarData.html#af95e76b60dbfd3ce083ac2ab297ecde4',1,'VisualizationSceneScalarData']]]

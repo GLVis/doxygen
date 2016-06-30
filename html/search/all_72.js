@@ -13,6 +13,7 @@ var searchData=
   ['removefperrors',['RemoveFPErrors',['../vssolution_8cpp.html#ab7f8fa7fb456baf44dbb794ba176368a',1,'vssolution.cpp']]],
   ['removeidlefunc',['RemoveIdleFunc',['../aux__vis_8cpp.html#a6a3c865cab4476fb4f52d88a7e0b24a1',1,'RemoveIdleFunc(void(*Func)(void)):&#160;aux_vis.cpp'],['../aux__vis_8hpp.html#a6a3c865cab4476fb4f52d88a7e0b24a1',1,'RemoveIdleFunc(void(*Func)(void)):&#160;aux_vis.cpp']]],
   ['removevectorfieldlevel',['RemoveVectorFieldLevel',['../classVisualizationSceneVector3d.html#ae1ea369a6527b37585277858a59bd222',1,'VisualizationSceneVector3d']]],
+  ['renderbitmaptext',['RenderBitmapText',['../aux__vis_8cpp.html#a0091b5bb9b0bcc00804dbaa503cfc53f',1,'RenderBitmapText(const char *text, int &amp;width, int &amp;height):&#160;aux_vis.cpp'],['../aux__vis_8hpp.html#ae979705e80545d9f09a12b48f989c0e8',1,'RenderBitmapText(const char *text, int &amp;width, int &amp;heigth):&#160;aux_vis.cpp']]],
   ['repeatpalettetimes',['RepeatPaletteTimes',['../aux__vis_8cpp.html#a84655ff6f466904d5cb4a8427ecf10f8',1,'RepeatPaletteTimes():&#160;aux_vis.cpp'],['../vsdata_8cpp.html#a84655ff6f466904d5cb4a8427ecf10f8',1,'RepeatPaletteTimes():&#160;aux_vis.cpp']]],
   ['reset',['Reset',['../classCamera.html#aa46f58b32270a571ab56dde4caca46db',1,'Camera']]],
   ['resizewindow',['ResizeWindow',['../aux__vis_8cpp.html#a2fc217c5eb1543fad38969405c0cacdf',1,'ResizeWindow(int w, int h):&#160;aux_vis.cpp'],['../aux__vis_8hpp.html#a2fc217c5eb1543fad38969405c0cacdf',1,'ResizeWindow(int w, int h):&#160;aux_vis.cpp']]],
