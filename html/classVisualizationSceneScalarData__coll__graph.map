@@ -1,5 +1,6 @@
 <map id="VisualizationSceneScalarData" name="VisualizationSceneScalarData">
-<area shape="rect" id="node2" href="$classVisualizationScene.html" title="VisualizationScene" alt="" coords="5,110,184,143"/>
-<area shape="rect" id="node4" href="$classCamera.html" title="Camera" alt="" coords="51,6,139,39"/>
-<area shape="rect" id="node6" href="$classPlane.html" title="Plane" alt="" coords="208,110,277,143"/>
+<area shape="rect" id="node2" href="$classVisualizationScene.html" title="VisualizationScene" alt="" coords="5,128,179,160"/>
+<area shape="rect" id="node3" href="$classCamera.html" title="Camera" alt="" coords="49,16,135,48"/>
+<area shape="rect" id="node4" href="$classPlane.html" title="Plane" alt="" coords="203,128,271,160"/>
+<area shape="rect" id="node5" title="STL class. " alt="" coords="327,128,427,160"/>
 </map>
