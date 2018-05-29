@@ -10,6 +10,7 @@ var searchData=
   ['drawelems',['drawelems',['../classVisualizationSceneSolution.html#afb89b66af94ab31e817f13614de91446',1,'VisualizationSceneSolution::drawelems()'],['../classVisualizationSceneSolution3d.html#a207e8c68bb2f5c63e6c035f35d40ffec',1,'VisualizationSceneSolution3d::drawelems()']]],
   ['drawlsurf',['drawlsurf',['../classVisualizationSceneSolution3d.html#a971a8af223fa7f014d617a080e655c77',1,'VisualizationSceneSolution3d']]],
   ['drawmesh',['drawmesh',['../classVisualizationSceneSolution.html#aabf8972502ab6ac114b7ed84c13ae636',1,'VisualizationSceneSolution::drawmesh()'],['../classVisualizationSceneSolution3d.html#a10af0e1f727a4b27a994f5c8a1fe71f3',1,'VisualizationSceneSolution3d::drawmesh()']]],
+  ['drawnums',['drawnums',['../classVisualizationSceneSolution.html#ab5b5701daebb738f333c233de275b6ce',1,'VisualizationSceneSolution']]],
   ['drawvector',['drawvector',['../classVisualizationSceneVector.html#a9f9ef5a9cb95a4a33beab9a425c5bd76',1,'VisualizationSceneVector::drawvector()'],['../classVisualizationSceneVector3d.html#ad63b5905f0c8632bd3e027b613430a49',1,'VisualizationSceneVector3d::drawvector()']]],
   ['dvflevel',['dvflevel',['../classVisualizationSceneVector3d.html#aac24f1b7b26d9cec1419e7623310ef4c',1,'VisualizationSceneVector3d']]]
 ];

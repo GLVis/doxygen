@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['e_5fnums_5flist',['e_nums_list',['../classVisualizationSceneSolution.html#a37a7d59077bf3bc44a1628cb083ff343',1,'VisualizationSceneSolution']]],
   ['edgerefinefactor',['EdgeRefineFactor',['../classVisualizationSceneSolution.html#a102b456664f6863e6b8d16eb82528f13',1,'VisualizationSceneSolution']]],
   ['el_5fattr_5fto_5fshow',['el_attr_to_show',['../classVisualizationSceneSolution.html#a5baa6c391db303eb64ab6a96c2b0fbb8',1,'VisualizationSceneSolution']]],
   ['enlargewindow',['EnlargeWindow',['../aux__vis_8cpp.html#a41042651350dde4d8b3eef444bff5b79',1,'EnlargeWindow():&#160;aux_vis.cpp'],['../aux__vis_8hpp.html#a41042651350dde4d8b3eef444bff5b79',1,'EnlargeWindow():&#160;aux_vis.cpp']]],

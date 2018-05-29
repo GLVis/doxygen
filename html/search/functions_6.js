@@ -6,6 +6,7 @@ var searchData=
   ['getautorefinefactor',['GetAutoRefineFactor',['../classVisualizationSceneSolution.html#a380205d66960ce7c58fcffe4d1f99365',1,'VisualizationSceneSolution::GetAutoRefineFactor()'],['../classVisualizationSceneSolution3d.html#a5e4b58255b212e7ccdc49609f12d7cf8',1,'VisualizationSceneSolution3d::GetAutoRefineFactor()']]],
   ['getautoscale',['GetAutoscale',['../classVisualizationSceneScalarData.html#aa95cb114caf953aeff8a34428ce0b6a1',1,'VisualizationSceneScalarData']]],
   ['getdir',['GetDir',['../classCamera.html#a49a078b41bd7c19d3977ced15b921d46',1,'Camera']]],
+  ['getelementlengthscale',['GetElementLengthScale',['../classVisualizationSceneSolution.html#aaee4b366a5a3869ab2565ad302e7ca57',1,'VisualizationSceneSolution']]],
   ['geteye',['GetEye',['../classCamera.html#a685e8da144611b8addcad23f80ec9c64',1,'Camera']]],
   ['getfacenormals',['GetFaceNormals',['../classVisualizationSceneSolution3d.html#a05ef1a6e20220cddeb0066813e82adda',1,'VisualizationSceneSolution3d']]],
   ['getleft',['GetLeft',['../classCamera.html#ac6569d9901572a1b07109bb89333292a',1,'Camera']]],
