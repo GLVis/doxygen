@@ -1,0 +1,5 @@
+<map id="SdlNativePlatform" name="SdlNativePlatform">
+<area shape="rect" id="node1" title=" " alt="" coords="97,5,263,37"/>
+<area shape="rect" id="node2" href="$classSdlCocoaPlatform.html" title=" " alt="" coords="5,85,173,117"/>
+<area shape="rect" id="node3" href="$classSdlX11Platform.html" title=" " alt="" coords="198,85,346,117"/>
+</map>

@@ -1,7 +1,13 @@
 <map id="VisualizationSceneSolution3d" name="VisualizationSceneSolution3d">
-<area shape="rect" id="node2" href="$classVisualizationSceneScalarData.html" title="VisualizationSceneScalarData" alt="" coords="106,269,368,301"/>
-<area shape="rect" id="node3" href="$classVisualizationScene.html" title="VisualizationScene" alt="" coords="5,128,179,160"/>
-<area shape="rect" id="node4" href="$classCamera.html" title="Camera" alt="" coords="49,16,135,48"/>
-<area shape="rect" id="node5" href="$classPlane.html" title="Plane" alt="" coords="203,128,271,160"/>
-<area shape="rect" id="node6" title="STL class. " alt="" coords="327,128,427,160"/>
+<area shape="rect" id="node1" title=" " alt="" coords="14,655,273,687"/>
+<area shape="rect" id="node2" href="$classVisualizationSceneScalarData.html" title=" " alt="" coords="236,509,499,541"/>
+<area shape="rect" id="node3" href="$classVisualizationScene.html" title=" " alt="" coords="517,265,692,297"/>
+<area shape="rect" id="node4" href="$classSdlWindow.html" title=" " alt="" coords="792,155,905,187"/>
+<area shape="rect" id="node5" href="$structMaterial.html" title=" " alt="" coords="571,155,657,187"/>
+<area shape="rect" id="node6" title=" " alt="" coords="407,5,589,37"/>
+<area shape="rect" id="node7" href="$classCamera.html" title=" " alt="" coords="681,155,768,187"/>
+<area shape="rect" id="node8" href="$classgl3_1_1GlDrawable.html" title=" " alt="" coords="5,265,156,297"/>
+<area shape="rect" id="node9" href="$classPlane.html" title=" " alt="" coords="237,265,305,297"/>
+<area shape="rect" id="node10" title="STL class." alt="" coords="345,265,445,297"/>
+<area shape="rect" id="node11" title=" " alt="" coords="266,145,429,197"/>
 </map>

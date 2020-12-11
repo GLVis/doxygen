@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['openglvis_2ecpp',['openglvis.cpp',['../openglvis_8cpp.html',1,'']]],
-  ['openglvis_2ehpp',['openglvis.hpp',['../openglvis_8hpp.html',1,'']]]
+  ['glvis_2ecpp_1114',['glvis.cpp',['../glvis_8cpp.html',1,'']]]
 ];

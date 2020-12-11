@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['window_5fh',['window_h',['../glvis_8cpp.html#a7b6ea03893fc7fb4126a3a0c2fb0c319',1,'glvis.cpp']]],
-  ['window_5fscale_5ffactor',['window_scale_factor',['../aux__vis_8cpp.html#ac10566a4609a854b37ed5b273007fbde',1,'aux_vis.cpp']]],
-  ['window_5ftitle',['window_title',['../glvis_8cpp.html#a69c1e671e5ad68be30a1d4001d13da16',1,'glvis.cpp']]],
-  ['window_5ftitles',['window_titles',['../glvis_8cpp.html#a423b685594bb26849da50af97a963ef8',1,'glvis.cpp']]],
-  ['window_5fw',['window_w',['../glvis_8cpp.html#a59f74fee0c8a623650109c9fb35d4fae',1,'glvis.cpp']]],
-  ['window_5fx',['window_x',['../glvis_8cpp.html#a9ce11c4941669bb54ef502b68af07ec4',1,'glvis.cpp']]],
-  ['window_5fy',['window_y',['../glvis_8cpp.html#a62627cc91e2bb07cf1033188a9863bfc',1,'glvis.cpp']]]
+  ['unit_5fa_2037',['unit_a',['../classVisualizationSceneScalarData.html#a33d4e164f85c3bb1a143c355d0ffdca9',1,'VisualizationSceneScalarData']]],
+  ['updated_5fbufs_2038',['updated_bufs',['../classVisualizationSceneScalarData.html#a2ae11fe30cd3c1ec7f8c00d34eb223e6',1,'VisualizationSceneScalarData']]],
+  ['use_5fclip_5fplane_2039',['use_clip_plane',['../structgl3_1_1RenderParams.html#a05ba75f8089fa74500cc0089d2f73936',1,'gl3::RenderParams']]],
+  ['use_5flight_2040',['use_light',['../classVisualizationScene.html#a8c68962036241eddbdbc345f42701e87',1,'VisualizationScene']]],
+  ['use_5fsmooth_2041',['use_smooth',['../palettes_8cpp.html#a114ac2abfc9b035d0bd5f62f2a57cb2b',1,'palettes.cpp']]],
+  ['usetexture_2042',['UseTexture',['../aux__vis_8cpp.html#a8ae6215a8144cc6ffba4c463d3cf4f4b',1,'aux_vis.cpp']]]
 ];

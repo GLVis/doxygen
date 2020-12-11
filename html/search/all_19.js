@@ -1,11 +1,6 @@
 var searchData=
 [
-  ['_7ecommunication_5fthread',['~communication_thread',['../classcommunication__thread.html#aab5e88cc429399d7aab793a6aab87b34',1,'communication_thread']]],
-  ['_7eglviscommand',['~GLVisCommand',['../classGLVisCommand.html#afb48ee45eb09df86811b361f8a9e2159',1,'GLVisCommand']]],
-  ['_7evisualizationscene',['~VisualizationScene',['../classVisualizationScene.html#a029246d4dcf5b365e3d9226723398a99',1,'VisualizationScene']]],
-  ['_7evisualizationscenescalardata',['~VisualizationSceneScalarData',['../classVisualizationSceneScalarData.html#a9494feec91ba6f65cc56eeb3ca176db2',1,'VisualizationSceneScalarData']]],
-  ['_7evisualizationscenesolution',['~VisualizationSceneSolution',['../classVisualizationSceneSolution.html#abff7220333df3f17fa9f927786b3e093',1,'VisualizationSceneSolution']]],
-  ['_7evisualizationscenesolution3d',['~VisualizationSceneSolution3d',['../classVisualizationSceneSolution3d.html#a187e6418e06dea6b2c278dc5b6c65e8c',1,'VisualizationSceneSolution3d']]],
-  ['_7evisualizationscenevector',['~VisualizationSceneVector',['../classVisualizationSceneVector.html#ae854f73ec13ae8f1ab552303cf5174a5',1,'VisualizationSceneVector']]],
-  ['_7evisualizationscenevector3d',['~VisualizationSceneVector3d',['../classVisualizationSceneVector3d.html#a69dacc3d6f816d21c7a83ccd56606a3b',1,'VisualizationSceneVector3d']]]
+  ['y_1020',['y',['../classVisualizationScene.html#a99bf11a2dfb8e31a017c257cd515d5f8',1,'VisualizationScene']]],
+  ['yang_1021',['yang',['../aux__vis_8cpp.html#ad0b090310ad5686a38b897ad253e5c27',1,'aux_vis.cpp']]],
+  ['yscale_1022',['yscale',['../classVisualizationScene.html#ac59c227cdfa470b5abb889f8ef9ee642',1,'VisualizationScene']]]
 ];
