@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mousedelegate_2092',['MouseDelegate',['../sdl_8hpp.html#aca2c279bbf7428e29b54f7b3f5ea2c16',1,'sdl.hpp']]]
+  ['keydelegate',['KeyDelegate',['../sdl_8hpp.html#a1d1e0d530f99aac8ea0301bfc54d0354',1,'sdl.hpp']]]
 ];

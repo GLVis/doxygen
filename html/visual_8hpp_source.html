@@ -47,6 +47,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -89,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_9320dffa1e523a45a6137ec829b6f080.html">glvis</a></li><li class="navelem"><a class="el" href="dir_5688a8e33715232800e92a024ed8e721.html">lib</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_ece86b044103c5377c8a0c21adc2d4aa.html">glvis</a></li><li class="navelem"><a class="el" href="dir_0f2e9aca6bf4b67ad8258aca8e407053.html">lib</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -97,19 +98,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">visual.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="visual_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443271. All Rights</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// reserved. See file COPYRIGHT for details.</span></div>
+<a href="visual_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2010-2021, Lawrence Livermore National Security, LLC. Produced</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// at the Lawrence Livermore National Laboratory. All Rights reserved. See files</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// LICENSE and NOTICE for details. LLNL-CODE-443271.</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// This file is part of the GLVis visualization tool and library. For more</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// information and source code availability see http://glvis.org.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// information and source code availability see https://glvis.org.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// GLVis is free software; you can redistribute it and/or modify it under the</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// terms of the GNU Lesser General Public License (as published by the Free</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// Software Foundation) version 2.1 dated February 1999.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// terms of the BSD-3 license. We welcome feedback and contributions, see file</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// CONTRIBUTING.md for details.</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef GLVIS_VISUAL</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define GLVIS_VISUAL</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef GLVIS_VISUAL_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define GLVIS_VISUAL_HPP</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// Visualization header file</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
@@ -122,11 +123,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="vsvector_8hpp.html">vsvector.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="vsvector3d_8hpp.html">vsvector3d.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="threads_8hpp.html">threads.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8hpp.html">gl/types.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="vssolution3d_8hpp_html"><div class="ttname"><a href="vssolution3d_8hpp.html">vssolution3d.hpp</a></div></div>
 <div class="ttc" id="vsdata_8hpp_html"><div class="ttname"><a href="vsdata_8hpp.html">vsdata.hpp</a></div></div>
 <div class="ttc" id="threads_8hpp_html"><div class="ttname"><a href="threads_8hpp.html">threads.hpp</a></div></div>
+<div class="ttc" id="types_8hpp_html"><div class="ttname"><a href="types_8hpp.html">types.hpp</a></div></div>
 <div class="ttc" id="material_8hpp_html"><div class="ttname"><a href="material_8hpp.html">material.hpp</a></div></div>
 <div class="ttc" id="vssolution_8hpp_html"><div class="ttname"><a href="vssolution_8hpp.html">vssolution.hpp</a></div></div>
 <div class="ttc" id="vsvector_8hpp_html"><div class="ttname"><a href="vsvector_8hpp.html">vsvector.hpp</a></div></div>
@@ -136,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 31 2021 15:59:18 for GLVis by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 31 2021 16:18:29 for GLVis by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

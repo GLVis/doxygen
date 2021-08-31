@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['plane_1082',['Plane',['../classPlane.html',1,'']]]
+  ['palettestate',['PaletteState',['../classPaletteState.html',1,'']]],
+  ['plane',['Plane',['../classPlane.html',1,'']]]
 ];

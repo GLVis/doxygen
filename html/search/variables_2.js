@@ -1,15 +1,13 @@
 var searchData=
 [
-  ['c_5fplot_5fcaption',['c_plot_caption',['../glvis_8cpp.html#a017214d1c260b6f9debcdb214b9c7a1e',1,'glvis.cpp']]],
-  ['cam',['cam',['../classVisualizationScene.html#a6ca0b083e9055c80006c8c5b4a3cdeb2',1,'VisualizationScene']]],
-  ['colorbar',['colorbar',['../classVisualizationSceneScalarData.html#a2f351c3969d324cee2c2f3297cf5e242',1,'VisualizationSceneScalarData']]],
-  ['constrained_5fspinning',['constrained_spinning',['../aux__vis_8cpp.html#a1ae5757666296ef3b99ec5ef89defa5b',1,'aux_vis.cpp']]],
-  ['cp_5fdrawelems',['cp_drawelems',['../classVisualizationSceneSolution3d.html#a867cad72c1d92221a7322675a57d74ad',1,'VisualizationSceneSolution3d']]],
-  ['cp_5fdrawmesh',['cp_drawmesh',['../classVisualizationSceneSolution3d.html#a070986843b5717c74bb7463da76c6def',1,'VisualizationSceneSolution3d']]],
-  ['cp_5flist',['cp_list',['../classVisualizationSceneSolution.html#afad0faadc767764d1fda1c9239c3bc23',1,'VisualizationSceneSolution']]],
-  ['cplane',['cplane',['../classVisualizationSceneSolution3d.html#adfc94e1750b1813e3b1794a106c8089d',1,'VisualizationSceneSolution3d']]],
-  ['cplanelineslist',['cplanelineslist',['../classVisualizationSceneSolution3d.html#a3828481911f27cbb9e09c632dc20b7f0',1,'VisualizationSceneSolution3d']]],
-  ['cplanelist',['cplanelist',['../classVisualizationSceneSolution3d.html#ad2d9a1cbf073066aa987e84b033eadf3',1,'VisualizationSceneSolution3d']]],
-  ['current_5fmaterial',['Current_Material',['../material_8cpp.html#a035cf998ebacdfc1e38d281e57b8ec13',1,'material.cpp']]],
-  ['cuttingplane',['CuttingPlane',['../classVisualizationSceneScalarData.html#a032f273829f0833e33388f3fc701c0be',1,'VisualizationSceneScalarData']]]
+  ['background',['background',['../classVisualizationScene.html#a4c859fc8e2a828a9486763e23fc91b00',1,'VisualizationScene']]],
+  ['bdr_5fattr_5fto_5fshow',['bdr_attr_to_show',['../classVisualizationSceneSolution.html#a5598e4c9857707c29554debdbe7286ec',1,'VisualizationSceneSolution::bdr_attr_to_show()'],['../classVisualizationSceneSolution3d.html#ab9114236040a43c55e42f607a9d49160',1,'VisualizationSceneSolution3d::bdr_attr_to_show()']]],
+  ['bdr_5fbuf',['bdr_buf',['../classVisualizationSceneSolution.html#a02e545e048a13485ac801e96e8aee851',1,'VisualizationSceneSolution']]],
+  ['bdr_5fel_5fattr_5fto_5fshow',['bdr_el_attr_to_show',['../classVisualizationSceneSolution.html#a4c526297073319b017171bc2690f3b06',1,'VisualizationSceneSolution']]],
+  ['bdrc',['bdrc',['../classVisualizationSceneScalarData.html#a24adb5d9797e7669e2a9ff5b5a9692e5',1,'VisualizationSceneScalarData']]],
+  ['bear_5fx',['bear_x',['../structGlVisFont_1_1glyph.html#a76ffbf13dffdea53dc928d134f1da1d7',1,'GlVisFont::glyph']]],
+  ['bear_5fy',['bear_y',['../structGlVisFont_1_1glyph.html#adb195c571a8654e87c41575f3a5ca8e1',1,'GlVisFont::glyph']]],
+  ['blinn_5fphong_5ffs',['BLINN_PHONG_FS',['../renderer__core_8cpp.html#a085e9166dde87f23790865d6fbab2753',1,'renderer_core.cpp']]],
+  ['blk_5fmat',['BLK_MAT',['../classVisualizationScene.html#ad4530762ff7a14c0af1ee3a8d55ca7cc',1,'VisualizationScene']]],
+  ['bmask',['bmask',['../aux__vis_8cpp.html#a14b0866344628e753ba7670a11b780b4',1,'aux_vis.cpp']]]
 ];

@@ -47,6 +47,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -89,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_9320dffa1e523a45a6137ec829b6f080.html">glvis</a></li><li class="navelem"><a class="el" href="dir_5688a8e33715232800e92a024ed8e721.html">lib</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_ece86b044103c5377c8a0c21adc2d4aa.html">glvis</a></li><li class="navelem"><a class="el" href="dir_0f2e9aca6bf4b67ad8258aca8e407053.html">lib</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -97,96 +98,109 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">vsvector3d.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="vsvector3d_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443271. All Rights</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// reserved. See file COPYRIGHT for details.</span></div>
+<a href="vsvector3d_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2010-2021, Lawrence Livermore National Security, LLC. Produced</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// at the Lawrence Livermore National Laboratory. All Rights reserved. See files</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// LICENSE and NOTICE for details. LLNL-CODE-443271.</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// This file is part of the GLVis visualization tool and library. For more</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// information and source code availability see http://glvis.org.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// information and source code availability see https://glvis.org.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// GLVis is free software; you can redistribute it and/or modify it under the</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// terms of the GNU Lesser General Public License (as published by the Free</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// Software Foundation) version 2.1 dated February 1999.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// terms of the BSD-3 license. We welcome feedback and contributions, see file</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// CONTRIBUTING.md for details.</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef GLVIS_VSVECTOR_3D</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define GLVIS_VSVECTOR_3D</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef GLVIS_VSVECTOR_3D_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define GLVIS_VSVECTOR_3D_HPP</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;mfem.hpp&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacemfem.html">mfem</a>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector3d.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classVisualizationSceneVector3d.html">VisualizationSceneVector3d</a> : <span class="keyword">public</span> <a class="code" href="classVisualizationSceneSolution3d.html">VisualizationSceneSolution3d</a></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector3d.html#a205a1ea6316ad75732f06768fbc13329">   22</a></span>&#160;   Vector *solx, *soly, *<a class="code" href="classVisualizationSceneVector3d.html#a205a1ea6316ad75732f06768fbc13329">solz</a>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector3d.html#abbc87f7fe62a6718c276751743bb3d45">   23</a></span>&#160;   <span class="keywordtype">int</span> <a class="code" href="classVisualizationSceneVector3d.html#abbc87f7fe62a6718c276751743bb3d45">vectorlist</a>, displinelist, drawvector, scal_func;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector3d.html#a76eb600d2c8cf497f79a9c20f330d0f1">   25</a></span>&#160;   GridFunction *<a class="code" href="classVisualizationSceneVector3d.html#a76eb600d2c8cf497f79a9c20f330d0f1">VecGridF</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector3d.html#aa470aa099210d1e8b50e56ea75e69d84">   26</a></span>&#160;   FiniteElementSpace *<a class="code" href="classVisualizationSceneVector3d.html#aa470aa099210d1e8b50e56ea75e69d84">sfes</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8hpp.html">gl/types.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacemfem.html">mfem</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector3d.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classVisualizationSceneVector3d.html">VisualizationSceneVector3d</a> : <span class="keyword">public</span> <a class="code" href="classVisualizationSceneSolution3d.html">VisualizationSceneSolution3d</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector3d.html#a205a1ea6316ad75732f06768fbc13329">   23</a></span>&#160;   Vector *solx, *soly, *<a class="code" href="classVisualizationSceneVector3d.html#a205a1ea6316ad75732f06768fbc13329">solz</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector3d.html#a52f71538ff00c7360738186c435214bd">   24</a></span>&#160;   <span class="keywordtype">int</span> drawvector, <a class="code" href="classVisualizationSceneVector3d.html#a52f71538ff00c7360738186c435214bd">scal_func</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector3d.html#a667e5711f690e8a425a75c843bf9642f">   25</a></span>&#160;   <a class="code" href="classgl3_1_1GlDrawable.html">gl3::GlDrawable</a> <a class="code" href="classVisualizationSceneVector3d.html#a667e5711f690e8a425a75c843bf9642f">vector_buf</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector3d.html#aa6fb8c019ac8dcfd37cefb8db0e0ba58">   26</a></span>&#160;   <a class="code" href="classgl3_1_1GlDrawable.html">gl3::GlDrawable</a> <a class="code" href="classVisualizationSceneVector3d.html#aa6fb8c019ac8dcfd37cefb8db0e0ba58">displine_buf</a>;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;   <span class="keywordtype">void</span> Init();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector3d.html#a210b9a0bd7d0dc93acbeeca650cf651c">   30</a></span>&#160;   Array&lt;int&gt; <a class="code" href="classVisualizationSceneVector3d.html#a210b9a0bd7d0dc93acbeeca650cf651c">vflevel</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector3d.html#aac24f1b7b26d9cec1419e7623310ef4c">   31</a></span>&#160;   Array&lt;double&gt; <a class="code" href="classVisualizationSceneVector3d.html#aac24f1b7b26d9cec1419e7623310ef4c">dvflevel</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector3d.html#a76eb600d2c8cf497f79a9c20f330d0f1">   28</a></span>&#160;   GridFunction *<a class="code" href="classVisualizationSceneVector3d.html#a76eb600d2c8cf497f79a9c20f330d0f1">VecGridF</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector3d.html#aa470aa099210d1e8b50e56ea75e69d84">   29</a></span>&#160;   FiniteElementSpace *<a class="code" href="classVisualizationSceneVector3d.html#aa470aa099210d1e8b50e56ea75e69d84">sfes</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;   <span class="keywordtype">void</span> Init();</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector3d.html#a688ea55ce633bda9473451d69d2d03f0">   34</a></span>&#160;   <span class="keywordtype">int</span> ianim, ianimd, <a class="code" href="classVisualizationSceneVector3d.html#a688ea55ce633bda9473451d69d2d03f0">ianimmax</a>, drawdisp;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector3d.html#a210b9a0bd7d0dc93acbeeca650cf651c">   33</a></span>&#160;   Array&lt;int&gt; <a class="code" href="classVisualizationSceneVector3d.html#a210b9a0bd7d0dc93acbeeca650cf651c">vflevel</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector3d.html#aac24f1b7b26d9cec1419e7623310ef4c">   34</a></span>&#160;   Array&lt;double&gt; <a class="code" href="classVisualizationSceneVector3d.html#aac24f1b7b26d9cec1419e7623310ef4c">dvflevel</a>;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;   <a class="code" href="classVisualizationSceneVector3d.html">VisualizationSceneVector3d</a>(Mesh &amp; m, Vector &amp; sx, Vector &amp; sy, Vector &amp; sz);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;   <a class="code" href="classVisualizationSceneVector3d.html">VisualizationSceneVector3d</a> (GridFunction &amp;vgf);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector3d.html#a688ea55ce633bda9473451d69d2d03f0">   37</a></span>&#160;   <span class="keywordtype">int</span> <a class="code" href="vsvector_8cpp.html#abf16e4ba3ac7aa4c7c81780d538753ad">ianim</a>, ianimd, <a class="code" href="classVisualizationSceneVector3d.html#a688ea55ce633bda9473451d69d2d03f0">ianimmax</a>, drawdisp;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;   <span class="keywordtype">void</span> NewMeshAndSolution(Mesh *new_m, GridFunction *new_v);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;   <span class="keyword">virtual</span> ~<a class="code" href="classVisualizationSceneVector3d.html">VisualizationSceneVector3d</a>();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;   <span class="keywordtype">void</span> NPressed();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrepareFlat();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> Prepare();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrepareLines();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;   <a class="code" href="classVisualizationSceneVector3d.html">VisualizationSceneVector3d</a>(Mesh &amp; m, Vector &amp; sx, Vector &amp; sy, Vector &amp; sz);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;   <a class="code" href="classVisualizationSceneVector3d.html">VisualizationSceneVector3d</a> (GridFunction &amp;vgf);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;   <span class="keywordtype">void</span> NewMeshAndSolution(Mesh *new_m, GridFunction *new_v);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;   <span class="keyword">virtual</span> ~<a class="code" href="classVisualizationSceneVector3d.html">VisualizationSceneVector3d</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;   <span class="keyword">virtual</span> std::string GetHelpString() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;   <span class="keywordtype">void</span> PrepareFlat2();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;   <span class="keywordtype">void</span> PrepareLines2();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;   <span class="keywordtype">void</span> DrawVector (<span class="keywordtype">int</span> type, <span class="keywordtype">double</span> v0, <span class="keywordtype">double</span> v1, <span class="keywordtype">double</span> v2,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                    <span class="keywordtype">double</span> sx, <span class="keywordtype">double</span> sy, <span class="keywordtype">double</span> sz, <span class="keywordtype">double</span> s);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrepareVectorField();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;   <span class="keywordtype">void</span> PrepareDisplacedMesh();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;   <span class="keywordtype">void</span> ToggleVectorField(<span class="keywordtype">int</span> i);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;   <span class="keywordtype">void</span> SetScalarFunction();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   <span class="keywordtype">void</span> ToggleScalarFunction();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrepareCuttingPlane();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector3d.html#add6de2d40160cfad307695b5d9a04a3b">   62</a></span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneVector3d.html#add6de2d40160cfad307695b5d9a04a3b">ToggleDisplacements</a>() {drawdisp = (drawdisp+1)%2;};</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> Draw();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;   <span class="keywordtype">void</span> NPressed();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrepareFlat();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> Prepare();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrepareLines();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;   <span class="keywordtype">void</span> PrepareFlat2();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;   <span class="keywordtype">void</span> PrepareLines2();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   <span class="keywordtype">void</span> DrawVector (<a class="code" href="classgl3_1_1GlBuilder.html">gl3::GlBuilder</a>&amp; builder,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    <span class="keywordtype">int</span> type, <span class="keywordtype">double</span> v0, <span class="keywordtype">double</span> v1, <span class="keywordtype">double</span> v2,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                    <span class="keywordtype">double</span> sx, <span class="keywordtype">double</span> sy, <span class="keywordtype">double</span> sz, <span class="keywordtype">double</span> s);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrepareVectorField();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   <span class="keywordtype">void</span> PrepareDisplacedMesh();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;   <span class="keywordtype">void</span> ToggleVectorField(<span class="keywordtype">int</span> i);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   <span class="keywordtype">void</span> SetScalarFunction();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   <span class="keywordtype">void</span> ToggleScalarFunction();</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector3d.html#a7ddf08fd592e4510acc131e611d97ec9">   66</a></span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneVector3d.html#a7ddf08fd592e4510acc131e611d97ec9">EventUpdateColors</a>()</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   { Prepare(); PrepareVectorField(); PrepareCuttingPlane(); };</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;   <span class="keywordtype">void</span> ToggleVectorFieldLevel(<span class="keywordtype">int</span> v);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;   <span class="keywordtype">void</span> AddVectorFieldLevel();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;   <span class="keywordtype">void</span> RemoveVectorFieldLevel();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classVisualizationSceneVector3d_html_add6de2d40160cfad307695b5d9a04a3b"><div class="ttname"><a href="classVisualizationSceneVector3d.html#add6de2d40160cfad307695b5d9a04a3b">VisualizationSceneVector3d::ToggleDisplacements</a></div><div class="ttdeci">void ToggleDisplacements()</div><div class="ttdef"><b>Definition:</b> <a href="vsvector3d_8hpp_source.html#l00062">vsvector3d.hpp:62</a></div></div>
-<div class="ttc" id="classVisualizationSceneVector3d_html_abbc87f7fe62a6718c276751743bb3d45"><div class="ttname"><a href="classVisualizationSceneVector3d.html#abbc87f7fe62a6718c276751743bb3d45">VisualizationSceneVector3d::vectorlist</a></div><div class="ttdeci">int vectorlist</div><div class="ttdef"><b>Definition:</b> <a href="vsvector3d_8hpp_source.html#l00023">vsvector3d.hpp:23</a></div></div>
-<div class="ttc" id="classVisualizationSceneVector3d_html_a688ea55ce633bda9473451d69d2d03f0"><div class="ttname"><a href="classVisualizationSceneVector3d.html#a688ea55ce633bda9473451d69d2d03f0">VisualizationSceneVector3d::ianimmax</a></div><div class="ttdeci">int ianimmax</div><div class="ttdef"><b>Definition:</b> <a href="vsvector3d_8hpp_source.html#l00034">vsvector3d.hpp:34</a></div></div>
-<div class="ttc" id="classVisualizationSceneVector3d_html_aac24f1b7b26d9cec1419e7623310ef4c"><div class="ttname"><a href="classVisualizationSceneVector3d.html#aac24f1b7b26d9cec1419e7623310ef4c">VisualizationSceneVector3d::dvflevel</a></div><div class="ttdeci">Array&lt; double &gt; dvflevel</div><div class="ttdef"><b>Definition:</b> <a href="vsvector3d_8hpp_source.html#l00031">vsvector3d.hpp:31</a></div></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrepareCuttingPlane();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector3d.html#add6de2d40160cfad307695b5d9a04a3b">   68</a></span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneVector3d.html#add6de2d40160cfad307695b5d9a04a3b">ToggleDisplacements</a>() {drawdisp = (drawdisp+1)%2;};</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;   <span class="keyword">virtual</span> <a class="code" href="structgl3_1_1SceneInfo.html">gl3::SceneInfo</a> GetSceneObjs();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classVisualizationSceneVector3d.html#a7ddf08fd592e4510acc131e611d97ec9">   72</a></span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVisualizationSceneVector3d.html#a7ddf08fd592e4510acc131e611d97ec9">EventUpdateColors</a>()</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;   { Prepare(); PrepareVectorField(); PrepareCuttingPlane(); };</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;   <span class="keywordtype">void</span> ToggleVectorFieldLevel(<span class="keywordtype">int</span> v);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;   <span class="keywordtype">void</span> AddVectorFieldLevel();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;   <span class="keywordtype">void</span> RemoveVectorFieldLevel();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classVisualizationSceneVector3d_html_add6de2d40160cfad307695b5d9a04a3b"><div class="ttname"><a href="classVisualizationSceneVector3d.html#add6de2d40160cfad307695b5d9a04a3b">VisualizationSceneVector3d::ToggleDisplacements</a></div><div class="ttdeci">void ToggleDisplacements()</div><div class="ttdef"><b>Definition:</b> <a href="vsvector3d_8hpp_source.html#l00068">vsvector3d.hpp:68</a></div></div>
+<div class="ttc" id="structgl3_1_1SceneInfo_html"><div class="ttname"><a href="structgl3_1_1SceneInfo.html">gl3::SceneInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="renderer_8hpp_source.html#l00060">renderer.hpp:60</a></div></div>
+<div class="ttc" id="classVisualizationSceneVector3d_html_a688ea55ce633bda9473451d69d2d03f0"><div class="ttname"><a href="classVisualizationSceneVector3d.html#a688ea55ce633bda9473451d69d2d03f0">VisualizationSceneVector3d::ianimmax</a></div><div class="ttdeci">int ianimmax</div><div class="ttdef"><b>Definition:</b> <a href="vsvector3d_8hpp_source.html#l00037">vsvector3d.hpp:37</a></div></div>
+<div class="ttc" id="classVisualizationSceneVector3d_html_aac24f1b7b26d9cec1419e7623310ef4c"><div class="ttname"><a href="classVisualizationSceneVector3d.html#aac24f1b7b26d9cec1419e7623310ef4c">VisualizationSceneVector3d::dvflevel</a></div><div class="ttdeci">Array&lt; double &gt; dvflevel</div><div class="ttdef"><b>Definition:</b> <a href="vsvector3d_8hpp_source.html#l00034">vsvector3d.hpp:34</a></div></div>
+<div class="ttc" id="classVisualizationSceneVector3d_html_a52f71538ff00c7360738186c435214bd"><div class="ttname"><a href="classVisualizationSceneVector3d.html#a52f71538ff00c7360738186c435214bd">VisualizationSceneVector3d::scal_func</a></div><div class="ttdeci">int scal_func</div><div class="ttdef"><b>Definition:</b> <a href="vsvector3d_8hpp_source.html#l00024">vsvector3d.hpp:24</a></div></div>
+<div class="ttc" id="vsvector_8cpp_html_abf16e4ba3ac7aa4c7c81780d538753ad"><div class="ttname"><a href="vsvector_8cpp.html#abf16e4ba3ac7aa4c7c81780d538753ad">ianim</a></div><div class="ttdeci">thread_local int ianim</div><div class="ttdef"><b>Definition:</b> <a href="vsvector_8cpp_source.html#l00107">vsvector.cpp:107</a></div></div>
+<div class="ttc" id="types_8hpp_html"><div class="ttname"><a href="types_8hpp.html">types.hpp</a></div></div>
 <div class="ttc" id="namespacemfem_html"><div class="ttname"><a href="namespacemfem.html">mfem</a></div></div>
-<div class="ttc" id="classVisualizationSceneVector3d_html_aa470aa099210d1e8b50e56ea75e69d84"><div class="ttname"><a href="classVisualizationSceneVector3d.html#aa470aa099210d1e8b50e56ea75e69d84">VisualizationSceneVector3d::sfes</a></div><div class="ttdeci">FiniteElementSpace * sfes</div><div class="ttdef"><b>Definition:</b> <a href="vsvector3d_8hpp_source.html#l00026">vsvector3d.hpp:26</a></div></div>
-<div class="ttc" id="classVisualizationSceneVector3d_html_a210b9a0bd7d0dc93acbeeca650cf651c"><div class="ttname"><a href="classVisualizationSceneVector3d.html#a210b9a0bd7d0dc93acbeeca650cf651c">VisualizationSceneVector3d::vflevel</a></div><div class="ttdeci">Array&lt; int &gt; vflevel</div><div class="ttdef"><b>Definition:</b> <a href="vsvector3d_8hpp_source.html#l00030">vsvector3d.hpp:30</a></div></div>
-<div class="ttc" id="classVisualizationSceneVector3d_html"><div class="ttname"><a href="classVisualizationSceneVector3d.html">VisualizationSceneVector3d</a></div><div class="ttdef"><b>Definition:</b> <a href="vsvector3d_8hpp_source.html#l00018">vsvector3d.hpp:18</a></div></div>
-<div class="ttc" id="classVisualizationSceneVector3d_html_a205a1ea6316ad75732f06768fbc13329"><div class="ttname"><a href="classVisualizationSceneVector3d.html#a205a1ea6316ad75732f06768fbc13329">VisualizationSceneVector3d::solz</a></div><div class="ttdeci">Vector * solz</div><div class="ttdef"><b>Definition:</b> <a href="vsvector3d_8hpp_source.html#l00022">vsvector3d.hpp:22</a></div></div>
-<div class="ttc" id="classVisualizationSceneVector3d_html_a7ddf08fd592e4510acc131e611d97ec9"><div class="ttname"><a href="classVisualizationSceneVector3d.html#a7ddf08fd592e4510acc131e611d97ec9">VisualizationSceneVector3d::EventUpdateColors</a></div><div class="ttdeci">virtual void EventUpdateColors()</div><div class="ttdef"><b>Definition:</b> <a href="vsvector3d_8hpp_source.html#l00066">vsvector3d.hpp:66</a></div></div>
-<div class="ttc" id="classVisualizationSceneSolution3d_html"><div class="ttname"><a href="classVisualizationSceneSolution3d.html">VisualizationSceneSolution3d</a></div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00018">vssolution3d.hpp:18</a></div></div>
-<div class="ttc" id="classVisualizationSceneVector3d_html_a76eb600d2c8cf497f79a9c20f330d0f1"><div class="ttname"><a href="classVisualizationSceneVector3d.html#a76eb600d2c8cf497f79a9c20f330d0f1">VisualizationSceneVector3d::VecGridF</a></div><div class="ttdeci">GridFunction * VecGridF</div><div class="ttdef"><b>Definition:</b> <a href="vsvector3d_8hpp_source.html#l00025">vsvector3d.hpp:25</a></div></div>
+<div class="ttc" id="classVisualizationSceneVector3d_html_a667e5711f690e8a425a75c843bf9642f"><div class="ttname"><a href="classVisualizationSceneVector3d.html#a667e5711f690e8a425a75c843bf9642f">VisualizationSceneVector3d::vector_buf</a></div><div class="ttdeci">gl3::GlDrawable vector_buf</div><div class="ttdef"><b>Definition:</b> <a href="vsvector3d_8hpp_source.html#l00025">vsvector3d.hpp:25</a></div></div>
+<div class="ttc" id="classVisualizationSceneVector3d_html_aa470aa099210d1e8b50e56ea75e69d84"><div class="ttname"><a href="classVisualizationSceneVector3d.html#aa470aa099210d1e8b50e56ea75e69d84">VisualizationSceneVector3d::sfes</a></div><div class="ttdeci">FiniteElementSpace * sfes</div><div class="ttdef"><b>Definition:</b> <a href="vsvector3d_8hpp_source.html#l00029">vsvector3d.hpp:29</a></div></div>
+<div class="ttc" id="classVisualizationSceneVector3d_html_aa6fb8c019ac8dcfd37cefb8db0e0ba58"><div class="ttname"><a href="classVisualizationSceneVector3d.html#aa6fb8c019ac8dcfd37cefb8db0e0ba58">VisualizationSceneVector3d::displine_buf</a></div><div class="ttdeci">gl3::GlDrawable displine_buf</div><div class="ttdef"><b>Definition:</b> <a href="vsvector3d_8hpp_source.html#l00026">vsvector3d.hpp:26</a></div></div>
+<div class="ttc" id="classgl3_1_1GlDrawable_html"><div class="ttname"><a href="classgl3_1_1GlDrawable.html">gl3::GlDrawable</a></div><div class="ttdef"><b>Definition:</b> <a href="types_8hpp_source.html#l00592">types.hpp:592</a></div></div>
+<div class="ttc" id="classVisualizationSceneVector3d_html_a210b9a0bd7d0dc93acbeeca650cf651c"><div class="ttname"><a href="classVisualizationSceneVector3d.html#a210b9a0bd7d0dc93acbeeca650cf651c">VisualizationSceneVector3d::vflevel</a></div><div class="ttdeci">Array&lt; int &gt; vflevel</div><div class="ttdef"><b>Definition:</b> <a href="vsvector3d_8hpp_source.html#l00033">vsvector3d.hpp:33</a></div></div>
+<div class="ttc" id="classVisualizationSceneVector3d_html"><div class="ttname"><a href="classVisualizationSceneVector3d.html">VisualizationSceneVector3d</a></div><div class="ttdef"><b>Definition:</b> <a href="vsvector3d_8hpp_source.html#l00019">vsvector3d.hpp:19</a></div></div>
+<div class="ttc" id="classgl3_1_1GlBuilder_html"><div class="ttname"><a href="classgl3_1_1GlBuilder.html">gl3::GlBuilder</a></div><div class="ttdoc">Crude fixed-function OpenGL emulation helper. </div><div class="ttdef"><b>Definition:</b> <a href="types_8hpp_source.html#l00259">types.hpp:259</a></div></div>
+<div class="ttc" id="classVisualizationSceneVector3d_html_a205a1ea6316ad75732f06768fbc13329"><div class="ttname"><a href="classVisualizationSceneVector3d.html#a205a1ea6316ad75732f06768fbc13329">VisualizationSceneVector3d::solz</a></div><div class="ttdeci">Vector * solz</div><div class="ttdef"><b>Definition:</b> <a href="vsvector3d_8hpp_source.html#l00023">vsvector3d.hpp:23</a></div></div>
+<div class="ttc" id="classVisualizationSceneVector3d_html_a7ddf08fd592e4510acc131e611d97ec9"><div class="ttname"><a href="classVisualizationSceneVector3d.html#a7ddf08fd592e4510acc131e611d97ec9">VisualizationSceneVector3d::EventUpdateColors</a></div><div class="ttdeci">virtual void EventUpdateColors()</div><div class="ttdef"><b>Definition:</b> <a href="vsvector3d_8hpp_source.html#l00072">vsvector3d.hpp:72</a></div></div>
+<div class="ttc" id="classVisualizationSceneSolution3d_html"><div class="ttname"><a href="classVisualizationSceneSolution3d.html">VisualizationSceneSolution3d</a></div><div class="ttdef"><b>Definition:</b> <a href="vssolution3d_8hpp_source.html#l00020">vssolution3d.hpp:20</a></div></div>
+<div class="ttc" id="classVisualizationSceneVector3d_html_a76eb600d2c8cf497f79a9c20f330d0f1"><div class="ttname"><a href="classVisualizationSceneVector3d.html#a76eb600d2c8cf497f79a9c20f330d0f1">VisualizationSceneVector3d::VecGridF</a></div><div class="ttdeci">GridFunction * VecGridF</div><div class="ttdef"><b>Definition:</b> <a href="vsvector3d_8hpp_source.html#l00028">vsvector3d.hpp:28</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 31 2021 15:59:19 for GLVis by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 31 2021 16:18:29 for GLVis by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

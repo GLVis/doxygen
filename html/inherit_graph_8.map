@@ -1,7 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structgl3_1_1AttrNone.html" title=" " alt="" coords="5,130,132,162"/>
-<area shape="rect" id="node2" href="$structgl3_1_1AttrColor.html" title=" " alt="" coords="188,5,359,57"/>
-<area shape="rect" id="node3" href="$structgl3_1_1AttrCoord.html" title=" " alt="" coords="185,81,361,133"/>
-<area shape="rect" id="node4" href="$structgl3_1_1AttrNormal.html" title=" " alt="" coords="180,157,367,209"/>
-<area shape="rect" id="node5" href="$structgl3_1_1AttrTexcoord.html" title=" " alt="" coords="189,233,357,285"/>
+<area shape="rect" id="node1" href="$structgl3_1_1AttrNone.html" title="gl3::AttrNone" alt="" coords="6,129,154,161"/>
+<area shape="rect" id="node2" href="$structgl3_1_1AttrColor.html" title="gl3::AttrColor\&lt; TV,\l typename \&gt;" alt="" coords="213,5,414,57"/>
+<area shape="rect" id="node3" href="$structgl3_1_1AttrCoord.html" title="gl3::AttrCoord\&lt; TV,\l typename \&gt;" alt="" coords="209,81,417,133"/>
+<area shape="rect" id="node4" href="$structgl3_1_1AttrNormal.html" title="gl3::AttrNormal\&lt; TV,\l typename \&gt;" alt="" coords="203,157,424,209"/>
+<area shape="rect" id="node5" href="$structgl3_1_1AttrTexcoord.html" title="gl3::AttrTexcoord\&lt;\l TV, typename \&gt;" alt="" coords="213,233,413,285"/>
 </map>

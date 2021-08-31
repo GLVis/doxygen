@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['palettes_2ehpp',['palettes.hpp',['../palettes_8hpp.html',1,'']]]
+  ['logo_2ehpp',['logo.hpp',['../logo_8hpp.html',1,'']]]
 ];

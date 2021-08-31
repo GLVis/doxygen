@@ -1,6 +1,27 @@
 var searchData=
 [
-  ['x',['x',['../classVisualizationScene.html#a70b0eb870996adb9fa9dc8248703ee33',1,'VisualizationScene']]],
-  ['xang',['xang',['../aux__vis_8cpp.html#a100fe41709b3d02edcbf380dd8a4681e',1,'aux_vis.cpp']]],
-  ['xscale',['xscale',['../classVisualizationScene.html#aa00ff6e89df9270c39c693a216b5dbae',1,'VisualizationScene']]]
+  ['v_5fnormals',['v_normals',['../classVisualizationSceneSolution.html#a7bbe2ca3880fa153baa112837571c645',1,'VisualizationSceneSolution']]],
+  ['v_5fnums_5fbuf',['v_nums_buf',['../classVisualizationSceneSolution.html#a12deb88d45ee2675e12eca307ad201a0',1,'VisualizationSceneSolution']]],
+  ['vc0',['vc0',['../classVisualizationSceneVector.html#a8cfc86b058e8a5570d5bc32bfdf47104',1,'VisualizationSceneVector']]],
+  ['vec2scalar',['Vec2Scalar',['../classVisualizationSceneVector.html#ac9148297171993959db68c656bcad758',1,'VisualizationSceneVector']]],
+  ['vec2scalarfunctions',['Vec2ScalarFunctions',['../vsvector_8cpp.html#af2859b0fd878cf0b8113316123e77cdd',1,'vsvector.cpp']]],
+  ['vec2scalarnames',['Vec2ScalarNames',['../vsvector_8cpp.html#a49746bf137ad49311fa25b59be15c9b0',1,'vsvector.cpp']]],
+  ['vec_5fsol_5ffile',['vec_sol_file',['../glvis_8cpp.html#ac387a369a88bb9144c36e08ea4981a46',1,'glvis.cpp']]],
+  ['vecgridf',['VecGridF',['../classVisualizationSceneVector.html#a990eee26b916b4f32d754cb85cbd4f4d',1,'VisualizationSceneVector::VecGridF()'],['../classVisualizationSceneVector3d.html#a76eb600d2c8cf497f79a9c20f330d0f1',1,'VisualizationSceneVector3d::VecGridF()']]],
+  ['vector_5fbuf',['vector_buf',['../classVisualizationSceneVector.html#a3c0575e75aef8c29df9f4318d381a311',1,'VisualizationSceneVector::vector_buf()'],['../classVisualizationSceneVector3d.html#a667e5711f690e8a425a75c843bf9642f',1,'VisualizationSceneVector3d::vector_buf()']]],
+  ['vflevel',['vflevel',['../classVisualizationSceneVector3d.html#a210b9a0bd7d0dc93acbeeca650cf651c',1,'VisualizationSceneVector3d']]],
+  ['view',['view',['../classVisualizationScene.html#a0ecab8c27d3715c6eac3663670fa85cc',1,'VisualizationScene']]],
+  ['viewangle',['ViewAngle',['../classVisualizationScene.html#a225b14fc68e5c353f5b184092cd505c3',1,'VisualizationScene']]],
+  ['viewcenterx',['ViewCenterX',['../classVisualizationScene.html#a6dd849cc503967f63c871bfe7e7aefa1',1,'VisualizationScene']]],
+  ['viewcentery',['ViewCenterY',['../classVisualizationScene.html#a777f84671db75531c4f7ceda0653dc28',1,'VisualizationScene']]],
+  ['viewscale',['ViewScale',['../classVisualizationScene.html#a95b0195ea9bf1ea5583068f76a36e804',1,'VisualizationScene']]],
+  ['visualize',['visualize',['../aux__vis_8cpp.html#a51d3e8ffe83e4fb82e8ed8d23d88a367',1,'aux_vis.cpp']]],
+  ['vp_5fheight',['vp_height',['../classgl3_1_1GLDevice.html#a80b11c74b0ee0c0cae01bc1e342cc0c1',1,'gl3::GLDevice']]],
+  ['vp_5fwidth',['vp_width',['../classgl3_1_1GLDevice.html#af754644f4814e87169f1ca44b01c9ada',1,'gl3::GLDevice']]],
+  ['vs',['vs',['../glvis_8cpp.html#a768ba3b0a09d96ae03a12d1303dd4777',1,'glvis.cpp']]],
+  ['vsdata',['vsdata',['../vsdata_8cpp.html#a24102f3cf2c3a44bfbebfa7ed75aa0f8',1,'vsdata.cpp']]],
+  ['vssol',['vssol',['../vssolution_8cpp.html#a4f60178738985049d87ab1579a54e08a',1,'vssol():&#160;vssolution.cpp'],['../vsvector_8cpp.html#a4f60178738985049d87ab1579a54e08a',1,'vssol():&#160;vssolution.cpp']]],
+  ['vssol3d',['vssol3d',['../vssolution3d_8cpp.html#adf0fb216f2fd8c082ca125461f7bfc64',1,'vssolution3d.cpp']]],
+  ['vsvector',['vsvector',['../vsvector_8cpp.html#aaa3a9bfeef4425133191839a71862bd2',1,'vsvector.cpp']]],
+  ['vsvector3d',['vsvector3d',['../vsvector3d_8cpp.html#aef3ed6b949166aeb6af63e511905d122',1,'vsvector3d.cpp']]]
 ];

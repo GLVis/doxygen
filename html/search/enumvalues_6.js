@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['no_5fdevice_2116',['NO_DEVICE',['../classgl3_1_1GLDevice.html#a7045e27c772ce37942c3c3dcc69353b5a185e470d3b334ce3bfc791053af0174b',1,'gl3::GLDevice']]],
-  ['num_5fattrs_2117',['NUM_ATTRS',['../classgl3_1_1CoreGLDevice.html#a76563438f9953e1fe9ae24dcfd654e24abe096d8b20bc326167f136cf10bc7220',1,'gl3::CoreGLDevice']]],
-  ['num_5flayouts_2118',['NUM_LAYOUTS',['../namespacegl3.html#af95eb1ad85f8c4b3accc12e1fbc04be2a5f35f93b604e5c1bd8b5af23845ba380',1,'gl3']]]
+  ['layout_5fvtx',['LAYOUT_VTX',['../namespacegl3.html#af95eb1ad85f8c4b3accc12e1fbc04be2a828773ead2d3cbd26057ac24c3edb948',1,'gl3']]],
+  ['layout_5fvtx_5fcolor',['LAYOUT_VTX_COLOR',['../namespacegl3.html#af95eb1ad85f8c4b3accc12e1fbc04be2aa5aac70f114e3d11262faca1952f9f33',1,'gl3']]],
+  ['layout_5fvtx_5fnormal',['LAYOUT_VTX_NORMAL',['../namespacegl3.html#af95eb1ad85f8c4b3accc12e1fbc04be2a46e4a4dd1428234a59e22b719b8d50c4',1,'gl3']]],
+  ['layout_5fvtx_5fnormal_5fcolor',['LAYOUT_VTX_NORMAL_COLOR',['../namespacegl3.html#af95eb1ad85f8c4b3accc12e1fbc04be2a593a29db4265f02dabbc04b885b89371',1,'gl3']]],
+  ['layout_5fvtx_5fnormal_5ftexture0',['LAYOUT_VTX_NORMAL_TEXTURE0',['../namespacegl3.html#af95eb1ad85f8c4b3accc12e1fbc04be2a3bc7f81955fad680a0e16466557f5118',1,'gl3']]],
+  ['layout_5fvtx_5ftexture0',['LAYOUT_VTX_TEXTURE0',['../namespacegl3.html#af95eb1ad85f8c4b3accc12e1fbc04be2a719cfb1d584cb74a6328d2a05dd8b8c5',1,'gl3']]]
 ];

@@ -1,8 +1,12 @@
 <map id="VisualizationSceneVector" name="VisualizationSceneVector">
-<area shape="rect" id="node2" href="$classVisualizationSceneSolution.html" title="VisualizationSceneSolution" alt="" coords="128,352,405,384"/>
-<area shape="rect" id="node3" href="$classVisualizationSceneScalarData.html" title="VisualizationSceneScalarData" alt="" coords="114,269,419,301"/>
-<area shape="rect" id="node4" href="$classVisualizationScene.html" title="VisualizationScene" alt="" coords="5,128,205,160"/>
-<area shape="rect" id="node5" href="$classCamera.html" title="Camera" alt="" coords="56,16,155,48"/>
-<area shape="rect" id="node6" href="$classPlane.html" title="Plane" alt="" coords="229,128,304,160"/>
-<area shape="rect" id="node7" title="STL class. " alt="" coords="365,128,483,160"/>
+<area shape="rect" id="node2" href="$classVisualizationSceneSolution.html" title="VisualizationSceneSolution" alt="" coords="1587,336,1864,368"/>
+<area shape="rect" id="node3" href="$classVisualizationSceneScalarData.html" title="VisualizationSceneScalarData" alt="" coords="1110,96,1415,128"/>
+<area shape="rect" id="node4" href="$classVisualizationScene.html" title="VisualizationScene" alt="" coords="699,176,899,208"/>
+<area shape="rect" id="node5" href="$classSdlWindow.html" title="SdlWindow" alt="" coords="398,85,525,117"/>
+<area shape="rect" id="node6" href="$structMaterial.html" title="Material" alt="" coords="412,141,511,173"/>
+<area shape="rect" id="node8" href="$classPaletteState.html" title="PaletteState" alt="" coords="393,265,530,297"/>
+<area shape="rect" id="node9" href="$classCamera.html" title="Camera" alt="" coords="412,321,511,353"/>
+<area shape="rect" id="node10" href="$classgl3_1_1GlDrawable.html" title="gl3::GlDrawable" alt="" coords="711,336,886,368"/>
+<area shape="rect" id="node11" href="$classPlane.html" title="Plane" alt="" coords="761,5,836,37"/>
+<area shape="rect" id="node12" title="STL class. " alt="" coords="740,79,857,111"/>
 </map>

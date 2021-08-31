@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['glvis_2ecpp',['glvis.cpp',['../glvis_8cpp.html',1,'']]]
+  ['contributing_2emd',['CONTRIBUTING.md',['../CONTRIBUTING_8md.html',1,'']]]
 ];

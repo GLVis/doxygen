@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structgl3_1_1GlMatrix.html" title=" " alt="" coords="5,5,131,37"/>
+<area shape="rect" id="node1" href="$classgl3_1_1IVertexBuffer.html" title="gl3::IVertexBuffer" alt="" coords="5,61,195,93"/>
+<area shape="rect" id="node2" href="$classgl3_1_1IIndexedBuffer.html" title="gl3::IIndexedBuffer" alt="" coords="261,5,464,37"/>
+<area shape="rect" id="node4" href="$classgl3_1_1TextBuffer.html" title="gl3::TextBuffer" alt="" coords="283,61,443,93"/>
+<area shape="rect" id="node5" href="$classgl3_1_1VertexBuffer.html" title="gl3::VertexBuffer\&lt; T \&gt;" alt="" coords="243,117,482,149"/>
+<area shape="rect" id="node3" href="$classgl3_1_1IndexedVertexBuffer.html" title="gl3::IndexedVertexBuffer\&lt; T \&gt;" alt="" coords="531,5,845,37"/>
 </map>

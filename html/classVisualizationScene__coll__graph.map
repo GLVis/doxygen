@@ -1,3 +1,6 @@
 <map id="VisualizationScene" name="VisualizationScene">
-<area shape="rect" id="node2" href="$classCamera.html" title="Camera" alt="" coords="56,5,155,37"/>
+<area shape="rect" id="node2" href="$classSdlWindow.html" title="SdlWindow" alt="" coords="5,147,131,179"/>
+<area shape="rect" id="node3" href="$structMaterial.html" title="Material" alt="" coords="156,147,255,179"/>
+<area shape="rect" id="node5" href="$classPaletteState.html" title="PaletteState" alt="" coords="413,147,549,179"/>
+<area shape="rect" id="node6" href="$classCamera.html" title="Camera" alt="" coords="575,147,673,179"/>
 </map>

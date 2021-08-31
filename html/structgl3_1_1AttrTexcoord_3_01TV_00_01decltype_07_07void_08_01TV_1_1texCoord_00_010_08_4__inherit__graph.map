@@ -1,4 +1,3 @@
 <map id="gl3::AttrTexcoord&lt; TV, decltype((void) TV::texCoord, 0)&gt;" name="gl3::AttrTexcoord&lt; TV, decltype((void) TV::texCoord, 0)&gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="405,15,583,87"/>
-<area shape="rect" id="node2" href="$structgl3_1_1AttrBase.html" title=" " alt="" coords="5,5,357,97"/>
+<area shape="rect" id="node2" href="$structgl3_1_1AttrBase.html" title="gl3::AttrBase\&lt; TV,\l decltype(TV::texCoord)\l,&amp;TV::texCoord, AttrTexcoord\l\&lt; TV, decltype((void) TV::\ltexCoord, 0)\&gt; \&gt;" alt="" coords="5,5,304,117"/>
 </map>

@@ -47,6 +47,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -89,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_9320dffa1e523a45a6137ec829b6f080.html">glvis</a></li><li class="navelem"><a class="el" href="dir_5688a8e33715232800e92a024ed8e721.html">lib</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_ece86b044103c5377c8a0c21adc2d4aa.html">glvis</a></li><li class="navelem"><a class="el" href="dir_0f2e9aca6bf4b67ad8258aca8e407053.html">lib</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -97,63 +98,50 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">material.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="material_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2010, Lawrence Livermore National Security, LLC. Produced at</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// the Lawrence Livermore National Laboratory. LLNL-CODE-443271. All Rights</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// reserved. See file COPYRIGHT for details.</span></div>
+<a href="material_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2010-2021, Lawrence Livermore National Security, LLC. Produced</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// at the Lawrence Livermore National Laboratory. All Rights reserved. See files</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// LICENSE and NOTICE for details. LLNL-CODE-443271.</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// This file is part of the GLVis visualization tool and library. For more</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// information and source code availability see http://glvis.org.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// information and source code availability see https://glvis.org.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// GLVis is free software; you can redistribute it and/or modify it under the</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// terms of the GNU Lesser General Public License (as published by the Free</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// Software Foundation) version 2.1 dated February 1999.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// terms of the BSD-3 license. We welcome feedback and contributions, see file</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// CONTRIBUTING.md for details.</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="material_8hpp.html#a724c876e4780d698e7e9ed353709bd79">Set_Material</a>();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="material_8hpp.html#a57a9b2584097b2eb71a3f1b997b7a6f8">Set_Light</a>();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef GLVIS_MATERIAL_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define GLVIS_MATERIAL_HPP</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="material_8hpp.html#ad23e20147dcc280b7316c85cf0aebadf">Next_Material_And_Light</a>();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="material_8hpp.html#a5e58d6ad4c1f1c3002a3c654037ab23a">Set_Material_And_Light</a>(<span class="keywordtype">int</span>,<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="material_8hpp.html#a2987eff3b35b8ef824bad012fc2e8c6f">Set_Black_Material</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="material_8hpp.html#a210ac1c393ab50ceba066ebc89fe810f">Set_Background</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structMaterial.html">   16</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structMaterial.html">Material</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structMaterial.html#a5f1506ac5eeef6d51654ba35eb1fab15">   18</a></span>&#160;   std::array&lt;float, 4&gt; <a class="code" href="structMaterial.html#a5f1506ac5eeef6d51654ba35eb1fab15">ambient</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structMaterial.html#a1922c30245de2a59462ee5c98f07da78">   19</a></span>&#160;   std::array&lt;float, 4&gt; <a class="code" href="structMaterial.html#a1922c30245de2a59462ee5c98f07da78">diffuse</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structMaterial.html#a8b9fce03d221ef85f4abfc548f62bd77">   20</a></span>&#160;   std::array&lt;float, 4&gt; <a class="code" href="structMaterial.html#a8b9fce03d221ef85f4abfc548f62bd77">specular</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structMaterial.html#a9dc184c883ec135ace28c1917af3fe84">   21</a></span>&#160;   <span class="keywordtype">float</span> <a class="code" href="structMaterial.html#a9dc184c883ec135ace28c1917af3fe84">shininess</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="material_8hpp.html#a2db78682d9322aabcbffb424955676b1">Toggle_Background</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="material_8hpp.html#ae7c1300f17d54bb5f366dd5d611eafa2">Set_Transparency</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="material_8hpp.html#ac9a97dbc9f7c0d51197406cdd0488028">Remove_Transparency</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span>  <a class="code" href="material_8hpp.html#a7a03c37506e56c06af597ab6f4ed9714">Get_AntiAliasing</a>();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="material_8hpp.html#acf281556f5f0ae4fc9d65e86d85a7bf2">Set_AntiAliasing</a>();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="material_8hpp.html#ac665ab71499ab2d0aef94b1c4e793877">Remove_AntiAliasing</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">double</span> <a class="code" href="material_8hpp.html#adf2937a5059e74bb3d1adfc7de36b318">Get_LineWidth</a>();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="material_8hpp.html#a257e79d9a523ccf7de255547ab873f55">Set_LineWidth</a>(<span class="keywordtype">double</span>);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">double</span> <a class="code" href="material_8hpp.html#a806e9ab73a88f2e2ade8bb0ca7bcb6ec">Get_MS_LineWidth</a>();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="material_8hpp.html#a3111bf1d2023c0afbf8c4134cd9431e0">Set_MS_LineWidth</a>(<span class="keywordtype">double</span>);</div>
-<div class="ttc" id="material_8hpp_html_ac9a97dbc9f7c0d51197406cdd0488028"><div class="ttname"><a href="material_8hpp.html#ac9a97dbc9f7c0d51197406cdd0488028">Remove_Transparency</a></div><div class="ttdeci">void Remove_Transparency()</div><div class="ttdef"><b>Definition:</b> <a href="material_8cpp_source.html#l00360">material.cpp:360</a></div></div>
-<div class="ttc" id="material_8hpp_html_ac665ab71499ab2d0aef94b1c4e793877"><div class="ttname"><a href="material_8hpp.html#ac665ab71499ab2d0aef94b1c4e793877">Remove_AntiAliasing</a></div><div class="ttdeci">void Remove_AntiAliasing()</div><div class="ttdef"><b>Definition:</b> <a href="material_8cpp_source.html#l00442">material.cpp:442</a></div></div>
-<div class="ttc" id="material_8hpp_html_a2db78682d9322aabcbffb424955676b1"><div class="ttname"><a href="material_8hpp.html#a2db78682d9322aabcbffb424955676b1">Toggle_Background</a></div><div class="ttdeci">void Toggle_Background()</div><div class="ttdef"><b>Definition:</b> <a href="material_8cpp_source.html#l00344">material.cpp:344</a></div></div>
-<div class="ttc" id="material_8hpp_html_ad23e20147dcc280b7316c85cf0aebadf"><div class="ttname"><a href="material_8hpp.html#ad23e20147dcc280b7316c85cf0aebadf">Next_Material_And_Light</a></div><div class="ttdeci">int Next_Material_And_Light()</div><div class="ttdef"><b>Definition:</b> <a href="material_8cpp_source.html#l00272">material.cpp:272</a></div></div>
-<div class="ttc" id="material_8hpp_html_a806e9ab73a88f2e2ade8bb0ca7bcb6ec"><div class="ttname"><a href="material_8hpp.html#a806e9ab73a88f2e2ade8bb0ca7bcb6ec">Get_MS_LineWidth</a></div><div class="ttdeci">double Get_MS_LineWidth()</div><div class="ttdef"><b>Definition:</b> <a href="material_8cpp_source.html#l00489">material.cpp:489</a></div></div>
-<div class="ttc" id="material_8hpp_html_adf2937a5059e74bb3d1adfc7de36b318"><div class="ttname"><a href="material_8hpp.html#adf2937a5059e74bb3d1adfc7de36b318">Get_LineWidth</a></div><div class="ttdeci">double Get_LineWidth()</div><div class="ttdef"><b>Definition:</b> <a href="material_8cpp_source.html#l00472">material.cpp:472</a></div></div>
-<div class="ttc" id="material_8hpp_html_a2987eff3b35b8ef824bad012fc2e8c6f"><div class="ttname"><a href="material_8hpp.html#a2987eff3b35b8ef824bad012fc2e8c6f">Set_Black_Material</a></div><div class="ttdeci">void Set_Black_Material()</div><div class="ttdef"><b>Definition:</b> <a href="material_8cpp_source.html#l00291">material.cpp:291</a></div></div>
-<div class="ttc" id="material_8hpp_html_a257e79d9a523ccf7de255547ab873f55"><div class="ttname"><a href="material_8hpp.html#a257e79d9a523ccf7de255547ab873f55">Set_LineWidth</a></div><div class="ttdeci">void Set_LineWidth(double)</div><div class="ttdef"><b>Definition:</b> <a href="material_8cpp_source.html#l00477">material.cpp:477</a></div></div>
-<div class="ttc" id="material_8hpp_html_a3111bf1d2023c0afbf8c4134cd9431e0"><div class="ttname"><a href="material_8hpp.html#a3111bf1d2023c0afbf8c4134cd9431e0">Set_MS_LineWidth</a></div><div class="ttdeci">void Set_MS_LineWidth(double)</div><div class="ttdef"><b>Definition:</b> <a href="material_8cpp_source.html#l00494">material.cpp:494</a></div></div>
-<div class="ttc" id="material_8hpp_html_a724c876e4780d698e7e9ed353709bd79"><div class="ttname"><a href="material_8hpp.html#a724c876e4780d698e7e9ed353709bd79">Set_Material</a></div><div class="ttdeci">void Set_Material()</div><div class="ttdef"><b>Definition:</b> <a href="material_8cpp_source.html#l00036">material.cpp:36</a></div></div>
-<div class="ttc" id="material_8hpp_html_a57a9b2584097b2eb71a3f1b997b7a6f8"><div class="ttname"><a href="material_8hpp.html#a57a9b2584097b2eb71a3f1b997b7a6f8">Set_Light</a></div><div class="ttdeci">void Set_Light()</div><div class="ttdef"><b>Definition:</b> <a href="material_8cpp_source.html#l00125">material.cpp:125</a></div></div>
-<div class="ttc" id="material_8hpp_html_a5e58d6ad4c1f1c3002a3c654037ab23a"><div class="ttname"><a href="material_8hpp.html#a5e58d6ad4c1f1c3002a3c654037ab23a">Set_Material_And_Light</a></div><div class="ttdeci">void Set_Material_And_Light(int, int)</div><div class="ttdef"><b>Definition:</b> <a href="material_8cpp_source.html#l00281">material.cpp:281</a></div></div>
-<div class="ttc" id="material_8hpp_html_a210ac1c393ab50ceba066ebc89fe810f"><div class="ttname"><a href="material_8hpp.html#a210ac1c393ab50ceba066ebc89fe810f">Set_Background</a></div><div class="ttdeci">void Set_Background()</div><div class="ttdef"><b>Definition:</b> <a href="material_8cpp_source.html#l00331">material.cpp:331</a></div></div>
-<div class="ttc" id="material_8hpp_html_ae7c1300f17d54bb5f366dd5d611eafa2"><div class="ttname"><a href="material_8hpp.html#ae7c1300f17d54bb5f366dd5d611eafa2">Set_Transparency</a></div><div class="ttdeci">void Set_Transparency()</div><div class="ttdef"><b>Definition:</b> <a href="material_8cpp_source.html#l00349">material.cpp:349</a></div></div>
-<div class="ttc" id="material_8hpp_html_acf281556f5f0ae4fc9d65e86d85a7bf2"><div class="ttname"><a href="material_8hpp.html#acf281556f5f0ae4fc9d65e86d85a7bf2">Set_AntiAliasing</a></div><div class="ttdeci">void Set_AntiAliasing()</div><div class="ttdef"><b>Definition:</b> <a href="material_8cpp_source.html#l00375">material.cpp:375</a></div></div>
-<div class="ttc" id="material_8hpp_html_a7a03c37506e56c06af597ab6f4ed9714"><div class="ttname"><a href="material_8hpp.html#a7a03c37506e56c06af597ab6f4ed9714">Get_AntiAliasing</a></div><div class="ttdeci">int Get_AntiAliasing()</div><div class="ttdef"><b>Definition:</b> <a href="material_8cpp_source.html#l00370">material.cpp:370</a></div></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structLight.html">   24</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structLight.html">Light</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structLight.html#ac8d3151e5ae6f0416342105c1d16c007">   26</a></span>&#160;   std::array&lt;float, 4&gt; <a class="code" href="structLight.html#ac8d3151e5ae6f0416342105c1d16c007">position</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structLight.html#aef7e7de93e72bc2bd483e69a21f3bbdc">   27</a></span>&#160;   std::array&lt;float, 4&gt; <a class="code" href="structLight.html#aef7e7de93e72bc2bd483e69a21f3bbdc">diffuse</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structLight.html#af37f4aba56581803f4b2b24d08fa58a3">   28</a></span>&#160;   std::array&lt;float, 4&gt; <a class="code" href="structLight.html#af37f4aba56581803f4b2b24d08fa58a3">specular</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="structMaterial_html_a9dc184c883ec135ace28c1917af3fe84"><div class="ttname"><a href="structMaterial.html#a9dc184c883ec135ace28c1917af3fe84">Material::shininess</a></div><div class="ttdeci">float shininess</div><div class="ttdef"><b>Definition:</b> <a href="material_8hpp_source.html#l00021">material.hpp:21</a></div></div>
+<div class="ttc" id="structLight_html_ac8d3151e5ae6f0416342105c1d16c007"><div class="ttname"><a href="structLight.html#ac8d3151e5ae6f0416342105c1d16c007">Light::position</a></div><div class="ttdeci">std::array&lt; float, 4 &gt; position</div><div class="ttdef"><b>Definition:</b> <a href="material_8hpp_source.html#l00026">material.hpp:26</a></div></div>
+<div class="ttc" id="structMaterial_html_a1922c30245de2a59462ee5c98f07da78"><div class="ttname"><a href="structMaterial.html#a1922c30245de2a59462ee5c98f07da78">Material::diffuse</a></div><div class="ttdeci">std::array&lt; float, 4 &gt; diffuse</div><div class="ttdef"><b>Definition:</b> <a href="material_8hpp_source.html#l00019">material.hpp:19</a></div></div>
+<div class="ttc" id="structMaterial_html_a5f1506ac5eeef6d51654ba35eb1fab15"><div class="ttname"><a href="structMaterial.html#a5f1506ac5eeef6d51654ba35eb1fab15">Material::ambient</a></div><div class="ttdeci">std::array&lt; float, 4 &gt; ambient</div><div class="ttdef"><b>Definition:</b> <a href="material_8hpp_source.html#l00018">material.hpp:18</a></div></div>
+<div class="ttc" id="structMaterial_html_a8b9fce03d221ef85f4abfc548f62bd77"><div class="ttname"><a href="structMaterial.html#a8b9fce03d221ef85f4abfc548f62bd77">Material::specular</a></div><div class="ttdeci">std::array&lt; float, 4 &gt; specular</div><div class="ttdef"><b>Definition:</b> <a href="material_8hpp_source.html#l00020">material.hpp:20</a></div></div>
+<div class="ttc" id="structLight_html_aef7e7de93e72bc2bd483e69a21f3bbdc"><div class="ttname"><a href="structLight.html#aef7e7de93e72bc2bd483e69a21f3bbdc">Light::diffuse</a></div><div class="ttdeci">std::array&lt; float, 4 &gt; diffuse</div><div class="ttdef"><b>Definition:</b> <a href="material_8hpp_source.html#l00027">material.hpp:27</a></div></div>
+<div class="ttc" id="structMaterial_html"><div class="ttname"><a href="structMaterial.html">Material</a></div><div class="ttdef"><b>Definition:</b> <a href="material_8hpp_source.html#l00016">material.hpp:16</a></div></div>
+<div class="ttc" id="structLight_html"><div class="ttname"><a href="structLight.html">Light</a></div><div class="ttdef"><b>Definition:</b> <a href="material_8hpp_source.html#l00024">material.hpp:24</a></div></div>
+<div class="ttc" id="structLight_html_af37f4aba56581803f4b2b24d08fa58a3"><div class="ttname"><a href="structLight.html#af37f4aba56581803f4b2b24d08fa58a3">Light::specular</a></div><div class="ttdeci">std::array&lt; float, 4 &gt; specular</div><div class="ttdef"><b>Definition:</b> <a href="material_8hpp_source.html#l00028">material.hpp:28</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 31 2021 15:59:18 for GLVis by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 31 2021 16:18:29 for GLVis by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

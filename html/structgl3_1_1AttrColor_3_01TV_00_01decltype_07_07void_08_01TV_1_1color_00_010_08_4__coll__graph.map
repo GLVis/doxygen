@@ -1,4 +1,3 @@
 <map id="gl3::AttrColor&lt; TV, decltype((void) TV::color, 0)&gt;" name="gl3::AttrColor&lt; TV, decltype((void) TV::color, 0)&gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="269,25,443,97"/>
-<area shape="rect" id="node2" href="$structgl3_1_1AttrBase.html" title=" " alt="" coords="5,5,221,117"/>
+<area shape="rect" id="node2" href="$structgl3_1_1AttrBase.html" title="gl3::AttrBase\&lt; TV,\l decltype(TV::color)\l,&amp;TV::color, AttrColor\l\&lt; TV, decltype((void) TV\l::color, 0)\&gt; \&gt;" alt="" coords="6,5,261,117"/>
 </map>

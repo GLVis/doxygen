@@ -47,6 +47,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -94,6 +95,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-types">Protected Types</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classVisualizationScene-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -105,13 +108,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="dynheader">
 Inheritance diagram for VisualizationScene:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classVisualizationScene__inherit__graph.svg" width="614" height="283"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classVisualizationScene__inherit__graph.svg" width="614" height="283"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for VisualizationScene:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classVisualizationScene__coll__graph.svg" width="211" height="144"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classVisualizationScene__coll__graph.svg" width="100%" height="514"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -121,8 +123,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a30588092723febfe7f8f61a3688644e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a029246d4dcf5b365e3d9226723398a99"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a029246d4dcf5b365e3d9226723398a99">~VisualizationScene</a> ()</td></tr>
 <tr class="separator:a029246d4dcf5b365e3d9226723398a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b317237b62fee66c1e38f2626c70bab"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a5b317237b62fee66c1e38f2626c70bab">Draw</a> ()=0</td></tr>
-<tr class="separator:a5b317237b62fee66c1e38f2626c70bab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9576adc99495b7955bd4be2f7f9341d6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structgl3_1_1SceneInfo.html">gl3::SceneInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a9576adc99495b7955bd4be2f7f9341d6">GetSceneObjs</a> ()=0</td></tr>
+<tr class="separator:a9576adc99495b7955bd4be2f7f9341d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d41f612cb3c5e31e7de1f5ce2e55793"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a7d41f612cb3c5e31e7de1f5ce2e55793">SetView</a> (double theta, double phi)</td></tr>
 <tr class="separator:a7d41f612cb3c5e31e7de1f5ce2e55793"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fae552e673d1855a23397c1582d7d4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a8fae552e673d1855a23397c1582d7d4b">Zoom</a> (double factor)</td></tr>
@@ -143,8 +145,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab4c196082c1c0c1cf286da570928934c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f7396c2af7000ce70e91e872d8e8598"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a9f7396c2af7000ce70e91e872d8e8598">CenterObject2D</a> ()</td></tr>
 <tr class="separator:a9f7396c2af7000ce70e91e872d8e8598"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53851901170c9bbb436a2bcd3681b016"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a53851901170c9bbb436a2bcd3681b016">ModelView</a> ()</td></tr>
-<tr class="separator:a53851901170c9bbb436a2bcd3681b016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a713f8a7bc51715810c88f789152f2b32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a713f8a7bc51715810c88f789152f2b32">SetProjectionMtx</a> (glm::mat4 projection)</td></tr>
+<tr class="separator:a713f8a7bc51715810c88f789152f2b32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b5cd1cf17a94e368d0cae20e40772b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a8b5cd1cf17a94e368d0cae20e40772b0">SetLightMatIdx</a> (unsigned i)</td></tr>
+<tr class="separator:a8b5cd1cf17a94e368d0cae20e40772b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cbee72601d8a521634b8955c91a1389"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a8cbee72601d8a521634b8955c91a1389">GetLightMatIdx</a> ()</td></tr>
+<tr class="separator:a8cbee72601d8a521634b8955c91a1389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d034d7237f58d927458654cddba8d1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a0d034d7237f58d927458654cddba8d1d">SetLight0CustomPos</a> (std::array&lt; float, 4 &gt; pos)</td></tr>
+<tr class="separator:a0d034d7237f58d927458654cddba8d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6771cf1a26d081ff1af536baf5c141f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a6771cf1a26d081ff1af536baf5c141f3">ToggleBackground</a> ()</td></tr>
+<tr class="separator:a6771cf1a26d081ff1af536baf5c141f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78c49f284ab62a00d2bf0cd87569df5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a78c49f284ab62a00d2bf0cd87569df5f">GenerateAlphaTexture</a> ()</td></tr>
+<tr class="separator:a78c49f284ab62a00d2bf0cd87569df5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -166,6 +178,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a777f84671db75531c4f7ceda0653dc28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ca0b083e9055c80006c8c5b4a3cdeb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCamera.html">Camera</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a6ca0b083e9055c80006c8c5b4a3cdeb2">cam</a></td></tr>
 <tr class="separator:a6ca0b083e9055c80006c8c5b4a3cdeb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38dae9b9f490c5ef43a81df9c8a2e7ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPaletteState.html">PaletteState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a38dae9b9f490c5ef43a81df9c8a2e7ef">palette</a></td></tr>
+<tr class="separator:a38dae9b9f490c5ef43a81df9c8a2e7ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70b0eb870996adb9fa9dc8248703ee33"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a70b0eb870996adb9fa9dc8248703ee33">x</a> [2]</td></tr>
 <tr class="memdesc:a70b0eb870996adb9fa9dc8248703ee33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bounding box.  <a href="#a70b0eb870996adb9fa9dc8248703ee33">More...</a><br /></td></tr>
 <tr class="separator:a70b0eb870996adb9fa9dc8248703ee33"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,13 +187,43 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a99bf11a2dfb8e31a017c257cd515d5f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9444a714a9ea07e08e349ea1f0f57a73"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a9444a714a9ea07e08e349ea1f0f57a73">z</a> [2]</td></tr>
 <tr class="separator:a9444a714a9ea07e08e349ea1f0f57a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7b20b0d2afceed7bde0521133e6cdcc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#ab7b20b0d2afceed7bde0521133e6cdcc">rotmat</a> [16]</td></tr>
-<tr class="separator:ab7b20b0d2afceed7bde0521133e6cdcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecc3d94f6f7eb57ce7135d2b3c310d9b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#aecc3d94f6f7eb57ce7135d2b3c310d9b">translmat</a> [16]</td></tr>
-<tr class="separator:aecc3d94f6f7eb57ce7135d2b3c310d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77ff780f2c1ed280c0f764b04025f799"><td class="memItemLeft" align="right" valign="top">glm::mat4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a77ff780f2c1ed280c0f764b04025f799">rotmat</a></td></tr>
+<tr class="separator:a77ff780f2c1ed280c0f764b04025f799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefdd729d45c14baef9a908906c39a534"><td class="memItemLeft" align="right" valign="top">glm::mat4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#aefdd729d45c14baef9a908906c39a534">translmat</a></td></tr>
+<tr class="separator:aefdd729d45c14baef9a908906c39a534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff2c8115a74264ca08157e02b0e0245c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#aff2c8115a74264ca08157e02b0e0245c">matAlpha</a> = 1.0</td></tr>
+<tr class="separator:aff2c8115a74264ca08157e02b0e0245c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a370f49b3b4556e6d44907ddb1ca89884"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a370f49b3b4556e6d44907ddb1ca89884">matAlphaCenter</a> = 0.5</td></tr>
+<tr class="separator:a370f49b3b4556e6d44907ddb1ca89884"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ecab8c27d3715c6eac3663670fa85cc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a0ecab8c27d3715c6eac3663670fa85cc">view</a></td></tr>
 <tr class="memdesc:a0ecab8c27d3715c6eac3663670fa85cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is set by SetVisualizationScene.  <a href="#a0ecab8c27d3715c6eac3663670fa85cc">More...</a><br /></td></tr>
 <tr class="separator:a0ecab8c27d3715c6eac3663670fa85cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
+Protected Types</h2></td></tr>
+<tr class="memitem:a530533fa5707dd55f12e6238d62b9c88"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="classVisualizationScene.html#a530533fa5707dd55f12e6238d62b9c88a69e60188ddd675081ad5ff145f82da4a">BG_BLK</a> = 0, 
+<a class="el" href="classVisualizationScene.html#a530533fa5707dd55f12e6238d62b9c88a277d0096658a1a11fa7437f9c99137e0">BG_WHITE</a> = 1
+ }</td></tr>
+<tr class="separator:a530533fa5707dd55f12e6238d62b9c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a1a801ddd6a1b413f1f6dc630b4b6e356"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgl3_1_1RenderParams.html">gl3::RenderParams</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a1a801ddd6a1b413f1f6dc630b4b6e356">GetMeshDrawParams</a> ()</td></tr>
+<tr class="separator:a1a801ddd6a1b413f1f6dc630b4b6e356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ab82c07c3e670de5e4bae13097ac176"><td class="memItemLeft" align="right" valign="top">glm::mat4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a3ab82c07c3e670de5e4bae13097ac176">GetModelViewMtx</a> ()</td></tr>
+<tr class="separator:a3ab82c07c3e670de5e4bae13097ac176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a597a73545c8c8b83890b5265c58b74cb"><td class="memItemLeft" align="right" valign="top">std::array&lt; float, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a597a73545c8c8b83890b5265c58b74cb">GetLineColor</a> ()</td></tr>
+<tr class="separator:a597a73545c8c8b83890b5265c58b74cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a853e3f40fea1879a49ae7106b965262f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a853e3f40fea1879a49ae7106b965262f">MySetColor</a> (<a class="el" href="classgl3_1_1GlBuilder.html">gl3::GlBuilder</a> &amp;builder, double val, double min, double max)</td></tr>
+<tr class="separator:a853e3f40fea1879a49ae7106b965262f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52d05a3b14b9dfedeab802b35296d499"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a52d05a3b14b9dfedeab802b35296d499">MySetColor</a> (<a class="el" href="classgl3_1_1GlBuilder.html">gl3::GlBuilder</a> &amp;builder, double val)</td></tr>
+<tr class="separator:a52d05a3b14b9dfedeab802b35296d499"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16ee3e549ac0b28cd1c917c00ccc9a32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a16ee3e549ac0b28cd1c917c00ccc9a32">DrawTriangle</a> (<a class="el" href="classgl3_1_1GlDrawable.html">gl3::GlDrawable</a> &amp;buff, const double(&amp;pts)[4][3], const double(&amp;cv)[4], const double minv, const double maxv)</td></tr>
+<tr class="separator:a16ee3e549ac0b28cd1c917c00ccc9a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4485a5ef352df9f5a49cf1d412d69696"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a4485a5ef352df9f5a49cf1d412d69696">DrawQuad</a> (<a class="el" href="classgl3_1_1GlDrawable.html">gl3::GlDrawable</a> &amp;buff, const double(&amp;pts)[4][3], const double(&amp;cv)[4], const double minv, const double maxv)</td></tr>
+<tr class="separator:a4485a5ef352df9f5a49cf1d412d69696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc8ffaf6b9914098b67e0e61fa300e10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#adc8ffaf6b9914098b67e0e61fa300e10">DrawPatch</a> (<a class="el" href="classgl3_1_1GlDrawable.html">gl3::GlDrawable</a> &amp;buff, const mfem::DenseMatrix &amp;pts, mfem::Vector &amp;vals, mfem::DenseMatrix &amp;normals, const int n, const mfem::Array&lt; int &gt; &amp;ind, const double minv, const double maxv, const int normals_opt=0)</td></tr>
+<tr class="separator:adc8ffaf6b9914098b67e0e61fa300e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -189,11 +233,56 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ac59c227cdfa470b5abb889f8ef9ee642"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a125bb5805d9480f4e5aec905c9403cd8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a125bb5805d9480f4e5aec905c9403cd8">zscale</a></td></tr>
 <tr class="separator:a125bb5805d9480f4e5aec905c9403cd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a072ec8c0efdba49a5ee6c47072600496"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSdlWindow.html">SdlWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a072ec8c0efdba49a5ee6c47072600496">wnd</a></td></tr>
+<tr class="separator:a072ec8c0efdba49a5ee6c47072600496"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90bb3d9cc7156e445bae3acc97e848cd"><td class="memItemLeft" align="right" valign="top">glm::mat4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a90bb3d9cc7156e445bae3acc97e848cd">proj_mtx</a></td></tr>
+<tr class="separator:a90bb3d9cc7156e445bae3acc97e848cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c859fc8e2a828a9486763e23fc91b00"><td class="memItemLeft" align="right" valign="top">enum VisualizationScene:: { ... } &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a4c859fc8e2a828a9486763e23fc91b00">background</a></td></tr>
+<tr class="separator:a4c859fc8e2a828a9486763e23fc91b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4530762ff7a14c0af1ee3a8d55ca7cc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structMaterial.html">Material</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#ad4530762ff7a14c0af1ee3a8d55ca7cc">BLK_MAT</a></td></tr>
+<tr class="separator:ad4530762ff7a14c0af1ee3a8d55ca7cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6007293a39208237e5ad8ccb4746b0c2"><td class="memItemLeft" align="right" valign="top">std::array&lt; float, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a6007293a39208237e5ad8ccb4746b0c2">_l0_pos</a></td></tr>
+<tr class="separator:a6007293a39208237e5ad8ccb4746b0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79a3e07a104cd1be7ba876ca511f7149"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a79a3e07a104cd1be7ba876ca511f7149">_use_cust_l0_pos</a></td></tr>
+<tr class="separator:a79a3e07a104cd1be7ba876ca511f7149"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9b13b0d6c498619ec96c0097da8f252"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#ae9b13b0d6c498619ec96c0097da8f252">light_mat_idx</a></td></tr>
+<tr class="separator:ae9b13b0d6c498619ec96c0097da8f252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c68962036241eddbdbc345f42701e87"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualizationScene.html#a8c68962036241eddbdbc345f42701e87">use_light</a></td></tr>
+<tr class="separator:a8c68962036241eddbdbc345f42701e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00102">102</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00061">61</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="a530533fa5707dd55f12e6238d62b9c88"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a530533fa5707dd55f12e6238d62b9c88a69e60188ddd675081ad5ff145f82da4a"></a>BG_BLK&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a530533fa5707dd55f12e6238d62b9c88a277d0096658a1a11fa7437f9c99137e0"></a>BG_WHITE&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00071">71</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a30588092723febfe7f8f61a3688644e3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -207,7 +296,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00120">120</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00111">111</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
 
 </div>
 </div>
@@ -232,7 +321,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00137">137</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00134">134</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
 
 </div>
 </div>
@@ -250,7 +339,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00198">198</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00419">419</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
 
 </div>
 </div>
@@ -267,11 +356,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00211">211</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00429">429</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a5b317237b62fee66c1e38f2626c70bab"></a>
+<a class="anchor" id="adc8ffaf6b9914098b67e0e61fa300e10"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -279,7 +368,318 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void VisualizationScene::Draw </td>
+          <td class="memname">void VisualizationScene::DrawPatch </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classgl3_1_1GlDrawable.html">gl3::GlDrawable</a> &amp;&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const mfem::DenseMatrix &amp;&#160;</td>
+          <td class="paramname"><em>pts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mfem::Vector &amp;&#160;</td>
+          <td class="paramname"><em>vals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mfem::DenseMatrix &amp;&#160;</td>
+          <td class="paramname"><em>normals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const mfem::Array&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ind</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>minv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>maxv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>normals_opt</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00192">192</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4485a5ef352df9f5a49cf1d412d69696"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualizationScene::DrawQuad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classgl3_1_1GlDrawable.html">gl3::GlDrawable</a> &amp;&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double(&amp;)&#160;</td>
+          <td class="paramname"><em>pts</em>[4][3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double(&amp;)&#160;</td>
+          <td class="paramname"><em>cv</em>[4], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>minv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>maxv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00164">164</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a16ee3e549ac0b28cd1c917c00ccc9a32"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualizationScene::DrawTriangle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classgl3_1_1GlDrawable.html">gl3::GlDrawable</a> &amp;&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double(&amp;)&#160;</td>
+          <td class="paramname"><em>pts</em>[4][3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double(&amp;)&#160;</td>
+          <td class="paramname"><em>cv</em>[4], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>minv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>maxv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00137">137</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a78c49f284ab62a00d2bf0cd87569df5f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualizationScene::GenerateAlphaTexture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00176">176</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8cbee72601d8a521634b8955c91a1389"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int VisualizationScene::GetLightMatIdx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00171">171</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a597a73545c8c8b83890b5265c58b74cb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;float, 4&gt; VisualizationScene::GetLineColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00094">94</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1a801ddd6a1b413f1f6dc630b4b6e356"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgl3_1_1RenderParams.html">gl3::RenderParams</a> VisualizationScene::GetMeshDrawParams </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00308">308</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3ab82c07c3e670de5e4bae13097ac176"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::mat4 VisualizationScene::GetModelViewMtx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00458">458</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9576adc99495b7955bd4be2f7f9341d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structgl3_1_1SceneInfo.html">gl3::SceneInfo</a> VisualizationScene::GetSceneObjs </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -292,24 +692,91 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classVisualizationSceneSolution.html#a4487514b9ccc5e335e8023c2abe88661">VisualizationSceneSolution</a>, <a class="el" href="classVisualizationSceneSolution3d.html#a84b4d16dddef8cde350bd1ddee6aaeaf">VisualizationSceneSolution3d</a>, <a class="el" href="classVisualizationSceneVector.html#adf981d0ee69a75bde0f910fe8b6ae034">VisualizationSceneVector</a>, and <a class="el" href="classVisualizationSceneVector3d.html#a6f629f0c383d020119e4c26d5509f5d1">VisualizationSceneVector3d</a>.</p>
+<p>Implemented in <a class="el" href="classVisualizationSceneScalarData.html#ab7f2f1d2c36a75e198f15624c7039577">VisualizationSceneScalarData</a>, <a class="el" href="classVisualizationSceneSolution.html#a1be019ee5ade6baed39ebe744c06abe6">VisualizationSceneSolution</a>, <a class="el" href="classVisualizationSceneSolution3d.html#a17b2c491aa812536a700ec186d97ada7">VisualizationSceneSolution3d</a>, <a class="el" href="classVisualizationSceneVector.html#ab60f88e6d39d2cc27c099a6180a37b41">VisualizationSceneVector</a>, and <a class="el" href="classVisualizationSceneVector3d.html#a5ff8caed2118b80b7eb9a283271a3820">VisualizationSceneVector3d</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a53851901170c9bbb436a2bcd3681b016"></a>
+<a class="anchor" id="a853e3f40fea1879a49ae7106b965262f"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void VisualizationScene::ModelView </td>
+          <td class="memname">void VisualizationScene::MySetColor </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classgl3_1_1GlBuilder.html">gl3::GlBuilder</a> &amp;&#160;</td>
+          <td class="paramname"><em>builder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00244">244</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00106">106</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a52d05a3b14b9dfedeab802b35296d499"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualizationScene::MySetColor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classgl3_1_1GlBuilder.html">gl3::GlBuilder</a> &amp;&#160;</td>
+          <td class="paramname"><em>builder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00111">111</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
 
 </div>
 </div>
@@ -349,7 +816,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00150">150</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00380">380</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
 
 </div>
 </div>
@@ -389,7 +856,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00139">139</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00369">369</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
 
 </div>
 </div>
@@ -417,7 +884,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00158">158</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00385">385</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
 
 </div>
 </div>
@@ -435,7 +902,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00179">179</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00407">407</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
 
 </div>
 </div>
@@ -469,7 +936,69 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00184">184</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00412">412</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0d034d7237f58d927458654cddba8d1d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualizationScene::SetLight0CustomPos </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; float, 4 &gt;&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00349">349</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8b5cd1cf17a94e368d0cae20e40772b0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualizationScene::SetLightMatIdx </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00340">340</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a713f8a7bc51715810c88f789152f2b32"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualizationScene::SetProjectionMtx </td>
+          <td>(</td>
+          <td class="paramtype">glm::mat4&#160;</td>
+          <td class="paramname"><em>projection</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00169">169</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
 
 </div>
 </div>
@@ -497,7 +1026,24 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00220">220</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00435">435</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6771cf1a26d081ff1af536baf5c141f3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualizationScene::ToggleBackground </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00355">355</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
 
 </div>
 </div>
@@ -531,7 +1077,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00170">170</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00398">398</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
 
 </div>
 </div>
@@ -549,11 +1095,96 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00231">231</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8cpp_source.html#l00445">445</a> of file <a class="el" href="openglvis_8cpp_source.html">openglvis.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a6007293a39208237e5ad8ccb4746b0c2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;float, 4&gt; VisualizationScene::_l0_pos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00085">85</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a79a3e07a104cd1be7ba876ca511f7149"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool VisualizationScene::_use_cust_l0_pos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00086">86</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4c859fc8e2a828a9486763e23fc91b00"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum { ... }   VisualizationScene::background</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad4530762ff7a14c0af1ee3a8d55ca7cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structMaterial.html">Material</a> VisualizationScene::BLK_MAT</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">   {</div>
+<div class="line">      {{ 0.0, 0.0, 0.0, 1.0 }},</div>
+<div class="line">      {{ 0.0, 0.0, 0.0, 1.0 }},</div>
+<div class="line">      {{ 0.0, 0.0, 0.0, 1.0 }},</div>
+<div class="line">      0.0</div>
+<div class="line">   }</div>
+</div><!-- fragment -->
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00077">77</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a6ca0b083e9055c80006c8c5b4a3cdeb2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -564,7 +1195,57 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00116">116</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00141">141</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae9b13b0d6c498619ec96c0097da8f252"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int VisualizationScene::light_mat_idx</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00087">87</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aff2c8115a74264ca08157e02b0e0245c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float VisualizationScene::matAlpha = 1.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00150">150</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a370f49b3b4556e6d44907ddb1ca89884"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float VisualizationScene::matAlphaCenter = 0.5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00151">151</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
 
 </div>
 </div>
@@ -578,7 +1259,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00112">112</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00137">137</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
 
 </div>
 </div>
@@ -592,7 +1273,21 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00112">112</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00137">137</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a38dae9b9f490c5ef43a81df9c8a2e7ef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPaletteState.html">PaletteState</a> VisualizationScene::palette</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00142">142</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
 
 </div>
 </div>
@@ -606,21 +1301,43 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00112">112</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00137">137</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab7b20b0d2afceed7bde0521133e6cdcc"></a>
+<a class="anchor" id="a90bb3d9cc7156e445bae3acc97e848cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::mat4 VisualizationScene::proj_mtx</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00069">69</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a77ff780f2c1ed280c0f764b04025f799"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double VisualizationScene::rotmat[16]</td>
+          <td class="memname">glm::mat4 VisualizationScene::rotmat</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00121">121</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00147">147</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
 
 </div>
 </div>
@@ -634,21 +1351,43 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00112">112</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00137">137</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aecc3d94f6f7eb57ce7135d2b3c310d9b"></a>
+<a class="anchor" id="aefdd729d45c14baef9a908906c39a534"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double VisualizationScene::translmat[16]</td>
+          <td class="memname">glm::mat4 VisualizationScene::translmat</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00122">122</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00148">148</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8c68962036241eddbdbc345f42701e87"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool VisualizationScene::use_light</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00088">88</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
 
 </div>
 </div>
@@ -664,7 +1403,7 @@ Protected Attributes</h2></td></tr>
 
 <p>This is set by SetVisualizationScene. </p>
 
-<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00143">143</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00180">180</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
 
 </div>
 </div>
@@ -678,7 +1417,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00113">113</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00138">138</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
 
 </div>
 </div>
@@ -692,7 +1431,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00114">114</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00139">139</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
 
 </div>
 </div>
@@ -706,7 +1445,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00114">114</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00139">139</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
 
 </div>
 </div>
@@ -720,7 +1459,29 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00113">113</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00138">138</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a072ec8c0efdba49a5ee6c47072600496"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSdlWindow.html">SdlWindow</a>* VisualizationScene::wnd</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00067">67</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
 
 </div>
 </div>
@@ -736,7 +1497,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Bounding box. </p>
 
-<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00119">119</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00145">145</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
 
 </div>
 </div>
@@ -758,7 +1519,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00106">106</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00065">65</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
 
 </div>
 </div>
@@ -772,7 +1533,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00119">119</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00145">145</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
 
 </div>
 </div>
@@ -794,7 +1555,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00106">106</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00065">65</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
 
 </div>
 </div>
@@ -808,7 +1569,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00119">119</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00145">145</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
 
 </div>
 </div>
@@ -830,7 +1591,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00106">106</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
+<p>Definition at line <a class="el" href="openglvis_8hpp_source.html#l00065">65</a> of file <a class="el" href="openglvis_8hpp_source.html">openglvis.hpp</a>.</p>
 
 </div>
 </div>
@@ -841,7 +1602,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 31 2021 15:59:19 for GLVis by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 31 2021 16:18:30 for GLVis by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>
