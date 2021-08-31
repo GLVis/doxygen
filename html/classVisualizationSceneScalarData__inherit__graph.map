@@ -1,8 +1,7 @@
 <map id="VisualizationSceneScalarData" name="VisualizationSceneScalarData">
-<area shape="rect" id="node1" title=" " alt="" coords="129,85,392,117"/>
-<area shape="rect" id="node3" href="$classVisualizationSceneSolution.html" title=" " alt="" coords="5,165,244,197"/>
-<area shape="rect" id="node5" href="$classVisualizationSceneSolution3d.html" title=" " alt="" coords="269,165,527,197"/>
-<area shape="rect" id="node2" href="$classVisualizationScene.html" title=" " alt="" coords="173,5,348,37"/>
-<area shape="rect" id="node4" href="$classVisualizationSceneVector.html" title=" " alt="" coords="11,245,238,277"/>
-<area shape="rect" id="node6" href="$classVisualizationSceneVector3d.html" title=" " alt="" coords="275,245,521,277"/>
+<area shape="rect" id="node3" href="$classVisualizationSceneSolution.html" title="VisualizationSceneSolution" alt="" coords="5,165,283,197"/>
+<area shape="rect" id="node5" href="$classVisualizationSceneSolution3d.html" title="VisualizationSceneSolution3d" alt="" coords="307,165,608,197"/>
+<area shape="rect" id="node2" href="$classVisualizationScene.html" title="VisualizationScene" alt="" coords="200,5,400,37"/>
+<area shape="rect" id="node4" href="$classVisualizationSceneVector.html" title="VisualizationSceneVector" alt="" coords="13,245,275,277"/>
+<area shape="rect" id="node6" href="$classVisualizationSceneVector3d.html" title="VisualizationSceneVector3d" alt="" coords="315,245,600,277"/>
 </map>
