@@ -1,6 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classSdlNativePlatform.html" title="SdlNativePlatform" alt="" coords="6,61,199,93"/>
-<area shape="rect" id="node2" href="$classSdlCocoaPlatform.html" title="SdlCocoaPlatform" alt="" coords="262,5,453,37"/>
-<area shape="rect" id="node3" href="$classSdlWindowsPlatform.html" title="SdlWindowsPlatform" alt="" coords="248,61,467,93"/>
-<area shape="rect" id="node4" href="$classSdlX11Platform.html" title="SdlX11Platform" alt="" coords="273,117,442,149"/>
+<area shape="rect" id="node1" href="$structglTF__Builder_1_1node__type.html" title="glTF_Builder::node\l_type\&lt; bool \&gt;" alt="" coords="6,5,205,57"/>
 </map>

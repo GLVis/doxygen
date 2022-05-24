@@ -1,0 +1,8 @@
+<map id="glTF_Builder::struct_pbrMetallicRoughness" name="glTF_Builder::struct_pbrMetallicRoughness">
+<area shape="rect" id="node2" href="$structglTF__Builder_1_1node__type.html" title="glTF_Builder::node\l_type\&lt; glTF_Builder\l::struct_texture_info \&gt;" alt="" coords="1453,127,1688,199"/>
+<area shape="rect" id="node3" title="STL class. " alt="" coords="303,120,420,152"/>
+<area shape="rect" id="node6" href="$structglTF__Builder_1_1node__type.html" title="glTF_Builder::node\l_type\&lt; unsigned \&gt;" alt="" coords="581,154,787,206"/>
+<area shape="rect" id="node7" href="$structglTF__Builder_1_1node__type.html" title="glTF_Builder::node\l_type\&lt; float \&gt;" alt="" coords="811,218,1010,270"/>
+<area shape="rect" id="node8" href="$structglTF__Builder_1_1node__type.html" title="glTF_Builder::node\l_type\&lt; color4f \&gt;" alt="" coords="585,26,783,78"/>
+<area shape="rect" id="node5" href="$structglTF__Builder_1_1struct__texture__info.html" title="glTF_Builder::struct\l_texture_info" alt="" coords="1035,154,1240,206"/>
+</map>

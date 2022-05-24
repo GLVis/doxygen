@@ -1,13 +1,24 @@
 var searchData=
 [
-  ['lastidlefunc',['LastIdleFunc',['../aux__vis_8cpp.html#a205cb59e8468965ec714359159606824',1,'aux_vis.cpp']]],
-  ['lcurvelist',['lcurvelist',['../classVisualizationSceneSolution.html#ac57e1347f5bb530d5c952a8250163feb',1,'VisualizationSceneSolution']]],
+  ['lastidlefunc',['LastIdleFunc',['../aux__vis_8cpp.html#ad9ce76c19bcebce707d7dcfc4ad59128',1,'aux_vis.cpp']]],
+  ['layout',['layout',['../structgl3_1_1Vertex.html#afce381ba447bf94de3e40b577ff3405b',1,'gl3::Vertex::layout()'],['../structgl3_1_1VertexColor.html#a9ac2b5745d636c392e91b5dd9bb64f4c',1,'gl3::VertexColor::layout()'],['../structgl3_1_1VertexTex.html#a044be75ff06ad47cdbcbf8ba9d07fa3e',1,'gl3::VertexTex::layout()'],['../structgl3_1_1VertexNorm.html#a0054d2013dbcd56dc33074141ec97d8e',1,'gl3::VertexNorm::layout()'],['../structgl3_1_1VertexNormColor.html#a4efd5c8c7b24a72f3292786e303b6008',1,'gl3::VertexNormColor::layout()'],['../structgl3_1_1VertexNormTex.html#acac1e7ab08b985599ed6a3e453e22a88',1,'gl3::VertexNormTex::layout()']]],
+  ['lcurve_5fbuf',['lcurve_buf',['../classVisualizationSceneSolution.html#ae88c7e63a32fc0a0ab021eaa2d2d5867',1,'VisualizationSceneSolution']]],
   ['level',['level',['../classVisualizationSceneScalarData.html#ae25309fe0284d32c1623616c27fa658b',1,'VisualizationSceneScalarData']]],
   ['levels',['levels',['../classVisualizationSceneSolution3d.html#adab85227db3bb142b2b48efdb76f9d42',1,'VisualizationSceneSolution3d']]],
-  ['light',['light',['../classVisualizationSceneScalarData.html#a3aa3bcd5e0788dced72f08724617687e',1,'VisualizationSceneScalarData']]],
-  ['linelist',['linelist',['../classVisualizationSceneSolution.html#ab7d1b584caffe3592d7857d31e8c240a',1,'VisualizationSceneSolution::linelist()'],['../classVisualizationSceneSolution3d.html#a1dba64ed05cdabfdfb89f17d83b09d08',1,'VisualizationSceneSolution3d::linelist()']]],
-  ['locscene',['locscene',['../aux__vis_8cpp.html#af71e06f4d5eba00469872cd481b1835b',1,'locscene():&#160;aux_vis.cpp'],['../vsdata_8cpp.html#af71e06f4d5eba00469872cd481b1835b',1,'locscene():&#160;aux_vis.cpp'],['../vssolution_8cpp.html#af71e06f4d5eba00469872cd481b1835b',1,'locscene():&#160;aux_vis.cpp'],['../vsvector_8cpp.html#af71e06f4d5eba00469872cd481b1835b',1,'locscene():&#160;aux_vis.cpp'],['../vsvector3d_8cpp.html#af71e06f4d5eba00469872cd481b1835b',1,'locscene():&#160;aux_vis.cpp']]],
+  ['light_5famb_5fscene',['light_amb_scene',['../structgl3_1_1RenderParams.html#a70941da1568febf91ab38fd30cda3c58',1,'gl3::RenderParams']]],
+  ['light_5fmat_5fidx',['light_mat_idx',['../classVisualizationScene.html#ae9b13b0d6c498619ec96c0097da8f252',1,'VisualizationScene']]],
+  ['lights',['lights',['../structgl3_1_1RenderParams.html#ab3b78f674af3382fe79b943d69297ceb',1,'gl3::RenderParams::lights()'],['../material_8cpp.html#aa411029cbf1574a8d50cea048f577d8f',1,'lights():&#160;material.cpp'],['../openglvis_8cpp.html#aa411029cbf1574a8d50cea048f577d8f',1,'lights():&#160;material.cpp']]],
+  ['lights_5f4',['lights_4',['../material_8cpp.html#a5fb9590d52a458144513bd44925296ed',1,'lights_4():&#160;material.cpp'],['../openglvis_8cpp.html#a5fb9590d52a458144513bd44925296ed',1,'lights_4():&#160;material.cpp']]],
+  ['lights_5fmax',['LIGHTS_MAX',['../namespacegl3.html#a754b0039fc563b1c6dd7e965cf58eeb4',1,'gl3']]],
+  ['line_5fbuf',['line_buf',['../classVisualizationSceneSolution.html#addb14da6a94f44ed1535ca6ef340b9bc',1,'VisualizationSceneSolution::line_buf()'],['../classVisualizationSceneSolution3d.html#a0085ade9990fa50cdd199459b5628d0b',1,'VisualizationSceneSolution3d::line_buf()']]],
+  ['line_5fw',['line_w',['../aux__vis_8cpp.html#a0e3159d0dfa047dfe78d29c330f6e613',1,'aux_vis.cpp']]],
+  ['line_5fw_5faa',['line_w_aa',['../aux__vis_8cpp.html#ad4e0cc81fa8c325c1e2f9a565c9991f0',1,'aux_vis.cpp']]],
+  ['line_5fwidth_5faa',['LINE_WIDTH_AA',['../namespacegl3.html#a6671d07b57534d4d36404cfe7691a86d',1,'gl3']]],
+  ['lines',['lines',['../structgl3_1_1CaptureBuffer.html#a5cda940a47b9848634b19c1a0f2b6d56',1,'gl3::CaptureBuffer']]],
+  ['locscene',['locscene',['../aux__vis_8cpp.html#a13a564b1dc6821c41f50f9294720ffb5',1,'locscene():&#160;aux_vis.cpp'],['../vsdata_8cpp.html#a13a564b1dc6821c41f50f9294720ffb5',1,'locscene():&#160;aux_vis.cpp'],['../vssolution_8cpp.html#a13a564b1dc6821c41f50f9294720ffb5',1,'locscene():&#160;aux_vis.cpp'],['../vsvector_8cpp.html#a13a564b1dc6821c41f50f9294720ffb5',1,'locscene():&#160;aux_vis.cpp'],['../vsvector3d_8cpp.html#a13a564b1dc6821c41f50f9294720ffb5',1,'locscene():&#160;aux_vis.cpp']]],
   ['log_5fa',['log_a',['../classVisualizationSceneScalarData.html#a0ca3d7a4d52f5439656abcc30d769dc0',1,'VisualizationSceneScalarData']]],
+  ['logo_5frgba',['logo_rgba',['../logo_8hpp.html#a41abfb32da4d5ed1785a304e82b2a38a',1,'logo.hpp']]],
+  ['logo_5frgba_5flen',['logo_rgba_len',['../logo_8hpp.html#a29d19b51690b6b05da67a5b2f109808d',1,'logo.hpp']]],
   ['logscale',['logscale',['../classVisualizationSceneScalarData.html#a0447775011ad310ee9a0e9270b7b8b74',1,'VisualizationSceneScalarData']]],
-  ['lsurflist',['lsurflist',['../classVisualizationSceneSolution3d.html#af93797bf5d9d9e2fa50db317b5730cdb',1,'VisualizationSceneSolution3d']]]
+  ['lsurf_5fbuf',['lsurf_buf',['../classVisualizationSceneSolution3d.html#a0c724afa4a929b602faeb069f823cb56',1,'VisualizationSceneSolution3d']]]
 ];

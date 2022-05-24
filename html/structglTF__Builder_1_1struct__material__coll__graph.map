@@ -1,0 +1,11 @@
+<map id="glTF_Builder::struct_material" name="glTF_Builder::struct_material">
+<area shape="rect" id="node2" href="$structglTF__Builder_1_1node__type.html" title="glTF_Builder::node\l_type\&lt; glTF_Builder\l::struct_pbrMetallicRoughness \&gt;" alt="" coords="2333,243,2661,315"/>
+<area shape="rect" id="node3" href="$structglTF__Builder_1_1struct__pbrMetallicRoughness.html" title="glTF_Builder::struct\l_pbrMetallicRoughness" alt="" coords="1984,182,2224,234"/>
+<area shape="rect" id="node4" href="$structglTF__Builder_1_1node__type.html" title="glTF_Builder::node\l_type\&lt; glTF_Builder\l::struct_texture_info \&gt;" alt="" coords="1488,135,1723,207"/>
+<area shape="rect" id="node5" title="STL class. " alt="" coords="303,228,420,260"/>
+<area shape="rect" id="node8" href="$structglTF__Builder_1_1node__type.html" title="glTF_Builder::node\l_type\&lt; unsigned \&gt;" alt="" coords="581,154,787,206"/>
+<area shape="rect" id="node9" href="$structglTF__Builder_1_1node__type.html" title="glTF_Builder::node\l_type\&lt; float \&gt;" alt="" coords="811,218,1010,270"/>
+<area shape="rect" id="node10" href="$structglTF__Builder_1_1node__type.html" title="glTF_Builder::node\l_type\&lt; color4f \&gt;" alt="" coords="585,26,783,78"/>
+<area shape="rect" id="node12" href="$structglTF__Builder_1_1node__type.html" title="glTF_Builder::node\l_type\&lt; bool \&gt;" alt="" coords="1265,326,1463,378"/>
+<area shape="rect" id="node7" href="$structglTF__Builder_1_1struct__texture__info.html" title="glTF_Builder::struct\l_texture_info" alt="" coords="1035,154,1240,206"/>
+</map>
